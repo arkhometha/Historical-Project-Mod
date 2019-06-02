@@ -1,0 +1,6 @@
+owner = ENG
+controller = ENG
+colonial = 2
+add_core = NIC
+trade_goods = fruit
+life_rating = 33

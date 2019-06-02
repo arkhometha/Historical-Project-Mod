@@ -1,0 +1,6 @@
+owner = PNK
+controller = PNK
+add_core = PNK
+add_core = LAN
+trade_goods = precious_metal
+life_rating = 34

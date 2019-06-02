@@ -1,0 +1,56 @@
+political_decisions = {
+	build_the_tsr = { #Trans-Siberian railroad- mirrors CNR, but offers choice of route: Irkutsk-Yakutia-Okhotsk or Irkutsk-Chita-Vladivostok(if owned)
+		picture = whistlestop_tour
+		potential = {
+			tag = RUS
+			early_railroad = 1
+			NOT = { has_country_flag = build_the_tsr }
+		}
+		allow = {
+			money = 75000
+			iron_railroad = 1
+			owns = 1082
+			owns = 1078
+			owns = 1075
+			owns = 1077
+			owns = 2686
+			owns = 1064
+			owns = 1059
+		}
+		effect = {
+			set_country_flag = build_the_tsr
+			treasury = -75000
+			1082 = { infrastructure = 1 }
+			1083 = { infrastructure = 1 }
+			1059 = { infrastructure = 1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	build_the_manchurian_railway = { #Railroad through Manchuria if they own Port Arthur
+			picture = whistlestop_tour
+			potential = {
+				tag = RUS
+				has_country_flag = build_the_tsr
+				NOT = { has_country_flag = build_the_manchurian_railway }
+				owns = 1481
+				owns = 1082 #Sanity check if they haven't lost Vladivostok in the meantime
+			}
+			allow = {
+				money = 15000
+				war = no
+			}
+			effect = {
+				set_country_flag = build_the_manchurian_railway
+				treasury = -15000
+				1481 = { infrastructure = 1 }
+				diplomatic_influence = { who = MCK value = 50 }
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+

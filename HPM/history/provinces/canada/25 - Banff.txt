@@ -1,0 +1,6 @@
+owner = ENG
+controller = ENG
+add_core = RPL
+colonial = 2
+trade_goods = coal
+life_rating = 31

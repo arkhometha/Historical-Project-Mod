@@ -1,0 +1,108 @@
+political_decisions = {
+	adopt_die_stem = {
+		picture = adopt_die_stem
+		potential = {
+			tag = SAF
+			NOT = {
+				has_country_flag = has_die_stem
+			}
+		}
+		
+		allow = {
+			mass_culture_n_the_avant_garde = 1
+		}
+		
+		effect = {
+			prestige = 5
+			set_country_flag = has_die_stem
+		}
+	}
+	
+	
+	create_south_africa = {
+		picture = form_south_africa
+		alert = no
+		potential = {
+			any_owned_province = { is_core = SAF }
+			SAF = { exists = no }
+			NOT = { has_global_flag = south_africa_formed }
+			NOT = { capital_scope = { continent = africa } }
+			civilized = yes
+			revolution_n_counterrevolution = 1
+		}
+		
+		allow = {
+			war = no
+			SAF = { all_core = {
+				OR = {
+					owned_by = THIS
+					owner = {
+							in_sphere = THIS
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			set_global_flag = south_africa_formed
+			prestige = 20
+			any_country = {
+				limit = {
+					ai = yes
+					exists = yes
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				any_owned = { limit = { is_core = SAF }
+				secede_province = THIS
+				}
+			}
+			SAF = { set_country_flag = post_colonial_country neutrality = yes }
+			random_owned = { limit = { province_id = 2113 } change_province_name = "Richards Bay" add_core = SAF }
+			random_owned = { limit = { province_id = 2112 } change_province_name = "Ladysmith" add_core = SAF }
+			random_owned = { limit = { province_id = 2100 } change_province_name = "Port St. Johns" add_core = SAF }
+			random_owned = { limit = { province_id = 2101 } change_province_name = "Bloemfontein" add_core = SAF }
+			random_owned = { limit = { province_id = 2102 } change_province_name = "Winburg" add_core = SAF }
+			random_owned = { limit = { province_id = 2103 } change_province_name = "Philippolis" add_core = SAF }
+			random_owned = { limit = { province_id = 2105 } change_province_name = "Pretoria" add_core = SAF }
+			random_owned = { limit = { province_id = 2106 } change_province_name = "Johannesburg" add_core = SAF }
+			random_owned = { limit = { province_id = 2107 } change_province_name = "Klerksdorp" add_core = SAF }
+			random_owned = { limit = { province_id = 2108 } change_province_name = "Nylstroom" add_core = SAF }
+			random_owned = { limit = { province_id = 2109 } change_province_name = "Lydenburg" add_core = SAF }
+			random_owned = { limit = { province_id = 2110 } change_province_name = "Hoedspruit" add_core = SAF }
+			random_owned = { limit = { province_id = 2088 } change_province_name = "Springbok" add_core = SAF }
+			random_owned = { limit = { province_id = 2558 } change_province_name = "De Aar" add_core = SAF }
+			random_owned = { limit = { province_id = 2093 } change_province_name = "Calvinia" add_core = SAF }
+			random_owned = { limit = { province_id = 2094 } change_province_name = "Kimberley" add_core = SAF }
+			random_owned = { limit = { province_id = 2111 } change_province_name = "Durban" add_core = SAF }
+			random_owned = { limit = { province_id = 2105 } state_scope = { change_region_name = "Transvaal" } }
+			random_owned = { limit = { province_id = 2102 } state_scope = { change_region_name = "Vrystaat" } }
+			random_owned = { limit = { province_id = 2111 } state_scope = { change_region_name = "Natal" } }
+			release_vassal = SAF
+			create_alliance = SAF
+			diplomatic_influence = {
+				who = SAF
+				value = 400
+			}	
+		}
+		
+		ai_will_do = {
+			factor = 0
+			#modifier = {
+			#	factor = 100
+			#	year = 1910
+			#	NOT = { exists = TRN }
+			#	NOT = { exists = ORA }
+			#	NOT = { exists = NAL }
+			#}
+		}
+	}
+}
+

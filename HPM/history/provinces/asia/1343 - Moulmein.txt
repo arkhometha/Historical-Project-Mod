@@ -1,0 +1,7 @@
+owner = ENG
+controller = ENG
+add_core = KAR
+add_core = BUR
+trade_goods = grain
+life_rating = 33
+colonial = 2

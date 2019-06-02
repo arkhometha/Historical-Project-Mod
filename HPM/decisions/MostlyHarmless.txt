@@ -1,0 +1,131 @@
+political_decisions = {
+	miskatonic_university = {
+		potential = {
+			tag = NEN
+			owns = 245
+			NOT = {
+				has_country_flag = miskatonic_u_class_of_1836
+			}
+		}
+		
+		allow = {
+			invention = romanticist_literature
+		}
+		
+		effect = {
+			245 = {
+				change_province_name = "Arkham"
+				add_province_modifier = {
+					name = miskatonic_campus
+					duration = -1
+				}
+			}
+			set_country_flag = miskatonic_u_class_of_1836
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+	
+	form_byzantine_empire = {
+		potential = {
+			tag = GRE
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+			is_greater_power = yes
+			has_global_flag = fantasy_countries_enabled
+		}
+		
+		allow = {
+			owns = 825
+			owns = 828
+			owns = 829
+			owns = 830
+			owns = 831
+			owns = 832
+			owns = 833
+			owns = 834
+			owns = 835
+			owns = 836
+			owns = 837
+			owns = 838
+			owns = 839
+			owns = 840
+			owns = 841
+			owns = 842
+			owns = 843
+			owns = 844
+			owns = 845
+			owns = 846
+			owns = 847
+			owns = 848
+			owns = 858
+			owns = 859
+			owns = 860	# Constantinople
+			owns = 861
+			owns = 862
+			owns = 863
+			owns = 864
+			owns = 865
+			owns = 866
+			owns = 867
+			owns = 868
+			owns = 869
+			owns = 870
+			owns = 871
+			owns = 872
+			owns = 873
+			owns = 874
+			owns = 875			
+		}
+		
+		effect = {
+			change_tag = BYZ
+			capital = 860
+			860 = {
+				change_province_name = "Constantinople"
+			}
+			any_owned = {
+				limit = {
+					is_colonial = no
+					OR = {
+						culture = greek
+						culture = turkish
+					}
+				}
+				add_core = BYZ
+			}
+			prestige = 40
+		}
+	}
+	
+	build_the_tower_of_babylon = {
+		potential = {
+			tag = IRQ
+			is_greater_power = yes
+			has_global_flag = fantasy_countries_enabled
+		}
+		
+		allow = {
+			advanced_metallurgy = 1
+			the_historical_theory = 1
+		}
+		
+		effect = {
+			IRQ = {
+				all_core = {
+					add_core = BAB
+				}
+			}
+			926 = {
+				change_province_name = Babylon
+			}
+			change_tag = BAB
+			prestige = 20
+		}
+	}
+}

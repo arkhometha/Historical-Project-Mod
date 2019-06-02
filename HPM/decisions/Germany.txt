@@ -1,0 +1,1117 @@
+political_decisions = {
+	ems_dispatch = {
+		picture = ems_dispatch
+		potential = {
+			NOT = {
+				has_country_flag = ems_dispatch_sent
+			}
+			OR = {
+				tag = PRU
+				tag = NGF
+			}
+			FRA = {
+				any_owned_province = { is_core = GER }
+			}
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+		}
+		
+		allow = {
+			war = no
+			OR = {
+				steel_breech_loaded_artillery = 1
+				machine_guns = 1
+			}
+			FRA = {
+				war = no
+				NOT = { truce_with = THIS }
+				NOT = {
+					relation = { who = THIS value = 100 }
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 5
+			FRA = { country_event = 19200 }
+			set_country_flag = ems_dispatch_sent
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_modifier = law_changed_by_force
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					war_exhaustion = 5
+					num_of_revolts = 1
+					is_disarmed = yes
+					FRA = { brigades_compare = 1.5 }
+				}
+			}
+		}
+	}
+	
+	construct_germania_werft = {
+		picture = construct_germania_werft
+		potential = {
+			NOT = { has_global_flag = germania_werft_has_been_built }
+			OR = {
+				tag = PRU
+				tag = GER
+				tag = NGF
+			}
+			owns = 369
+		}
+		
+		allow = {
+			steel_steamers = 1
+			money = 51000
+		}
+		
+		effect = {
+			set_global_flag = germania_werft_has_been_built
+			prestige = 10
+			treasury = -50000
+			369 = {
+				naval_base = 6
+				add_province_modifier = { name = germania_werft duration = -1 }
+			}
+		}
+	}
+	
+	support_ruhr_industrialism = {
+		potential = {
+			has_country_flag = prussian_germany
+			OR = {
+				tag = PRU
+				tag = GER
+				tag = NGF
+			}
+			NOT = {
+				tech_school = prussian_tech_school
+			}
+		}
+		
+		allow = {
+			bessemer_process = 1
+			iron_breech_loaded_artillery = 1
+			state_n_government = 1
+			industrial_score = 150
+			owns = 577
+			owns = 578
+			owns = 2561
+			owns = 576
+			owns = 575
+			575 = {
+				state_scope = {
+					has_building = steel_factory
+				}
+			}
+		}
+		
+		effect = {
+			tech_school = prussian_tech_school
+			prestige = 5
+		}
+	}	
+	
+	die_wacht_am_rhein = {
+		picture = die_wacht_am_rhein
+		potential = {
+			OR = {
+				tag = GER
+				tag = NGF
+				tag = PRU
+			}
+			NOT = { has_global_flag = watching_the_rhine }
+			OR = {
+				has_country_flag = french_claimed_the_rhine
+				NOT = { relation = { who = FRA value = 0 } }
+				575 = { owner = { NOT = { is_culture_group = germanic } } }
+				576 = { owner = { NOT = { is_culture_group = germanic } } }
+				577 = { owner = { NOT = { is_culture_group = germanic } } }
+				572 = { owner = { NOT = { is_culture_group = germanic } } }
+				PRU_578 = { owner = { NOT = { is_culture_group = germanic } } }
+				PRU_570 = { owner = { NOT = { is_culture_group = germanic } } }
+				BAD_586 = { owner = { NOT = { is_culture_group = germanic } } }
+				WUR_589 = { owner = { NOT = { is_culture_group = germanic } } }
+				HES_2560 = { owner = { NOT = { is_culture_group = germanic } } }
+			}
+		}
+			
+		allow = {
+			romanticism = 1
+			state_n_government = 1
+		}
+		
+		effect = {
+			prestige = 5
+			badboy = -1
+			set_global_flag = watching_the_rhine
+			any_pop = {
+				limit = { is_culture_group = germanic }
+				dominant_issue = {
+					factor = 0.05
+					value = jingoism
+				}
+			}
+		}
+	}
+	
+	niederwald_denkmal = {
+		potential = {
+			tag = GER
+			has_global_flag = watching_the_rhine
+			NOT = {
+				has_country_flag = niederwald_denkmal
+			}
+		}
+		
+		allow = {
+			war = no
+			owns = 565
+			is_greater_power = yes
+			nationalism_n_imperialism = 1
+		}
+		
+		effect = {
+			any_pop = {
+				militancy = -2
+			}
+			badboy = -3
+			set_country_flag = niederwald_denkmal
+		}
+	}
+	
+	schwabing_circles = {
+		potential = {
+			OR = {
+				tag = BAV
+				tag = SGF
+				tag = GER
+			}
+			owns = 599
+			NOT = {
+				has_country_flag = schwabing_encircled
+			}
+		}
+		allow = {
+			expressionism = 1
+		}
+		effect = {
+			prestige = 20
+			set_country_flag = schwabing_encircled
+		}
+	}
+	
+	support_biesterfelds = {
+		potential = {
+			tag = LIP
+			year = 1880
+			NOT = {
+				has_country_flag = lippe_dispute_solved
+			}
+			exists = PRU
+		}
+		
+		allow = {
+			is_independant = yes
+		}
+		
+		effect = {
+			prestige = 5
+			set_country_flag = lippe_dispute_solved
+		}
+	}
+	
+	support_schaumburgs = {
+		potential = {
+			tag = LIP
+			year = 1880
+			NOT = {
+				has_country_flag = lippe_dispute_solved
+			}
+			exists = PRU
+		}
+		
+		allow = {
+			is_independant = yes
+		}
+		
+		effect = {
+			relation = {
+				who = PRU
+				value = 50
+			}
+			set_country_flag = lippe_dispute_solved
+		}
+	}
+	
+	das_zivilgesetzbuch = {
+		picture = das_zivilgesetzbuch
+		potential = {
+			tag = HES
+			NOT = {
+				has_country_flag = code_of_laws
+			}
+		}
+		
+		allow = {
+			ideological_thought = 1
+		}
+		
+		effect = {
+			prestige = 5
+			years_of_research = 0.05
+			any_pop = {
+				militancy = -1
+			}
+			set_country_flag = code_of_laws
+		}
+	}
+
+	kaiser_wilhelms_land = {
+		picture = kaiser_wilhelms_land
+		potential = {
+			tag = GER
+			has_country_flag = prussian_germany
+			owns = 1531
+			owns = 2530
+			owns = 2531
+			owns = 2537
+			NOT = {
+				has_global_flag = wir_wollen_unseren_alten_kaiser_wilhelm_wiederhaben
+				has_global_flag = bismarck_islands_german
+			}
+		}
+		
+		allow = {
+			invention = mission_to_civilize
+		}
+		
+		effect = {
+			prestige = 10
+			1531 = { change_province_name = "Neu-Mecklenburg" }
+			2537 = { change_province_name = "Neu-Pommern" }
+			2858 = { change_province_name = "Bismarck Sea" }
+			2531 = {
+				change_province_name = "Friedrich-Wilhelmshafen"
+				state_scope = {
+					change_region_name = "Kaiser-Wilhelms-Land"
+				}
+			}
+			set_global_flag = wir_wollen_unseren_alten_kaiser_wilhelm_wiederhaben
+		}
+	}
+	
+	the_heligoland_question = {
+		potential = {
+			tag = GER
+			NOT = { has_country_flag = has_questioned_heligoland }
+			533 = { NOT = { is_core = GER } }
+		}
+		
+		allow = {
+			mass_politics = 1
+			OR = {
+				is_greater_power = yes
+				invention = national_fraternity
+			}
+			OR = {
+				AND = {
+					2013 = { empty = no }
+					2015 = { empty = no }
+				}
+				owns = 2081
+			}
+		}
+		
+		effect = {
+			533 = {
+				add_core = GER # Heligoland is my last territorial demand!
+				add_core = ENG
+			}
+			set_country_flag = has_questioned_heligoland
+		}
+	}
+	#Convert to repeatable so modifier comes back
+	construct_the_walhalla = {
+		picture = construct_the_walhalla
+		potential = {
+			OR = {
+				tag = BAV
+				tag = SGF
+				tag = GER
+			}
+			owns = 602
+			NOT = {
+				has_global_flag = the_walhalla_is_built
+			}
+		}
+		
+		allow = {
+			romanticism = 1
+		}
+		
+		effect = {
+			602 = {
+				add_province_modifier = {
+					name = the_walhalla
+					duration = -1
+				}
+			}
+			set_global_flag = the_walhalla_is_built
+		}
+	}
+	
+	introduce_the_presbyteries = {
+		picture = introduce_the_presbyteries
+		potential = {
+			tag = HAN
+			NOT = {
+				has_country_flag = presbyteries_introduced
+			}
+		}
+		allow = {
+			average_militancy = 3
+			NOT = {
+				vassal_of = ENG
+			}
+		}
+		
+		effect = {
+			any_pop = {
+				limit = {
+					has_pop_religion = protestant
+				}
+				militancy = -1
+			}
+			set_country_flag = presbyteries_introduced
+		}
+	}
+	
+	von_moltkes_staff_reforms = {
+		potential = {
+			has_country_flag = prussian_germany
+			OR = {
+				tag = PRU
+				tag = GER
+				tag = NGF
+			}
+			NOT = {
+				has_country_flag = von_moltke
+			}
+		}
+		allow = {
+			army_decision_making = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = prussian_general_staff
+				duration = 5475
+			}
+			prestige = 5
+			set_country_flag = von_moltke
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				war = no
+			}
+		}
+	}
+	
+	the_ruhr_boom = {
+		picture = essen_ruhr
+		potential = {
+			OR = {
+				tag = PRU
+				tag = GER
+				tag = NGF
+			}
+			owns = 578
+			owns = 2561
+			owns = 575
+			NOT = { has_global_flag = ruhr_boom_has_happened }
+		}
+		
+		allow = {
+			market_structure = 1
+			organized_factories = 1
+			early_railroad = 1
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = ruhr_boom
+				duration = 3650
+			}
+			set_global_flag = ruhr_boom_has_happened
+		}
+	}
+	
+	league_of_three_emperors = {
+		potential = {
+			tag = GER
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+			AUS = {
+				exists = yes
+				NOT = { any_core = { owned_by = GER } }
+				OR = {
+					government = absolute_monarchy
+					government = prussian_constitutionalism
+					government = hms_government
+				}
+			}
+			RUS = {
+				exists = yes
+				NOT = { any_core = { owned_by = GER } }
+				OR = {
+					government = absolute_monarchy
+					government = prussian_constitutionalism
+					government = hms_government
+				}
+			}
+			NOT = { has_country_flag = league_of_three_emperors }
+		}
+		
+		allow = {
+			revolution_n_counterrevolution = 1
+			war = no
+			NOT = { truce_with = AUS }
+			NOT = { war_with = AUS }
+			NOT = { truce_with = RUS }
+			NOT = { war_with = RUS }
+		}
+		
+		effect = {
+			set_country_flag = league_of_three_emperors
+			AUS = { country_event = 33020 }
+			RUS = { country_event = 33020 }
+		}
+	}
+	
+	league_of_three_emperors2 = {
+		picture = league_of_three_emperors
+		potential = {
+			tag = GER
+			OR = {
+				government = absolute_monarchy
+				government = prussian_constitutionalism
+				government = hms_government
+			}
+			KUK = {
+				exists = yes
+				NOT = { any_core = { owned_by = GER } }
+				OR = {
+					government = absolute_monarchy
+					government = prussian_constitutionalism
+					government = hms_government
+				}
+			}
+			RUS = {
+				exists = yes
+				NOT = { any_core = { owned_by = GER } }
+				OR = {
+					government = absolute_monarchy
+					government = prussian_constitutionalism
+					government = hms_government
+				}
+			}
+			NOT = { has_country_flag = league_of_three_emperors }
+		}
+		
+		allow = {
+			revolution_n_counterrevolution = 1
+			war = no
+			NOT = { truce_with = KUK }
+			NOT = { war_with = KUK }
+			NOT = { truce_with = RUS }
+			NOT = { war_with = RUS }
+		}
+		
+		effect = {
+			set_country_flag = league_of_three_emperors
+			KUK = { country_event = 33020 }
+			RUS = { country_event = 33020 }
+		}
+	}
+	
+	reclaim_poland_GER = {
+		picture = become_poland
+		potential = {
+			OR = {
+				tag = PRU
+				tag = NGF
+				tag = GER
+			}
+			OR = {
+				684 = { NOT = { is_core = GER } }
+				685 = { NOT = { is_core = GER } }
+				690 = { NOT = { is_core = GER } }
+				699 = { NOT = { is_core = GER } }
+			}
+		}
+		
+		allow = {
+			war = no
+			is_disarmed = no
+			NOT = { has_country_modifier = no_more_war }
+			OR = {
+				government = fascist_dictatorship
+				government = proletarian_dictatorship
+				AND = {
+					any_owned_province = {
+						OR = {
+							region = PRU_690
+							region = PRU_701
+							region = PRU_682
+							region = PRU_695
+							province_id = 684
+							province_id = 685
+						}
+						NOT = { is_core = GER }
+					}
+					war_policy = jingoism
+				}
+			}
+		}
+		
+		effect = {
+			badboy = 5
+			random_owned = {
+				limit = {
+					OR = {
+						owner = { government = fascist_dictatorship }
+						owner = { government = proletarian_dictatorship }
+					}
+				}
+				PRU_690 = { add_core = GER }
+				PRU_701 = { add_core = GER }
+				PRU_682 = { add_core = GER }
+				PRU_695 = { add_core = GER }
+				684 = { add_core = GER }
+				685 = { add_core = GER }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						region = PRU_690
+						region = PRU_701
+						province_id = 684
+						province_id = 685
+					}
+				}
+				add_core = THIS
+				add_core = GER
+			}
+			any_country = {
+				limit = {
+					any_owned_province = {
+						OR = {
+							region = PRU_690
+							region = PRU_701
+							province_id = 684
+							province_id = 685
+						}
+					}
+					NOT = { tag = THIS }
+				}
+				relation = { who = THIS value = -100 }
+				leave_alliance = THIS
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.8
+			}
+		}
+	}
+	
+	appoint_von_bismarck = {
+	picture = appoint_von_bismarck
+		potential = {
+			has_country_flag = prussian_germany
+			OR = {
+				tag = PRU
+				tag = NGF
+				tag = GER
+			}
+			OR = {
+				government = prussian_constitutionalism
+				government = absolute_monarchy
+			}
+			NOT = {
+				year = 1875
+				has_country_flag = von_bismarck_appointed
+			}
+		}
+		
+		allow = {
+			war = no
+			revolution_n_counterrevolution = 1
+			OR = {
+				ruling_party_ideology = liberal
+				ruling_party_ideology = conservative
+				ruling_party_ideology = reactionary
+			}
+		}
+		
+		effect = {
+			set_country_flag = von_bismarck_appointed
+			add_country_modifier = {
+				name = otto_von_bismarck
+				duration = 7300
+			}
+			any_pop = {
+				limit = { is_culture_group = germanic }
+				militancy = -3
+				dominant_issue = {
+					factor = 0.2
+					value = jingoism
+				}
+			}
+		}
+	}
+	
+	reclaim_alsace_lorraine = {
+		picture = reichsland_elsass
+		potential = {
+			has_country_flag = lost_alsace_lorraine
+			412 = {
+				NOT = {
+					is_core = GER
+					owned_by = GER
+				}
+			}
+		}
+		
+		allow = {
+			tag = GER
+			is_greater_power = yes
+			412 = { owner = { NOT = { truce_with = THIS } } }
+			OR = {
+				war_policy = jingoism
+				412 = { owner = { war_with = THIS } }
+			}
+		}
+		
+		effect = {
+			clr_country_flag = lost_alsace_lorraine
+			badboy = 5
+			FRA_412 = { add_core = GER }
+			random_country = {
+				limit = {
+					owns = 412
+					NOT = { tag = THIS }
+				}
+				relation = { who = GER value = -100 }
+				leave_alliance = GER
+				casus_belli = {
+					target = THIS
+					type = cut_down_to_size
+					months = 24
+				}
+				casus_belli = {
+					target = THIS
+					type = humiliate
+					months = 24
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.8
+			}	
+		}
+	}
+	
+	purchase_spanish_pacific = {
+		picture = treaty_signing
+		potential = {
+			primary_culture = north_german
+			is_greater_power = yes
+			nationalism_n_imperialism = 1
+			any_owned_province = {
+				is_core = GER
+				port = yes
+			}
+			1455 = {
+				NOT = { owned_by = SPA }
+				NOT = { owned_by = SPC }
+				owner = {
+					NOT = { vassal_of = SPC }
+					NOT = { vassal_of = SPA }
+				}
+			}
+			OR = {		
+				SPA = {
+					is_greater_power = no
+					any_owned_province = {
+						OR = {
+							region = SPA_610
+							region = SPA_2517
+						}
+					}
+				}
+				SPC = {
+					is_greater_power = no
+					any_owned_province = {
+						OR = {
+							region = SPA_610
+							region = SPA_2517
+						}
+					}
+				}
+			}
+			NOT = {
+				has_global_flag = tried_to_buy_spanish_pacific
+				#any_owned_province = { continent = oceania }
+			}
+		}
+		
+		allow = {
+			money = 50000
+			OR = {
+				biologism = 1
+				military_logistics = 1
+				steel_steamers = 1
+			}
+			NOT = {
+				truce_with = SPA
+				SPA = { war = yes }
+				truce_with = SPC
+				SPC = { war = yes }
+			}
+		}
+		
+		effect = {
+			set_global_flag = tried_to_buy_spanish_pacific
+			random_country = {
+				limit = {
+					OR = {
+						tag = SPA
+						tag = SPC
+					}
+					exists = yes
+					any_owned_province = {
+						OR = {
+							region = SPA_610
+							region = SPA_2517
+						}
+					}
+				}
+				country_event = 33025
+			}
+		}
+	}
+	
+	annex_sigmaringen = {
+		picture = declare_republic_of_neuchatel
+		potential = {
+			has_country_flag = prussian_germany
+			OR = {
+				tag = PRU
+				tag = NGF
+				tag = GER
+			}
+			NOT = { owns = 594 }
+			owns = 549
+			SGM = { exists = yes ai = yes owns = 594 }
+		}
+		
+		allow = {
+			war = no
+			is_sphere_leader_of = SGM
+			OR = {
+				AND = {
+					SGM = {
+						vassal_of = THIS
+						average_militancy = 1
+					}
+					nationalism_n_imperialism = 1
+				}
+				NOT = {
+					SGM = {
+						OR = {
+							government = absolute_monarchy
+							government = prussian_constitutionalism
+							government = hms_government
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			diplomatic_influence = { who = SGM value = -400 }
+			release = SGM
+			leave_alliance = SGM
+			SGM = { neutrality = yes }
+			594 = {
+				remove_core = SGM
+				add_core = THIS
+			}
+			inherit = SGM
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	
+	access_to_the_rhine = {
+		picture = marching_soldiers
+		potential = {
+			OR = {
+				tag = PRU
+				tag = NGF
+			}
+			any_owned_province = {
+				OR = {
+					region = PRU_581
+					region = PRU_578
+					region = PRU_575
+					region = PRU_570
+				}
+			}
+			NOT = { owns = 566 }
+			NOT = { owns = 568 }
+			NOT = { owns = 537 }
+			NOT = { owns = 536 }
+			NOT = { owns = 537 }
+			NOT = { owns = 534 }
+			NOT = { owns = 535 }
+			NOT = { owns = 539 }
+			566 = { owner = { ai = yes NOT = { in_sphere = THIS } alliance_with = THIS } }
+			NOT = { military_access = HEK }
+			NOT = { 566 = { is_core = THIS } }
+		}
+		
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+		}
+		
+		effect = {
+			badboy = 2
+			566 = { owner = { relation = { who = THIS value = -400 } leave_alliance = THIS } }
+			566 = { add_core = THIS }
+			568 = { add_core = THIS }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.8
+			}
+		}
+	}
+	
+#Luderitz Expedition
+luderitz_expedition = {
+	picture = luderitz_expedition
+	potential = {
+		OR = {
+			primary_culture = north_german
+			primary_culture = south_german
+		}
+		2084 = { empty = yes }
+		2085 = { empty = yes }
+		2086 = { empty = yes }
+		2083 = { empty = no }
+		2095 = { empty = no }
+		2077 = { empty = no }
+		year = 1850
+		slavery = no_slavery
+	}
+	
+	allow = {
+		total_pops = 1000000
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes
+		}
+		owns = 539
+		war = no
+		nationalism_n_imperialism = 1
+		total_num_of_ports = 10
+		total_amount_of_ships = 10
+		money = 100000
+		OR = {
+			naval_statistics = 1
+			steel_steamers = 1
+		}
+	}
+
+	effect = {
+		prestige = 2
+		treasury = -100000
+		set_country_flag = founding_german_namibia 
+		2084 = { secede_province = THIS change_province_name = "Lüderitzbucht" any_pop = { literacy = -0.99 } life_rating = 21 }
+		2086 = { secede_province = THIS change_province_name = "Keetmanshoop" any_pop = { literacy = -0.99 } life_rating = 25 }
+		2085 = { secede_province = THIS change_province_name = "Maltahöhe" any_pop = { literacy = -0.99 } life_rating = 25 }
+		2080 = { secede_province = THIS change_province_name = "Grootfontein" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } life_rating = 21 }
+		2082 = { secede_province = THIS change_province_name = "Gobabis" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } life_rating = 21 }
+		2079 = { secede_province = THIS change_province_name = "Swakopmund" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } life_rating = 21 }
+		2078 = { secede_province = THIS change_province_name = "Windhoek" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } life_rating = 25 }
+	}
+	
+	ai_will_do = { factor = 1 }
+}
+
+#Claim Togoland
+claim_togoland = {
+	picture = map_togo
+	potential = {
+		capital_scope = { continent = europe }
+		year = 1850
+		NOT = { tag = RUS }
+		NOT = { tag = TUR }
+		1914 = { empty = yes }
+		1915 = { empty = yes }
+		slavery = no_slavery
+		NOT = { has_global_flag = togo_organized }
+		has_global_flag = berlin_conference
+	}
+	
+	allow = {
+		total_pops = 2000000
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes
+		}
+		war = no
+		total_num_of_ports = 10
+		total_amount_of_ships = 10
+		money = 200000
+		OR = {
+			1901 = { owner = { civilized = yes } }
+			1922 = { owner = { civilized = yes } }
+			1913 = { owner = { civilized = yes } }
+		}
+		OR = {
+			AND = {
+				colonial_nation = no
+				blue_and_brown_water_schools = 1
+			}
+			AND = {
+				colonial_nation = yes
+				blue_and_brown_water_schools = 1
+				military_logistics = 1
+			}
+		}
+	}
+
+	effect = {
+		prestige = 2
+		treasury = -200000
+		1916 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
+		1915 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
+		1914 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
+		1917 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
+		1918 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
+		random_owned = {
+			limit = { owner = { is_culture_group = germanic } } 
+			owner = {
+				1915 = { change_province_name = "Misahöhe" }
+			}
+		}
+	}
+	
+	ai_will_do = { factor = 1 }
+}
+
+#Core Heligoland
+core_heligoland = {
+	picture = the_heligoland_question
+	potential = {
+		533 = { NOT = { is_core = GER } }
+		owns = 533
+		OR = {
+			primary_culture = north_german
+			primary_culture = south_german
+		}
+		NOT = { has_global_flag = heligoland_claimed }
+	}
+	
+	allow = {
+		nationalism_n_imperialism = 1
+	}
+
+	effect = {
+		set_global_flag = heligoland_claimed
+		533 = {
+			remove_core = ENG
+			add_core = GER
+		}
+	}
+	
+	ai_will_do = { factor = 1 }
+}
+
+#	sudeteland_exchange = {
+#		picture = treaty_signing
+#		potential = {
+#			OR = {
+#				tag = NGF
+#				tag = PRU
+#				tag = GER
+#			}
+#			owns = 631
+#			owns = 632
+#			owns = 688
+#			owns = 689
+#			owns = 2584
+#			NOT = { owns = 625 }
+#			NOT = { has_country_flag = sudeteland_treaty }
+#			625 = { 
+#				owner = { 
+#					ai = yes 
+#					owns = 627
+#					owns = 628
+#					owns = 629
+#				}
+#			}
+#		}
+#		
+#		allow = {
+#			war = no
+#			money = 45000
+#		}
+#		
+#		effect = {
+#			set_country_flag = sudeteland_treaty
+#			625 = {
+#				owner = {
+#					treasury = 40000
+#					relation = { who = THIS value = 100 }
+#					631 = { secede_province = THIS }
+#					632 = { secede_province = THIS }
+#					689 = { secede_province = THIS }
+#					2584 = { secede_province = THIS }
+#				}
+#			}
+#			627 = { secede_province = THIS }
+#			628 = { secede_province = THIS }
+#			629 = { secede_province = THIS }
+#		}
+#	}
+}

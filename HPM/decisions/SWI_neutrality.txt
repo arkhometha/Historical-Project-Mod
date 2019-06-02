@@ -1,0 +1,186 @@
+political_decisions = {
+	declare_neutrality = {
+		potential = {
+			tag = SWI
+			NOT = {
+				has_country_modifier = neutrality_modifier
+				has_country_flag = abandoned_neutrality
+				has_country_flag = neutrality_violated
+			}	
+		}
+		allow = {
+			NOT = { any_owned_province = { is_core = THIS } }
+			NOT = { badboy = 1 }
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = neutrality_modifier
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 government = fascist_dictatorship }
+			modifier = { factor = 0 government = proletarian_dictatorship }
+		}
+	}
+
+
+	abandon_neutrality = {
+		picture = declare_neutrality
+		potential = {
+			has_country_modifier = neutrality_modifier
+			NOT = { has_country_flag = abandoned_neutrality }
+		}
+		
+		allow = {
+			prestige = 20
+		}
+		
+		effect = {
+			set_country_flag = abandoned_neutrality
+			prestige = -20
+			badboy = 5
+			remove_country_modifier = neutrality_modifier
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						badboy = 0.75
+						government = fascist_dictatorship
+						government = proletarian_dictatorship
+					}
+				}
+			}
+		}
+	}
+	
+	violate_neutrality = {
+		picture = declare_neutrality
+		alert = no
+		potential = {
+			ai = no
+			SWI = {
+				neighbour = THIS
+				has_country_modifier = neutrality_modifier
+			}
+		}
+		
+		allow = {
+			SWI = { has_country_modifier = neutrality_modifier }
+			war_policy = jingoism
+			NOT = {
+				is_sphere_leader_of = SWI
+				truce_with = SWI
+				alliance_with = SWI
+			}
+		}
+		
+		effect = {
+			badboy = 25
+			SWI = {
+				set_country_flag = neutrality_violated
+				remove_country_modifier = neutrality_modifier
+				relation = { who = THIS value = -200 }
+			}
+			diplomatic_influence = { who = SWI value = -200 }
+			any_country = {
+				limit = {
+					OR = {
+						alliance_with = SWI
+						is_sphere_leader_of = SWI
+						relation = { who = SWI value = 50 }
+					}
+				}
+				leave_alliance = THIS
+				relation = { who = THIS value = -200 }
+				casus_belli = {
+					target = THIS
+					type = cut_down_to_size
+					months = 60
+				}
+			}
+		}
+	}
+	
+	enforce_neutrality = {
+		picture = declare_neutrality
+		potential = {
+			has_country_modifier = neutrality_modifier
+			ai = yes
+		}
+		
+		allow = {
+			OR = {
+				any_greater_power = { military_access = THIS }
+				any_neighbor_country = { NOT = { vassal_of = THIS } military_access = THIS }
+				sphere_owner = { military_access = THIS }
+				AND = {
+					num_of_allies = 1
+					NOT = { NEH = { alliance_with = THIS } }
+				}
+				AND = {
+					num_of_allies = 2
+					NEH = { exists = yes alliance_with = THIS }
+				}
+				war = yes
+			}
+		}
+		
+		effect = {
+			any_country = {
+				limit = { NOT = { vassal_of = THIS } OR = { military_access = THIS alliance_with = THIS } }
+				relation = { who = THIS value = -125 }
+			}
+			any_country = { limit = { alliance_with = THIS NOT = { vassal_of = THIS } } leave_alliance = THIS }
+			any_country = { limit = { war_with = THIS } end_war = THIS }
+			any_country = { limit = { military_access = THIS NOT = { vassal_of = THIS } } end_military_access = THIS }
+		}
+	}
+	
+	enforce_neutrality_on_player = {
+		picture = declare_neutrality
+		potential = {
+			ai = yes
+			exists = yes
+			SWI = {
+				has_country_modifier = neutrality_modifier
+				ai = no
+				OR = {
+					any_greater_power = { military_access = SWI }
+					any_neighbor_country = { NOT = { vassal_of = SWI } military_access = SWI }
+					sphere_owner = { military_access = SWI }
+					AND = {
+						num_of_allies = 1
+						NOT = { NEH = { alliance_with = SWI } }
+					}
+					AND = {
+						num_of_allies = 2
+						NEH = { exists = yes alliance_with = SWI }
+					}
+					war = yes
+				}
+			}
+		}
+		
+		allow = {
+			
+		}
+		
+		effect = {
+			any_country = {
+				limit = { NOT = { vassal_of = SWI } OR = { military_access = SWI alliance_with = SWI } }
+				relation = { who = SWI value = -125 }
+			}
+			any_country = { limit = { alliance_with = SWI NOT = { vassal_of = SWI } } leave_alliance = SWI }
+			any_country = { limit = { war_with = SWI } end_war = SWI }
+			any_country = { limit = { military_access = SWI NOT = { vassal_of = SWI } } end_military_access = SWI }
+		}
+	}
+}

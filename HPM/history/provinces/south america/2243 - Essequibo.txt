@@ -1,0 +1,8 @@
+owner = ENG
+controller = ENG
+add_core = GUY
+add_core = VNZ
+trade_goods = fruit
+terrain = jungle
+life_rating = 35
+colonial = 2

@@ -1,0 +1,3595 @@
+political_decisions = {
+	ottoman_oppression_mil_gain = {
+		potential = {
+			ai = yes
+			exists = yes
+			OR = {
+				tag = SWI
+				AND = {
+					OR = {
+						SWI = { ai = no }
+						SWI = { exists = no }
+					}
+					OR = {
+						neighbour = TUR
+						tag = TUR
+					}
+				}
+			}
+			TUR = {
+				has_country_modifier = ottoman_oppression
+				NOT = { has_country_modifier = religious_minority_oppression }
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			TUR = {
+				any_pop = {
+					limit = { is_state_religion = no }
+					consciousness = 0.8
+					militancy = 0.4
+					money = -1000
+				}
+				add_country_modifier = { name = religious_minority_oppression duration = 365 }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	sanctions_lifted = {
+		potential = {
+			is_disarmed = yes
+			has_recently_lost_war = yes
+			OR = {
+				has_country_modifier = kinda_bad_badboy 
+				has_country_modifier = bad_badboy 
+			}
+		}
+			
+		allow = { war = no }
+
+		effect = {
+			remove_country_modifier = kinda_bad_badboy
+			remove_country_modifier = bad_badboy
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	medicine_flags = {
+		potential = {
+			ai = yes
+			exists = yes
+			OR = {
+				any_greater_power = {
+					ai = no
+					NOT = { has_country_flag = medicine_invented }
+					medicine = 1
+				}
+				any_neighbor_country = {
+					ai = no
+					NOT = { has_country_flag = medicine_invented }
+					medicine = 1
+				}
+				any_greater_power = { 
+					ai = no
+					NOT = { has_country_flag = germs_invented }
+					invention = germ_theory
+				}
+				any_neighbor_country = {
+					ai = no
+					NOT = { has_country_flag = germs_invented }
+					invention = germ_theory
+				}
+				any_greater_power = { 
+					ai = no
+					NOT = { has_country_flag = gaslights_invented }
+					invention = gaslights
+				}
+				any_neighbor_country = {
+					ai = no
+					NOT = { has_country_flag = gaslights_invented }
+					invention = gaslights
+				}
+				any_greater_power = { 
+					ai = no
+					NOT = { has_country_flag = electricity_invented }
+					electricity = 1
+				}
+				any_neighbor_country = {
+					ai = no
+					NOT = { has_country_flag = electricity_invented }
+					electricity = 1
+				}
+				AND = {
+					NOT = { has_country_flag = medicine_invented }
+					medicine = 1
+				}
+				AND = {
+					NOT = { has_country_flag = germs_invented }
+					invention = germ_theory
+				}
+				AND = {
+					NOT = { has_country_flag = gaslights_invented }
+					invention = gaslights
+				}
+				AND = {
+					NOT = { has_country_flag = electricity_invented }
+					electricity = 1
+				}
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			random_owned = {
+				limit = { owner = { NOT = { has_country_flag = medicine_invented } medicine = 1 } }
+				owner = { set_country_flag = medicine_invented }
+			}
+			random_owned = {
+				limit = { owner = { NOT = { has_country_flag = germs_invented } invention = germ_theory } }
+				owner = { set_country_flag = germs_invented }
+			}
+			random_owned = {
+				limit = { owner = { NOT = { has_country_flag = gaslights_invented } invention = gaslights } }
+				owner = { set_country_flag = gaslights_invented }
+			}
+			random_owned = {
+				limit = { owner = { NOT = { has_country_flag = electricity_invented } electricity = 1 } }
+				owner = { set_country_flag = electricity_invented }
+			}
+			any_country = {
+				limit = { NOT = { has_country_flag = medicine_invented } medicine = 1 }
+				set_country_flag = medicine_invented
+			}
+			any_country = {
+				limit = { NOT = { has_country_flag = germs_invented } invention = germ_theory }
+				set_country_flag = germs_invented
+			}
+			any_country = {
+				limit = { NOT = { has_country_flag = gaslights_invented } invention = gaslights }
+				set_country_flag = gaslights_invented
+			}
+			any_country = {
+				limit = { NOT = { has_country_flag = electricity_invented } electricity = 1 }
+				set_country_flag = electricity_invented
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	abolishing_serfs = {
+		potential = {
+			ai = yes
+			exists = yes
+			OR = {
+				AND = {
+					any_owned_province = { has_pop_type = serfs }
+					NOT = { debt_law = serfdom }
+				}
+				any_neighbor_country = {
+					ai = no
+					any_owned_province = { has_pop_type = serfs }
+					NOT = { debt_law = serfdom }
+				}
+				any_greater_power = {
+					ai = no
+					any_owned_province = { has_pop_type = serfs }
+					NOT = { debt_law = serfdom }
+				}
+			}
+		}
+		
+		allow = {
+			NOT = { has_country_modifier = law_changed_by_force }
+		}
+		
+		effect = {
+			add_country_modifier = { name = law_changed_by_force duration = 365 }
+			random_owned = {
+				limit = {
+					owner = {
+						any_owned_province = { has_pop_type = serfs }
+						NOT = { debt_law = serfdom }
+					}
+				}
+				owner = {
+					any_owned = {
+						limit = {
+							has_pop_type = serfs
+							has_pop_type = labourers
+						}
+						any_pop = { limit = { type = serfs } pop_type = labourers }
+					}
+					any_owned = {
+						limit = {
+							has_pop_type = serfs
+							has_pop_type = farmers
+						}
+						any_pop = { limit = { type = serfs } pop_type = farmers }
+					}
+				}
+			}
+			any_country = {
+				limit = {
+					any_owned_province = { has_pop_type = serfs }
+					NOT = { debt_law = serfdom }
+				}
+				any_owned = {
+					limit = {
+						has_pop_type = serfs
+						has_pop_type = labourers
+					}
+					any_pop = { limit = { type = serfs } pop_type = labourers }
+				}
+				any_owned = {
+					limit = {
+						has_pop_type = serfs
+						has_pop_type = farmers
+					}
+					any_pop = { limit = { type = serfs } pop_type = farmers }
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	missing_government_flags = {
+		potential = {
+			ai = yes
+			exists = yes
+			year = 1837
+			OR = {
+				AND = { government = theocracy NOT = { has_country_flag = theocratic_government } }
+				AND = { government = proletarian_dictatorship NOT = { has_country_flag = communist_gov } }
+				AND = { government = absolute_monarchy NOT = { has_country_flag = absolute_monarchy_gov } }
+				AND = { government = prussian_constitutionalism NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
+				AND = { government = hms_government NOT = { has_country_flag = constitutional_monarchy_gov } }
+				AND = { government = democracy NOT = { has_country_flag = democracy_gov } }
+				AND = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
+				AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
+				AND = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
+				AND = { exists = yes NOT = { has_country_flag = existing_country } }
+				any_neighbor_country = {
+					ai = no
+					OR = {
+						AND = { government = theocracy NOT = { has_country_flag = theocratic_government } }
+						AND = { government = proletarian_dictatorship NOT = { has_country_flag = communist_gov } }
+						AND = { government = absolute_monarchy NOT = { has_country_flag = absolute_monarchy_gov } }
+						AND = { government = prussian_constitutionalism NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
+						AND = { government = hms_government NOT = { has_country_flag = constitutional_monarchy_gov } }
+						AND = { government = democracy NOT = { has_country_flag = democracy_gov } }
+						AND = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
+						AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
+						AND = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
+						AND = { exists = yes NOT = { has_country_flag = existing_country } }
+					}
+				}
+				any_greater_power = {
+					ai = no
+					OR = {
+						AND = { government = theocracy NOT = { has_country_flag = theocratic_government } }
+						AND = { government = proletarian_dictatorship NOT = { has_country_flag = communist_gov } }
+						AND = { government = absolute_monarchy NOT = { has_country_flag = absolute_monarchy_gov } }
+						AND = { government = prussian_constitutionalism NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
+						AND = { government = hms_government NOT = { has_country_flag = constitutional_monarchy_gov } }
+						AND = { government = democracy NOT = { has_country_flag = democracy_gov } }
+						AND = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
+						AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
+						AND = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
+						AND = { exists = yes NOT = { has_country_flag = existing_country } }
+					}
+				}
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			clr_country_flag = theocratic_government
+			clr_country_flag = communist_gov
+			clr_country_flag = absolute_monarchy_gov
+			clr_country_flag = semi_constitutional_monarchy_gov
+			clr_country_flag = constitutional_monarchy_gov
+			clr_country_flag = democracy_gov
+			clr_country_flag = presidential_dictatorship_gov
+			clr_country_flag = fascist_gov
+			clr_country_flag = anarcho_liberal_gov
+			random_owned = { limit = { owner = { government = theocracy } } owner = { set_country_flag = theocratic_government } }
+			random_owned = { limit = { owner = { government = proletarian_dictatorship } } owner = { set_country_flag = communist_gov } }
+			random_owned = { limit = { owner = { government = absolute_monarchy } } owner = { set_country_flag = absolute_monarchy_gov } }
+			random_owned = { limit = { owner = { government = prussian_constitutionalism } } owner = { set_country_flag = semi_constitutional_monarchy_gov } }
+			random_owned = { limit = { owner = { government = hms_government } } owner = { set_country_flag = constitutional_monarchy_gov } }
+			random_owned = { limit = { owner = { government = democracy } } owner = { set_country_flag = democracy_gov } }
+			random_owned = { limit = { owner = { government = presidential_dictatorship } } owner = { set_country_flag = presidential_dictatorship_gov } }
+			random_owned = { limit = { owner = { government = fascist_dictatorship } } owner = { set_country_flag = fascist_gov } }
+			random_owned = { limit = { owner = { government = bourgeois_dictatorship } } owner = { set_country_flag = anarcho_liberal_gov } }
+			random_owned = { limit = { owner = { exists = yes NOT = { has_country_flag = existing_country } } } owner = { set_country_flag = existing_country } }
+			any_neighbor_country = {
+				limit = { exists = yes NOT = { has_country_flag = existing_country } }
+				set_country_flag = existing_country
+			}
+			any_neighbor_country = {
+				limit = { government = theocracy NOT = { has_country_flag = theocratic_government } }
+				#clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = theocratic_government
+			}
+			any_neighbor_country = {
+				limit = { government = proletarian_dictatorship NOT = { has_country_flag = communist_gov } }
+				clr_country_flag = theocratic_government
+				#clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = communist_gov
+			}
+			any_neighbor_country = {
+				limit = { government = absolute_monarchy NOT = { has_country_flag = absolute_monarchy_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				#clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = absolute_monarchy_gov
+			}
+			any_neighbor_country = {
+				limit = { government = prussian_constitutionalism NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				#clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = semi_constitutional_monarchy_gov
+			}
+			any_neighbor_country = {
+				limit = { government = hms_government NOT = { has_country_flag = constitutional_monarchy_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				#clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = constitutional_monarchy_gov
+			}
+			any_neighbor_country = {
+				limit = { government = democracy NOT = { has_country_flag = democracy_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				#clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = democracy_gov
+			}
+			any_neighbor_country = {
+				limit = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				#clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = presidential_dictatorship_gov
+			}
+			any_neighbor_country = {
+				limit = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				#clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = fascist_gov
+			}
+			any_neighbor_country = {
+				limit = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				#clr_country_flag = anarcho_liberal_gov
+				set_country_flag = anarcho_liberal_gov
+			}
+			any_greater_power = {
+				limit = { exists = yes NOT = { has_country_flag = existing_country } }
+				set_country_flag = existing_country
+			}
+			any_greater_power = {
+				limit = { government = theocracy NOT = { has_country_flag = theocratic_government } }
+				#clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = theocratic_government
+			}
+			any_greater_power = {
+				limit = { government = proletarian_dictatorship NOT = { has_country_flag = communist_gov } }
+				clr_country_flag = theocratic_government
+				#clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = communist_gov
+			}
+			any_greater_power = {
+				limit = { government = absolute_monarchy NOT = { has_country_flag = absolute_monarchy_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				#clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = absolute_monarchy_gov
+			}
+			any_greater_power = {
+				limit = { government = prussian_constitutionalism NOT = { has_country_flag = semi_constitutional_monarchy_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				#clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = semi_constitutional_monarchy_gov
+			}
+			any_greater_power = {
+				limit = { government = hms_government NOT = { has_country_flag = constitutional_monarchy_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				#clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = constitutional_monarchy_gov
+			}
+			any_greater_power = {
+				limit = { government = democracy NOT = { has_country_flag = democracy_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				#clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = democracy_gov
+			}
+			any_greater_power = {
+				limit = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				#clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = presidential_dictatorship_gov
+			}
+			any_greater_power = {
+				limit = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				#clr_country_flag = fascist_gov
+				clr_country_flag = anarcho_liberal_gov
+				set_country_flag = fascist_gov
+			}
+			any_greater_power = {
+				limit = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
+				clr_country_flag = theocratic_government
+				clr_country_flag = communist_gov
+				clr_country_flag = absolute_monarchy_gov
+				clr_country_flag = semi_constitutional_monarchy_gov
+				clr_country_flag = constitutional_monarchy_gov
+				clr_country_flag = democracy_gov
+				clr_country_flag = presidential_dictatorship_gov
+				clr_country_flag = fascist_gov
+				#clr_country_flag = anarcho_liberal_gov
+				set_country_flag = anarcho_liberal_gov
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	slave_pop_growth = {
+		potential = {
+			ai = yes
+			exists = yes
+			year = 1838
+			OR = {
+				AND = {
+					NOT = { has_country_modifier = slave_growth }
+					slavery = yes_slavery
+					any_owned_province = { has_pop_type = slaves NOT = { slaves = 0.75 } }
+				}
+				any_neighbor_country = {
+					ai = no
+					NOT = { has_country_modifier = slave_growth }
+					slavery = yes_slavery
+					any_owned_province = { has_pop_type = slaves NOT = { slaves = 0.75 } }
+				}
+				any_greater_power = {
+					ai = no
+					NOT = { has_country_modifier = slave_growth }
+					slavery = yes_slavery
+					any_owned_province = { has_pop_type = slaves NOT = { slaves = 0.75 } }
+				}
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { has_country_modifier = slave_growth }
+						slavery = yes_slavery
+						any_owned_province = { has_pop_type = slaves NOT = { slaves = 0.75 } }
+					}
+				}
+				
+				owner = {
+					any_pop = {
+						limit = { type = slaves NOT = { location = { slaves = 0.75 } } }
+						random_list = {
+							10 = {}
+							10 = { reduce_pop = 1.04 }
+							10 = { reduce_pop = 1.05 }
+							10 = { reduce_pop = 1.06 }
+							10 = { reduce_pop = 1.07 }
+							10 = { reduce_pop = 1.08 }
+							10 = { reduce_pop = 1.09 }
+							10 = { reduce_pop = 1.10 }
+							10 = { reduce_pop = 1.11 }
+							10 = { reduce_pop = 1.12 }
+						}
+					}
+					any_pop = {
+						limit = { type = slaves }
+						random = { chance = 10 reduce_pop = 0.97 }
+					}
+					any_pop = {
+						limit = { type = slaves }
+						random = { chance = 10 reduce_pop = 0.98 }
+					}
+					random_list = {
+						33 = { add_country_modifier = { name = slave_growth duration = 1460 } }
+						33 = { add_country_modifier = { name = slave_growth duration = 1827 } }
+						33 = { add_country_modifier = { name = slave_growth duration = 2190 } }
+					}
+					any_pop = { limit = { type = slaves } literacy = -0.1 }
+				}
+			}
+			
+			any_country = {
+				limit = {
+					NOT = { has_country_modifier = slave_growth }
+					slavery = yes_slavery
+					any_owned_province = { has_pop_type = slaves NOT = { slaves = 0.75 } }
+				}
+				any_pop = {
+					limit = { type = slaves NOT = { location = { slaves = 0.75 } } }
+					random_list = {
+						10 = {}
+						10 = { reduce_pop = 1.04 }
+						10 = { reduce_pop = 1.05 }
+						10 = { reduce_pop = 1.06 }
+						10 = { reduce_pop = 1.07 }
+						10 = { reduce_pop = 1.08 }
+						10 = { reduce_pop = 1.09 }
+						10 = { reduce_pop = 1.10 }
+						10 = { reduce_pop = 1.11 }
+						10 = { reduce_pop = 1.12 }
+					}
+				}
+				any_pop = {
+					limit = { type = slaves }
+					random = { chance = 10 reduce_pop = 0.97 }
+				}
+				any_pop = {
+					limit = { type = slaves }
+					random = { chance = 10 reduce_pop = 0.98 }
+				}
+				random_list = {
+					33 = { add_country_modifier = { name = slave_growth duration = 1460 } }
+					33 = { add_country_modifier = { name = slave_growth duration = 1827 } }
+					33 = { add_country_modifier = { name = slave_growth duration = 2190 } }
+				}
+				any_pop = { limit = { type = slaves } literacy = -0.1 }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	release_bukovina = {
+		potential = {
+			owns = 662
+			owns = 663
+			OR = {
+				tag = AUS
+				tag = KUK
+			}
+			NOT = { owns = 660 }	
+			NOT = { owns = 661 }
+			NOT = { owns = 953 }
+			NOT = { owns = 952 }
+			BKV = { exists = no }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			release = BKV
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	release_galicia_lodomeria = {
+		potential = {
+			OR = {
+				tag = AUS
+				tag = KUK
+			}
+			NOT = { exists = GLM }
+			any_owned_province = {
+				region = AUS_702
+				is_core = GLM
+			}
+			NOT = {
+				owns = 703
+				owns = 661
+				owns = 662
+				any_owned_province = {
+					OR = {
+						region = AUS_627
+						region = AUS_633
+					}
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			release = GLM
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	clean_up_crisis_tension = {
+		potential = {
+			ai = yes
+			exists = yes
+			OR = {
+				NOT = { has_global_flag = revolution_n_counter_researched }
+				is_vassal = yes
+			}
+			OR = {
+				any_owned_province = {
+					is_colonial = no
+					state_scope = { flashpoint_tension = 25 has_flashpoint = yes }
+					owner = {
+						OR = {
+							NOT = { has_global_flag = revolution_n_counter_researched }
+							is_vassal = yes
+						}
+					}
+				}
+				any_greater_power = {
+					ai = no
+					NOT = { has_global_flag = revolution_n_counter_researched }
+					any_owned_province = {
+						is_colonial = no
+						state_scope = { flashpoint_tension = 25 has_flashpoint = yes }
+					}
+				}
+				any_neighbor_country = {
+					ai = no
+					OR = {
+						NOT = { has_global_flag = revolution_n_counter_researched }
+						is_vassal = yes
+					}
+					any_owned_province = {
+						is_colonial = no
+						state_scope = { flashpoint_tension = 25 has_flashpoint = yes }
+					}
+				}
+			}
+		}
+		allow = { }
+		
+		effect = {
+			any_country = {
+				limit = {
+					OR = {
+						NOT = { has_global_flag = revolution_n_counter_researched }
+						is_vassal = yes
+					}
+				}
+				any_state  = {
+					limit = { has_flashpoint = yes is_colonial = no }
+					flashpoint_tension = -90
+				}
+			}
+			any_owned = {
+				limit = {
+					owner = {
+						OR = {
+							NOT = { has_global_flag = revolution_n_counter_researched }
+							is_vassal = yes
+						}
+					}
+				}
+				owner = {
+					any_state  = {
+						limit = { has_flashpoint = yes is_colonial = no }
+						flashpoint_tension = -90
+					}
+				}
+			}
+		}
+	}
+	
+	native_assimilation_act_ended = {
+		picture = native_assimilation_act
+		potential = {
+			ai = yes
+			exists = yes
+			OR = {
+				AND = {
+					has_country_flag = native_assimilation_enacted
+					NOT = { has_country_modifier = native_assimilation_act_policy }
+				}
+				any_neighbor_country = {
+					ai = no
+					has_country_flag = native_assimilation_enacted
+					NOT = { has_country_modifier = native_assimilation_act_policy }
+				}
+				any_greater_power = {
+					ai = no
+					has_country_flag = native_assimilation_enacted
+					NOT = { has_country_modifier = native_assimilation_act_policy }
+				}
+			}
+		}
+	
+		allow = {
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = native_assimilation_enacted
+						NOT = { has_country_modifier = native_assimilation_act_policy }
+					}
+				}
+				owner = { clr_country_flag = native_assimilation_enacted }
+			}
+			any_country = {
+				limit = {
+					has_country_flag = native_assimilation_enacted
+					NOT = { has_country_modifier = native_assimilation_act_policy }
+				}
+				clr_country_flag = native_assimilation_enacted
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+		
+	modern_central_banking_system_flag = {
+		potential = {
+			ai = yes
+			exists = yes
+			OR = {
+				any_greater_power = {
+					ai = no
+					NOT = { has_country_flag = modern_central_bank_system_invented }
+					modern_central_bank_system = 1
+				}
+				any_neighbor_country = {
+					ai = no
+					NOT = { has_country_flag = modern_central_bank_system_invented }
+					modern_central_bank_system = 1
+				}
+				AND = {
+					NOT = { has_country_flag = modern_central_bank_system_invented }
+					modern_central_bank_system = 1
+				}
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			random_owned = {
+				limit = { owner = { NOT = { has_country_flag = modern_central_bank_system_invented } modern_central_bank_system = 1 } }
+				owner = { set_country_flag = modern_central_bank_system_invented }
+			}
+			any_country = {
+				limit = { NOT = { has_country_flag = modern_central_bank_system_invented } modern_central_bank_system = 1 }
+				set_country_flag = modern_central_bank_system_invented
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+		
+	pay_owed_steamers = {
+		potential = {
+			ai = yes
+			OR = {
+				check_variable = { which = owed_steamers value = 1 }
+				check_variable = { which = owed_artillery value = 1 }
+				check_variable = { which = owed_canned_food value = 1 }
+				check_variable = { which = owed_small_arms value = 1 }
+				check_variable = { which = owed_ammunition value = 1 }
+				check_variable = { which = owed_cash_money value = 1 }
+				any_neighbor_country = {
+					ai = no
+					war = no
+					has_country_modifier = disable_conquest_cb
+				}
+				any_greater_power = {
+					ai = no
+					war = no
+					has_country_modifier = disable_conquest_cb
+				}
+			}
+		}
+		
+		allow = {
+			OR = {
+				any_neighbor_country = {
+					ai = no
+					war = no
+					has_country_modifier = disable_conquest_cb
+				}
+				any_greater_power = {
+					ai = no
+					war = no
+					has_country_modifier = disable_conquest_cb
+				}
+				AND = {
+					steamer_convoy = 2
+					check_variable = { which = owed_steamers value = 1 }
+				}
+				AND = {
+					artillery = 2
+					check_variable = { which = owed_artillery value = 1 }
+				}
+				AND = {
+					canned_food = 2
+					check_variable = { which = owed_canned_food value = 1 }
+				}
+				AND = {
+					small_arms = 2
+					check_variable = { which = owed_small_arms value = 1 }
+				}
+				AND = {
+					ammunition = 2
+					check_variable = { which = owed_ammunition value = 1 }
+				}
+				AND = {
+					money = 10000
+					check_variable = { which = owed_cash_money value = 1 }
+				}
+			}
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					ai = no
+					war = no
+					has_country_modifier = disable_conquest_cb
+				}
+				remove_country_modifier = disable_conquest_cb
+			}
+		
+			random_owned = {
+				limit = {
+					owner = {
+						ammunition = 1
+						check_variable = { which = owed_ammunition value = 1 }
+					}
+				}
+				owner = {
+					ammunition = -1
+					change_variable = { which = owed_ammunition value = -1 }
+				}
+			}
+		
+			random_owned = {
+				limit = {
+					owner = {
+						small_arms = 1
+						check_variable = { which = owed_small_arms value = 1 }
+					}
+				}
+				owner = {
+					small_arms = -1
+					change_variable = { which = owed_small_arms value = -1 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						steamer_convoy = 4
+						check_variable = { which = owed_steamers value = 4 }
+					}
+				}
+				owner = {
+					steamer_convoy = -4
+					change_variable = { which = owed_steamers value = -4 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						steamer_convoy = 4
+						check_variable = { which = owed_steamers value = 4 }
+					}
+				}
+				owner = {
+					steamer_convoy = -4
+					change_variable = { which = owed_steamers value = -4 }
+				}
+			}
+		
+			random_owned = {
+				limit = {
+					owner = {
+						steamer_convoy = 2
+						check_variable = { which = owed_steamers value = 1 }
+					}
+				}
+				owner = {
+					steamer_convoy = -2
+					change_variable = { which = owed_steamers value = -2 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						artillery = 4
+						check_variable = { which = owed_artillery value = 4 }
+					}
+				}
+				owner = {
+					artillery = -4
+					change_variable = { which = owed_artillery value = -4 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						artillery = 4
+						check_variable = { which = owed_artillery value = 4 }
+					}
+				}
+				owner = {
+					artillery = -4
+					change_variable = { which = owed_artillery value = -4 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						artillery = 2
+						check_variable = { which = owed_artillery value = 1 }
+					}
+				}
+				owner = {
+					artillery = -2
+					change_variable = { which = owed_artillery value = -2 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						canned_food = 4
+						check_variable = { which = owed_canned_food value = 4 }
+					}
+				}
+				owner = {
+					canned_food = -4
+					change_variable = { which = owed_canned_food value = -4 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						canned_food = 2
+						check_variable = { which = owed_canned_food value = 1 }
+					}
+				}
+				owner = {
+					canned_food = -2
+					change_variable = { which = owed_canned_food value = -2 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						money = 50000
+						check_variable = { which = owed_cash_money value = 50 }
+					}
+				}
+				owner = {
+					treasury = -50000
+					change_variable = { which = owed_cash_money value = -50 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						money = 10000
+						check_variable = { which = owed_cash_money value = 1 }
+					}
+				}
+				owner = {
+					treasury = -10000
+					change_variable = { which = owed_cash_money value = -10 }
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	monthly_substate_payment = {
+		potential = {
+			ai = yes
+			NOT = { has_country_flag = exempt_from_vassal_contribution }
+			OR = {
+				is_substate = yes
+				AND = {
+					is_vassal = yes
+					is_substate = no
+					total_pops = 250000
+				}
+			}
+		}
+		
+		allow = {
+			NOT = { has_country_modifier = monthly_payment_made }
+			OR = {
+				AND = {
+					money = 1500
+					NOT = { total_pops = 750000 }
+				}
+				AND = {
+					money = 2250
+					total_pops = 750000
+					NOT = { total_pops = 100000 }
+				}
+				AND = {
+					money = 3000
+					total_pops = 1000000
+					NOT = { total_pops = 1250000 }
+				}
+				AND = {
+					money = 3750
+					total_pops = 1250000
+					NOT = { total_pops = 1500000 }
+				}
+				AND = {
+					money = 4500
+					total_pops = 1500000
+					NOT = { total_pops = 1750000 }
+				}
+				AND = {
+					money = 5250
+					total_pops = 1750000
+					NOT = { total_pops = 2000000 }
+				}
+				AND = {
+					money = 6000
+					total_pops = 2000000
+					NOT = { total_pops = 2250000 }
+				}
+				AND = {
+					money = 6750
+					total_pops = 2250000
+					NOT = { total_pops = 2500000 }
+				}
+				AND = {
+					money = 7500
+					total_pops = 2500000
+				}
+			}
+		}
+		
+		effect = {
+			random_owned = {
+				limit = { owner = { NOT = { total_pops = 750000 } } }
+				owner = {
+					treasury = -1500
+					overlord = { treasury = 1500 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { total_pops = 750000 NOT = { total_pops = 1000000 } } }
+				owner = {
+					treasury = -2250
+					overlord = { treasury = 2250 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { total_pops = 1000000 NOT = { total_pops = 1250000 } } }
+				owner = {
+					treasury = -3000
+					overlord = { treasury = 3000 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { total_pops = 1250000 NOT = { total_pops = 1500000 } } }
+				owner = {
+					treasury = -3750
+					overlord = { treasury = 3750 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { total_pops = 1500000 NOT = { total_pops = 1750000 } } }
+				owner = {
+					treasury = -4500
+					overlord = { treasury = 4500 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { total_pops = 1750000 NOT = { total_pops = 2000000 } } }
+				owner = {
+					treasury = -5250
+					overlord = { treasury = 5250 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { total_pops = 2000000 NOT = { total_pops = 2250000 } } }
+				owner = {
+					treasury = -6000
+					overlord = { treasury = 6000 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { total_pops = 2250000 NOT = { total_pops = 2500000 } } }
+				owner = {
+					treasury = -6750
+					overlord = { treasury = 6750 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { total_pops = 2500000 } }
+				owner = {
+					treasury = -7500
+					overlord = { treasury = 7500 }
+				}
+			}
+			
+			random_owned = { limit = { owner = { is_substate = yes } } owner = { add_country_modifier = { name = monthly_payment_made duration = 150 } } }
+			
+			random_owned = {
+				limit = { owner = { is_vassal = yes is_substate = no } } owner = { add_country_modifier = { name = monthly_payment_made duration = 180 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_flag = counting_payments } }
+				owner = {
+					change_variable = { which = counting_payments_variable value = 1 }
+				}
+			}
+			random_owned = {
+				limit = { owner = { NOT = { has_country_flag = counting_payments } } }
+				owner = {
+					set_variable = { which = counting_payments_variable value = 0 }
+					set_country_flag = counting_payments
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	player_owes_money = {
+		potential = {
+			ai = yes
+			OR = {
+				any_neighbor_country = {
+					ai = no
+					NOT = { has_country_flag = exempt_from_vassal_contribution }
+					NOT = { has_country_modifier = monthly_payment_made }
+					OR = {
+						is_substate = yes
+						AND = {
+							is_vassal = yes
+							is_substate = no
+							total_pops = 250000
+						}
+					}
+				}
+				any_neighbor_country = {
+					ai = no
+					check_variable = { which = owed_cash_money value = 1 }
+				}
+				any_neighbor_country = {
+					ai = no
+					OR = {
+						AND = {
+							steamer_convoy = 2
+							check_variable = { which = owed_steamers value = 1 }
+						}
+						AND = {
+							artillery = 2
+							check_variable = { which = owed_artillery value = 1 }
+						}
+						AND = {
+							canned_food = 2
+							check_variable = { which = owed_canned_food value = 1 }
+						}
+						AND = {
+							small_arms = 2
+							check_variable = { which = owed_small_arms value = 1 }
+						}
+						AND = {
+							ammunition = 2
+							check_variable = { which = owed_ammunition value = 1 }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			OR = {
+				any_neighbor_country = {
+					ai = no
+					NOT = { has_country_flag = exempt_from_vassal_contribution }
+					NOT = { has_country_modifier = monthly_payment_made }
+					OR = {
+						is_substate = yes
+						AND = {
+							is_vassal = yes
+							is_substate = no
+							total_pops = 250000
+						}
+					}
+					OR = {
+						AND = {
+							money = 1500
+							NOT = { total_pops = 750000 }
+						}
+						AND = {
+							money = 2250
+							total_pops = 750000
+							NOT = { total_pops = 100000 }
+						}
+						AND = {
+							money = 3000
+							total_pops = 1000000
+							NOT = { total_pops = 1250000 }
+						}
+						AND = {
+							money = 3750
+							total_pops = 1250000
+							NOT = { total_pops = 1500000 }
+						}
+						AND = {
+							money = 4500
+							total_pops = 1500000
+							NOT = { total_pops = 1750000 }
+						}
+						AND = {
+							money = 5250
+							total_pops = 1750000
+							NOT = { total_pops = 2000000 }
+						}
+						AND = {
+							money = 6000
+							total_pops = 2000000
+							NOT = { total_pops = 2250000 }
+						}
+						AND = {
+							money = 6750
+							total_pops = 2250000
+							NOT = { total_pops = 2500000 }
+						}
+						AND = {
+							money = 7500
+							total_pops = 2500000
+						}
+					}
+				}
+				any_neighbor_country = {
+					ai = no 
+					money = 10000
+					check_variable = { which = owed_cash_money value = 1 }
+				}
+				any_neighbor_country = {
+					ai = no
+					OR = {
+						AND = {
+							steamer_convoy = 2
+							check_variable = { which = owed_steamers value = 1 }
+						}
+						AND = {
+							artillery = 2
+							check_variable = { which = owed_artillery value = 1 }
+						}
+						AND = {
+							canned_food = 2
+							check_variable = { which = owed_canned_food value = 1 }
+						}
+						AND = {
+							small_arms = 2
+							check_variable = { which = owed_small_arms value = 1 }
+						}
+						AND = {
+							ammunition = 2
+							check_variable = { which = owed_ammunition value = 1 }
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					neighbour = THIS
+					ai = no
+					NOT = { has_country_flag = exempt_from_vassal_contribution }
+					NOT = { has_country_modifier = monthly_payment_made }
+					OR = {
+						is_substate = yes
+						AND = {
+							is_vassal = yes
+							is_substate = no
+							total_pops = 250000
+						}
+					}
+				}
+				random_owned = {
+					limit = { owner = { NOT = { total_pops = 750000 } } }
+					owner = {
+						treasury = -1500
+						overlord = { treasury = 1500 }
+					}
+				}
+				
+				random_owned = {
+					limit = { owner = { total_pops = 750000 NOT = { total_pops = 1000000 } } }
+					owner = {
+						treasury = -2250
+						overlord = { treasury = 2250 }
+					}
+				}
+				
+				random_owned = {
+					limit = { owner = { total_pops = 1000000 NOT = { total_pops = 1250000 } } }
+					owner = {
+						treasury = -3000
+						overlord = { treasury = 3000 }
+					}
+				}
+				
+				random_owned = {
+					limit = { owner = { total_pops = 1250000 NOT = { total_pops = 1500000 } } }
+					owner = {
+						treasury = -3750
+						overlord = { treasury = 3750 }
+					}
+				}
+				
+				random_owned = {
+					limit = { owner = { total_pops = 1500000 NOT = { total_pops = 1750000 } } }
+					owner = {
+						treasury = -4500
+						overlord = { treasury = 4500 }
+					}
+				}
+				
+				random_owned = {
+					limit = { owner = { total_pops = 1750000 NOT = { total_pops = 2000000 } } }
+					owner = {
+						treasury = -5250
+						overlord = { treasury = 5250 }
+					}
+				}
+				
+				random_owned = {
+					limit = { owner = { total_pops = 2000000 NOT = { total_pops = 2250000 } } }
+					owner = {
+						treasury = -6000
+						overlord = { treasury = 6000 }
+					}
+				}
+				
+				random_owned = {
+					limit = { owner = { total_pops = 2250000 NOT = { total_pops = 2500000 } } }
+					owner = {
+						treasury = -6750
+						overlord = { treasury = 6750 }
+					}
+				}
+				
+				random_owned = {
+					limit = { owner = { total_pops = 2500000 } }
+					owner = {
+						treasury = -7500
+						overlord = { treasury = 7500 }
+					}
+				}
+				
+				random_owned = {
+					limit = { owner = { is_substate = yes } }
+					owner = { add_country_modifier = { name = monthly_payment_made duration = 150 } } 
+				}
+				random_owned = {
+					limit = { owner = { is_vassal = yes is_substate = no } }
+					owner = { add_country_modifier = { name = monthly_payment_made duration = 180 } } 
+				}
+			}
+			any_country = {
+				limit = {
+					ai = no 
+					neighbour = THIS
+					money = 10000
+					check_variable = { which = owed_cash_money value = 1 }
+				}
+				treasury = -10000
+				change_variable = { which = owed_cash_money value = -10 }
+			}
+			
+			any_country = {
+				limit = {
+					ai = no 
+					neighbour = THIS
+				}
+			
+				random_owned = {
+					limit = {
+						owner = {
+							ammunition = 1
+							check_variable = { which = owed_ammunition value = 1 }
+						}
+					}
+					owner = {
+						ammunition = -1
+						change_variable = { which = owed_ammunition value = -1 }
+					}
+				}
+		
+				random_owned = {
+					limit = {
+						owner = {
+							small_arms = 1
+							check_variable = { which = owed_small_arms value = 1 }
+						}
+					}
+					owner = {
+						small_arms = -1
+						change_variable = { which = owed_small_arms value = -1 }
+					}
+				}
+				
+				random_owned = {
+					limit = {
+						owner = {
+							steamer_convoy = 4
+							check_variable = { which = owed_steamers value = 4 }
+						}
+					}
+					owner = {
+						steamer_convoy = -4
+						change_variable = { which = owed_steamers value = -4 }
+					}
+				}
+				
+				random_owned = {
+					limit = {
+						owner = {
+							steamer_convoy = 4
+							check_variable = { which = owed_steamers value = 4 }
+						}
+					}
+					owner = {
+						steamer_convoy = -4
+						change_variable = { which = owed_steamers value = -4 }
+					}
+				}
+			
+				random_owned = {
+					limit = {
+						owner = {
+							steamer_convoy = 2
+							check_variable = { which = owed_steamers value = 1 }
+						}
+					}
+					owner = {
+						steamer_convoy = -2
+						change_variable = { which = owed_steamers value = -2 }
+					}
+				}
+				
+				random_owned = {
+					limit = {
+						owner = {
+							artillery = 4
+							check_variable = { which = owed_artillery value = 4 }
+						}
+					}
+					owner = {
+						artillery = -4
+						change_variable = { which = owed_artillery value = -4 }
+					}
+				}
+				
+				random_owned = {
+					limit = {
+						owner = {
+							artillery = 4
+							check_variable = { which = owed_artillery value = 4 }
+						}
+					}
+					owner = {
+						artillery = -4
+						change_variable = { which = owed_artillery value = -4 }
+					}
+				}
+				
+				random_owned = {
+					limit = {
+						owner = {
+							artillery = 2
+							check_variable = { which = owed_artillery value = 1 }
+						}
+					}
+					owner = {
+						artillery = -2
+						change_variable = { which = owed_artillery value = -2 }
+					}
+				}
+				
+				random_owned = {
+					limit = {
+						owner = {
+							canned_food = 4
+							check_variable = { which = owed_canned_food value = 4 }
+						}
+					}
+					owner = {
+						canned_food = -4
+						change_variable = { which = owed_canned_food value = -4 }
+					}
+				}
+				
+				random_owned = {
+					limit = {
+						owner = {
+							canned_food = 2
+							check_variable = { which = owed_canned_food value = 1 }
+						}
+					}
+					owner = {
+						canned_food = -2
+						change_variable = { which = owed_canned_food value = -2 }
+					}
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	silver_mines_without_modifier = {
+		potential = {
+			ai = yes
+			any_neighbor_country = {
+				OR = {
+					AND = {
+						owns = 2293
+						2293 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
+					}
+					AND = {
+						owns = 2296
+						2296 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
+					}
+					AND = {
+						owns = 312
+						312 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
+					}
+					AND = {
+						owns = 2322
+						2322 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
+					}
+					AND = {
+						owns = 2323
+						2323 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
+					}
+				}
+			}
+		}
+		
+		allow = {
+			
+		}
+		
+		effect = {
+			any_neighbor_country = {
+				any_owned = {
+					limit = {
+						trade_goods = precious_metal
+						NOT = { has_province_modifier = silver_mine }
+						OR = {
+							province_id = 2293
+							province_id = 2296
+							province_id = 312
+							province_id = 2322
+							province_id = 2323
+						}
+					}
+					add_province_modifier = { name = silver_mine duration = -1 }
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	turn_off_vassal_payments = {
+		picture = vassal_payment
+		alert = no
+		potential = {
+			has_country_flag = government_decisions_on
+			any_neighbor_country = {
+				vassal_of = THIS
+				NOT = { has_country_flag = exempt_from_vassal_contribution }
+			}
+			NOT = { has_country_flag = vassals_dont_need_to_pay }
+			num_of_vassals_no_substates = 1
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = vassals_dont_need_to_pay
+			any_country = {
+				limit = { vassal_of = THIS NOT = { is_substate = yes } }
+				set_country_flag = exempt_from_vassal_contribution
+				relation = { who = THIS value = 100 }
+			}
+		}
+		
+		ai_will_do = { factor = 0 }
+	}
+	
+	turn_on_vassal_payments = {
+		picture = vassal_payment
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = vassals_dont_need_to_pay
+			num_of_vassals_no_substates = 1
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			clr_country_flag = vassals_dont_need_to_pay
+			any_country = {
+				limit = { vassal_of = THIS NOT = { is_substate = yes } }
+				clr_country_flag = exempt_from_vassal_contribution 
+				relation = { who = THIS value = -100 }
+			}
+		}
+		
+		ai_will_do = { factor = 0 }
+	}
+	
+	vassal_stop_paying_vassal_payments = {
+		picture = vassal_payment
+		potential = {
+			is_vassal = yes
+			overlord = { has_country_flag = vassals_dont_need_to_pay }
+			NOT = { has_country_flag = exempt_from_vassal_contribution }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = exempt_from_vassal_contribution
+			overlord = { relation = { who = THIS value = 100 } }
+		}
+		
+		ai_will_do = { factor = 0 }
+	}
+	
+#Cleaning after international zones
+	cleaning_after_international_zones = {
+		picture = vassal_payment
+		potential = {
+			year = 1890
+			ai = yes
+			OR = {
+				AND = {
+					OR = {
+						has_country_modifier = international_zone_modifier
+						has_country_flag = international_zone
+					}
+					OR = {
+						number_of_states = 2
+						government = proletarian_dictatorship
+						government = bourgeois_dictatorship
+						government = fascist_dictatorship
+					}
+				}
+				any_neighbor_country = {
+					ai = no
+					OR = {
+						has_country_modifier = international_zone_modifier
+						has_country_flag = international_zone
+					}
+					OR = {
+						number_of_states = 2
+						government = proletarian_dictatorship
+						government = bourgeois_dictatorship
+						government = fascist_dictatorship
+					}
+				}
+				any_greater_power = {
+					ai = no
+					OR = {
+						has_country_modifier = international_zone_modifier
+						has_country_flag = international_zone
+					}
+					OR = {
+						number_of_states = 2
+						government = proletarian_dictatorship
+						government = bourgeois_dictatorship
+						government = fascist_dictatorship
+					}
+				}
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			remove_country_modifier = international_zone_modifier
+			clr_country_flag = international_zone
+			any_neighbor_country = {
+				limit = {
+					ai = no
+					OR = {
+						has_country_modifier = international_zone_modifier
+						has_country_flag = international_zone
+					}
+					OR = {
+						number_of_states = 2
+						government = proletarian_dictatorship
+						government = bourgeois_dictatorship
+						government = fascist_dictatorship
+					}
+				}
+				remove_country_modifier = international_zone_modifier
+				clr_country_flag = international_zone
+			}
+			any_greater_power = {
+				limit = {
+					ai = no
+					OR = {
+						has_country_modifier = international_zone_modifier
+						has_country_flag = international_zone
+					}
+					OR = {
+						number_of_states = 2
+						government = proletarian_dictatorship
+						government = bourgeois_dictatorship
+						government = fascist_dictatorship
+					}
+				}
+				remove_country_modifier = international_zone_modifier
+				clr_country_flag = international_zone
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+# handling insolvent AI countries that cannot borrow money
+	insolvent_ai_cant_borrow = {
+		potential = {
+			ai = yes
+			civilized = yes
+			OR = {
+				has_country_modifier = in_bankrupcy
+				has_country_modifier = generalised_debt_default
+				AND = {
+					civilized = no
+					NOT = { finance_reform = finance_reform_two }
+				}
+			}
+			NOT = {
+				money = 100
+				has_country_modifier = emergency_tax_measures1
+				has_country_modifier = emergency_tax_measures2
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			set_country_flag = emergency_tax_measures
+			add_country_modifier = {
+				name = emergency_tax_measures1
+				duration = 365
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	insolvent_ai_still_in_debt = {
+		potential = {
+			ai = yes
+			civilized = yes
+			has_country_flag = emergency_tax_measures
+			NOT = {
+				money = 100
+				has_country_modifier = emergency_tax_measures1
+				has_country_modifier = emergency_tax_measures2
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = emergency_tax_measures2
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	insolvent_ai_debt_gone = {
+		potential = {
+			ai = yes
+			OR = {
+				has_country_flag = emergency_tax_measures
+				has_country_modifier = emergency_tax_measures2
+			}
+			money = 5000
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			clr_country_flag = emergency_tax_measures
+			remove_country_modifier = emergency_tax_measures1
+			remove_country_modifier = emergency_tax_measures2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+######
+	totalitarian_cleanup = {
+		potential = {
+			ai = yes
+			exists = yes
+			year = 1890
+			OR = {
+				AND = {
+					NOT = {
+						government = fascist_dictatorship
+						government = proletarian_dictatorship
+					}
+					OR = {
+						has_country_modifier = totalitarian_system
+						has_country_modifier = political_education
+						has_country_modifier = cult_of_personality
+						has_country_modifier = the_terror
+						has_country_flag = totalitarian_government
+					}
+				}
+				any_neighbor_country = {
+					ai = no
+					NOT = {
+						government = fascist_dictatorship
+						government = proletarian_dictatorship
+					}
+					OR = {
+						has_country_modifier = totalitarian_system
+						has_country_modifier = political_education
+						has_country_modifier = cult_of_personality
+						has_country_modifier = the_terror
+						has_country_flag = totalitarian_government
+					}
+				}
+				any_greater_power = {
+					ai = no
+					NOT = {
+						government = fascist_dictatorship
+						government = proletarian_dictatorship
+					}
+					OR = {
+						has_country_modifier = totalitarian_system
+						has_country_modifier = political_education
+						has_country_modifier = cult_of_personality
+						has_country_modifier = the_terror
+						has_country_flag = totalitarian_government
+					}
+				}
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			clr_country_flag = totalitarian_government
+			remove_country_modifier = totalitarian_system
+			remove_country_modifier = political_education
+			remove_country_modifier = cult_of_personality
+			remove_country_modifier = the_terror
+			
+			any_neighbor_country = {
+				limit = {
+					ai = no
+					NOT = {
+						government = fascist_dictatorship
+						government = proletarian_dictatorship
+					}
+					OR = {
+						has_country_modifier = totalitarian_system
+						has_country_modifier = political_education
+						has_country_modifier = cult_of_personality
+						has_country_modifier = the_terror
+						has_country_flag = totalitarian_government
+					}
+				}
+				clr_country_flag = totalitarian_government
+				remove_country_modifier = totalitarian_system
+				remove_country_modifier = political_education
+				remove_country_modifier = cult_of_personality
+				remove_country_modifier = the_terror
+			}
+			any_greater_power = {
+				limit = {
+					ai = no
+					NOT = {
+						government = fascist_dictatorship
+						government = proletarian_dictatorship
+					}
+					OR = {
+						has_country_modifier = totalitarian_system
+						has_country_modifier = political_education
+						has_country_modifier = cult_of_personality
+						has_country_modifier = the_terror
+						has_country_flag = totalitarian_government
+					}
+				}
+				clr_country_flag = totalitarian_government
+				remove_country_modifier = totalitarian_system
+				remove_country_modifier = political_education
+				remove_country_modifier = cult_of_personality
+				remove_country_modifier = the_terror
+			}
+			
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	######
+	# flip_colonial_cores = {
+	# picture = conquest_adriatic
+		# potential = {
+			# any_owned_province = {
+				# is_colonial = yes
+				# is_core = THIS
+			# }
+			# UTI = { exists = no }
+			# NOT = { is_secondary_power = yes }
+			# OR = {
+				# tag = SAF
+				# tag = CAN
+				# tag = AST
+				# tag = MUG
+				# is_culture_group = east_asian
+				# is_culture_group = south_asian
+			# }
+		# }
+		
+		# allow = {
+			# war = no
+		# }
+		
+		# effect = {
+			# UTI = { civilized = yes }
+			# random_owned = {
+				# limit = { owner = { civilized = no } }
+				# owner = { add_country_modifier = { name = colony_to_state_conversion duration = 3 } }
+			# }
+			# random_country = {
+				# limit = {
+					# tag = UTI
+					# NOT = { is_primary_culture = THIS }
+				# }
+				# primary_culture = THIS
+			# }
+			# random_state = {
+				# limit = {
+					# any_owned_province = {
+						# is_colonial = yes
+						# is_core = THIS
+					# }
+				# }
+				# secede_province = UTI
+			# }
+			# UTI = { country_event = 6016815 }
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	
+	
+	
+	release_colonies_that_werent_annexed = {
+		potential = {
+			exists = yes
+			is_vassal = yes
+			has_country_flag = colony_to_be_annexed_flag
+			NOT = { has_country_modifier = colony_to_be_annexed }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			clr_country_flag = colony_to_be_annexed_flag
+			overlord = { release_vassal = THIS }
+			neutrality = yes
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	new_round_of_dismantlement = {
+		potential = {
+			exists = yes
+			is_vassal = yes
+			has_country_modifier = colony_to_be_annexed
+			ai = yes
+			OR = {
+				any_greater_power = { has_country_modifier = dismantling_country }
+				any_neighbor_country = { has_country_modifier = dismantling_country }	
+			}
+		}
+		
+		allow = {
+			war = no
+			NOT = { has_country_modifier = considering_colonial_offer }
+		}
+		
+		effect = {
+			random_list = {
+				17 = { overlord = { country_event = 70005 } }
+				17 = { overlord = { country_event = { id = 70005 days = 1 } } }
+				17 = { overlord = { country_event = { id = 70005 days = 2 } } }
+				17 = { overlord = { country_event = { id = 70005 days = 3 } } }
+				17 = { overlord = { country_event = { id = 70005 days = 4 } } }
+				15 = { overlord = { country_event = { id = 70005 days = 5 } } }
+			}
+			
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	warn_imperialism_cb_is_available = {
+		potential = {
+			civilized = no
+			is_vassal = no
+			ai = yes
+			exists = yes
+			NOT = { has_country_modifier = neutrality_modifier }
+			NOT = { has_country_flag = warned_of_imperialism_cb }
+			
+			any_neighbor_country = {
+				NOT = { is_sphere_leader_of = THIS }
+				NOT = { has_country_flag = knows_about_imperialism_cb }
+				NOT = { has_country_modifier = no_more_war }
+				NOT = { has_country_modifier = neutrality_modifier }
+				NOT = { has_country_modifier = punitive_effects }
+				NOT = { has_country_modifier = claimed_africa }
+				NOT = { war_policy = pacifism }
+				ai = no
+				civilized = yes
+				is_disarmed = no
+				capital_scope = { continent = europe }
+				state_n_government = 1
+				OR = {
+					#Mozambique
+					AND = {
+						OR = {
+							has_country_flag = reconquest_of_lourenco_marques
+							AND = {
+								owns = 2060
+								nationalism_n_imperialism = 1
+							}
+						}
+						THIS = {
+							any_owned_province = {
+								OR = {
+									region = POR_2060
+									region = POR_2053
+									region = POR_2054
+									region = POR_2049
+								}
+							}
+						}
+					}
+					
+					#Algiers
+					AND = {
+						OR = {
+							has_country_flag = marched_through_the_iron_gates
+							AND = {
+								owns = 1700
+								nationalism_n_imperialism = 1
+							}
+						}
+						THIS = {
+							any_owned_province = {
+								OR = {
+									region = ALD_1704
+									region = ALD_1713
+									region = ALD_1708
+									region = FRA_1700
+									region = ALD_1718
+								}
+							}
+						}
+					}
+					
+					#Yemen
+					AND = {
+						nationalism_n_imperialism = 1
+						OR = {
+							owns = 1412
+							is_sphere_leader_of = LHJ
+						}
+						THIS = {
+							any_owned_province = { region = YEM_1412 }
+						}
+					}
+					
+					#Indonesia
+					AND = {
+						owns = 1413
+						THIS = {
+							any_owned_province = {
+								OR = {
+									region = ATJ_1405
+									region = NET_1401
+									region = NET_1398
+									region = NET_1413
+									region = NET_1426
+									region = NET_1423
+									region = NET_1418
+									region = NET_1449
+									region = BAL_1438
+									region = NET_1451
+									region = NET_1446
+								}
+							}
+						}
+					}
+					
+					#Laos
+					AND = {
+						revolution_n_counterrevolution = 1
+						has_global_flag = berlin_conference
+						has_country_flag = created_my_indochina
+						THIS = {
+							any_owned_province = { region = LUA_1356 }
+						}
+					}
+					
+					#Cambodia
+					AND = {
+						revolution_n_counterrevolution = 1
+						has_global_flag = berlin_conference
+						has_country_flag = created_my_indochina
+						THIS = {
+							any_owned_province = { region = SIA_1366 }
+						}
+					}
+					
+					#Burma
+					AND = {
+						OR = {
+							AND = {
+								owns = 1251
+								owns = 1236
+								any_owned_province = { is_core = BUR }
+								has_global_flag = berlin_conference
+							}
+							AND = {
+								has_country_flag = empress_of_india
+								revolution_n_counterrevolution = 1
+							}
+						}
+						THIS = {
+							any_owned_province = {
+								OR = {
+									region = BUR_1330
+									region = BUR_1334
+									region = BUR_1339
+									#region = SIA_1355
+									region = ENG_1343
+								}
+							}
+						}
+					}
+					
+					#Vietnam
+					AND = {
+						has_global_flag = berlin_conference
+						OR = {
+							AND = {
+								owns = 1380
+								owns = 1369
+								revolution_n_counterrevolution = 1
+							}
+							has_country_flag = created_my_indochina
+						}
+						THIS = {
+							any_owned_province = {
+								OR = {
+									region = DAI_1380
+									region = DAI_1375
+									region = DAI_1369
+								}
+							}
+						}
+					}
+					
+					#Malaysia
+					AND = {
+						owns = 1384
+						revolution_n_counterrevolution = 1
+						has_global_flag = berlin_conference
+						THIS = {
+							any_owned_province = {
+								OR = {
+									region = ENG_1391
+									region = ENG_1384
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			
+		}
+		
+		effect = {
+			set_country_flag = warned_of_imperialism_cb
+			random_country = {
+				limit = {
+					NOT = { is_sphere_leader_of = THIS }
+					NOT = { has_country_flag = knows_about_imperialism_cb }
+					NOT = { has_country_modifier = no_more_war }
+					NOT = { has_country_modifier = neutrality_modifier }
+					NOT = { has_country_modifier = punitive_effects }
+					NOT = { has_country_modifier = claimed_africa }
+					NOT = { war_policy = pacifism }
+					ai = no
+					civilized = yes
+					is_disarmed = no
+					capital_scope = { continent = europe }
+					state_n_government = 1
+					OR = {
+						#Mozambique
+						AND = {
+							OR = {
+								has_country_flag = reconquest_of_lourenco_marques
+								AND = {
+									owns = 2060
+									nationalism_n_imperialism = 1
+								}
+							}
+							THIS = {
+								any_owned_province = {
+									OR = {
+										region = POR_2060
+										region = POR_2053
+										region = POR_2054
+										region = POR_2049
+									}
+								}
+							}
+						}
+						
+						#Algiers
+						AND = {
+							OR = {
+								has_country_flag = marched_through_the_iron_gates
+								AND = {
+									owns = 1700
+									nationalism_n_imperialism = 1
+								}
+							}
+							THIS = {
+								any_owned_province = {
+									OR = {
+										region = ALD_1704
+										region = ALD_1713
+										region = ALD_1708
+										region = FRA_1700
+										region = ALD_1718
+									}
+								}
+							}
+						}
+						
+						#Yemen
+						AND = {
+							nationalism_n_imperialism = 1
+							OR = {
+								owns = 1412
+								is_sphere_leader_of = LHJ
+							}
+							THIS = {
+								any_owned_province = { region = YEM_1412 }
+							}
+						}
+						
+						#Indonesia
+						AND = {
+							owns = 1413
+							THIS = {
+								any_owned_province = {
+									OR = {
+										region = ATJ_1405
+										region = NET_1401
+										region = NET_1398
+										region = NET_1413
+										region = NET_1426
+										region = NET_1423
+										region = NET_1418
+										region = NET_1449
+										region = BAL_1438
+										region = NET_1451
+										region = NET_1446
+									}
+								}
+							}
+						}
+						
+						#Laos
+						AND = {
+							revolution_n_counterrevolution = 1
+							has_global_flag = berlin_conference
+							has_country_flag = created_my_indochina
+							THIS = {
+								any_owned_province = { region = LUA_1356 }
+							}
+						}
+						
+						#Cambodia
+						AND = {
+							revolution_n_counterrevolution = 1
+							has_global_flag = berlin_conference
+							has_country_flag = created_my_indochina
+							THIS = {
+								any_owned_province = { region = SIA_1366 }
+							}
+						}
+						
+						#Burma
+						AND = {
+							OR = {
+								AND = {
+									owns = 1251
+									owns = 1236
+									any_owned_province = { is_core = BUR }
+									has_global_flag = berlin_conference
+								}
+								AND = {
+									has_country_flag = empress_of_india
+									revolution_n_counterrevolution = 1
+								}
+							}
+							THIS = {
+								any_owned_province = {
+									OR = {
+										region = BUR_1330
+										region = BUR_1334
+										region = BUR_1339
+										#region = SIA_1355
+										region = ENG_1343
+									}
+								}
+							}
+						}
+						
+						#Vietnam
+						AND = {
+							has_global_flag = berlin_conference
+							OR = {
+								AND = {
+									owns = 1380
+									owns = 1369
+									revolution_n_counterrevolution = 1
+								}
+								has_country_flag = created_my_indochina
+							}
+							THIS = {
+								any_owned_province = {
+									OR = {
+										region = DAI_1380
+										region = DAI_1375
+										region = DAI_1369
+									}
+								}
+							}
+						}
+						
+						#Malaysia
+						AND = {
+							owns = 1384
+							revolution_n_counterrevolution = 1
+							has_global_flag = berlin_conference
+							THIS = {
+								any_owned_province = {
+									OR = {
+										region = ENG_1391
+										region = ENG_1384
+									}
+								}
+							}
+						}
+					}
+				}
+				set_country_flag = knows_about_imperialism_cb
+				country_event = 6016817
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	remove_war_focus = {
+		potential = {
+			exists = yes
+			ai = yes
+			OR = {
+				has_country_modifier = war_focus
+				has_country_flag = exclusive_acquire_all_cores_CB
+				has_country_flag = exclusive_liberate_country_CB
+				has_country_flag = exclusive_humiliate_CB
+				has_country_flag = exclusive_make_puppet_CB
+				any_neighbor_country = {
+					ai = no
+					war = no
+					OR = {
+						has_country_modifier = war_focus
+						has_country_flag = exclusive_acquire_all_cores_CB
+						has_country_flag = exclusive_liberate_country_CB
+						has_country_flag = exclusive_humiliate_CB
+						has_country_flag = exclusive_make_puppet_CB
+					}
+					
+				}
+				any_greater_power = {
+					ai = no
+					war = no
+					OR = {
+						has_country_modifier = war_focus
+						has_country_flag = exclusive_acquire_all_cores_CB
+						has_country_flag = exclusive_liberate_country_CB
+						has_country_flag = exclusive_humiliate_CB
+						has_country_flag = exclusive_make_puppet_CB
+					}
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			remove_country_modifier = war_focus
+			clr_country_flag = exclusive_acquire_all_cores_CB
+			clr_country_flag = exclusive_liberate_country_CB
+			clr_country_flag = exclusive_humiliate_CB
+			clr_country_flag = exclusive_make_puppet_CB
+			any_country = {
+				limit = { war = no }
+				clr_country_flag = exclusive_acquire_all_cores_CB
+				clr_country_flag = exclusive_liberate_country_CB
+				clr_country_flag = exclusive_humiliate_CB
+				clr_country_flag = exclusive_make_puppet_CB
+			}
+			any_country = {
+				limit = {
+					ai = no
+					has_country_modifier = war_focus
+					war = no
+				}
+				remove_country_modifier = war_focus
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	election_start_player = {
+		potential = {
+			exists = yes
+			ai = yes
+			OR = {
+				any_neighbor_country = {
+					election = yes
+					ai = no
+					NOT = { has_country_flag = election_started }
+					OR = {
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+				}
+				any_greater_power = {
+					election = yes
+					ai = no
+					NOT = { has_country_flag = election_started }
+					OR = {
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+				}
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					ai = no
+					election = yes
+					NOT = { has_country_flag = election_started }
+					OR = {
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+					OR = {
+						neighbour = THIS
+						is_greater_power = yes
+					}
+				}
+				set_country_flag = election_started
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	election_end_player = {
+		potential = {
+			exists = yes
+			ai = yes
+			OR = {
+				any_neighbor_country = {
+					election = no
+					ai = no
+					has_country_flag = election_started
+				}
+				any_greater_power = {
+					election = no
+					ai = no
+					has_country_flag = election_started
+				}
+				any_neighbor_country = {
+					NOT = {
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+					OR = {
+						has_country_flag = election_started
+						has_country_flag = conservative_party_in_power
+						has_country_flag = liberal_party_in_power
+						has_country_flag = reactionary_party_in_power
+						has_country_flag = socialist_party_in_power
+						has_country_flag = communist_party_in_power
+						has_country_flag = fascist_party_in_power
+						has_country_flag = anarcho_liberal_party_in_power
+					}
+				}
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					NOT = {
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+					OR = {
+						has_country_flag = election_started
+						has_country_flag = conservative_party_in_power
+						has_country_flag = liberal_party_in_power
+						has_country_flag = reactionary_party_in_power
+						has_country_flag = socialist_party_in_power
+						has_country_flag = communist_party_in_power
+						has_country_flag = fascist_party_in_power
+						has_country_flag = anarcho_liberal_party_in_power
+					}
+				}
+				clr_country_flag = election_started
+				clr_country_flag = conservative_party_in_power
+				clr_country_flag = liberal_party_in_power
+				clr_country_flag = reactionary_party_in_power
+				clr_country_flag = socialist_party_in_power
+				clr_country_flag = communist_party_in_power
+				clr_country_flag = fascist_party_in_power
+				clr_country_flag = anarcho_liberal_party_in_power
+			}
+		
+			any_country = {
+				limit = {
+					ai = no
+					election = no
+					has_country_flag = election_started
+					OR = {
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+					OR = {
+						neighbour = THIS
+						is_greater_power = yes
+					}
+				}
+				clr_country_flag = election_started
+				clr_country_flag = conservative_party_in_power
+				clr_country_flag = liberal_party_in_power
+				clr_country_flag = reactionary_party_in_power
+				clr_country_flag = socialist_party_in_power
+				clr_country_flag = communist_party_in_power
+				clr_country_flag = fascist_party_in_power
+				clr_country_flag = anarcho_liberal_party_in_power
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = conservative } }
+					owner = { set_country_flag = conservative_party_in_power }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = liberal } }
+					owner = { set_country_flag = liberal_party_in_power }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = reactionary } }
+					owner = { set_country_flag = reactionary_party_in_power }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = socialist } }
+					owner = { set_country_flag = socialist_party_in_power }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = communist } }
+					owner = { set_country_flag = communist_party_in_power }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = fascist } }
+					owner = { set_country_flag = fascist_party_in_power }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = anarcho_liberal } }
+					owner = { set_country_flag = anarcho_liberal_party_in_power }
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	cleanup_colonial_cores = {
+		picture = map_nigeria
+		potential = {
+			ai = yes
+			any_neighbor_country = {
+				civilized = yes
+				capital_scope = { NOT = { continent = africa } }
+				any_owned_province = {
+						OR = {
+							#Nigeria
+							AND = {
+								is_core = NGR
+								OR = {
+									is_core = SOK
+									is_core = DND
+									is_core = TOU
+									is_core = OYO
+									is_core = BEN
+									is_core = ARO
+									is_core = CLA
+									is_core = WRI
+									is_core = KBO
+								}
+							}
+							#Ivory Coast
+							AND = {
+								is_core = IVC
+								OR = {
+									is_core = KNG
+									is_core = ASH
+									is_core = MOS
+								}
+							}
+							#Guinea
+							AND = {
+								is_core = GNE
+								OR = {
+									is_core = JAL
+									is_core = GBU
+								}
+							}
+							#Senegal
+							AND = {
+								is_core = SNG
+								OR = {
+									is_core = TOO
+									is_core = WOL
+									is_core = SEG
+									is_core = TOU
+								}
+							}
+							#Zaire/Congo
+							AND = {
+								is_core = CNG
+								OR = {
+									is_core = LUA
+									is_core = LOA
+									is_core = AZA
+									is_core = KZB
+									is_core = KON
+								}
+							}
+							#Niger
+							AND = {
+								is_core = NIG
+								OR = {
+									is_core = DND
+									is_core = TOU
+									is_core = MAS
+									is_core = DAM
+									is_core = KBO
+								}
+							}
+							
+							#Mali
+							AND = {
+								is_core = MLI
+								OR = {
+									is_core = TOU
+									is_core = SEG
+									is_core = MAS
+									is_core = MOS
+									is_core = DND
+									is_core = BKF
+								}
+							}
+							
+							#Gambia
+							AND = {
+								is_core = GMB
+								OR = {
+									is_core = TOO
+									is_core = WOL
+									is_core = SEG
+									is_core = TOU
+								}
+							}
+							
+							#Angola
+							AND = {
+								is_core = ANG
+								is_core = KON
+							}
+							
+							#Mozambique
+							AND = {
+								is_core = MOZ
+								OR = {
+									is_core = GAZ
+									is_core = AGC
+									is_core = ZUL
+									is_core = SHO
+								}
+							}
+							
+							#Sudan
+							AND = {
+								is_core = SUD
+								OR = {
+									is_core = EGY
+									is_core = SHK
+									is_core = DAR
+									is_core = AZA
+								}
+							}
+							
+							#Ghana
+							AND = {
+								is_core = GHN
+								OR = {
+									is_core = MOS
+									is_core = ASH
+								}
+							}
+							
+							#Burkina-Faso
+							AND = {
+								is_core = BKF
+								OR = {
+									is_core = SEG
+									is_core = TOU
+									is_core = MAS
+									is_core = MOS
+								}
+							}
+							
+							#Dahomey/Benin
+							AND = {
+								is_core = DAH
+								OR = {
+									is_core = TOU
+									is_core = MAS
+								}
+							}
+							
+							#Faroe Islands
+							AND = {
+								NOT = { exists = FRO }
+								is_core = FRO
+								OR = {
+									is_colonial = no
+									year = 1880
+								}
+							}
+							
+					}
+				}
+			}
+		}
+	
+		allow = {
+		}
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = NGR
+						OR = {
+							is_core = SOK
+							is_core = DND
+							is_core = TOU
+							is_core = OYO
+							is_core = BEN
+							is_core = ARO
+							is_core = CLA
+							is_core = WRI
+							is_core = KBO
+						}
+					}
+					remove_core = SOK
+					remove_core = DND
+					remove_core = TOU
+					remove_core = OYO
+					remove_core = BEN
+					remove_core = ARO
+					remove_core = CLA
+					remove_core = WRI
+					remove_core = KBO
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = IVC
+						OR = {
+							is_core = KNG
+							is_core = ASH
+							is_core = MOS
+						}
+					}
+					remove_core = KNG
+					remove_core = ASH
+					remove_core = MOS
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = GNE
+						OR = {
+							is_core = JAL
+							is_core = GBU
+						}
+					}
+					remove_core = JAL
+					remove_core = GBU
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = SNG
+						OR = {
+							is_core = TOO
+							is_core = WOL
+							is_core = SEG
+							is_core = TOU
+						}
+					}
+					remove_core = TOO
+					remove_core = WOL
+					remove_core = SEG
+					remove_core = TOU
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = NIG
+						OR = {
+							is_core = DND
+							is_core = TOU
+							is_core = MAS
+							is_core = DAM
+							is_core = KBO
+						}
+					}
+					remove_core = DND
+					remove_core = TOU
+					remove_core = MAS
+					remove_core = DAM
+					remove_core = KBO
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = CNG
+						OR = {
+							is_core = LUA
+							is_core = LOA
+							is_core = AZA
+							is_core = KZB
+							is_core = KON
+						}
+					}
+					remove_core = LUA
+					remove_core = LOA
+					remove_core = AZA
+					remove_core = KZB
+					remove_core = KON
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = MLI
+						OR = {
+							is_core = TOU
+							is_core = SEG
+							is_core = MAS
+							is_core = MOS
+							is_core = DND
+							is_core = BKF
+						}
+					}
+					remove_core = TOU
+					remove_core = SEG
+					remove_core = MAS
+					remove_core = MOS
+					remove_core = DND
+					remove_core = BKF
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = GMB
+						OR = {
+							is_core = TOO
+							is_core = WOL
+							is_core = SEG
+							is_core = TOU
+						}
+					}
+					remove_core = TOO
+					remove_core = WOL
+					remove_core = SEG
+					remove_core = TOU
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = ANG
+						is_core = KON
+					}
+					remove_core = KON
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = MOZ
+						OR = {
+							is_core = GAZ
+							is_core = AGC
+							is_core = ZUL
+							is_core = SHO
+						}
+					}
+					remove_core = GAZ
+					remove_core = AGC
+					remove_core = ZUL
+					remove_core = SHO
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = SUD
+						OR = {
+							is_core = EGY
+							is_core = SHK
+							is_core = DAR
+							is_core = AZA
+						}
+					}
+					remove_core = EGY
+					remove_core = SHK
+					remove_core = DAR
+					remove_core = AZA
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = GHN
+						OR = {
+							is_core = MOS
+							is_core = ASH
+						}
+					}
+					remove_core = MOS
+					remove_core = ASH
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = BKF
+						OR = {
+							is_core = SEG
+							is_core = TOU
+							is_core = MAS
+							is_core = MOS
+						}
+					}
+					remove_core = SEG
+					remove_core = TOU
+					remove_core = MAS
+					remove_core = MOS
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						is_core = DAH
+						OR = {
+							is_core = TOU
+							is_core = MAS
+						}
+					}
+					remove_core = TOU
+					remove_core = MAS
+				}
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					civilized = yes
+					capital_scope = { NOT = { continent = africa } }
+				}
+				any_owned = {
+					limit = {
+						NOT = { exists = FRO }
+						is_core = FRO
+						OR = {
+							is_colonial = no
+							year = 1880
+						}
+					}
+					remove_core = FRO
+				}
+			}
+			
+		}
+	}
+	
+	call_allies_cleanup = {
+		picture = map_nigeria
+		potential = {
+			ai = yes
+			has_country_flag = calling_all_allies
+		}
+	
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			clr_country_flag = calling_all_allies
+		}
+	}
+	
+	ghost_units_cleanup = {
+		alert = no
+		potential = {
+			#civilized = yes
+			ai = yes
+			NOT = { has_country_modifier = law_changed_by_force }
+			NOT = {
+				has_global_flag = cleaning_up_ghosts
+				has_global_flag = disabled_mobilization_fix
+			}
+			any_owned_province = {
+				any_core = {
+					OR = {
+						is_mobilised = yes
+						total_amount_of_ships = 1
+					}
+					exists = no
+				}
+			}
+		}
+	
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_global_flag = cleaning_up_ghosts
+			set_country_flag = cleaning_up_ghosts_country
+			add_country_modifier = { name = law_changed_by_force duration = 30 }
+			3319 = { secede_province = THIS }
+			3320 = { secede_province = THIS }
+			3321 = { secede_province = THIS }
+			3322 = { secede_province = THIS }
+			TMT = { country_event = 6016821 }
+		}
+	}
+	
+	ghost_country_absorb = {
+		alert = no
+		potential = {
+			ai = yes
+			has_country_flag = ghost_country
+		}
+	
+		allow = {
+			is_mobilised = no
+		}
+		
+		effect = {
+			clr_country_flag = ghost_country
+			remove_country_modifier = neutrality_modifier
+			political_reform = open_borders
+			annex_to = TMT
+		}
+	}
+	
+	ghost_country_absorb_player = {
+		alert = no
+		potential = {
+			ai = yes
+			has_global_flag = cleaning_up_ghosts
+			OR = {
+				3319 = {
+					owner = {
+						ai = no
+						has_country_flag = ghost_country
+					}
+				}
+				3320 = {
+					owner = {
+						ai = no
+						has_country_flag = ghost_country
+					}
+				}
+				3321 = {
+					owner = {
+						ai = no
+						has_country_flag = ghost_country
+					}
+				}
+				3322 = {
+					owner = {
+						ai = no
+						has_country_flag = ghost_country
+					}
+				}
+			}
+		}
+	
+		allow = {
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					has_country_flag = ghost_country
+					ai = no
+				}
+				clr_country_flag = ghost_country
+				remove_country_modifier = neutrality_modifier
+				political_reform = open_borders
+				annex_to = TMT
+			}
+		}
+	}
+	
+	tmt_ends = {
+		alert = no
+		potential = {
+			ai = yes
+			tag = TMT
+			owns = 3319
+			owns = 3320
+			owns = 3321
+			owns = 3322
+			has_country_modifier = neutrality_modifier
+		}
+	
+		allow = {
+			is_mobilised = no
+		}
+		
+		effect = {
+			remove_country_modifier = neutrality_modifier
+			political_reform = open_borders
+			random_country = {
+				limit = {
+					owns = 2553
+					NOT = { tag = TMT }
+				}
+				inherit  = TMT
+			}
+			random_owned = {
+				limit = {
+					owner = { 2553 = { empty = yes } }
+				}
+				# Audax Validator "." Ignore_NEXT
+				FROM = { inherit = THIS }
+			}
+			any_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							any_owned_province = {
+								OR = {
+									province_id = 3322
+									province_id = 3321
+									province_id = 3320
+									province_id = 3319
+								}
+							}
+						}
+					}
+				}
+				owner = { neutrality = yes }
+			}
+		}
+	}
+	
+	ghost_country_ends = {
+		alert = yes
+		potential = {
+			ai = yes
+			has_country_flag = cleaning_up_ghosts_country
+			NOT = { has_country_modifier = law_changed_by_force }
+		}
+	
+		allow = {
+		}
+		
+		effect = {
+			clr_global_flag = cleaning_up_ghosts
+			clr_country_flag = cleaning_up_ghosts_country
+		}
+	}
+	
+	annex_to_master_cleanup = {
+		alert = yes
+		potential = {
+			ai = yes
+			has_country_flag = annex_to_master
+			is_vassal = yes
+			OR = {
+				AND = {
+					tag = CRT
+					overlord = { tag = ARC }
+				}
+				AND = {
+					tag = HUN
+					overlord = { tag = AUS }
+				}
+				AND = {
+					is_culture_group = italian
+					overlord = { is_culture_group = italian }
+				}
+				AND = {
+					is_culture_group = pan_romanian
+					overlord = { is_culture_group = pan_romanian }
+				}
+				AND = {
+					primary_culture = japanese
+					overlord = { primary_culture = japanese }
+				}
+				AND = {
+					tag = CPL
+					overlord = { tag = RUS }
+				}
+				AND = {
+					tag = SBA
+					overlord = {
+						OR = {
+							tag = ARG
+							tag = ARC
+						}
+					}
+				}
+			}
+		}
+	
+		allow = {
+			war = no
+			is_mobilised = no
+		}
+		
+		effect = {
+			clr_country_flag = annex_to_master
+			remove_country_modifier = neutrality_modifier
+			political_reform = open_borders
+			random_owned = {
+				limit = { has_country_flag = uncivilize_on_conquest }
+				owner = {
+					civilized = no
+				}
+			}
+			overlord = { inherit = THIS }
+			random_owned = {
+				limit = { has_country_flag = uncivilize_on_conquest }
+				owner = {
+					civilized = yes
+					clr_country_flag = uncivilize_on_conquest
+				}
+			}
+		}
+	}
+	
+	annex_to_master_not_vassal_cleanup = {
+		alert = yes
+		potential = {
+			ai = yes
+			has_country_flag = annex_to_master
+			is_vassal = no
+		}
+	
+		allow = {
+			war = no
+			is_mobilised = no
+		}
+		
+		effect = {
+			clr_country_flag = annex_to_master
+		}
+	}
+	
+	# find_when_uk_flips_upper_house = {
+	
+	# find_when_uk_flips_upper_house = {
+		# potential = {
+			# tag = ENG
+			# NOT = { has_country_flag = abandoned_two_party_system }
+		# }
+		
+		# allow = {
+			# NOT = { upper_house_composition = appointed }
+		# }
+		
+		# effect = {
+			# set_country_flag = abandoned_two_party_system
+		# }
+		# ai_will_do = { factor = 1 }
+	# }
+	
+}

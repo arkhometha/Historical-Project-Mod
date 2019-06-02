@@ -1,0 +1,531 @@
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+
+trinket_health_care_fully_funded = {
+	trigger = {
+		exists = yes
+		health_care = trinket_health_care
+		administration_spending = 0.2
+	}
+	global_population_growth = 0.001
+	icon = 19
+}
+
+low_health_care_fully_funded = {
+	trigger = {
+		exists = yes
+		health_care = low_health_care
+		OR = {
+			AND = {
+				ai = yes
+				administration_spending = 0.25
+			}
+			AND = {
+				ai = no
+				administration_spending = 0.3
+			}
+		}
+	}
+	global_population_growth = 0.002
+	icon = 19
+}
+
+acceptable_health_care_fully_funded = {
+	trigger = {
+		exists = yes
+		health_care = acceptable_health_care
+		OR = {
+			AND = {
+				ai = yes
+				administration_spending = 0.3
+			}
+			AND = {
+				ai = no
+				administration_spending = 0.4
+			}
+		}
+	}
+	global_population_growth = 0.003
+	icon = 19
+}
+
+good_health_care_fully_funded = {
+	trigger = {
+		exists = yes
+		health_care = good_health_care
+		OR = {
+			AND = {
+				ai = yes
+				administration_spending = 0.3
+			}
+			AND = {
+				ai = no
+				administration_spending = 0.5
+			}
+		}
+	}
+	global_population_growth = 0.004
+	icon = 19
+}
+
+health_care_fully_funded = {
+	trigger = {
+		exists = yes
+		health_care = good_health_care
+		OR = {
+			AND = {
+				ai = yes
+				administration_spending = 0.74
+			}
+			AND = {
+				ai = no
+				administration_spending = 0.99
+			}
+		}
+	}
+	global_population_growth = 0.001
+	icon = 19
+}
+
+low_schools_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = low_schools
+		education_spending = 0.3
+	}
+	education_efficiency_modifier = 0.05
+	icon = 19
+}
+
+acceptable_schools_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = acceptable_schools
+		education_spending = 0.4
+	}
+	education_efficiency_modifier = 0.075
+	icon = 19
+}
+
+good_schools_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = good_schools
+		education_spending = 0.5
+	}
+	education_efficiency_modifier = 0.1
+	icon = 19
+}
+
+education_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = good_schools
+		OR = {
+			AND = {
+				ai = yes
+				education_spending = 0.74
+			}
+			AND = {
+				ai = no
+				education_spending = 0.99
+			}
+		}
+	}
+	education_efficiency_modifier = 0.1
+	icon = 19
+}
+
+neglected_education = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		ai = no
+		number_of_states = 2
+		total_pops = 1000000
+		OR = {
+			AND = {
+				literacy = 0.75
+				NOT = { education_spending = 0.3 }
+			}
+			AND = {
+				literacy = 0.5
+				NOT = { education_spending = 0.2 }
+			}
+			AND = {
+				literacy = 0.25
+				NOT = { education_spending = 0.1 }
+			}
+		}
+	}
+	education_efficiency_modifier = -1
+	icon = 19
+}
+
+islamic_law_triggered = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		OR = {
+			has_country_flag = sunni_country
+			has_country_flag = shiite_country
+			has_country_flag = ibadi_country
+		}
+		NOT = { has_country_flag = secularized_muslim_society }
+		NOT = { has_country_flag = dynamic_tag }
+		NOT = { has_country_flag = post_colonial_country }
+		NOT = { religious_policy = pro_atheism }
+	}
+	research_points_modifier = -0.05
+	education_efficiency_modifier = -0.15
+	literacy_con_impact = -0.5
+	issue_change_speed = -0.5
+	suppression_points_modifier = 0.5
+	tax_efficiency = 0.05
+	icon = 5
+}
+
+the_british_raj = {
+	trigger = {
+		exists = yes
+		OR = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		NOT = { is_culture_group = indo_iranian }
+		NOT = { is_culture_group = south_asian }
+		1227 = {
+			is_colonial = yes
+			owned_by = THIS
+		}
+		1236 = {
+			is_colonial = yes
+			owned_by = THIS
+		}
+		1251 = {
+			is_colonial = yes
+			owned_by = THIS
+		}
+		1297 = {
+			is_colonial = yes
+			owned_by = THIS
+		}
+	}
+	research_points = 0.5
+	core_pop_militancy_modifier = -0.01
+	prestige = 0.03
+	icon = 19
+}
+
+dutch_east_india = {
+	trigger = {
+		exists = yes
+		capital_scope = { continent = europe }
+		1413 = {
+			is_colonial = yes
+			owned_by = THIS
+		}
+		1418 = {
+			is_colonial = yes
+			owned_by = THIS
+		}
+	}
+	prestige = 0.01
+	icon = 19
+}
+
+vassal_nation = {
+	trigger = {
+		exists = yes
+		is_vassal = yes
+		is_substate = no
+	}
+	icon = 10
+	prestige = -0.1
+}
+
+substate_nation = {
+	trigger = {
+		exists = yes
+		is_substate = yes
+		civilized = yes
+		ai = yes
+	}
+	
+	prestige = -0.25
+	max_loan_modifier = -1.0
+	min_tax = 0.25
+	max_military_spending = -0.25
+	min_tariff = 1.2
+	tax_efficiency = 0.3
+	
+	icon = 10
+}
+
+substate_nation_player = {
+	trigger = {
+		exists = yes
+		is_substate = yes
+		civilized = yes
+		ai = no
+	}
+	
+	prestige = -0.25
+	max_loan_modifier = -1.0
+	max_military_spending = -0.25
+	tax_efficiency = 0.3
+	
+	icon = 10
+}
+
+chinese_substate = {
+	trigger = {
+		OR = {
+			substate_of = QNG
+			vassal_of = QNG
+		}
+		civilized = no
+		exists = yes
+		QNG = {	government = absolute_monarchy }
+		is_culture_group = east_asian
+	}
+	icon = 10
+	research_points_modifier = -0.2
+	global_pop_consciousness_modifier = 0.02
+}
+
+own_kiel_canal = {
+	trigger = {
+		exists = yes
+		owns = 369
+		civilized = yes
+		is_canal_enabled = 1
+	}
+	icon = 9
+	tariff_efficiency_modifier = 0.05
+}
+
+own_suez_canal = {
+	trigger = {
+		exists = yes
+		owns = 1755
+		civilized = yes
+		is_canal_enabled = 2
+	}
+	icon = 9
+	tariff_efficiency_modifier = 0.1
+	import_cost = -0.2
+	prestige = 0.01
+}
+
+own_panama_canal = {
+	trigger = {
+		exists = yes
+		owns = 1723
+		civilized = yes
+		is_canal_enabled = 3
+	}
+	icon = 9
+	tariff_efficiency_modifier = 0.2
+	import_cost = -0.25
+	prestige = 0.02
+}
+
+small_but_efficient = {
+	trigger = {
+		exists = yes
+		capital_scope = { continent = europe }
+		civilized = yes
+		NOT = { number_of_states = 4 }
+		NOT = { num_of_cities = 8 }
+		NOT = { total_pops = 500000 }
+		NOT = { money = 1000000 }
+		NOT = { year = 1886 }
+		OR = {
+			NOT = { 
+				is_culture_group = south_slavic
+				is_culture_group = pan_romanian
+				is_culture_group = levantine
+			}
+			NOT = { num_of_cities = 4 }
+		}
+	}
+	
+	icon = 9
+	tax_efficiency = 0.4
+	administrative_efficiency_modifier = 0.3
+	tariff_efficiency_modifier = 0.3
+	supply_consumption = -0.9
+}
+
+sound_dues = {
+	trigger = {
+		capital_scope = { continent = europe }
+		exists = yes
+		civilized = yes
+		total_num_of_ports = 1
+		NOT = { has_global_flag = sound_dues_abolished }
+		NOT = { owns = 372 }
+		OR = {
+			is_culture_group = scandinavian
+			is_culture_group = british
+			is_culture_group = french
+			is_culture_group = beneluxian
+			primary_culture = north_german
+			primary_culture = russian
+		}
+	}
+	
+	icon = 9
+	tariff_efficiency_modifier = -0.05
+	import_cost = 0.05
+}
+
+landlocked_nation = {
+	trigger = {
+		exists = yes
+		NOT = { total_num_of_ports = 1 }
+		NOT = { has_country_modifier = trek_boers }
+	}
+
+	import_cost = 0.5
+	global_immigrant_attract = -1.5
+	icon = 8
+}
+
+social_reformed_nation = {
+		trigger = {
+			exists = yes
+			wage_reform = good_minimum_wage
+			work_hours = eight_hours
+			safety_regulations = good_safety
+			unemployment_subsidies = good_subsidies
+			pensions = good_pensions
+			health_care = good_health_care
+			school_reforms = good_schools
+			penal_system = rehabilitation
+		}
+		
+	social_reform_desire = -0.3
+	icon = 13
+}
+
+educational_spen = {
+		trigger = {
+			ai = yes
+			exists = yes
+			administration_spending = 0.74
+		}
+
+	education_efficiency_modifier = 0.3
+	icon = 16
+}
+
+admin_spen = {
+		trigger = {
+			ai = yes
+			exists = yes
+			administration_spending = 0.74
+		}
+
+	administrative_efficiency_modifier = 0.3
+	icon = 16
+}
+
+hormuz_strait = {
+		trigger = {
+			exists = yes
+			year = 1880
+			owns = 1071
+			owns = 2664
+		}
+
+	tax_efficiency = 0.01
+	tariff_efficiency_modifier = 0.05
+	icon = 16
+}
+
+
+new_world_war = {
+	trigger = {
+		war = yes
+		exists = yes
+		OR = {
+			capital_scope = { continent = north_america }
+			capital_scope = { continent = south_america }
+			capital_scope = { continent = australia_new_zealand }
+		}
+	}
+
+	global_immigrant_attract = -1.3
+	icon = 16
+}
+
+# atlantic_only_nation = {
+	# trigger = {
+		# exists = yes
+		# NOT = { is_canal_enabled = 3 }
+		# year = 1837
+		# OR = {
+			# capital_scope = { continent = north_america }
+			# capital_scope = { continent = south_america }
+		# }
+		# any_owned_province = {
+			# is_overseas = no
+			# any_neighbor_province = {
+				# OR = {
+					# #province_id = 2992 #Magellan Strait
+					# province_id = 2991
+					# province_id = 2990
+					# province_id = 2989
+					# province_id = 2988
+					# province_id = 2987
+					# province_id = 2986
+					# province_id = 2985
+					# province_id = 2984
+					# province_id = 2983
+					# province_id = 2982
+					# province_id = 2981
+					# province_id = 2980
+					# province_id = 2975
+					# province_id = 2973
+					# province_id = 2972
+					# province_id = 2968
+					# province_id = 2967
+					# province_id = 2966
+					# province_id = 2965
+					# province_id = 2964
+					# province_id = 2963
+					# province_id = 2962
+					# province_id = 2961
+					# province_id = 2960
+					# province_id = 2959
+					# province_id = 2958
+					# province_id = 2956
+					# province_id = 2955
+					# province_id = 2954
+					# province_id = 2953
+					# province_id = 2952
+					# province_id = 2945
+					# province_id = 3022
+					# province_id = 2944
+					# province_id = 2943
+					# province_id = 2946
+					# province_id = 2978
+					# province_id = 2971
+					# province_id = 2969
+					# province_id = 2974
+					# province_id = 2979
+					# province_id = 2977
+				# }
+			# }
+		# }	
+	# }
+
+	# global_immigrant_attract = 0.1
+	# icon = 16
+# }
+

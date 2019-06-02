@@ -1,0 +1,98 @@
+political_decisions = {
+	dissolve_the_upper_house = {
+		picture = dissolve_the_parliament
+		potential = {
+			NOT = { has_country_modifier = interment_camps }
+			OR = {
+				has_country_flag = government_decisions_on
+				ai = yes
+			}
+			government = absolute_monarchy
+			upper_house_composition = appointed
+			NOT = { has_country_flag = dissolving_parliament }
+		}
+		
+		allow = {
+			war = no
+			prestige = 5
+			NOT = { has_country_modifier = national_confusion }
+		}
+		
+		effect = {
+			plurality = -10
+			prestige = -5
+			country_event = 11001
+			add_country_modifier = { name = national_confusion duration = 1095 }
+			set_country_flag = dissolving_parliament
+			any_pop = {
+				limit = {
+					strata = rich
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				militancy = 3
+				consciousness = 6
+				dominant_issue = {
+					value = landed_voting
+					factor = 0.25
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
+	start_propaganda = {
+		picture = british_propaganda
+		potential = {
+			OR = {
+				has_country_flag = government_decisions_on
+				ai = yes
+			}
+			OR = {
+				government = fascist_dictatorship
+				government = proletarian_dictatorship
+				government = bourgeois_dictatorship
+				invention = mass_advertising
+				associationism = 1
+			}
+			NOT = { has_country_flag = propaganda_program }
+		}
+		
+		allow = {
+			plurality = 8
+			money = 250000
+			literacy = 0.3
+			NOT = { has_country_modifier = government_propaganda }
+			NOT = { has_country_modifier = war_propaganda }
+			OR = {
+				vote_franschise = none_voting
+				war = yes
+			}
+		}
+		
+		effect = {
+			plurality = -8
+			treasury = -250000
+			country_event = 11002
+			set_country_flag = propaganda_program
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { war_countries = { is_greater_power = yes } }
+			}
+			modifier = {
+				factor = 0
+				badboy = 0.7
+			}
+			modifier = {
+				factor = 0
+				NOT = { war_exhaustion = 20 }
+			}
+		}
+	}
+}

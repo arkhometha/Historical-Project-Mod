@@ -1,0 +1,1618 @@
+#Events from 955182 to 955200 used in Congo.txt
+#################################################################################################################
+#																												#
+#                	 Events for the Berlin Conference and Annexation of African Minors							#
+#																												#
+#################################################################################################################
+
+country_event = {
+	
+	id = 95500
+	title = "EVTNAME95500" #The Berlin Conference
+	desc = "EVTDESC95500"
+	news = yes
+	news_desc_long = "EVTDESC95500_NEWS_LONG"
+	news_desc_medium = "EVTDESC95500_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC95500_NEWS_SHORT"
+	picture = "scramble_for_africa"
+	major = yes
+
+	trigger = {
+		OR = {
+			is_greater_power = yes
+			AND = {
+				colonial_nation = yes
+				any_owned_province = { continent = africa }
+			}
+		}
+		capital_scope = { continent = europe }
+		NOT = { tag = TUR }
+		NOT = { tag = RUS }
+		invention = prophylaxis_against_malaria
+		invention = mission_to_civilize
+		invention = colonial_negotiations
+		NOT = { has_global_flag = berlin_conference }
+	}
+
+	allow_multiple_instances = no
+	
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.8
+			capital = 549
+		}
+	}
+
+	option = {
+		name = "EVT95500OPTA"
+		set_global_flag = berlin_conference
+		prestige = 25
+		TUR = { relation = { who = EGY value = 100 } }
+		any_country = {
+			limit = {
+				OR = {
+					owns = 2071 #Zimbabwe
+					owns = 1884 #Sierra Leone
+					owns = 1887 #Liberia
+					owns = 2038 #Tanzania
+					owns = 1779 #Shingit, Mauritania
+				}
+			}
+			country_event = { id = 955203 days = 0 }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						owns = 2071 #Zimbabwe
+						owns = 1884 #Sierra Leone
+						owns = 1887 #Liberia
+						owns = 2038 #Tanzania
+						owns = 1779 #Shingit, Mauritania
+					}
+				}
+			}
+			owner = { country_event = { id = 955203 days = 0 } }
+		}
+	}
+}
+
+country_event = {
+	
+	id = 95502
+	title = "EVTNAME95502" #The Age of Colonialism
+	desc = "EVTDESC95502"
+	picture = "scramble_for_africa"
+
+	trigger = {
+		civilized = no
+		capital_scope = { continent = africa }
+		has_global_flag = berlin_conference
+		NOT = { has_country_flag = delay_unciv_annexation }
+		NOT = { has_country_flag = reaction_to_berlin_conference }
+		NOT = { tag = MOR }
+		NOT = { tag = TUN }
+		NOT = { tag = ALD }
+		NOT = { tag = TRI }
+		NOT = { tag = EGY }
+		NOT = { tag = LIB }
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = "EVT95502OPTA"
+		set_country_flag = reaction_to_berlin_conference
+		any_country = {
+			limit = {
+				civilized = yes
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+					colonial_nation = yes
+				}
+				capital_scope = { continent = europe }
+			}
+			leave_alliance = THIS
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+	}
+}
+
+#Canditate for Removal
+country_event = {
+
+	id = 95503
+	title = "EVTNAME95503" #the Modern Age
+	desc = "EVTDESC95503"
+	picture = "zulu"
+	
+	trigger = {
+		war = no
+		civilized = no
+		capital_scope = { continent = africa }
+		NOT = { has_global_flag = berlin_conference }
+		NOT = { has_country_flag = africa_in_the_modern_age }
+		any_owned_province = {
+			OR = {
+				port = yes
+				any_neighbor_province = { owner = { civilized = yes } }
+				any_neighbor_province = { owner = { has_country_modifier = western_influences } }
+			}
+		}
+		NOT = { tag = MOR }
+		NOT = { tag = TUN }
+		NOT = { tag = ALD }
+		NOT = { tag = TRI }
+		NOT = { tag = EGY }
+		NOT = { tag = LIB }
+		NOT = { tag = OMA }
+		NOT = { tag = CYR }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVT95503OPTA"
+		set_country_flag = africa_in_the_modern_age
+		any_country = {
+			limit = { 
+				civilized = yes
+				NOT = { relation = { who = THIS value = 25 } }
+				capital_scope = { continent = europe }
+			}
+			relation = { who = THIS value = 50 }
+		}
+	}
+}
+
+country_event = {
+	
+	id = 95504
+	title = "EVTNAME95504" #Sahel Jihad
+	desc = "EVTDESC95504"
+	picture = "arab_revolt"
+	
+	trigger = {
+		primary_culture = fulbe
+		war = no
+		civilized = no
+		is_disarmed = no
+		OR = {
+			government = absolute_monarchy
+			government = theocracy
+		}
+		NOT = {
+			num_of_revolts = 1
+			has_recently_lost_war = yes
+		}
+		any_neighbor_country = {
+			civilized = no
+			NOT = { has_country_flag = sunni_country }
+			NOT = { truce_with = THIS }
+			any_owned_province = {
+				OR = {
+					province_id = 1786
+					province_id = 1789
+					province_id = 1794
+					province_id = 1800
+					province_id = 1804
+					province_id = 1808
+					province_id = 1878
+					province_id = 1880
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.8
+			civilization_progress = 0.5
+		}
+		modifier = {
+			factor = 0.8
+			civilization_progress = 0.75
+		}
+	}
+	
+	option = {
+		name = "EVT95504OPTA"
+		any_pop = {
+			limit = { has_pop_religion = sunni }
+			militancy = -3
+			dominant_issue = {
+				factor = 0.05
+				value = jingoism
+			}
+		}
+		random_country = {
+			limit = {
+				neighbour = THIS
+				civilized = no
+				NOT = { truce_with = THIS }
+				any_owned_province = {
+					OR = {
+						province_id = 1786
+						province_id = 1789
+						province_id = 1794
+						province_id = 1800
+						province_id = 1804
+						province_id = 1808
+						province_id = 1878
+						province_id = 1880
+					}
+				}
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value = -100 }
+			add_casus_belli = {
+				target = THIS
+				type = sahel_jihad_cb
+				months = 24
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 95505
+	title = "EVTNAME95505" #Imperialism Comes to $COUNTRY$
+	desc = "EVTDESC95505"
+	picture = "scramble_for_africa"
+	
+	trigger = {
+		has_global_flag = berlin_conference
+		NOT = { tag = ETH }
+		OR = {
+			capital_scope = { continent = africa }
+			tag = LHJ
+			tag = FDL
+			tag = KTH
+			tag = MHR
+		}
+		civilized = no
+		is_vassal = no
+		part_of_sphere = yes
+		war = no
+		OR = {
+			any_owned_province = { port = yes }
+			sphere_owner = { neighbour = THIS }
+		}
+		sphere_owner = {
+			war = no
+			is_disarmed = no
+			capital_scope = { continent = europe }
+			OR = {
+				NOT = { tag = RUS }
+				neighbour = THIS
+			}
+			nationalism_n_imperialism = 1
+		}
+		NOT = {
+			has_country_flag = refused_protectorate
+			has_country_flag = post_colonial_country
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 10
+			has_country_flag = delay_unciv_annexation
+			NOT = { year = 1890 }
+		}
+		modifier = {
+			factor = 0.5
+			year = 1890
+		}
+		modifier = {
+			factor = 0.5
+			year = 1900
+		}
+		modifier = {
+			factor = 0.01
+			OR = {
+				tag = EGY
+				tag = TUN
+				tag = MOR
+			}
+		}
+		modifier = {
+			factor = 5
+			tag = EGY
+			sphere_owner = { tag = TUR }
+		}
+	}
+	
+	option = {
+		name = "EVT95505OPTA"
+		sphere_owner = { country_event = 95506 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				number_of_states = 3
+			}
+			modifier = {
+				factor = 0.5
+				total_amount_of_divisions = 6
+			}
+			modifier = {
+				factor = 0.5
+				total_amount_of_divisions = 12
+			}
+			modifier = {
+				factor = 2
+				NOT = { civilization_progress = 0.5 }
+			}
+		}
+	}
+
+	option = {
+		name = "EVT95505OPTB"
+		prestige = 10
+		any_greater_power = {
+			limit = {
+				NOT = { is_sphere_leader_of = THIS }
+				diplomatic_influence = { who = THIS value = -100 }
+			}
+		}
+		sphere_owner = {
+			prestige = -10
+			leave_alliance = THIS
+			diplomatic_influence = { who = THIS value = -300 }
+			country_event = 95507
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				number_of_states = 3
+			}
+			modifier = {
+				factor = 2
+				number_of_states = 5
+			}
+			modifier = {
+				factor = 3
+				tag = ETH
+			}
+			modifier = {
+				factor = 0
+				NOT = { total_amount_of_divisions = 3 }
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { total_amount_of_divisions = 6 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 95506
+	title = "EVTNAME95506" #The $FROMCOUNTRY_ADJ$ Protectorate
+	desc = "EVTDESC95506"
+	picture = "scramble_for_africa"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT95506OPTA"
+		FROM = { set_country_flag = refused_protectorate }
+		badboy = -2
+		relation = { who = FROM value = 50 }
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				NOT = { badboy = 0.92 }
+			}
+		}
+	}
+
+	option = {
+		name = "EVT95506OPTB"
+		badboy = 2
+		prestige = 5
+		inherit = FROM
+		ai_chance = {
+			factor = 98
+			modifier = {
+				factor = 0
+				badboy = 0.92
+			}
+		}			
+	}
+}
+
+country_event = {
+
+	id = 95507
+	title = "EVTNAME95507" #Nationals Expelled
+	desc = "EVTDESC95507"
+	news = yes
+	news_title = "EVTNAME95507_NEWS_TITLE"
+	news_desc_long = "EVTDESC95507_NEWS_LONG"
+	news_desc_medium = "EVTDESC95507_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC95507_NEWS_SHORT"
+	picture = "scramble_for_africa"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT95507OPTA"
+		relation = { who = FROM value = -200 }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = berlin_conference }
+			}
+			owner = {
+				casus_belli = {
+					target = FROM
+					type = establish_protectorate_BC_casus_belli
+					months = 60
+				}
+				war = {
+					target = FROM
+					attacker_goal = {
+						casus_belli = establish_protectorate_BC_casus_belli
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = berlin_conference } }
+			}
+			owner = {
+				casus_belli = {
+					target = FROM
+					type = establish_protectorate_casus_belli
+					months = 60
+				}
+				war = {
+					target = FROM
+					attacker_goal = {
+						casus_belli = establish_protectorate_casus_belli
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.5
+				any_greater_power = { war_with = THIS }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT95507OPTB"
+		prestige = -25
+		relation = { who = FROM value = 50 }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				any_greater_power = { war_with = THIS }
+			}
+			modifier = {
+				factor = 0
+				war_policy = jingoism
+			}
+			modifier = {
+				factor = 0.5
+				war_policy = pro_military
+			}
+		}
+	}
+}
+
+country_event = {
+	
+	id = 95508
+	title = "EVTNAME95508" #The Sale of Assab
+	desc = "EVTDESC95508"
+	picture = "scramble_for_africa"
+	
+	trigger = {
+		civilized = yes
+		is_vassal = no
+		has_global_flag = berlin_conference
+		capital_scope = { continent = europe }
+		any_owned_province = { has_building = naval_base }
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes
+		}
+		NOT = {
+			war_policy = pacifism
+			has_country_flag = sale_of_assab
+			has_global_flag = assab_sold
+			tag = RUS
+			tag = TUR
+		}
+		1851 = {
+			owner = {
+				civilized = no
+				war = no
+				NOT = { truce_with = THIS }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 50
+		modifier = {
+			factor = 1.5
+			is_secondary_power = yes
+			NOT = { tag = ITA }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				any_owned_province = { continent = africa }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_province = { continent = africa }
+		}
+		modifier = {
+			factor = 0.5
+			tag = ITA
+		}
+	}
+	
+	immediate = {
+		set_country_flag = sale_of_assab
+	}
+	
+	option = {
+		name = "EVT95508OPTA"
+		badboy = 2
+		1851 = {
+			owner = { country_event = 95509 }
+		}
+		1851 = { secede_province = THIS }
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.5
+				is_secondary_power = yes
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_province = { continent = africa }
+			}
+			modifier = {
+				factor = 0
+				badboy = 0.92
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT95508OPTB"
+		badboy = -1
+		1851 = {
+			owner = {
+				relation = { who = THIS value = 50 }
+			}
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				any_owned_province = { continent = africa }
+			}
+			modifier = {
+				factor = 0
+				tag = ITA
+			}
+		}
+	}
+}
+
+country_event = {
+			
+	id = 95509
+	title = "EVTNAME95508" #The Sale of Assab - Owner
+	desc = "EVTDESC95509"
+	picture = "scramble_for_africa"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT95509OPTA"
+		set_global_flag = assab_sold
+		relation = { who = FROM value = -50 }
+		leave_alliance = FROM
+		casus_belli = {
+			target = FROM
+			type = place_in_the_sun
+			months = 240
+		}
+		any_country = {
+			limit = { is_greater_power = yes }
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+	}
+}
+
+country_event = {
+	id = 95510
+	title = "EVTNAME95510" #Rebellion in Eritrea
+	desc = "EVTDESC95510"
+	picture = "rebellion"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = EGY
+		civilized = no
+		OR = {
+			war = no
+			war_with = SUD
+		}
+		ETH = {
+			exists = yes
+			any_owned_province = {
+				any_neighbor_province = { region = ENG_1848 }
+			}
+		}
+		OR = {
+			owns = 1848
+			owns = 1849
+			owns = 1850
+			owns = 1851
+		}
+		1833 = {
+			OR = {
+				NOT = { owned_by = THIS }
+				average_militancy = 4
+				AND = {
+					controlled_by = REB
+					province_control_days = 60
+				}
+			}
+		}
+		1836 = {
+			OR = {
+				NOT = { owned_by = THIS }
+				average_militancy = 4
+				AND = {
+					controlled_by = REB
+					province_control_days = 60
+				}
+			}
+		}
+		1829 = {
+			OR = {
+				NOT = { owned_by = THIS }
+				average_militancy = 4
+				AND = {
+					controlled_by = REB
+					province_control_days = 60
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	
+	option = {
+		prestige = 3
+		name = "EVT95510OPTA"
+		any_owned = {
+			limit = { region = ENG_1848 }
+			secede_province = ETH
+		}
+		relation = { who = ETH value = -100 }
+		leave_alliance = ETH
+		casus_belli = {
+			target = ETH
+			type = acquire_state
+			months = 24
+		}
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "EVT95510OPTB"
+		prestige = -3
+		any_owned = {
+			limit = { region = ENG_1848 }
+			secede_province = ETH
+		}
+		relation = { who = ETH value = 100 }
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = 95511
+	title = "EVTNAME95511"
+	desc = "EVTDESC95511"
+	picture = "scramble_for_africa"
+	
+	trigger = {
+		has_global_flag = berlin_conference
+		capital_scope = { continent = europe }
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes
+		}
+		OR = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+			government = hms_government
+		}
+		total_amount_of_ships = 20
+		total_amount_of_divisions = 10
+		nationalism_n_imperialism = 1
+		invention = mission_to_civilize
+		invention = colonial_negotiations
+		OR = {
+			war_policy = jingoism
+			war_policy = pro_military
+		}
+		war = no
+		ai = yes
+		is_disarmed = no
+		is_vassal = no
+		any_owned_province = { port = yes }
+		NOT = {
+			average_militancy = 4
+			num_of_revolts = 1
+			war_exhaustion = 10
+			any_owned_province = { continent = africa }
+			has_country_modifier = punitive_effects
+			has_country_modifier = neutrality_modifier
+			year = 1900
+			tag = RUS
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "EVT95511OPTA"
+		random_country = {
+			limit = {
+				ai = yes
+				capital_scope = { continent = africa }
+				civilized = no
+				war = no
+				is_vassal = no
+				part_of_sphere = no
+				NOT = { alliance_with = THIS }
+				NOT = { brigades_compare = 1 }
+				any_owned_province = { port = yes }
+			}
+			add_casus_belli = {
+				target = THIS
+				type = establish_protectorate_BC_casus_belli
+				months = 60
+			}
+			country_event = 95514
+		}
+		random_country = {
+			limit = {
+				civilized = yes
+				is_vassal = no
+				any_owned_province = {
+					is_colonial = yes
+					continent = africa
+				}
+				NOT = {
+					relation = { who = THIS value = -50 }
+					truce_with = THIS
+					in_sphere = THIS
+					alliance_with = THIS
+				}
+			}
+			add_casus_belli = {
+				target = THIS
+				type = place_in_the_sun
+				months = 60
+			}
+		}	
+	}
+}
+
+country_event = {
+	id = 95514
+	title = "EVTNAME95514"
+	desc = "EVTDESC95514"
+	picture = "scramble_for_africa"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT95514OPTA"
+		FROM = {
+			relation = { who = THIS value = -200 }
+			war = {
+				target = THIS
+				attacker_goal = {
+					casus_belli = establish_protectorate_BC_casus_belli
+				}
+			}
+		}
+	}
+}
+
+#Annexation of Sudan - Hegemony over the Nile
+country_event = {
+	id = 955177
+	title = "EVTNAME955177"
+	desc = "EVTDESC955177"
+	picture = "sudan_question"
+	
+	trigger = {
+		war = no
+		is_sphere_leader_of = EGY
+		capital_scope = { continent = europe }
+		NOT = {
+			tag = TUR
+			tag = RUS
+			exists = SUD
+		}
+		has_global_flag = berlin_conference
+		has_global_flag = mahdist_uprising
+		EGY = {
+			exists = yes
+			any_owned_province = {
+				is_core = SUD
+				has_province_modifier = fundamentalist_sympathies
+			}
+			any_owned_province = {
+				region = EGY_1834
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { months = 8 }
+	
+	option = {
+		name = "EVT955177OPTA"
+		EGY = { country_event = 955178 }
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT955177OPTB"
+		prestige = -5
+		ai_chance = { factor = 0 }
+	}
+}
+#Egypt Answer
+country_event = {
+	id = 955178
+	title = "EVTNAME955178"
+	desc = "EVTDESC955178"
+	picture = "sudan_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT955178OPTA"
+		prestige = -5
+		FROM = { country_event = 955179 }
+		ai_chance = { factor = 0.95 }
+	}
+	
+	option = {
+		name = "EVT955178OPTB"
+		prestige = 5
+		FROM = { country_event = 955180 }
+		ai_chance = {
+			factor = 0.05
+			modifier = {
+				factor = 0
+				is_vassal = yes
+			}
+		}
+	}
+}
+#Egypt Accepts
+country_event = {
+	id = 955179
+	title = "EVTNAME955179"
+	desc = "EVTDESC955179"
+	picture = "sudan_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT955179OPTA"
+		prestige = 5
+		SUD = {
+			all_core = {
+				remove_core = DAR
+				remove_core = SHK
+				any_pop = {
+					militancy = 7
+					consciousness = 4
+				}
+			}
+		}
+		
+		1834 = { add_core = EGY }
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { money = 50000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				} 
+			}
+			owner = { set_variable = { which = owed_cash_money value = 50 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { money = 50000 }
+					check_variable = { which = owed_cash_money value = 9 }
+				} 
+			}
+			owner = { change_variable = { which = owed_cash_money value = 50 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 50000 } }
+			owner = { treasury = -50000 }
+		}
+		
+		FROM = {
+			money = 50000
+			any_owned = {
+				limit = { 
+					OR = {
+						is_core = SUD 
+						is_core = ETH
+					}
+				}
+				secede_province = THIS
+			}
+		}
+		relation = { who = EGY value = 100 }
+	}
+}
+
+#Egypt Refuses
+country_event = {
+	id = 955180
+	title = "EVTNAME955180"
+	desc = "EVTDESC955180"
+	picture = "sudan_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT955180OPTA"
+		relation = { who = FROM value = -400 }
+		diplomatic_influence = { who = FROM value = -400 }
+		
+		SUD = {
+			civilized = no
+			government = theocracy
+			set_country_flag = theocratic_government
+			ruling_party_ideology = reactionary
+			political_reform = none_voting
+			political_reform = party_appointed
+			political_reform = no_meeting
+			political_reform = state_press
+			political_reform = state_controlled
+			political_reform = underground_parties
+			political_reform = primary_culture_only
+			political_reform = mandatory_service
+			
+			clr_country_flag = election_started
+			clr_country_flag = conservative_party_in_power
+			clr_country_flag = liberal_party_in_power
+			clr_country_flag = reactionary_party_in_power
+			clr_country_flag = socialist_party_in_power
+			clr_country_flag = communist_party_in_power
+			clr_country_flag = fascist_party_in_power
+			clr_country_flag = anarcho_liberal_party_in_power
+			
+			all_core = {
+				remove_core = DAR
+				remove_core = SHK
+			}
+		}
+		casus_belli = {
+			target = FROM
+			type = acquire_any_state
+			months = 30
+		}
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = acquire_any_state
+				state_province_id = 1837
+			}
+		}
+	}
+}
+
+#The Gabu Exchange
+country_event = {
+	id = 955181
+	title = "EVTNAME955181"
+	desc = "EVTDESC955181"
+	picture = "scramble_for_africa"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT955181OPTA"
+		relation = { who = FROM value = 50 }
+		random_owned = {
+			limit = { province_id = 1792 }
+			secede_province = FROM 
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				owns = 1878
+			}
+			random_owned = {
+				limit = { province_id = 1878 }
+				secede_province = THIS
+			}
+		}
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 0.5
+				is_greater_power = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT955181OPTB"
+		relation = { who = FROM value = -150 }
+		casus_belli = {
+			target = FROM
+			type = place_in_the_sun
+			months = 30
+		}
+		add_casus_belli = {
+			target = THIS
+			type = place_in_the_sun
+			months = 30
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 4
+				NOT = { relation = { who = FROM value = 0 } }
+			}
+		}
+	}
+}
+
+#The Conquest of Luhonono
+country_event = {
+	id = 955200
+	title = "EVTNAME955200"
+	desc = "EVTDESC955200"
+	picture = "mfecane"
+	
+	trigger = {
+		tag = ENG
+		owns = 2076
+		2082 = { empty = no }
+		2081 = { empty = yes }
+		invention = the_dark_continent
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { months = 2 }
+	
+	option = {
+		name = "EVT955200OPTA"
+		2081 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+	}
+}
+
+#Caprivi strip purchase
+country_event = {
+	id = 955201
+	title = "EVTNAME955201"
+	desc = "EVTDESC955201"
+	picture = "scramble_for_africa"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT955201OPTA"
+		treasury = 100000
+		random_country = {
+			limit = { tag = FROM }
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { money = 100000 }
+						NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					} 
+				}
+				owner = { set_variable = { which = owed_cash_money value = 100 } }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { money = 100000 }
+						check_variable = { which = owed_cash_money value = 9 }
+					} 
+				}
+				owner = { change_variable = { which = owed_cash_money value = 100 } }
+			}
+			random_owned = {
+				limit = { owner = { money = 100000 } }
+				owner = { treasury = -100000 }
+			}
+		}
+		relation = { who = FROM value = 25 }
+		2081 = { secede_province = FROM add_core = NMB }
+		ai_chance = {
+			factor = 0.5
+			modifier = { factor = 1.1 relation = { who = FROM value = 50 } }
+			modifier = { factor = 1.1 relation = { who = FROM value = 100 } }
+			modifier = { factor = 1.1 relation = { who = FROM value = 150 } }
+			modifier = { factor = 1.2 relation = { who = FROM value = 199 } }
+			modifier = { factor = 10 in_sphere = THIS }
+		}
+	}
+	
+	option = {
+		name = "EVT955201OPTB"
+		relation = { who = FROM value = -50 }
+		ai_chance = {
+			factor = 0.5
+			modifier = { factor = 1.1 NOT = { relation = { who = FROM value = 0 } } }
+			modifier = { factor = 1.2 NOT = { relation = { who = FROM value = -50 } } }
+			modifier = { factor = 1.2 NOT = { relation = { who = FROM value = -100 } } }
+			modifier = { factor = 1.2 NOT = { relation = { who = FROM value = -199 } } }
+		}
+	}
+}
+
+#The Ziguinchor Purchase
+country_event = {
+	id = 955202
+	title = "EVTNAME955181"
+	desc = "EVTDESC955202"
+	picture = "scramble_for_africa"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT955181OPTA"
+		relation = { who = FROM value = 50 }
+		treasury = 200000
+		random_owned = {
+			limit = { province_id = 1792 }
+			secede_province = FROM
+		}
+		
+		random_country = {
+			limit = {
+				tag = FROM
+				has_country_flag = paying_for_senegal
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { money = 200000 }
+						NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					} 
+				}
+				owner = { set_variable = { which = owed_cash_money value = 200 } }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { money = 200000 }
+						check_variable = { which = owed_cash_money value = 9 }
+					} 
+				}
+				owner = { change_variable = { which = owed_cash_money value = 200 } }
+			}
+			random_owned = {
+				limit = { owner = { money = 200000 } }
+				owner = { treasury = -200000 }
+			}
+			clr_country_flag = paying_for_senegal
+		}
+		
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 0.5
+				is_greater_power = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT955181OPTB"
+		relation = { who = FROM value = -150 }
+		badboy = 1
+		casus_belli = {
+			target = FROM
+			type = place_in_the_sun
+			months = 30
+		}
+		add_casus_belli = {
+			target = FROM
+			type = place_in_the_sun
+			months = 30
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 4
+				NOT = { relation = { who = FROM value = 0 } }
+			}
+		}
+	}
+}
+
+#The Scramble Awards
+country_event = {
+	id = 955203
+	title = "EVTNAME955203"
+	desc = "EVTDESC955203"
+	picture = "scramble_for_africa"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT955203OPTA"
+
+		random_owned = {
+			limit = {
+				province_id = 2038
+				2039 = { empty = yes }
+			}
+			
+			owner = {
+				2039 = {
+					secede_province = THIS
+					add_core = ZAN
+					life_rating = 25
+					any_pop = { literacy = -0.99 }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				province_id = 2071
+				2069 = { empty = yes }
+				2073 = { empty = yes }
+			}
+			
+			owner = {
+				2069 = {
+					secede_province = THIS
+					add_core = MAT
+					life_rating = 25
+					any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
+				}
+				2073 = {
+					secede_province = THIS
+					add_core = MAT
+					life_rating = 25
+					any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				province_id = 1884
+				1885 = { empty = yes }
+				1886 = { empty = yes }
+			}
+			
+			owner = {
+				1885 = {
+					secede_province = THIS
+					life_rating = 25
+					any_pop = { literacy = -0.99 }
+				}
+				1886 = {
+					secede_province = THIS
+					life_rating = 25
+					any_pop = { literacy = -0.99 }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				province_id = 1887
+				1889 = { empty = yes }
+				1890 = { empty = yes }
+				1891 = { empty = yes }
+			}
+			
+			owner = {
+				LIB = { political_reform = culture_voting_only }
+				1889 = {
+					trade_goods = coffee
+					secede_province = THIS
+					add_core = LIB
+					life_rating = 25
+					any_pop = { limit = { NOT = { has_pop_culture = afro_american } } literacy = -0.99 }
+				}
+				1890 = {
+					trade_goods = coffee
+					secede_province = THIS 
+					add_core = LIB
+					life_rating = 25
+					any_pop = { limit = { NOT = { has_pop_culture = afro_american } } literacy = -0.99 }
+				}
+				1891 = { 
+					secede_province = THIS 
+					add_core = LIB
+					life_rating = 25
+					any_pop = { limit = { NOT = { has_pop_culture = afro_american } } literacy = -0.99 }
+				}
+			}
+		}
+	}	
+}
+
+#Buying Gabu
+country_event = {
+	id = 955204
+	title = "EVTNAME955204"
+	desc = "EVTDESC955204"
+	picture = "scramble_for_africa"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT955181OPTA"
+		relation = { who = FROM value = 50 }
+		treasury = 200000
+		random_owned = {
+			limit = { province_id = 1878 }
+			secede_province = FROM
+		}
+		
+		random_country = {
+			limit = {
+				tag = FROM
+				has_country_flag = paying_for_senegal
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { money = 200000 }
+						NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					} 
+				}
+				owner = { set_variable = { which = owed_cash_money value = 200 } }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { money = 200000 }
+						check_variable = { which = owed_cash_money value = 9 }
+					} 
+				}
+				owner = { change_variable = { which = owed_cash_money value = 200 } }
+			}
+			random_owned = {
+				limit = { owner = { money = 200000 } }
+				owner = { treasury = -200000 }
+			}
+			clr_country_flag = paying_for_senegal
+		}
+		
+		ai_chance = {
+			factor = 95
+		}
+	}
+	
+	option = {
+		name = "EVT955181OPTB"
+		relation = { who = FROM value = -150 }
+		badboy = 1
+		casus_belli = {
+			target = FROM
+			type = place_in_the_sun
+			months = 30
+		}
+		add_casus_belli = {
+			target = FROM
+			type = place_in_the_sun
+			months = 30
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 4
+				NOT = { relation = { who = FROM value = 0 } }
+			}
+		}
+	}
+}
+
+#Conquering Eritrea - Uncivs
+province_event = {
+	id = 955205
+	title = "EVTNAME955205"
+	desc = "EVTDESC955205"
+	picture = "scramble_for_africa"
+	
+	trigger = {
+		region = ENG_1848
+		owner = {
+			war = no
+			civilized = yes
+			owns = 1851
+			capital_scope = { continent = europe }
+			has_global_flag = berlin_conference
+		}
+		any_neighbor_province = {
+			region = ENG_1848
+			owner = {
+				civilized = no
+				war = no
+			}
+			OR = {
+				average_militancy = 3
+				owner = { in_sphere = THIS }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.25
+			owner = { invention = the_dark_continent }
+		}
+		modifier = {
+			factor = 0.5
+			year = 1885
+		}
+	}
+	
+	option = {
+		name = "EVT955205OPTA"
+		random_neighbor_province = {
+			limit = {
+				region = ENG_1848
+				owner = {
+					civilized = no
+					war = no
+				}
+				OR = {
+					average_militancy = 3
+					owner = { in_sphere = THIS }
+				}
+			}
+			owner = { relation = { who = THIS value = -25 } }
+			secede_province = THIS
+		}
+	}
+}
+
+#Transferring Massawa - Civs
+country_event = {
+	id = 955206
+	title = "EVTNAME955206"
+	desc = "EVTDESC955206"
+	picture = "scramble_for_africa"
+	
+	trigger = {
+		war = no
+		any_owned_province = { region = ENG_1848 }
+		has_global_flag = berlin_conference
+		civilized = yes
+		NOT = { owns = 1851 }
+		NOT = { has_country_flag = not_giving_eritrea }
+		any_neighbor_country = {
+			capital_scope = { continent = europe }
+			owns = 1851
+			civilized = yes
+			war = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			invention = the_dark_continent
+		}
+		modifier = {
+			factor = 0.5
+			year = 1885
+		}
+	}
+	
+	option = {
+		name = "EVT955206OPTA"
+		badboy = -2
+		any_neighbor_country = {
+			limit = {
+				owns = 1851
+				civilized = yes
+			}
+			relation = { who = THIS value = 25 }
+			country_event = 955207
+		}
+		ai_chance = { factor = 80 }
+	}
+	
+	option = {
+		name = "EVT955206OPTB"
+		badboy = 2
+		set_country_flag = not_giving_eritrea
+		any_neighbor_country = {
+			limit = {
+				owns = 1851
+				civilized = yes
+			}
+			relation = { who = THIS value = -50 }
+			casus_belli = {
+				target = THIS
+				type = place_in_the_sun
+				months = 48
+			}
+		}
+		ai_chance = { factor = 20 }
+	}
+}
+
+#Transferring Massawa - Assab owner gets the answer
+country_event = {
+	id = 955207
+	title = "EVTNAME955207"
+	desc = "EVTDESC955207"
+	picture = "scramble_for_africa"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT955205OPTA"
+		FROM = {
+			any_owned = {
+				limit = { region = ENG_1848 }
+				secede_province = THIS
+			}
+		}
+	}
+}
+

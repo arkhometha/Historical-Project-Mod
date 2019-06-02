@@ -1,0 +1,835 @@
+political_decisions = {
+
+	mobilize_tribesmen = {
+		picture = form_the_ikhwan
+		potential = {
+			ai = no
+			OR = {
+				tag = CYR
+				tag = ALD
+				primary_culture = kurdish
+			}
+			NOT = { has_country_modifier = rally_tribesmen }
+			civilized = no
+		}
+
+		allow = {
+			war = yes
+			NOT = { total_pops = 400000 }
+		}
+
+		effect = {
+			add_country_modifier = { name = rally_tribesmen duration = 730 }
+			random_owned = {
+				limit = {
+					owner = { tag = CYR NOT = { has_country_flag = senussi_rebellion } }
+				}
+				owner = {
+					set_country_flag = senussi_rebellion
+					define_general = {
+						name = "Muhammad al-Mahdi as-Senussi"
+						personality = relentless
+						background = school_of_defense
+					}
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	secularize_society = {
+		picture = the_holy_city
+		potential = {
+			NOT = { has_country_flag = secularized_muslim_society }
+			civilized = yes
+			OR = {
+				has_country_flag = sunni_country
+				has_country_flag = shiite_country
+				has_country_flag = ibadi_country
+			}
+		}
+
+		allow = {
+			invention = secularization
+			prestige = 25
+			NOT = {
+				government = theocracy
+				religious_policy = pluralism
+				religious_policy = moralism
+				ruling_party_ideology = reactionary
+				ruling_party_ideology = conservative
+				moralism = 8
+			}
+			OR = {
+				government = proletarian_dictatorship
+				government = fascist_dictatorship
+				religious_policy = secularized
+				religious_policy = pro_atheism
+			}
+		}
+
+		effect = {
+			set_country_flag = secularized_muslim_society
+			prestige_factor = -0.2
+			any_pop = {
+				limit = { is_state_religion = yes }
+					consciousness = 3
+					militancy = 1
+					scaled_consciousness = { factor = 9 issue = moralism }
+					scaled_militancy = { factor = 9 issue = moralism }
+					scaled_consciousness = { factor = 6 issue = pluralism }
+					scaled_militancy = { factor = 3 issue = pluralism }
+					scaled_consciousness = { factor = 8 ideology = reactionary }
+					scaled_militancy = { factor = 4 ideology = reactionary }
+					scaled_consciousness = { factor = 4 ideology = conservative }
+					scaled_militancy = { factor = 2 ideology = conservative }
+					scaled_consciousness = { factor = -9 issue = pro_atheism }
+					scaled_militancy = { factor = -9 issue = pro_atheism }
+					scaled_consciousness = { factor = -6 issue = secularized }
+					scaled_militancy = { factor = -3 issue = secularized }
+					scaled_consciousness = { factor = -8 ideology = communist }
+					scaled_militancy = { factor = -4 ideology = communist }
+					scaled_consciousness = { factor = -4 ideology = socialist }
+					scaled_militancy = { factor = -2 ideology = socialist }
+			}
+			any_pop = {
+				limit = { is_state_religion = no }
+				consciousness = -2
+				militancy = -2
+			}
+			move_issue_percentage = { from = pluralism to = moralism value = 0.5 }
+		}
+
+		ai_will_do = {
+			factor = 1 
+			modifier = {
+				factor = 0
+				OR = {
+					average_militancy = 5
+					moralism = 7
+				}
+			}
+		}
+	}
+
+	exile_house_of_saud = {
+		picture = ibn_saud
+		potential = {
+			OR = {
+				tag = HAL
+				tag = HDJ
+			}
+			any_owned_province = { is_core = NEJ }
+			NOT = { has_global_flag = house_of_saud_exiled }
+		}
+
+		allow = {
+			NEJ = {
+				exists = no
+				all_core = { owned_by = THIS }
+			}
+		}
+
+		effect = {
+			set_global_flag = house_of_saud_exiled
+			prestige = 5
+			NEJ = {
+				all_core = {
+					remove_core = NEJ
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	claim_nejd = {
+		picture = map_arabia
+		potential = {
+			tag = HAL
+			NOT = { has_country_flag = claimed_nejd }
+			NEJ = { exists = no }
+		}
+
+		allow = {
+			NOT = {
+				1157 = { is_core = HAL }
+			}
+		}
+
+		effect = {
+			set_country_flag = claimed_nejd
+			NEJ_1157 = { add_core = HAL }
+			NEJ_1156 = { add_core = HAL }
+			1163 = { add_core = HAL }
+			1164 = { add_core = HAL }
+			any_country = {
+				limit = {
+					civilized = no
+					any_owned_province = {
+						OR = {
+							region = NEJ_1157
+							region = NEJ_1156
+						}
+					}
+					NOT = { tag = THIS }
+				}
+				leave_alliance = THIS
+				relation = {
+					who = THIS
+					value = -100
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	exile_house_of_rashid = {
+	picture = exile_house_of_rashid
+		potential = {
+			OR = {
+				tag = NEJ
+				tag = HDJ
+			}
+			any_owned_province = { is_core = HAL }
+			NOT = { has_global_flag = house_of_rashid_exiled }
+		}
+
+		allow = {
+			HAL = {
+				exists = no
+				all_core = { owned_by = THIS }
+			}
+		}
+
+		effect = {
+			set_global_flag = house_of_rashid_exiled
+			prestige = 5
+			HAL = {
+				all_core = {
+					remove_core = HAL
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	claim_hail = {
+		picture = map_arabia
+		potential = {
+			tag = NEJ
+			NOT = { has_country_flag = claimed_hail }
+			HAL = { exists = no }
+		}
+
+		allow = {
+			NOT = {
+				1160 = { is_core = NEJ }
+			}
+		}
+
+		effect = {
+			set_country_flag = claimed_hail
+			NEJ_1156 = { add_core = NEJ }
+			any_country = {
+				limit = {
+					civilized = no
+					any_owned_province = { region = NEJ_1156 }
+					NOT = { tag = THIS }
+				}
+				leave_alliance = THIS
+				relation = {
+					who = THIS
+					value = -100
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	claim_hedjaz_NEJ = {
+		picture = map_arabia
+		potential = {
+			tag = NEJ
+			NOT = { exists = ARA }
+			NOT = {
+				1151 = { is_core = NEJ }
+			}
+		}
+
+		allow = {
+			OR = {
+				owns = 1160
+				owns = 1151
+			}
+		}
+
+		effect = {
+			prestige = 5
+			HDJ_1151 = { add_core = NEJ } #Hedjaz
+			random_country = {
+				limit = {
+					owns = 1151
+					civilized = no
+				}
+				leave_alliance = THIS
+				relation = {
+					who = THIS
+					value = -200
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	claim_hedjaz_HAL = {
+		picture = map_arabia
+		potential = {
+			tag = HAL
+			NOT = { exists = ARA }
+			NOT = {
+				1151 = { is_core = HAL }
+			}
+		}
+
+		allow = {
+			OR = {
+				owns = 1157
+				owns = 1151
+			}
+		}
+
+		effect = {
+			prestige = 5
+			HDJ_1151 = { add_core = HAL } #Hedjaz
+			random_country = {
+				limit = {
+					owns = 1151
+					civilized = no
+				}
+				leave_alliance = THIS
+				relation = {
+					who = THIS
+					value = -200
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	claim_arabia_HDJ = {
+		picture = map_arabia
+		potential = {
+			tag = HDJ
+			exists = yes
+			NOT = { exists = ARA }
+			NOT = {
+				1157 = { is_core = HDJ }
+			}
+		}
+
+		allow = {
+			NOT = { owns = 1157 }
+			is_vassal = no
+			OR = {
+				1157 = {
+					owner = {
+						NOT = { primary_culture = bedouin }
+						NOT = { is_sphere_leader_of = THIS }
+						sphere_owner = {
+							NOT = { is_sphere_leader_of = THIS }
+						}
+					}
+				}
+				AND = {
+					war_with = NEJ
+					1151 = { is_core = NEJ }
+				}
+				AND = {
+					war_with = HAL
+					1151 = { is_core = HAL }
+				}
+			}
+		}
+
+		effect = {
+			prestige = 5
+			NEJ_1157 = { add_core = HDJ } #Riyadh
+			NEJ_1156 = { add_core = HDJ } #Kaf
+			1155 = { add_core = HDJ } #Abha
+			random_country = {
+				limit = {
+					owns = 1157
+					civilized = no
+				}
+				leave_alliance = THIS
+				relation = {
+					who = THIS
+					value = -50
+
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	encourage_arab_nationalism = {
+		picture = form_the_ikhwan
+		potential = {
+			is_greater_power = yes
+			NOT = { has_global_flag = arab_nationalism_encouraged }
+			NOT = { tag = TUR }
+			TUR = {
+				NOT = { has_country_flag = arab_revolt }
+				any_owned_province = {
+					any_core = {
+						OR = {
+							primary_culture = mashriqi
+							primary_culture = bedouin
+							primary_culture = misri
+							primary_culture = maghrebi
+						}
+						exists = no
+					}
+				}
+			}
+			year = 1900
+		}
+		
+		allow = {
+			revolution_n_counterrevolution = 1
+			TUR = { NOT = { rank = 1 } }
+			war_with = TUR
+		}
+		
+		effect = {
+			set_global_flag = arab_nationalism_encouraged
+			set_country_flag = friend_of_the_arabs
+			TUR = { country_event = 96100 }
+		}
+	}
+
+	ibn_saud = {
+		potential = {
+			has_global_flag = arab_revolt_has_begun
+			NOT = { has_country_flag = ibn_saud }
+			tag = NEJ
+		}
+		
+		allow = {
+			government = absolute_monarchy
+		}
+		
+		effect = {
+			set_country_flag = ibn_saud
+			define_general = {
+				name = "Ibn Saud"
+				personality = brilliant
+				background = eccentric_genius
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	form_the_ikhwan = {
+		potential = {
+			OR = {
+				AND = {
+					tag = NEJ
+					has_country_flag = ibn_saud
+				}
+				AND = {
+					tag = HAL
+					OR = {
+						has_global_flag = house_of_saud_returned
+						year = 1920
+					}
+					NOT = { exists = NEJ }
+				}
+			}		
+			NOT = { has_country_flag = the_ikhwan_formed }
+		}
+
+		allow = {
+			government = absolute_monarchy
+		}
+
+		effect = {
+			set_country_flag = the_ikhwan_formed
+			add_country_modifier = {
+				name = the_ikhwan
+				duration = 3650
+			}
+			random_pop = {
+				limit = {
+					pop_type = farmers
+					has_pop_culture = bedouin
+				}
+				pop_type = soldiers
+			}
+			any_pop = {
+				limit = { has_pop_culture = bedouin }
+				ideology = {	
+					value = reactionary
+					factor = 0.2
+				}
+				dominant_issue = {
+					factor = 0.20
+					value = jingoism
+				}
+				militancy = -4
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_holy_city = {
+	picture = the_holy_city
+		potential = {
+			1151 = {
+				NOT = { has_province_modifier = holy_city }
+			}
+			OR = {
+				is_culture_group = arab	
+				is_culture_group = turko_semitic
+			}
+		}
+		
+		allow = {
+			owns = 1151
+		}
+		
+		effect = {
+			1151 = {
+				add_province_modifier = {
+					name = holy_city
+					duration = -1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	claim_arabian_peninsula = {
+		picture = map_arabia
+		potential = {
+			tag = ARA
+			NOT = {
+				has_country_flag = claim_arabian_peninsula
+				has_country_flag = created_externally
+			}
+		}
+
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+			romanticism = 1
+			is_greater_power = yes
+			OR = {
+				government = fascist_dictatorship
+				AND = {
+					government = absolute_monarchy
+					war_policy = jingoism
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = claim_arabian_peninsula
+			ABU_1162 = { #Abu Dhabi
+				add_core = ARA
+			}
+			OMA_1166 = { #Oman
+				add_core = ARA
+			}
+			YEM_1412 = { #Yemen
+				add_core = ARA
+			}
+			YEM_1178 = { #Yemen
+				add_core = ARA
+			}			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	hedjaz_independent = {
+		picture = form_the_ikhwan
+		potential = {
+			tag = HDJ
+			vassal_of = EGY
+		}
+
+		allow = {
+			war = no
+			NOT = { neighbour = EGY }
+		}
+
+		effect = {
+			add_casus_belli = {
+				target = TUR
+				type = establish_protectorate_casus_belli
+				months = 120
+			}
+			leave_alliance = EGY
+			EGY = {
+				release_vassal = THIS
+				country_event = 800055
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	integrate_bahrain_trucial_states = {
+		picture = bahrain_trade
+		
+		potential = {
+			is_greater_power = yes
+			is_sphere_leader_of = ABU
+			ABU = {
+				exists = yes
+				NOT = { owns = 1162 }
+			}
+			BHR = {
+				exists = yes
+				ai = yes
+				in_sphere = THIS
+			}
+			NOT = { has_country_flag = trucial_states_integration_bahrain }
+		}
+
+		allow = {
+			war = no
+			mass_politics = 1
+			1162 = {
+				owner = { war = no }
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+				}
+			}
+			BHR = {
+				war = no
+				is_mobilised = no
+			}
+		}
+
+		effect = {
+			set_country_flag = trucial_states_integration_bahrain
+			ABU = { inherit = BHR }
+			relation = { who = ABU value = 50 }
+			diplomatic_influence = { who = ABU value = 25 }
+			any_country = {
+				limit = {
+					exists = no
+					civilized = no
+					OR = {
+						tag = BHR
+						tag = QAT
+					}
+				}
+				tech_school = developing_tech_school
+			}
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+	
+	integrate_qatar_trucial_states = {
+		picture = doha_city
+		potential = {
+			is_greater_power = yes
+			is_sphere_leader_of = ABU
+			ABU = {
+				exists = yes
+				NOT = { owns = 1165 }
+			}
+			QAT = {
+				exists = yes
+				ai = yes
+				in_sphere = THIS
+			}
+			NOT = { has_country_flag = trucial_states_integration_qatar }
+		}
+
+		allow = {
+			war = no
+			mass_politics = 1
+			1165 = {
+				owner = { war = no }
+				OR = {
+					owned_by = THIS
+					owner = { in_sphere = THIS }
+				}
+			}
+			QAT = {
+				war = no
+				is_mobilised = no
+			}
+		}
+
+		effect = {
+			set_country_flag = trucial_states_integration_qatar
+			ABU = { inherit = QAT }
+			relation = { who = ABU value = 50 }
+			diplomatic_influence = { who = ABU value = 25 }
+			any_country = {
+				limit = {
+					exists = no
+					civilized = no
+					OR = {
+						tag = BHR
+						tag = QAT
+					}
+				}
+				tech_school = developing_tech_school
+			}
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+	
+	claim_bahrain_qatar_peninsula = {
+		picture = bahrain_trade
+		potential = {
+			OR = {
+				AND = {
+					tag = TUR
+					NOT = { has_country_flag = qatar_protection }
+					year = 1880
+				}
+				tag = PER
+				tag = NEJ
+				tag = HAL
+				tag = ARA
+				tag = OMA
+			}
+			is_canal_enabled = 2
+			revolution_n_counterrevolution = 1
+			NOT = {
+				has_country_flag = claimed_the_persian_gulf
+				 owns = 1165
+				 owns = 1162
+				 1165 = { is_core = THIS }
+				 1162 = { is_core = THIS }
+			}
+		}
+
+		allow = {
+			war = no
+			mass_politics = 1
+			is_greater_power = yes
+			OR = {
+				owns = 1164
+				owns = 1071
+				owns = 1167
+			}
+		}
+
+		effect = {
+			set_country_flag = claimed_the_persian_gulf
+			badboy = 5
+			1165 = { add_core = THIS } 
+			1162 = { add_core = THIS }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	vassalize_trucial_states = {
+		picture = dubai_city
+		potential = {
+			is_sphere_leader_of = ABU
+			ABU = {
+				ai = yes
+				is_vassal = no
+			}
+			revolution_n_counterrevolution = 1
+			NOT = { has_global_flag = vassalized_trucials }
+		}
+
+		allow = {
+			war = no
+			ABU = {
+				war = no
+				in_sphere = THIS
+				relation = { who = THIS value = 150 }
+			}
+			mass_politics = 1
+		}
+
+		effect = {
+			set_global_flag = vassalized_trucials
+			prestige = 5
+			create_vassal = ABU
+			create_alliance = ABU
+			relation = { who = ABU value = 400 }
+			diplomatic_influence = { who = ABU value = 400 }
+			ABU = { political_reform = no_slavery research_points = 1000 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+		
+	found_dar_es_salaam = {
+		picture = tanzania_shop
+		potential = {
+			owns = 2036
+			capital_scope = {
+				OR = {
+					has_country_flag = sunni_country
+					has_country_flag = shiite_country
+					has_country_flag = ibadi_country
+				}
+			}
+			NOT = { has_global_flag = dar_es_salaam_built }
+		}
+
+		allow = {
+			war = no
+			money = 1000
+			OR = {
+				civilized = yes
+				admin_reform = yes_admin_reform
+				civilization_progress = 0.5
+				year = 1865
+			}
+		}
+
+		effect = {
+			set_global_flag = dar_es_salaam_built
+			money = -1000
+			2036 = { any_pop = { militancy = -1 } add_province_modifier = { name = recently_built_city duration = 365 } change_province_name = "Dar Es Salaam" }
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

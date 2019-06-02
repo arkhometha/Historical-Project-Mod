@@ -1,0 +1,5 @@
+owner = KNG
+controller = KNG
+add_core = KNG
+trade_goods = fish
+life_rating = 35
