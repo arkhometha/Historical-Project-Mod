@@ -11,10 +11,10 @@ You can see some of the stuff that has been done in the past either in **Moddb**
 
 # Credits
 
-	-Naselus and everyone who contributed to Pop Demand Mod (PDM). The terrain system was originally taken from that mod, and fixed and adapted for some provinces, but then it was scrapped and replaced with an original system.
-	-Rylock for his excellent New Nations Mod (NNM). NNM is the true basis for almost every Victoria 2 mod out there, and the work done on it was fantastic. 
-	-Thanks for Faulty's for the icons and Thoughtful Punk for his flags
-	-Thanks for Semper Victor for his Portrait mods, that I'm slowly integrating.
-	-Thanks for AFPG for his masterfully designed flags, as well as all the other anonymous contributions to Persia, Siberia and America.
-	-Thanks for everyone and all anons who helped with events, decisions, bugfixes and suggestions!
+-Naselus and everyone who contributed to Pop Demand Mod (PDM). The terrain system was originally taken from that mod, and fixed and adapted for some provinces, but then it was scrapped and replaced with an original system.
+-Rylock for his excellent New Nations Mod (NNM). NNM is the true basis for almost every Victoria 2 mod out there, and the work done on it was fantastic. 
+-Thanks for Faulty's for the icons and Thoughtful Punk for his flags
+-Thanks for Semper Victor for his Portrait mods, that I'm slowly integrating.
+-Thanks for AFPG for his masterfully designed flags, as well as all the other anonymous contributions to Persia, Siberia and America.
+-Thanks for everyone and all anons who helped with events, decisions, bugfixes and suggestions!
 
