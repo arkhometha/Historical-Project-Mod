@@ -1,6 +1,6 @@
 # Historical Project Mod
 
-*This readme is still in construction*
+*This readme is under construction*
 
 The Historical Project Mod (HPM) is a mod started in 2014 out of the desire to expand on several good mechanics from NNM and PDM, while making the changes I wanted to see to these mods. As it shred is NNM/PDM base, overtime, it grew to be much more.
 There are *tons* of stuff, and tons of bugfixes and flavour, and honestly I don't think I could recall it all even if I wanted to. Hopefully, some day, I will sit down and write a "main features" section again as the one in Moddb is horribly outdated (and that will probably be based off the wiki in the git explaining the new mechanics).
