@@ -9,7 +9,7 @@ You can see some of the stuff that has been done in the past either in **Moddb**
 
 *From 2019 onwards I expect to make a full transition to Github, as it's easier to organize everything - Moddb will still be used, but Github should become the main source of information.*
 
-# Credits
+## Credits
 
 -Naselus and everyone who contributed to Pop Demand Mod (PDM). The terrain system was originally taken from that mod, and fixed and adapted for some provinces, but then it was scrapped and replaced with an original system.
 
