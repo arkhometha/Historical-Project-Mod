@@ -5,9 +5,12 @@
 The Historical Project Mod (HPM) is a mod started in 2014 out of the desire to expand on several good mechanics from NNM and PDM, while making the changes I wanted to see to these mods. As it shred is NNM/PDM base, overtime, it grew to be much more.
 There are *tons* of stuff, and tons of bugfixes and flavour, and honestly I don't think I could recall it all even if I wanted to. Hopefully, some day, I will sit down and write a "main features" section again as the one in Moddb is horribly outdated (and that will probably be based off the wiki in the git explaining the new mechanics).
 
-You can see some of the stuff that has been done in the past either in **Moddb** https://www.moddb.com/mods/historical-project-mod or in the **pastebin** https://pastebin.com/66gpxbKk
+You can see some of the stuff that has been done in the past either in [Moddb](https://www.moddb.com/mods/historical-project-mod) or in the [pastebin](https://pastebin.com/66gpxbKk).
 
 *From 2019 onwards I expect to make a full transition to Github, as it's easier to organize everything - Moddb will still be used, but Github should become the main source of information.*
+
+## Wiki and Minimods
+It's still under construction, but it's slowly getting there. The [Wiki](https://github.com/arkhometha/Historical-Project-Mod/wiki) is the place yo go if you are looking for info (disclaimer: info to come at a later date) or minimods (those are included).
 
 ### Credits
 
@@ -17,4 +20,3 @@ You can see some of the stuff that has been done in the past either in **Moddb**
 * Thanks for Semper Victor for his Portrait mods, that I'm slowly integrating.
 * Thanks for AFPG for his masterfully designed flags, as well as all the other anonymous contributions to Persia, Siberia and America.
 * Thanks for everyone and all anons who helped with events, decisions, bugfixes and suggestions!
-
