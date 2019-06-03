@@ -6539,6 +6539,10 @@ province_event = {
 					province_id = 1547
 					province_id = 1474
 					province_id = 1524
+					province_id = 1541 #Tongzhou
+					province_id = 1471 #Chizhou
+					province_id = 1473 #Huizhou
+					province_id = 1509 #Anshun
 				}
 			}
 			

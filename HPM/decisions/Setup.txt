@@ -18,6 +18,24 @@ political_decisions = {
 		ai_will_do = { factor = 0 }
 	}
 	
+	unlock_crisis_in_1870 = {
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { year = 1837 }
+			NOT = { has_global_flag = unlock_crisis_in_1870 }
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			set_global_flag = unlock_crisis_in_1870
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
 	option_disable_hpm_crisis = {
 		alert = no
 		potential = {
@@ -32,6 +50,16 @@ political_decisions = {
 				AND = {
 					ai = yes
 					year = 1886
+					OR = {
+						revolution_n_counterrevolution = 1
+						any_neighbor_country = { revolution_n_counterrevolution = 1 }
+						any_greater_power = { revolution_n_counterrevolution = 1 }
+					}
+				}
+				AND = {
+					ai = yes
+					year = 1870
+					has_global_flag = unlock_crisis_in_1870
 					OR = {
 						revolution_n_counterrevolution = 1
 						any_neighbor_country = { revolution_n_counterrevolution = 1 }
@@ -2567,6 +2595,28 @@ political_decisions = {
 			}
 
 			MEX = { add_country_modifier = { name = fight_the_power duration = 3650 } }
+			
+			any_country = {
+				limit = {
+					ai = no
+					OR = {
+						government = prussian_constitutionalism
+						government = hms_government
+					}
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = conservative } }
+					owner = { set_country_flag = conservative_party_in_power }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = liberal } }
+					owner = { set_country_flag = liberal_party_in_power }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = reactionary } }
+					owner = { set_country_flag = reactionary_party_in_power }
+				}
+			}
 		}
 	}
 	
