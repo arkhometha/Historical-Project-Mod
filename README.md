@@ -12,7 +12,7 @@ You can see some of the stuff that has been done in the past either in [Moddb](h
 ## Wiki and Minimods
 It's still under construction, but it's slowly getting there. The [Wiki](https://github.com/arkhometha/Historical-Project-Mod/wiki) is the place yo go if you are looking for info (disclaimer: info to come at a later date) or minimods (those are included).
 
-### Credits
+## Credits
 
 * Naselus and everyone who contributed to Pop Demand Mod (PDM). The terrain system was originally taken from that mod, and fixed and adapted for some provinces, but then it was scrapped and replaced with an original system.
 * Rylock for his excellent New Nations Mod (NNM). NNM is the true basis for almost every Victoria 2 mod out there, and the work done on it was fantastic. 
