@@ -8677,7 +8677,7 @@ country_event = {
 			}
 			add_core = RUS
 		}
-				
+
 		#if any Polish cores owned, re-add cores to Germany
 		any_owned = {
 			limit = {
@@ -8916,6 +8916,7 @@ country_event = {
 					tag = JOR
 					tag = IRQ
 					tag = LBY
+					tag = HTY
 					is_culture_group = west_african
 					is_culture_group = east_african
 					is_culture_group = central_african
