@@ -372,9 +372,7 @@ country_event = {
 		clr_country_flag = corrientes_is_ready_for_war
 		clr_country_flag = oribe_is_true_president
 		
-		CRT = {
-			set_country_flag = annex_to_master
-		}
+		CRT = { set_country_flag = annex_to_master }
 		ARC = {
 			country_event = 600065
 			release_vassal = CRT
@@ -504,8 +502,18 @@ country_event = {
 		}
 		ARC = {
 			release_vassal = CRT
+			casus_belli = {
+				target = CRT
+				type = make_puppet
+				months = 12
+			}
 		}
-		CRT = { set_country_flag = annex_to_master }
+		set_country_flag = annex_to_master
+		casus_belli = {
+			target = ARC
+			type = cut_down_to_size
+			months = 12
+		}
 		war = {
 			target = ARC
 			attacker_goal = { casus_belli = cut_down_to_size }
