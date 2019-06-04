@@ -2595,6 +2595,7 @@ political_decisions = {
 			}
 
 			MEX = { add_country_modifier = { name = fight_the_power duration = 3650 } }
+			1253 = { add_province_modifier = { name = local_economic_downturn duration = 8760 } }
 			
 			any_country = {
 				limit = {
