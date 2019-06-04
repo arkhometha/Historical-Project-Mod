@@ -1,30 +1,4 @@
 
+# Ignore SSFF
 SquareShadedFlagFrame.mod
-SquareShadedFlagFrame/gfx/FX/flag.fx
-SquareShadedFlagFrame/gfx/FX/maskedflag.fx
-SquareShadedFlagFrame/gfx/FX/maskedflag_greydown.fx
-SquareShadedFlagFrame/gfx/interface/diplo_gp_mask2.tga
-SquareShadedFlagFrame/gfx/interface/diplo_gp_overlay2.dds
-SquareShadedFlagFrame/gfx/interface/diplo_gp_overlay2.tga
-SquareShadedFlagFrame/gfx/interface/diplo_select_gp_overlay.dds
-SquareShadedFlagFrame/gfx/interface/diplomacy_bg.dds
-SquareShadedFlagFrame/gfx/interface/frontend_lobby_rightbg.dds
-SquareShadedFlagFrame/gfx/interface/frontend_rank_bg.dds
-SquareShadedFlagFrame/gfx/interface/province_other_bg.dds
-SquareShadedFlagFrame/gfx/interface/topbar_flag_overlay.dds
-SquareShadedFlagFrame/gfx/interface/topbar_flag_overlay2.dds
-SquareShadedFlagFrame/gfx/interface/topbar_paper.dds
-SquareShadedFlagFrame/gfx/interface/topbarflag_mask.tga
-SquareShadedFlagFrame/gfx/interface/topbarflag_mask2.tga
-SquareShadedFlagFrame/gfx/interface/topbarflag_shadow.dds
-SquareShadedFlagFrame/gfx/interface/topbarflag_shadow2.dds
-SquareShadedFlagFrame/interface/backend.gui
-SquareShadedFlagFrame/interface/country_diplomacy.gui
-SquareShadedFlagFrame/interface/country_production.gui
-SquareShadedFlagFrame/interface/diplomacydialog.gui
-SquareShadedFlagFrame/interface/general_gfx.gfx
-SquareShadedFlagFrame/interface/lobby.gui
-SquareShadedFlagFrame/interface/province_interface.gui
-SquareShadedFlagFrame/interface/single_unitpanel.gui
-SquareShadedFlagFrame/interface/topbar.gui
-SquareShadedFlagFrame/interface/unitpanel.gui
+SquareShadedFlagFrame/
