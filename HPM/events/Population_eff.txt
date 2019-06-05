@@ -795,7 +795,14 @@ province_event = {
 			owner = { NOT = { administration_spending = 0.5 } }
 		}
 		modifier = {
-			factor = 2
+			factor = 1.2
+			state_scope = {
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+		}
+		modifier = {
+			factor = 1.2
 			state_scope = {
 				is_primary_culture = no
 				is_accepted_culture = no
@@ -803,17 +810,39 @@ province_event = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			state_scope = {
 				is_primary_culture = no
 				is_accepted_culture = no
-				any_owned_province = { is_core = THIS }
+				NOT = { any_owned_province = { is_core = THIS } }
+				NOT = {
+					any_owned_province = {
+						any_pop = {
+							OR = {
+								is_accepted_culture = yes
+								is_primary_culture = yes
+							}
+						}
+					}
+				}
 			}
 		}
+		
 	}
 	
 	option = {
 		name = "EVT169000OPTA"
+		owner = {
+			random_owned = {
+				limit = {
+					owner = { has_country_modifier = evidence_of_massacre2 }
+				}
+				owner = { remove_country_modifier = evidence_of_massacre2 }
+			}
+		}
+		owner = {
+			add_country_modifier = { name = evidence_of_massacre2 duration = 1095 }
+		}
 		state_scope = {
 			any_owned = {
 				limit = { has_national_minority = yes }

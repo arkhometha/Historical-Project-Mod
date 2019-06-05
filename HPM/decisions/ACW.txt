@@ -617,6 +617,9 @@ political_decisions = {
 				slavery = yes_slavery
 				slavery = freedom_of_womb
 			}
+			2209 = {
+				NOT = { owner = { has_country_flag = new_world_nation } }
+			}
 			NOT = {
 				has_country_flag = ostend_manifesto_published
 				has_global_flag = american_civil_war_has_happened
@@ -633,7 +636,13 @@ political_decisions = {
 				upper_house = { ideology = reactionary value = 0.25 }
 			}
 			NOT = { slavery = no_slavery }
-			2209 = { owner = { NOT = { truce_with = THIS } }  }
+			2209 = {
+				owner = {
+					NOT = {
+						truce_with = THIS
+					}
+				}
+			}
 		}
 		
 		effect = {
@@ -1768,6 +1777,9 @@ political_decisions = {
 				tag = USA
 				tag = CSA
 				tag = TEX
+			}
+			2209 = {
+				NOT = { owner = { has_country_flag = new_world_nation } }
 			}
 			NOT = {
 				has_country_flag = ostend_manifesto_published

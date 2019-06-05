@@ -593,13 +593,19 @@ evidence_of_massacre = {
 	icon = 8
 }
 
+evidence_of_massacre2 = {
+	prestige = -0.01
+	badboy = 0.2
+	icon = 8
+}
+
 interment_camps = {
 	global_immigrant_attract = -2
 	non_accepted_pop_consciousness_modifier = 0.4
 	non_accepted_pop_militancy_modifier = 0.3
 	tax_efficiency = -0.2
 	administrative_efficiency_modifier = -0.4
-	badboy = 0.4
+	badboy = 0.2
 	icon = 18
 }
 
