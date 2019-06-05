@@ -3330,6 +3330,18 @@ political_decisions = {
 					exists = no
 				}
 			}
+			any_neighbor_country = {
+				ai = no
+				any_owned_province = {
+					any_core = {
+						OR = {
+							is_mobilised = yes
+							total_amount_of_ships = 1
+						}
+						exists = no
+					}
+				}
+			}
 		}
 	
 		allow = {
