@@ -3321,17 +3321,7 @@ political_decisions = {
 				has_global_flag = cleaning_up_ghosts
 				has_global_flag = disabled_mobilization_fix
 			}
-			any_owned_province = {
-				any_core = {
-					OR = {
-						is_mobilised = yes
-						total_amount_of_ships = 1
-					}
-					exists = no
-				}
-			}
-			any_neighbor_country = {
-				ai = no
+			OR = {
 				any_owned_province = {
 					any_core = {
 						OR = {
@@ -3339,6 +3329,18 @@ political_decisions = {
 							total_amount_of_ships = 1
 						}
 						exists = no
+					}
+				}
+				any_neighbor_country = {
+					ai = no
+					any_owned_province = {
+						any_core = {
+							OR = {
+								is_mobilised = yes
+								total_amount_of_ships = 1
+							}
+							exists = no
+						}
 					}
 				}
 			}
