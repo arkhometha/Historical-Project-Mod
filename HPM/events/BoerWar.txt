@@ -1649,6 +1649,11 @@ country_event = {
 				}
 			}
 		}
+		casus_belli = {
+			target = TRN
+			type = make_puppet
+			months = 12
+		}
 		war = {
 			target = TRN
 			attacker_goal = { casus_belli = make_puppet }
@@ -1716,6 +1721,11 @@ country_event = {
 		}
 		set_country_flag = annex_to_master
 		ENG = {
+			casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 12
+			}
 			war = {
 				target = THIS
 				attacker_goal = { casus_belli = make_puppet }

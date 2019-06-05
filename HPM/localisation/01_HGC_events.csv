@@ -72,7 +72,7 @@ EVTOPT600063A;Call the Caudillos. Mobilize the troops. Rosas will fall.;;;;;;;;;
 EVTOPT600063B;This is a dangerous move. Let the Blancos and Rosas in peace.;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 EVTOPT600063C;Bide our time.;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 EVTNAME600064;Rivera backs down;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
-EVTDESC600064;The Uruguayan President backed down from the war with Rosas, but Rosas knows of the plan. This, combined with previous attrition with him, will surely lead to a war against him.;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+EVTDESC600064;The Uruguayan President backed down from the war with Rosas, but Rosas knows of the plan. This, combined with previous attrition with him, will surely lead to war.;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 EVTOPT600064A;Fight to the last man!;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 EVTOPT600064B;It's time to step down.;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 EVTNAME600065;The Uruguayan Aggression;;;;;;;;;;;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,

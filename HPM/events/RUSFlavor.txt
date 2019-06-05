@@ -2833,6 +2833,11 @@ country_event = {
 		political_reform = mandatory_service
 		set_country_flag = annex_to_master
 		RUS = {
+			casus_belli = {
+				target = FIN
+				type = make_puppet
+				months = 12
+			}
 			war = {
 				target = FIN
 				attacker_goal = { casus_belli = make_puppet }
