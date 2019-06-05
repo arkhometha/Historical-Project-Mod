@@ -621,16 +621,6 @@ province_event = {
 					}
 				}
 			}
-			#No primary/accepted pops in the state
-			state_scope = {
-				any_owned_province = {
-					OR = {
-						any_pop = { is_primary_culture = yes }
-						any_pop = { is_accepted_culture = yes }
-						country_units_in_province = THIS
-					}
-				}
-			}
 		}
 	}
 
@@ -797,24 +787,21 @@ province_event = {
 		modifier = {
 			factor = 1.2
 			state_scope = {
-				is_primary_culture = no
-				is_accepted_culture = no
+				NOT = {
+					any_owned_province = {
+						OR = {
+							is_primary_culture = yes
+							is_accepted_culture = yes
+						}
+					}
+				}
 			}
 		}
 		modifier = {
-			factor = 1.2
+			factor = 1.4
 			state_scope = {
 				is_primary_culture = no
 				is_accepted_culture = no
-				NOT = { any_owned_province = { is_core = THIS } }
-			}
-		}
-		modifier = {
-			factor = 1.2
-			state_scope = {
-				is_primary_culture = no
-				is_accepted_culture = no
-				NOT = { any_owned_province = { is_core = THIS } }
 				NOT = {
 					any_owned_province = {
 						any_pop = {
