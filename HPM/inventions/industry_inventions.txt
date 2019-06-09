@@ -212,7 +212,7 @@ mechanical_saw = {
 		base = 2
 		modifier = {
 			factor = 2
-			hot_blast = 1
+			regenerative_furnaces = 1
 		}
 		modifier = {
 			factor = 2
@@ -307,7 +307,7 @@ mechanized_slaughtering_block = {
 		}
 		modifier = {
 			factor = 2
-			hot_blast = 1
+			regenerative_furnaces = 1
 		}
 	}
 	effect = {
@@ -686,8 +686,9 @@ refrigerator_technology = {
 	}
 }
 #Metulurgy
+# hot_blast
 ammunition_production = {
-	limit = { mechanized_mining = 1 }
+	limit = { hot_blast = 1 }
 	chance = {
 		base = 2
 		modifier = {
@@ -704,7 +705,7 @@ ammunition_production = {
 	}
 }
 small_arms_production = {
-	limit = { mechanized_mining = 1 }
+	limit = { hot_blast = 1 }
 	chance = {
 		base = 2
 		modifier = {
@@ -721,7 +722,7 @@ small_arms_production = {
 	}
 }
 explosives_production = {
-	limit = { mechanized_mining = 1 }
+	limit = { hot_blast = 1 }
 	chance = {
 		base = 2
 		modifier = {
@@ -738,7 +739,7 @@ explosives_production = {
 	}
 }
 artillery_production = {
-	limit = { mechanized_mining = 1 }
+	limit = { hot_blast = 1 }
 	chance = {
 		base = 2
 		modifier = {
@@ -754,9 +755,9 @@ artillery_production = {
 		activate_building = artillery_factory 
 	}
 }
-#puddling
+# mechanized_mining
 pit_coal = {
-	limit = { puddling = 1 }
+	limit = { mechanized_mining = 1 }
 	chance = {
 		base = 2
 		modifier = {
@@ -775,7 +776,7 @@ pit_coal = {
 	}
 }
 coke = {
-	limit = { puddling = 1 }
+	limit = { mechanized_mining = 1 }
 	chance = {
 		base = 2
 		modifier = {
@@ -793,9 +794,9 @@ coke = {
 		}
 	}
 }
-#hot_blast
+#Regenerative Furnaces
 advanced_ore_roasting_processes = {
-	limit = { hot_blast = 1 }
+	limit = { regenerative_furnaces = 1 }
 	chance = {
 		base = 2
 		modifier = {	
@@ -814,7 +815,7 @@ advanced_ore_roasting_processes = {
 	}
 }
 advanced_ore_grinding_processes = {
-	limit = { hot_blast = 1 }
+	limit = { regenerative_furnaces = 1 }
 	chance = {
 		base = 2
 		modifier = {
@@ -833,7 +834,7 @@ advanced_ore_grinding_processes = {
 	}
 }
 advanced_ore_smelting_processes = {
-	limit = { hot_blast = 1 }
+	limit = { regenerative_furnaces = 1 }
 	chance = {
 		base = 2
 		modifier = {
@@ -851,30 +852,35 @@ advanced_ore_smelting_processes = {
 		}
 	}
 }
-
-#bessemer_process
-# bessemer_steel = {
-	# limit = { bessemer_process = 1 }
-	# chance = {
-		# base = 2
-		# modifier = {
-			# factor = 2
-			# compound_steam_engines = 1
-		# }
-		# modifier = {
-			# factor = 2
-			# steel_breech_loaded_artillery = 1
-		# }
-	# }
-	# effect = {
-		# factory_goods_throughput = {
-			# steel = 0.05
-		# }
-	# }
-# }
+# Bessemer Process
+bessemer_steel = {
+	limit = {
+		regenerative_furnaces = 1
+		year = 1860
+	}
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			compound_steam_engines = 1
+		}
+		modifier = {
+			factor = 2
+			steel_breech_loaded_artillery = 1
+		}
+	}
+	effect = {
+		factory_goods_throughput = {
+			steel = 0.05
+		}
+	}
+}
 
 martin_steel = {
-	limit = { bessemer_process = 1 }
+	limit = {
+		regenerative_furnaces = 1
+		year = 1870
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -894,8 +900,8 @@ martin_steel = {
 }
 thomas_steel = {
 	limit = {
-		bessemer_process = 1
-		year = 1870
+		regenerative_furnaces = 1
+		year = 1880
 	}
 	chance = {
 		base = 2
@@ -1131,7 +1137,7 @@ pressure_chambers_for_thorax_surgery = {
 		}
 		modifier = {
 			factor = 2
-			puddling = 1
+			hot_blast = 1
 		}
 	}
 	effect = {
@@ -1275,7 +1281,7 @@ synthetic_dye = {
 		base = 2
 		modifier = {
 			factor = 2
-			hot_blast = 1
+			regenerative_furnaces = 1
 		}
 		modifier = {
 			factor = 2

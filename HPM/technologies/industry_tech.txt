@@ -569,30 +569,24 @@ shift_work = {
 
 
 #metallurgy
-mechanized_mining = {
+
+hot_blast = {
 	area = metallurgy
 	year = 1836
 	cost = 3600
+	
 	activate_building = steel_factory 
 
 	rgo_goods_output = {
 		iron = 0.2
 	}
-	rgo_size = {
-		iron = 0.2
-	}
 	rgo_goods_output = {
-		coal = 0.2
-	}
-	rgo_size = {
 		coal = 0.2
 	}
 	rgo_goods_output = {
 		sulphur = 0.20
 	}
-	rgo_size = {
-		sulphur = 0.2
-	}
+	
 	ai_chance = {
 		factor = 4
 		modifier = {
@@ -684,13 +678,14 @@ mechanized_mining = {
 			}
 		}
 	}
+	
 }
 
-puddling = {
+
+mechanized_mining = {
 	area = metallurgy
 	year = 1840
 	cost = 7200
-	
 	rgo_goods_output = {
 		iron = 0.3
 	}
@@ -698,6 +693,16 @@ puddling = {
 		coal = 0.3
 	}
 	rgo_goods_output = {
+		sulphur = 0.2
+	}
+	
+	rgo_size = {
+		iron = 0.2
+	}
+	rgo_size = {
+		coal = 0.2
+	}
+	rgo_size = {
 		sulphur = 0.2
 	}
 	
@@ -825,7 +830,7 @@ puddling = {
 	}
 }
 
-hot_blast = {
+regenerative_furnaces = {
 	area = metallurgy
 	year = 1850
 	cost = 10800

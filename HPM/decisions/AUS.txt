@@ -110,7 +110,7 @@ political_decisions = {
 		}
 		allow = {
 			iron_railroad = 1
-			puddling = 1
+			hot_blast = 1
 		}
 		effect = {
 			619 = {

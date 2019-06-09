@@ -192,7 +192,7 @@ neocolonialism_doctrine = {
 ###Mining and Metallurgy
 pattinson_process = {
 	limit = {
-		puddling = 1 
+		mechanized_mining = 1 
 	}
 	#news = no
 	chance = {
@@ -227,7 +227,7 @@ pattinson_process = {
 
 parkes_process = {
 	limit = {
-		hot_blast = 1 
+		regenerative_furnaces = 1 
 	}
 	#news = no
 	chance = {
@@ -262,7 +262,7 @@ parkes_process = {
 
 square_set_timbering = {
 	limit = {
-		hot_blast = 1
+		regenerative_furnaces = 1
 		year = 1860
 	}
 	#news = no
@@ -296,7 +296,7 @@ square_set_timbering = {
 
 dynamite = {
 	limit = {
-		hot_blast = 1
+		regenerative_furnaces = 1
 		year = 1865
 	}
 	#news = no

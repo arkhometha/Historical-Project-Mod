@@ -404,7 +404,7 @@ building_station_shipyards = {
 		base = 2
 		modifier = {
 			factor = 2
-			puddling = 1
+			hot_blast = 1
 		}
 		modifier = {
 			factor = 1
@@ -511,7 +511,7 @@ steamer_transports = {
 		}
 		modifier = {
 			factor = 1
-			hot_blast = 1
+			regenerative_furnaces = 1
 		}
 		modifier = {
 			factor = 1
@@ -1207,7 +1207,7 @@ armour_piercing_exploding_projectiles = {
 		}
 		modifier = {
 			factor = 1
-			puddling = 1
+			hot_blast = 1
 		}
 	}
 	effect = {
@@ -1233,7 +1233,7 @@ armoured_turrets = {
 		}
 		modifier = {
 			factor = 2
-			puddling = 1
+			hot_blast = 1
 		}
 	}
 	effect = {

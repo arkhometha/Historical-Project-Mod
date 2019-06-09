@@ -572,11 +572,11 @@ country_event = {
 			}
 			AND = {
 				ENG = {
-					hot_blast = 1
+					regenerative_furnaces = 1
 				}
 				NOT = {
 					EIC = {
-						hot_blast = 1
+						regenerative_furnaces = 1
 					}
 				}
 			}
@@ -718,15 +718,15 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = {
-						hot_blast = 1
+						regenerative_furnaces = 1
 					}
 				}
 				ENG = {
-					hot_blast = 1
+					regenerative_furnaces = 1
 				}
 			}
 			owner = {
-				activate_technology = hot_blast
+				activate_technology = regenerative_furnaces
 			}
 		}
 		random_owned = {
