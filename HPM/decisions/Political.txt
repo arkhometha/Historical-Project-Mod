@@ -415,6 +415,14 @@ political_decisions = {
 		
 		effect = {
 			plurality = -25
+			random = {
+				chance = 50
+				badboy = 1
+			}
+			random = {
+				chance = 50
+				badboy = 1
+			}
 			add_country_modifier = {
 				name = the_terror
 				duration = -1
@@ -439,10 +447,10 @@ political_decisions = {
 				limit = {
 					OR = { type = soldiers type = officers }
 					NOT = { pop_majority_ideology = communist }
-					}
-					militancy = -9 ideology = { factor = 0.35 value = communist }
-					random_list = { 50 = { reduce_pop = 0.9 } 50 = { reduce_pop = 0.85 } }
 				}
+				militancy = -9 ideology = { factor = 0.35 value = communist }
+				random_list = { 50 = { reduce_pop = 0.9 } 50 = { reduce_pop = 0.85 } }
+			}
 			any_pop = { limit = { pop_majority_ideology = communist } reduce_pop = 0.99 }
 			any_pop = { limit = { pop_majority_ideology = socialist } ideology = { factor = 0.5 value = communist } }
 			
@@ -542,6 +550,14 @@ political_decisions = {
 		
 		effect = {
 			plurality = -25
+			random = {
+				chance = 50
+				badboy = 1
+			}
+			random = {
+				chance = 50
+				badboy = 1
+			}
 			add_country_modifier = {
 				name = the_terror
 				duration = -1

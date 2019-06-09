@@ -1196,9 +1196,9 @@ country_event = {
 		clr_country_flag = war_on_rosas
 		ai_chance = {
 			factor = 0.1
-			}
 		}
 	}
+}
 	
 country_event = {
 	id = 600076

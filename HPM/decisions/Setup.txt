@@ -1852,6 +1852,13 @@ political_decisions = {
 			QNG = { country_event = { id = 160009 days = 5 } }
 			ENG = { country_event = { id = 98200 days = 3 } }
 			##########################################################
+			
+			################Uncivs Close their borders###########################
+			any_country = {
+				limit = { civilized = no }
+				political_reform = closed_borders
+			}
+			##########################################################
 	
 			#################Giving Starting Money to Pops and Countries######################
 			any_country = { limit = { exists = yes is_greater_power = yes } capitalists = { money = 1000 } aristocrats = { money = 500 } artisans = { money = 200 } }

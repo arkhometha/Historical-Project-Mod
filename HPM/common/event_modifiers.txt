@@ -464,6 +464,7 @@ totalitarian_system = {
 	global_pop_consciousness_modifier = -0.05
 	global_pop_militancy_modifier = -0.05
 	research_points_modifier = -0.05
+	badboy = 0.01
 	icon = 7
 }
 
@@ -481,6 +482,7 @@ cult_of_personality = {
 }
 
 the_terror = {
+	badboy = 0.01
 	suppression_points_modifier = 2
 	issue_change_speed = -2
 	RGO_output = -0.1

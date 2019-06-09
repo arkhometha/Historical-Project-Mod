@@ -593,7 +593,9 @@ political_decisions = {
 					owner = {
 						NOT = { has_country_modifier = slave_growth }
 						slavery = yes_slavery
-						any_owned_province = { has_pop_type = slaves NOT = { slaves = 0.75 } }
+						any_owned_province = { has_pop_type = slaves
+							NOT = { slaves = 0.75 }
+						}
 					}
 				}
 				

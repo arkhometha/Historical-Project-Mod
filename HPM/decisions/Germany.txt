@@ -929,6 +929,7 @@ political_decisions = {
 luderitz_expedition = {
 	picture = luderitz_expedition
 	potential = {
+		NOT = { invention = the_dark_continent }
 		OR = {
 			primary_culture = north_german
 			primary_culture = south_german
@@ -982,6 +983,7 @@ claim_togoland = {
 	picture = map_togo
 	potential = {
 		capital_scope = { continent = europe }
+		NOT = { invention = the_dark_continent }
 		year = 1850
 		NOT = { tag = RUS }
 		NOT = { tag = TUR }
