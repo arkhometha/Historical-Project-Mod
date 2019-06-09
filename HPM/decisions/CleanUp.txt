@@ -3371,6 +3371,7 @@ political_decisions = {
 	
 		allow = {
 			is_mobilised = no
+			war = no
 		}
 		
 		effect = {

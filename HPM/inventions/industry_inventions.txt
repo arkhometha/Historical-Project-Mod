@@ -853,25 +853,25 @@ advanced_ore_smelting_processes = {
 }
 
 #bessemer_process
-bessemer_steel = {
-	limit = { bessemer_process = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			compound_steam_engines = 1
-		}
-		modifier = {
-			factor = 2
-			steel_breech_loaded_artillery = 1
-		}
-	}
-	effect = {
-		factory_goods_throughput = {
-			steel = 0.05
-		}
-	}
-}
+# bessemer_steel = {
+	# limit = { bessemer_process = 1 }
+	# chance = {
+		# base = 2
+		# modifier = {
+			# factor = 2
+			# compound_steam_engines = 1
+		# }
+		# modifier = {
+			# factor = 2
+			# steel_breech_loaded_artillery = 1
+		# }
+	# }
+	# effect = {
+		# factory_goods_throughput = {
+			# steel = 0.05
+		# }
+	# }
+# }
 
 martin_steel = {
 	limit = { bessemer_process = 1 }
@@ -888,12 +888,15 @@ martin_steel = {
 	}
 	effect = {
 		factory_goods_output = {
-			steel = 0.02
+			steel = 0.05
 		}
 	}
 }
 thomas_steel = {
-	limit = { bessemer_process = 1 }
+	limit = {
+		bessemer_process = 1
+		year = 1870
+	}
 	chance = {
 		base = 2
 		modifier = {
@@ -907,7 +910,7 @@ thomas_steel = {
 	}
 	effect = {
 		factory_goods_output = {
-			steel = 0.02
+			steel = 0.05
 		}
 	}
 }

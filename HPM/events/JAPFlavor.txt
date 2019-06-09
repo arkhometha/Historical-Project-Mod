@@ -247,7 +247,9 @@ province_event = {
 			has_country_flag = sonno_joi
 			war = no
 		}
-		owner = { any_neighbor_country = { primary_culture = japanese } }
+		owner = {
+			any_neighbor_country = { tag = JAP }
+		}
 		TKG = { exists = yes }
 		is_core = TKG
 		controlled_by = THIS
@@ -339,6 +341,14 @@ province_event = {
 			limit = { is_greater_power = yes }
 			relation = { who = TKG value = -20 }
 		}
+		
+		remove_province_modifier = western_presence
+		remove_province_modifier = foreign_smugglers
+		remove_province_modifier = foreign_trading_post
+		remove_province_modifier = local_opium_habit
+		remove_province_modifier = european_military_mission
+		remove_province_modifier = extraterritoriality_granted
+		remove_province_modifier = legation_quarter		
 	}
 }
 
@@ -774,6 +784,7 @@ country_event = {
 			government = hms_government
 		}
 		OR = {
+			year = 1870
 			has_country_modifier = kobu_gattai
 			has_country_flag = sakuradamon_incident
 			has_global_flag = order_to_expel_barbarians

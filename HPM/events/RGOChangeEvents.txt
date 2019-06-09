@@ -6209,6 +6209,20 @@ country_event = {
 		name = "EVTOPTA199039" #Historical Option
 		
 		1366 = { trade_goods = tropical_wood }
+		random_owned = {
+			limit = {
+				province_id = 1367
+				NOT = { trade_goods = rubber }
+			}
+			trade_goods = tropical_wood
+		}
+		random_owned = {
+			limit = {
+				province_id = 1364
+				NOT = { trade_goods = rubber }
+			}
+			trade_goods = tropical_wood
+		}
 		
 		ai_chance = { factor = 80 }
 	}
@@ -6217,6 +6231,20 @@ country_event = {
 		name = "EVTOPTB199068" #Tea Option
 		
 		1366 = { trade_goods = tea }
+		random_owned = {
+			limit = {
+				province_id = 1367
+				NOT = { trade_goods = rubber }
+			}
+			trade_goods = tea
+		}
+		random_owned = {
+			limit = {
+				province_id = 1364
+				NOT = { trade_goods = rubber }
+			}
+			trade_goods = tropical_wood
+		}
 		
 		ai_chance = {
 			factor = 10
@@ -6245,6 +6273,21 @@ country_event = {
 		
 		1366 = { trade_goods = tobacco }
 		
+		random_owned = {
+			limit = {
+				province_id = 1367
+				NOT = { trade_goods = rubber }
+			}
+			trade_goods = tobacco
+		}
+		random_owned = {
+			limit = {
+				province_id = 1364
+				NOT = { trade_goods = rubber }
+			}
+			trade_goods = tropical_wood
+		}
+		
 		ai_chance = {
 			factor = 10
 			modifier = {
@@ -6270,6 +6313,21 @@ country_event = {
 	option = {
 		name = "EVTOPTD199038" #Coffee
 		1366 = { trade_goods = coffee }
+		
+		random_owned = {
+			limit = {
+				province_id = 1367
+				NOT = { trade_goods = rubber }
+			}
+			trade_goods = coffee
+		}
+		random_owned = {
+			limit = {
+				province_id = 1364
+				NOT = { trade_goods = rubber }
+			}
+			trade_goods = tropical_wood
+		}
 		
 		ai_chance = {
 			factor = 10
