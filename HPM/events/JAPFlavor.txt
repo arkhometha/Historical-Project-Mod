@@ -784,7 +784,7 @@ country_event = {
 			government = hms_government
 		}
 		OR = {
-			year = 1870
+			year = 1890
 			has_country_modifier = kobu_gattai
 			has_country_flag = sakuradamon_incident
 			has_global_flag = order_to_expel_barbarians

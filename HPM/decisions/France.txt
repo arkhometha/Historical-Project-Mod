@@ -21,7 +21,7 @@ political_decisions = {
 		}
 	
 		allow = {
-			invention = bessemer_steel
+			invention = martin_steel
 			USA = { slavery = no_slavery }
 		}
 	

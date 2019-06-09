@@ -296,7 +296,8 @@ square_set_timbering = {
 
 electrolytic_refining = {
 	limit = {
-		dynamite = 1
+		regenerative_furnaces = 1
+		year = 1870
 	}
 	#news = no
 	chance = {
@@ -502,7 +503,7 @@ cyanide_milling = {
 
 trinitrotoluene = {
 	limit = {
-		advanced_metallurgy = 1
+		dynamite = 1
 		year = 1895
 	}
 	#news = no

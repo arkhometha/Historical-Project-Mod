@@ -305,7 +305,7 @@ political_decisions = {
 			OR = {
 				war_with = ARG
 				war_with = ARC
-				}
+			}
 			NOT = { has_country_modifier = small_country_draft }
 		}
 		
@@ -421,9 +421,24 @@ political_decisions = {
 				}
 			}
 			OR = {
-				ENT = { exists = yes is_vassal = no ai = yes in_sphere = THIS }
-				CRT = { exists = yes is_vassal = no ai = yes in_sphere = THIS }
-				SBA = { exists = yes is_vassal = no ai = yes in_sphere = THIS }
+				ENT = {
+					exists = yes
+					is_vassal = no
+					ai = yes
+					in_sphere = THIS
+				}
+				CRT = {
+					exists = yes
+					is_vassal = no
+					ai = yes
+					in_sphere = THIS
+				}
+				SBA = {
+					exists = yes
+					is_vassal = no
+					ai = yes
+					in_sphere = THIS
+				}
 			}
 		}
 		
@@ -566,15 +581,19 @@ political_decisions = {
 		potential = {
 			tag = ENT
 			NOT = { has_country_flag = corrientes_conquered }
-			NOT = { exists = CRT }
 			OR = {
 				ARC = { owns = 2356 }
 				ENT = { owns = 2356 }
+			}
+			CRT = {
+				exists = no
+				is_mobilised = no
 			}
 		}
 		
 		allow = {
 			war = no
+			is_mobilised = no
 		}
 
 		effect = {

@@ -338,10 +338,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { year = 1860 }
-		ARC = {
-			exists = yes
-			neighbour = THIS
-		}
+		exists = ARC
 		tag = URU
 		election = no
 		ruling_party_ideology = liberal
@@ -354,6 +351,7 @@ country_event = {
 		
 	mean_time_to_happen = { months = 6 }
 
+	immediate = { ARC = { release_vassal = CRT } }
 	
 	option = {
 		name = "EVTOPT600063A"      #TO WAR
@@ -375,7 +373,6 @@ country_event = {
 		CRT = { set_country_flag = annex_to_master }
 		ARC = {
 			country_event = 600065
-			release_vassal = CRT
 			casus_belli = {
 				target = CRT
 				type = make_puppet
@@ -474,7 +471,11 @@ country_event = {
 					factor = 1
 				}
 			}
-			casus_belli = { target = ARC type = humiliate months = 36 }
+			casus_belli = {
+				target = ARC
+				type = humiliate
+				months = 36
+			}
 			ai_chance = {
 				factor = 0.4
 			}
