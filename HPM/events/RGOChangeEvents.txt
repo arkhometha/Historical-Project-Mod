@@ -1838,6 +1838,11 @@ province_event = {
 					province_id = 1689 #Melilla
 					province_id = 1688 #Ajdir
 					province_id = 1681 #Wazzan
+					##France
+					province_id = 434
+					province_id = 418
+					province_id = 428
+					province_id = 411
 				}
 				year = 1882
 			}

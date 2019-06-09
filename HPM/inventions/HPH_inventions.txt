@@ -294,7 +294,7 @@ square_set_timbering = {
 	}
 }
 
-dynamite = {
+dynamite_invention = {
 	limit = {
 		regenerative_furnaces = 1
 		year = 1865
@@ -329,15 +329,12 @@ dynamite = {
 	}
 	effect = {
 		rgo_goods_output = { coal = 0.2 }
-		rgo_size = { coal = 0.2 }
-		rgo_size = { iron = 0.2 }
-		rgo_size = { sulphur = 0.2 }
 	}
 }
 
 electrolytic_refining = {
 	limit = {
-		bessemer_process = 1
+		dynamite = 1
 	}
 	#news = no
 	chance = {
@@ -370,7 +367,7 @@ electrolytic_refining = {
 
 deep_mining = {
 	limit = {
-		bessemer_process = 1
+		dynamite = 1
 	}
 	#news = no
 	chance = {
@@ -403,7 +400,7 @@ deep_mining = {
 
 percussion_drill = {
 	limit = {
-		bessemer_process = 1
+		dynamite = 1
 	}
 	#news = no
 	chance = {
@@ -436,7 +433,7 @@ percussion_drill = {
 
 friction_hoist = {
 	limit = {
-		bessemer_process = 1
+		dynamite = 1
 		year = 1875
 	}
 	#news = no
@@ -470,7 +467,7 @@ friction_hoist = {
 
 lixiviation_mills = {
 	limit = {
-		bessemer_process = 1
+		dynamite = 1
 		year = 1880
 	}
 	#news = no
@@ -504,7 +501,7 @@ lixiviation_mills = {
 
 cyanide_milling = {
 	limit = {
-		bessemer_process = 1
+		dynamite = 1
 		year = 1885
 	}
 	#news = no

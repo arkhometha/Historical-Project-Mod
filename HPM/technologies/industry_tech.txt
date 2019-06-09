@@ -958,7 +958,7 @@ regenerative_furnaces = {
 		}
 	}
 }
-bessemer_process = {
+dynamite = {
 	area = metallurgy
 	year = 1870
 	cost = 14400
@@ -972,9 +972,10 @@ bessemer_process = {
 	rgo_goods_output = {
 		sulphur = 0.2
 	}
-	factory_goods_output = {
-		steel = 0.05
-	}
+	
+	rgo_size = { coal = 0.2 }
+	rgo_size = { iron = 0.2 }
+	rgo_size = { sulphur = 0.2 }
 	
 	ai_chance = {
 		factor = 2

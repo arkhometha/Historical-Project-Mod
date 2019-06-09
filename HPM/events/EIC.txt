@@ -582,11 +582,11 @@ country_event = {
 			}
 			AND = {
 				ENG = {
-					bessemer_process = 1
+					dynamite = 1
 				}
 				NOT = {
 					EIC = {
-						bessemer_process = 1
+						dynamite = 1
 					}
 				}
 			}
@@ -733,15 +733,15 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = {
-						bessemer_process = 1
+						dynamite = 1
 					}
 				}
 				ENG = {
-					bessemer_process = 1
+					dynamite = 1
 				}
 			}
 			owner = {
-				activate_technology = bessemer_process
+				activate_technology = dynamite
 			}
 		}
 		random_owned = {

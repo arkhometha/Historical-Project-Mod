@@ -75,7 +75,6 @@ market_structure = 1
 romanticism = 1
 interchangeable_parts = 1
 high_pressure_steam_engine = 1
-#hot_blast = 1
 
 # Inventions
 
@@ -218,7 +217,6 @@ upper_house = {
 	mechanical_production = 1
 	interchangeable_parts = 1
 	semi_automatization = 1
-	hot_blast = 1
 	regenerative_furnaces = 1
 	hot_blast = 1
 	experimental_railroad = 1

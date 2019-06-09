@@ -529,7 +529,7 @@ oil_pumping_machinery = {
 		}
 		modifier = {
 			factor = 2
-			bessemer_process = 1
+			dynamite = 1
 		}
 	}
 	effect = {
@@ -612,7 +612,7 @@ fordism = {
 #		base = 3
 #		modifier = {
 #			factor = 2
-#			bessemer_process = 1
+#			dynamite = 1
 #		}
 #		modifier = {
 #			factor = 2
@@ -871,7 +871,7 @@ bessemer_steel = {
 	}
 	effect = {
 		factory_goods_throughput = {
-			steel = 0.05
+			steel = 0.1
 		}
 	}
 }

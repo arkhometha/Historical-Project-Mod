@@ -119,7 +119,7 @@ stiff_plastic_brickmaking_machine_desc;In the machines used in the stiff-plastic
 hot_blast;Hot Blast Process;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 regenerative_furnaces;Regenerative Furnaces;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 electric_furnace;Electric Arc Furnace;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
-bessemer_process;Bessemer Process;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+dynamite;Bessemer Process;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 advanced_metallurgy;Open Hearth Furnace;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 pneumatic_and_hydraulics;Pneumatic and Hydraulics;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 jiggs;Jigs;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -21,7 +21,7 @@ political_decisions = {
 		}
 	
 		allow = {
-			bessemer_process = 1
+			invention = bessemer_steel
 			USA = { slavery = no_slavery }
 		}
 	
@@ -293,7 +293,7 @@ political_decisions = {
 		
 		allow = {
 			war = no
-			bessemer_process = 1
+			invention = bessemer_steel
 			OR = {
 				money = 30000
 				ai = yes
@@ -836,32 +836,6 @@ political_decisions = {
 			factor = 1
 			modifier = { factor = 0 badboy = 0.8 }
 		}
-	}
-	
-	french_iron_mines = {
-		picture = normandie_mine
-		potential = {
-			owns = 434
-			bessemer_process = 1
-			NOT = { has_country_flag = french_mines_placed }
-		}
-		
-		allow = {
-			war = no
-			advanced_metallurgy = 1
-			money = 20100
-		}
-		
-		effect = {
-			set_country_flag = french_mines_placed
-			money = -20000
-			434 = { trade_goods = iron }
-			418 = { trade_goods = iron }
-			428 = { trade_goods = iron }
-			411 = { trade_goods = iron }
-		}
-		
-		ai_will_do = { factor = 1 }
 	}
 	
 	#The Devil's Island
