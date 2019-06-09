@@ -768,6 +768,26 @@ pit_coal = {
 			factor = 2
 			early_railroad = 1
 		}
+		modifier = {
+			factor = -25
+			any_owned_province = {
+				controlled_by = THIS
+				trade_goods = coal
+				unemployment_by_type = { value = 0.01 type = labourers }
+			}
+			any_neighbor_country = {
+				any_owned_province = {
+					trade_goods = coal
+					unemployment_by_type = { value = 0.01 type = labourers }
+				} 
+			}
+			any_greater_power = {
+				any_owned_province = {
+					trade_goods = coal
+					unemployment_by_type = { value = 0.01 type = labourers }
+				}
+			}
+		}
 	}
 	effect = {
 		rgo_goods_output = {
@@ -786,6 +806,26 @@ coke = {
 		modifier = {
 			factor = 2
 			early_railroad = 1
+		}
+		modifier = {
+			factor = -25
+			any_owned_province = {
+				controlled_by = THIS
+				trade_goods = coal
+				unemployment_by_type = { value = 0.01 type = labourers }
+			}
+			any_neighbor_country = {
+				any_owned_province = {
+					trade_goods = coal
+					unemployment_by_type = { value = 0.01 type = labourers }
+				} 
+			}
+			any_greater_power = {
+				any_owned_province = {
+					trade_goods = coal
+					unemployment_by_type = { value = 0.01 type = labourers }
+				}
+			}
 		}
 	}
 	effect = {
@@ -807,6 +847,26 @@ advanced_ore_roasting_processes = {
 			factor = 2
 			inorganic_chemistry = 1
 		}
+		modifier = {
+			factor = -25
+			any_owned_province = {
+				controlled_by = THIS
+				trade_goods = iron
+				unemployment_by_type = { value = 0.01 type = labourers }
+			}
+			any_neighbor_country = {
+				any_owned_province = {
+					trade_goods = iron
+					unemployment_by_type = { value = 0.01 type = labourers }
+				} 
+			}
+			any_greater_power = {
+				any_owned_province = {
+					trade_goods = iron
+					unemployment_by_type = { value = 0.01 type = labourers }
+				}
+			}
+		}
 	}
 	effect = {
 		rgo_goods_output = {
@@ -826,6 +886,26 @@ advanced_ore_grinding_processes = {
 			factor = 2
 			organized_factories = 1
 		}
+		modifier = {
+			factor = -25
+			any_owned_province = {
+				controlled_by = THIS
+				trade_goods = iron
+				unemployment_by_type = { value = 0.01 type = labourers }
+			}
+			any_neighbor_country = {
+				any_owned_province = {
+					trade_goods = iron
+					unemployment_by_type = { value = 0.01 type = labourers }
+				} 
+			}
+			any_greater_power = {
+				any_owned_province = {
+					trade_goods = iron
+					unemployment_by_type = { value = 0.01 type = labourers }
+				}
+			}
+		}
 	}
 	effect = {
 		rgo_goods_output = {
@@ -844,6 +924,26 @@ advanced_ore_smelting_processes = {
 		modifier = {
 			factor = 2
 			iron_railroad = 1
+		}
+		modifier = {
+			factor = -25
+			any_owned_province = {
+				controlled_by = THIS
+				trade_goods = iron
+				unemployment_by_type = { value = 0.01 type = labourers }
+			}
+			any_neighbor_country = {
+				any_owned_province = {
+					trade_goods = iron
+					unemployment_by_type = { value = 0.01 type = labourers }
+				} 
+			}
+			any_greater_power = {
+				any_owned_province = {
+					trade_goods = iron
+					unemployment_by_type = { value = 0.01 type = labourers }
+				}
+			}
 		}
 	}
 	effect = {
