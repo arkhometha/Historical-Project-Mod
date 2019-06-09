@@ -418,7 +418,13 @@ country_event = {
 	}
 		option = {
 			name = "EVTOPT600063B"		#back down from war
-			random_country = { limit = { exists = yes tag = CRT } country_event = 600064 }
+			random_country = {
+				limit = {
+					exists = yes
+					tag = CRT
+				}
+				country_event = 600064
+			}
 			clr_country_flag = corrientes_is_ready_for_war
 			clr_country_flag = rivera_is_true_president
 			clr_country_flag = oribe_is_true_president
