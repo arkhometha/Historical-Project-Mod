@@ -8438,7 +8438,7 @@ install_fascism_make_puppet = {
 }
 
 install_communism_make_puppet = {
-	sprite_index = 17
+	sprite_index = 12
 	is_triggered_only = yes
 	constructing_cb = no
 	months = 12
@@ -8479,7 +8479,7 @@ install_communism_make_puppet = {
 }
 
 install_democracy_make_puppet = {
-	sprite_index = 17
+	sprite_index = 19
 	is_triggered_only = yes
 	constructing_cb = no
 	months = 12

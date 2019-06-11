@@ -6716,6 +6716,7 @@ political_decisions = {
 				AND = {
 					capital_scope = { continent = africa }
 					civilized = yes
+					revolution_n_counterrevolution = 1
 				}
 				AND = {
 					owns = 1835

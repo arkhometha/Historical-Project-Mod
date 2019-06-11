@@ -134,7 +134,7 @@
 		size = 10000
 	}
 	
-	artisans = {
+	soldiers = {
 		culture = sephardic
 		religion = jewish
 		size = 1100
@@ -1596,13 +1596,13 @@
 	soldiers = {
 		culture = greek
 		religion = orthodox
-		size = 500
+		size = 200
 	}
 
 	soldiers = {
 		culture = south_german
 		religion = catholic
-		size = 600
+		size = 1000
 	}
 
 	farmers = {
@@ -1740,6 +1740,37 @@
 		culture = greek
 		religion = orthodox
 		size = 8400
+	}
+	
+	### Catholics circa 2000
+	aristocrats = {
+		culture = north_italian
+		religion = catholic
+		size = 100
+	}
+	
+	clergymen = {
+		culture = north_italian
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = north_italian
+		religion = catholic
+		size = 600
+	}
+	
+	soldiers = {
+		culture = north_italian
+		religion = catholic
+		size = 200
+	}
+
+	farmers = {
+		culture = north_italian
+		religion = catholic
+		size = 1000
 	}
 }
 #under the rule of Ottoman Empire in 1836

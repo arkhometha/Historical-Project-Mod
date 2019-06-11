@@ -2240,7 +2240,7 @@ country_event = {
 	}
 }
 
-#Event to return persian lands that were conquered during the Bedr Khan rebellion and clean cores
+#Event to return persian lands that were conquered during the Bedr Khan rebellion and clean cores / The Treaty of Erzurum of $YEAR$
 country_event = {
 	id = 986505
 	title = "EVTNAME986505"
@@ -2248,24 +2248,90 @@ country_event = {
 	picture = "young_turks"
 
 	trigger = {
-		tag = TUR
-		has_country_flag = return_persian_lands_on_finish
+		OR = { 
+			tag = PER
+			tag = TUR
+		}
+		OR ={
+			PER = { ai = yes }
+			TUR = { ai = yes }
+		}
 		NOT =  {
+			exists = RDL
+			exists = MKN
+			exists = BNB
+			exists = BTL
 			exists = BHT
+			exists = BDN
 			exists = KDS
+			has_global_flag = treaty_of_erzurum
 			year = 1880
 		}
-		owns = 2414
 		war = no
 	}
 	
 	fire_only_once = yes
-		
-	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		set_global_flag = treaty_of_erzurum
+	}
+	
+	mean_time_to_happen = { months = 6 }
 	
 	option = {
 		name = "EVT986505OPTA"
-		clr_country_flag = return_persian_lands_on_finish
+		random_owned = {
+			limit = { owner = { tag = PER } }
+			owner = { relation = { who = TUR value = 50 } }
+		}
+		random_owned = {
+			limit = { owner = { tag = TUR } }
+			owner = { relation = { who = PER value = 50 } }
+		}
+		PER = {
+			clr_country_flag = return_persian_lands_on_finish
+			any_owned = {
+				limit = {
+					is_core = TUR
+					NOT = { is_core = PER }
+				}
+				secede_province = TUR
+			}
+			all_core = { 
+				limit = { is_core = PER }
+				remove_core = TUR 
+			}
+			relation = {
+				who = ENG
+				value = 50
+			}
+			relation = {
+				who = RUS
+				value = 50
+			}
+		}
+		TUR = {
+			clr_country_flag = return_persian_lands_on_finish
+			any_owned = {
+				limit = {
+					is_core = PER
+					NOT = { is_core = TUR }
+				}
+				secede_province = PER
+			}
+			all_core = { 
+				limit = { is_core = TUR } 
+				remove_core = PER
+			}
+			relation = {
+				who = ENG
+				value = 50
+			}
+			relation = {
+				who = RUS
+				value = 50
+			}
+		}
 		any_owned = {
 			limit = {
 				OR = {
@@ -2288,15 +2354,26 @@ country_event = {
 				consciousness = -3
 			}
 		}
-			
-		any_owned = {
+		
+		random_owned = {
 			limit = {
+				owner = { tag = TUR }
 				OR = {
 					is_core = RDL
 					is_core = MKN
 				}
 			}
-			secede_province = PER
+			owner = {
+				any_owned = {
+					limit = {
+						OR = {
+							is_core = RDL
+							is_core = MKN
+						}
+					}
+					secede_province = PER
+				}
+			}
 		}
 		
 		BTL = { all_core = { remove_core = BTL } }
@@ -2305,7 +2382,91 @@ country_event = {
 		BNB = { all_core = { remove_core = BNB } }
 		SRN = { all_core = { remove_core = SRN } }
 		RDL = { all_core = { remove_core = RDL } }
+		MKN = { all_core = { remove_core = MKN } }
+		
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "EVT110084OPTB" #We will resolve the issue our own way!
+		badboy = 3
+		TUR = {
+			clr_country_flag = return_persian_lands_on_finish
+			add_casus_belli = {
+				target = PER
+				type = acquire_all_cores
+				months = 12
+			}
+		}
+		PER = {
+			clr_country_flag = return_persian_lands_on_finish
+			add_casus_belli = {
+				target = TUR
+				type = acquire_all_cores
+				months = 12
+			}
+		}
+		ENG = { diplomatic_influence = { who = THIS value = -100 } }
+		RUS = { diplomatic_influence = { who = THIS value = -100 } }
+		
+		random_owned = {
+			limit = { owner = { tag = PER } }
+			owner = {
+				relation = { who = TUR value = -200 }
+			}
+		}
+		random_owned = {
+			limit = { owner = { tag = TUR } }
+			owner = {
+				relation = { who = PER value = -200 }
+			}
+		}
+		
+		random_owned = {
+			limit = { 
+				owner = {
+					tag = PER
+					any_core = { owned_by = TUR }
+				}
+			}
+			owner = {
+				war = {
+					target = TUR
+					attacker_goal = {
+						casus_belli = acquire_all_cores
+						country = PER
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = { 
+				owner = {
+					tag = TUR
+					any_core = { owned_by = PER }
+				}
+			}
+			owner = {
+				war = {
+					target = PER
+					attacker_goal = {
+						casus_belli = acquire_all_cores
+						country = TUR
+					}
+				}
+			}
+		}
+		
+		
+		BTL = { all_core = { remove_core = BTL } }
+		BDN = { all_core = { remove_core = BDN } }
+		BHT = { all_core = { remove_core = BHT } }
+		BNB = { all_core = { remove_core = BNB } }
+		SRN = { all_core = { remove_core = SRN } }
+		RDL = { all_core = { remove_core = RDL } }
 		MKN = { all_core = { remove_core = MKN } }	
+		
+		ai_chance = { factor = 0 }
 	}
 }
 

@@ -1641,7 +1641,12 @@ political_decisions = {
 			}
 			NOT = { is_disarmed = yes }
 			military_score = 100
+			total_amount_of_ships = 10
 			is_vassal = no
+			OR = {
+				naval_plans = 1
+				ai = yes
+			}
 			OR = {
 				high_sea_battle_fleet = 1
 				revolution_n_counterrevolution = 1

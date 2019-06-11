@@ -4033,7 +4033,7 @@ country_event = {
 		end_military_access = FROM
 		leave_alliance = FROM
 		casus_belli = { target = FROM type = install_fascism_make_puppet months = 24 }
-			
+
 		ai_chance = { factor = 0.95 }
 	}
 		

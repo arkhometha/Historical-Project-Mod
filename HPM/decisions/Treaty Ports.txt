@@ -219,7 +219,13 @@ political_decisions = {
 		picture = port_arthur
 		potential = {
 			has_country_modifier = negotiating_treaty
-			1481 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
+			1481 = {
+				owner = {
+					has_country_modifier = negotiating_unequal_treaty
+					civilized = no
+					truce_with = THIS
+				}
+			}
 			NOT = { has_country_modifier = chinese_treaty_port }
 		}
 		

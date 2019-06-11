@@ -588,7 +588,10 @@ country_event = {
 
 	option = {
 		name = "EVT90909OPTA"
-		1481 = { secede_province = FROM add_province_modifier = { name = chinese_treaty_port duration = -1 } }
+		1481 = {
+			secede_province = FROM
+			add_province_modifier = { name = chinese_treaty_port duration = -1 }
+		}
 		any_pop = { limit = { is_culture_group = east_asian } militancy = 1 }
 		prestige_factor = -0.1
 		ai_chance = { factor = 0.8 }

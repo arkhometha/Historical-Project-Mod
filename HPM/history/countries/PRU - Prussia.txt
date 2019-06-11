@@ -102,6 +102,7 @@ foreign_investment = {
 	MEC = 7500
 	SAX = 7500
 	HAN = 10000
+	SIC = 2000
 }
 
 oob = "PRU_oob.txt"
