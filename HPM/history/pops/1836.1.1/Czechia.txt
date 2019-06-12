@@ -2,10 +2,22 @@
 #under the rule of Austria in 1836  
 #Prague (1726800/425200 POPS)
 625 = {
+	aristocrats = {
+		culture = czech
+		religion = catholic
+		size = 1500
+	}
+
+	capitalists = {
+		culture = czech
+		religion = catholic
+		size = 50 
+	}
+	
 	bureaucrats = {
 		culture = czech
 		religion = catholic
-		size = 450 
+		size = 400
 	}
 
 	officers = {
@@ -23,13 +35,19 @@
 	artisans = {
 		culture = czech
 		religion = catholic
-		size = 13100
+		size = 11100
+	}
+	
+	craftsmen = {
+		culture = czech
+		religion = catholic
+		size = 300
 	}
 	
 	artisans = {
 		culture = czech
 		religion = catholic
-		size = 8000
+		size = 8200
 	}
 
 	soldiers = {
@@ -89,7 +107,13 @@
 	artisans = {
 		culture = south_german
 		religion = catholic
-		size = 9000
+		size = 8700
+	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 300
 	}
 
 	soldiers = {
@@ -121,11 +145,17 @@
 		religion = jewish
 		size = 100
 	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 200
+	}
 
 	artisans = {
 		culture = ashkenazi
 		religion = jewish
-		size = 3000
+		size = 2800
 	}
 
 	soldiers = {
@@ -151,7 +181,13 @@
 	artisans = {
 		culture = czech
 		religion = catholic
-		size = 4550
+		size = 4450
+	}
+	
+	craftsmen = {
+		culture = czech
+		religion = catholic
+		size = 100
 	}
 
 	soldiers = {
@@ -187,7 +223,13 @@
 	artisans = {
 		culture = south_german
 		religion = catholic
-		size = 1000
+		size = 900
+	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 100
 	}
 
 	soldiers = {
@@ -211,7 +253,13 @@
 	artisans = {
 		culture = ashkenazi
 		religion = jewish
-		size = 1500
+		size = 1400
+	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
 	}
 
 	soldiers = {
@@ -237,7 +285,7 @@
 	artisans = {
 		culture = czech
 		religion = catholic
-		size = 450
+		size = 350
 	}
 
 	soldiers = {
@@ -245,11 +293,23 @@
 		religion = catholic
 		size = 250
 	}
+	
+	craftsmen = {
+		culture = czech
+		religion = catholic
+		size = 100
+	}
+	
+	farmers = {
+		culture = czech
+		religion = catholic
+		size = 5800 
+	}
 
 	serfs = {
 		culture = czech
 		religion = catholic
-		size = 15800 
+		size = 10000 
 	}
 
 	aristocrats = {
@@ -275,11 +335,17 @@
 		religion = catholic
 		size = 1250
 	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 100
+	}
 
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 114950 
+		size = 114850 
 	}
 	
 	aristocrats = {
@@ -311,11 +377,17 @@
 		religion = jewish
 		size = 100
 	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
 
 	farmers = {
 		culture = ashkenazi
 		religion = jewish
-		size = 925  
+		size = 825  
 	}
 }
 #Aussig (317600/79400 POPS)
@@ -337,11 +409,23 @@
 		religion = catholic
 		size = 100
 	}
+	
+	craftsmen = {
+		culture = czech
+		religion = catholic
+		size = 100
+	}
+	
+	farmers = {
+		culture = czech
+		religion = catholic
+		size = 1000
+	}
 
 	serfs = {
 		culture = czech
 		religion = catholic
-		size = 8325
+		size = 7225
 	}
 
 	aristocrats = {
@@ -359,7 +443,13 @@
 	artisans = {
 		culture = south_german
 		religion = catholic
-		size = 3350
+		size = 3250
+	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 100
 	}
 
 	soldiers = {
@@ -394,15 +484,27 @@
 		size = 200
 	}
 	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	
 	farmers = {
 		culture = ashkenazi
 		religion = jewish
-		size = 200
+		size = 100
 	}
 	########
 }
 #Pilsen (490400/122600 POPS)
 629 = {
+	capitalists = {
+		culture = czech
+		religion = catholic
+		size = 50
+	}
+
 	clergymen = {
 		culture = czech
 		religion = catholic
@@ -412,7 +514,13 @@
 	artisans = {
 		culture = czech
 		religion = catholic
-		size = 3000
+		size = 2900
+	}
+	
+	craftsmen = {
+		culture = czech
+		religion = catholic
+		size = 100
 	}
 
 	soldiers = {
@@ -454,7 +562,13 @@
 	artisans = {
 		culture = south_german
 		religion = catholic
-		size = 6250
+		size = 6150
+	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 100
 	}
 
 	soldiers = {
@@ -486,15 +600,27 @@
 		religion = jewish
 		size = 100
 	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
 
 	farmers = {
 		culture = ashkenazi
 		religion = jewish
-		size = 1925  
+		size = 1825  
 	}
 }
 #Budejovice (405600/101400 POPS)
 630 = {
+	aristocrats = {
+		culture = czech
+		religion = catholic
+		size = 1000
+	}
+	
 	clergymen = {
 		culture = czech
 		religion = catholic
@@ -504,9 +630,15 @@
 	artisans = {
 		culture = czech
 		religion = catholic
-		size = 2650
+		size = 1250
 	}
-
+	
+	craftsmen = {
+		culture = czech
+		religion = catholic
+		size = 300
+	}
+	
 	soldiers = {
 		culture = czech
 		religion = catholic
@@ -552,7 +684,13 @@
 	artisans = {
 		culture = south_german
 		religion = catholic
-		size = 5600
+		size = 5500
+	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 100
 	}
 
 	soldiers = {
@@ -584,11 +722,17 @@
 		religion = jewish
 		size = 100
 	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
 
 	farmers = {
 		culture = ashkenazi
 		religion = jewish
-		size = 1425  
+		size = 1325  
 	}
 }
 #Moravia Region (1476000) 
@@ -616,7 +760,13 @@
 	artisans = {
 		culture = czech
 		religion = catholic
-		size = 17550
+		size = 17450
+	}
+	
+	craftsmen = {
+		culture = czech
+		religion = catholic
+		size = 100
 	}
 
 	soldiers = {
@@ -670,13 +820,19 @@
 	artisans = {
 		culture = south_german
 		religion = catholic
-		size = 4000 
+		size = 3900 
 	}
 
 	soldiers = {
 		culture = south_german
 		religion = catholic
 		size = 700
+	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 100
 	}
 
 	farmers = {
@@ -694,7 +850,13 @@
 	artisans = {
 		culture = ashkenazi
 		religion = jewish
-		size = 2000 
+		size = 1900
+	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
 	}
 
 	soldiers = {

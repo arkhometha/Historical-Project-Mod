@@ -1814,10 +1814,6 @@ political_decisions = {
 				add_core = CGO 
 			}
 			
-			1981 = {
-				add_core = CGO 
-			}
-			
 			2624 = {
 				add_core = CGO 
 			}

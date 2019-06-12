@@ -3171,7 +3171,6 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA199039" #Historical Option
-		1981 = { trade_goods = rubber }
 		1980 = { trade_goods = rubber }
 		1977 = { trade_goods = coffee }  #Brazzaville
 		1978 = { trade_goods = tropical_wood }
@@ -3182,7 +3181,6 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC199039" #Coffee Option
-		1981 = { trade_goods = rubber }
 		1980 = { trade_goods = tropical_wood }
 		1977 = { trade_goods = coffee }  #Brazzaville
 		1978 = { trade_goods = coffee }
@@ -3212,7 +3210,6 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC199048" #Rubber
-		1981 = { trade_goods = rubber }
 		1980 = { trade_goods = rubber }
 		1977 = { trade_goods = tropical_wood }  #Brazzaville
 		1978 = { trade_goods = tropical_wood }

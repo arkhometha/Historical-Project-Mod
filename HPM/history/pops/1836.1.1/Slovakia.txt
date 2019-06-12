@@ -5,13 +5,13 @@
 	bureaucrats = {
 		culture = slovak
 		religion = catholic
-		size = 125 
+		size = 100
 	}
 
-	bureaucrats = {
-		culture = south_german
+	capitalists = {
+		culture = slovak
 		religion = catholic
-		size = 450
+		size = 25
 	}
 	
 	officers = {
@@ -19,11 +19,17 @@
 		religion = catholic
 		size = 75 
 	}
+	
+	craftsmen = {
+		culture = slovak
+		religion = catholic
+		size = 100
+	}
 
 	clergymen = {
 		culture = slovak
 		religion = catholic
-		size = 1200 
+		size = 1100 
 	}
 
 	artisans = {
@@ -95,7 +101,13 @@
 	farmers = {
 		culture = hungarian
 		religion = catholic
-		size = 7400   
+		size = 7300   
+	}
+	
+	craftsmen = {
+		culture = hungarian
+		religion = catholic
+		size = 100
 	}
 
 	clergymen = {
@@ -151,11 +163,17 @@
 		religion = jewish
 		size = 200 
 	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
 
 	farmers = {
 		culture = ashkenazi
 		religion = jewish
-		size = 8625  
+		size = 8525  
 	}
 
 	aristocrats = {
@@ -185,7 +203,13 @@
 	artisans = {
 		culture = south_german
 		religion = catholic
-		size = 1100
+		size = 1000
+	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 100
 	}
 
 	soldiers = {
@@ -219,11 +243,17 @@
 		religion = catholic
 		size = 500 
 	}
+	
+	craftsmen = {
+		culture = slovak
+		religion = catholic
+		size = 100
+	}
 
 	farmers = {
 		culture = slovak
 		religion = catholic
-		size = 53400
+		size = 53300
 	}
 	
 	serfs = {
@@ -248,6 +278,12 @@
 		culture = ashkenazi
 		religion = jewish
 		size = 100 
+	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
 	}
 
 	farmers = {
@@ -283,7 +319,13 @@
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 6450 
+		size = 6350 
+	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 100
 	}
 	
 	bureaucrats = {
@@ -309,7 +351,13 @@
 	artisans = {
 		culture = slovak
 		religion = catholic
-		size = 4400
+		size = 4300
+	}
+	
+	craftsmen = {
+		culture = slovak
+		religion = catholic
+		size = 100
 	}
 
 	soldiers = {
@@ -369,7 +417,13 @@
 	soldiers = {
 		culture = hungarian
 		religion = catholic
-		size = 190 
+		size = 190
+	}
+	
+	craftsmen = {
+		culture = hungarian
+		religion = catholic
+		size = 100
 	}
 
 	farmers = {
@@ -419,11 +473,17 @@
 		religion = jewish
 		size = 100 
 	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
 
 	farmers = {
 		culture = ashkenazi
 		religion = jewish
-		size = 850    
+		size = 750    
 	}
 
 	clergymen = {
@@ -443,11 +503,17 @@
 		religion = catholic
 		size = 100  
 	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 100
+	}
 
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 2750  
+		size = 2650  
 	}
 }
 #Banska Bystrica (340000/85000 POPS)
@@ -461,7 +527,13 @@
 	artisans = {
 		culture = slovak
 		religion = catholic
-		size = 2650
+		size = 2550
+	}
+	
+	craftsmen = {
+		culture = slovak
+		religion = catholic
+		size = 100
 	}
 
 	soldiers = {
@@ -499,11 +571,17 @@
 		religion = jewish
 		size = 100 
 	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
 
 	farmers = {
 		culture = ashkenazi
 		religion = jewish
-		size = 1325    
+		size = 1225    
 	}
 	
 	bureaucrats = {
@@ -523,6 +601,12 @@
 		religion = catholic
 		size = 35 
 	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 100
+	}
 
 	artisans = {
 		culture = south_german
@@ -539,7 +623,7 @@
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 4000  
+		size = 3900  
 	}
 	
 	clergymen = {
@@ -559,11 +643,17 @@
 		religion = catholic
 		size = 100 
 	}
+	
+	craftsmen = {
+		culture = polish
+		religion = catholic
+		size = 100
+	}
 
 	farmers = {
 		culture = polish
 		religion = catholic
-		size = 900 
+		size = 800
 	}
 }
 #Felvidek Region (860000) #see Hungary.txt and Ukraine.txt for balance of Region
@@ -587,11 +677,17 @@
 		religion = catholic
 		size = 975
 	}
+	
+	craftsmen = {
+		culture = slovak
+		religion = catholic
+		size = 100
+	}
 
 	artisans = {
 		culture = slovak
 		religion = catholic
-		size = 900
+		size = 800
 	}
 
 	soldiers = {
@@ -647,11 +743,17 @@
 		religion = catholic
 		size = 300  
 	}
+	
+	craftsmen = {
+		culture = hungarian
+		religion = catholic
+		size = 100
+	}
 
 	farmers = {
 		culture = hungarian
 		religion = catholic
-		size = 19166  
+		size = 19066  
 	}
 
 	clergymen = {
@@ -695,11 +797,17 @@
 		religion = jewish
 		size = 100 
 	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
 
 	farmers = {
 		culture = ashkenazi
 		religion = jewish
-		size = 825    
+		size = 725    
 	}
 
 	bureaucrats = {
@@ -731,11 +839,17 @@
 		religion = catholic
 		size = 200  
 	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 100
+	}
 
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 18925  
+		size = 18825  
 	}
 
 	clergymen = {
@@ -788,10 +902,16 @@
 		size = 5625 
 	}
 	
+	craftsmen = {
+		culture = slovak
+		religion = catholic
+		size = 100
+	}
+	
 	farmers = {
 		culture = slovak
 		religion = catholic
-		size = 21900    
+		size = 21800    
 	}
 	
 	aristocrats = {
@@ -817,11 +937,17 @@
 		religion = jewish
 		size = 100
 	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
 
 	farmers = {
 		culture = ashkenazi
 		religion = jewish
-		size = 825    
+		size = 725    
 	}
 	
 	clergymen = {

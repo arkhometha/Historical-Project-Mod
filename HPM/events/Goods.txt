@@ -469,7 +469,6 @@ province_event = {
 					province_id = 2055
 					#province_id = 1978
 					province_id = 1980
-					province_id = 1981
 					#province_id = 2624
 				}
 			}

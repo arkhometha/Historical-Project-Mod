@@ -3434,6 +3434,12 @@
 		religion = catholic
 		size = 100
 	}
+	
+	capitalists = {
+		culture = north_german
+		religion = protestant
+		size = 100
+	}
 
 	officers = {
 		culture = north_german
@@ -3641,6 +3647,24 @@
 		religion = catholic
 		size = 700 
 	}
+	
+	capitalists = {
+		culture = north_german
+		religion = catholic
+		size = 100
+	}
+	
+	capitalists = {
+		culture = north_german
+		religion = protestant
+		size = 100
+	}
+	
+	capitalists = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
 
 	clergymen = {
 		culture = north_german
@@ -3659,11 +3683,17 @@
 		religion = catholic
 		size = 2000
 	}
+	
+	craftsmen = {
+		culture = north_german
+		religion = catholic
+		size = 5000
+	}
 
 	farmers = {
 		culture = north_german
 		religion = catholic
-		size = 62425 
+		size = 57425
 	}
 
 	aristocrats = {
@@ -3689,11 +3719,17 @@
 		religion = protestant
 		size = 1000
 	}
+	
+	craftsmen = {
+		culture = north_german
+		religion = protestant
+		size = 5000 
+	}
 
 	farmers = {
 		culture = north_german
 		religion = protestant
-		size = 19500 
+		size = 14500 
 	}
 	
 	######Jews
@@ -3716,6 +3752,12 @@
 	}
 
 	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	
+	craftsmen = {
 		culture = ashkenazi
 		religion = jewish
 		size = 100
@@ -3863,6 +3905,24 @@
 		religion = protestant
 		size = 250 
 	}
+	
+	capitalists = {
+		culture = north_german
+		religion = catholic
+		size = 100
+	}
+	
+	capitalists = {
+		culture = north_german
+		religion = protestant
+		size = 100
+	}
+	
+	capitalists = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
 
 	bureaucrats = {
 		culture = north_german
@@ -3893,11 +3953,17 @@
 		religion = protestant
 		size = 1000
 	}
+	
+	craftsmen = {
+		culture = north_german
+		religion = catholic
+		size = 4000
+	}
 
 	farmers = {
 		culture = north_german
 		religion = protestant
-		size = 24725
+		size = 20725
 	}
 
 	aristocrats = {
@@ -3929,11 +3995,17 @@
 		religion = catholic
 		size = 2000  
 	}
+	
+	craftsmen = {
+		culture = north_german
+		religion = catholic
+		size = 4000
+	}
 
 	farmers = {
 		culture = north_german
 		religion = catholic
-		size = 59475
+		size = 55475
 	}
 
 	######Jews
@@ -3956,6 +4028,12 @@
 	}
 
 	clergymen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	
+	craftsmen = {
 		culture = ashkenazi
 		religion = jewish
 		size = 100

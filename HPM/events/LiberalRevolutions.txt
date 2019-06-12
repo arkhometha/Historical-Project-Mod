@@ -25,6 +25,8 @@ country_event = {
 			tag = MOL
 			tag = WAL
 			tag = SER
+			primary_culture = north_italian
+			primary_culture = south_italian
 			literacy = 0.3
 		}
 		year = 1840

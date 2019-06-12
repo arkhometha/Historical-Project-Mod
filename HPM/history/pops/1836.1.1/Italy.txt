@@ -11,13 +11,13 @@
 	capitalists = {
 		culture = north_italian
 		religion = catholic
-		size = 25
+		size = 75
 	}
 
 	bureaucrats = {
 		culture = north_italian
 		religion = catholic
-		size = 850
+		size = 800
 	}
 
 	officers = {
@@ -417,7 +417,13 @@
 	artisans = {
 		culture = north_italian
 		religion = catholic
-		size = 9000
+		size = 6000
+	}
+	
+	craftsmen = {
+		culture = north_italian
+		religion = catholic
+		size = 3000
 	}
 
 	soldiers = {
@@ -482,6 +488,12 @@
 		religion = catholic
 		size = 175
 	}
+	
+	craftsmen = {
+		culture = swiss
+		religion = catholic
+		size = 100
+	}
 
 	clergymen = {
 		culture = swiss
@@ -498,7 +510,7 @@
 	farmers = {
 		culture = swiss
 		religion = catholic
-		size = 300
+		size = 200
 	}
 }
 #Bergamo (472000/118000 POPS)
@@ -1308,6 +1320,12 @@
 		religion = catholic
 		size = 3950
 	}
+	
+	capitalists = {
+		culture = north_italian
+		religion = catholic
+		size = 20
+	}
 
 	bureaucrats = {
 		culture = north_italian
@@ -1343,6 +1361,12 @@
 		culture = north_italian
 		religion = catholic
 		size = 2000
+	}
+	
+	craftsmen = {
+		culture = north_italian
+		religion = catholic
+		size = 200
 	}
 
 	farmers = {
@@ -1390,12 +1414,6 @@
 		religion = catholic
 		size = 2100
 	}
-	
-	capitalists = {
-		culture = north_italian
-		religion = catholic
-		size = 20
-	}
 
 	clergymen = {
 		culture = north_italian
@@ -1424,7 +1442,7 @@
 	farmers = {
 		culture = north_italian
 		religion = catholic
-		size = 84600
+		size = 80850
 	}
 
 	######Jews
@@ -2667,3 +2685,31 @@
 
 }
 
+#Elba - Former Impfondo (32000/8000 POPS)
+1981 = {
+
+	clergymen = {
+		culture = north_italian
+		religion = catholic
+		size = 35
+	}
+
+	artisans = {
+		culture = north_italian
+		religion = catholic
+		size = 450
+	}
+
+	soldiers = {
+		culture = north_italian
+		religion = catholic
+		size = 200
+	}
+
+	farmers = {
+		culture = north_italian
+		religion = catholic
+		size = 3065
+	}
+	
+}

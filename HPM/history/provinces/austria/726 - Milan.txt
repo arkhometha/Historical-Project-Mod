@@ -2,7 +2,7 @@ owner = AUS
 controller = AUS
 add_core = LOM
 add_core = ITA
-trade_goods = grain
+trade_goods = cotton
 life_rating = 45
 fort = 1
 state_building = {
@@ -16,11 +16,6 @@ state_building = {
 	remove_core = LOM
 }
 1861.1.1 = { 
-	state_building = {
-	level = 1
-	building = steel_factory
-	upgrade = yes
-	}
 	state_building = {
 	level = 1
 	building = luxury_clothes_factory

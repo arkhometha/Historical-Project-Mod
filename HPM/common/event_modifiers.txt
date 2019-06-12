@@ -79,8 +79,8 @@ forceful_back_to_africa = {
 }
 
 ostflucht = {
-	farm_rgo_size = -0.3
-	mine_rgo_size = -0.6
+	farm_rgo_size = -0.5
+	mine_rgo_size = -0.8
 	immigrant_attract = -0.5
 	immigrant_push = 0.5
 	pop_consciousness_modifier = 0.1
@@ -1613,8 +1613,8 @@ local_nitroglycerin_and_machine_tools = {
 }
 
 local_distribution_channels_und_electricity = {
-	farm_RGO_eff = 0.8 #0.5
-	mine_RGO_eff = 0.8 #0.5
+	farm_RGO_eff = 0.5 #0.5
+	mine_RGO_eff = 0.75 #0.5
 	local_factory_throughput = 0.1 #0.05
 	icon = 11
 }
