@@ -1198,12 +1198,13 @@ country_event = {
 		NOT = {
 			has_global_flag = tutankhamun_found
 		}
+		year = 1900
 	}
 	
 	major = yes
 	
 	mean_time_to_happen = {
-		months = 2000
+		months = 265
 	}
 	
 	option = {
