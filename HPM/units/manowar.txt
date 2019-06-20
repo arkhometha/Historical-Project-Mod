@@ -15,19 +15,20 @@ manowar = {
 	priority = 25
 	max_strength = 100
 	default_organisation = 30
-	maximum_speed = 4
+	maximum_speed = 6
 	weighted_value = 3.0
-	can_build_overseas = no
+	can_build_overseas = yes
 
 
 	#Building Costs
 	build_time = 360
 	build_cost = {
-		clipper_convoy = 15
-		artillery = 10
-		regular_clothes = 12
-		canned_food = 8
+		clipper_convoy = 50 #2100£ | was 15 - 630£
+		artillery = 30 #1800 £ |was 10 - 600£
+		canned_food = 20 #320£ |was 8 - 128£
+		regular_clothes = 20 #116 £ | was 12 - 69.6£
 	}
+	#Total: 4336£ - was 1427.6 £
 	min_port_level = 1
 	limit_per_port = -1
 	supply_consumption_score = 2
@@ -41,7 +42,7 @@ manowar = {
 	#Naval Abilties
 	hull = 3
 	gun_power = 6
-	fire_range = 0.60
+	fire_range = 0.3
 	evasion = 0
 }
 

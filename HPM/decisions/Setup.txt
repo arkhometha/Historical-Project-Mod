@@ -512,7 +512,7 @@ political_decisions = {
 		}
 		
 		effect = {
-		
+			add_country_modifier = {name = smithian_school duration = 3650 }
 			any_pop = {
 				limit = {
 					OR = {
@@ -1851,6 +1851,7 @@ political_decisions = {
 			UCA = { country_event = { id = 97550 days = 2 } }
 			QNG = { country_event = { id = 160009 days = 5 } }
 			ENG = { country_event = { id = 98200 days = 3 } }
+			HAI = { country_event = { id = 45106 days = 3 } }
 			##########################################################
 			
 			################Uncivs Close their borders###########################
@@ -1967,6 +1968,46 @@ political_decisions = {
 			}
 			
 			#################Giving Starting Money to Pops and Countries######################
+			
+			random_country = {
+				limit = {
+					tag = RUS
+					ai = yes
+				}
+				remove_country_modifier = french_liberal_school
+				remove_country_modifier = smithian_school
+				add_country_modifier = {name = mercantilism duration = 3650 }
+			}
+			
+			random_country = {
+				limit = {
+					tag = USA
+					ai = yes
+				}
+				remove_country_modifier = french_liberal_school
+				remove_country_modifier = smithian_school
+				add_country_modifier = {name = mercantilism duration = 3650 }
+			}
+			
+			random_country = {
+				limit = {
+					tag = PRU
+					ai = yes
+				}
+				remove_country_modifier = french_liberal_school
+				remove_country_modifier = smithian_school
+				add_country_modifier = {name = mercantilism duration = 3650 }
+			}
+			
+			random_country = {
+				limit = {
+					tag = AUS
+					ai = yes
+				}
+				remove_country_modifier = french_liberal_school
+				remove_country_modifier = smithian_school
+				add_country_modifier = {name = mercantilism duration = 3650 }
+			}
 			
 			#################Class Literacy Setup######################
 			any_country = {

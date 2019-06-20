@@ -529,7 +529,7 @@ oil_pumping_machinery = {
 		}
 		modifier = {
 			factor = 2
-			dynamite = 1
+			drilling_and_blasting = 1
 		}
 	}
 	effect = {
@@ -612,7 +612,7 @@ fordism = {
 #		base = 3
 #		modifier = {
 #			factor = 2
-#			dynamite = 1
+#			drilling_and_blasting = 1
 #		}
 #		modifier = {
 #			factor = 2

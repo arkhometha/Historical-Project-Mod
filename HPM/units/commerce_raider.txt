@@ -15,7 +15,7 @@ commerce_raider = {
 	priority = 15
 	max_strength = 100
 	default_organisation = 30
-	maximum_speed = 10
+	maximum_speed = 17
 	weighted_value = 5.0
 	can_build_overseas = yes
 
@@ -23,11 +23,12 @@ commerce_raider = {
 	#Building Costs
 	build_time = 360
 	build_cost = {
-		steamer_convoy = 10
-		artillery = 5
-		canned_food = 2
-		regular_clothes = 5
+		steamer_convoy = 35  #2275 | was 650
+		artillery = 25 		 #1500 | was 300
+		canned_food = 15 	 # 240 | was 32
+		regular_clothes = 15 # 72  | was 29
 	}
+	#Total: 4087 | was 1011
 	min_port_level = 1
 	limit_per_port = -1
 	supply_consumption_score = 3
@@ -42,9 +43,9 @@ commerce_raider = {
 		coal = 0.25
 	}
 	
-	#Naval Abilties
+	#Naval Abilities
 	hull = 6
-	gun_power = 5
+	gun_power = 4
 	fire_range = 0.6
 	evasion = 0.25
 	torpedo_attack = 0

@@ -15,7 +15,7 @@ cruiser = {
 	priority = 12
 	max_strength = 100
 	default_organisation = 30
-	maximum_speed = 12
+	maximum_speed = 27
 	weighted_value = 8.0
 	floating_flag = yes
 
@@ -23,11 +23,13 @@ cruiser = {
 	#Building Costs
 	build_time = 240
 	build_cost = {
-		steamer_convoy = 30
-		artillery = 10
-		canned_food = 12
-		regular_clothes = 10
+		steamer_convoy = 80 	# 5200 | was 30 - 1950
+		artillery = 70			# 4200 | was 10 - 600
+		canned_food = 30 		# 480  | was 12 - 192
+		regular_clothes = 30 	# 174  | was 10 - 58
+		fuel = 20				# 500  |
 	}
+	#Total: 10554 | was 2800
 	min_port_level = 4
 	limit_per_port = -1
 	supply_consumption_score = 20
@@ -37,8 +39,8 @@ cruiser = {
 		steamer_convoy = 1
 		artillery = 0.5
 		canned_food = 0.6
-		fuel = 2
-		coal = 1
+		fuel = 3
+		coal = 0.5
 		ammunition = 0.4
 		regular_clothes = 0.25
 		tobacco = 1.2

@@ -1,3 +1,34 @@
+#Modern Sail Ships
+modern_sail_ships = {
+	limit = { clipper_design = 1 }
+	chance = {
+		base = 10
+		modifier = {
+			factor = 10
+			alphabetic_flag_signaling = 1
+		}
+	}
+	effect = {
+		clipper_transport = {
+			maximum_speed = 9
+			fire_range = 0.2
+		}
+		frigate = {
+			maximum_speed = 9
+			hull = 1
+			gun_power = 1
+			fire_range = 0.25
+			evasion = 0.15
+		}
+		manowar = {
+			maximum_speed = 7
+			hull = 1
+			gun_power = 2
+			fire_range = 0.3
+		}
+	}
+}
+
 schrapnel_standard_design = {
 	limit = { steel_breech_loaded_artillery = 1 } #1870
 	chance = {
@@ -49,7 +80,7 @@ barbed_wire_defense = {
 		}
 	}
 }
-		
+
 helmet_mass_production = {
 	limit = { indirect_artillery_fire = 1 } #1900
 	chance = {
@@ -330,7 +361,7 @@ electrolytic_refining = {
 
 deep_mining = {
 	limit = {
-		dynamite = 1
+		drilling_and_blasting = 1
 	}
 	#news = no
 	chance = {
@@ -363,7 +394,7 @@ deep_mining = {
 
 percussion_drill = {
 	limit = {
-		dynamite = 1
+		drilling_and_blasting = 1
 	}
 	#news = no
 	chance = {
@@ -400,7 +431,7 @@ percussion_drill = {
 
 friction_hoist = {
 	limit = {
-		dynamite = 1
+		drilling_and_blasting = 1
 		year = 1875
 	}
 	#news = no
@@ -434,7 +465,7 @@ friction_hoist = {
 
 lixiviation_mills = {
 	limit = {
-		dynamite = 1
+		drilling_and_blasting = 1
 		year = 1880
 	}
 	#news = no
@@ -468,7 +499,7 @@ lixiviation_mills = {
 
 cyanide_milling = {
 	limit = {
-		dynamite = 1
+		drilling_and_blasting = 1
 		year = 1885
 	}
 	#news = no
@@ -503,7 +534,7 @@ cyanide_milling = {
 
 trinitrotoluene = {
 	limit = {
-		dynamite = 1
+		drilling_and_blasting = 1
 		year = 1895
 	}
 	#news = no
@@ -646,7 +677,7 @@ hydraulic_excavator = {
 
 fish_trawlers = {
 	limit = {
-		steel_steamers = 1
+		steam_turbine_ships = 1
 	}
 	#news = no
 	chance = {

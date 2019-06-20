@@ -75,11 +75,46 @@ army = {
 	}
 }
 
+navy = {
+	name = "Armada de Argentina"
+	location = 2348
+	ship = {
+		name= "Republicano"
+		type = frigate
+	}
+	ship = {
+		name= "Echague"
+		type = frigate
+	}
+	ship = {
+		name= "Chacabuco"
+		type = frigate
+	}
+	ship = {
+		name= "Americano"
+		type = frigate
+	}
+	ship = {
+		name= "Nueve de Julio"
+		type = frigate
+	}
+
+}
+
+
 leader = {
    name = "Angel Pacheco"
    type = land
    date = 1836.1.1
    background = aristocrat
    personality = implacable
+}
+
+leader = {
+	name = "Guillermo Brown"
+	type = sea
+	date="1830.1.1"
+	personality = clever
+	background = nationalist
 }
 

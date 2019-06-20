@@ -649,7 +649,7 @@ country_event = {
 				NOT = { relation = { who = USA value = 0 } }
 			}
 			modifier = {
-				factor = 1.8
+				factor = 2
 				relation = { who = USA value = 100 }
 			}
 			modifier = {
@@ -673,11 +673,11 @@ country_event = {
 				alliance_with = USA
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.25
 				relation = { who = USA value = 100 }
 			}
 			modifier = {
-				factor = 2
+				factor = 1.5
 				NOT = { relation = { who = USA value = 0 } }
 			}
 			modifier = {

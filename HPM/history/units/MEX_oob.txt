@@ -6,12 +6,11 @@ SPA = {
 }
 
 leader = {
-	name = "Martin de Cos"
-	type = land
-	date="1836.1.1"
-	personality = impulsive
-	background = aristocrat
-	prestige = 0.1
+	name = "D. Francisco López "
+	type = sea
+	date="1820.1.1"
+	personality = bastard
+	background = no_background
 }
 
 leader = {
@@ -95,15 +94,30 @@ army = {
 
 navy = {
 	name = "Armada de Mexico"
-	location = 2162
+	location = 2184
 	ship = {
 		name= "Vencedor del Alamo"
 		type = frigate
 	}
-
 	ship = {
-		name= "Matilda"
-		type = clipper_transport
+		name= "Bravo"
+		type = frigate
+	}
+	ship = {
+		name= "Vera Cruzana"
+		type = frigate
+	}
+	ship = {
+		name= "Montezuma"
+		type = frigate
+	}
+	ship = {
+		name= "Lubardo"
+		type = frigate
+	}
+	ship = {
+		name= "Pelicano"
+		type = frigate
 	}
 
 }

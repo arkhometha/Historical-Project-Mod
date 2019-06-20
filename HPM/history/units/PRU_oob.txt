@@ -533,7 +533,7 @@ leader = {
 	background = gifted_administrator
 	personality = soldierly
 	prestige = 0.1
-	}
+}
 
 leader = {
 	name = "Helmuth von Moltke"
@@ -543,7 +543,7 @@ leader = {
 	background = school_of_firepower
 	personality = implacable
 	prestige = 0.75
-	}
+}
 	
 leader = {
 	name = "Albrecht von Roon"
@@ -553,7 +553,7 @@ leader = {
 	background = school_of_the_bayonet
 	personality = au_fait
 	prestige = 0.75
-	}
+}
 	
 leader = {
 	name = "Friedrich Graf von Wrangel"
@@ -563,7 +563,7 @@ leader = {
 	background = school_of_the_bayonet
 	personality = unflinching
 	prestige = 0.5
-	}	
+}	
 	
 leader = {
 	name = "Eduard Vogel von Falckenstein"
@@ -573,7 +573,7 @@ leader = {
 	background = cartographer
 	personality = audacious
 	prestige = 0.3
-	}
+}
 	
 leader = {
 	name = "Leopold Hermann von Boyen"

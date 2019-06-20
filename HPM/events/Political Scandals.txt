@@ -164,6 +164,154 @@ country_event = {
 				factor = 5
 			}
 		}
+		
+		any_owned = {
+			limit = { is_colonial = no }
+			party_loyalty = {
+				ideology = reactionary
+				loyalty_value = -0.2
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = reactionary
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = reactionary
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = reactionary
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 5 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = reactionary
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 10 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = reactionary
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 15 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = reactionary
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 20 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = reactionary
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				is_capital = yes
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = reactionary
+							loyalty_value = -0.5
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -332,15 +480,93 @@ country_event = {
 				factor = 5
 			}
 		}
+		
+		any_owned = {
+			limit = { is_colonial = no }
+			party_loyalty = {
+				ideology = conservative
+				loyalty_value = -0.2
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = conservative
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = conservative
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = conservative
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 5 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = conservative
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
 		random_owned = {
 			limit = {
 				state_scope = { is_colonial = no }
 				owner = { number_of_states = 10 }
 			}
-			owner = {
-				random = {
-					chance = 50
-					state_scope = {
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
 						party_loyalty = {
 							ideology = conservative
 							loyalty_value = -1
@@ -349,15 +575,16 @@ country_event = {
 				}
 			}
 		}
+		
 		random_owned = {
 			limit = {
 				state_scope = { is_colonial = no }
 				owner = { number_of_states = 15 }
 			}
-			owner = {
-				random = {
-					chance = 50
-					state_scope = {
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
 						party_loyalty = {
 							ideology = conservative
 							loyalty_value = -1
@@ -366,15 +593,16 @@ country_event = {
 				}
 			}
 		}
+		
 		random_owned = {
 			limit = {
 				state_scope = { is_colonial = no }
 				owner = { number_of_states = 20 }
 			}
-			owner = {
-				random = {
-					chance = 50
-					state_scope = {
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
 						party_loyalty = {
 							ideology = conservative
 							loyalty_value = -1
@@ -383,27 +611,21 @@ country_event = {
 				}
 			}
 		}
+		
 		random_owned = {
 			limit = {
 				is_capital = yes
 			}
-			owner = {
-				random = {
-					chance = 75
-					state_scope = {
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
 						party_loyalty = {
 							ideology = conservative
 							loyalty_value = -0.5
 						}
 					}
 				}
-			}
-		}
-		any_owned = {
-			limit = { is_colonial = no }
-			party_loyalty = {
-				ideology = conservative
-				loyalty_value = -0.5
 			}
 		}
 	}
@@ -423,6 +645,10 @@ country_event = {
 			political_parties = underground_parties
 			has_country_modifier = ruling_party_scandal
 			has_country_modifier = party_scandal_evidence
+			AND = {
+				administration_spending = 0.95
+				ruling_party_ideology = liberal
+			}
 		}
 		OR = {
 			liberal = 10
@@ -432,6 +658,18 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 400
+		modifier = {
+			factor = 1.2
+			administration_spending = 0.9
+		}
+		modifier = {
+			factor = 1.2
+			administration_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			administration_spending = 0.7
+		}
 		modifier = {
 			factor = 0.75
 			election = yes
@@ -553,6 +791,154 @@ country_event = {
 				factor = 5
 			}
 		}
+		
+		any_owned = {
+			limit = { is_colonial = no }
+			party_loyalty = {
+				ideology = liberal
+				loyalty_value = -0.2
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 5 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 10 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 15 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 20 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				is_capital = yes
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = liberal
+							loyalty_value = -0.5
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -571,15 +957,31 @@ country_event = {
 			political_parties = underground_parties
 			has_country_modifier = ruling_party_scandal
 			has_country_modifier = party_scandal_evidence
+			AND = {
+				administration_spending = 0.95
+				ruling_party_ideology = anarcho_liberal
+			}
 		}
 		OR = {
 			anarcho_liberal = 10
-			any_owned_province = { anarcho_liberal = 20 }
+			any_owned_province = { anarcho_liberal = 30 }
 		}
 	}
 	
 	mean_time_to_happen = {
 		months = 400
+		modifier = {
+			factor = 1.2
+			administration_spending = 0.9
+		}
+		modifier = {
+			factor = 1.2
+			administration_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			administration_spending = 0.7
+		}
 		modifier = {
 			factor = 0.75
 			election = yes
@@ -701,6 +1103,154 @@ country_event = {
 				factor = 5
 			}
 		}
+		
+		any_owned = {
+			limit = { is_colonial = no }
+			party_loyalty = {
+				ideology = anarcho_liberal
+				loyalty_value = -0.2
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = anarcho_liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = anarcho_liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = anarcho_liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 5 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = anarcho_liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 10 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = anarcho_liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 15 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = anarcho_liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 20 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = anarcho_liberal
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				is_capital = yes
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = anarcho_liberal
+							loyalty_value = -0.5
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -719,6 +1269,10 @@ country_event = {
 			political_parties = underground_parties
 			has_country_modifier = ruling_party_scandal
 			has_country_modifier = party_scandal_evidence
+			AND = {
+				administration_spending = 0.95
+				ruling_party_ideology = socialist
+			}
 		}
 		OR = {
 			socialist = 10
@@ -728,6 +1282,18 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 400
+		modifier = {
+			factor = 1.2
+			administration_spending = 0.9
+		}
+		modifier = {
+			factor = 1.2
+			administration_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			administration_spending = 0.7
+		}
 		modifier = {
 			factor = 0.75
 			election = yes
@@ -849,6 +1415,154 @@ country_event = {
 				factor = 5
 			}
 		}
+		
+		any_owned = {
+			limit = { is_colonial = no }
+			party_loyalty = {
+				ideology = socialist
+				loyalty_value = -0.2
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = socialist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = socialist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = socialist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 5 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = socialist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 10 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = socialist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 15 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = socialist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 20 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = socialist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				is_capital = yes
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = socialist
+							loyalty_value = -0.5
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -868,6 +1582,10 @@ country_event = {
 			political_parties = underground_parties
 			has_country_modifier = ruling_party_scandal
 			has_country_modifier = party_scandal_evidence
+			AND = {
+				administration_spending = 0.95
+				ruling_party_ideology = communist
+			}
 		}
 		OR = {
 			communist = 10
@@ -877,6 +1595,18 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 400
+		modifier = {
+			factor = 1.2
+			administration_spending = 0.9
+		}
+		modifier = {
+			factor = 1.2
+			administration_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			administration_spending = 0.7
+		}
 		modifier = {
 			factor = 0.75
 			election = yes
@@ -998,6 +1728,153 @@ country_event = {
 				factor = 5
 			}
 		}
+				any_owned = {
+			limit = { is_colonial = no }
+			party_loyalty = {
+				ideology = communist
+				loyalty_value = -0.2
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = communist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = communist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = communist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 5 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = communist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 10 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = communist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 15 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = communist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 20 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = communist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				is_capital = yes
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = communist
+							loyalty_value = -0.5
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -1017,6 +1894,10 @@ country_event = {
 			political_parties = underground_parties
 			has_country_modifier = ruling_party_scandal
 			has_country_modifier = party_scandal_evidence
+			AND = {
+				administration_spending = 0.95
+				ruling_party_ideology = fascist
+			}
 		}
 		OR = {
 			fascist = 10
@@ -1026,6 +1907,18 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 400
+		modifier = {
+			factor = 1.2
+			administration_spending = 0.9
+		}
+		modifier = {
+			factor = 1.2
+			administration_spending = 0.8
+		}
+		modifier = {
+			factor = 1.1
+			administration_spending = 0.7
+		}
 		modifier = {
 			factor = 0.75
 			election = yes
@@ -1147,6 +2040,154 @@ country_event = {
 				factor = 5
 			}
 		}
+		
+				any_owned = {
+			limit = { is_colonial = no }
+			party_loyalty = {
+				ideology = fascist
+				loyalty_value = -0.2
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = fascist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = fascist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+			}
+			random = {
+				chance = 50
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = fascist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 5 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = fascist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 10 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = fascist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 15 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = fascist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				state_scope = { is_colonial = no }
+				owner = { number_of_states = 20 }
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = fascist
+							loyalty_value = -1
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				is_capital = yes
+			}
+			random = {
+				chance = 75
+				state_scope = {
+					any_owned = {
+						party_loyalty = {
+							ideology = fascist
+							loyalty_value = -0.5
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -1213,6 +2254,95 @@ country_event = {
 		name = "EVT880200OPTA"
 		remove_country_modifier = ruling_party_scandal
 		remove_country_modifier = party_scandal_evidence
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = reactionary } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = reactionary
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = conservative } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = conservative
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = liberal } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = liberal
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = anarcho_liberal } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = anarcho_liberal
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = socialist } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = socialist
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = communist } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = communist
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = fascist } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = fascist
+						loyalty_value = -2
+					}
+				}
+			}
+		}
+		
 		random_owned = {
 			limit = {
 				owner = {
@@ -1309,6 +2439,95 @@ country_event = {
 			dominant_issue = {
 				factor = 0.1
 				value = free_press
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = reactionary } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = reactionary
+						loyalty_value = -0.3
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = conservative } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = conservative
+						loyalty_value = -0.3
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = liberal } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = liberal
+						loyalty_value = -0.3
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = anarcho_liberal } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = anarcho_liberal
+						loyalty_value = -0.3
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = socialist } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = socialist
+						loyalty_value = -0.3
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = communist } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = communist
+						loyalty_value = -0.3
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { ruling_party_ideology = fascist } }
+			owner = {
+				any_owned = {
+					limit = { is_colonial = no }
+					party_loyalty = {
+						ideology = fascist
+						loyalty_value = -0.3
+					}
+				}
 			}
 		}
 	}

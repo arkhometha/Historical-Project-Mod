@@ -4,6 +4,7 @@ add_core = CHI
 add_core = GNG
 trade_goods = tea
 life_rating = 35
+terrain = urban
 1861.1.1 = {
 	owner = ENG
 	controller = ENG

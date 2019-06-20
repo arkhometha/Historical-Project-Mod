@@ -958,7 +958,7 @@ regenerative_furnaces = {
 		}
 	}
 }
-dynamite = {
+drilling_and_blasting = {
 	area = metallurgy
 	year = 1870
 	cost = 14400

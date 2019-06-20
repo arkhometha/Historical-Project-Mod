@@ -63,9 +63,9 @@ nonstate_consciousness = 0
 modern_winemaking = yes
 small_arms_production = yes
 ammunition_production = yes
-big_sail_ships = yes
-sail_ships_transport = yes
-big_sail_support = yes
+#big_sail_ships = yes
+#sail_ships_transport = yes
+#big_sail_support = yes
 
 
 
@@ -84,8 +84,8 @@ big_sail_support = yes
 	# Inventions
 #bottling_process = yes
 modern_winemaking = yes
-big_sail_ships = yes
-sail_ships_transport = yes
-big_sail_support = yes
+#big_sail_ships = yes
+#sail_ships_transport = yes
+#big_sail_support = yes
 
 }

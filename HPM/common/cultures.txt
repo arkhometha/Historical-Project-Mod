@@ -855,7 +855,7 @@ turko_semitic = {
 		}
 		
 		last_names = { 
-			Bey Pasha Hoca Hanim Efendi
+			Bey Pasha Hoca Efendi
 		}
 	}
 	azerbaijani = {

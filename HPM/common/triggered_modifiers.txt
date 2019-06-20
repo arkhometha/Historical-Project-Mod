@@ -464,6 +464,21 @@ new_world_war = {
 	icon = 16
 }
 
+ryotwari = {
+	trigger = {
+		exists = yes
+		OR = {
+			is_culture_group = south_asian
+			is_culture_group = indo_iranian
+		}
+		is_vassal = yes
+	}
+
+	tax_efficiency = 0.25
+	administrative_efficiency_modifier = 0.25
+	icon = 16
+}
+
 # atlantic_only_nation = {
 	# trigger = {
 		# exists = yes

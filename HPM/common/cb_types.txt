@@ -9337,11 +9337,28 @@ war_reparations = {
 
 	war_name = WAR_NAME_REPARATIONS
 	
+	tws_battle_factor = 1.5 # battle score twice that of oppenent
+	
 	on_add = {
 		move_issue_percentage = { 
 			from = jingoism 
 			to = pro_military
 			value = 0.25
+		}
+	}
+	
+	on_po_accepted = {
+		random_owned = {
+			limit = {
+				owner = {
+					tag = HAI
+					FRA = { is_greater_power = yes }
+					NOT = { has_country_flag = agreed_to_pay_debt }
+				}
+			}
+			owner = {
+				country_event = 45108
+			}
 		}
 	}
 }

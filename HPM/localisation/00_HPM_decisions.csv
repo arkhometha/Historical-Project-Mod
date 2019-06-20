@@ -1,10 +1,13 @@
 ;;;;;;;;;;;;;;;;;
+rename_the_congo_desc;The Congo Free State was confirmed as the personal property of the $COUNTRY_ADJ$ $MONARCHTITLE$, thus it is only fair and reasonable that we now explore the region, and perhaps leave a bit of a personal mark on it?;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+conscript_fishermen_title;Conscript Navy;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+conscript_fishermen_desc;$COUNTRY$ does not need a standing navy. When the time comes, we can build some ships, conscript merchant and fishing ships and fit them with guns. That time came again, and it's time for the $COUNTRY_ADJ$ people to step up and protect their country.;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 unlock_crisis_in_1870_title;Unlock Crisis in 1870;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
-unlock_crisis_in_1870_desc;Old HPM standard was to unlock crisis as soon as someone researched Revolution & Counterrevolution. This changed in recent versions to wait until 1886 at least, to avoid Great Wars during the scramble for Africa. If you prefer the old rule, this option will change this system back to that.;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+unlock_crisis_in_1870_desc;Old HPM standard was to unlock crisis as soon as someone researched Revolution & Counter-revolution. This changed in recent versions to wait until 1886 at least, to avoid Great Wars during the scramble for Africa. If you prefer the old rule, this option will change this system back to that.;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 pick_AI_personality_title;The $COUNTRY_ADJ$ $MONARCHTITLE$ Personality;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 pick_AI_personality_desc;The $COUNTRY_ADJ$ $MONARCHTITLE$ has a strong personality...;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 take_eisenstadt_title;Reclaim Eisenstadt;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
-take_eisenstadt_desc;Eisenstad is part of Austria proper - and shall be once more.;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+take_eisenstadt_desc;Eisenstadt is part of Austria proper - and shall be once more.;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 south_tirol_compromise_title;Call a Convention on the South Tirol Question;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 south_tirol_compromise_desc;South Tirol is traditionally split as majority German in the North and majority Italian in the South, with minorities on both provinces. This has been a great source of attrition with our German neighbours, one that some in $CAPITAL$ are eager to solve. We can invite our neighbours to a convention aimed at finding solutions to this problem - though the convention does not guarantee a result, this is the best chance we have of solving this matter peacefully.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 turn_canada_french_title;French Canada;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,

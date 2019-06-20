@@ -187,7 +187,7 @@ non_interventionism_trade_policy = {
 french_liberal_school = {
 	max_tariff = -0.2
 	administrative_efficiency_modifier = 0.2
-	tax_efficiency = 0.1
+	tax_efficiency = 0.2
 	industry_tech_research_bonus = 0.05
 	commerce_tech_research_bonus = 0.05
 	culture_tech_research_bonus = 0.05
@@ -196,6 +196,7 @@ french_liberal_school = {
 }
 smithian_school = {
 	max_tariff = -0.1
+	tax_efficiency = 0.2
 	tariff_efficiency_modifier = 0.2
 	administrative_efficiency_modifier = 0.05
 	icon = 9

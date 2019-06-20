@@ -827,7 +827,7 @@ social_reforms = {
 			}
 		}
 		low_subsidies = {
-			unemployment_benefit = 0.1
+			unemployment_benefit = 1
 			global_immigrant_attract = 0.02
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }

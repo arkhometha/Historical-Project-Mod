@@ -1630,6 +1630,8 @@ province_event = {
 			province_id = 2102  #Qwa-Qwa/Winburg
 			province_id = 2109  #Ga-Riba/Lydenburg
 			province_id = 2105  #Ga-Rankuwa/Pretoria
+			province_id = 1664  #Kumamoto, Japan
+			province_id = 1661  #Nagasaki, Japan
 			AND = {
 				year = 1915
 				OR = {
@@ -1874,6 +1876,9 @@ province_event = {
 			province_id = 1620 #Chonchon
 			province_id = 1708 #Constantine (Mokta el Hadid mine)
 			province_id = 1707 #Mascara (Remchi mine)
+			province_id = 1679 #Amami, Japan
+			province_id = 1671 #Akita, Japan
+			province_id = 1642 #Hakodate, Japan
 		}
 		NOT = { trade_goods = iron }
 		NOT = { has_province_modifier = switched_production }
@@ -1958,6 +1963,7 @@ province_event = {
 		owner = { civilized = yes }
 		OR = {
 			province_id = 486 #Ipswich 
+			province_id = 1670 #Morioka, Japan 
 			AND = {
 				OR = {
 					province_id = 486 #Caceres 
@@ -6546,6 +6552,10 @@ province_event = {
 		}
 		
 		OR = {
+			province_id = 1648 #Toyama, Japan
+			province_id = 1657 #Kyoto, Japan
+			province_id = 1655 #Osaka, Japan
+			province_id = 1667 #Tokushima, Japan
 			AND = {
 				year = 1855
 				OR = {
