@@ -828,12 +828,15 @@ political_decisions = {
 			treasury = -10000
 			any_owned = {
 				limit = { port = yes }
-				sub_unit = {
-					type = frigate
-					value = current
+				random = {
+					chance = 75
+					sub_unit = {
+						type = frigate
+						value = current
+					}
 				}
 				random = {
-					chance = 10
+					chance = 5
 					sub_unit = {
 						type = manowar
 						value = current

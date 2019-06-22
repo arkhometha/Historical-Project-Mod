@@ -9721,6 +9721,7 @@ country_event = {
 			NOT = { relation = { who = THIS value = -100 } }
 			NOT = { has_country_modifier = neutrality_modifier }
 			NOT = { tag = THIS }
+			NOT = { truce_with = THIS }
 		}		
 		NOT = {
 			has_country_modifier = no_more_war
@@ -9769,6 +9770,7 @@ country_event = {
 				is_disarmed = no
 				NOT = { relation = { who = THIS value = -100 } }
 				NOT = { has_country_modifier = neutrality_modifier }
+				NOT = { truce_with = THIS }
 			}
 			add_casus_belli = {
 				target = THIS

@@ -1353,10 +1353,12 @@ country_event = {
 		tag = FRA
 		year = 1837
 		exists = MEX
+		war = no
 		NOT = {
 			is_our_vassal = MEX
 			alliance_with = MEX
 			truce_with = MEX
+			year = 1856
 		}
 		OR = {
 			MEX = { ai = no }
@@ -1484,6 +1486,7 @@ country_event = {
 	option = {
 		name = "EVT1100055OPTB" #We are not paying
 		set_country_flag = pastry_war
+		prestige = 5
 		FROM = {
 			country_event = { id = 1100057 days = 3 }
 		}
@@ -1522,6 +1525,7 @@ country_event = {
 	
 	option = {
 		name = "EVT1100057OPTA"
+		MEX = { set_country_flag = pay_1st_pastry_war }
 		casus_belli = {
 			target = FROM
 			type = war_reparations
