@@ -737,17 +737,8 @@ country_event = {
 				tag = PAP
 				NOT = { tag = THIS }
 			}
-			relation = {
-				who = THIS
-				value = -200
-			}
-			leave_alliance = THIS
-			any_owned = {
-				limit = {
-					NOT = { province_id = 749 }
-				}
-				secede_province = THIS
-			}
+
+			country_event = { id = 96174 days = 30 }
 		}
 		any_country = {
 			limit = {
@@ -941,6 +932,100 @@ country_event = {
 			ai_chance = { factor = 0}
 		}
 	}
+
+country_event = {
+
+	id = 96174
+	title = "EVTNAME96174" #The Roman Question
+	desc = "EVTDESC96174"
+	picture = "celebration"
+
+	is_triggered_only = yes
+
+	immediate = {
+		relation = {
+			who = ITA
+			value = -200
+		}
+
+		leave_alliance = ITA
+	}
+
+	option = {
+		name = "EVTOPTA96174" #Concede and retreat back to Rome
+
+		any_owned = {
+			limit = {
+				# Rome province
+				NOT = { province_id = 749 }
+			}
+
+			secede_province = FROM
+		}
+
+		ai_chance = {
+			factor = 1
+
+			# will never concede if Italy is not even an equal
+			modifier = {
+				factor = 0
+				OR = {
+					is_greater_power = yes
+					AND = {
+						is_secondary_power = yes
+						FROM = {
+							is_greater_power = no
+							is_secondary_power = no
+						}
+					}
+					AND = {
+						is_vassal = no
+						FROM = { is_vassal = yes }
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB96174" #Challenge Italy
+
+		add_casus_belli = {
+			target = FROM
+			type = humiliate
+			months = 24
+		}
+
+		ai_chance = {
+			factor = 1
+
+			# political considerations
+			modifier = {
+				factor = 0
+				OR = {
+					vassal_of = FROM
+					AND = {
+						in_sphere = FROM
+						OR = {
+							is_vassal = no
+							vassal_of = FROM
+						}
+					}
+				}
+			}
+
+			# strength considerations
+			modifier = {
+				factor = 0.5
+				FROM = { brigades_compare = 2 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { war = yes }
+			}
+		}
+	}
+}
 
 # The adventures of Pinocchio
 country_event = {
