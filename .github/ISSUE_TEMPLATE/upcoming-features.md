@@ -8,8 +8,25 @@ assignees: arkhometha
 
 ---
 
-# Update Focus
+### Update Focus
+- 
+- 
+- 
+- 
 
-# Suggestions
+### Goals
+- 
+- 
+- 
+- 
 
-# Goals
+### Suggestions
+1.
+
+2.
+
+3.
+
+4.
+
+5.
