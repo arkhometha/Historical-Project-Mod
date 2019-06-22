@@ -107,20 +107,16 @@ army = {
 }
 
 navy = {
-	name = "Belgische Koninklijk Marine"
+	name = "Marine Royale"
 	location = 388
+
 	ship = {
-		name= "1e Transport Flottille"
+		name= "Congrès"
 		type = clipper_transport
 	}
 
 	ship = {
-		name= "2e Transport Flotille"
-		type = clipper_transport
-	}
-
-	ship = {
-		name= "3e Transport Flotille"
+		name= "Les Quatre Journées"
 		type = clipper_transport
 	}
 
