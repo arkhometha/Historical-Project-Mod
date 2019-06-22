@@ -738,7 +738,7 @@ country_event = {
 				NOT = { tag = THIS }
 			}
 
-			country_event = { id = 96174 days = 30 }
+			country_event = { id = 96174 days = 7 }
 		}
 		any_country = {
 			limit = {
