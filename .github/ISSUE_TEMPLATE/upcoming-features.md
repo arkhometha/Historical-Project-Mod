@@ -21,12 +21,16 @@ assignees: arkhometha
 - 
 
 ### Suggestions
-1.
+1. _(Insert suggestions here)_
 
-2.
+***
+2. _(Insert suggestions here)_
 
-3.
+***
+3. _(Insert suggestions here)_
 
-4.
+***
+4. _(Insert suggestions here)_
 
-5.
+***
+5. _(Insert suggestions here)_
