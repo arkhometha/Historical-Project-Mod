@@ -225,9 +225,13 @@ end_bazaari_strike = {
 	effect = {
 		prestige_factor = -0.1
 		remove_country_modifier = bazaari_strike
-		remove_country_modifier = western_influences
 		years_of_research = -1
 		add_country_modifier = { name = uncivilized_isolationism duration = -1 }
+		remove_country_modifier = western_influences
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = closed_borders } } }
+			owner = { political_reform = closed_borders }
+		}
 		treasury = -50000
 		any_country = {
 			limit = { is_greater_power = yes }

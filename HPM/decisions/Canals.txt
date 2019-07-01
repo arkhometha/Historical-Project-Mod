@@ -16,7 +16,7 @@ political_decisions = {
 		
 		allow = {
 			invention = machine_tools
-			invention = drilling_and_blasting
+			drilling_and_blasting = 1
 			iron_steamers = 1
 			OR = {
 				money = 50000

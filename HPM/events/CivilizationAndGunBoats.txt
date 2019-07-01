@@ -38,7 +38,10 @@ country_event = {
 			name = "western_influences"
 			duration = -1
 		}
-
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
+		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -67,7 +70,10 @@ country_event = {
 			name = uncivilized_isolationism
 			duration = -1
 		}
-		
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = closed_borders } } }
+			owner = { political_reform = closed_borders }
+		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -2878,8 +2884,13 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_country_modifier = uncivilized_isolationism } }
 			owner = {
+				remove_country_modifier = uncivilized_isolationism
 				add_country_modifier = { name = western_influences duration = -1 }
 			}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
 		}
 		random_owned = {
 			limit = {
@@ -4032,6 +4043,23 @@ country_event = {
 			34 = { add_country_modifier = { name = global_baby_boom duration = 3650 } }
 			33 = { add_country_modifier = { name = global_baby_boom duration = 3285 } }
 			33 = { add_country_modifier = { name = global_baby_boom duration = 4015 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = uncivilized_isolationism
+					NOT = { border_policy = closed_borders } }
+				}
+			owner = { political_reform = closed_borders }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = western_influences
+					NOT = { border_policy = open_borders } }
+				}
+			owner = { political_reform = open_borders }
 		}
 		remove_country_modifier = assegai
 		remove_country_modifier = educational_reform

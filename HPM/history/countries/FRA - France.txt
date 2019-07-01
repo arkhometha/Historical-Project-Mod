@@ -72,10 +72,10 @@ experimental_railroad = 1
 basic_chemistry = 1
 stock_exchange = 1
 ad_hoc_money_bill_printing = 1
-market_structure = 1
 romanticism = 1
 interchangeable_parts = 1
 high_pressure_steam_engine = 1
+late_classical_theory = 1
 
 # Inventions
 secularization = yes

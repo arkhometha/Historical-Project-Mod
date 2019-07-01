@@ -1,4 +1,8 @@
 ;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+IS_NOT_RELIGION;The state religion is NOT;;;;;;;;;;;;;;;;;;x;;;;
+IS_RELIGION;The state religion is;;;;;;;;;;;;;;;;;;x;;;;
+CULTURE_IS_NOT;Culture is NOT accepted:;;;;;;;;;;;;;;;;;;;;;;x;;;
+CULTURE_IS;Culture is accepted:;;;;;;;;;;;;;;;;;;;x;;;
 steam_transport;Troopship;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 commerce_raider;Steam Frigate;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 oceanic;Pacific Islander;;;;;;;;;;;;;;;;;;;;;!;;;;;;;;x;;;
@@ -687,7 +691,6 @@ capital_punishment_l;Capital Punishment;;;;;;;;;;;;;x;;;;;;;;;;;;;;
 capital_punishment_desc;Convicts are killed for relatively minor crimes.;;;;;;;;;;;;;x;;;;;;;;;;;;;;
 movement_capital_punishment;Pro Capital Punishment League;;;;;;;;;;;;;x;;;;;;;;;;;;;;
 penal_system;Penal System;;;;;;;;;;;;;x;;;;;;;;;;;;;;
-penal_system_l;Penal System;;;;;;;;;;;;;x;;;;;;;;;;;;;;
 colonial_transportation;Transportation;;;;;;;;;;;;;x;;;;;;;;;;;;;;
 colonial_transportation_l;Transportation;;;;;;;;;;;;;x;;;;;;;;;;;;;;
 colonial_transportation_desc;Prisoners are sent to either far away or inhospitable places in the mother-country or to its colonies. This, however, increases the load on the bureaucracy.\n§YThis reform will increase colonial migration but it will also increase the necessity of bureaucrats.§W;;;;;;;;;;;;;x;;;;;;;;;;;;;;

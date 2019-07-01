@@ -584,79 +584,79 @@ country_event = {
 }
 
 # Blood & Iron Mine
-province_event = {
-	id = 12120
-	title = "EVTNAME12120"
-	desc = "EVTDESC12120"
+# province_event = {
+	# id = 12120
+	# title = "EVTNAME12120"
+	# desc = "EVTDESC12120"
 		
-	trigger = {
-		OR = {
-			produces = iron
-			produces = coal
-		}
-		NOT = { has_province_modifier = blood_and_iron_mine }
-		owner = {
-			#NOT = { has_global_flag = workplace_events_disabled }
-			civilized = yes
-			OR = {
-				advanced_metallurgy = 1
-				year = 1900
-			}
-			OR = {
-				any_owned_province = {
-					trade_goods = iron
-					unemployment_by_type = { value = 0.05 type = labourers }
-				}
-				any_neighbor_country = {
-					any_owned_province = {
-						trade_goods = iron
-						unemployment_by_type = { value = 0.05 type = labourers }
-					}
-				}
-				any_greater_power = {
-					any_owned_province = {
-						trade_goods = iron
-						unemployment_by_type = { value = 0.05 type = labourers }
-					}
-				}
-			}
-		}
-	}
+	# trigger = {
+		# OR = {
+			# produces = iron
+			# produces = coal
+		# }
+		# NOT = { has_province_modifier = blood_and_iron_mine }
+		# owner = {
+			# #NOT = { has_global_flag = workplace_events_disabled }
+			# civilized = yes
+			# OR = {
+				# advanced_metallurgy = 1
+				# year = 1900
+			# }
+			# OR = {
+				# any_owned_province = {
+					# trade_goods = iron
+					# unemployment_by_type = { value = 0.05 type = labourers }
+				# }
+				# any_neighbor_country = {
+					# any_owned_province = {
+						# trade_goods = iron
+						# unemployment_by_type = { value = 0.05 type = labourers }
+					# }
+				# }
+				# any_greater_power = {
+					# any_owned_province = {
+						# trade_goods = iron
+						# unemployment_by_type = { value = 0.05 type = labourers }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	mean_time_to_happen = {
-		months = 1200
-		modifier = {
-			factor = 0.9
-			NOT = { average_militancy = 5 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { is_greater_power = no }
-		}
-	}
+	# mean_time_to_happen = {
+		# months = 1200
+		# modifier = {
+			# factor = 0.9
+			# NOT = { average_militancy = 5 }
+		# }
+		# modifier = {
+			# factor = 1.5
+			# owner = { is_greater_power = no }
+		# }
+	# }
 	
-	option = {
-		name = "EVTOPTA12120"
-		state_scope = {
-			any_owned = {
-				limit = {
-					OR = {
-						trade_goods = iron
-						trade_goods = coal
-					}
-				}
-			add_province_modifier = { name = blood_and_iron_mine duration = 9125 }
-			}
-		}
-		ai_chance = { factor = 90 }
-	}
+	# option = {
+		# name = "EVTOPTA12120"
+		# state_scope = {
+			# any_owned = {
+				# limit = {
+					# OR = {
+						# trade_goods = iron
+						# trade_goods = coal
+					# }
+				# }
+			# add_province_modifier = { name = blood_and_iron_mine duration = 9125 }
+			# }
+		# }
+		# ai_chance = { factor = 90 }
+	# }
 	
-	option = {
-		name = "EVTOPTB12120"
-		state_scope = { labourers = { militancy = -1 } }
-		ai_chance = { factor = 10 }
-	}
-}
+	# option = {
+		# name = "EVTOPTB12120"
+		# state_scope = { labourers = { militancy = -1 } }
+		# ai_chance = { factor = 10 }
+	# }
+# }
 
 # Cottage Industry
 country_event = {

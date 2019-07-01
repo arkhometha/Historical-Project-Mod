@@ -131,7 +131,7 @@ oob = "BRA_oob.txt"
 #Inventions
 	john_ramsay_mcculloch = yes
 	nassau_william_sr = yes
-	james_mill = yes
+	#james_mill = yes
 	ammunition_production = yes
 	small_arms_production = yes
 	explosives_production = yes

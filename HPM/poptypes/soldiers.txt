@@ -173,8 +173,8 @@ migration_target = {
 	modifier = {
 		factor = 1.2
 		total_pops = 150000
-	}
-		modifier = {
+	}	
+	modifier = {
 		factor = 1.2
 		total_pops = 250000
 	}
@@ -198,47 +198,17 @@ migration_target = {
 		has_pop_culture = THIS
 	}
 	modifier = {
-    	factor = 0.25
-    	has_culture_core = no
+		factor = 1.2
+		# Audax Validator "." Ignore_NEXT
+		has_pop_religion = THIS
 	}
-	
-	modifier = {
-		factor = 0
-		NOT = { state_scope = {	work_available = { worker = craftsmen } } }
-		country = { economic_policy = planned_economy }
-		OR = {
-			unemployment_by_type = { type = farmers value = 0.1  }
-			unemployment_by_type = { type = labourers value = 0.1  }
-		}
-	}
-	
-	modifier = {
-		factor = 2
-		any_core = {
-			OR = {
-				is_primary_culture = THIS
-				is_accepted_culture = THIS
-			}
-		}
-		state_scope = {	work_available = { worker = craftsmen } }
-	}
-	#modifier = {
-	#	factor = 1.2
-	#	has_pop_religion = THIS
-	#}
 	modifier = {
 		factor = 1.5
 		any_core = { is_primary_culture = THIS }
 	}
+
 	modifier = {
-		factor = 0.75
-		OR = {
-			state_scope = { is_slave = yes }
-			is_overseas = yes
-		}
-	}
-	modifier = {
-		factor = 20000
+		factor = 2
 		is_state_capital = yes
 	}		
 	modifier = {
@@ -249,12 +219,12 @@ migration_target = {
 		factor = 1.05
 		is_coastal = yes
 	}
-		
+	
 	modifier = {
 		factor = 0.8
 		terrain = steppe
 	}
-
+	
 	modifier = {
 		factor = 0.7
 		terrain = savanna
@@ -328,7 +298,7 @@ migration_target = {
 	
 	modifier = {
 		factor = 1.05
-		country = { colonial_nation = no }
+		NOT = { country = { any_owned_province = { is_colonial = yes } } }
 		country = { penal_system = colonial_transportation }
 		OR = {
 			trade_goods = coal

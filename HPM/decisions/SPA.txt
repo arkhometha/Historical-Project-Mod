@@ -98,8 +98,8 @@ political_decisions = {
 	picture = falangist_doctrine
 		potential = {
 			OR = {
-			tag = SPA
-			tag = SPC
+				tag = SPA
+				tag = SPC
 			}
 			government = fascist_dictatorship
 			NOT = { has_country_flag = falangist_doctrine }
@@ -113,64 +113,47 @@ political_decisions = {
 			set_country_flag = falangist_doctrine
 			remove_accepted_culture = basque
 			remove_accepted_culture = catalan
-			badboy = 25
+			badboy = 10
 			460 = { add_core = THIS }
 			457 = { add_core = THIS } 
 			464 = { add_core = THIS }
 			517 = { add_core = THIS }
-			casus_belli = {
-				target = POR
-				type = conquest_any
-				months = 48
+			any_pop = {
+				limit = { has_pop_culture = spanish }
+				scaled_consciousness = {
+					factor = -9
+					ideology = fascist
 				}
-			random_country = {
-				limit = {
-					NOT = { tag = THIS }
-					owns = 2209
-					2209 = { is_capital = yes }
-					NOT = { number_of_states = 2 }
+				scaled_militancy = {
+					factor = -9
+					ideology = fascist
+					}
+				scaled_consciousness = {
+					factor = -6
+					ideology = reactionary
 				}
-				add_casus_belli = {
-						target = THIS
-						type = conquest
-						months = 24
-				}
-			}
-		any_pop = { limit = { has_pop_culture = spanish }
-			scaled_consciousness = {
-				factor = -9
-				ideology = fascist
-				}
-			scaled_militancy = {
-				factor = -9
-				ideology = fascist
-				}
-			scaled_consciousness = {
-				factor = -6
-				ideology = reactionary
-				}
-			scaled_militancy = {
-				factor = -3
-				ideology = reactionary
+				scaled_militancy = {
+					factor = -3
+					ideology = reactionary
 				}
 			}
 		
-		any_pop = {
-			scaled_consciousness = {
-				factor = 8
-				ideology = liberal
+			any_pop = {
+				scaled_consciousness = {
+					factor = 8
+					ideology = liberal
 				}
-			scaled_militancy = {
-				factor = 6
-				ideology = liberal
+				scaled_militancy = {
+					factor = 6
+					ideology = liberal
 				}
-			scaled_consciousness = {
-				factor = 9
-				ideology = anarcho_liberal
+				scaled_consciousness = {
+					factor = 9
+					ideology = anarcho_liberal
 				}
-			scaled_militancy = {
-				factor = 7
-				ideology = anarcho_liberal
+				scaled_militancy = {
+					factor = 7
+					ideology = anarcho_liberal
 				}
 			}
 		

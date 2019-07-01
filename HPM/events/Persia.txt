@@ -235,6 +235,10 @@ country_event = {
 		clr_country_flag = ulama_yes
 		remove_country_modifier = western_influences
 		add_country_modifier = { name = uncivilized_isolationism duration = -1 }
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = closed_borders } } }
+			owner = { political_reform = closed_borders }
+		}
 		treasury = -50000
 		prestige_factor = -0.5
 		any_country = {
@@ -288,6 +292,10 @@ country_event = {
 		clr_country_flag = ulama_no
 		remove_country_modifier = western_influences
 		add_country_modifier = { name = uncivilized_isolationism duration = -1 }
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = closed_borders } } }
+			owner = { political_reform = closed_borders }
+		}
 		treasury = -50000
 		prestige_factor = -0.5
 		any_country = {
@@ -370,6 +378,10 @@ country_event = {
 		years_of_research = -1
 		remove_country_modifier = western_influences
 		add_country_modifier = { name = uncivilized_isolationism duration = -1 }
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = closed_borders } } }
+			owner = { political_reform = closed_borders }
+		}
 		treasury = -50000
 		prestige_factor = -0.6
 		any_country = {

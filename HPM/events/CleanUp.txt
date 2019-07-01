@@ -298,6 +298,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -479,6 +481,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -638,6 +642,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -774,6 +780,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -913,6 +921,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1059,6 +1069,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1203,6 +1215,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1342,6 +1356,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1481,6 +1497,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1621,6 +1639,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland

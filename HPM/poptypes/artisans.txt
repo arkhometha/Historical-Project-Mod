@@ -193,10 +193,10 @@ migration_target = {
 	modifier = {
 		factor = 0
 		NOT = { state_scope = {	work_available = { worker = craftsmen } } }
-		country = { economic_policy = planned_economy }
+		can_build_factory = no
 		OR = {
-			unemployment_by_type = { type = farmers value = 0.1  }
-			unemployment_by_type = { type = labourers value = 0.1  }
+			unemployment_by_type = { type = farmers value = 0.03  }
+			unemployment_by_type = { type = labourers value = 0.03  }
 		}
 	}
 	modifier = {
@@ -204,29 +204,35 @@ migration_target = {
 		has_pop_culture = THIS
 	}
 	modifier = {
-		factor = 2
-		any_core = {
-			OR = {
-				is_primary_culture = THIS
-				is_accepted_culture = THIS
-			}
-		}
-		state_scope = {	work_available = { worker = craftsmen } }
+   		factor = 0.25
+   		has_culture_core = no
 	}
-	#modifier = {
-	#	factor = 1.2
-	#	has_pop_religion = THIS
-	#}
+	modifier = {
+		factor = 2
+		OR = {
+			is_accepted_culture = yes
+			is_primary_culture = yes
+		}
+		state_scope = {
+			OR = {
+				is_accepted_culture = yes
+				is_primary_culture = yes
+			}
+			work_available = { worker = craftsmen }
+		}
+	}
+	modifier = {
+		factor = 1.2
+		# Audax Validator "." Ignore_NEXT
+		has_pop_religion = THIS
+	}
 	modifier = {
 		factor = 1.5
 		any_core = { is_primary_culture = THIS }
 	}
 	modifier = {
 		factor = 0.75
-		OR = {
-			state_scope = { is_slave = yes }
-			is_overseas = yes
-		}
+		state_scope = { is_slave = yes }
 	}
 	modifier = {
 		factor = 2
@@ -316,7 +322,30 @@ migration_target = {
 		factor = 0.05
 		terrain = montane_tundra
 	}
-
+	
+	modifier = {
+		factor = 1.05
+		NOT = { country = { any_owned_province = { is_colonial = yes } } }
+		country = { penal_system = colonial_transportation }
+		OR = {
+			trade_goods = coal
+			trade_goods = sulphur
+			trade_goods = iron
+			trade_goods = precious_metal
+			trade_goods = tobacco
+			trade_goods = coffee
+			trade_goods = tea
+		}
+		OR = {
+			terrain = desert
+			terrain = arctic
+			terrain = semidesert
+			terrain = boreal
+			terrain = small_island
+			terrain = montane_tundra
+			terrain = coral_island
+		}
+	}
 	modifier = {
 		factor = 2
 		life_rating = 40

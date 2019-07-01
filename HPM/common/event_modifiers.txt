@@ -4,6 +4,12 @@
 
 ####AI Personalities
 
+coward_ai = {
+	badboy = -0.01
+	cb_generation_speed_modifier = 0.25
+	icon = 3
+}
+
 benefactor_ai = {
 	cb_generation_speed_modifier = 0.1
 	icon = 3
@@ -1411,12 +1417,12 @@ silk_famine = {
 	icon = 14
 }
 
-blood_and_iron_mine = {
-	mine_rgo_eff = 0.5
-	mine_rgo_size = 0.25
-	pop_consciousness_modifier = 0.01
-	icon = 14
-}
+# blood_and_iron_mine = {
+	# mine_rgo_eff = 0.5
+	# mine_rgo_size = 0.25
+	# pop_consciousness_modifier = 0.01
+	# icon = 14
+# }
 
 ##### TEMPERANCE LEAGUE #####
 libertine_culture = {
@@ -1608,14 +1614,20 @@ local_tractors = {
 }
 
 local_nitroglycerin_and_machine_tools = {
-	mine_RGO_eff = 0.6
+	mine_RGO_eff = 0.5
+	mine_RGO_size = 0.5
+	icon = 13
+}
+
+local_conveyors_and_excavators = {
+	mine_RGO_eff = 0.5
 	mine_RGO_size = 0.5
 	icon = 13
 }
 
 local_distribution_channels_und_electricity = {
 	farm_RGO_eff = 0.5 #0.5
-	mine_RGO_eff = 0.75 #0.5
+	mine_RGO_eff = 0.5 #0.5
 	local_factory_throughput = 0.1 #0.05
 	icon = 11
 }

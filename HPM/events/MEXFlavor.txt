@@ -849,11 +849,11 @@ country_event = {
 		any_owned = { limit = { is_core = MEX } secede_province = MEX }
 		diplomatic_influence = {
 			who = FROM
-			value = 400
+			value = -50
 		}
 		relation = {
 			who = FROM
-			value = 200
+			value = 300
 		}
 	}
 }
@@ -1511,6 +1511,7 @@ country_event = {
 		treasury = 120000
 		relation = { who = FROM value = 25 }
 		diplomatic_influence = { who = MEX value = 100 }
+		set_country_flag = pastry_war
 	}
 }
 

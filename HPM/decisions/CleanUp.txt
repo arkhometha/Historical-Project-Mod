@@ -2307,11 +2307,16 @@ political_decisions = {
 				ai = no
 				civilized = yes
 				is_disarmed = no
-				capital_scope = { continent = europe }
+				OR = {
+					capital_scope = { continent = europe }
+					tech_school = naval_tech_school
+					tech_school = japanese_tech_school
+				}
 				state_n_government = 1
 				OR = {
 					#Mozambique
 					AND = {
+						capital_scope = { continent = europe }
 						OR = {
 							has_country_flag = reconquest_of_lourenco_marques
 							AND = {
@@ -2333,6 +2338,7 @@ political_decisions = {
 					
 					#Algiers
 					AND = {
+						capital_scope = { continent = europe }
 						OR = {
 							has_country_flag = marched_through_the_iron_gates
 							AND = {
@@ -2355,6 +2361,7 @@ political_decisions = {
 					
 					#Yemen
 					AND = {
+						capital_scope = { continent = europe }
 						nationalism_n_imperialism = 1
 						OR = {
 							owns = 1412

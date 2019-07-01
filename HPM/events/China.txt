@@ -36,6 +36,23 @@ country_event = {
 		GNG = { all_core = { add_core = CHI } }
 		FJN = { all_core = { add_core = CHI } }
 		KML = { all_core = { add_core = CHI } }
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = uncivilized_isolationism
+					NOT = { border_policy = closed_borders } }
+				}
+			owner = { political_reform = closed_borders }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = western_influences
+					NOT = { border_policy = open_borders } }
+				}
+			owner = { political_reform = open_borders }
+		}
 		add_country_modifier = { name = global_baby_boom duration = 730 }
 		prestige = 10
 		remove_country_modifier = educational_reform
@@ -189,6 +206,23 @@ country_event = {
 		random_owned = { 
 			limit = { owner = { has_country_flag = activate_experimental_railroad } NOT = { experimental_railroad = 1 } }
 			owner = { activate_technology = experimental_railroad  clr_country_flag = activate_experimental_railroad }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = uncivilized_isolationism
+					NOT = { border_policy = closed_borders } }
+				}
+			owner = { political_reform = closed_borders }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = western_influences
+					NOT = { border_policy = open_borders } }
+				}
+			owner = { political_reform = open_borders }
 		}
 		random_country = {
 			limit = {

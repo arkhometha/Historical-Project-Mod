@@ -295,6 +295,10 @@ building_station_shipyards = {
 			factor = -6
 			NOT = { civilized = yes }
 		}
+		modifier = {
+			factor = -6
+			NOT = { invention = clipper_shipyard_construction }
+		}
 	}
 	effect = {
 		factory_goods_throughput = {
@@ -314,10 +318,6 @@ clipper_shipyard_construction = {
 		modifier = {
 			factor = 1
 			naval_design_bureaus = 1
-		}
-		modifier = {
-			factor = -6
-			NOT = { civilized = yes }
 		}
 	}
 	effect = {
@@ -518,7 +518,7 @@ ironclads = {
 		ironclad = {
 			hull = 3
 			gun_power = 3
-			firing_range = 0.1
+			fire_range = 0.1
 		}
 	}
 }

@@ -107,14 +107,14 @@ country_event = {
 	mean_time_to_happen = {
 		months = 6
 	}				
-			
+
 	option = {
 		name = "EVT45102OPTA"
 		any_pop = {
 			limit = {
 				location = { is_core = DOM }
 				has_pop_culture = caribeno
-				}
+			}
 			militancy = 5
 			consciousness = 5
 		}
@@ -148,7 +148,7 @@ country_event = {
 		NOT = { truce_with = HAI }
 	}
 	
-	mean_time_to_happen = { months = 48 }
+	mean_time_to_happen = { months = 60 }
 		
 			
 	option = {
