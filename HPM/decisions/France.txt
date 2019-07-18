@@ -380,6 +380,69 @@ political_decisions = {
 		}
 	}
 	
+	plantations_in_comoros = {
+		picture = dreams_of_empire
+		potential = {
+			NOT = { 
+				2124 = { empty = yes }
+				2123 = { empty = yes }
+			}
+			OR = {
+				owns = 2124
+				owns = 2123
+			}
+			civilized = yes
+			NOT = { has_global_flag = colonial_comoros }
+		}
+		
+		allow = {
+			compound_steam_engines = 1
+		}
+		
+		effect = {
+			set_global_flag = colonial_comoros
+			prestige = 2
+			2124 = {
+				trade_goods = coffee
+				life_rating = 5
+			}
+			2123 = {
+				trade_goods = coffee
+				life_rating = 5
+			}
+		}
+	}
+	
+	cotton_in_algiers = {
+		picture = dreams_of_empire
+		potential = {
+			owns = 1704
+			owns = 1706
+			owns = 1700
+			civilized = yes
+			NOT = { has_global_flag = lets_grow_cotton_in_algiers }
+		}
+		
+		allow = {
+			compound_steam_engines = 1
+			business_regulations = 1
+		}
+		
+		effect = {
+			set_global_flag = lets_grow_cotton_in_algiers
+			prestige = 2
+			1706 = {
+				trade_goods = cotton
+			}
+			1704 = {
+				trade_goods = cotton
+			}
+			1703 = {
+				trade_goods = cotton
+			}
+		}
+	}
+	
 	claim_savoy = {
 		picture = form_italy
 		potential = {
@@ -515,13 +578,21 @@ political_decisions = {
 			war = no
 			nationalism_n_imperialism = 1
 			has_global_flag = berlin_conference
-			3246 = { owner = { NOT = { truce_with = THIS } relation = { who = THIS value = 60 } } }
+			3246 = {
+				owner = {
+					NOT = {
+						truce_with = THIS 
+						relation = { who = THIS value = 0 }
+					}
+				}
+			}
 		}
 		
 		effect = {
 			set_country_flag = st_barths_referendum
 			3246 = { owner = { country_event = 36623 } }
 		}
+		
 		ai_will_do = { factor = 1 }
 	}
 	

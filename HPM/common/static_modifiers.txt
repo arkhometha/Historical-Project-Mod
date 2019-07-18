@@ -143,6 +143,7 @@ nationalism = {
 infrastructure = {
 	local_factory_throughput = 1		#each % of infra boost throughput 1%
 	local_rgo_output = 1			#each % of infra boost throughput 1%
+	immigrant_attract = 0.05
 	supply_limit = 4
 }
 

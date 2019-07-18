@@ -8578,7 +8578,13 @@ colonial_conquest = {
 			is_disarmed = no
 			NOT = { war_policy = pacifism }
 			OR = {
-				capital_scope = { continent = europe }
+				AND = {
+					capital_scope = { continent = europe }
+					NOT = {
+						tag = TUR
+						tag = RUS
+					}
+				}
 				tech_school = naval_tech_school
 				tech_school = japanese_tech_school
 			}
@@ -8636,7 +8642,6 @@ colonial_conquest = {
 			#Yemen
 			AND = {
 				THIS = {
-					capital_scope = { continent = europe }
 					nationalism_n_imperialism = 1
 					OR = {
 						owns = 1412

@@ -3800,11 +3800,25 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA16400"
-		FROM = {
-			all_core = {
-				add_core = USA
+		random_country = {
+			limit = {
+				tag = FROM
+				primary_culture = texan
 			}
+			any_owned = { add_core = USA }
 		}
+		random_country = {
+			limit = {
+				tag = FROM
+				NOT = { primary_culture = texan }
+			}
+			all_core = { add_core = USA }
+		}
+		# FROM = {
+			# all_core = {
+				# add_core = USA
+			# }
+		# }
 		
 		inherit = FROM
 		random_owned = {

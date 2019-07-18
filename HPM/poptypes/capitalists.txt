@@ -45,18 +45,12 @@ everyday_needs = {
 
 #Total cash needed: 3883 - Vanilla value: 3863
 luxury_needs = {
-	luxury_clothes = 0.5
-	luxury_furniture = 0.5
+	#luxury_clothes = 0.5
+	#luxury_furniture = 0.5
 	steel = 0.5
 	cement = 0.5
 	lumber = 1
 	canned_food = 5
-	grain = 40
-	fruit = 40
-	wool = 40
-	cattle = 40
-	fish = 40
-	opium = 20
 	oil = 10
 	rubber = 10
 	telephones = 20

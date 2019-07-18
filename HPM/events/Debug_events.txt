@@ -8,7 +8,6 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA60000"
-		any_pop = { militancy = -10 consciousness = -10 }
 		# upper_house = {
 			# ideology = liberal
 			# value = 50

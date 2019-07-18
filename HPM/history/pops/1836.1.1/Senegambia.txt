@@ -39,6 +39,24 @@
 		size = 17800
 	}
 	
+	artisans = {
+		culture = french
+		religion = catholic
+		size = 100
+	}
+	
+	soldiers = {
+		culture = french
+		religion = catholic
+		size = 100
+	}
+	
+	farmers = {
+		culture = french
+		religion = catholic
+		size = 100
+	}
+	
 }
 #Linguere (216000/54000 POPS)
 1786 = {
@@ -331,6 +349,24 @@
 		culture = fulbe
 		religion = sunni
 		size = 700
+	}
+	
+	artisans = {
+		culture = french
+		religion = catholic
+		size = 100
+	}
+	
+	soldiers = {
+		culture = french
+		religion = catholic
+		size = 100
+	}
+	
+	farmers = {
+		culture = french
+		religion = catholic
+		size = 100
 	}
 }
 #uncolonized/British have trade post in 1836
