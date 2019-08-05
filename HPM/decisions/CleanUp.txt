@@ -3644,6 +3644,10 @@ political_decisions = {
 					overlord = { tag = RUS }
 				}
 				AND = {
+					tag = POR
+					overlord = { primary_culture = spanish }
+				}
+				AND = {
 					tag = SBA
 					overlord = {
 						OR = {

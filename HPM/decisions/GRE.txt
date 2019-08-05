@@ -71,16 +71,7 @@ political_decisions = {
 		
 		effect = {
 			prestige = 10
-			badboy = 5
-			TUR_860 = {
-				add_core = GRE
-			}
-			TUR_863 = {
-				add_core = GRE
-			}
-			TUR_869 = {
-				add_core = GRE
-			}
+			country_event = 5000001
 			set_country_flag = greece_has_got_a_brand_new_bag
 		}
 	}
@@ -115,6 +106,10 @@ political_decisions = {
 					ai = yes
 					THIS = { ai = yes }
 				}
+				THIS = {
+					remove_accepted_culture = north_italian
+					remove_accepted_culture = british
+				}
 				inherit = THIS
 			}
 			random_country = {
@@ -126,6 +121,8 @@ political_decisions = {
 				any_owned = { secede_province = THIS }
 				THIS = {
 					remove_accepted_culture = turkish
+					remove_accepted_culture = north_italian
+					remove_accepted_culture = british
 					random_owned = {
 						limit = { province_id = 834 }
 						owner = { capital = 834 }
@@ -214,6 +211,13 @@ political_decisions = {
 						exists = no
 					}
 				}
+				GRE = {
+					NOT = { has_country_flag = normalized_cultures }
+					OR = {
+						accepted_culture = british
+						accepted_culture = north_italian
+					}
+				}
 				HAW = {
 					NOT = { has_country_flag = normalized_cultures }
 					accepted_culture = yankee
@@ -240,6 +244,19 @@ political_decisions = {
 					OR = {
 						any_owned_province = { NOT = { is_core = ION } }
 						exists = no
+					}
+				}
+				set_country_flag = normalized_cultures
+				remove_accepted_culture = british
+				remove_accepted_culture = north_italian
+			}
+			
+			any_country = {
+				limit = {
+					tag = GRE
+					OR = {
+						accepted_culture = british
+						accepted_culture = north_italian
 					}
 				}
 				set_country_flag = normalized_cultures

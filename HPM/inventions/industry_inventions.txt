@@ -1393,7 +1393,7 @@ synthetic_dye = {
 	}
 }
 gaslights = {
-	limit = { inorganic_chemistry = 1 }
+	limit = { organic_chemistry = 1 }
 	chance = {
 		base = 2
 		modifier = {
