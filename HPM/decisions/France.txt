@@ -1010,9 +1010,11 @@ political_decisions = {
 		}
 			
 		effect = {
-			remove_accepted_culture = french_canadian
-			primary_culture = french_canadian
-			add_accepted_culture = anglo_canadian
+			CAN = {
+				remove_accepted_culture = french_canadian
+				primary_culture = french_canadian
+				add_accepted_culture = anglo_canadian
+			}
 			random_owned = {
 				limit = { owner = { slavery = no_slavery } }
 				owner = {
