@@ -258,32 +258,45 @@ political_decisions = {
 
 		allow = {
 			war = no
-			any_neighbor_country = {
-				OR = {
-					tag = POL
-					tag = CPL
-				}
-				is_vassal = no
-				war = no
-				relation = { who = THIS value = 50 }
-			}
 			OR = {
-				is_vassal = no
-				overlord = {
+				POL = {
+					neighbour = THIS
+					NOT = { exists = CPL }
+					war = no
+					is_vassal = no
+					relation = { who = THIS value = 50 }
 					OR = {
-						tag = POL
-						tag = CPL
+						THIS = { is_vassal = no }
+						overlord = { tag = POL }
+					}
+					OR = {
+						THIS = { NOT = { part_of_sphere = yes } }
+						sphere_owner = {
+							OR = {
+								is_sphere_leader_of = POL
+								tag = POL
+							}
+						}
 					}
 				}
-			}
-			OR = {
-				part_of_sphere = no
-				sphere_owner = {
+				CPL = {
+					neighbour = THIS
+					NOT = { exists = POL }
+					is_vassal = no
+					war = no
+					relation = { who = THIS value = 50 }
 					OR = {
-						is_sphere_leader_of = POL
-						is_sphere_leader_of = CPL
-						tag = POL
-						tag = CPL
+						THIS = { is_vassal = no }
+						overlord = { tag = CPL }
+					}
+					OR = {
+						THIS = { NOT = { part_of_sphere = yes } }
+						sphere_owner = {
+							OR = {
+								is_sphere_leader_of = CPL
+								tag = CPL
+							}
+						}
 					}
 				}
 			}
