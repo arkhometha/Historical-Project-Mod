@@ -1156,6 +1156,7 @@ country_event = {
 	option = {
 		name = "EVTOPTC96016" #We have no interest in their colonies
 		set_country_flag = not_want_colonies
+		remove_country_modifier = dismantling_country
 		badboy = -2
 		FROM = { country_event = 96019 }
 	}
