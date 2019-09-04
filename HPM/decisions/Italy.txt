@@ -676,6 +676,7 @@ political_decisions = {
 			badboy = 2
 			set_country_flag = conquest_adriatic_happened
 			AUS_780 = { add_core = ITA }
+			2582 = { add_core = ITA }
 			774 = { add_core = ITA }
 		}
 		
