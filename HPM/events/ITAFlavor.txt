@@ -147,7 +147,7 @@ country_event = {
 
 	option = {
 		name = "EVT90038OPTA"
-		diplomatic_influence = { who = SAR value = 100 }
+		diplomatic_influence = { who = FROM value = 100 }
 		random_owned = {
 			limit = {
 				owner = {
@@ -169,7 +169,7 @@ country_event = {
 			}
 			owner = { badboy = 3 }
 		}
-		SAR = {
+		FROM = {
 			prestige = 10
 			relation = {
 				who = FRA
@@ -189,7 +189,10 @@ country_event = {
 					part_of_sphere = no
 				}
 				ai = yes
-				NOT = { alliance_with = FRA }
+				NOT = {
+					alliance_with = FRA
+					tag = FROM
+				}
 			}
 			create_alliance = FRA
 		}		
