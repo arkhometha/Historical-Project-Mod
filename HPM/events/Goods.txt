@@ -84,6 +84,8 @@ province_event = {
 			province_id = 1084			# Utchan
 			province_id = 2645			# Bodaybo, Russia
 			#province_id = 2058			# Moyo, Mozambique
+			province_id = 2246			# Maripasoula, French Guiana
+			province_id = 2241			# Cayenne, French Guiana
 		}
 		NOT = {
 			year = 1900
@@ -151,7 +153,16 @@ province_event = {
 			#province_id = 2400			# Rio Grande
 			province_id = 1643			# Sapporo
 			province_id = 409			# Strasbourg
+			AND = {
+				province_id = 2116			# Fianarantsoa (ambositra)
+				owner = { invention = cyanide_milling }
+			}
+			AND = {
+				province_id = 2201			# San Jose, Costa Rica
+				year = 1888
+			}
 		}
+		
 		NOT = {
 			year = 1920
 			trade_goods = precious_metal

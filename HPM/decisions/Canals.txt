@@ -16,7 +16,7 @@ political_decisions = {
 		
 		allow = {
 			invention = machine_tools
-			invention = nitroglycerin
+			drilling_and_blasting = 1
 			iron_steamers = 1
 			OR = {
 				money = 50000
@@ -200,9 +200,10 @@ political_decisions = {
 		}
 		allow = {
 			invention = machine_tools
-			invention = nitroglycerin
+			invention = trinitrotoluene
 			invention = prophylaxis_against_malaria
 			iron_steamers = 1
+			
 			1723 = {
 				OR = {
 					owned_by = THIS

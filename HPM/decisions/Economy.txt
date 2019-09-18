@@ -100,6 +100,46 @@ political_decisions = {
 				factor = 0
 				money = 3000000
 			}
+			modifier = {
+				factor = 0
+				capital_scope = { continent = europe }
+				NOT = { month = 2 }
+			}
+			modifier = {
+				factor = 0
+				capital_scope = { continent = asia }
+				NOT = { month = 3 }
+			}
+			modifier = {
+				factor = 0
+				capital_scope = { continent = africa }
+				NOT = { month = 4 }
+			}
+			modifier = {
+				factor = 0
+				capital_scope = { continent = north_america }
+				NOT = { month = 5 }
+			}
+			modifier = {
+				factor = 0
+				capital_scope = { continent = south_america }
+				NOT = { month = 6 }
+			}
+			modifier = {
+				factor = 0
+				capital_scope = { continent = oceania }
+				NOT = { month = 7 }
+			}
+			modifier = {
+				factor = 0
+				capital_scope = { continent = australia_new_zealand }
+				NOT = { month = 8 }
+			}
+			modifier = {
+				factor = 0
+				capital_scope = { continent = polynesia }
+				NOT = { month = 9 }
+			}
 		}
 	}
 	
@@ -108,6 +148,7 @@ political_decisions = {
 		potential = {
 			ai = yes
 			exists = yes
+			year = 1846
 			OR = {
 				AND = {
 					OR = {

@@ -5,7 +5,7 @@
 	aristocrats = {
 		culture = czech
 		religion = catholic
-		size = 1500
+		size = 3600
 	}
 
 	capitalists = {
@@ -35,7 +35,7 @@
 	artisans = {
 		culture = czech
 		religion = catholic
-		size = 11100
+		size = 9000
 	}
 	
 	craftsmen = {
@@ -83,7 +83,7 @@
 	aristocrats = {
 		culture = south_german
 		religion = catholic
-		size = 2500 
+		size = 3500 
 	}
 
 	bureaucrats = {
@@ -107,7 +107,7 @@
 	artisans = {
 		culture = south_german
 		religion = catholic
-		size = 8700
+		size = 7700
 	}
 	
 	craftsmen = {

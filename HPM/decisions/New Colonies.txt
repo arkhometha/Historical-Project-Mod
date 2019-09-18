@@ -2864,6 +2864,16 @@ political_decisions = {
 			FRA_1803 = { add_core = MLI }
 			FRA_1801 = { add_core = MLI }
 			FRA_1798 = { add_core = MLI }
+			1795 = { change_province_name = "Kayes" }
+			
+			
+			random_owned = {
+				limit = {
+					province_id = 1795
+					owner = { NOT = { is_culture_group = french } }
+				}
+				change_province_name = "Kayes"
+			}
 			
 			any_owned = {
 				limit = { is_core = MLI }
@@ -4074,6 +4084,7 @@ political_decisions = {
 		effect = {
 			set_global_flag = algeria_organized
 			prestige = 3
+			1701 = { trade_goods = fruit }
 			ALD = {
 				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
@@ -4755,6 +4766,8 @@ political_decisions = {
 				remove_core = MAS
 				remove_core = MOS
 			}
+			
+			1905 = { change_province_name = "Bobo-Dioulasso" }
 			
 			BKF = {
 				set_country_flag = post_colonial_country

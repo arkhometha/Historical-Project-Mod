@@ -43,6 +43,7 @@ political_decisions = {
 			plurality = -50
 			add_country_modifier = { name = interment_camps duration = -1 }
 			set_country_flag = government_busy_with_something
+			set_country_flag = internment_camps_open
 			set_variable = { which = evidence_count value = 0 }
 			set_variable = { which = slowdown_point value = 0 }
 			random_owned = {
@@ -110,6 +111,8 @@ political_decisions = {
 			}
 			#Block
 			clr_country_flag = government_busy_with_something
+			#Flag for pops
+			clr_country_flag = internment_camps_open
 			#Place
 			clr_country_flag = interning_on_colonies
 			clr_country_flag = interning_on_homeland

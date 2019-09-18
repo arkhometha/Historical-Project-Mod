@@ -8577,7 +8577,17 @@ colonial_conquest = {
 			NOT = { has_country_modifier = claimed_africa }
 			is_disarmed = no
 			NOT = { war_policy = pacifism }
-			capital_scope = { continent = europe }
+			OR = {
+				AND = {
+					capital_scope = { continent = europe }
+					NOT = {
+						tag = TUR
+						tag = RUS
+					}
+				}
+				tech_school = naval_tech_school
+				tech_school = japanese_tech_school
+			}
 			state_n_government = 1
 		}
 		
@@ -8585,6 +8595,7 @@ colonial_conquest = {
 			#Mozambique
 			AND = {
 				THIS = {
+					capital_scope = { continent = europe }
 					OR = {
 						NOT = { has_global_flag = berlin_conference }
 						NOT = { nationalism_n_imperialism = 1 }
@@ -8609,6 +8620,7 @@ colonial_conquest = {
 			#Algiers
 			AND = {
 				THIS = {
+					capital_scope = { continent = europe }
 					OR = {
 						has_country_flag = marched_through_the_iron_gates
 						AND = {
@@ -8754,6 +8766,7 @@ colonial_conquest = {
 			#Mozambique
 			AND = {
 				THIS = {
+					capital_scope = { continent = europe }
 					OR = {
 						NOT = { has_global_flag = berlin_conference }
 						NOT = { nationalism_n_imperialism = 1 }
@@ -8778,6 +8791,7 @@ colonial_conquest = {
 			#Algiers
 			AND = {
 				THIS = {
+					capital_scope = { continent = europe }
 					OR = {
 						has_country_flag = marched_through_the_iron_gates
 						AND = {
@@ -8799,6 +8813,7 @@ colonial_conquest = {
 			#Yemen
 			AND = {
 				THIS = {
+					capital_scope = { continent = europe }
 					nationalism_n_imperialism = 1
 					OR = {
 						owns = 1412
@@ -9336,12 +9351,38 @@ war_reparations = {
 	po_reparations = yes
 
 	war_name = WAR_NAME_REPARATIONS
-	
+		
 	on_add = {
 		move_issue_percentage = { 
 			from = jingoism 
 			to = pro_military
 			value = 0.25
+		}
+	}
+	
+	on_po_accepted = {
+		random_owned = {
+			limit = {
+				owner = {
+					tag = HAI
+					FRA = { is_greater_power = yes }
+					NOT = { has_country_flag = agreed_to_pay_debt }
+				}
+			}
+			owner = {
+				country_event = 45108
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = MEX
+					has_country_flag = pay_1st_pastry_war
+				}
+			}
+			owner = {
+				country_event = 45108
+			}
 		}
 	}
 }

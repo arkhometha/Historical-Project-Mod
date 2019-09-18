@@ -30,7 +30,7 @@ conscription = no_draft
 debt_law = serfdom
 penal_system = capital_punishment
 child_labor = child_labor_legalcitizens_rights = primary_culture_only
-border_policy = open_borders
+border_policy = closed_borders
 
 set_country_flag = mahayana_country
 
@@ -66,9 +66,9 @@ nonstate_consciousness = 0
 modern_winemaking = yes
 small_arms_production = yes
 ammunition_production = yes
-big_sail_ships = yes
-sail_ships_transport = yes
-big_sail_support = yes
+#big_sail_ships = yes
+#sail_ships_transport = yes
+#big_sail_support = yes
 
 oob = "KOR_oob.txt"
 1861.1.1 = {

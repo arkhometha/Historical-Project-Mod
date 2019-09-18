@@ -38,7 +38,10 @@ country_event = {
 			name = "western_influences"
 			duration = -1
 		}
-
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
+		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -67,7 +70,10 @@ country_event = {
 			name = uncivilized_isolationism
 			duration = -1
 		}
-		
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = closed_borders } } }
+			owner = { political_reform = closed_borders }
+		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -2878,8 +2884,13 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_country_modifier = uncivilized_isolationism } }
 			owner = {
+				remove_country_modifier = uncivilized_isolationism
 				add_country_modifier = { name = western_influences duration = -1 }
 			}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
 		}
 		random_owned = {
 			limit = {
@@ -4020,6 +4031,7 @@ country_event = {
 
 	option = {				
 		name = "EVTOPTA90910"
+		civilized = yes
 		prestige = 5
 		tech_school = traditional_academic
 		clr_country_flag = lacking_writing_system
@@ -4032,6 +4044,23 @@ country_event = {
 			34 = { add_country_modifier = { name = global_baby_boom duration = 3650 } }
 			33 = { add_country_modifier = { name = global_baby_boom duration = 3285 } }
 			33 = { add_country_modifier = { name = global_baby_boom duration = 4015 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = uncivilized_isolationism
+					NOT = { border_policy = closed_borders } }
+				}
+			owner = { political_reform = closed_borders }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = western_influences
+					NOT = { border_policy = open_borders } }
+				}
+			owner = { political_reform = open_borders }
 		}
 		remove_country_modifier = assegai
 		remove_country_modifier = educational_reform
@@ -4060,6 +4089,7 @@ country_event = {
 			remove_province_modifier = boxer_presence
 			remove_province_modifier = boxer_agitation
 		}
+		
 		random_owned = {
 			limit = { owner = { tag = DAI } }
 			owner = { country_event = { days = 2 id = 199072 } }
@@ -4068,7 +4098,55 @@ country_event = {
 			limit = { owner = { tag = CAM } }
 			owner = { country_event = { days = 2 id = 199071 } }
 		}
+		
+		#Non-cores should flip to colonies
+		random_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				owner = { NOT = { exists = UTI } }
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						NOT = {
+							is_core = THIS
+							is_colonial = yes
+							is_accepted_culture = yes
+							is_primary_culture = yes
+							any_core = { is_cultural_union = THIS }
+							#any_neighbor_province = { is_core = THIS } #Rule excluding neighbouring states from the non-core rule
+						}
+						any_core = {
+							OR = {
+								civilized = no
+								tech_school = developing_tech_school
+							}
+						}
+					}
+					secede_province = UTI 
+					UTI = { country_event =  90911 }
+				}
+			}
+		}
 	}
+}
+
+country_event = {
+	title = "EVTNAME90911"
+	desc = "EVTDESC90911"
+	picture = "Prosper"
+
+	id = 90911
+
+	is_triggered_only = yes
+	
+	immediate = { civilized = no }
+	
+	option = {				
+		name = "EVTOPTA90911"
+		annex_to = FROM
+	}
+	
 }
 
 #Reaction to factories being nationalized

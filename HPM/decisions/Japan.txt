@@ -1838,34 +1838,34 @@ political_decisions = {
 		effect = {
 			set_global_flag = japan_industrialized
 			#
-			1679 = { trade_goods = iron }
+			#1679 = { trade_goods = iron }
 			1663 = { trade_goods = tobacco }
-			1664 = { trade_goods = coal }
-			1661 = { trade_goods = coal }
+			#1664 = { trade_goods = coal }
+			#1661 = { trade_goods = coal }
 			#1660 = { trade_goods = tea }
 			#
 			1638 = { trade_goods = cotton }
 			#
 			1666 = { trade_goods = timber }
-			1667 = { trade_goods = tobacco }
+			#1667 = { trade_goods = tobacco }
 			#
 			1675 = { trade_goods = silk }
-			1648 = { trade_goods = tea }
+			#1648 = { trade_goods = tea }
 			1647 = { trade_goods = fish }
 			#
-			1657 = { trade_goods = tea }
-			1655 = { trade_goods = tea }
+			#1657 = { trade_goods = tea }
+			#1655 = { trade_goods = tea }
 			#
 			1673 = { trade_goods = silk }
-			1671 = { trade_goods = iron }
+			#1671 = { trade_goods = iron }
 			#
-			1670 = { trade_goods = sulphur }
-			1672 = { trade_goods = iron }
+			#1670 = { trade_goods = sulphur }
+			#1672 = { trade_goods = iron }
 			#
-			1642 = { trade_goods = iron }
+			#1642 = { trade_goods = iron }
 			#
 			1652 = { trade_goods = silk }
-			1674 = { trade_goods = tobacco }
+			1674 = { trade_goods = silk } #war tobacco
 			1649 = { trade_goods = grain }
 		}
 		

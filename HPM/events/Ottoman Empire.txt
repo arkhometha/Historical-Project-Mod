@@ -4034,6 +4034,7 @@ country_event = {
 			tag = EGY
 		}
 		NOT = { exists = QAT }
+		any_owned_province = { is_core = QAT }
 		owns = 1165
 		1165 = { average_militancy = 5 }
 		year = 1905
@@ -4053,12 +4054,24 @@ country_event = {
 		}
 	}
 	
+	immediate = {
+		release = QAT
+	}
+	
 	option = {
 		name = "EVT168070OPTA"#Yes
-		release = QAT
 		random_owned = {
-			limit = { province_id = 1162 }
+			limit = {
+				province_id = 1162
+				is_core = THIS
+			}
 			remove_core = THIS
+		}
+		random_owned = {
+			limit = {
+				is_core = BHR
+				owner = { NOT = { exists = BHR } }
+			}
 			owner = { release = BHR }
 		}
 		ai_chance = {
@@ -4071,10 +4084,26 @@ country_event = {
 	}
 	option = {
 		name = "EVT168070OPTB"#Release as vassal
-		release_vassal = QAT
+		create_vassal = QAT
 		random_owned = {
-			limit = { province_id = 1162 }
+			limit = {
+				province_id = 1162
+				is_core = THIS
+			}
 			remove_core = THIS
+		}
+		random_owned = {
+			limit = {
+				province_id = 1165
+				is_core = THIS
+			}
+			remove_core = THIS
+		}
+		random_owned = {
+			limit = {
+				is_core = BHR
+				owner = { NOT = { exists = BHR } }
+			}
 			owner = { release_vassal = BHR }
 		}
 		badboy = 2
@@ -4131,14 +4160,23 @@ country_event = {
 			}
 			relation = { who = THIS value = -100 }
 		}
-		
-		release = QAT
 		random_owned = {
-			limit = { province_id = 1162 }
+			limit = {
+				province_id = 1162
+				is_core = THIS
+			}
 			remove_core = THIS
-			owner = { release = BHR }
-			BHR = { create_alliance = QAT }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1162
+				owner = { NOT = { exists = BHR } }
+			}
 			owner = {
+				release = BHR
+				BHR = { create_alliance = QAT }
+			}
+			THIS = {
 				war = {
 					target = BHR
 					attacker_goal = { casus_belli = conquest_any }

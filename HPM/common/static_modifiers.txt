@@ -143,6 +143,7 @@ nationalism = {
 infrastructure = {
 	local_factory_throughput = 1		#each % of infra boost throughput 1%
 	local_rgo_output = 1			#each % of infra boost throughput 1%
+	immigrant_attract = 0.05
 	supply_limit = 4
 }
 
@@ -207,6 +208,7 @@ great_power = {
 	diplomatic_points_modifier = 1.0
 	leadership = 2.0
 	global_immigrant_attract = 0.20
+	loan_interest = -0.25
 }
 
 second_power = {
@@ -215,6 +217,7 @@ second_power = {
 	diplomatic_points_modifier = 0.25
 	leadership = 1.0
 	global_immigrant_attract = 0.01
+	loan_interest = -0.1
 }
 
 civ_nation = {

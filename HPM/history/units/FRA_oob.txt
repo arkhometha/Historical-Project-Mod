@@ -15,12 +15,8 @@ LUX = {
 	influence_value = 25
 }
 NET = {
-	value = -100
-		#relation
-
-	level = 3
-		#3=cordial, 4 = friendly, 5 sphere
-
+	value = -100 	#relation
+	level = 3		#3=cordial, 4 = friendly, 5 sphere
 }
 PAP = {
 	value = 125		#relation
@@ -645,21 +641,6 @@ navy = {
 		type = frigate
 	}
 
-	ship = {
-		name= "1ère Flotille de Transport"
-		type = clipper_transport
-	}
-
-	ship = {
-		name= "2ème Flotille de Transport"
-		type = clipper_transport
-	}
-
-	ship = {
-		name= "3ème Flotille de Transport"
-		type = clipper_transport
-	}
-
 }
 
 navy = {
@@ -667,11 +648,6 @@ navy = {
 	location = 470
 	ship = {
 		name= "Triton"
-		type = manowar
-	}
-
-	ship = {
-		name= "Etats de Bourgogne"
 		type = manowar
 	}
 
@@ -742,16 +718,6 @@ navy = {
 
 	ship = {
 		name= "Trident"
-		type = manowar
-	}
-
-	ship = {
-		name= "Royal Louis "
-		type = manowar
-	}
-
-	ship = {
-		name= "Commerces de Paris"
 		type = manowar
 	}
 
@@ -830,22 +796,115 @@ navy = {
 		type = frigate
 	}
 
+}
+
+navy = {
+	name = "Escadre de Transport"
+	location = 442
+
+	ship = {
+		name= "1ère Flotille de Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "2ème Flotille de Transport"
+		type = steam_transport
+	}
+
+	ship = {
+		name= "3ème Flotille de Transport"
+		type = steam_transport
+	}
+	
 	ship = {
 		name= "4ème Flotille de Transport"
-		type = clipper_transport
+		type = steam_transport
 	}
 
 	ship = {
 		name= "5ème Flotille de Transport"
-		type = clipper_transport
+		type = steam_transport
 	}
 
 	ship = {
 		name= "6ème Flotille de Transport"
-		type = clipper_transport
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "7ème Flotille de Transport"
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "8ème Flotille de Transport"
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "9ème Flotille de Transport"
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "10ème Flotille de Transport"
+		type = steam_transport
+	}
+	
+	ship = {
+		name= "1ère Flotille à Vapeur"
+		type = commerce_raider
+	}
+
+	ship = {
+		name= "2ème Flotille à Vapeur"
+		type = commerce_raider
+	}
+
+	ship = {
+		name= "3ème Flotille à Vapeur"
+		type = commerce_raider
+	}
+	
+	ship = {
+		name= "4ème Flotille à Vapeur"
+		type = commerce_raider
+	}
+
+	ship = {
+		name= "5ème Flotille à Vapeur"
+		type = commerce_raider
+	}
+
+	ship = {
+		name= "6ème Flotille à Vapeur"
+		type = commerce_raider
+	}
+	
+	ship = {
+		name= "7ème Flotille à Vapeur"
+		type = commerce_raider
+	}
+	
+	ship = {
+		name= "8ème Flotille à Vapeur"
+		type = commerce_raider
+	}
+	
+	ship = {
+		name= "9ème Flotille à Vapeur"
+		type = commerce_raider
+	}
+	
+	ship = {
+		name= "10ème Flotille à Vapeur"
+		type = commerce_raider
 	}
 
 }
+
+
 
 leader = {
 	name = "de la Piconnerie"

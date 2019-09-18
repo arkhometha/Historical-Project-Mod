@@ -1,3 +1,34 @@
+#Modern Sail Ships
+modern_sail_ships = {
+	limit = { clipper_design = 1 }
+	chance = {
+		base = 10
+		modifier = {
+			factor = 10
+			alphabetic_flag_signaling = 1
+		}
+	}
+	effect = {
+		clipper_transport = {
+			maximum_speed = 9
+			fire_range = 0.2
+		}
+		frigate = {
+			maximum_speed = 9
+			hull = 1
+			gun_power = 1
+			fire_range = 0.25
+			evasion = 0.15
+		}
+		manowar = {
+			maximum_speed = 7
+			hull = 1
+			gun_power = 2
+			fire_range = 0.3
+		}
+	}
+}
+
 schrapnel_standard_design = {
 	limit = { steel_breech_loaded_artillery = 1 } #1870
 	chance = {
@@ -49,7 +80,7 @@ barbed_wire_defense = {
 		}
 	}
 }
-		
+
 helmet_mass_production = {
 	limit = { indirect_artillery_fire = 1 } #1900
 	chance = {
@@ -328,9 +359,50 @@ electrolytic_refining = {
 	}
 }
 
+dynamite = {
+	limit = {
+		regenerative_furnaces = 1
+		year = 1860
+	}
+	#news = no
+	chance = {
+		base = 25
+		modifier = {
+			factor = -25
+			NOT = { invention = nitroglycerin }
+		}
+		modifier = {
+			factor = -25
+			any_owned_province = {
+				controlled_by = THIS
+				trade_goods = coal
+				unemployment_by_type = { value = 0.01 type = labourers }
+			}
+			any_neighbor_country = {
+				any_owned_province = {
+					trade_goods = coal
+					unemployment_by_type = { value = 0.01 type = labourers }
+				} 
+			}
+			any_greater_power = {
+				any_owned_province = {
+					trade_goods = coal
+					unemployment_by_type = { value = 0.01 type = labourers }
+				}
+			}
+		}
+	}
+	effect = {
+		rgo_goods_output = { coal = 0.25 }
+		rgo_size = { coal = 0.25 }
+		rgo_size = { iron = 0.25 }
+		rgo_size = { sulphur = 0.25 }
+	}
+}
+
 deep_mining = {
 	limit = {
-		dynamite = 1
+		drilling_and_blasting = 1
 	}
 	#news = no
 	chance = {
@@ -363,7 +435,7 @@ deep_mining = {
 
 percussion_drill = {
 	limit = {
-		dynamite = 1
+		drilling_and_blasting = 1
 	}
 	#news = no
 	chance = {
@@ -400,7 +472,7 @@ percussion_drill = {
 
 friction_hoist = {
 	limit = {
-		dynamite = 1
+		drilling_and_blasting = 1
 		year = 1875
 	}
 	#news = no
@@ -434,7 +506,7 @@ friction_hoist = {
 
 lixiviation_mills = {
 	limit = {
-		dynamite = 1
+		drilling_and_blasting = 1
 		year = 1880
 	}
 	#news = no
@@ -468,7 +540,7 @@ lixiviation_mills = {
 
 cyanide_milling = {
 	limit = {
-		dynamite = 1
+		drilling_and_blasting = 1
 		year = 1885
 	}
 	#news = no
@@ -503,7 +575,7 @@ cyanide_milling = {
 
 trinitrotoluene = {
 	limit = {
-		dynamite = 1
+		drilling_and_blasting = 1
 		year = 1895
 	}
 	#news = no
@@ -535,10 +607,10 @@ trinitrotoluene = {
 		}
 	}
 	effect = {
-		rgo_goods_output = { coal = 0.5 }
-		rgo_size = { coal = 0.2 }
-		rgo_size = { iron = 0.2 }
-		rgo_size = { sulphur = 0.2 }
+		rgo_goods_output = { coal = 0.25 }
+		rgo_size = { coal = 0.25 }
+		rgo_size = { iron = 0.25 }
+		rgo_size = { sulphur = 0.25 }
 	}
 }
 
@@ -646,7 +718,7 @@ hydraulic_excavator = {
 
 fish_trawlers = {
 	limit = {
-		steel_steamers = 1
+		steam_turbine_ships = 1
 	}
 	#news = no
 	chance = {
@@ -682,5 +754,174 @@ fish_trawlers = {
 	}
 	effect = {
 		rgo_goods_output = { fish = 0.3 }
+	}
+}
+
+########Commerce Techs
+industrial_paper_production = {
+	limit = { freedom_of_trade = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 1
+			ruling_party_ideology = liberal
+		}
+		modifier = {
+			factor = -10
+			NOT = { invention = industrial_sawmills }
+		}
+	}
+	effect = {
+		activate_building = paper_mill 
+	}
+}
+
+industrial_furniture_production = {
+	limit = { early_classical_theory_and_critique = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 1
+			prestige = 30
+		}
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = -10
+			NOT = { invention = industrial_sawmills }
+		}
+	}
+	effect = {
+		activate_building = furniture_factory 
+	}
+}
+
+industrial_luxury_furniture_production = {
+	limit = { late_classical_theory = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			nationalvalue = nv_equality
+		}
+		modifier = {
+			factor = 1
+			ruling_party_ideology = liberal
+		}
+		modifier = {
+			factor = -10
+			NOT = {
+				mechanical_production = 1
+				invention = industrial_furniture_production
+			}
+		}
+	}
+	effect = {
+		activate_building = luxury_furniture_factory
+	}
+}
+
+industrial_luxury_clothes_production = {
+	limit = { late_classical_theory = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			nationalvalue = nv_equality
+		}
+		modifier = {
+			factor = 1
+			ruling_party_ideology = liberal
+		}
+		modifier = {
+			factor = -10
+			NOT = {
+				mechanical_production = 1
+				piston_steam_engine = 1
+				invention = industrial_furniture_production
+			}
+		}
+	}
+	effect = {
+		activate_building = luxury_clothes_factory
+	}
+}
+
+industrial_sawmills = {
+	limit = { early_classical_theory_and_critique = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 1
+			ruling_party_ideology = liberal
+		}
+		modifier = {
+			factor = -10
+			NOT = { piston_steam_engine = 1 }
+		}
+	}
+	effect = {
+		activate_building = lumber_mill
+	}
+}
+
+canning_process = {
+	limit = { guild_based_production = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 1
+			ruling_party_ideology = liberal
+		}
+		modifier = {
+			factor = -10
+			NOT = { piston_steam_engine = 1 }
+		}
+	}
+	effect = {
+		activate_building = canned_food_factory
+	}
+}
+
+portland_cement = {
+	limit = { freedom_of_trade = 1 }
+	news = no
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 1
+			ruling_party_ideology = liberal
+		}
+		modifier = {
+			factor = -10
+			NOT = { basic_chemistry = 1 }
+		}
+	}
+	effect = {
+		activate_building = cement_factory
 	}
 }

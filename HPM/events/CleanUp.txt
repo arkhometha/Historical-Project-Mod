@@ -298,6 +298,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -479,6 +481,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -638,6 +642,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -774,6 +780,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -913,6 +921,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1059,6 +1069,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1203,6 +1215,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1342,6 +1356,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1481,6 +1497,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1621,6 +1639,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1924,11 +1944,34 @@ country_event = {
 	
 	option = {
 		name = "EVT6016812OPTA"
-		random_owned = { limit = { has_building = naval_base is_core = THIS } sub_unit = { type = ironclad value = current } }
+		random_owned = {
+			limit = {
+				has_building = naval_base
+				is_core = THIS
+			}
+			sub_unit = { type = ironclad value = current }
+		}
 		add_country_modifier = { name = warship_commissioned duration = 365 }
 		change_variable = { which = ironclad_commision value = 1 }
 		any_country = { limit = { exists = no has_country_flag = warship_commissioned } clr_country_flag = warship_commissioned }
 		clr_global_flag = warship_commission_being_fulfilled
+		random_owned = {
+			limit = {
+				owner = {
+					flintlock_rifles = 1
+					NOT = { post_nelsonian_thought = 1 }
+				}
+			}
+			owner = { activate_technology = flintlock_rifles }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					post_nelsonian_thought = 1
+				}
+			}
+			owner = { activate_technology = post_nelsonian_thought }
+		}
 	}
 }
 

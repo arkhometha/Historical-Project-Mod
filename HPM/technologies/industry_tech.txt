@@ -584,7 +584,7 @@ hot_blast = {
 		coal = 0.2
 	}
 	rgo_goods_output = {
-		sulphur = 0.20
+		sulphur = 0.2
 	}
 	
 	ai_chance = {
@@ -697,13 +697,13 @@ mechanized_mining = {
 	}
 	
 	rgo_size = {
-		iron = 0.2
+		iron = 0.25
 	}
 	rgo_size = {
-		coal = 0.2
+		coal = 0.25
 	}
 	rgo_size = {
-		sulphur = 0.2
+		sulphur = 0.25
 	}
 	
 	ai_chance = {
@@ -958,7 +958,7 @@ regenerative_furnaces = {
 		}
 	}
 }
-dynamite = {
+drilling_and_blasting = {
 	area = metallurgy
 	year = 1870
 	cost = 14400
@@ -973,9 +973,9 @@ dynamite = {
 		sulphur = 0.2
 	}
 	
-	rgo_size = { coal = 0.2 }
-	rgo_size = { iron = 0.2 }
-	rgo_size = { sulphur = 0.2 }
+	rgo_size = { coal = 0.5 }
+	rgo_size = { iron = 0.5 }
+	rgo_size = { sulphur = 0.5 }
 	
 	ai_chance = {
 		factor = 2

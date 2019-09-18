@@ -88,7 +88,7 @@ MCK = {
 
 PER = {
 	value = -50
-	level = 0
+	level = 2
 	influence_value = 0
 }
 

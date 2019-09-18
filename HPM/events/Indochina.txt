@@ -836,6 +836,11 @@ country_event = {
 		}
 		
 		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
+		}
+		
+		random_owned = {
 			limit = {
 				owner = {
 					NOT = { owns = 1380 }

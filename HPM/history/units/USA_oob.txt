@@ -12,7 +12,7 @@ TEX = {
 }
 MEX = {
 	value = 100		#relation
-	level = 2		#3=cordial, 4 = friendly, 5 sphere
+	level = 1		#3=cordial, 4 = friendly, 5 sphere
 	influence_value = 0
 }
 UCA = {

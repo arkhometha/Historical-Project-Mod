@@ -15,9 +15,10 @@ party_issues = {
 	economic_policy = {
 		laissez_faire = {
 			max_tax = 0.5
-			factory_owner_cost = 0.25
+			factory_owner_cost = 0.3
 			factory_output = 0.1
-			import_cost = -0.25
+			import_cost = -0.1
+			unemployment_benefit = -0.25
 			
 			rules = {
 				build_factory = no
@@ -40,8 +41,7 @@ party_issues = {
 			}
 		}
 		interventionism = {
-			factory_owner_cost = 0.5
-			import_cost = 0.25
+			factory_owner_cost = 0.45
 			
 			rules = {
 				build_factory = no
@@ -66,9 +66,9 @@ party_issues = {
 			}
 		}
 		state_capitalism = {
-			import_cost = 0.5
+			import_cost = 0.25
 			min_tax = 0.25
-			factory_owner_cost = 0.8
+			factory_owner_cost = 0.6
 			
 			rules = {
 				build_factory = yes
@@ -89,7 +89,7 @@ party_issues = {
 			}
 		}
 		planned_economy = {
-			import_cost = 0.75
+			import_cost = 0.5
 			min_tax = 0.5
 			factory_throughput = 0.05
 			factory_owner_cost = -1	#negative costs, can't build.
@@ -827,7 +827,7 @@ social_reforms = {
 			}
 		}
 		low_subsidies = {
-			unemployment_benefit = 0.1
+			unemployment_benefit = 1
 			global_immigrant_attract = 0.02
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }

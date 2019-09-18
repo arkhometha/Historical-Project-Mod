@@ -2,6 +2,23 @@ PBC = {
 	value = -25
 }
 
+leader = {
+	name = "Juan Illingworth"
+	picture = european_general_1
+	type = land
+	date="1830.1.1"
+	personality = soldierly
+	background = nationalist
+}
+
+leader = {
+	name = "Renato Beluche"
+	type = sea
+	date="1820.1.1"
+	personality = resolute
+	background = nationalist
+}
+
 army = {
 	name = "Ejército de Venezuela"
 	location = 2264
@@ -39,6 +56,36 @@ army = {
 		name= "3. División de Caballería"
 		type = cavalry
 		home = 2271
+	}
+
+}
+
+navy = {
+	name = "Armada de Venezuela"
+	location = 2264
+	ship = {
+		name= "Caribe"
+		type = frigate
+	}
+	ship = {
+		name= "Cojedes"
+		type = frigate
+	}
+	ship = {
+		name= "Lara"
+		type = frigate
+	}
+	ship = {
+		name= "Mérida"
+		type = frigate
+	}
+	ship = {
+		name= "Monagas"
+		type = frigate
+	}
+	ship = {
+		name= "Trópico"
+		type = frigate
 	}
 
 }

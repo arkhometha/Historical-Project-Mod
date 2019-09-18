@@ -1156,6 +1156,7 @@ country_event = {
 	option = {
 		name = "EVTOPTC96016" #We have no interest in their colonies
 		set_country_flag = not_want_colonies
+		remove_country_modifier = dismantling_country
 		badboy = -2
 		FROM = { country_event = 96019 }
 	}
@@ -8854,11 +8855,10 @@ country_event = {
 				tag = GRE
 				is_greater_power = no
 				OR = {
-					truce_with = THIS
-					AND = {
-						THIS = { has_country_modifier = international_pariah }
-						has_country_flag = coalition_member
-					}
+					is_secondary_power = no
+					truce_with = TUR
+					sphere_owner = { truce_with = TUR }
+					overlord = { truce_with = TUR }
 				}
 			}
 			THIS = {
@@ -8884,6 +8884,23 @@ country_event = {
 					secede_province = GRE
 				}
 			}
+		}
+		#Give cores back to Montenegro
+		any_owned = {
+			limit = { is_core = MON }
+			secede_province = MON
+		}
+		
+		#Give cores back to Serbia
+		any_owned = {
+			limit = {
+				is_core = SER
+				OR = {
+					region = TUR_803
+					region = SER_794
+				}
+			}
+			secede_province = SER
 		}
 
 		#release all vassals
@@ -9721,6 +9738,7 @@ country_event = {
 			NOT = { relation = { who = THIS value = -100 } }
 			NOT = { has_country_modifier = neutrality_modifier }
 			NOT = { tag = THIS }
+			NOT = { truce_with = THIS }
 		}		
 		NOT = {
 			has_country_modifier = no_more_war
@@ -9769,6 +9787,7 @@ country_event = {
 				is_disarmed = no
 				NOT = { relation = { who = THIS value = -100 } }
 				NOT = { has_country_modifier = neutrality_modifier }
+				NOT = { truce_with = THIS }
 			}
 			add_casus_belli = {
 				target = THIS
@@ -11403,7 +11422,44 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA96099" #War it is!
-		badboy = 1
+		random_country = {
+			limit = {
+				tag = FROM
+				total_pops = 14000000
+			}
+			THIS = { badboy = 5 }
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				total_pops = 13000000
+				NOT = { total_pops = 14000000 }
+			}
+			THIS = { badboy = 4 }
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				total_pops = 12000000
+				NOT = { total_pops = 13000000 }
+			}
+			THIS = { badboy = 3 }
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				total_pops = 11000000
+				NOT = { total_pops = 12000000 }
+			}
+			THIS = { badboy = 2 }
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				NOT = { total_pops = 11000000 }
+			}
+			THIS = { badboy = 1 }
+		}
 		casus_belli = {
 			target = FROM
 			type = conquest_any
@@ -11433,7 +11489,7 @@ country_event = {
 	}
 }
 
-#Nation gets informed that colony refuses to submit
+#Nation gets forced to cede half-complete colonies
 country_event = {
 	id = 961000
 	title = "EVTNAME961000"

@@ -39,6 +39,10 @@ political_decisions = {
 			}
 			NOT = { has_country_flag = lacking_writing_system }
 			NOT = { has_country_flag = warship_commissioned }
+			OR = {
+				flintlock_rifles = 1
+				post_nelsonian_thought = 1
+			}
 		}
 		
 		allow = {
@@ -119,7 +123,7 @@ political_decisions = {
 			OR = {
 				AND = {
 					ai = no
-					steamer_convoy = 24
+					steamer_convoy = 45
 					artillery = 10
 					canned_food = 10
 				}
@@ -142,7 +146,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { ai = no } }
 				owner = {
-					steamer_convoy = -24
+					steamer_convoy = -45
 					artillery = -10
 					canned_food = -10
 				}
@@ -150,7 +154,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { ai = yes } }
 				owner = {
-					set_variable = { which = owed_steamers value = 24 }
+					set_variable = { which = owed_steamers value = 45 }
 					set_variable = { which = owed_artillery value = 10 }
 					set_variable = { which = owed_canned_food value = 10 }
 				}

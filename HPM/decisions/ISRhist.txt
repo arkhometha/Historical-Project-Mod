@@ -188,6 +188,7 @@ political_decisions = {
 			EGY_910 = { add_core = ISR }
 			EGY_1755 = { add_core = ISR }
 			EGY_915 = { add_core = ISR }
+			EGY_897 = { add_core = ISR }
 			EGY_903 = { add_core = ISR }
 		}
 		ai_will_do = { factor = 1 }

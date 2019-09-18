@@ -417,7 +417,7 @@ hyperinflation = {
 }
 #eary_classical_theory
 john_ramsay_mcculloch = {
-	limit = { early_classical_theory_and_critique = 1 }
+	limit = { late_classical_theory = 1 }
 	news = no
 	chance = {
 		base = 2
@@ -431,11 +431,11 @@ john_ramsay_mcculloch = {
 		}
 	}
 	effect = {
-		activate_building = furniture_factory
+		loan_interest = -0.002
 	}
 }
 nassau_william_sr = {
-	limit = { early_classical_theory_and_critique = 1 }
+	limit = { late_classical_theory = 1 }
 	news = no
 	chance = {
 		base = 2
@@ -449,27 +449,29 @@ nassau_william_sr = {
 		}
 	}
 	effect = {
-		activate_building = paper_mill 
+		loan_interest = -0.002
 	}
 }
-james_mill = {
-	limit = { early_classical_theory_and_critique = 1 }
-	news = no
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = nv_equality
-		}
-		modifier = {
-			factor = 1
-			ruling_party_ideology = liberal
-		}
-	}
-	effect = {
-		activate_building = luxury_furniture_factory 
-	}
-}
+
+# james_mill = {
+	# limit = { early_classical_theory_and_critique = 1 }
+	# news = no
+	# chance = {
+		# base = 2
+		# modifier = {
+			# factor = 2
+			# nationalvalue = nv_equality
+		# }
+		# modifier = {
+			# factor = 1
+			# ruling_party_ideology = liberal
+		# }
+	# }
+	# effect = {
+		# activate_building = luxury_furniture_factory 
+	# }
+# }
+
 #late_classical_theory
 john_elliot_cairnes = {
 	limit = {

@@ -1946,55 +1946,7 @@ country_event = {
 		prestige = 5
 		1082 = { 
 		
-		poor_strata = {
-			limit = {
-				OR = {
-					has_pop_culture = manchu
-					has_pop_culture = beifaren
-					has_pop_culture = nanfaren
-				}
-			}
-			random_list = {
-				34 = { reduce_pop = 0.9 }
-				33 = { reduce_pop = 0.8 }
-				33 = { reduce_pop = 0.7 }
-			}
-			move_pop = 1554
-		}
-			
-		any_pop = { 
-			limit = {
-				OR = {
-					has_pop_culture = manchu
-					has_pop_culture = beifaren
-					has_pop_culture = nanfaren
-				}
-			}
-			militancy = 7
-			consciousness = 9
-		}
-			
-		any_pop = { 
-			limit = {
-				OR = {
-					has_pop_culture = manchu
-					has_pop_culture = beifaren
-					has_pop_culture = nanfaren
-				}
-				OR = {
-					pop_type = artisans
-					pop_type = clergymen
-					pop_type = bureaucrats
-				}
-			}
-			pop_type = labourers
-		}
-		add_province_modifier = { name = population_resettlement duration = 2190 }
-		remove_province_modifier = nationalist_agitation
-		}
-		
-		1083 = {
-			poor_strata = { 
+			poor_strata = {
 				limit = {
 					OR = {
 						has_pop_culture = manchu
@@ -2009,6 +1961,7 @@ country_event = {
 				}
 				move_pop = 1554
 			}
+				
 			any_pop = { 
 				limit = {
 					OR = {
@@ -2020,7 +1973,8 @@ country_event = {
 				militancy = 7
 				consciousness = 9
 			}
-			any_pop = {
+				
+			any_pop = { 
 				limit = {
 					OR = {
 						has_pop_culture = manchu
@@ -2035,8 +1989,54 @@ country_event = {
 				}
 				pop_type = labourers
 			}
-			add_province_modifier = { name = population_resettlement duration = 1460 }
-			remove_province_modifier = nationalist_agitation
+				add_province_modifier = { name = population_resettlement duration = 2190 }
+				remove_province_modifier = nationalist_agitation
+			}
+			
+		1083 = {
+				poor_strata = { 
+					limit = {
+						OR = {
+							has_pop_culture = manchu
+							has_pop_culture = beifaren
+							has_pop_culture = nanfaren
+						}
+					}
+					random_list = {
+						34 = { reduce_pop = 0.9 }
+						33 = { reduce_pop = 0.8 }
+						33 = { reduce_pop = 0.7 }
+					}
+					move_pop = 1554
+				}
+				any_pop = { 
+					limit = {
+						OR = {
+							has_pop_culture = manchu
+							has_pop_culture = beifaren
+							has_pop_culture = nanfaren
+						}
+					}
+					militancy = 7
+					consciousness = 9
+				}
+				any_pop = {
+					limit = {
+						OR = {
+							has_pop_culture = manchu
+							has_pop_culture = beifaren
+							has_pop_culture = nanfaren
+						}
+						OR = {
+							pop_type = artisans
+							pop_type = clergymen
+							pop_type = bureaucrats
+						}
+					}
+					pop_type = labourers
+				}
+				add_province_modifier = { name = population_resettlement duration = 1460 }
+				remove_province_modifier = nationalist_agitation
 		}
 		
 		1084 = { poor_strata = { 

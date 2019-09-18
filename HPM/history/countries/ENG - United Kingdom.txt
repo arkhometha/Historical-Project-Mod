@@ -71,15 +71,14 @@ basic_chemistry = 1
 interchangeable_parts = 1
 battleship_column_doctrine = 1
 naval_professionalism = 1
+fire_control_systems = 1
 stock_exchange = 1
 ad_hoc_money_bill_printing = 1
 late_classical_theory = 1
-market_structure = 1
 high_pressure_steam_engine = 1
 
 # Inventions
 #corvettes = yes
-commerce_raiders = yes
 precision_work = yes
 
 # Starting Consciousness
@@ -221,7 +220,7 @@ school_reforms = low_schools
 	semi_automatization = 1
 	regenerative_furnaces = 1
 	hot_blast = 1
-	dynamite = 1
+	drilling_and_blasting = 1
 	experimental_railroad = 1
 	early_railroad = 1
 	iron_railroad = 1

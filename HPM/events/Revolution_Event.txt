@@ -279,6 +279,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -779,6 +781,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1194,6 +1198,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1620,6 +1626,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -2110,6 +2118,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -2716,6 +2726,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -3337,6 +3349,10 @@ country_event = {
 					duration = -1
 				}
 			}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = closed_borders } } }
+			owner = { political_reform = closed_borders }
 		}
 		random_owned = {
 			limit = { owner = { has_country_modifier = educational_reform } }

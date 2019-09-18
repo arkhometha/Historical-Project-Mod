@@ -582,11 +582,11 @@ country_event = {
 			}
 			AND = {
 				ENG = {
-					dynamite = 1
+					drilling_and_blasting = 1
 				}
 				NOT = {
 					EIC = {
-						dynamite = 1
+						drilling_and_blasting = 1
 					}
 				}
 			}
@@ -733,15 +733,15 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = {
-						dynamite = 1
+						drilling_and_blasting = 1
 					}
 				}
 				ENG = {
-					dynamite = 1
+					drilling_and_blasting = 1
 				}
 			}
 			owner = {
-				activate_technology = dynamite
+				activate_technology = drilling_and_blasting
 			}
 		}
 		random_owned = {

@@ -20,7 +20,10 @@ country_event = {
 		remove_country_modifier = sakoku
 		remove_country_modifier = rangaku
 		remove_country_modifier = uncivilized_isolationism
-		
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
+		}
 		add_country_modifier = {
 			name = "western_influences"
 			duration = -1
@@ -128,7 +131,10 @@ country_event = {
 		treasury = -100000
 		FROM = { country_event = 97609 }
 		remove_country_modifier = uncivilized_isolationism
-		
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
+		}
 		add_country_modifier = {
 			name = "western_influences"
 			duration = -1

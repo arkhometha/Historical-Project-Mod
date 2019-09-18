@@ -168,6 +168,7 @@ political_decisions = {
 		potential = {
 			ai = yes
 			exists = yes
+			has_global_flag = 1836_set_up
 			OR = {
 				AND = {
 					any_owned_province = { has_pop_type = serfs }
@@ -741,8 +742,7 @@ political_decisions = {
 			}
 			OR = {
 				any_owned_province = {
-					is_colonial = no
-					state_scope = { flashpoint_tension = 25 has_flashpoint = yes }
+					state_scope = { flashpoint_tension = 10 }
 					owner = {
 						OR = {
 							NOT = { has_global_flag = revolution_n_counter_researched }
@@ -750,23 +750,25 @@ political_decisions = {
 						}
 					}
 				}
+				any_owned_province = {
+					any_neighbor_province = {
+						empty = yes
+						state_scope = { flashpoint_tension = 10 }
+					}
+					owner = { NOT = { has_global_flag = revolution_n_counter_researched } }
+				}
 				any_greater_power = {
 					ai = no
 					NOT = { has_global_flag = revolution_n_counter_researched }
 					any_owned_province = {
-						is_colonial = no
-						state_scope = { flashpoint_tension = 25 has_flashpoint = yes }
+						state_scope = { flashpoint_tension = 10 }
 					}
 				}
 				any_neighbor_country = {
 					ai = no
-					OR = {
-						NOT = { has_global_flag = revolution_n_counter_researched }
-						is_vassal = yes
-					}
+					NOT = { has_global_flag = revolution_n_counter_researched }
 					any_owned_province = {
-						is_colonial = no
-						state_scope = { flashpoint_tension = 25 has_flashpoint = yes }
+						state_scope = { flashpoint_tension = 10 }
 					}
 				}
 			}
@@ -781,10 +783,7 @@ political_decisions = {
 						is_vassal = yes
 					}
 				}
-				any_state  = {
-					limit = { has_flashpoint = yes is_colonial = no }
-					flashpoint_tension = -90
-				}
+				any_state  = { flashpoint_tension = -100 }
 			}
 			any_owned = {
 				limit = {
@@ -796,10 +795,17 @@ political_decisions = {
 					}
 				}
 				owner = {
-					any_state  = {
-						limit = { has_flashpoint = yes is_colonial = no }
-						flashpoint_tension = -90
+					any_state  = { flashpoint_tension = -100 }
+				}
+			}
+			any_owned = {
+				limit = { owner = { NOT = { has_global_flag = revolution_n_counter_researched } } }
+				any_neighbor_province = {
+					limit = {
+						empty = yes
+						state_scope = { flashpoint_tension = 10 }
 					}
+					state_scope = { flashpoint_tension = -100 }
 				}
 			}
 		}
@@ -948,7 +954,17 @@ political_decisions = {
 					check_variable = { which = owed_ammunition value = 1 }
 				}
 				AND = {
+					money = 50000
+					check_variable = { which = owed_cash_money value = 1 }
+				}
+				AND = {
 					money = 10000
+					NOT = { money = 50000 }
+					check_variable = { which = owed_cash_money value = 1 }
+				}
+				AND = {
+					money = 1000
+					NOT = { total_pops = 500000 }
 					check_variable = { which = owed_cash_money value = 1 }
 				}
 			}
@@ -1111,12 +1127,27 @@ political_decisions = {
 				limit = {
 					owner = {
 						money = 10000
+						NOT = { money = 50000 }
 						check_variable = { which = owed_cash_money value = 1 }
 					}
 				}
 				owner = {
 					treasury = -10000
 					change_variable = { which = owed_cash_money value = -10 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						money = 1000
+						NOT = { total_pops = 500000 }
+						check_variable = { which = owed_cash_money value = 1 }
+					}
+				}
+				owner = {
+					treasury = -1000
+					change_variable = { which = owed_cash_money value = -1 }
 				}
 			}
 		}
@@ -1142,54 +1173,83 @@ political_decisions = {
 			NOT = { has_country_modifier = monthly_payment_made }
 			OR = {
 				AND = {
-					money = 1500
+					civilized = yes
+					money = 1000
 					NOT = { total_pops = 750000 }
 				}
 				AND = {
-					money = 2250
+					civilized = yes
+					money = 1500
 					total_pops = 750000
-					NOT = { total_pops = 100000 }
+					NOT = { total_pops = 1000000 }
 				}
 				AND = {
-					money = 3000
+					civilized = yes
+					money = 2000
 					total_pops = 1000000
 					NOT = { total_pops = 1250000 }
 				}
 				AND = {
-					money = 3750
+					civilized = yes
+					money = 2500
 					total_pops = 1250000
 					NOT = { total_pops = 1500000 }
 				}
 				AND = {
-					money = 4500
+					civilized = yes
+					money = 3000
 					total_pops = 1500000
 					NOT = { total_pops = 1750000 }
 				}
 				AND = {
-					money = 5250
+					civilized = yes
+					money = 4000
 					total_pops = 1750000
 					NOT = { total_pops = 2000000 }
 				}
 				AND = {
-					money = 6000
+					money = 5000
 					total_pops = 2000000
 					NOT = { total_pops = 2250000 }
 				}
 				AND = {
-					money = 6750
+					money = 6000
 					total_pops = 2250000
 					NOT = { total_pops = 2500000 }
 				}
 				AND = {
-					money = 7500
+					money = 7000
 					total_pops = 2500000
+				}
+				AND = {
+					civilized = no
+					money = 1000
+					NOT = { total_pops = 2000000 }
 				}
 			}
 		}
 		
 		effect = {
 			random_owned = {
-				limit = { owner = { NOT = { total_pops = 750000 } } }
+				limit = {
+					owner = {
+						civilized = yes
+						NOT = { total_pops = 750000 } }
+					}
+				owner = {
+					treasury = -1000
+					overlord = { treasury = 1000 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						civilized = yes
+						total_pops = 750000
+						NOT = { total_pops = 1000000 }
+					}
+				}
 				owner = {
 					treasury = -1500
 					overlord = { treasury = 1500 }
@@ -1197,15 +1257,41 @@ political_decisions = {
 			}
 			
 			random_owned = {
-				limit = { owner = { total_pops = 750000 NOT = { total_pops = 1000000 } } }
+				limit = {
+					owner = {
+						civilized = yes
+						total_pops = 1000000
+						NOT = { total_pops = 1250000 }
+					}
+				}
 				owner = {
-					treasury = -2250
-					overlord = { treasury = 2250 }
+					treasury = -2000
+					overlord = { treasury = 2000 }
 				}
 			}
 			
 			random_owned = {
-				limit = { owner = { total_pops = 1000000 NOT = { total_pops = 1250000 } } }
+				limit = {
+					owner = {
+						civilized = yes
+						total_pops = 1250000
+						NOT = { total_pops = 1500000 }
+					}
+				}
+				owner = {
+					treasury = -2500
+					overlord = { treasury = 2500 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						civilized = yes
+						total_pops = 1500000
+						NOT = { total_pops = 1750000 }
+					}
+				}
 				owner = {
 					treasury = -3000
 					overlord = { treasury = 3000 }
@@ -1213,31 +1299,39 @@ political_decisions = {
 			}
 			
 			random_owned = {
-				limit = { owner = { total_pops = 1250000 NOT = { total_pops = 1500000 } } }
+				limit = {
+					owner = {
+						civilized = yes
+						total_pops = 1750000
+						NOT = { total_pops = 2000000 }
+					}
+				}
 				owner = {
-					treasury = -3750
-					overlord = { treasury = 3750 }
+					treasury = -4000
+					overlord = { treasury = 4000 }
 				}
 			}
 			
 			random_owned = {
-				limit = { owner = { total_pops = 1500000 NOT = { total_pops = 1750000 } } }
+				limit = {
+					owner = {
+						total_pops = 2000000
+						NOT = { total_pops = 2250000 }
+					}
+				}
 				owner = {
-					treasury = -4500
-					overlord = { treasury = 4500 }
+					treasury = -5000
+					overlord = { treasury = 5000 }
 				}
 			}
 			
 			random_owned = {
-				limit = { owner = { total_pops = 1750000 NOT = { total_pops = 2000000 } } }
-				owner = {
-					treasury = -5250
-					overlord = { treasury = 5250 }
+				limit = {
+					owner = {
+						total_pops = 2250000
+						NOT = { total_pops = 2500000 }
+					}
 				}
-			}
-			
-			random_owned = {
-				limit = { owner = { total_pops = 2000000 NOT = { total_pops = 2250000 } } }
 				owner = {
 					treasury = -6000
 					overlord = { treasury = 6000 }
@@ -1245,18 +1339,25 @@ political_decisions = {
 			}
 			
 			random_owned = {
-				limit = { owner = { total_pops = 2250000 NOT = { total_pops = 2500000 } } }
+				limit = {
+					owner = { total_pops = 2500000 }
+				}
 				owner = {
-					treasury = -6750
-					overlord = { treasury = 6750 }
+					treasury = -7000
+					overlord = { treasury = 7000 }
 				}
 			}
 			
 			random_owned = {
-				limit = { owner = { total_pops = 2500000 } }
+				limit = {
+					owner = {
+						civilized = no
+						NOT = { total_pops = 2000000 }
+					}
+				}
 				owner = {
-					treasury = -7500
-					overlord = { treasury = 7500 }
+					treasury = -1000
+					overlord = { treasury = 1000 }
 				}
 			}
 			
@@ -2206,11 +2307,16 @@ political_decisions = {
 				ai = no
 				civilized = yes
 				is_disarmed = no
-				capital_scope = { continent = europe }
+				OR = {
+					capital_scope = { continent = europe }
+					tech_school = naval_tech_school
+					tech_school = japanese_tech_school
+				}
 				state_n_government = 1
 				OR = {
 					#Mozambique
 					AND = {
+						capital_scope = { continent = europe }
 						OR = {
 							has_country_flag = reconquest_of_lourenco_marques
 							AND = {
@@ -2232,6 +2338,7 @@ political_decisions = {
 					
 					#Algiers
 					AND = {
+						capital_scope = { continent = europe }
 						OR = {
 							has_country_flag = marched_through_the_iron_gates
 							AND = {
@@ -2254,6 +2361,7 @@ political_decisions = {
 					
 					#Yemen
 					AND = {
+						capital_scope = { continent = europe }
 						nationalism_n_imperialism = 1
 						OR = {
 							owns = 1412
@@ -3534,6 +3642,10 @@ political_decisions = {
 				AND = {
 					tag = CPL
 					overlord = { tag = RUS }
+				}
+				AND = {
+					tag = POR
+					overlord = { primary_culture = spanish }
 				}
 				AND = {
 					tag = SBA

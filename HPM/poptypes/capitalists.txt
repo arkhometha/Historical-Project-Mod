@@ -45,18 +45,12 @@ everyday_needs = {
 
 #Total cash needed: 3883 - Vanilla value: 3863
 luxury_needs = {
-	luxury_clothes = 0.5
-	luxury_furniture = 0.5
+	#luxury_clothes = 0.5
+	#luxury_furniture = 0.5
 	steel = 0.5
 	cement = 0.5
 	lumber = 1
 	canned_food = 5
-	grain = 40
-	fruit = 40
-	wool = 40
-	cattle = 40
-	fish = 40
-	opium = 20
 	oil = 10
 	rubber = 10
 	telephones = 20
@@ -169,69 +163,51 @@ migration_target = {
 	factor = 0.01
 	
 	modifier = {
-		factor = 0.1
-		state_scope = { 
-			unemployment = 0.1
-			has_factories = no
-		}
-	}
-	modifier = {
 		factor = 1.2
-		state_scope = { total_pops = 150000 }
+		total_pops = 150000
 	}	
 	modifier = {
 		factor = 1.2
-		state_scope = { total_pops = 250000 }
+		total_pops = 250000
 	}
 	modifier = {
 		factor = 1.2
-		state_scope = { total_pops = 500000 }
+		total_pops = 500000
 	}
 	modifier = {
 		factor = 1.2
-		state_scope = { total_pops = 750000 }
+		total_pops = 750000
 	}
-	
 	modifier = {
 		factor = 0
 		is_overseas = yes
 		country = { border_policy = closed_borders }
 	}
-	
+	modifier = {
+		factor = 0
+		NOT = { state_scope = {	work_available = { worker = craftsmen } } }
+	}
 	modifier = {
 		factor = 1.2
-		is_state_capital = yes
 		has_pop_culture = THIS
 	}
 	modifier = {
-		factor = 6
-		any_core = {
-			OR = {
-				is_primary_culture = THIS
-				is_accepted_culture = THIS
-			}
-		}
-		state_scope = {	work_available = { worker = craftsmen } }
+		factor = 1.2
+		# Audax Validator "." Ignore_NEXT
+		has_pop_religion = THIS
 	}
-	#modifier = {
-	#	factor = 1.2
-	#	has_pop_religion = THIS
-	#}
 	modifier = {
 		factor = 1.5
 		any_core = { is_primary_culture = THIS }
 	}
 	modifier = {
 		factor = 0.75
-		OR = {
-			state_scope = { is_slave = yes }
-			is_overseas = yes
-		}
+		state_scope = { is_slave = yes }
 	}
 	modifier = {
-		factor = 2
-		is_state_capital = yes
-	}		
+		factor = 0
+		NOT = { is_state_capital = yes }
+	}	
 	modifier = {
 		factor = 1.5
 		is_capital = yes
@@ -245,7 +221,7 @@ migration_target = {
 		factor = 0.8
 		terrain = steppe
 	}
-
+	
 	modifier = {
 		factor = 0.7
 		terrain = savanna
@@ -316,7 +292,30 @@ migration_target = {
 		factor = 0.05
 		terrain = montane_tundra
 	}
-
+	
+	modifier = {
+		factor = 1.05
+		NOT = { country = { any_owned_province = { is_colonial = yes } } }
+		country = { penal_system = colonial_transportation }
+		OR = {
+			trade_goods = coal
+			trade_goods = sulphur
+			trade_goods = iron
+			trade_goods = precious_metal
+			trade_goods = tobacco
+			trade_goods = coffee
+			trade_goods = tea
+		}
+		OR = {
+			terrain = desert
+			terrain = arctic
+			terrain = semidesert
+			terrain = boreal
+			terrain = small_island
+			terrain = montane_tundra
+			terrain = coral_island
+		}
+	}
 	modifier = {
 		factor = 2
 		life_rating = 40

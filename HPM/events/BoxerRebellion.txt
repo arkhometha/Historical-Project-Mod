@@ -782,6 +782,10 @@ country_event = {
 			name = "uncivilized_isolationism"
 			duration = -1
 		}
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = closed_borders } } }
+			owner = { political_reform = closed_borders }
+		}
 		random_country = {
 			limit = { 
 				is_sphere_leader_of = THIS

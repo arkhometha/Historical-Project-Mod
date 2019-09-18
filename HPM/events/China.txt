@@ -36,6 +36,23 @@ country_event = {
 		GNG = { all_core = { add_core = CHI } }
 		FJN = { all_core = { add_core = CHI } }
 		KML = { all_core = { add_core = CHI } }
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = uncivilized_isolationism
+					NOT = { border_policy = closed_borders } }
+				}
+			owner = { political_reform = closed_borders }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = western_influences
+					NOT = { border_policy = open_borders } }
+				}
+			owner = { political_reform = open_borders }
+		}
 		add_country_modifier = { name = global_baby_boom duration = 730 }
 		prestige = 10
 		remove_country_modifier = educational_reform
@@ -99,6 +116,36 @@ country_event = {
 				}
 			}
 			country_event = { id=90901 days=0 }
+		}
+		
+		#Non-cores should flip to colonies
+		random_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				owner = { NOT = { exists = UTI } }
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						NOT = {
+							is_core = THIS
+							is_colonial = yes
+							is_accepted_culture = yes
+							is_primary_culture = yes
+							any_core = { is_cultural_union = THIS }
+							#any_neighbor_province = { is_core = THIS } #Rule excluding neighbouring states from the non-core rule
+						}
+						any_core = {
+							OR = {
+								civilized = no
+								tech_school = developing_tech_school
+							}
+						}
+					}
+					secede_province = UTI 
+					UTI = { country_event =  90911 }
+				}
+			}
 		}
 	}
 }
@@ -190,6 +237,23 @@ country_event = {
 			limit = { owner = { has_country_flag = activate_experimental_railroad } NOT = { experimental_railroad = 1 } }
 			owner = { activate_technology = experimental_railroad  clr_country_flag = activate_experimental_railroad }
 		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = uncivilized_isolationism
+					NOT = { border_policy = closed_borders } }
+				}
+			owner = { political_reform = closed_borders }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = western_influences
+					NOT = { border_policy = open_borders } }
+				}
+			owner = { political_reform = open_borders }
+		}
 		random_country = {
 			limit = {
 				is_culture_group = east_asian
@@ -227,8 +291,38 @@ country_event = {
 			remove_province_modifier = boxer_presence
 			remove_province_modifier = boxer_agitation
 		}
-		any_greater_power = {
+		any_country = {
+			limit = { is_greater_power = yes }
 			diplomatic_influence = { who = THIS value = -100 }
+		}
+		#Non-cores should flip to colonies
+		random_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				owner = { NOT = { exists = UTI } }
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						NOT = {
+							is_core = THIS
+							is_colonial = yes
+							is_accepted_culture = yes
+							is_primary_culture = yes
+							any_core = { is_cultural_union = THIS }
+							#any_neighbor_province = { is_core = THIS } #Rule excluding neighbouring states from the non-core rule
+						}
+						any_core = {
+							OR = {
+								civilized = no
+								tech_school = developing_tech_school
+							}
+						}
+					}
+					secede_province = UTI 
+					UTI = { country_event =  90911 }
+				}
+			}
 		}
 	}
 }

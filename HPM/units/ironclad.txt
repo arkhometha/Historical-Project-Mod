@@ -18,18 +18,19 @@ ironclad = {
 	priority = 35
 	max_strength = 100
 	default_organisation = 30
-	maximum_speed = 6
+	maximum_speed = 20
 	weighted_value = 6.0
 
 
 	#Building Costs
 	build_time = 360
 	build_cost = {	
-		steamer_convoy = 25
-		artillery = 10
-		canned_food = 10
-		regular_clothes = 12
+		steamer_convoy = 50 	# 3250 | was 1625
+		artillery = 50 			# 2400 | was 600
+		canned_food = 20 		# 320  | was 160
+		regular_clothes = 20	# 116  | was 69.6
 	}
+	# Total: 6086 | was 3894.6
 	min_port_level = 2
 	limit_per_port = 10
 	supply_consumption_score = 3
@@ -46,9 +47,9 @@ ironclad = {
 	}
 	
 	#Naval Abilities
-	hull = 15
-	gun_power = 15
-	fire_range = 0.6
+	hull = 12
+	gun_power = 12
+	fire_range = 0.5
 	evasion = 0
 }
 

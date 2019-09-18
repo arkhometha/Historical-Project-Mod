@@ -71,6 +71,7 @@ late_enlightenment_philosophy = 1
 enlightenment_thought = 1
 piston_steam_engine = 1
 mechanical_production = 1
+clipper_design = 1
 
 # Inventions
 

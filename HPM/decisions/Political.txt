@@ -884,6 +884,7 @@ political_decisions = {
 				AND = { tag = MLI owns = 1794 NOT = { capital = 1794 } }
 				AND = { tag = VEN owns = 729 NOT = { capital = 729 } }
 				AND = { tag = KOR owns = 1624 NOT = { capital = 1624 } }
+				AND = { tag = ALB owns = 849 NOT = { capital = 849 } }
 				AND = { tag = ASH civilized = yes owns = 1907 NOT = { capital = 1907 } }
 			}
 		}
@@ -891,6 +892,7 @@ political_decisions = {
 		allow = { war = no }
 		
 		effect = {
+			random_owned = { limit = { owner = { tag = ALB } } owner = { capital = 849 } }
 			random_owned = { limit = { owner = { tag = KOR } } owner = { capital = 1624 } }
 			random_owned = { limit = { owner = { tag = ASH } } owner = { capital = 1907 } }
 			random_owned = { limit = { owner = { tag = MLI } } owner = { capital = 1794 } }
