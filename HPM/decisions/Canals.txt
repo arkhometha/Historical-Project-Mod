@@ -10,7 +10,10 @@ political_decisions = {
 			NOT = { has_global_flag = kiel_under_construction }
 			NOT = { is_canal_enabled = 1 }
 			owns = 369
-			is_greater_power = yes
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
 			interchangeable_parts = 1
 		}
 		
@@ -19,13 +22,15 @@ political_decisions = {
 			drilling_and_blasting = 1
 			iron_steamers = 1
 			OR = {
-				money = 50000
-				ai = yes
+				is_greater_power = yes
+				AND = {
+					is_secondary_power = yes
+					money = 3000000
+				}
 			}
 		}
 		effect = {
 			set_global_flag = kiel_under_construction
-			369 = { secede_province = THIS }
 			country_event = 36976
 		}
 		
@@ -48,7 +53,13 @@ political_decisions = {
 		potential = {
 			NOT = { is_canal_enabled = 2 }
 			NOT = { has_global_flag = suez_canal_built }
-			is_greater_power = yes
+			OR = {
+				is_greater_power = yes
+				AND = {
+					is_secondary_power = yes
+					owns = 1755
+				}
+			}
 			interchangeable_parts = 1
 		}
 		
@@ -56,6 +67,13 @@ political_decisions = {
 			invention = machine_tools
 			invention = nitroglycerin		
 			raider_group_doctrine = 1
+			OR = {
+				is_greater_power = yes
+				AND = {
+					is_secondary_power = yes
+					money = 5000000
+				}
+			}
 			OR = {
 				1755 = {
 					OR = {
@@ -79,10 +97,6 @@ political_decisions = {
 					}
 				}
 			}
-			OR = {
-				money = 100000
-				ai = yes
-			}
 		}
 		
 		effect = {
@@ -92,7 +106,7 @@ political_decisions = {
 					NOT = { tag = THIS }
 					owns = 1755
 				}
-				treasury = 30000
+				treasury = 100000
 			}
 			1755 = { secede_province = THIS add_core = THIS }
 			country_event = 36970
@@ -133,18 +147,23 @@ political_decisions = {
 			invention = nitroglycerin		
 			iron_steamers = 1
 			business_banks = 1
-			1755 = { owner = { NOT = { truce_with = THIS war_with = THIS is_greater_power = yes } } }
-			OR = {
-				money = 20000
-				ai = yes
+			1755 = {
+				owner = {
+					NOT = {
+						truce_with = THIS
+						war_with = THIS
+						rank = 16
+					}
+				}
 			}
+			money = 100000
 		}
 		
 		effect = {
 			set_global_flag = suez_canal_company_founded
 			prestige = 5
-			treasury = -20000
-			1755 = { owner = { relation = { who = THIS value = 75 } country_event = 36981 } }
+			treasury = -100000
+			1755 = { owner = { country_event = 36981 } }
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -164,24 +183,38 @@ political_decisions = {
 		
 		allow = {
 			war = no
-			1755 = { owner = { NOT = { truce_with = THIS } war = no in_default = THIS } }
+			1755 = {
+				owner = {
+					NOT = { truce_with = THIS }
+					war = no
+					in_default = THIS
+				}
+			}
 			raider_group_doctrine = 1
 			invention = ironclads
-			total_num_of_ports = 50
+			total_num_of_ports = 30
 			total_amount_of_ships = 50
 			NOT = { 1755 = { owner = { military_score = THIS } } }
 			OR = {
 				AND = {
-					money = 50000
+					money = 100000
 					1755 = { owner = { NOT = { part_of_sphere = yes } } }
 				}
 				1755 = { owner = { in_sphere = THIS } }
 			}
 		}
 		effect = {
-			random_country = { limit = { owns = 1755 NOT = { in_sphere = THIS } } THIS = { treasury = -50000 } }
-			1755 = { owner = { country_event = 36980 } }
-			1755 = { secede_province = THIS }
+			random_country = {
+				limit = {
+					owns = 1755
+					NOT = { in_sphere = THIS }
+				}
+				THIS = { treasury = -100000 }
+			}
+			1755 = {
+				owner = { country_event = 36980 }
+				secede_province = THIS
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -195,7 +228,13 @@ political_decisions = {
 		potential = {
 			NOT = { has_global_flag = panama_under_construction }
 			NOT = { is_canal_enabled = 3 }
-			is_greater_power = yes
+			OR = {
+				is_greater_power = yes
+				AND = {
+					is_secondary_power = yes
+					owns = 1723
+				}
+			}
 			interchangeable_parts = 1
 		}
 		allow = {
@@ -212,8 +251,11 @@ political_decisions = {
 				}
 			}
 			OR = {
-				money = 200000
-				ai = yes
+				is_greater_power = yes
+				AND = {
+					is_secondary_power = yes
+					money = 20000000
+				}
 			}
 		}
 		effect = {
@@ -222,7 +264,7 @@ political_decisions = {
 					NOT = { tag = THIS }
 					owns = 1723
 				}
-				treasury = 50000
+				treasury = 1000000
 			}
 			1723 = { secede_province = THIS add_core = THIS }
 			country_event = 36978
@@ -259,7 +301,7 @@ political_decisions = {
 			NOT = { 1723 = { owner = { military_score = THIS } } }
 			OR = {
 				AND = {
-					money = 50000
+					money = 100000
 					1723 = { owner = { NOT = { part_of_sphere = yes } } }
 				}
 				1723 = { owner = { in_sphere = THIS } }
@@ -267,9 +309,17 @@ political_decisions = {
 		}
 		
 		effect = {
-			random_country = { limit = { owns = 1723 NOT = { in_sphere = THIS } } THIS = { treasury = -50000 } }
-			1723 = { owner = { country_event = 36980 } }
-			1723 = { secede_province = THIS }
+			random_country = {
+				limit = {
+					owns = 1723
+					NOT = { in_sphere = THIS }
+				}
+				THIS = { treasury = -100000 }
+			}
+			1723 = {
+				owner = { country_event = 36980 }
+				secede_province = THIS
+			}
 		}
 		
 		ai_will_do = { factor = 1 }

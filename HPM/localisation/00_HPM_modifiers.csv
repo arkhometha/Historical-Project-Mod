@@ -1,4 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;x,,,,,
+debt_system_cooldown;Payment Made;;;;;;;;;;;;;;;;;;x,,,,,
+debt_system_cooldown_desc;A payment was made.;;;;;;;;;;;;;;;;;;x,,,,,
 local_conveyors_and_excavators;Conveyor Belts and Excavators;;;;;;;;;;;;;;;;;;x,,,,,
 ryotwari;The Ryotwari System;;;;;;;;;;;;;;;;;;x,,,,,
 ryotwari_desc;The Ryotwari system was a land revenue system in British India, introduced by Sir Thomas Munro in 1820 based on system administered by Captain Alexander Reid in the Baramahal district. It allowed the government to deal directly with the peasant (ryot) for revenue collection, and gave the peasant freedom to give up or acquire new land for cultivation. The peasant was assessed for only the lands he was cultivating.;;;;;;;;;;;;;;;;;;x,,,,,

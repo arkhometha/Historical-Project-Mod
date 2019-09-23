@@ -922,6 +922,7 @@ political_decisions = {
 		}
 		
 		allow = {
+			NOT = { has_country_modifier = debt_system_cooldown }
 			OR = {
 				any_neighbor_country = {
 					ai = no
@@ -954,8 +955,13 @@ political_decisions = {
 					check_variable = { which = owed_ammunition value = 1 }
 				}
 				AND = {
+					money = 100000
+					check_variable = { which = owed_cash_money value = 100 }
+				}
+				AND = {
 					money = 50000
-					check_variable = { which = owed_cash_money value = 1 }
+					NOT = { money = 100000 }
+					check_variable = { which = owed_cash_money value = 50 }
 				}
 				AND = {
 					money = 10000
@@ -978,6 +984,11 @@ political_decisions = {
 					has_country_modifier = disable_conquest_cb
 				}
 				remove_country_modifier = disable_conquest_cb
+			}
+		
+			add_country_modifier = {
+				name = debt_system_cooldown
+				duration = 60
 			}
 		
 			random_owned = {
@@ -1107,6 +1118,19 @@ political_decisions = {
 				owner = {
 					canned_food = -2
 					change_variable = { which = owed_canned_food value = -2 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						money = 100000
+						check_variable = { which = owed_cash_money value = 100 }
+					}
+				}
+				owner = {
+					treasury = -100000
+					change_variable = { which = owed_cash_money value = -100 }
 				}
 			}
 			

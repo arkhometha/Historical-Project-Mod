@@ -257,6 +257,10 @@ monthly_payment_made = {
 	icon = 9
 }
 
+debt_system_cooldown = {
+	icon = 9
+}
+
 total_reform = {
 	education_efficiency_modifier = 0.75
 	administrative_efficiency_modifier = 0.3
