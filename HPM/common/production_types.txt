@@ -784,37 +784,6 @@ RGO_template_mines = {
 	workforce = 40000
 }
 
-RGO_template_capi_mines = {
-	owner = {
-		poptype = capitalists
-		effect = output
-	}
-	employees = {
-		{ 
-			poptype = labourers 
-			effect = throughput
-			amount = 1
-		}
-		
-		{
-			poptype = serfs 
-			effect = throughput
-			amount = 1
-		}
-		
-		{
-			poptype = slaves 
-			effect = throughput
-			amount = 1
-			effect_multiplier = 1.4
-		}
-	}
-	
-	type = rgo
-	workforce = 40000
-}
-
-
 ### RGOs #####################################################################################
 cattle_ranch = {
 	template = RGO_template_farmers
@@ -866,14 +835,14 @@ grain_farm = {
 }
 
 iron_mine = {
-	template = RGO_template_capi_mines
+	template = RGO_template_labourers
 	output_goods = iron
 	value = 1.8
 	mine = yes
 }
 
 oil_rig = {
-	template = RGO_template_capi_mines
+	template = RGO_template_labourers
 	output_goods = oil 
 	value = 1
 	mine = yes

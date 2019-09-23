@@ -1,4 +1,24 @@
 #combustion_engine
+rotary_kiln = {
+	limit = { combustion_engine = 1 }
+	chance = {
+		base = 2
+		modifier = {
+			factor = 2
+			invention = stiff_plastic_brickmaking_machine
+		}
+		modifier = {
+			factor = 2
+			assembly_line = 1
+		}
+		modifier = {
+			factor = -6
+			NOT = { private_banks = 1 }
+		}
+	}
+	effect = { factory_goods_output = { cement = 0.15 } }
+}
+
 daimlers_automobile = {
 	limit = { combustion_engine = 1 }
 	chance = {
@@ -563,8 +583,9 @@ drying_techniques = {
 		}
 	}
 }
+#Steam Turbine
 stiff_plastic_brickmaking_machine = {
-	limit = { pneumatic_and_hydraulics = 1 }
+	limit = { steam_turbine = 1 }
 	chance = {
 		base = 2
 		modifier = {
@@ -580,7 +601,7 @@ stiff_plastic_brickmaking_machine = {
 			NOT = { private_banks = 1 }
 		}
 	}
-	effect = { factory_goods_output = { cement = 0.05 } }
+	effect = { factory_goods_output = { cement = 0.15 } }
 }
 
 #assembly_line
@@ -774,18 +795,7 @@ pit_coal = {
 				controlled_by = THIS
 				trade_goods = coal
 				unemployment_by_type = { value = 0.01 type = labourers }
-			}
-			any_neighbor_country = {
-				any_owned_province = {
-					trade_goods = coal
-					unemployment_by_type = { value = 0.01 type = labourers }
-				} 
-			}
-			any_greater_power = {
-				any_owned_province = {
-					trade_goods = coal
-					unemployment_by_type = { value = 0.01 type = labourers }
-				}
+				province_control_days = 1825
 			}
 		}
 	}
@@ -813,18 +823,7 @@ coke = {
 				controlled_by = THIS
 				trade_goods = coal
 				unemployment_by_type = { value = 0.01 type = labourers }
-			}
-			any_neighbor_country = {
-				any_owned_province = {
-					trade_goods = coal
-					unemployment_by_type = { value = 0.01 type = labourers }
-				} 
-			}
-			any_greater_power = {
-				any_owned_province = {
-					trade_goods = coal
-					unemployment_by_type = { value = 0.01 type = labourers }
-				}
+				province_control_days = 1825
 			}
 		}
 	}
@@ -853,18 +852,7 @@ advanced_ore_roasting_processes = {
 				controlled_by = THIS
 				trade_goods = iron
 				unemployment_by_type = { value = 0.01 type = labourers }
-			}
-			any_neighbor_country = {
-				any_owned_province = {
-					trade_goods = iron
-					unemployment_by_type = { value = 0.01 type = labourers }
-				} 
-			}
-			any_greater_power = {
-				any_owned_province = {
-					trade_goods = iron
-					unemployment_by_type = { value = 0.01 type = labourers }
-				}
+				province_control_days = 1825
 			}
 		}
 	}
@@ -892,18 +880,7 @@ advanced_ore_grinding_processes = {
 				controlled_by = THIS
 				trade_goods = iron
 				unemployment_by_type = { value = 0.01 type = labourers }
-			}
-			any_neighbor_country = {
-				any_owned_province = {
-					trade_goods = iron
-					unemployment_by_type = { value = 0.01 type = labourers }
-				} 
-			}
-			any_greater_power = {
-				any_owned_province = {
-					trade_goods = iron
-					unemployment_by_type = { value = 0.01 type = labourers }
-				}
+				province_control_days = 1825
 			}
 		}
 	}
@@ -931,18 +908,7 @@ advanced_ore_smelting_processes = {
 				controlled_by = THIS
 				trade_goods = iron
 				unemployment_by_type = { value = 0.01 type = labourers }
-			}
-			any_neighbor_country = {
-				any_owned_province = {
-					trade_goods = iron
-					unemployment_by_type = { value = 0.01 type = labourers }
-				} 
-			}
-			any_greater_power = {
-				any_owned_province = {
-					trade_goods = iron
-					unemployment_by_type = { value = 0.01 type = labourers }
-				}
+				province_control_days = 1825
 			}
 		}
 	}
@@ -1058,25 +1024,7 @@ steel_alloys = {
 		factory_goods_output = { steel = 0.02 }
 	}
 }
-rotary_kiln = {
-	limit = { advanced_metallurgy = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = stiff_plastic_brickmaking_machine
-		}
-		modifier = {
-			factor = 2
-			assembly_line = 1
-		}
-		modifier = {
-			factor = -6
-			NOT = { private_banks = 1 }
-		}
-	}
-	effect = { factory_goods_output = { cement = 0.05 } }
-}
+
 #electric_furnace
 stainless_steel = {
 	limit = { electric_furnace = 1 }
