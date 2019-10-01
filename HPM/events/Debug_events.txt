@@ -8,15 +8,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA60000"
-		# upper_house = {
-			# ideology = liberal
-			# value = 50
-		# }
-		# ruling_party_ideology = liberal
-		#any_owned = { limit = { NOT = { is_core = THIS } } secede_province = IBR }
-		#any_country = { any_owned = { limit = { continent = africa } secede_province = THIS } }
-		#add_country_modifier = { name = multicultural_empire duration = -1 }
-		#any_owned = { limit = { has_pop_religion = protestant } add_core = SPA }
+		any_pop = { limit = { is_culture_group = THIS } militancy = 9 }
 	}
 }
 	

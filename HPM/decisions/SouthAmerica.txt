@@ -317,17 +317,39 @@ political_decisions = {
 			war = no
 			is_vassal = no
 			invention = manifest_destiny
-			NOT = { rebel_power_fraction = 50 }
 			NOT = { num_of_revolts = 1 }
 			NOT = { any_owned_province = { country_units_in_province = REB } }
-			OR = {
-				money = 10000
-				ai = yes
+			NOT = {
+				any_owned_province = {
+					pop_majority_culture = mayan
+					average_militancy = 3
+				}
 			}
 		}
 		
 		effect = {
-			random_owned = { limit = { owner = { ai = no } } owner = { treasury = -10000 } }
+			random_owned = {
+			limit = {
+				owner = {
+					NOT = { money = 20000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				} 
+			}
+			owner = { set_variable = { which = owed_cash_money value = 20 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { money = 20000 }
+					check_variable = { which = owed_cash_money value = 9 }
+				} 
+			}
+			owner = { change_variable = { which = owed_cash_money value = 20 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 20000 } }
+			owner = { treasury = -20000 }
+		}
 			
 			random_owned = {
 				limit = { YUC = { all_core = { owned_by = THIS is_core = THIS } } }

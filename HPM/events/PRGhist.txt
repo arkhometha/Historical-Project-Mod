@@ -13,9 +13,9 @@ country_event = {
 		relation = {
 			who = FROM
 			value = 50
-			}
-		ai_chance = { factor = 0.9 }
 		}
+		ai_chance = { factor = 0.9 }
+	}
 		
 	option = {
 		name = "EVT4661010PTB" #Don't Recognize it
@@ -48,11 +48,11 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-	tag = PRG
-	year = 1840
-	has_country_modifier = francia_utopia
-	NOT = { year = 1860 }
-		}
+		tag = PRG
+		year = 1840
+		has_country_modifier = francia_utopia
+		NOT = { year = 1860 }
+	}
 		
 	mean_time_to_happen = { months = 5 }
 	

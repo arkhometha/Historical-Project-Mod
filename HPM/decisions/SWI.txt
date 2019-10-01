@@ -298,7 +298,7 @@ political_decisions = {
 		allow = {
 			government = democracy
 			NOT = { num_of_ports = 1 }
-			NOT = { unemployment_by_type = { type = craftsmen value = 0.01 } }
+			NOT = { unemployment = 0.1 }
 			has_country_modifier = central_bank_established
 			industrial_score = 70
 			modern_central_bank_system = 1

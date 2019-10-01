@@ -107,7 +107,7 @@ country_migration_target = {
 		factor = 2.0
 		OR = {
 			is_primary_culture = THIS
-			is_accepted_culture = THIS
+			#is_accepted_culture = THIS
 		}
 	}
 	

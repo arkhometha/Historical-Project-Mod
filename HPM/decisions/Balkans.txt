@@ -1893,7 +1893,7 @@ political_decisions = {
 		picture = croatian_independence
 		potential = {
 			tag = CRO
-			any_neighbor_country = { have_core_in = CRO }
+			any_neighbor_country = { any_core = { owned_by = CRO } }
 			NOT = { has_country_flag = first_croat_independence }
 		}
 		

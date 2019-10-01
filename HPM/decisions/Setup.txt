@@ -1920,7 +1920,7 @@ political_decisions = {
 					is_greater_power = yes
 					war = yes
 				}
-				treasury = 50000
+				treasury = 100000
 			}
 			
 			any_country = {
@@ -1929,7 +1929,7 @@ political_decisions = {
 					is_secondary_power = yes
 					war = yes
 				}
-				treasury = 25000
+				treasury = 50000
 			}
 			
 			any_country = {
@@ -1938,7 +1938,7 @@ political_decisions = {
 					civilized = yes
 					war = yes
 				}
-				treasury = 10000
+				treasury = 25000
 			}
 			
 			any_country = {
@@ -1947,27 +1947,27 @@ political_decisions = {
 					civilized = no
 					war = yes
 				}
-				treasury = 5000
+				treasury = 10000
 			}
 			#########Top GPs are richer#########
 			any_country = {
 				limit = { rank = 1 }
-				treasury = 200000
+				treasury = 500000
 			}
 			
 			any_country = {
 				limit = { rank = 2 NOT = { rank = 1 } }
-				treasury = 100000
+				treasury = 250000
 			}
 			
 			any_country = {
 				limit = { rank = 3 NOT = { rank = 2 } }
-				treasury = 50000
+				treasury = 150000
 			}
 			
 			any_country = {
 				limit = { rank = 4 NOT = { rank = 3 } }
-				treasury = 25000
+				treasury = 100000
 			}
 			
 			#################Giving Starting Money to Pops and Countries######################

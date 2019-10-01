@@ -467,7 +467,7 @@ fascist_rebels = {
 					is_cultural_union = no
 					OR = {
 						is_primary_culture = THIS
-						is_accepted_culture = THIS
+						#is_accepted_culture = THIS
 					}
 				}
 			}
@@ -745,7 +745,7 @@ communist_rebels = {
 					is_cultural_union = no
 					OR = {
 						is_primary_culture = THIS
-						is_accepted_culture = THIS
+						#is_accepted_culture = THIS
 					}
 				}
 			}
@@ -1060,7 +1060,7 @@ anarcho_liberal_rebels = {
 					is_cultural_union = no
 					OR = {
 						is_primary_culture = THIS
-						is_accepted_culture = THIS
+						#is_accepted_culture = THIS
 					}
 				}
 			}
@@ -3642,7 +3642,7 @@ liberal_rebels = {
 					is_cultural_union = no
 					OR = {
 						is_primary_culture = THIS
-						is_accepted_culture = THIS
+						#is_accepted_culture = THIS
 					}
 				}
 			}
@@ -3668,7 +3668,7 @@ liberal_rebels = {
 					any_core = { 
 						OR = {
 							is_primary_culture = THIS
-							is_accepted_culture = THIS
+							#is_accepted_culture = THIS
 						}
 					}
 				}
@@ -4606,7 +4606,7 @@ socialist_rebels = {
 					is_cultural_union = no
 					OR = {
 						is_primary_culture = THIS
-						is_accepted_culture = THIS
+						#is_accepted_culture = THIS
 					}
 				}
 			}

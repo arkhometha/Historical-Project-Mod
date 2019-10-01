@@ -192,12 +192,10 @@ province_event = {
 	desc = "EVTDESC12040"
 	
 	trigger = {
-		state_scope = {
-			has_pop_type = capitalists
-			has_building = fertilizer_factory
-			NOT = { unemployment_by_type = { type = craftsmen value = 0.3 } }
-		}
-		NOT = { has_global_flag = workplace_events_disabled }
+		has_pop_type = capitalists
+		has_building = fertilizer_factory
+		NOT = { unemployment_by_type = { type = craftsmen value = 0.05 } }
+		owner = { NOT = { has_global_flag = workplace_events_disabled } }
 	}
 		
 	mean_time_to_happen = {
@@ -299,9 +297,9 @@ country_event = {
 	
 	trigger = {
 		war = yes
-		any_state = {
+		any_owned_province = {
 			has_building = canned_food_factory
-			NOT = { unemployment_by_type = { type = craftsmen value = 0.3 } }
+			NOT = { unemployment_by_type = { type = craftsmen value = 0.05 } }
 		}
 		NOT = { has_global_flag = workplace_events_disabled }
 	}
@@ -341,9 +339,9 @@ country_event = {
 	picture = "old_canned_food"
 	
 	trigger = {
-		any_state = {
+		any_owned_province = {
 			has_building = canned_food_factory
-			NOT = { unemployment_by_type = { type = craftsmen value = 0.3 } }
+			NOT = { unemployment_by_type = { type = craftsmen value = 0.05 } }
 		}
 		canned_food = 15
 		NOT = { has_global_flag = workplace_events_disabled }
@@ -708,9 +706,9 @@ country_event = {
 
 	trigger = {
 		civilized = yes
-		any_state = {
+		any_owned_province = {
 			has_building = clipper_shipyard
-			NOT = { unemployment_by_type = { type = craftsmen value = 0.3 } }
+			NOT = { unemployment_by_type = { type = craftsmen value = 0.05 } }
 		}
 		NOT = { has_country_modifier = naval_school }
 		NOT = { has_global_flag = workplace_events_disabled }
@@ -791,9 +789,8 @@ country_event = {
 	picture = "iron"
 
 	trigger = {
-		any_state = {
+		any_owned_province = {
 			has_building = cement_factory
-			NOT = { unemployment_by_type = { type = craftsmen value = 0.3 } }
 		}
 		has_pop_type = capitalists
 		NOT = { has_global_flag = workplace_events_disabled }
@@ -930,9 +927,9 @@ country_event = {
 	picture = "pumpjack"
 	
 	trigger = {
-		any_state = {
+		any_owned_province = {
 			has_building = fuel_refinery
-			NOT = { unemployment_by_type = { type = labourers value = 0.1 } }
+			NOT = { unemployment_by_type = { type = labourers value = 0.05 } }
 		}
 		OR = {
 			safety_regulations = no_safety
@@ -1174,12 +1171,12 @@ country_event = {
 	picture = "Prohibition"
 	
 	trigger = {
-		any_state = {
+		any_owned_province = {
 			OR = {
 				has_building = winery
 				has_building = liquor_distillery
 			}
-			NOT = { unemployment_by_type = { type = craftsmen value = 0.1 } }
+			NOT = { unemployment_by_type = { type = craftsmen value = 0.05 } }
 		}
 		NOT = { has_global_flag = workplace_events_disabled }
 	}

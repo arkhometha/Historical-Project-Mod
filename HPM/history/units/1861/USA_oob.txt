@@ -366,10 +366,7 @@ army = {
 	}
 }
 
-navy = {
-	name = "Home Squadron"
-	
-	leader = {
+leader = {
 		name = "Andrew H. Foote"
 		type = sea
 		date="1821.1.1"
@@ -378,6 +375,9 @@ navy = {
 		background = drillmaster
 		picture="european_admiral_0"
 	}
+
+navy = {
+	name = "Home Squadron"
 	
 	location = 233
 	ship = {
@@ -431,9 +431,6 @@ navy = {
 	}
 }
 
-navy = {
-	name = "Atlantic Blockading Squadron"
-	
 	leader = {
 		name = "David Dixon Porter"
 		type = sea
@@ -443,6 +440,9 @@ navy = {
 		background = drillmaster
 		picture="european_admiral_22"
 	}
+
+navy = {
+	name = "Atlantic Blockading Squadron"
 	
 	location = 219
 	
@@ -473,10 +473,7 @@ navy = {
 
 }
 
-navy = {
-	name = "Gulf Blockading Squadron"
-	
-	leader = {
+leader = {
 		name = "David G. Farragut"
 		type = sea
 		date="1836.1.1"
@@ -485,6 +482,9 @@ navy = {
 		background = innovative_tactician
 		picture="european_admiral_22"
 	}
+
+navy = {
+	name = "Gulf Blockading Squadron"
 	
 	location = 219
 	ship = {
@@ -499,10 +499,7 @@ navy = {
 
 }
 
-navy = {
-	name = "South Atlantic Block'g Squadron"
-	
-	leader = {
+leader = {
 		name = "Samuel F. DuPont"
 		type = sea
 		date="1821.1.1"
@@ -510,7 +507,10 @@ navy = {
 		personality = earnest
 		background = school_of_offense
 		picture="european_admiral_19"
-	}
+}
+
+navy = {
+	name = "South Atlantic Block'g Squadron"
 	
 	location = 219
 	ship = {
