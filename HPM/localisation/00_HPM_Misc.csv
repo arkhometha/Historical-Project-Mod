@@ -302,7 +302,6 @@ HOLD_ELECTION;Hold Election\n;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 NATIONALIZE_INDUSTRY_EFFECT;Perform Nationalization\n;;;;;;;;;;;;;;;;;;;;;;;;;x
 2nd_caucasian_war;Second Caucasian War;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 RELEASE;Release §Y$WHO$§W as an independent state.\n;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
-modern_central_bank_system_invented;Modern Central Banking System Invented;;;;;;;;;;;;;;;;;;;;x;;;;
 PEACE_WE_ACCEPT_2;We have accepted a peace offer from;;;;;;;;;;;;;;;;;;;;;x;;;;
 administrative_efficiency_modifier;Administrative Efficiency;;;;;;;;;;;;;;;;;;;;;;;;;x
 MODIFIER_ADMINISTRATIVE_EFFICIENCY;Administrative Efficiency;;;;;;;;;;;;;;;;;;;;;;;;;x

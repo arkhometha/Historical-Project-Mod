@@ -1,6 +1,7 @@
 political_decisions = {
 	
 	option_disable_anarcho_liberals = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -19,6 +20,7 @@ political_decisions = {
 	}
 	
 	unlock_crisis_in_1870 = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -37,6 +39,7 @@ political_decisions = {
 	}
 	
 	option_disable_hpm_crisis = {
+		picture = starting_options
 		alert = no
 		potential = {
 			exists = yes
@@ -79,6 +82,7 @@ political_decisions = {
 	}
 	
 	option_enable_fantasy_countries = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -97,6 +101,7 @@ political_decisions = {
 	}
 	
 	option_enable_easter_eggs = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -115,6 +120,7 @@ political_decisions = {
 	}
 	
 	option_disable_workplace_events = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -133,6 +139,7 @@ political_decisions = {
 	}
 	
 	option_disable_bankruptcy_events = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -152,6 +159,7 @@ political_decisions = {
 	}
 	
 	option_spawn_occitania = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -199,6 +207,7 @@ political_decisions = {
 	}
 	
 	option_spawn_eic = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -221,6 +230,7 @@ political_decisions = {
 ###Disable Starting Party Loyalty
 
 	option_disable_starting_party_loyalty = {
+		picture = starting_options
 		alert = no
 		potential = {
 			NOT = { has_global_flag = party_loyalty_eliminated }
@@ -232,7 +242,7 @@ political_decisions = {
 				}
 				AND = {
 					ai = yes
-					year = 1846
+					year = 1841
 				}
 			}
 		}
@@ -251,20 +261,13 @@ political_decisions = {
 	###Disable Mobilization bug fix
 
 	option_disable_mobilization_bug = {
+		picture = starting_options
 		alert = no
 		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { year = 1837 }
 			NOT = { has_global_flag = disabled_mobilization_fix }
-			OR = {
-				AND = {
-					ai = no
-					has_country_flag = country_looking_through_options
-					NOT = { year = 1837 }
-				}
-				AND = {
-					ai = yes
-					year = 1846
-				}
-			}
 		}
 		
 		allow = {
@@ -280,6 +283,7 @@ political_decisions = {
 ###Localized Names
 
 	option_localized_names = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -310,6 +314,7 @@ political_decisions = {
 	
 ####Disable Trade Policy setting
 	disable_trade_policy_globally = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -2722,6 +2727,8 @@ political_decisions = {
 		potential = {
 			ai = yes
 			year = 1837
+			month = 8
+			NOT = { month = 10 }
 			NOT = {
 				has_country_modifier = picking_personality
 			}

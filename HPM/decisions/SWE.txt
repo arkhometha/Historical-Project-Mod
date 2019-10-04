@@ -19,7 +19,11 @@ political_decisions = {
 			remove_accepted_culture = finnish
 			FIN = {
 				remove_accepted_culture = swedish
-				all_core = { remove_core = THIS }
+				all_core = {
+					limit = { NOT = { province_id = 348 } }
+					remove_core = THIS
+					remove_core = SWE
+				}
 			}
 			any_pop = { militancy = -1 }
 			set_country_flag = Conceded_Finland

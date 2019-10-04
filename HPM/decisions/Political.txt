@@ -83,6 +83,7 @@ political_decisions = {
 		
 		effect = {
 			treasury = -1000
+			set_country_flag = central_bank_instituted
 			add_country_modifier = {
 				name = central_bank_established
 				duration = -1
@@ -151,7 +152,13 @@ political_decisions = {
 		picture = sign_the_geneva_convention
 		potential = {
 			part_of_sphere = yes
-			is_vassal = no
+			OR = {
+				is_vassal = no
+				AND = {
+					ai = yes
+					has_country_flag = failed_unification_remove_from_sphere
+				}
+			}
 		}
 		
 		allow = {
@@ -166,11 +173,25 @@ political_decisions = {
 						}
 					}
 				}
+				AND = {
+					ai = yes
+					has_country_flag = failed_unification_remove_from_sphere
+				}
 			}
 		}
 		
 		effect = {
-			sphere_owner = { country_event = 13202 }
+			random_owned = {
+				limit = { owner = { NOT = { has_country_flag = failed_unification_remove_from_sphere } } }
+				owner = { sphere_owner = { country_event = 13202 } }
+			}
+			random_owned = {
+				limit = { owner = { has_country_flag = failed_unification_remove_from_sphere } }
+				owner = {
+					clr_country_flag = failed_unification_remove_from_sphere
+					sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -179,7 +200,10 @@ political_decisions = {
 			# Ai will do, if sphere owner has LESS than thrice our brigades.
 			modifier = {
 				factor = 0
-				NOT = { total_pops = 50000000 }
+				NOT = {
+					total_pops = 50000000
+					has_country_flag = failed_unification_remove_from_sphere
+				}
 				sphere_owner = {
 					# Factor = (sphere_owner regiments) / (our regiments).
 					# Returns true if( factor >= x ).

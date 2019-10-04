@@ -752,12 +752,14 @@ political_decisions = {
 				1162 = {
 					NOT = {
 						trade_goods = precious_goods
+						trade_goods = oil
 						has_province_modifier = pearl_season
 					}
 				}
 				1165 = {
 					NOT = {
 						trade_goods = precious_goods
+						trade_goods = oil
 						has_province_modifier = pearl_season
 					}
 				}
@@ -771,6 +773,21 @@ political_decisions = {
 				2664 = {
 					NOT = {
 						trade_goods = precious_goods
+						trade_goods = oil
+						has_province_modifier = pearl_season
+					}
+				}
+				1071 = {
+					NOT = {
+						trade_goods = precious_goods
+						trade_goods = oil
+						has_province_modifier = pearl_season
+					}
+				}
+				1168 = {
+					NOT = {
+						trade_goods = precious_goods
+						trade_goods = oil
 						has_province_modifier = pearl_season
 					}
 				}
@@ -785,52 +802,51 @@ political_decisions = {
 		
 		effect = {
 			set_global_flag = pearl_hunting_season_started
-			random_country = {
-				limit = { owns = 1167 1167 = { NOT = { trade_goods = oil } } }
-					1167 = {
-					random_list = {
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 93 } }
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 124 } }
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 155 } }
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 186 } }
-						}
-					}
-			}
+			
 			random_country = {
 				limit = { owns = 1162 }
-					1162 = {
-					random_list = {
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 93 } }
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 124 } }
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 155 } }
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 186 } }
-						}
-					}
+				1162 = {
+					trade_goods = precious_goods
+					add_province_modifier = { name = pearl_season duration = 150 }
+				}
 			}
 			random_country = {
 				limit = { owns = 1165 }
-					1165 = {
-					random_list = {
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 93 } }
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 124 } }
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 155 } }
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 186 } }
-						}
-					}
-			}
-			
-			random_country = {
-				limit = { owns = 2664 }
-					2664 = {
-					random_list = {
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 93 } }
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 124 } }
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 155 } }
-							25 = { trade_goods = precious_goods add_province_modifier = { name = pearl_season duration = 186 } }
-						}
-					}
+				1165 = {
+					trade_goods = precious_goods
+					add_province_modifier = { name = pearl_season duration = 150 }
 				}
 			}
+			random_country = {
+				limit = { owns = 1167 }
+				1167 = {
+					trade_goods = precious_goods
+					add_province_modifier = { name = pearl_season duration = 150 }
+				}
+			}
+			random_country = {
+				limit = { owns = 2664 }
+				2664 = {
+					trade_goods = precious_goods
+					add_province_modifier = { name = pearl_season duration = 150 }
+				}
+			}
+			random_country = {
+				limit = { owns = 1071 }
+				1071 = {
+					trade_goods = precious_goods
+					add_province_modifier = { name = pearl_season duration = 150 }
+				}
+			}
+			random_country = {
+				limit = { owns = 1168 }
+				1168 = {
+					trade_goods = precious_goods
+					add_province_modifier = { name = pearl_season duration = 150 }
+				}
+			}
+			
+		}
 		ai_will_do = { factor = 1 }
 	}
 	
@@ -855,6 +871,14 @@ political_decisions = {
 					trade_goods = precious_goods
 					NOT = { has_province_modifier = pearl_season }
 				}
+				1071 = {
+					trade_goods = precious_goods
+					NOT = { has_province_modifier = pearl_season }
+				}
+				1168 = {
+					trade_goods = precious_goods
+					NOT = { has_province_modifier = pearl_season }
+				}
 			}
 		}
 
@@ -864,20 +888,28 @@ political_decisions = {
 		effect = {
 			clr_global_flag = pearl_hunting_season_started
 			any_country = {
-				limit = { owns = 1162 1162 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
+				limit = { exists = yes owns = 1162 1162 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
 				1162 = { trade_goods = fruit }
 			}
 			any_country = {
-				limit = { owns = 1165 1165 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
+				limit = { exists = yes owns = 1165 1165 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
 				1165 = { trade_goods = fish }
 			}
 			any_country = {
-				limit = { owns = 1167 1167 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
+				limit = { exists = yes owns = 1167 1167 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
 				1167 = { trade_goods = fish }
 			}
 			any_country = {
-				limit = { owns = 2664 2664 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
+				limit = { exists = yes owns = 2664 2664 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
 				2664 = { trade_goods = fish }
+			}
+			any_country = {
+				limit = { exists = yes owns = 1071 1071 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
+				1071 = { trade_goods = fish }
+			}
+			any_country = {
+				limit = { exists = yes owns = 1168 1168 = { trade_goods = precious_goods NOT = { has_province_modifier = pearl_season } } }
+				1168 = { trade_goods = fruit }
 			}
 		}
 		ai_will_do = { factor = 1 }

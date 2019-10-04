@@ -4144,7 +4144,7 @@ country_event = {
 	
 	option = {				
 		name = "EVTOPTA90911"
-		annex_to = FROM
+		FROM = { inherit = THIS }
 	}
 	
 }
@@ -4224,23 +4224,14 @@ province_event = {
 	trigger = {
 		OR = {
 			province_id = 1498
-			province_id = 1496
 			AND = {
-				province_id = 1569
-				NOT = { total_pops = 30000 }
-			}
-			AND = {
-				province_id = 1566
-				NOT = { total_pops = 30000 }
+				province_id = 1496
+				NOT = { 2632 = { trade_goods = precious_goods } }
 			}
 			AND = {
 				province_id = 2632
 				NOT = { total_pops = 30000 }
 				NOT = { 1496 = { trade_goods = precious_goods } }
-			}
-			AND = {
-				province_id = 1538
-				NOT = { total_pops = 90000 }
 			}
 		}
 		port = yes

@@ -135,6 +135,7 @@ dynamite;Bessemer Process;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 advanced_metallurgy;Open Hearth Furnace;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 pneumatic_and_hydraulics;Pneumatic and Hydraulics;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 jiggs;Jigs;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+jiggs_desc;Jigs are components of machine-tool installations, specially designed in each case to position the workpiece, hold it firmly in place, and guide the motion of the power tool. Jigs can also be guides for tools or templates, as in the furniture industry.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 dobby_loom;Dobby Loom;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 dobby_loom_desc;A Dobby loom is a type of floor loom that controls all the warp threads using a device called a dobby. The main advantage of dobby looms is that more intricate designs can be produced. Dobby looms can be operated by wooden lags with pegs, which rotate around a roller above the loom. The pegs in the lags correspond to the lifting plan, which controls which harnesses are lifted. Punched paper pattern cards can also be used.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 cotton_gin;Cotton Gin;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

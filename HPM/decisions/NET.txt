@@ -332,7 +332,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			prestige_factor = -0.2
+			prestige_factor = -0.1
 			add_accepted_culture = flemish
 		}
 		

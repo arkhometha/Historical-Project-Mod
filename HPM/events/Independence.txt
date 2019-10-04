@@ -3561,7 +3561,10 @@ country_event = {
 		NOT = {
 			exists = ICL
 			has_global_flag = iceland_independence
-			tag = SCA
+			AND = {
+				accepted_culture = icelandic
+				has_country_flag = nordism_embraced
+			}
 		}
 	}
 

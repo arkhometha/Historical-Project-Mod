@@ -793,7 +793,7 @@ political_decisions = {
 			any_pop = { limit = { is_state_religion = no } militancy = 9 }
 		}
 		
-		ai_will_do = { factor = 0 modifier = { factor = 100 civilized = yes } }
+		ai_will_do = { factor = 0 }
 	}
 	
 	renamed_istanbul_constantinople = {

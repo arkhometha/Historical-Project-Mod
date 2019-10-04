@@ -1,4 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;x,,,,,
+central_bank_instituted;Central Bank Created;;;;;;;;;;;;;;;;;;x,,,,,
+failed_unification_remove_from_sphere;Remove from Sphere;;;;;;;;;;;;;;;;;;x,,,,,
 debt_system_cooldown;Payment Made;;;;;;;;;;;;;;;;;;x,,,,,
 debt_system_cooldown_desc;A payment was made.;;;;;;;;;;;;;;;;;;x,,,,,
 local_conveyors_and_excavators;Conveyor Belts and Excavators;;;;;;;;;;;;;;;;;;x,,,,,
@@ -265,6 +267,8 @@ local_nitroglycerin_and_machine_tools;Mechanized Mining;;;;;;;;;;;;;;;;;;;;;;;;;
 desc_local_nitroglycerin_and_machine_tools;The mining process in this province is carried out with new and mechanized tools as well as new explosives, increasing the efficiency of local mining operations and the size of mines.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 modern_sail_ships;Modern Sail Ships;;;;;;;;;;;;;;;;;;;;x,,,,,
 modern_sail_ships_desc;Modern techniques of building, equipping and staffing sail ships allow for more effective and powerful ships.;;;;;;;;;;;;;;;;;;;;x,,,,,
+punitive_expeditions;Modern Punitive Expeditions;;;;;;;;;;;;;;;;;;;;x,,,,,
+punitive_expeditions_desc;A common staple of the modern navies are punitive expeditions - maritimal expeditions undertaken in response to perceived disobedient or morally wrong behavior, either as revenge or to apply strong diplomatic pressure without a formal declaration of war. It's a careful balance of diplomatic effort and naval force to sucessfully carry out one.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 population_exchange_with_turkey;Population Exchange with Turkey;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 albania_exchange;Albania Exchange;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 bosnia_exchange;Bosnia Exchange;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;

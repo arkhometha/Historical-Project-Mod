@@ -4409,3 +4409,45 @@ country_event = {
 		}
 	}
 }
+
+#Vassal Transfer - Overlord Gets Informed
+country_event = {
+	id = 6016822
+	title = "EVTNAME6016822"
+	desc = "EVTDESC6016822"
+	picture = "danishgovernment"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT6016822OPTA"
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = FROM
+			}
+			country_event = 6016823
+		}
+		inherit = FROM
+	}
+}
+
+#Vassal Transfer - Vassals are transferred
+country_event = {
+	id = 6016823
+	title = "EVTNAME6016823"
+	desc = "EVTDESC6016823"
+	picture = "danishgovernment"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT6016823OPTA"
+		FROM = { create_vassal = THIS }
+		any_owned = {
+			limit = { is_core = FROM }
+			secede_province = FROM
+		}
+	}
+}
+

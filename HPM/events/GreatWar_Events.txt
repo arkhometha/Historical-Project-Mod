@@ -11364,7 +11364,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA96097" #We submit
 		civilized = no
-		annex_to = FROM
+		FROM = { inherit = THIS }
 		ai_chance = {
 			factor = 80
 		}

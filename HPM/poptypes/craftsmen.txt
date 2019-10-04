@@ -6419,7 +6419,7 @@ bankruptcy = {
 			NOT = { school_reforms = good_schools }
 			NOT = { child_labor = child_labor_illegal }
 			public_meetings = no_meeting
-			NOT = { country = { has_country_flag = modern_central_bank_system_invented } }
+			NOT = { country = { has_country_flag = central_bank_instituted } }
 			state_scope = { is_colonial = yes }
 			NOT = { is_ideology_enabled = socialist }
 			NOT = { literacy = 0.7 }

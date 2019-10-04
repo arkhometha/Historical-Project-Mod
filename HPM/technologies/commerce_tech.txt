@@ -275,6 +275,10 @@ central_bank_money_bill_printing = {
 			factor = 1.02
 			tech_school = commerce_tech_school
 		}
+		modifier = {
+			factor = 30
+			has_country_modifier = leader_of_kalmar
+		}
 	}
 }
 modern_central_bank_system = {

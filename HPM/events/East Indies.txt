@@ -875,7 +875,7 @@ country_event = {
 	option = {
 		name = "EVT97120OPTA"
 		any_owned = { limit = { is_core = THIS } add_core = LXA remove_core = THIS }
-		annex_to = FROM
+		FROM = { inherit = THIS }
 		ai_chance = {
 			factor = 50
 			modifier = {

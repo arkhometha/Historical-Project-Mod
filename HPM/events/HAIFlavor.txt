@@ -257,6 +257,10 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		civilized = no
+	}
+	
 	option = {
 		name = "EVT45105OPTA"
 		FROM = {
@@ -277,9 +281,8 @@ country_event = {
 			treasury = -100000
 		}
 		
-		DOM = { civilized = no }
-		DOM = { annex_to = FROM }
-		DOM = { civilized = yes }
+		FROM = { inherit = THIS }
+		civilized = yes
 		
 		ai_chance = {
 			factor = 0.3

@@ -218,9 +218,31 @@ country_event = {
 			}
 		}
 		
-		FROM = { release_vassal = THIS }
-		FROM = { inherit = THIS }
+		any_country = {
+			limit = {
+				exists = yes
+				alliance_with = THIS
+			}
+			leave_alliance = THIS
+		}
 		
+		any_country = {
+			limit = {
+				exists = yes
+				military_access = THIS
+			}
+			end_military_access = THIS
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { num_of_vassals = 1 } } }
+			owner = { FROM = { inherit = THIS } }
+		}
+		
+		random_owned = {
+			limit = { owner = {  num_of_vassals = 1 } }
+			owner = { FROM = { country_event =  6016822 } }
+		}
 		
 		ai_chance = {
 			factor = 75
@@ -263,6 +285,17 @@ country_event = {
 				who = THIS
 				value = -200
 			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+				in_sphere = FROM
+			}
+			leave_alliance = FROM
+			end_military_access = FROM
+			relation = { who = FROM value = -200 }
+			set_country_flag = failed_unification_remove_from_sphere
 		}
 		any_pop = {
 			limit = { is_primary_culture = yes }

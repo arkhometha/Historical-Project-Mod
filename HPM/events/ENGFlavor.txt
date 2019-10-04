@@ -2686,25 +2686,26 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-	OR = {
-		tag = ENG
-		tag = ENL
+		OR = {
+			tag = ENG
+			tag = ENL
 		}
+		owns = 300
 		NOT = { has_country_modifier = bigben_construction }
 		has_country_flag = big_ben_construction	
-		}
+	}
 		
 	mean_time_to_happen = { days = 5 }
 	
 	option = {
 		name = "EVT3697001OPTA"
+		prestige = 20
 		300 = {
 			set_province_flag = big_ben_built
 			add_province_modifier = { name = the_big_ben duration = -1 }
-			}
-			prestige = 20
 		}
 	}
+}
 	
 #country_event = {
 #

@@ -1,6 +1,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME6016822;Shifting Vassalage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC6016822;$FROMCOUNTRY$ has vassals under their command. Their national union with the $COUNTRY_ADJ$ government in $YEAR$ prompted officials in $CAPITAL$ to scramble to prepare the $FROMCOUNTRY_ADJ$ vassals - now our vassals - integration in $COUNTRY$.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVT6016822OPTA;As expected.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTNAME6016823;The New $FROMCOUNTRY_ADJ$ Masters;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC6016823;With the union of our old masters in the greater country of $FROMCOUNTRY$, our new overlords started to make the arrangements for our renewed vassalage to the $FROMCOUNTRY_ADJ$ government.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVT6016823OPTA;We have no choice in this matter.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVTNAME971714;The Falangist Doctrine;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-EVTDESC971714;For years the Spanish people have been humiliated by foreign rule and unfair treaties. No more! The new government in $CAPITAL$ outlined an aggresive agenda to reclaim the lost lands belonging to the Spanish people, by whatever means necessary. These claims involve a massive propaganda effort to give weight to our claims and show the rights of the Spanish people over what was unjustly taken from us. The focus of these pieces will be...;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC971714;For years the Spanish people have been humiliated by foreign rule and unfair treaties. No more! The new government in $CAPITAL$ outlined an aggressive agenda to reclaim the lost lands belonging to the Spanish people, by whatever means necessary. These claims involve a massive propaganda effort to give weight to our claims and show the rights of the Spanish people over what was unjustly taken from us. The focus of these pieces will be...;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVT971714OPTA;Gibraltar, ours by right.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVT971714OPTB;The Basques, the Catalans and Gibraltar are Spain's right.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVT971714OPTC;The Iberian peninsula belongs to Spain.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

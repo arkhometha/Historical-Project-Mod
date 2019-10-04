@@ -608,7 +608,7 @@ political_reforms = {
 			tariff_efficiency_modifier = 0.05
 			administrative_multiplier = 2
 			allow = {
-				has_country_flag = modern_central_bank_system_invented
+				has_country_flag = central_bank_instituted
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}

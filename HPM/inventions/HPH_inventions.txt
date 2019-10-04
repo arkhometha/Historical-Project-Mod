@@ -1,4 +1,4 @@
-#Modern Sail Ships
+#Clipper Design
 modern_sail_ships = {
 	limit = { clipper_design = 1 }
 	chance = {
@@ -28,6 +28,25 @@ modern_sail_ships = {
 		}
 	}
 }
+
+#Naval Plans
+# punitive_expeditions = {
+	# limit = { naval_plans = 1 }
+	# chance = {
+		# base = 0
+		# modifier = {
+			# factor = 10
+			# total_pops = 250000
+			# military_score = 25
+			# total_amount_of_ships = 25
+			# rank = 16
+		# }
+	# }
+	# effect = {
+		# influence = 0.02
+	# }
+# }
+
 
 schrapnel_standard_design = {
 	limit = { steel_breech_loaded_artillery = 1 } #1870

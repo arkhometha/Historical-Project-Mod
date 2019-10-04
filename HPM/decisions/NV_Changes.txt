@@ -126,7 +126,7 @@ political_decisions = {
 			}
 		}
 		
-		ai_will_do = { factor = 0.25 }
+		ai_will_do = { factor = 1 }
 	}
 	
 	switch_to_autocracy = {
@@ -167,7 +167,7 @@ political_decisions = {
 			}
 		}
 		
-		ai_will_do = { factor = 0.75 }
+		ai_will_do = { factor = 1 }
 	}
 	
 	switch_to_equality = {
@@ -209,7 +209,7 @@ political_decisions = {
 			}
 		}
 		
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 1 }
 	}
 	
 	switch_to_liberty = {
@@ -251,6 +251,6 @@ political_decisions = {
 			}
 		}
 		
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 1 }
 	}
 }
