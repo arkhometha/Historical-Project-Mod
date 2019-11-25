@@ -6716,6 +6716,18 @@ political_decisions = {
 					owns = 1818
 					1821 = { empty = yes }
 				}
+				AND = {
+					owns = 1838
+					1739 = { empty = yes }
+				}
+				AND = {
+					owns = 1840
+					1839 = { empty = yes }
+				}
+				AND = {
+					owns = 1739
+					1842 = { empty = yes }
+				}
 			}
 		}
 		
