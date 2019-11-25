@@ -6685,7 +6685,7 @@ political_decisions = {
 			exists = yes
 			OR = {
 				AND = {
-					owns = 1740
+					owns = 1741
 					1742 = { empty = yes }
 				}
 				AND = {
@@ -6905,7 +6905,7 @@ political_decisions = {
 				owner = { prestige = 1 }
 			}
 			random_owned = {
-				limit = { owner = { 1740 = { owned_by = THIS is_core = THIS } } }
+				limit = { owner = { 1741 = { owned_by = THIS is_core = THIS } } }
 				1742 = { add_core = THIS }
 			}
 			random_owned = {
