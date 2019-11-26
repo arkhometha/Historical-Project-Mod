@@ -5876,7 +5876,6 @@ political_decisions = {
 			FRA_1878 = { add_core = GBU }
 			GBU = {
 				all_core = {
-					remove_core = GBU
 					remove_core = JAL
 				}
 			}
