@@ -6380,7 +6380,7 @@ political_decisions = {
 			set_country_flag = rwanda_burundi_master
 			country_event = 199068
 			
-			random_country = {
+			any_country = {
 				limit = {
 					capital_scope = { owned_by = THIS }
 					tag = BRD
@@ -6408,7 +6408,7 @@ political_decisions = {
 				clr_country_flag = animist_country	
 			}
 			
-			random_country = {
+			any_country = {
 				limit = {
 					capital_scope = { owned_by = THIS }
 					tag = RWA
@@ -6528,7 +6528,7 @@ political_decisions = {
 			}
 			set_country_flag = rwanda_burundi_master
 			
-			random_country = {
+			any_country = {
 				limit = {
 					capital_scope = { owned_by = THIS }
 					tag = BRD
@@ -6556,7 +6556,7 @@ political_decisions = {
 				clr_country_flag = animist_country	
 			}
 			
-			random_country = {
+			any_country = {
 				limit = {
 					capital_scope = { owned_by = THIS }
 					tag = RWA
