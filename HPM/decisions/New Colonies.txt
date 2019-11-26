@@ -6739,12 +6739,9 @@ political_decisions = {
 					revolution_n_counterrevolution = 1
 				}
 				AND = {
-					owns = 1835
-					OR = {
-						1758 = { empty = no }
-						1842 = { empty = no }
-					}
-					2564 = { empty = yes }
+					owns = 1741
+					1742 = { empty = yes }
+					2585 = { empty = no }
 				}
 				AND = {
 					OR = {
@@ -6763,9 +6760,12 @@ political_decisions = {
 					}
 				}
 				AND = {
-					owns = 1741
-					1742 = { empty = yes }
-					2585 = { empty = no }
+					owns = 1835
+					OR = {
+						1758 = { empty = no }
+						1842 = { empty = no }
+					}
+					2564 = { empty = yes }
 				}
 				AND = {
 					owns = 1838
