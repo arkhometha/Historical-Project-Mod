@@ -6682,8 +6682,23 @@ political_decisions = {
 	conquest_of_the_saharan_desert = {
 		picture = form_the_ikhwan
 		potential = {
-			exists = yes
 			OR = {
+				AND = {
+					owns = 1818
+					1821 = { empty = yes }
+				}
+				AND = {
+					owns = 1811
+					1812 = { empty = yes }
+				}
+				AND = {
+					owns = 1803
+					2609 = { empty = yes }
+				}
+				AND = {
+					owns = 1779
+					1782 = { empty = yes }
+				}
 				AND = {
 					owns = 1741
 					1742 = { empty = yes }
@@ -6699,22 +6714,6 @@ political_decisions = {
 				AND = {
 					owns = 1835
 					2564 = { empty = yes }
-				}
-				AND = {
-					owns = 1779
-					1782 = { empty = yes }
-				}
-				AND = {
-					owns = 1803
-					2609 = { empty = yes }
-				}
-				AND = {
-					owns = 1811
-					1812 = { empty = yes }
-				}
-				AND = {
-					owns = 1818
-					1821 = { empty = yes }
 				}
 				AND = {
 					owns = 1838
