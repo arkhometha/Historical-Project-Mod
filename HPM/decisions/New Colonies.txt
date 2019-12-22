@@ -1,5 +1,313 @@
 political_decisions = {
 	
+	conquest_of_the_saharan_desert = {
+		picture = form_the_ikhwan
+		potential = {
+			OR = {
+				AND = {
+					owns = 1818
+					1821 = { empty = yes }
+				}
+				AND = {
+					owns = 1811
+					1812 = { empty = yes }
+				}
+				AND = {
+					owns = 1803
+					2609 = { empty = yes }
+				}
+				AND = {
+					owns = 1779
+					1782 = { empty = yes }
+				}
+				AND = {
+					owns = 1741
+					1742 = { empty = yes }
+				}
+				AND = {
+					owns = 1738
+					2585 = { empty = yes }
+				}
+				AND = {
+					owns = 1761
+					1758 = { empty = yes }
+				}
+				AND = {
+					owns = 1835
+					2564 = { empty = yes }
+				}
+				AND = {
+					owns = 1838
+					1739 = { empty = yes }
+				}
+				AND = {
+					owns = 1840
+					1839 = { empty = yes }
+				}
+				AND = {
+					owns = 1739
+					1842 = { empty = yes }
+				}
+			}
+		}
+		
+		allow = {
+			OR = {
+				invention = the_dark_continent
+				AND = {
+					capital_scope = { continent = africa }
+					civilized = yes
+					revolution_n_counterrevolution = 1
+				}
+				AND = {
+					owns = 1741
+					1742 = { empty = yes }
+					2585 = { empty = no }
+				}
+				AND = {
+					OR = {
+						owns = 1742
+						owns = 1738
+					}
+					1758 = { empty = no }
+					2585 = { empty = yes }
+				}
+				AND = {
+					owns = 1761
+					1758 = { empty = yes }
+					OR = {
+						2564 = { empty = no }
+						2585 = { empty = no }
+					}
+				}
+				AND = {
+					owns = 1835
+					OR = {
+						1758 = { empty = no }
+						1842 = { empty = no }
+					}
+					2564 = { empty = yes }
+				}
+				AND = {
+					owns = 1838
+					1739 = { empty = yes }
+					2564 = { empty = no }
+				}
+			}
+		}
+		
+		effect = {
+			#Owner of Waddai gets Chad
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1818
+						1821 = { empty = yes }
+						OR = {
+							invention = the_dark_continent
+							AND = {
+								capital_scope = { continent = africa }
+								civilized = yes
+							}
+						}
+					}
+				}
+				1821 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 27 }
+				1824 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 27 }
+				1825 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				1826 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				owner = { prestige = 1 }
+			}
+			#Owner of Outer Hausaland gets Niger
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1811
+						1812 = { empty = yes }
+						OR = {
+							invention = the_dark_continent
+							AND = {
+								capital_scope = { continent = africa }
+								civilized = yes
+							}
+						}
+					}
+				}
+				1812 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				1814 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				1817 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				owner = { prestige = 1 }
+			}
+			#Owner of Timbuktu gets rest of Timbuktu state
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1803
+						2609 = { empty = yes }
+						OR = {
+							invention = the_dark_continent
+							AND = {
+								capital_scope = { continent = africa }
+								civilized = yes
+							}
+						}
+					}
+				}
+				2609 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				1807 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				owner = { prestige = 1 }
+			}
+			#Owner of Mauretania gets the rest of Mauretania
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1779
+						1782 = { empty = yes }
+						OR = {
+							invention = the_dark_continent
+							AND = {
+								capital_scope = { continent = africa }
+								civilized = yes
+							}
+						}
+					}
+				}
+				1782 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				1781 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+				owner = { prestige = 1 }
+			}
+			#Owner of Murzuk gets Wath, Libya
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1741
+						1742 = { empty = yes }
+						NOT = { has_global_flag = libya_organized }
+					}
+				}
+				1742 = { secede_province = THIS add_core = TRI any_pop = { literacy = -0.99 } }
+				owner = { prestige = 1 }
+			}
+			#Owner of Murzuk gets Wath, Libya
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1741
+						1742 = { empty = yes }
+						has_global_flag = libya_organized
+					}
+				}
+				1742 = { secede_province = THIS add_core = LBY any_pop = { literacy = -0.99 } }
+				owner = { prestige = 1 }
+			}
+			#Owner of Al Jaghbub gets Al Jawf, Libya
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1738
+						2585 = { empty = yes }
+						NOT = { has_global_flag = libya_organized }
+					}
+				}
+				2585 = { secede_province = THIS add_core = CYR any_pop = { literacy = -0.99 } }
+				owner = { prestige = 1 }
+			}
+			#Owner of Al Jaghbub gets Al Jawf, Libya
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1738
+						2585 = { empty = yes }
+						has_global_flag = libya_organized
+					}
+				}
+				2585 = { secede_province = THIS add_core = LBY any_pop = { literacy = -0.99 } }
+				owner = { prestige = 1 }
+			}
+			random_owned = {
+				limit = { owner = { 1741 = { owned_by = THIS is_core = THIS } } }
+				1742 = { add_core = THIS }
+			}
+			random_owned = {
+				limit = { owner = { 1738 = { owned_by = THIS is_core = THIS } } }
+				2585 = { add_core = THIS add_core = CYR }
+			}
+			#Owner of Baris gets Farafra, Egypt
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1761
+						1758 = { empty = yes }
+					}
+				}
+				1758 = { secede_province = THIS add_core = EGY any_pop = { literacy = -0.99 } }
+				owner = { prestige = 1 }
+			}
+			#Owner of Dongola gets Salima, Sudan
+			random_owned = {
+				limit = {
+					owner = {
+						owns = 1835
+						2564 = { empty = yes }
+					}
+				}
+				2564 = { secede_province = THIS add_core = SUD any_pop = { literacy = -0.99 } }
+				owner = { prestige = 1 }
+			}
+			random_owned = {
+				limit = { owner = { 1761 = { owned_by = THIS is_core = THIS } } }
+				1758 = { add_core = THIS }
+				owner = { prestige = 1 }
+			}
+			random_owned = {
+				limit = { owner = { 1835 = { owned_by = THIS is_core = THIS } } }
+				2564 = { add_core = THIS }
+				owner = { prestige = 1 }
+			}
+			#Acquiring Empty Kordofan, Sudan
+			random_owned = {
+				limit = { province_id = 1838 }
+				random_empty_neighbor_province = {
+					limit = { province_id = 1739 }
+					secede_province = THIS
+					add_core = SUD
+					any_pop = { literacy = -0.99 }
+				}
+			}
+			
+			random_owned = {
+				limit = { province_id = 1840 }
+				random_empty_neighbor_province = {
+					limit = { province_id = 1839 }
+					secede_province = THIS
+					add_core = SUD
+					any_pop = { literacy = -0.99 }
+				}
+			}
+			
+			random_owned = {
+				limit = { province_id = 1739 }
+				random_empty_neighbor_province = {
+					limit = { province_id = 1842 }
+					secede_province = THIS
+					add_core = SUD
+					any_pop = { literacy = -0.99 }
+				}
+			}
+			
+			random_owned = {
+				limit = { province_id = 1739 }
+				random_empty_neighbor_province = {
+					limit = { province_id = 1841 }
+					secede_province = THIS
+					add_core = SUD
+					any_pop = { literacy = -0.99 }
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
 	organize_nigeria = {
 		picture = map_nigeria
 		potential = {
@@ -1448,8 +1756,8 @@ political_decisions = {
 			
 			CMR = {
 				primary_culture = THIS
-				tech_school = developing_tech_school
 				add_accepted_culture = forest_bantu
+				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -1823,9 +2131,9 @@ political_decisions = {
 			any_owned = { limit = { is_core = CGO } remove_core = LOA }
 			CGO = {
 				primary_culture = THIS
+				add_accepted_culture = bakongo
 				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
-				add_accepted_culture = bakongo
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
 				clr_country_flag = ibadi_country
@@ -2042,6 +2350,7 @@ political_decisions = {
 			}
 			CNG = {
 				primary_culture = THIS
+				add_accepted_culture = bakongo
 				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
@@ -3334,8 +3643,8 @@ political_decisions = {
 			}
 			MLW = {
 				primary_culture = THIS
-				capital = 2067
 				add_accepted_culture = chewa
+				capital = 2067
 				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
@@ -3500,6 +3809,7 @@ political_decisions = {
 			
 			GMB = {
 				primary_culture = THIS
+				add_accepted_culture = mande
 				tech_school = developing_tech_school
 				set_country_flag = post_colonial_country
 				clr_country_flag = sunni_country
@@ -3856,8 +4166,8 @@ political_decisions = {
 			MOZ = {
 				set_country_flag = post_colonial_country
 				primary_culture = THIS
-				tech_school = developing_tech_school
 				add_accepted_culture = shona
+				tech_school = developing_tech_school
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
 				clr_country_flag = ibadi_country
@@ -5876,7 +6186,6 @@ political_decisions = {
 			FRA_1878 = { add_core = GBU }
 			GBU = {
 				all_core = {
-					remove_core = GBU
 					remove_core = JAL
 				}
 			}
@@ -6380,7 +6689,7 @@ political_decisions = {
 			set_country_flag = rwanda_burundi_master
 			country_event = 199068
 			
-			random_country = {
+			any_country = {
 				limit = {
 					capital_scope = { owned_by = THIS }
 					tag = BRD
@@ -6388,6 +6697,7 @@ political_decisions = {
 				}
 				set_country_flag = post_colonial_country
 				primary_culture = THIS
+				add_accepted_culture = ruanda
 				tech_school = developing_tech_school
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -6408,7 +6718,7 @@ political_decisions = {
 				clr_country_flag = animist_country	
 			}
 			
-			random_country = {
+			any_country = {
 				limit = {
 					capital_scope = { owned_by = THIS }
 					tag = RWA
@@ -6416,6 +6726,7 @@ political_decisions = {
 				}
 				set_country_flag = post_colonial_country
 				primary_culture = THIS
+				add_accepted_culture = ruanda
 				tech_school = developing_tech_school
 				clr_country_flag = sunni_country
 				clr_country_flag = shiite_country
@@ -6528,7 +6839,7 @@ political_decisions = {
 			}
 			set_country_flag = rwanda_burundi_master
 			
-			random_country = {
+			any_country = {
 				limit = {
 					capital_scope = { owned_by = THIS }
 					tag = BRD
@@ -6556,7 +6867,7 @@ political_decisions = {
 				clr_country_flag = animist_country	
 			}
 			
-			random_country = {
+			any_country = {
 				limit = {
 					capital_scope = { owned_by = THIS }
 					tag = RWA
@@ -6675,303 +6986,6 @@ political_decisions = {
 		effect = {
 			2081 = { owner = { country_event = 955201 } }
 			set_global_flag = caprivi_purchase_tried
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	conquest_of_the_saharan_desert = {
-		picture = form_the_ikhwan
-		potential = {
-			exists = yes
-			OR = {
-				AND = {
-					owns = 1740
-					1742 = { empty = yes }
-				}
-				AND = {
-					owns = 1738
-					2585 = { empty = yes }
-				}
-				AND = {
-					owns = 1761
-					1758 = { empty = yes }
-				}
-				AND = {
-					owns = 1835
-					2564 = { empty = yes }
-				}
-				AND = {
-					owns = 1779
-					1782 = { empty = yes }
-				}
-				AND = {
-					owns = 1803
-					2609 = { empty = yes }
-				}
-				AND = {
-					owns = 1811
-					1812 = { empty = yes }
-				}
-				AND = {
-					owns = 1818
-					1821 = { empty = yes }
-				}
-			}
-		}
-		
-		allow = {
-			OR = {
-				invention = the_dark_continent
-				AND = {
-					capital_scope = { continent = africa }
-					civilized = yes
-					revolution_n_counterrevolution = 1
-				}
-				AND = {
-					owns = 1835
-					OR = {
-						1758 = { empty = no }
-						1842 = { empty = no }
-					}
-					2564 = { empty = yes }
-				}
-				AND = {
-					OR = {
-						owns = 1742
-						owns = 1738
-					}
-					1758 = { empty = no }
-					2585 = { empty = yes }
-				}
-				AND = {
-					owns = 1761
-					1758 = { empty = yes }
-					OR = {
-						2564 = { empty = no }
-						2585 = { empty = no }
-					}
-				}
-				AND = {
-					owns = 1741
-					1742 = { empty = yes }
-					2585 = { empty = no }
-				}
-				AND = {
-					owns = 1838
-					1739 = { empty = yes }
-					2564 = { empty = no }
-				}
-			}
-		}
-		
-		effect = {
-			#Owner of Waddai gets Chad
-			random_owned = {
-				limit = {
-					owner = {
-						owns = 1818
-						1821 = { empty = yes }
-						OR = {
-							invention = the_dark_continent
-							AND = {
-								capital_scope = { continent = africa }
-								civilized = yes
-							}
-						}
-					}
-				}
-				1821 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 27 }
-				1824 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 27 }
-				1825 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				1826 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
-			}
-			#Owner of Outer Hausaland gets Niger
-			random_owned = {
-				limit = {
-					owner = {
-						owns = 1811
-						1812 = { empty = yes }
-						OR = {
-							invention = the_dark_continent
-							AND = {
-								capital_scope = { continent = africa }
-								civilized = yes
-							}
-						}
-					}
-				}
-				1812 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				1814 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				1817 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
-			}
-			#Owner of Timbuktu gets rest of Timbuktu state
-			random_owned = {
-				limit = {
-					owner = {
-						owns = 1803
-						2609 = { empty = yes }
-						OR = {
-							invention = the_dark_continent
-							AND = {
-								capital_scope = { continent = africa }
-								civilized = yes
-							}
-						}
-					}
-				}
-				2609 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				1807 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
-			}
-			#Owner of Mauretania gets the rest of Mauretania
-			random_owned = {
-				limit = {
-					owner = {
-						owns = 1779
-						1782 = { empty = yes }
-						OR = {
-							invention = the_dark_continent
-							AND = {
-								capital_scope = { continent = africa }
-								civilized = yes
-							}
-						}
-					}
-				}
-				1782 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				1781 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
-			}
-			#Owner of Murzuk gets Wath, Libya
-			random_owned = {
-				limit = {
-					owner = {
-						owns = 1741
-						1742 = { empty = yes }
-						NOT = { has_global_flag = libya_organized }
-					}
-				}
-				1742 = { secede_province = THIS add_core = TRI any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
-			}
-			#Owner of Murzuk gets Wath, Libya
-			random_owned = {
-				limit = {
-					owner = {
-						owns = 1741
-						1742 = { empty = yes }
-						has_global_flag = libya_organized
-					}
-				}
-				1742 = { secede_province = THIS add_core = LBY any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
-			}
-			#Owner of Al Jaghbub gets Al Jawf, Libya
-			random_owned = {
-				limit = {
-					owner = {
-						owns = 1738
-						2585 = { empty = yes }
-						NOT = { has_global_flag = libya_organized }
-					}
-				}
-				2585 = { secede_province = THIS add_core = CYR any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
-			}
-			#Owner of Al Jaghbub gets Al Jawf, Libya
-			random_owned = {
-				limit = {
-					owner = {
-						owns = 1738
-						2585 = { empty = yes }
-						has_global_flag = libya_organized
-					}
-				}
-				2585 = { secede_province = THIS add_core = LBY any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
-			}
-			random_owned = {
-				limit = { owner = { 1740 = { owned_by = THIS is_core = THIS } } }
-				1742 = { add_core = THIS }
-			}
-			random_owned = {
-				limit = { owner = { 1738 = { owned_by = THIS is_core = THIS } } }
-				2585 = { add_core = THIS add_core = CYR }
-			}
-			#Owner of Baris gets Farafra, Egypt
-			random_owned = {
-				limit = {
-					owner = {
-						owns = 1761
-						1758 = { empty = yes }
-					}
-				}
-				1758 = { secede_province = THIS add_core = EGY any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
-			}
-			#Owner of Dongola gets Salima, Sudan
-			random_owned = {
-				limit = {
-					owner = {
-						owns = 1835
-						2564 = { empty = yes }
-					}
-				}
-				2564 = { secede_province = THIS add_core = SUD any_pop = { literacy = -0.99 } }
-				owner = { prestige = 1 }
-			}
-			random_owned = {
-				limit = { owner = { 1761 = { owned_by = THIS is_core = THIS } } }
-				1758 = { add_core = THIS }
-				owner = { prestige = 1 }
-			}
-			random_owned = {
-				limit = { owner = { 1835 = { owned_by = THIS is_core = THIS } } }
-				2564 = { add_core = THIS }
-				owner = { prestige = 1 }
-			}
-			#Acquiring Empty Kordofan, Sudan
-			random_owned = {
-				limit = { province_id = 1838 }
-				random_empty_neighbor_province = {
-					limit = { province_id = 1739 }
-					secede_province = THIS
-					add_core = SUD
-					any_pop = { literacy = -0.99 }
-				}
-			}
-			
-			random_owned = {
-				limit = { province_id = 1840 }
-				random_empty_neighbor_province = {
-					limit = { province_id = 1839 }
-					secede_province = THIS
-					add_core = SUD
-					any_pop = { literacy = -0.99 }
-				}
-			}
-			
-			random_owned = {
-				limit = { province_id = 1739 }
-				random_empty_neighbor_province = {
-					limit = { province_id = 1842 }
-					secede_province = THIS
-					add_core = SUD
-					any_pop = { literacy = -0.99 }
-				}
-			}
-			
-			random_owned = {
-				limit = { province_id = 1739 }
-				random_empty_neighbor_province = {
-					limit = { province_id = 1841 }
-					secede_province = THIS
-					add_core = SUD
-					any_pop = { literacy = -0.99 }
-				}
-			}
 		}
 		ai_will_do = { factor = 1 }
 	}
