@@ -465,10 +465,10 @@ fascist_rebels = {
 			location = {
 				any_core = {
 					is_cultural_union = no
-					OR = {
+					#OR = {
 						is_primary_culture = THIS
 						#is_accepted_culture = THIS
-					}
+					#}
 				}
 			}
 		}
@@ -743,10 +743,10 @@ communist_rebels = {
 			location = {
 				any_core = {
 					is_cultural_union = no
-					OR = {
+					#OR = {
 						is_primary_culture = THIS
 						#is_accepted_culture = THIS
-					}
+					#}
 				}
 			}
 		}
@@ -959,18 +959,17 @@ anarcho_liberal_rebels = {
 	# The rebel type with the highest modifier for this pop gets picked
 	spawn_chance = {
 		factor = 1.01
+		
 		modifier = {
 			factor = 0
 			NOT = {
 				is_ideology_enabled = anarcho_liberal
 			}
 		}
-		
 		modifier = {
 			factor = 0
 			type = slaves
 		}
-		
 		modifier = {
 			factor = 0
 			country = { civilized = no }
@@ -1058,10 +1057,10 @@ anarcho_liberal_rebels = {
 			location = {
 				any_core = {
 					is_cultural_union = no
-					OR = {
+					#OR = {
 						is_primary_culture = THIS
 						#is_accepted_culture = THIS
-					}
+					#}
 				}
 			}
 		}
@@ -3640,10 +3639,10 @@ liberal_rebels = {
 			location = {
 				any_core = {
 					is_cultural_union = no
-					OR = {
+					#OR = {
 						is_primary_culture = THIS
 						#is_accepted_culture = THIS
-					}
+					#}
 				}
 			}
 		}
@@ -3665,11 +3664,11 @@ liberal_rebels = {
 			is_accepted_culture = no
 			NOT = {
 				location = {
-					any_core = { 
-						OR = {
+					any_core = {
+						#OR = {
 							is_primary_culture = THIS
 							#is_accepted_culture = THIS
-						}
+						#}
 					}
 				}
 			}
@@ -3974,12 +3973,14 @@ unciv_reactionary_rebels = {
 			country = { civilized = yes }
 		}
 		
-		#modifier = {
-		#	factor = 0
-		#	location = {
-		#		NOT = { controlled_by = owner }
-		#	}
-		#}
+		modifier = {
+			factor = 0
+			NOT = { 
+				location = {
+					controlled_by = THIS
+				}
+			}
+		}
 		
 		modifier = {
 			factor = 1.05
@@ -4264,7 +4265,7 @@ separatist_rebels = {
 			factor = 0
 			NOT = {
 				AND = {
-					country = { any_neighbor_country = { have_core_in = THIS } }
+					country = { any_neighbor_country = { any_core = { owned_by = THIS } } }
 					location = {
 						any_core = {
 							is_primary_culture = THIS
@@ -4276,7 +4277,7 @@ separatist_rebels = {
 		}
 		modifier = {
 			factor = 1.3
-			country = { any_neighbor_country = { have_core_in = THIS } }
+			country = { any_neighbor_country = { any_core = { owned_by = THIS } } }
 			location = {
 				any_core = {
 					is_primary_culture = THIS
@@ -4604,10 +4605,10 @@ socialist_rebels = {
 			location = {
 				any_core = {
 					is_cultural_union = no
-					OR = {
+					#OR = {
 						is_primary_culture = THIS
 						#is_accepted_culture = THIS
-					}
+					#}
 				}
 			}
 		}
@@ -5593,11 +5594,11 @@ sioux_nation = {
 	
 
 	# Country scope
-	#demands_enforced_trigger = {
-	#}
+	demands_enforced_trigger = {
+	}
 	
-	#demands_enforced_effect = {
-	#}
+	demands_enforced_effect = {
+	}
 }
 
 apache = {
@@ -5719,11 +5720,11 @@ apache = {
 	
 
 	# Country scope
-	#demands_enforced_trigger = {
-	#}
+	demands_enforced_trigger = {
+	}
 	
-	#demands_enforced_effect = {
-	#}
+	demands_enforced_effect = {
+	}
 }
 
 slave_revolt = {
@@ -5893,6 +5894,235 @@ slave_revolt = {
 		prestige_factor = -1
 		war_exhaustion = 50
 		add_country_modifier = { name = national_confusion duration = 1095 }
+	}
+}
+
+
+partisan_rebels = {
+	icon = 19
+	break_alliance_on_win = no
+	
+	area = nation
+	
+	# <this is the government in the country> = <this is what the rebels want>
+	government = {
+		proletarian_dictatorship = proletarian_dictatorship
+		presidential_dictatorship = presidential_dictatorship
+		bourgeois_dictatorship = bourgeois_dictatorship
+		fascist_dictatorship = fascist_dictatorship
+		absolute_monarchy = absolute_monarchy
+		prussian_constitutionalism = prussian_constitutionalism
+		hms_government = hms_government
+		democracy = democracy
+		theocracy = theocracy
+	}
+	
+	
+	defection = none					# Will defect to the "best" alternative.
+	independence = none				# Does not strive for independence
+	defect_delay = 18
+	
+	ideology = liberal
+	
+	allow_all_cultures = yes
+	allow_all_religions = yes
+	allow_all_ideologies = yes
+	
+	resilient = yes					# Disbands on retreat
+	reinforcing = yes				# Does not receive reinforcements
+	general = yes					# Does not use generals
+	smart = yes						# Does not assault forts, tactically withdraw from battle, etc.
+	unit_transfer = yes			# Units do not remain after enforcing demands.
+	
+	occupation_mult = 1.25			# The amount of strength this rebel gains from taking provinces	
+
+	# triggers a general rising, modifier will be multiplied with the country's army strength and compared to the factions strength
+	will_rise = {
+		factor = 0.2 #0.2
+		
+		modifier = {
+			war_exhaustion = 40
+			factor = 0.95
+		}
+		modifier = {
+			war_exhaustion = 60
+			factor = 0.95
+		}
+		modifier = {
+			war_exhaustion = 80
+			factor = 0.95
+		}
+		modifier = {
+			war = no
+			factor = 0
+		}
+		modifier = {
+			factor = 0.9
+			war_countries = { is_greater_power = yes }
+		}
+	}
+	
+	# The rebel type with the highest modifier for this pop gets picked
+	spawn_chance = {
+		factor = 5
+		
+		modifier = {
+			factor = 0
+			type = slaves
+		}
+		#Only show up in provs controlled by foreigners and during a war
+		modifier = {
+			factor = 0
+			country = { war = no }
+		}
+		modifier = {
+			factor = 0
+			location = { controlled_by = THIS }
+		}
+		modifier = {
+			factor = 0
+			location = { NOT = { is_core = THIS } }
+		}
+		modifier = {
+			factor = 0
+			location = { controlled_by_rebels = yes }
+		}
+		
+		modifier = {
+			factor = 1.5
+			location = { is_capital = yes }
+		}
+		
+		#THIS show signs of weird behaviour, units_in_province works better
+		modifier = {
+			factor = 0
+			location = { units_in_province = 1 }
+		}
+		
+		#Will only spawn in provinces that do not neighbour other free provinces/have units
+		modifier = {
+			factor = 0
+			location = {
+				NOT = {
+					controlled_by = REB
+					controlled_by = THIS
+				}
+				any_neighbor_province = {
+					OR = {
+						controlled_by = THIS
+						units_in_province = 1
+					}
+				}
+			}
+		}
+
+		#Nationalists would rather have their own country
+		modifier = {
+			factor = 0.01
+			is_primary_culture = no
+			is_accepted_culture = no
+		}
+		modifier = {
+			factor = 0
+			is_primary_culture = no
+			is_accepted_culture = no
+			location = {
+				any_core = {
+					is_cultural_union = no
+					is_primary_culture = THIS
+					exists = no
+				}
+			}
+		}
+		modifier = {
+			factor = 0.01
+			is_primary_culture = no
+			location = {
+				any_core = {
+					is_primary_culture = THIS
+					is_cultural_union = no
+					exists = no
+				}
+			}
+		}
+	}
+ 
+ 	#This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = THIS
+		}
+		modifier = {
+			factor = 0.001
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 4
+			NOT = {
+				controlled_by = THIS
+				controlled_by = REB
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 6
+			NOT = {
+				controlled_by = THIS
+				controlled_by = REB
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 8
+			NOT = {
+				controlled_by = THIS
+				controlled_by = REB
+			}
+		}
+		modifier = {
+			factor = 10
+			is_capital = yes
+			NOT = {
+				controlled_by = THIS
+				controlled_by = REB
+			}
+		}
+		modifier = {
+			factor = 4	
+			NOT =  {
+				controlled_by = THIS
+				controlled_by = REB
+			}
+		}
+	}
+	
+ 	# Province Scope
+ 	siege_won_trigger = {
+		NOT = { has_province_modifier = partisan_occupation }
+ 	}
+	
+	siege_won_effect = {
+		add_province_modifier = { name = partisan_occupation duration = 365 }
+	}
+
+	# Country scope
+	demands_enforced_trigger = {
+		any_owned_province = {
+			controlled_by = REB
+			has_province_modifier = partisan_occupation
+			province_control_days = 365
+		}
+		war = no
+	}
+	
+	demands_enforced_effect = {
 	}
 }
 

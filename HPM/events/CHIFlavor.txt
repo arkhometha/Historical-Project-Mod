@@ -1765,9 +1765,7 @@ country_event = {
 			limit = { is_core = FROM }
 			secede_province = FROM
 		}
-		capital_scope = {
-			add_province_modifier = { name = legation_quarter duration = -1 }
-		}
+		add_country_modifier = { name = legation_quarter duration = -1 }
 		# random_owned = {
 			# limit = { owner = { has_country_modifier = uncivilized_isolationism } }
 			# owner = {

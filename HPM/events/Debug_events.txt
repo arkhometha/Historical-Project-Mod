@@ -8,7 +8,18 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA60000"
-		any_pop = { limit = { is_culture_group = THIS } militancy = 9 }
+	    any_owned = {
+			limit = {
+				NOT = { controlled_by = owner }
+				any_neighbor_province = {
+					NOT = {
+						controlled_by = THIS
+						units_in_province = 1
+					}
+				}
+			}
+			any_pop = { militancy = 10 consciousness = 10 }
+		}
 	}
 }
 	

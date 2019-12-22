@@ -72,7 +72,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_politics_rebel_strip"
 		texturefile = "gfx\\interface\\politics_rebel_strip.dds"
-		noOfFrames = 18
+		noOfFrames = 19
 	}
 	spriteType = {
 		name = "GFX_politics_tab_button"
@@ -82,7 +82,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_politics_rebel_strip_trans"
 		texturefile = "gfx\\interface\\politics_rebel_strip.dds"
-		noOfFrames = 18
+		noOfFrames = 19
 		allwaystransparent = yes
 	}
 	spriteType = {

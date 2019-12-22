@@ -234,14 +234,28 @@ country_event = {
 			end_military_access = THIS
 		}
 		
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+				any_owned_province = { is_core = FROM }
+			}
+			any_owned = {
+				limit = { is_core = FROM }
+				add_province_modifier = { name = core_when_done duration = 30 }
+			}
+		}
+		
 		random_owned = {
 			limit = { owner = { NOT = { num_of_vassals = 1 } } }
 			owner = { FROM = { inherit = THIS } }
 		}
 		
 		random_owned = {
-			limit = { owner = {  num_of_vassals = 1 } }
-			owner = { FROM = { country_event =  6016822 } }
+			limit = { owner = { num_of_vassals = 1 } }
+			owner = {
+				FROM = { country_event =  6016822 }
+			}
 		}
 		
 		ai_chance = {

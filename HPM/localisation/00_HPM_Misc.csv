@@ -1,4 +1,9 @@
 ;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+partisan_rebels;Partisans;;;;;;;;;;;;;;;;;;;;;;x;;;;
+partisan_rebels_title;Partisans;;;;;;;;;;;;;;;;;;;;;;x;;;;
+partisan_rebels_name;$COUNTRY_ADJ$ Partisans;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+partisan_rebels_desc;Partisans are common men and women that form resistance cells, small armed groups that, in addition to their guerrilla warfare activities, provide first-hand intelligence information and maintain of escape networks to help $COUNTRY_ADJ$ soldiers. When they take over a province, they will return that province to the original owner in 60 days.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+partisan_rebels_army;$COUNTRY_ADJ$ Partisan Cell;;;;;;;;;;;;;;;;;;;x;;;;
 IS_NOT_RELIGION;The state religion is NOT;;;;;;;;;;;;;;;;;;x;;;;
 IS_RELIGION;The state religion is;;;;;;;;;;;;;;;;;;x;;;;
 CULTURE_IS_NOT;Culture is NOT accepted:;;;;;;;;;;;;;;;;;;;;;;x;;;

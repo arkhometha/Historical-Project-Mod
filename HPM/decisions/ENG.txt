@@ -331,12 +331,7 @@ political_decisions = {
 				}
 			}
 			QNG = {
-				capital_scope = {
-					add_province_modifier = {
-						name = legation_quarter
-						duration = -1
-					}
-				}
+				add_country_modifier = { name = legation_quarter duration = -1 }
 			}
 			diplomatic_influence = {
 				who = QNG

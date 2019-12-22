@@ -26,6 +26,19 @@ picking_personality = {
 
 ####
 
+######
+##Rebel Modifiers
+######
+partisan_occupation = {
+	icon = 17
+}
+
+core_when_done = {
+	icon = 17
+}
+
+####
+
 war_propaganda = {
 	war_exhaustion = -0.02
 	badboy = 0.01
@@ -1006,6 +1019,10 @@ uncivilized_isolationism = {
 western_presence = {
 	pop_consciousness_modifier = 0.1
 	pop_militancy_modifier = 0.05
+	icon = 9
+}
+
+western_presence_research = {
 	research_points_modifier = 0.01
 	icon = 9
 }
@@ -1236,8 +1253,8 @@ sayings_of_the_dutch = {
 
 european_military_mission = {
 	research_points_modifier = 0.02
-	pop_militancy_modifier = 0.05
-	icon = 17
+	global_pop_militancy_modifier = 0.02 #0.05
+	icon = 15
 }
 
 extraterritoriality_granted = {
@@ -1258,7 +1275,7 @@ educational_reform = {
 }
 
 legation_quarter = {
-	pop_militancy_modifier = 0.03
+	global_pop_militancy_modifier = 0.01
 	research_points_modifier = 0.05
 	icon = 8
 }
@@ -1486,7 +1503,7 @@ discriminatory_school_system = {
 }
 
 flying_university = {
-	research_points_modifier = 0.02
+	#research_points_modifier = 0.02
 	pop_consciousness_modifier = 0.2
 	pop_militancy_modifier = 0.2
 	icon = 5

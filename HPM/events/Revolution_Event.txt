@@ -3359,6 +3359,10 @@ country_event = {
 			owner = { remove_country_modifier = educational_reform }
 		}
 		random_owned = {
+			limit = { owner = { has_country_modifier = legation_quarter } }
+			owner = { remove_country_modifier = legation_quarter }
+		}
+		random_owned = {
 			limit = {	
 				owner = {
 					civilized = no
@@ -3366,11 +3370,9 @@ country_event = {
 						OR = {
 							has_province_modifier = peasant_revolt
 							has_province_modifier = western_presence
-							has_province_modifier = legation_quarter
 							has_province_modifier = foreign_smugglers
 							has_province_modifier = foreign_trading_post
 							has_province_modifier = local_opium_habit
-							has_province_modifier = european_military_mission
 							has_province_modifier = extraterritoriality_granted
 						}
 					}
@@ -3380,14 +3382,20 @@ country_event = {
 				any_owned = {
 					remove_province_modifier = peasant_revolt
 					remove_province_modifier = western_presence
-					remove_province_modifier = legation_quarter
 					remove_province_modifier = foreign_smugglers
 					remove_province_modifier = foreign_trading_post
 					remove_province_modifier = local_opium_habit
-					remove_province_modifier = european_military_mission
 					remove_province_modifier = extraterritoriality_granted
 				}
 			}
+		}
+		random_owned = {
+			limit = { owner = { has_country_modifier = western_presence_research } }
+			owner = { remove_country_modifier = western_presence_research }
+		}
+		random_owned = {
+			limit = { owner = { has_country_modifier = european_military_mission } }
+			owner = { remove_country_modifier = european_military_mission }
 		}
 		random_country = {
 			limit = { 

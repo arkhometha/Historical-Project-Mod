@@ -1,4 +1,8 @@
 ;;;;;;;;;;;;;x,,,
+steal_puppet;Take Puppet;;;;;;;;;;;;;x,,,
+steal_puppet_short;Puppet $THIRD$;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+steal_puppet_desc;Take a §Ypuppet§W from a third country and make it our puppet.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,
+steal_puppet_setup;Take $THIRD$ from $RECIPIENT$.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,
 cut_down_to_size;Cut Down to Size;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 place_in_the_sun;Place in the Sun;;;;;;;;;;;;;;;;;;;;;;x;;;;
 acquire_state;Acquire State;;;;;;;;;;;;;;;;;;;;;;;x;;;;

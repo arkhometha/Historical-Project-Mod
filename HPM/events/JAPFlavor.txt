@@ -264,9 +264,11 @@ province_event = {
 			has_province_modifier = foreign_smugglers
 			has_province_modifier = foreign_trading_post
 			has_province_modifier = local_opium_habit
-			has_province_modifier = european_military_mission
 			has_province_modifier = extraterritoriality_granted
-			has_province_modifier = legation_quarter
+			AND = {
+				is_capital = yes
+				owner = { has_country_modifier = legation_quarter }
+			}
 			any_neighbor_province = { has_province_modifier = peasant_revolt }
 			AND = {
 				owner = { has_global_flag = order_to_expel_barbarians }
@@ -328,7 +330,13 @@ province_event = {
 	
 	option = {
 		name = "EVT97616OPTA"
-		owner = { prestige = -2 }
+		owner = {
+			prestige = -2
+			random_owned = {
+				limit = { owner = { NOT = { any_owned_province = { has_country_modifier = western_presence_research } } } }
+				owner = { remove_country_modifier = western_presence_research }
+			}
+		}
 		any_pop = {
 			ideology = {
 				value = reactionary
@@ -347,14 +355,20 @@ province_event = {
 			limit = { is_greater_power = yes }
 			relation = { who = TKG value = -20 }
 		}
-		
+		owner = {
+			random_owned = {
+				limit = {
+					is_capital = yes
+					has_province_modifier = peasant_revolt
+				}
+				owner = { remove_country_modifier = legation_quarter }
+			}
+		}
 		remove_province_modifier = western_presence
 		remove_province_modifier = foreign_smugglers
 		remove_province_modifier = foreign_trading_post
 		remove_province_modifier = local_opium_habit
-		remove_province_modifier = european_military_mission
 		remove_province_modifier = extraterritoriality_granted
-		remove_province_modifier = legation_quarter		
 	}
 }
 

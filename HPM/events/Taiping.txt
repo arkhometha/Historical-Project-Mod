@@ -1019,12 +1019,12 @@ province_event = {
 			has_province_modifier = foreign_trading_post
 		}
 		modifier = {
-			factor = 0.7
-			has_province_modifier = european_military_mission
+			factor = 0.9
+			owner = { has_country_modifier = european_military_mission }
 		}
 		modifier = {
-			factor = 0.7
-			has_province_modifier = legation_quarter
+			factor = 0.9
+			owner = { has_country_modifier = legation_quarter }
 		}
 		modifier = {
 			factor = 0.8
@@ -1139,12 +1139,12 @@ province_event = {
 			has_province_modifier = foreign_trading_post
 		}
 		modifier = {
-			factor = 0.7
-			has_province_modifier = european_military_mission
+			factor = 0.9
+			owner = { has_country_modifier = european_military_mission }
 		}
 		modifier = {
-			factor = 0.7
-			has_province_modifier = legation_quarter
+			factor = 0.9
+			owner = { has_country_modifier = legation_quarter }
 		}
 		modifier = {
 			factor = 0.7
@@ -1341,12 +1341,12 @@ province_event = {
 			has_province_modifier = foreign_trading_post
 		}
 		modifier = {
-			factor = 0.7
-			has_province_modifier = european_military_mission
+			factor = 0.9
+			owner = { has_country_modifier = european_military_mission }
 		}
 		modifier = {
-			factor = 0.7
-			has_province_modifier = legation_quarter
+			factor = 0.9
+			owner = { has_country_modifier = legation_quarter }
 		}
 		modifier = {
 			factor = 0.7
@@ -1466,12 +1466,12 @@ province_event = {
 			has_province_modifier = local_opium_habit
 		}
 		modifier = {
-			factor = 0.7
-			has_province_modifier = european_military_mission
+			factor = 0.9
+			owner = { has_country_modifier = european_military_mission }
 		}
 		modifier = {
-			factor = 0.7
-			has_province_modifier = legation_quarter
+			factor = 0.9
+			owner = { has_country_modifier = legation_quarter }
 		}
 		modifier = {
 			factor = 0.7

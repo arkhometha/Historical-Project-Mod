@@ -3581,7 +3581,7 @@ political_decisions = {
 	}
 	
 	ghost_country_ends = {
-		alert = yes
+		alert = no
 		potential = {
 			ai = yes
 			has_country_flag = cleaning_up_ghosts_country
@@ -3598,7 +3598,7 @@ political_decisions = {
 	}
 	
 	annex_to_master_cleanup = {
-		alert = yes
+		alert = no
 		potential = {
 			ai = yes
 			has_country_flag = annex_to_master
@@ -3671,7 +3671,7 @@ political_decisions = {
 	}
 	
 	annex_to_master_not_vassal_cleanup = {
-		alert = yes
+		alert = no
 		potential = {
 			ai = yes
 			has_country_flag = annex_to_master
@@ -3687,6 +3687,117 @@ political_decisions = {
 			clr_country_flag = annex_to_master
 		}
 	}
+	
+	transfer_vassalage = {
+		alert = yes
+		potential = {
+			ai = yes
+			has_country_flag = transfer_to_new_overlord
+			war = no
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			random_owned = {
+				limit = { owner = { is_vassal = yes } }
+				owner = { clr_country_flag = transfer_to_new_overlord }
+			}
+			
+			random_owned = {
+				limit = { owner = { is_vassal = no } }
+				owner = {
+					clr_country_flag = transfer_to_new_overlord
+					any_country = {
+						limit = {
+							exists = yes
+							has_country_flag = new_overlord
+							truce_with = THIS
+							OR = {
+								is_sphere_leader_of = THIS
+								THIS = { part_of_sphere = no }
+							}
+						}
+						clr_country_flag = new_overlord
+						country_event = 6016824
+					}
+				}
+			}
+		}
+	}
+	
+	
+	partisan_flip_to_original_owner = {
+		alert = no
+		potential = {
+			ai = yes
+			OR = {
+				any_owned_province = {
+					controlled_by = REB
+					has_province_modifier = partisan_occupation
+				}
+				any_neighbor_country = {
+					ai = no
+					any_owned_province = {
+						controlled_by = REB
+						has_province_modifier = partisan_occupation
+						province_control_days = 90
+					}
+				}
+				any_greater_power = {
+					ai = no
+					any_owned_province = {
+						controlled_by = REB
+						has_province_modifier = partisan_occupation
+						province_control_days = 90
+					}
+				}
+			}
+		}
+	
+		allow = {
+			
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					controlled_by = REB
+					has_province_modifier = partisan_occupation
+				}			
+				change_controller = THIS				
+				remove_province_modifier = partisan_occupation
+				any_pop = { militancy = -4 }
+			}
+			any_neighbor_country = {
+				limit = { ai = no }
+				any_owned = {
+					limit = {
+						controlled_by = REB
+						has_province_modifier = partisan_occupation
+					}			
+					change_controller = THIS				
+					remove_province_modifier = partisan_occupation
+					any_pop = { militancy = -4 }
+				}
+			}
+			any_greater_power = {
+				limit = { ai = no }
+				any_owned = {
+					limit = {
+						controlled_by = REB
+						has_province_modifier = partisan_occupation
+					}			
+					change_controller = THIS				
+					remove_province_modifier = partisan_occupation
+					any_pop = { militancy = -4 }
+				}
+			}
+		}
+	}
+	
 	
 	# find_when_uk_flips_upper_house = {
 	
