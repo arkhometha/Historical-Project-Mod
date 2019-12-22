@@ -22,8 +22,12 @@ clipper_transport = {
 	#Building Costs
 	build_time = 90
 	build_cost = {
-		clipper_convoy = 4
+		clipper_convoy = 5 #210 | was 4 - 168£
+		artillery = 2 #120
+		regular_clothes = 1 #5.8£
+		canned_food = 1 #16£
 	}
+	#Total: 351.8£
 	min_port_level = 1
 	limit_per_port = -1
 	supply_consumption_score = 1
@@ -31,12 +35,13 @@ clipper_transport = {
 	supply_consumption = 1.0
 	supply_cost = {
 		clipper_convoy = 0.064
+		artillery = 0.01 #0.08
 	}
 	
-	#Naval Abilties
+	#Naval Abilities
 	hull = 1
 	gun_power = 1
-	fire_range = 0.4
+	fire_range = 0.2
 	evasion = 0
 }
 

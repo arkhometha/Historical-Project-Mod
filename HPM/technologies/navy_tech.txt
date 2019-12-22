@@ -537,9 +537,16 @@ clipper_design = {
 	area = ship_construction
 	year = 1836
 	cost = 3600
-	navy_base = { maximum_speed = 1 }
 	unciv_military = yes
-		
+	clipper_transport = {
+		maximum_speed = 1
+	}
+	frigate = {
+		maximum_speed = 1
+	}
+	manowar = {
+		maximum_speed = 1
+	}
 	ai_chance = {
 		factor = 1.5
 		# Land-locked countries don't research this
@@ -618,7 +625,9 @@ steamers = {
 	cost = 7200
 	unciv_military = yes
 	
-	navy_base = { maximum_speed = 1 }
+	clipper_transport = { maximum_speed = 2 }
+	frigate = { maximum_speed = 2 }
+	manowar = { maximum_speed = 2 }
 	
 	ai_chance = {
 		factor = 4
@@ -720,7 +729,11 @@ iron_steamers = {
 	year = 1855
 	cost = 10800
 	unciv_military = yes
-	navy_base = { maximum_speed = 2 }
+	
+	steam_transport = { maximum_speed = 3 } #19
+	commerce_raider = { maximum_speed = 2 } #19
+	
+	
 	ai_chance = {
 		factor = 4
 		
@@ -826,7 +839,12 @@ steel_steamers = {
 	year = 1880
 	cost = 14400
 	unciv_military = yes
-	navy_base = { maximum_speed = 1 } 
+
+	steam_transport = { maximum_speed = 2 } #21
+	commerce_raider = { maximum_speed = 2 } #22
+	ironclad = { maximum_speed = 1 } 		#22
+	monitor = { maximum_speed = 1 } 		#10
+	
 	ai_chance = {
 		factor = 2
 		# Land-locked countries don't research this
@@ -916,7 +934,12 @@ steam_turbine_ships = {
 	year = 1900
 	cost = 18000
 	unciv_military = yes
-	navy_base = { maximum_speed = 2 } 
+	
+	steam_transport = { maximum_speed = 6 } #29
+	monitor = { maximum_speed = 6 } 		#18
+	cruiser = { maximum_speed = 5 } 		#33
+	battleship = { maximum_speed = 3 } 		#30
+	
 	ai_chance = {
 		factor = 4
 		# Land-locked countries don't research this
@@ -1007,7 +1030,11 @@ oil_driven_ships = {
 	year = 1919
 	cost = 21600
 	unciv_military = yes
-	navy_base = { maximum_speed = 2 } 
+	
+	steam_transport = { maximum_speed = 7 } #34
+	cruiser = { maximum_speed = 5 } 		#39
+	dreadnought = { maximum_speed = 4 }		#37
+	
 	ai_chance = {
 		factor = 1.25
 		# Land-locked countries don't research this

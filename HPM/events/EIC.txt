@@ -572,21 +572,21 @@ country_event = {
 			}
 			AND = {
 				ENG = {
-					hot_blast = 1
+					regenerative_furnaces = 1
 				}
 				NOT = {
 					EIC = {
-						hot_blast = 1
+						regenerative_furnaces = 1
 					}
 				}
 			}
 			AND = {
 				ENG = {
-					bessemer_process = 1
+					drilling_and_blasting = 1
 				}
 				NOT = {
 					EIC = {
-						bessemer_process = 1
+						drilling_and_blasting = 1
 					}
 				}
 			}
@@ -718,30 +718,30 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = {
-						hot_blast = 1
+						regenerative_furnaces = 1
 					}
 				}
 				ENG = {
-					hot_blast = 1
+					regenerative_furnaces = 1
 				}
 			}
 			owner = {
-				activate_technology = hot_blast
+				activate_technology = regenerative_furnaces
 			}
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = {
-						bessemer_process = 1
+						drilling_and_blasting = 1
 					}
 				}
 				ENG = {
-					bessemer_process = 1
+					drilling_and_blasting = 1
 				}
 			}
 			owner = {
-				activate_technology = bessemer_process
+				activate_technology = drilling_and_blasting
 			}
 		}
 		random_owned = {

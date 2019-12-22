@@ -19,7 +19,11 @@ political_decisions = {
 			remove_accepted_culture = finnish
 			FIN = {
 				remove_accepted_culture = swedish
-				all_core = { remove_core = THIS }
+				all_core = {
+					limit = { NOT = { province_id = 348 } }
+					remove_core = THIS
+					remove_core = SWE
+				}
 			}
 			any_pop = { militancy = -1 }
 			set_country_flag = Conceded_Finland
@@ -47,6 +51,10 @@ political_decisions = {
 					primary_culture = swedish
 				}
 			}
+			OR = {
+				flintlock_rifles = 1
+				post_nelsonian_thought = 1
+			}
 			owns = 329
 			NOT = {
 				has_country_flag = hms_sverige_built
@@ -71,6 +79,23 @@ political_decisions = {
 					type = cruiser
 					value = current
 				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						flintlock_rifles = 1
+						NOT = { post_nelsonian_thought = 1 }
+					}
+				}
+				owner = { activate_technology = flintlock_rifles }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						post_nelsonian_thought = 1
+					}
+				}
+				owner = { activate_technology = post_nelsonian_thought }
 			}
 			set_country_flag = hms_sverige_built
 		}

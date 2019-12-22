@@ -209,14 +209,23 @@ political_decisions = {
 			remove_country_modifier = trade_restrictions
 			remove_country_modifier = sayings_of_the_dutch
 			remove_country_modifier = rangaku
-			remove_country_modifier = western_presence
+			random_owned = {
+				limit = { owner = { has_country_modifier = european_military_mission } }
+				owner = { remove_country_modifier = european_military_mission }
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = western_presence_research } }
+				owner = { remove_country_modifier = western_presence_research }
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = legation_quarter } }
+				owner = { remove_country_modifier = legation_quarter }
+			}
 			any_owned = {
 				remove_province_modifier = western_presence
 				remove_province_modifier = foreign_smugglers
 				remove_province_modifier = foreign_trading_post
 				remove_province_modifier = local_opium_habit
-				remove_province_modifier = european_military_mission
-				remove_province_modifier = legation_quarter
 				remove_province_modifier = kettler_denkmal
 				remove_province_modifier = extraterritoriality_granted
 				remove_province_modifier = boxer_presence
@@ -298,7 +307,7 @@ political_decisions = {
 		allow = {
 			government = democracy
 			NOT = { num_of_ports = 1 }
-			NOT = { unemployment_by_type = { type = craftsmen value = 0.01 } }
+			NOT = { unemployment = 0.1 }
 			has_country_modifier = central_bank_established
 			industrial_score = 70
 			modern_central_bank_system = 1

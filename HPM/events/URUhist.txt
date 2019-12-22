@@ -338,10 +338,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { year = 1860 }
-		ARC = {
-			exists = yes
-			neighbour = THIS
-		}
+		exists = ARC
 		tag = URU
 		election = no
 		ruling_party_ideology = liberal
@@ -354,6 +351,7 @@ country_event = {
 		
 	mean_time_to_happen = { months = 6 }
 
+	immediate = { ARC = { release_vassal = CRT } }
 	
 	option = {
 		name = "EVTOPT600063A"      #TO WAR
@@ -375,7 +373,6 @@ country_event = {
 		CRT = { set_country_flag = annex_to_master }
 		ARC = {
 			country_event = 600065
-			release_vassal = CRT
 			casus_belli = {
 				target = CRT
 				type = make_puppet
@@ -421,7 +418,13 @@ country_event = {
 	}
 		option = {
 			name = "EVTOPT600063B"		#back down from war
-			random_country = { limit = { exists = yes tag = CRT } country_event = 600064 }
+			random_country = {
+				limit = {
+					exists = yes
+					tag = CRT
+				}
+				country_event = 600064
+			}
 			clr_country_flag = corrientes_is_ready_for_war
 			clr_country_flag = rivera_is_true_president
 			clr_country_flag = oribe_is_true_president
@@ -474,7 +477,11 @@ country_event = {
 					factor = 1
 				}
 			}
-			casus_belli = { target = ARC type = humiliate months = 36 }
+			casus_belli = {
+				target = ARC
+				type = humiliate
+				months = 36
+			}
 			ai_chance = {
 				factor = 0.4
 			}
@@ -1103,8 +1110,11 @@ country_event = {
 	mean_time_to_happen = { days = 5 }
 	
 	immediate = {
-	any_country = {
-		end_war = ARC
+		any_country = {
+			limit = { exists = yes }
+			end_war = ARC
+			end_war = CRT
+			end_war = ENT
 		}
 		any_pop = {
 			ideology = {
@@ -1130,49 +1140,50 @@ country_event = {
 			scaled_consciousness = {
 				factor = -4
 				ideology = liberal
-				}
+			}
 			scaled_militancy = {
 				factor = -6
 				ideology = liberal
-				}
+			}
 			scaled_consciousness = {
 				factor = -4
 				ideology = conservative
-				}
+			}
 			scaled_militancy = {
 				factor = -2
 				ideology = conservative
+			}
+		}
+		ARC = {
+			treasury = -10000
+			prestige = -20
+			inherit = CRT
+			inherit = ENT
+			government = democracy
+			ruling_party_ideology = liberal
+			political_reform = no_slavery
+			political_reform = landed_voting
+			political_reform = population_equal_weight
+			political_reform = yes_meeting
+			political_reform = free_press
+			political_reform = state_controlled
+			political_reform = gerrymandering
+			any_owned = {
+				limit = { is_core = SBA }
+				any_pop = { 
+					consciousness = 9
+					militancy = 9
 				}
 			}
-	ARC = {
-		treasury = -10000
-		prestige = -20
-		inherit = CRT
-		inherit = ENT
-		government = democracy
-		ruling_party_ideology = liberal
-		political_reform = no_slavery
-		political_reform = landed_voting
-		political_reform = population_equal_weight
-		political_reform = yes_meeting
-		political_reform = free_press
-		political_reform = state_controlled
-		political_reform = gerrymandering
-		any_owned = { limit = { is_core = SBA }
-			any_pop = { 
-			consciousness = 9
-			militancy = 9
+			all_core = {
+				remove_core = ARC
+				remove_core = CRT
+				remove_core = ENT
+				remove_core = SBA
+				add_core = ARG
 			}
-		}
-		all_core = {
-			remove_core = ARC
-			remove_core = CRT
-			remove_core = ENT
-			remove_core = SBA
-			add_core = ARG
-		}
-		change_tag = ARG
-		ARG = { nationalvalue = nv_liberty }
+			change_tag = ARG
+			ARG = { nationalvalue = nv_liberty }
 		}
 		ai_chance = { factor = 0.9 }
 	}
@@ -1185,9 +1196,9 @@ country_event = {
 		clr_country_flag = war_on_rosas
 		ai_chance = {
 			factor = 0.1
-			}
 		}
 	}
+}
 	
 country_event = {
 	id = 600076

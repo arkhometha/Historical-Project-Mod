@@ -632,6 +632,7 @@ country_event = {
 	option = {
 		name = "EVT33015OPTA"
 		set_country_flag = called_german_allies
+		# Audax Validator "." Ignore_NEXT
 		war = {
 			attacker_goal = {
 				casus_belli = call_allies_cb
@@ -1624,7 +1625,6 @@ country_event = {
 							limit = { region = PRU_682 }
 							life_rating = -2
 							add_province_modifier = { name = ostflucht duration = 730 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 					25 = {
@@ -1632,7 +1632,6 @@ country_event = {
 							limit = { region = PRU_682 }
 							life_rating = -2
 							add_province_modifier = { name = ostflucht duration = 1095 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 					25 = {
@@ -1640,15 +1639,13 @@ country_event = {
 							limit = { region = PRU_682 }
 							life_rating = -2
 							add_province_modifier = { name = ostflucht duration = 1460 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 					25 = {
 						any_owned = {
 							limit = { region = PRU_682 }
 							life_rating = -2
-							add_province_modifier = { name = ostflucht duration = 1460 }
-							remove_province_modifier = blood_and_iron_mine
+							add_province_modifier = { name = ostflucht duration = 1825 }
 						}
 					}
 				}
@@ -1664,7 +1661,6 @@ country_event = {
 							limit = { region = PRU_701 }
 							life_rating = -1
 							add_province_modifier = { name = ostflucht duration = 180 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 					25 = {
@@ -1672,7 +1668,6 @@ country_event = {
 							limit = { region = PRU_701 }
 							life_rating = -1
 							add_province_modifier = { name = ostflucht duration = 365 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 					25 = {
@@ -1680,7 +1675,6 @@ country_event = {
 							limit = { region = PRU_701 }
 							life_rating = -1
 							add_province_modifier = { name = ostflucht duration = 545 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 					25 = {
@@ -1688,7 +1682,6 @@ country_event = {
 							limit = { region = PRU_701 }
 							life_rating = -1
 							add_province_modifier = { name = ostflucht duration = 730 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 				}
@@ -1705,7 +1698,6 @@ country_event = {
 							limit = { region = PRU_690 }
 							life_rating = -1
 							add_province_modifier = { name = ostflucht duration = 92 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 					25 = {
@@ -1713,7 +1705,6 @@ country_event = {
 							limit = { region = PRU_690 }
 							life_rating = -1
 							add_province_modifier = { name = ostflucht duration = 184 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 					25 = {
@@ -1721,7 +1712,6 @@ country_event = {
 							limit = { region = PRU_690 }
 							life_rating = -1
 							add_province_modifier = { name = ostflucht duration = 276 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 					25 = {
@@ -1729,7 +1719,6 @@ country_event = {
 							limit = { region = PRU_690 }
 							life_rating = -1
 							add_province_modifier = { name = ostflucht duration = 368 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 				}
@@ -1746,7 +1735,6 @@ country_event = {
 							limit = { region = PRU_695 }
 							life_rating = -1
 							add_province_modifier = { name = ostflucht duration = 150 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 					25 = {
@@ -1754,7 +1742,6 @@ country_event = {
 							limit = { region = PRU_695 }
 							life_rating = -1
 							add_province_modifier = { name = ostflucht duration = 300 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 					25 = {
@@ -1762,7 +1749,6 @@ country_event = {
 							limit = { region = PRU_695 }
 							life_rating = -1
 							add_province_modifier = { name = ostflucht duration = 450 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 					25 = {
@@ -1770,7 +1756,6 @@ country_event = {
 							limit = { region = PRU_695 }
 							life_rating = -1
 							add_province_modifier = { name = ostflucht duration = 600 }
-							remove_province_modifier = blood_and_iron_mine
 						}
 					}
 				}

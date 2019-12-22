@@ -1,4 +1,26 @@
 ;;;;;;;;;;;;;;;;;;;;x,,,,,
+exclusive_acquire_all_cores_CB;Acquire All Cores CB;;;;;;;;;;;;;;;;;;x,,,,,
+exclusive_humiliate_CB;Humiliate CB;;;;;;;;;;;;;;;;;;x,,,,,
+exclusive_liberate_country_CB;Liberate Country CB;;;;;;;;;;;;;;;;;;x,,,,,
+exclusive_make_puppet_CB;Make Puppet CB;;;;;;;;;;;;;;;;;;x,,,,,
+core_when_done;Add Core;;;;;;;;;;;;;;;;;;x,,,,,
+legation_quarter_desc;The Legation Quarter is an area in our capital where a number of foreign legations are located. It creates some unrest, but the contributions to our research progress are invaluable.;;;;;;;;;;;;;;;;;;x,,,,,
+western_presence_research;Western Presence;;;;;;;;;;;;;;;;;;x,,,,,
+western_presence_research_desc;Shipwrecked westerners can be trouble in our peaceful community, but we can learn much from them.;;;;;;;;;;;;;;;;;;x,,,,,
+european_military_mission_desc;Europeans established a military mission in our country, providing us with their valuable military expertise.;;;;;;;;;;;;;;;;;;x,,,,,
+central_bank_instituted;Central Bank Created;;;;;;;;;;;;;;;;;;x,,,,,
+failed_unification_remove_from_sphere;Remove from Sphere;;;;;;;;;;;;;;;;;;x,,,,,
+debt_system_cooldown;Payment Made;;;;;;;;;;;;;;;;;;x,,,,,
+debt_system_cooldown_desc;A payment was made.;;;;;;;;;;;;;;;;;;x,,,,,
+local_conveyors_and_excavators;Conveyor Belts and Excavators;;;;;;;;;;;;;;;;;;x,,,,,
+ryotwari;The Ryotwari System;;;;;;;;;;;;;;;;;;x,,,,,
+partisan_occupation;Partisan Rule;;;;;;;;;;;;;;;;;;x,,,,,
+ryotwari_desc;The Ryotwari system was a land revenue system in British India, introduced by Sir Thomas Munro in 1820 based on system administered by Captain Alexander Reid in the Baramahal district. It allowed the government to deal directly with the peasant (ryot) for revenue collection, and gave the peasant freedom to give up or acquire new land for cultivation. The peasant was assessed for only the lands he was cultivating.;;;;;;;;;;;;;;;;;;x,,,,,
+supported_balkans_berlin_congress;Backs the Balkans;;;;;;;;;;;;;;;;;;x,,,,,
+attending_berlin_congress;Attending Conference;;;;;;;;;;;;;;;;;;x,,,,,
+supported_oe_berlin_congress;Backs the Turks;;;;;;;;;;;;;;;;;;x,,,,,
+coward_ai;Coward Ruler;;;;;;;;;;;;;;;;;;x,,,,,
+desc_coward_ai;The ruler of this country is cowardly and unlikely to get into conflict.;;;;;;;;;;;;;;;;;;x,,,,,
 benefactor_ai;Benevolent Ruler;;;;;;;;;;;;;;;;;;x,,,,,
 desc_benefactor_ai;The ruler of this country is benevolent and non bellicose.;;;;;;;;;;;;;;;;;;x,,,,,
 malevolent_ai;Malevolent Ruler;;;;;;;;;;;;;;;;;;x,,,,,
@@ -6,6 +28,7 @@ desc_malevolent_ai;The ruler of this country is malicious and bellicose.;;;;;;;;
 picking_personality;Ruler Personality;;;;;;;;;;;;;;;;;;x,,,,,
 desc_picking_personality;This country's ruler personality was chosen.;;;;;;;;;;;;;;;;;;x,,,,,
 government_busy_with_something;Busy Government;;;;;;;;;;;;;;;;;;x,,,,,
+internment_camps_open;Internment Camps;;;;;;;;;;;;;;;;;;x,,,,,
 evidence_of_massacre2;Evidence of Massacres Leaks;;;;;;;;;;;;;;;;;;x,,,,,
 evidence_of_massacre2_desc;Damning evidence of massacres happening in our country are proving to be a stain in our reputation.;;;;;;;;;;;;;;;;;;x,,,,,
 evidence_of_massacre;Evidence of Massacres Leaks;;;;;;;;;;;;;;;;;;x,,,,,
@@ -254,6 +277,8 @@ local_nitroglycerin_and_machine_tools;Mechanized Mining;;;;;;;;;;;;;;;;;;;;;;;;;
 desc_local_nitroglycerin_and_machine_tools;The mining process in this province is carried out with new and mechanized tools as well as new explosives, increasing the efficiency of local mining operations and the size of mines.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 modern_sail_ships;Modern Sail Ships;;;;;;;;;;;;;;;;;;;;x,,,,,
 modern_sail_ships_desc;Modern techniques of building, equipping and staffing sail ships allow for more effective and powerful ships.;;;;;;;;;;;;;;;;;;;;x,,,,,
+punitive_expeditions;Modern Punitive Expeditions;;;;;;;;;;;;;;;;;;;;x,,,,,
+punitive_expeditions_desc;A common staple of the modern navies are punitive expeditions - maritimal expeditions undertaken in response to perceived disobedient or morally wrong behavior, either as revenge or to apply strong diplomatic pressure without a formal declaration of war. It's a careful balance of diplomatic effort and naval force to sucessfully carry out one.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 population_exchange_with_turkey;Population Exchange with Turkey;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 albania_exchange;Albania Exchange;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 bosnia_exchange;Bosnia Exchange;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
@@ -412,8 +437,6 @@ generalised_debt_default;Generalized Debt Default;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 MODIFIER_GENERALISED_DEBT_DEFAULT;Generalized Debt Default;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 hunger_riots;Hunger Riots;;;;;;;;;;;;;;;;;;;x,,,,,
 desc_hunger_riots;A province where the poor are under severe hardship and that lacks an effective police force and has less money for crime fighting results in demonstrations getting out of hand and devolving in outright riots.;;;;;;;;;;;;;;;;;;;x,,,,,
-preparations_to_kill;Concentration Camps;;;;;;;;;;;;;;;;;;;x,,,,,
-preparations_to_kill_desc;We are solving the minorities problem in our country. Minorities are being sorted out in concentration camps and waiting for their fate, or being delivered to it already.;;;;;;;;;;;;;;;;;;;x,,,,,
 withdrew_from_geneva_convention;Withdrew from the Geneva Convention;;;;;;;;;;;;;;;;;;;x,,,,,
 withdrew_from_geneva_convention_desc;Our country is no longer a signatory of the Geneva Convention.;;;;;;;;;;;;;;;;;;;x,,,,,
 small_but_efficient;Small But Efficient;;;;;;;;;;;;;;;;;;;x,,,,,

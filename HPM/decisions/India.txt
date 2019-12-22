@@ -591,9 +591,14 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = singh
+			remove_country_modifier = uncivilized_isolationism
 			add_country_modifier = {
 				name = western_influences
 				duration = -1
+			}
+			random_owned = {
+				limit = { owner = { NOT = { border_policy = open_borders } } }
+				owner = { political_reform = open_borders }
 			}
 			add_country_modifier = {
 				name = shastar_vidya

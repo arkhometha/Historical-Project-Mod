@@ -97,43 +97,13 @@
 	farmers = {
 		culture = kilombero
 		religion = sunni
-		size = 400
-	}
-
-	aristocrats = {
-		culture = kilombero
-		religion = sunni
-		size = 15
-	}
-
-	clergymen = {
-		culture = kilombero
-		religion = sunni
-		size = 25
-	}
-
-	artisans = {
-		culture = kilombero
-		religion = sunni
-		size = 50
-	}
-
-	soldiers = {
-		culture = kilombero
-		religion = sunni
-		size = 10
-	}
-
-	farmers = {
-		culture = kilombero
-		religion = sunni
-		size = 1340
+		size = 500
 	}
 
 	slaves = {
 		culture = kilombero
 		religion = animist
-		size = 60
+		size = 250
 	}
 
 }

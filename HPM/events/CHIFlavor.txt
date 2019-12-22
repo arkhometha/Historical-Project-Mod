@@ -1174,6 +1174,7 @@ country_event = {
 		part_of_sphere = no
 		any_owned_province = { has_province_modifier = foreign_smugglers }
 		owns = 1496
+		year = 1837
 		NOT = { has_global_flag = kowloon_incident }
 		ENG = {
 			NOT = { war_with = THIS truce_with = THIS }
@@ -1764,9 +1765,7 @@ country_event = {
 			limit = { is_core = FROM }
 			secede_province = FROM
 		}
-		capital_scope = {
-			add_province_modifier = { name = legation_quarter duration = -1 }
-		}
+		add_country_modifier = { name = legation_quarter duration = -1 }
 		# random_owned = {
 			# limit = { owner = { has_country_modifier = uncivilized_isolationism } }
 			# owner = {

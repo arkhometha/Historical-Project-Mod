@@ -1,6 +1,7 @@
 political_decisions = {
 	
 	option_disable_anarcho_liberals = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -19,6 +20,7 @@ political_decisions = {
 	}
 	
 	unlock_crisis_in_1870 = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -37,6 +39,7 @@ political_decisions = {
 	}
 	
 	option_disable_hpm_crisis = {
+		picture = starting_options
 		alert = no
 		potential = {
 			exists = yes
@@ -79,6 +82,7 @@ political_decisions = {
 	}
 	
 	option_enable_fantasy_countries = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -97,6 +101,7 @@ political_decisions = {
 	}
 	
 	option_enable_easter_eggs = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -115,6 +120,7 @@ political_decisions = {
 	}
 	
 	option_disable_workplace_events = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -133,6 +139,7 @@ political_decisions = {
 	}
 	
 	option_disable_bankruptcy_events = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -152,6 +159,7 @@ political_decisions = {
 	}
 	
 	option_spawn_occitania = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -199,6 +207,7 @@ political_decisions = {
 	}
 	
 	option_spawn_eic = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -221,6 +230,7 @@ political_decisions = {
 ###Disable Starting Party Loyalty
 
 	option_disable_starting_party_loyalty = {
+		picture = starting_options
 		alert = no
 		potential = {
 			NOT = { has_global_flag = party_loyalty_eliminated }
@@ -232,7 +242,7 @@ political_decisions = {
 				}
 				AND = {
 					ai = yes
-					year = 1846
+					year = 1841
 				}
 			}
 		}
@@ -251,20 +261,13 @@ political_decisions = {
 	###Disable Mobilization bug fix
 
 	option_disable_mobilization_bug = {
+		picture = starting_options
 		alert = no
 		potential = {
+			ai = no
+			has_country_flag = country_looking_through_options
+			NOT = { year = 1837 }
 			NOT = { has_global_flag = disabled_mobilization_fix }
-			OR = {
-				AND = {
-					ai = no
-					has_country_flag = country_looking_through_options
-					NOT = { year = 1837 }
-				}
-				AND = {
-					ai = yes
-					year = 1846
-				}
-			}
 		}
 		
 		allow = {
@@ -280,6 +283,7 @@ political_decisions = {
 ###Localized Names
 
 	option_localized_names = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -310,6 +314,7 @@ political_decisions = {
 	
 ####Disable Trade Policy setting
 	disable_trade_policy_globally = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -512,7 +517,7 @@ political_decisions = {
 		}
 		
 		effect = {
-		
+			add_country_modifier = {name = smithian_school duration = 3650 }
 			any_pop = {
 				limit = {
 					OR = {
@@ -1851,6 +1856,17 @@ political_decisions = {
 			UCA = { country_event = { id = 97550 days = 2 } }
 			QNG = { country_event = { id = 160009 days = 5 } }
 			ENG = { country_event = { id = 98200 days = 3 } }
+			HAI = { country_event = { id = 45106 days = 3 } }
+			##########################################################
+			
+			################Uncivs Close their borders###########################
+			any_country = {
+				limit = {
+					civilized = no
+					has_country_modifier = uncivilized_isolationism
+				}
+				political_reform = closed_borders
+			}
 			##########################################################
 	
 			#################Giving Starting Money to Pops and Countries######################
@@ -1909,7 +1925,7 @@ political_decisions = {
 					is_greater_power = yes
 					war = yes
 				}
-				treasury = 50000
+				treasury = 100000
 			}
 			
 			any_country = {
@@ -1918,7 +1934,7 @@ political_decisions = {
 					is_secondary_power = yes
 					war = yes
 				}
-				treasury = 25000
+				treasury = 50000
 			}
 			
 			any_country = {
@@ -1927,7 +1943,7 @@ political_decisions = {
 					civilized = yes
 					war = yes
 				}
-				treasury = 10000
+				treasury = 25000
 			}
 			
 			any_country = {
@@ -1936,30 +1952,70 @@ political_decisions = {
 					civilized = no
 					war = yes
 				}
-				treasury = 5000
+				treasury = 10000
 			}
 			#########Top GPs are richer#########
 			any_country = {
 				limit = { rank = 1 }
-				treasury = 200000
+				treasury = 500000
 			}
 			
 			any_country = {
 				limit = { rank = 2 NOT = { rank = 1 } }
-				treasury = 100000
+				treasury = 250000
 			}
 			
 			any_country = {
 				limit = { rank = 3 NOT = { rank = 2 } }
-				treasury = 50000
+				treasury = 150000
 			}
 			
 			any_country = {
 				limit = { rank = 4 NOT = { rank = 3 } }
-				treasury = 25000
+				treasury = 100000
 			}
 			
 			#################Giving Starting Money to Pops and Countries######################
+			
+			random_country = {
+				limit = {
+					tag = RUS
+					ai = yes
+				}
+				remove_country_modifier = french_liberal_school
+				remove_country_modifier = smithian_school
+				add_country_modifier = {name = mercantilism duration = 3650 }
+			}
+			
+			random_country = {
+				limit = {
+					tag = USA
+					ai = yes
+				}
+				remove_country_modifier = french_liberal_school
+				remove_country_modifier = smithian_school
+				add_country_modifier = {name = mercantilism duration = 3650 }
+			}
+			
+			random_country = {
+				limit = {
+					tag = PRU
+					ai = yes
+				}
+				remove_country_modifier = french_liberal_school
+				remove_country_modifier = smithian_school
+				add_country_modifier = {name = mercantilism duration = 3650 }
+			}
+			
+			random_country = {
+				limit = {
+					tag = AUS
+					ai = yes
+				}
+				remove_country_modifier = french_liberal_school
+				remove_country_modifier = smithian_school
+				add_country_modifier = {name = mercantilism duration = 3650 }
+			}
 			
 			#################Class Literacy Setup######################
 			any_country = {
@@ -2425,6 +2481,22 @@ political_decisions = {
 			SER_794 = { add_province_modifier = { name = small_baby_boom duration = 3650 } }
 			#################Romanian Pops Setup######################
 			
+			#################Italian Swiss Pops Setup######################
+			any_country = {
+				limit = {
+					exists = yes
+					OR = {
+						primary_culture = north_italian
+						primary_culture = south_italian
+					}
+				}
+				any_pop = {
+					limit = { has_pop_culture = swiss }
+					literacy = 0.4
+				}
+			}
+			#################Italian Swiss Pops Setup######################
+			
 			#################Government Flags Setup######################
 			any_country = {
 				limit = {
@@ -2655,6 +2727,8 @@ political_decisions = {
 		potential = {
 			ai = yes
 			year = 1837
+			month = 8
+			NOT = { month = 10 }
 			NOT = {
 				has_country_modifier = picking_personality
 			}
@@ -2667,12 +2741,23 @@ political_decisions = {
 			random = {
 				chance = 10
 				remove_country_modifier = malevolent_ai
+				remove_country_modifier = benefactor_ai
+				remove_country_modifier = coward_ai
 				add_country_modifier = { name = benefactor_ai duration = 8030 }
 			}
 			random = {
 				chance = 10
+				remove_country_modifier = malevolent_ai
 				remove_country_modifier = benefactor_ai
+				remove_country_modifier = coward_ai
 				add_country_modifier = { name = malevolent_ai duration = 8030 }
+			}
+			random = {
+				chance = 10
+				remove_country_modifier = malevolent_ai
+				remove_country_modifier = benefactor_ai
+				remove_country_modifier = coward_ai
+				add_country_modifier = { name = coward_ai duration = 8030 }
 			}
 			random_list = {
 				20 = { add_country_modifier = { name = picking_personality duration = 7300 } }

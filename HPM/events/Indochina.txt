@@ -688,7 +688,7 @@ country_event = {
 				vassal_of = THIS
 			}
 			SIA = { release = CHK }
-			annex_to = FROM
+			FROM = { inherit = THIS }
 		}
 		
 		any_owned = {
@@ -833,6 +833,11 @@ country_event = {
 					duration = -1
 				}
 			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
 		}
 		
 		random_owned = {

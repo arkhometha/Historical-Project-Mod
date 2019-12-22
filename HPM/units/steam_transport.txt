@@ -15,17 +15,19 @@ steam_transport = {
 	priority = 10
 	max_strength = 100
 	default_organisation = 30
-	maximum_speed = 8
+	maximum_speed = 16
 	weighted_value = 4.0
 	can_build_overseas = yes
 
 	#Building Costs
 	build_time = 90
 	build_cost = {
-		steamer_convoy = 5
-		regular_clothes = 4
-		canned_food = 2
+		steamer_convoy = 5 	#325
+		artillery = 2 		#120
+		regular_clothes = 1 #5.8£
+		canned_food = 1 	#16£
 	}
+	#Total: 466.8
 	min_port_level = 1
 	limit_per_port = -1
 	supply_consumption_score = 2

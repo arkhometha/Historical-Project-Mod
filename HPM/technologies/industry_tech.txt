@@ -569,30 +569,24 @@ shift_work = {
 
 
 #metallurgy
-mechanized_mining = {
+
+hot_blast = {
 	area = metallurgy
 	year = 1836
 	cost = 3600
+	
 	activate_building = steel_factory 
 
 	rgo_goods_output = {
 		iron = 0.2
 	}
-	rgo_size = {
-		iron = 0.2
-	}
 	rgo_goods_output = {
 		coal = 0.2
 	}
-	rgo_size = {
-		coal = 0.2
-	}
 	rgo_goods_output = {
-		sulphur = 0.20
-	}
-	rgo_size = {
 		sulphur = 0.2
 	}
+	
 	ai_chance = {
 		factor = 4
 		modifier = {
@@ -650,47 +644,15 @@ mechanized_mining = {
 				}
 			}
 		}
-		
-		modifier = {
-			factor = 0
-			any_owned_province = {
-				controlled_by = THIS
-				province_control_days = 365
-				OR = {
-					trade_goods = coal
-					trade_goods = iron
-				}
-				unemployment_by_type = { value = 0.01 type = labourers }
-			}
-			any_neighbor_country = {
-				any_owned_province = {
-					OR = {
-						trade_goods = coal
-						trade_goods = iron
-					}
-					province_control_days = 365
-					unemployment_by_type = { value = 0.01 type = labourers }
-				} 
-			}
-			any_greater_power = {
-				any_owned_province = {
-					OR = {
-						trade_goods = coal
-						trade_goods = iron
-					}
-					province_control_days = 365
-					unemployment_by_type = { value = 0.01 type = labourers }
-				}
-			}
-		}
 	}
+	
 }
 
-puddling = {
+
+mechanized_mining = {
 	area = metallurgy
 	year = 1840
 	cost = 7200
-	
 	rgo_goods_output = {
 		iron = 0.3
 	}
@@ -699,6 +661,16 @@ puddling = {
 	}
 	rgo_goods_output = {
 		sulphur = 0.2
+	}
+	
+	rgo_size = {
+		iron = 0.25
+	}
+	rgo_size = {
+		coal = 0.25
+	}
+	rgo_size = {
+		sulphur = 0.25
 	}
 	
 	ai_chance = {
@@ -789,43 +761,10 @@ puddling = {
 				}
 			}
 		}
-		
-		modifier = {
-			factor = 0
-			any_owned_province = {
-				controlled_by = THIS
-				province_control_days = 365
-				OR = {
-					trade_goods = coal
-					trade_goods = iron
-				}
-				unemployment_by_type = { value = 0.01 type = labourers }
-			}
-			any_neighbor_country = {
-				any_owned_province = {
-					OR = {
-						trade_goods = coal
-						trade_goods = iron
-					}
-					province_control_days = 365
-					unemployment_by_type = { value = 0.01 type = labourers }
-				} 
-			}
-			any_greater_power = {
-				any_owned_province = {
-					OR = {
-						trade_goods = coal
-						trade_goods = iron
-					}
-					province_control_days = 365
-					unemployment_by_type = { value = 0.01 type = labourers }
-				}
-			}
-		}
 	}
 }
 
-hot_blast = {
+regenerative_furnaces = {
 	area = metallurgy
 	year = 1850
 	cost = 10800
@@ -918,42 +857,9 @@ hot_blast = {
 				}
 			}
 		}
-		
-		modifier = {
-			factor = 0
-			any_owned_province = {
-				controlled_by = THIS
-				province_control_days = 365
-				OR = {
-					trade_goods = coal
-					trade_goods = iron
-				}
-				unemployment_by_type = { value = 0.01 type = labourers }
-			}
-			any_neighbor_country = {
-				any_owned_province = {
-					OR = {
-						trade_goods = coal
-						trade_goods = iron
-					}
-					province_control_days = 365
-					unemployment_by_type = { value = 0.01 type = labourers }
-				} 
-			}
-			any_greater_power = {
-				any_owned_province = {
-					OR = {
-						trade_goods = coal
-						trade_goods = iron
-					}
-					province_control_days = 365
-					unemployment_by_type = { value = 0.01 type = labourers }
-				}
-			}
-		}
 	}
 }
-bessemer_process = {
+drilling_and_blasting = {
 	area = metallurgy
 	year = 1870
 	cost = 14400
@@ -967,9 +873,10 @@ bessemer_process = {
 	rgo_goods_output = {
 		sulphur = 0.2
 	}
-	factory_goods_output = {
-		steel = 0.05
-	}
+	
+	rgo_size = { coal = 0.5 }
+	rgo_size = { iron = 0.5 }
+	rgo_size = { sulphur = 0.5 }
 	
 	ai_chance = {
 		factor = 2
@@ -1051,39 +958,6 @@ bessemer_process = {
 				OR = {
 					big_producer = coal
 					big_producer = iron
-				}
-			}
-		}
-		
-		modifier = {
-			factor = 0
-			any_owned_province = {
-				controlled_by = THIS
-				province_control_days = 365
-				OR = {
-					trade_goods = coal
-					trade_goods = iron
-				}
-				unemployment_by_type = { value = 0.01 type = labourers }
-			}
-			any_neighbor_country = {
-				any_owned_province = {
-					OR = {
-						trade_goods = coal
-						trade_goods = iron
-					}
-					province_control_days = 365
-					unemployment_by_type = { value = 0.01 type = labourers }
-				} 
-			}
-			any_greater_power = {
-				any_owned_province = {
-					OR = {
-						trade_goods = coal
-						trade_goods = iron
-					}
-					province_control_days = 365
-					unemployment_by_type = { value = 0.01 type = labourers }
 				}
 			}
 		}
@@ -1184,39 +1058,6 @@ advanced_metallurgy = {
 				}
 			}
 		}
-		
-		modifier = {
-			factor = 0
-			any_owned_province = {
-				controlled_by = THIS
-				province_control_days = 365
-				OR = {
-					trade_goods = coal
-					trade_goods = iron
-				}
-				unemployment_by_type = { value = 0.01 type = labourers }
-			}
-			any_neighbor_country = {
-				any_owned_province = {
-					OR = {
-						trade_goods = coal
-						trade_goods = iron
-					}
-					province_control_days = 365
-					unemployment_by_type = { value = 0.01 type = labourers }
-				} 
-			}
-			any_greater_power = {
-				any_owned_province = {
-					OR = {
-						trade_goods = coal
-						trade_goods = iron
-					}
-					province_control_days = 365
-					unemployment_by_type = { value = 0.01 type = labourers }
-				}
-			}
-		}
 	}
 }
 electric_furnace = {
@@ -1295,39 +1136,6 @@ electric_furnace = {
 			NOT = {
 				literacy = 0.4
 				big_producer = coal
-			}
-		}
-		
-		modifier = {
-			factor = 0
-			any_owned_province = {
-				controlled_by = THIS
-				province_control_days = 365
-				OR = {
-					trade_goods = coal
-					trade_goods = iron
-				}
-				unemployment_by_type = { value = 0.01 type = labourers }
-			}
-			any_neighbor_country = {
-				any_owned_province = {
-					OR = {
-						trade_goods = coal
-						trade_goods = iron
-					}
-					province_control_days = 365
-					unemployment_by_type = { value = 0.01 type = labourers }
-				} 
-			}
-			any_greater_power = {
-				any_owned_province = {
-					OR = {
-						trade_goods = coal
-						trade_goods = iron
-					}
-					province_control_days = 365
-					unemployment_by_type = { value = 0.01 type = labourers }
-				}
 			}
 		}
 	}

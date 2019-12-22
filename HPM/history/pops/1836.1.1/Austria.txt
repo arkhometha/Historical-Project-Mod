@@ -295,6 +295,12 @@
 		religion = catholic
 		size = 4250 
 	}
+	
+	capitalists = {
+		culture = south_german
+		religion = catholic
+		size = 100
+	}
 
 	bureaucrats = {
 		culture = south_german
@@ -347,7 +353,13 @@
 	artisans = {
 		culture = south_german
 		religion = catholic
-		size = 7500
+		size = 4500
+	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 3000
 	}
 
 	soldiers = {
@@ -379,33 +391,91 @@
 		religion = catholic
 		size = 186250
 	}
+	
+	####Czechs
+	aristocrats = {
+		culture = czech
+		religion = catholic
+		size = 100
+	}
 
 	clergymen = {
 		culture = czech
 		religion = catholic
-		size = 50
+		size = 100
+	}
+	
+	soldiers = {
+		culture = czech
+		religion = catholic
+		size = 100
+	}
+	
+	craftsmen = {
+		culture = czech
+		religion = catholic
+		size = 1100
 	}
 
 	artisans = {
 		culture = czech
 		religion = catholic
-		size = 5950
+		size = 3650
+	}
+	
+	farmers = {
+		culture = czech
+		religion = catholic
+		size = 1000
+	}
+	#####
+	
+	####Hungarians
+	aristocrats = {
+		culture = hungarian
+		religion = catholic
+		size = 100
 	}
 
 	clergymen = {
 		culture = hungarian
 		religion = catholic
-		size = 20 
+		size = 100
+	}
+	
+	soldiers = {
+		culture = hungarian
+		religion = catholic
+		size = 100
+	}
+	
+	craftsmen = {
+		culture = hungarian
+		religion = catholic
+		size = 300
 	}
 
 	artisans = {
 		culture = hungarian
 		religion = catholic
-		size = 980
+		size = 300
+	}
+	
+	farmers = {
+		culture = hungarian
+		religion = catholic
+		size = 100
 	}
 
+	####
 	######Jews
 	aristocrats = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+	
+	capitalists = {
 		culture = ashkenazi
 		religion = jewish
 		size = 100
@@ -428,17 +498,23 @@
 		religion = jewish
 		size = 100
 	}
+	
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 200
+	}
 
 	artisans = {
 		culture = ashkenazi
 		religion = jewish
-		size = 300
+		size = 200
 	}
 	
 	farmers = {
 		culture = ashkenazi
 		religion = jewish
-		size = 300
+		size = 100
 	}
 	########
 }
@@ -581,7 +657,13 @@
 	artisans = {
 		culture = south_german
 		religion = catholic
-		size = 2450
+		size = 2350
+	}
+	
+	craftsmen = {
+		culture = south_german
+		religion = catholic
+		size = 100
 	}
 
 	soldiers = {
@@ -613,11 +695,17 @@
 		religion = catholic
 		size = 1025
 	}
+	
+	craftsmen = {
+		culture = hungarian
+		religion = catholic
+		size = 100
+	}
 
 	farmers = {
 		culture = hungarian
 		religion = catholic
-		size = 2765  
+		size = 2665  
 	}
 
 	clergymen = {

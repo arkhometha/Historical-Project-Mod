@@ -126,63 +126,31 @@
 	aristocrats = {
 		culture = forest_bantu
 		religion = animist
-		size = 125
+		size = 275
 	}
 
 	clergymen = {
 		culture = forest_bantu
 		religion = animist
-		size = 75
+		size = 175
 	}
 
 	artisans = {
 		culture = forest_bantu
 		religion = animist
-		size = 350
+		size = 750
 	}
 
 	soldiers = {
 		culture = forest_bantu
 		religion = animist
-		size = 75
+		size = 175
 	}
 
 	farmers = {
 		culture = forest_bantu
 		religion = animist
-		size = 6375
-	}
-}
-#Impfondo (32000/8000 POPS)
-1981 = {
-	aristocrats = {
-		culture = forest_bantu
-		religion = animist
-		size = 150
-	}
-
-	clergymen = {
-		culture = forest_bantu
-		religion = animist
-		size = 100
-	}
-
-	artisans = {
-		culture = forest_bantu
-		religion = animist
-		size = 400
-	}
-
-	soldiers = {
-		culture = forest_bantu
-		religion = animist
-		size = 100
-	}
-
-	farmers = {
-		culture = forest_bantu
-		religion = animist
-		size = 7300
+		size = 13675
 	}
 	
 	slaves = {

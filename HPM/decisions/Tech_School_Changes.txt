@@ -54,7 +54,7 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = academic_confusion }
-			colonial_nation = yes
+			any_owned_province = { is_colonial = yes }
 			OR = {
 				AND = {
 					war_policy = pro_military

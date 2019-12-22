@@ -69,12 +69,27 @@ country_event = {
 	option = {
 		name = "EVTOPTB49501" #Refuse
 		set_country_flag = refused_kalmar_union
-		FROM = { country_event = 49502 }
+		
+		FROM = {
+			relation = {
+				who = THIS
+				value = -50
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -50
+			}
+			country_event = 49502
+		}
 		ai_chance = {
 			factor = 10
 			modifier = {
 				factor = 0.5
 				in_sphere = FROM
+			}
+			modifier = {
+				factor = 0
+				vassal_of = FROM
 			}
 		}
 	}
@@ -90,17 +105,18 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = "EVTOPTA49502" #Let them go
-		FROM = {
-			relation = {
-				who = THIS
-				value = -100
+		leave_alliance = FROM
+		end_military_access = FROM
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = FROM
+				in_sphere = THIS
 			}
-			diplomatic_influence = {
-				who = THIS
-				value = -100
-			}
-			remove_country_modifier = kalmar_union
-			remove_country_modifier= customs_union 
+			leave_alliance = THIS
+			end_military_access = THIS
+			relation = { who = THIS value = -50 }
+			set_country_flag = failed_unification_remove_from_sphere
 		}
 		ai_chance = {
 			factor = 30
@@ -114,6 +130,17 @@ country_event = {
 	option = {
 		name = "EVTOPTB49502" #Conquer them
 		badboy = 4
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = FROM
+				in_sphere = THIS
+			}
+			leave_alliance = THIS
+			end_military_access = THIS
+			relation = { who = THIS value = -50 }
+			set_country_flag = failed_unification_remove_from_sphere
+		}
 		any_pop = {
 			scaled_militancy = {
 				issue = pacifism
@@ -186,7 +213,7 @@ country_event = {
 			}
 			diplomatic_influence = {
 				who = THIS
-				value = 100
+				value = 50
 			}
 		}
 		add_country_modifier = {
@@ -229,12 +256,28 @@ country_event = {
 	option = {
 		name = "EVTOPTB49503" #Refuse
 		set_country_flag = refused_kalmar_union
-		FROM = { country_event = 49502 }
+		remove_country_modifier = kalmar_union
+		remove_country_modifier = customs_union 
+		FROM = {
+			relation = {
+				who = THIS
+				value = -50
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -50
+			}
+			country_event = 49502
+		}
 		ai_chance = {
 			factor = 10
 			modifier = {
 				factor = 0.5
 				in_sphere = FROM
+			}
+			modifier = {
+				factor = 0
+				vassal_of = FROM
 			}
 			modifier = {
 				factor = 3
@@ -272,24 +315,39 @@ country_event = {
 			}
 			diplomatic_influence = {
 				who = THIS
-				value = 100
+				value = 200
 			}
 		}
-		any_owned = {
+		any_country = {
 			limit = {
-				OR = {
-					is_colonial = no
-					continent = europe
-				}
-				is_core = THIS
+				exists = yes
+				vassal_of = THIS
 			}
-			add_core = SCA 
 		}
-		add_accepted_culture = swedish
-		add_accepted_culture = danish
-		add_accepted_culture = norwegian
-		add_accepted_culture = finnish
-		add_accepted_culture = icelandic
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						tag = DEN
+						tag = NOR
+						tag = SWE
+					}
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						OR = {
+							is_colonial = no
+							continent = europe
+						}
+						is_core = THIS
+						NOT = { region = DEN_251 }
+					}
+					add_core = SCA 
+				}
+			}
+		}
 		ai_chance = {
 			factor = 90
 			modifier = {
@@ -326,14 +384,32 @@ country_event = {
 	option = {
 		name = "EVTOPTB49504" #Refuse
 		set_country_flag = refused_kalmar_union
+		remove_country_modifier = kalmar_union
+		remove_country_modifier = customs_union 
 		FROM = {
-			country_event = 49502 
+			relation = {
+				who = THIS
+				value = -100
 			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			country_event = 49502 
+		}
 		ai_chance = {
 			factor = 10
 			modifier = {
 				factor = 0.5
 				in_sphere = FROM
+			}
+			modifier = {
+				factor = 0
+				vassal_of = FROM
+			}
+			modifier = {
+				factor = 0
+				overlord = { has_country_modifier = kalmar_union }
 			}
 			modifier = {
 				factor = 3

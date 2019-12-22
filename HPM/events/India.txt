@@ -529,7 +529,7 @@ country_event = {
 			target = PNJ
 			attacker_goal = { casus_belli = conquest_any }
 			defender_goal = { casus_belli = status_quo }
-			call_ally = yes
+			call_ally = no
 		}
 		ai_chance = {
 			factor = 99

@@ -14,6 +14,24 @@ PBC = {
 	value = -25
 }
 
+leader = {
+	name = "Juan Illingworth"
+	picture = european_general_1
+	type = land
+	date="1830.1.1"
+	personality = soldierly
+	background = nationalist
+}
+
+leader = {
+	name = "Thomas Charles Wright"
+	picture = "european_admiral_2"
+	type = sea
+	date="1820.1.1"
+	personality = audacious
+	background = nationalist
+}
+
 army = {
 	name = "Ejército de Ecuador"
 	location = 2279
@@ -33,6 +51,20 @@ army = {
 		name= "3. Brigada de Infantería"
 		type = infantry
 		home = 2283
+	}
+
+}
+
+navy = {
+	name = "Escuadra Unida del Ecuador"
+	location = 2281
+	ship = {
+		name= "Guayaquileña"
+		type = frigate
+	}
+	ship = {
+		name= "Diligencia"
+		type = frigate
 	}
 
 }

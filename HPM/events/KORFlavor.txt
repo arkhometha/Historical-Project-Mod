@@ -359,7 +359,10 @@ country_event = {
 			name = "western_influences"
 			duration = -1
 		}
-		
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
+		}
 		random_country = {
 			limit = { is_our_vassal = THIS }
 			release_vassal = THIS
@@ -525,7 +528,10 @@ country_event = {
 			name = "western_influences"
 			duration = -1
 		}
-		
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
+		}
 		random_country = {
 			limit = { is_our_vassal = THIS }
 			release_vassal = THIS
@@ -698,8 +704,16 @@ country_event = {
 		is_culture_group = east_asian
 		owns = 1616
 		OR = {
-			exists = JAP
-			exists = TKG
+			JAP = {
+				exists = yes
+				civilized = yes
+				NOT = { exists = TKG }
+			}
+			TKG = {
+				exists = yes
+				civilized = yes
+				NOT = { exists = JAP }
+			}
 		}
 		KOR = {
 			war = no

@@ -83,7 +83,7 @@ country_migration_target = {
 		factor = 2.0
 		OR = {
 			is_primary_culture = THIS
-			is_accepted_culture = THIS
+			#is_accepted_culture = THIS
 		}
 	}
 	
@@ -182,10 +182,10 @@ migration_target = {
 	modifier = {
 		factor = 0
 		NOT = { state_scope = {	work_available = { worker = craftsmen } } }
-		country = { economic_policy = planned_economy }
+		can_build_factory = no
 		OR = {
-			unemployment_by_type = { type = farmers value = 0.1  }
-			unemployment_by_type = { type = labourers value = 0.1  }
+			unemployment_by_type = { type = farmers value = 0.03  }
+			unemployment_by_type = { type = labourers value = 0.03  }
 		}
 	}
 	modifier = {
@@ -198,18 +198,23 @@ migration_target = {
 	}
 	modifier = {
 		factor = 2
-		any_core = {
-			OR = {
-				is_primary_culture = THIS
-				is_accepted_culture = THIS
-			}
+		OR = {
+			is_accepted_culture = yes
+			is_primary_culture = yes
 		}
-		state_scope = {	work_available = { worker = craftsmen } }
+		state_scope = {
+			OR = {
+				is_accepted_culture = yes
+				is_primary_culture = yes
+			}
+			work_available = { worker = craftsmen }
+		}
 	}
-	#modifier = {
-	#	factor = 1.2
-	#	has_pop_religion = THIS
-	#}
+	modifier = {
+		factor = 1.2
+		# Audax Validator "." Ignore_NEXT
+		has_pop_religion = THIS
+	}
 	modifier = {
 		factor = 1.5
 		any_core = { is_primary_culture = THIS }
@@ -217,10 +222,7 @@ migration_target = {
 	
 	modifier = {
 		factor = 0.75
-		OR = {
-			state_scope = { is_slave = yes }
-			is_overseas = yes
-		}
+		state_scope = { is_slave = yes }
 	}
 	modifier = {
 		factor = 2
@@ -313,7 +315,7 @@ migration_target = {
 	
 	modifier = {
 		factor = 1.05
-		country = { colonial_nation = no }
+		NOT = { country = { any_owned_province = { is_colonial = yes } } }
 		country = { penal_system = colonial_transportation }
 		OR = {
 			trade_goods = coal
@@ -939,7 +941,10 @@ promote_to = {
 		modifier = {
 			factor = 10
 			state_scope = { has_factories = yes }
-			NOT = { state_scope = { unemployment_by_type = { type = craftsmen value = 0.5 } } }
+			NOT = {
+				location = {
+					unemployment_by_type = { type = craftsmen value = 0.25 } }
+				}
 		}
 		modifier = {
 			factor = -40
@@ -6408,7 +6413,7 @@ bankruptcy = {
 			NOT = { school_reforms = good_schools }
 			NOT = { child_labor = child_labor_illegal }
 			public_meetings = no_meeting
-			NOT = { country = { has_country_flag = modern_central_bank_system_invented } }
+			NOT = { country = { has_country_flag = central_bank_instituted } }
 			state_scope = { is_colonial = yes }
 			NOT = { is_ideology_enabled = socialist }
 			NOT = { literacy = 0.7 }

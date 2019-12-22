@@ -144,7 +144,7 @@ country_event = {
 			}
 			neutrality = yes
 			any_owned = { limit = { is_core = CNG } any_pop = { literacy = -0.99 } }
-			annex_to = FROM
+			FROM = { inherit = THIS }
 		}
 		random_country = {
 			limit = {

@@ -9,11 +9,11 @@ state_building = {
 	building = luxury_clothes_factory
 	upgrade = yes
 }
-#state_building = {
-#	level = 1
-#	building = fabric_factory
-#	upgrade = yes
-#}
+state_building = {
+	level = 1
+	building = regular_clothes_factory
+	upgrade = yes
+}
 #state_building = {
 #	level = 1
 #	building = ammunition_factory
@@ -27,17 +27,12 @@ state_building = {
 1861.1.1 = {
 	controller = ITA
 	owner = ITA
-	add_core = ITA
+	remove_core = SAR
 }
 1861.1.1 = { 
 	state_building = {
 	level = 1
 	building = fabric_factory
-	upgrade = yes
-	}
-	state_building = {
-	level = 1
-	building = regular_clothes_factory
 	upgrade = yes
 	}
 	state_building = {

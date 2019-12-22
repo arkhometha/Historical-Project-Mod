@@ -663,10 +663,11 @@ country_event = {
 			any_owned = {
 				limit = {
 					OR = {
-						region = ENG_2068
-						region = ENG_2014
-						region = ENG_2016
-						region = ENG_2071
+						region = ENG_2068 #Mashonaland
+						region = ENG_2014 #Zambia
+						region = ENG_2016 #Kazembe
+						region = ENG_2071 #Matabeleland
+						region = TRN_2108 #Tky-Gariped
 					}
 				}
 				secede_province = THIS
@@ -718,11 +719,11 @@ country_event = {
 	trigger = {
 		tag = POR
 		year = 1905
-			OR = {
-		government = hms_government
-		government = prussian_constitutionalism
-		government = absolute_monarchy
-				}
+		OR = {
+			government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+		}
 		NOT = {
 			has_country_flag = regicide_king_carlos
 			year = 1915

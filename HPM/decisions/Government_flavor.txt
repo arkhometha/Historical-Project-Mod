@@ -24,6 +24,10 @@ political_decisions = {
 			country_event = 11001
 			add_country_modifier = { name = national_confusion duration = 1095 }
 			set_country_flag = dissolving_parliament
+			random = {
+				chance = 25
+				badboy = 0.5
+			}
 			any_pop = {
 				limit = {
 					strata = rich
@@ -92,6 +96,97 @@ political_decisions = {
 			modifier = {
 				factor = 0
 				NOT = { war_exhaustion = 20 }
+			}
+		}
+	}
+	
+	send_pleasantries_to_great_power = {
+		picture = royal_gift
+		alert = no
+		potential = {
+			NOT = { is_greater_power = yes }
+			OR = {
+				has_country_flag = government_decisions_on
+				ai = yes
+			}
+		}
+		
+		allow = {
+			prestige = 25
+			money = 25000
+			NOT = { has_country_modifier = law_changed_by_force }
+			is_vassal = no
+		}
+		
+		effect = {
+			prestige = -25
+			treasury = -25000
+			add_country_modifier = { name = law_changed_by_force duration = 3650 }
+			random_owned = {
+				limit = {
+					owner = { part_of_sphere = yes }
+				}
+				owner = {
+					sphere_owner = {
+						relation = { who = THIS value = 50 }
+						diplomatic_influence = { who = THIS value = 50 }
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						part_of_sphere = no
+						any_greater_power = { neighbour = THIS }
+					}
+				}
+				owner = {
+					random_country = {
+						limit = {
+							neighbour = THIS
+							is_greater_power = yes
+						}
+						relation = { who = THIS value = 50 }
+						diplomatic_influence = { who = THIS value = 50 }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						part_of_sphere = no
+						NOT = { any_greater_power = { neighbour = THIS } }
+					}
+				}
+				owner = {
+					random_country = {
+						limit = { is_greater_power = yes }
+						relation = { who = THIS value = 50 }
+						diplomatic_influence = { who = THIS value = 50 }
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_modifier = benefactor_ai
+					has_country_modifier = coward_ai
+				}
+			}
+			
+			modifier = {
+				factor = 0
+				num_of_cities = 30
+			}
+			
+			modifier = {
+				factor = 0
+				total_pops = 4000000
 			}
 		}
 	}

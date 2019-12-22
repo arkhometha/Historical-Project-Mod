@@ -331,12 +331,7 @@ political_decisions = {
 				}
 			}
 			QNG = {
-				capital_scope = {
-					add_province_modifier = {
-						name = legation_quarter
-						duration = -1
-					}
-				}
+				add_country_modifier = { name = legation_quarter duration = -1 }
 			}
 			diplomatic_influence = {
 				who = QNG
@@ -408,56 +403,36 @@ political_decisions = {
 			1412 = {
 				OR = {
 					owned_by = THIS
-					owner = {
-						OR = {
-							vassal_of = THIS
-							in_sphere = THIS
-						}
-					}
+					owner = { vassal_of = THIS }
+					owner = { in_sphere = THIS }
 				}
 			}
 			1173 = {
 				OR = {
 					owned_by = THIS
-					owner = {
-						OR = {
-							vassal_of = THIS
-							in_sphere = THIS
-						}
-					}
+					owner = { vassal_of = THIS }
+					owner = { in_sphere = THIS }
 				}
 			}
 			1175 = {
 				OR = {
 					owned_by = THIS
-					owner = {
-						OR = {
-							vassal_of = THIS
-							in_sphere = THIS
-						}
-					}
+					owner = { vassal_of = THIS }
+					owner = { in_sphere = THIS }
 				}
 			}
 			1176 = {
 				OR = {
 					owned_by = THIS
-					owner = {
-						OR = {
-							vassal_of = THIS
-							in_sphere = THIS
-						}
-					}
+					owner = { vassal_of = THIS }
+					owner = { in_sphere = THIS }
 				}
 			}
 			1177 = {
 				OR = {
 					owned_by = THIS
-					owner = {
-						OR = {
-							vassal_of = THIS
-							in_sphere = THIS
-						}
-					}
+					owner = { vassal_of = THIS }
+					owner = { in_sphere = THIS }
 				}
 			}
 			YEM = { exists = no }
@@ -496,17 +471,23 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { ai = yes } }
 				owner = {
-					random_country = {
+					any_country = {
 						limit = {
 							tag = YEM
-							is_possible_vassal = YEM
 							exists = no
+							THIS = { is_possible_vassal = YEM }
 						}
+						
 						THIS = {
+							badboy = -2
 							release_vassal = YEM
-							diplomatic_influence = { who = YEM value = 400 }
+							random_owned = {
+								limit = { owner = { is_greater_power = yes } }
+								owner = { diplomatic_influence = { who = YEM value = 400 } }
+							}
 							relation = { who = YEM value = 400 }
 						}
+						
 						capital = 1176
 						money = 10000
 						research_points = 6000

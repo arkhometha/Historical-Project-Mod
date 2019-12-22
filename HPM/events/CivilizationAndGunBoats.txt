@@ -38,7 +38,10 @@ country_event = {
 			name = "western_influences"
 			duration = -1
 		}
-
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
+		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -67,7 +70,10 @@ country_event = {
 			name = uncivilized_isolationism
 			duration = -1
 		}
-		
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = closed_borders } } }
+			owner = { political_reform = closed_borders }
+		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -154,10 +160,8 @@ country_event = {
 				NOT = { has_province_modifier = boxer_presence }
 				NOT = { has_province_modifier = western_presence }
 			}
-			add_province_modifier = {
-				name = "western_presence"
-				duration = 1825
-			}
+			add_province_modifier = { name = "western_presence" duration = 1825 }
+			add_province_modifier = { name = "western_presence_research" duration = 1825 }
 			any_pop = {
 				militancy = 3
 				ideology = {
@@ -1841,6 +1845,12 @@ country_event = {
 			}
 			remove_province_modifier = western_presence
 			any_pop = { militancy = 2 }
+			owner = {
+				random_owned = {
+					limit = { owner = { NOT = { any_owned_province = { has_country_modifier = western_presence_research } } } }
+					owner = { remove_country_modifier = western_presence_research }
+				}
+			}
 		}
 		ai_chance = {
 			factor = 50
@@ -1912,7 +1922,6 @@ province_event = {
 		OR = {
 			has_province_modifier = foreign_trading_post
 			has_province_modifier = western_presence
-			has_province_modifier = european_military_mission
 		}
 	}
 	mean_time_to_happen = {
@@ -1970,7 +1979,12 @@ province_event = {
 			any_owned = {
 				remove_province_modifier = foreign_trading_post
 				remove_province_modifier = western_presence
-				remove_province_modifier = european_military_mission
+			}
+		}
+		owner = {
+			random_owned = {
+				limit = { owner = { NOT = { any_owned_province = { has_country_modifier = western_presence_research } } } }
+				owner = { remove_country_modifier = western_presence_research }
 			}
 		}
 	}
@@ -2094,8 +2108,8 @@ country_event = {
 	trigger = {
 		civilized = no
 		has_country_modifier = western_influences
+		NOT = { has_country_modifier = european_military_mission }
 		any_owned_province = {
-			NOT = { has_province_modifier = european_military_mission }
 			NOT = { has_province_modifier = boxer_presence }
 		}
 	}
@@ -2135,20 +2149,11 @@ country_event = {
 	option = {
 		name = "EVTOPTA13130"
 		years_of_research = 0.1
-		random_owned = {
-			limit = {
-				NOT = { has_province_modifier = european_military_mission }
-				NOT = { has_province_modifier = boxer_presence }
-			}
-			add_province_modifier = {
-				name = european_military_mission
-				duration = 1825
-			}
-			any_pop = {
-				ideology = {
-					factor = 0.05
-					value = reactionary
-				}
+		add_country_modifier = { name = european_military_mission duration = 1825 }
+		any_pop = {
+			ideology = {
+				factor = 0.05
+				value = reactionary
 			}
 		}
 		random_country = {
@@ -2203,13 +2208,11 @@ country_event = {
 	
 	trigger = {
 		war = yes
-		any_owned_province = {
-			has_province_modifier = european_military_mission
-		}
+		has_country_modifier = european_military_mission
 	}
 	
 	mean_time_to_happen = {
-		months = 12
+		months = 24
 		modifier = {
 			factor = 0.8
 			average_militancy = 3
@@ -2236,10 +2239,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA13140"
-		random_owned = {
-			limit = { has_province_modifier = european_military_mission }
-			remove_province_modifier = european_military_mission
-		}
+		remove_country_modifier = european_military_mission
 		years_of_research = -0.1
 		war_exhaustion = 20
 	}
@@ -2253,7 +2253,6 @@ province_event = {
 	
 	trigger = {
 		OR = {
-			has_province_modifier = european_military_mission
 			has_province_modifier = western_presence
 			has_province_modifier = foreign_trading_post
 			has_province_modifier = foreign_smugglers
@@ -2299,10 +2298,15 @@ province_event = {
 	
 	option = {
 		name = "EVTOPTA13150"
-		remove_province_modifier = european_military_mission
 		remove_province_modifier = western_presence
 		remove_province_modifier = foreign_trading_post
 		remove_province_modifier = foreign_smugglers
+		owner = {
+			random_owned = {
+				limit = { owner = { NOT = { any_owned_province = { has_country_modifier = western_presence_research } } } }
+				owner = { remove_country_modifier = western_presence_research }
+			}
+		}
 		any_country = {
 			limit = {
 				is_greater_power = yes
@@ -2340,7 +2344,6 @@ country_event = {
 	trigger = {
 		any_owned_province = {
 			OR = {
-				has_province_modifier = european_military_mission
 				has_province_modifier = western_presence
 				has_province_modifier = foreign_trading_post
 				has_province_modifier = foreign_smugglers
@@ -2439,7 +2442,6 @@ country_event = {
 		random_owned = {
 			limit = {
 				OR = {
-					has_province_modifier = european_military_mission
 					has_province_modifier = western_presence
 					has_province_modifier = foreign_trading_post
 					has_province_modifier = foreign_smugglers
@@ -2625,10 +2627,7 @@ country_event = {
 		war = no
 		part_of_sphere = no
 		has_country_modifier = western_influences
-		any_owned_province = {
-			is_capital = yes
-			has_province_modifier = legation_quarter
-		}
+		has_country_modifier = legation_quarter
 	}
 	
 	mean_time_to_happen = {
@@ -2769,9 +2768,7 @@ country_event = {
 		months = 1000
 		modifier = {
 			factor = 0.05
-			any_owned_province = {
-				has_province_modifier = european_military_mission
-			}
+			has_country_modifier = european_military_mission
 		}
 		modifier = {
 			factor = 0.9
@@ -2878,8 +2875,13 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_country_modifier = uncivilized_isolationism } }
 			owner = {
+				remove_country_modifier = uncivilized_isolationism
 				add_country_modifier = { name = western_influences duration = -1 }
 			}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { border_policy = open_borders } } }
+			owner = { political_reform = open_borders }
 		}
 		random_owned = {
 			limit = {
@@ -3185,9 +3187,9 @@ country_event = {
 	trigger = {
 		any_owned_province = {
 			is_capital = yes
-			NOT = { has_province_modifier = legation_quarter }
 			NOT = { has_province_modifier = boxer_presence }
 		}
+		NOT = { has_country_modifier = legation_quarter }
 		has_country_modifier = western_influences
 		is_vassal = no
 	}
@@ -3234,11 +3236,8 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA13220"		#Set up a legation quarter
+		add_country_modifier = { name = legation_quarter duration = 3650 }
 		capital_scope = {
-			add_province_modifier = {
-				name = legation_quarter
-				duration = 3650
-			}
 			any_pop = {
 				ideology = {
 					factor = 0.05
@@ -3345,9 +3344,9 @@ country_event = {
 	picture = "Outside_influences"
 	
 	trigger = {
+		has_country_modifier = legation_quarter
 		any_owned_province = {
 			is_capital = yes
-			has_province_modifier = legation_quarter
 			average_militancy = 1
 		}
 	}
@@ -4020,6 +4019,7 @@ country_event = {
 
 	option = {				
 		name = "EVTOPTA90910"
+		civilized = yes
 		prestige = 5
 		tech_school = traditional_academic
 		clr_country_flag = lacking_writing_system
@@ -4033,6 +4033,23 @@ country_event = {
 			33 = { add_country_modifier = { name = global_baby_boom duration = 3285 } }
 			33 = { add_country_modifier = { name = global_baby_boom duration = 4015 } }
 		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = uncivilized_isolationism
+					NOT = { border_policy = closed_borders } }
+				}
+			owner = { political_reform = closed_borders }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = western_influences
+					NOT = { border_policy = open_borders } }
+				}
+			owner = { political_reform = open_borders }
+		}
 		remove_country_modifier = assegai
 		remove_country_modifier = educational_reform
 		remove_country_modifier = military_reform
@@ -4043,23 +4060,33 @@ country_event = {
 		remove_country_modifier = sayings_of_the_dutch
 		remove_country_modifier = rangaku
 		remove_country_modifier = sakoku
-		remove_country_modifier = western_presence
 		clr_country_flag = using_foreign_weapons
 		clr_country_flag = using_foreign_artillery
 		clr_country_flag = using_foreign_ships
 		clr_country_flag = using_foreign_shipyards
+		random_owned = {
+			limit = { owner = { has_country_modifier = western_presence_research } }
+			owner = { remove_country_modifier = western_presence_research }
+		}
+		random_owned = {
+			limit = { owner = { has_country_modifier = european_military_mission } }
+			owner = { remove_country_modifier = european_military_mission }
+		}
+		random_owned = {
+			limit = { owner = { has_country_modifier = legation_quarter } }
+			owner = { remove_country_modifier = legation_quarter }
+		}
 		any_owned = {
 			remove_province_modifier = western_presence
 			remove_province_modifier = foreign_smugglers
 			remove_province_modifier = foreign_trading_post
 			remove_province_modifier = local_opium_habit
-			remove_province_modifier = european_military_mission
-			remove_province_modifier = legation_quarter
 			remove_province_modifier = kettler_denkmal
 			remove_province_modifier = extraterritoriality_granted
 			remove_province_modifier = boxer_presence
 			remove_province_modifier = boxer_agitation
 		}
+		
 		random_owned = {
 			limit = { owner = { tag = DAI } }
 			owner = { country_event = { days = 2 id = 199072 } }
@@ -4068,7 +4095,55 @@ country_event = {
 			limit = { owner = { tag = CAM } }
 			owner = { country_event = { days = 2 id = 199071 } }
 		}
+		
+		#Non-cores should flip to colonies
+		random_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				owner = { NOT = { exists = UTI } }
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						NOT = {
+							is_core = THIS
+							is_colonial = yes
+							is_accepted_culture = yes
+							is_primary_culture = yes
+							any_core = { is_cultural_union = THIS }
+							#any_neighbor_province = { is_core = THIS } #Rule excluding neighbouring states from the non-core rule
+						}
+						any_core = {
+							OR = {
+								civilized = no
+								tech_school = developing_tech_school
+							}
+						}
+					}
+					secede_province = UTI 
+					UTI = { country_event =  90911 }
+				}
+			}
+		}
 	}
+}
+
+country_event = {
+	title = "EVTNAME90911"
+	desc = "EVTDESC90911"
+	picture = "Prosper"
+
+	id = 90911
+
+	is_triggered_only = yes
+	
+	immediate = { civilized = no }
+	
+	option = {				
+		name = "EVTOPTA90911"
+		FROM = { inherit = THIS }
+	}
+	
 }
 
 #Reaction to factories being nationalized
@@ -4146,23 +4221,14 @@ province_event = {
 	trigger = {
 		OR = {
 			province_id = 1498
-			province_id = 1496
 			AND = {
-				province_id = 1569
-				NOT = { total_pops = 30000 }
-			}
-			AND = {
-				province_id = 1566
-				NOT = { total_pops = 30000 }
+				province_id = 1496
+				NOT = { 2632 = { trade_goods = precious_goods } }
 			}
 			AND = {
 				province_id = 2632
 				NOT = { total_pops = 30000 }
 				NOT = { 1496 = { trade_goods = precious_goods } }
-			}
-			AND = {
-				province_id = 1538
-				NOT = { total_pops = 90000 }
 			}
 		}
 		port = yes

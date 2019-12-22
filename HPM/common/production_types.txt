@@ -123,12 +123,12 @@ cement_template = {
 ############# LATE GAME FACTORIES
 
 aeroplane_factory = {       
-	template = machine_part_user_template	#maint = 8
+	template = factory_template	#maint = 9.825
 	input_goods = {
 		machine_parts = 1.11	#40.515
 		electric_gear = 2	#32
 		rubber = 1  		#7
-		lumber = 3.3 		#3.3	total input+maint = 90.815
+		lumber = 3.3 		#3.3	total input+maint = 92.64
 	}
 	output_goods = aeroplanes
 	value = 1.03			#113.3
@@ -143,12 +143,12 @@ aeroplane_factory = {
 }
 
 barrel_factory = {       
-	template = machine_part_user_template	#maint = 8
+	template = factory_template	#maint = 9.825
 	input_goods = {   
 		automobiles = 0.3	#21
 		machine_parts = 1	#36.5
 		electric_gear = 0.85	#13.6
-		steel = 2		#9.4			total input+maint = 90.815
+		steel = 2		#9.4			total input+maint = 90.325
 	}
 	output_goods = barrels 
 	value = 1.09		#106.82
@@ -167,12 +167,12 @@ barrel_factory = {
 }
 
 automobile_factory = {       
-	template = machine_part_user_template	#maint = 8
+	template = factory_template	#maint = 9.825
 	input_goods = {     
 		machine_parts = 1.05	#38.325
 		electric_gear = 1.5	#24
 		rubber = 1		#7
-		steel = 2.25		#10.575	total input+maint = 87.9
+		steel = 2.25		#10.575	total input+maint = 89.725
 	}
 	
 	output_goods = automobiles 
@@ -488,7 +488,7 @@ regular_clothes_factory = {
 		value = 0.25
 	}
 }
-       
+
 explosives_factory = {       
 	template = factory_template
 	input_goods = {   
@@ -756,10 +756,9 @@ RGO_template_labourers = {
 
 RGO_template_mines = {
 	owner = {
-		poptype = aristocrats 
+		poptype = aristocrats
 		effect = output
 	}
-		
 	employees = {
 		{ 
 			poptype = labourers 
@@ -836,14 +835,14 @@ grain_farm = {
 }
 
 iron_mine = {
-	template = RGO_template_mines
+	template = RGO_template_labourers
 	output_goods = iron
 	value = 1.8
 	mine = yes
 }
 
 oil_rig = {
-	template = RGO_template_mines
+	template = RGO_template_labourers
 	output_goods = oil 
 	value = 1
 	mine = yes

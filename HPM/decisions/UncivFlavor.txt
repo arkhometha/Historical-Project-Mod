@@ -800,88 +800,70 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	
-	# adopt_old_techs_lvl_1 = {
-		# picture = self_strengthening_movement
-		# potential = {
-			# civilized = no
-			# year = 1890
-			# NOT = { army_command_principle = 1 }
-		# }
+	conscript_fishermen = {
+		picture = dreams_of_empire
+		potential = {
+			civilized = no
+			civilization_progress = 0.2
+			NOT = {
+				has_country_flag = lacking_writing_system
+				any_owned_province = { has_building = naval_base }
+			}
+			OR = {
+				flintlock_rifles = 1
+				post_nelsonian_thought = 1
+			}
+		}
 		
-		# allow = {
-			# war = no
-			# money = 250000
-			# year = 1895
-		# }
+		allow = {
+			war = yes
+			money = 10000
+			NOT = { has_country_modifier = law_changed_by_force }
+			NOT = { total_amount_of_ships  = 5 }
+		}
 		
-		# effect = {
-			# treasury = -250000
-			# random_owned = {
-				# limit = { owner = { prestige = 2 } }
-				# owner = { prestige_factor = -0.75 }
-			# }
-			# add_country_modifier = { name = research_lagging_behind duration = 1460 }
-			# random_owned = {
-				# limit = { owner = { NOT = { army_command_principle = 1 } } }
-				# owner = { set_country_flag = first_lvl_techs_adopted }
-			# }
-			# ##Army Tech
-			# random_owned = {
-				# limit = { owner = { NOT = { post_napoleonic_thought = 1 } } }
-				# owner = { activate_technology = post_napoleonic_thought }
-			# }
-			# random_owned = {
-				# limit = { owner = { NOT = { flintlock_rifles = 1 } } }
-				# owner = { activate_technology = flintlock_rifles }
-			# }
-			# random_owned = {
-				# limit = { owner = { NOT = { bronze_muzzle_loaded_artillery = 1 } } }
-				# owner = { activate_technology = bronze_muzzle_loaded_artillery }
-			# }
-			# random_owned = {
-				# limit = { owner = { NOT = { military_staff_system = 1 } } }
-				# owner = { activate_technology = military_staff_system }
-			# }
-			# activate_technology = army_command_principle
-			# ##Navy Tech
-			# random_owned = {
-				# limit = { owner = { NOT = { post_nelsonian_thought = 1 } } }
-				# owner = { activate_technology = post_nelsonian_thought }
-			# }
-			# random_owned = {
-				# limit = { owner = { NOT = { clipper_design = 1 } } }
-				# owner = { activate_technology = clipper_design }
-			# }
-			# activate_technology = naval_design_bureaus
-			# activate_technology = alphabetic_flag_signaling
-			# activate_technology = the_command_principle
-			# ##Commerce Techs
-			# random_owned = {
-				# limit = { owner = { NOT = { guild_based_production = 1 } } }
-				# owner = { activate_technology = guild_based_production }
-			# }
-			# random_owned = {
-				# limit = { owner = { NOT = { no_standard = 1 } } }
-				# owner = { activate_technology = no_standard }
-			# }
-			# activate_technology = private_banks
-			# activate_technology = early_classical_theory_and_critique
-			# activate_technology = freedom_of_trade
-			# ##Culture Techs
-			# activate_technology = classicism_n_early_romanticism
-			# activate_technology = enlightenment_thought
-			# ##Industry Tech
-			# random_owned = {
-				# limit = { owner = { NOT = { piston_steam_engine = 1 } } }
-				# owner = { activate_technology = piston_steam_engine }
-			# }
-			# activate_technology = mechanical_production
-			# activate_technology = mechanized_mining
-			
-		# }
+		effect = {
+			add_country_modifier = { name = law_changed_by_force duration = 3650 }
+			prestige = -5
+			treasury = -10000
+			any_owned = {
+				limit = { port = yes }
+				random = {
+					chance = 75
+					sub_unit = {
+						type = frigate
+						value = current
+					}
+				}
+				random = {
+					chance = 5
+					sub_unit = {
+						type = manowar
+						value = current
+					}
+				}
+				any_pop = { militancy = 1 }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						flintlock_rifles = 1
+						NOT = { post_nelsonian_thought = 1 }
+					}
+				}
+				owner = { activate_technology = flintlock_rifles }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						post_nelsonian_thought = 1
+					}
+				}
+				owner = { activate_technology = post_nelsonian_thought }
+			}
+		}
 		
-		# ai_will_do = { factor = 1 }
-	# }
+		ai_will_do = { factor = 1 }
+	}
 	
 }

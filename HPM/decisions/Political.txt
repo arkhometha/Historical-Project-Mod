@@ -83,6 +83,7 @@ political_decisions = {
 		
 		effect = {
 			treasury = -1000
+			set_country_flag = central_bank_instituted
 			add_country_modifier = {
 				name = central_bank_established
 				duration = -1
@@ -151,7 +152,13 @@ political_decisions = {
 		picture = sign_the_geneva_convention
 		potential = {
 			part_of_sphere = yes
-			is_vassal = no
+			OR = {
+				is_vassal = no
+				AND = {
+					ai = yes
+					has_country_flag = failed_unification_remove_from_sphere
+				}
+			}
 		}
 		
 		allow = {
@@ -166,11 +173,25 @@ political_decisions = {
 						}
 					}
 				}
+				AND = {
+					ai = yes
+					has_country_flag = failed_unification_remove_from_sphere
+				}
 			}
 		}
 		
 		effect = {
-			sphere_owner = { country_event = 13202 }
+			random_owned = {
+				limit = { owner = { NOT = { has_country_flag = failed_unification_remove_from_sphere } } }
+				owner = { sphere_owner = { country_event = 13202 } }
+			}
+			random_owned = {
+				limit = { owner = { has_country_flag = failed_unification_remove_from_sphere } }
+				owner = {
+					clr_country_flag = failed_unification_remove_from_sphere
+					sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -179,7 +200,10 @@ political_decisions = {
 			# Ai will do, if sphere owner has LESS than thrice our brigades.
 			modifier = {
 				factor = 0
-				NOT = { total_pops = 50000000 }
+				NOT = {
+					total_pops = 50000000
+					has_country_flag = failed_unification_remove_from_sphere
+				}
 				sphere_owner = {
 					# Factor = (sphere_owner regiments) / (our regiments).
 					# Returns true if( factor >= x ).
@@ -415,6 +439,14 @@ political_decisions = {
 		
 		effect = {
 			plurality = -25
+			random = {
+				chance = 50
+				badboy = 1
+			}
+			random = {
+				chance = 50
+				badboy = 1
+			}
 			add_country_modifier = {
 				name = the_terror
 				duration = -1
@@ -439,10 +471,10 @@ political_decisions = {
 				limit = {
 					OR = { type = soldiers type = officers }
 					NOT = { pop_majority_ideology = communist }
-					}
-					militancy = -9 ideology = { factor = 0.35 value = communist }
-					random_list = { 50 = { reduce_pop = 0.9 } 50 = { reduce_pop = 0.85 } }
 				}
+				militancy = -9 ideology = { factor = 0.35 value = communist }
+				random_list = { 50 = { reduce_pop = 0.9 } 50 = { reduce_pop = 0.85 } }
+			}
 			any_pop = { limit = { pop_majority_ideology = communist } reduce_pop = 0.99 }
 			any_pop = { limit = { pop_majority_ideology = socialist } ideology = { factor = 0.5 value = communist } }
 			
@@ -542,6 +574,14 @@ political_decisions = {
 		
 		effect = {
 			plurality = -25
+			random = {
+				chance = 50
+				badboy = 1
+			}
+			random = {
+				chance = 50
+				badboy = 1
+			}
 			add_country_modifier = {
 				name = the_terror
 				duration = -1
@@ -868,6 +908,7 @@ political_decisions = {
 				AND = { tag = MLI owns = 1794 NOT = { capital = 1794 } }
 				AND = { tag = VEN owns = 729 NOT = { capital = 729 } }
 				AND = { tag = KOR owns = 1624 NOT = { capital = 1624 } }
+				AND = { tag = ALB owns = 849 NOT = { capital = 849 } }
 				AND = { tag = ASH civilized = yes owns = 1907 NOT = { capital = 1907 } }
 			}
 		}
@@ -875,6 +916,7 @@ political_decisions = {
 		allow = { war = no }
 		
 		effect = {
+			random_owned = { limit = { owner = { tag = ALB } } owner = { capital = 849 } }
 			random_owned = { limit = { owner = { tag = KOR } } owner = { capital = 1624 } }
 			random_owned = { limit = { owner = { tag = ASH } } owner = { capital = 1907 } }
 			random_owned = { limit = { owner = { tag = MLI } } owner = { capital = 1794 } }

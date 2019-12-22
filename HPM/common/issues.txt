@@ -15,9 +15,10 @@ party_issues = {
 	economic_policy = {
 		laissez_faire = {
 			max_tax = 0.5
-			factory_owner_cost = 0.25
+			factory_owner_cost = 0.3
 			factory_output = 0.1
-			import_cost = -0.25
+			import_cost = -0.1
+			unemployment_benefit = -0.25
 			
 			rules = {
 				build_factory = no
@@ -40,8 +41,7 @@ party_issues = {
 			}
 		}
 		interventionism = {
-			factory_owner_cost = 0.5
-			import_cost = 0.25
+			factory_owner_cost = 0.45
 			
 			rules = {
 				build_factory = no
@@ -66,9 +66,9 @@ party_issues = {
 			}
 		}
 		state_capitalism = {
-			import_cost = 0.5
+			import_cost = 0.25
 			min_tax = 0.25
-			factory_owner_cost = 0.8
+			factory_owner_cost = 0.6
 			
 			rules = {
 				build_factory = yes
@@ -89,7 +89,7 @@ party_issues = {
 			}
 		}
 		planned_economy = {
-			import_cost = 0.75
+			import_cost = 0.5
 			min_tax = 0.5
 			factory_throughput = 0.05
 			factory_owner_cost = -1	#negative costs, can't build.
@@ -608,7 +608,7 @@ political_reforms = {
 			tariff_efficiency_modifier = 0.05
 			administrative_multiplier = 2
 			allow = {
-				has_country_flag = modern_central_bank_system_invented
+				has_country_flag = central_bank_instituted
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
@@ -778,7 +778,7 @@ social_reforms = {
 			pension_level = 0.2
 			factory_cost = 0.40
 			factory_maintenance = 0.15
-			RGO_output = -0.02
+			rgo_output = -0.02
 			artisan_output = -0.02
 			administrative_multiplier = 2
 			global_immigrant_attract = 0.02
@@ -790,7 +790,7 @@ social_reforms = {
 			pension_level = 0.5
 			factory_cost = 0.60
 			factory_maintenance = 0.20
-			RGO_output = -0.03
+			rgo_output = -0.03
 			artisan_output = -0.03
 			administrative_multiplier = 3
 			global_immigrant_attract = 0.03
@@ -802,7 +802,7 @@ social_reforms = {
 			pension_level = 1
 			factory_cost = 0.80
 			factory_maintenance = 0.25
-			RGO_output = -0.04
+			rgo_output = -0.04
 			artisan_throughput = -0.04
 			administrative_multiplier = 4
 			global_immigrant_attract = 0.04
@@ -827,7 +827,7 @@ social_reforms = {
 			}
 		}
 		low_subsidies = {
-			unemployment_benefit = 0.1
+			unemployment_benefit = 1
 			global_immigrant_attract = 0.02
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }

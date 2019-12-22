@@ -58,7 +58,7 @@ political_decisions = {
 				limit = {
 					primary_culture = platinean
 					exists = yes
-					have_core_in = PRG
+					any_core = { owned_by = PRG }
 					OR = {
 						tag = ARC
 						tag = ARG
@@ -76,20 +76,17 @@ political_decisions = {
 				}
 				country_event = 4661010
 			}
-						
-			any_neighbor_country = { 
-				limit = { 
-				NOT = {
+
+			any_country = {
+				limit = {
+					exists = yes
+					neighbour = THIS
 					OR = {
-						tag = CRT
-						tag = ENT
-						tag = ARC
-						tag = ARG
-						tag = SBA
-						}
+						NOT = { primary_culture = platinean }
+						tag = URU
 					}
 				}
-			country_event =	700013
+			country_event = 700013
 			}
 		}
 		ai_will_do = {

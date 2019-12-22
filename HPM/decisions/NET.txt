@@ -159,6 +159,7 @@ political_decisions = {
 		potential = {
 			tag = NET
 			NOT = { has_country_flag = boer_accepted }
+			any_owned_province = { any_pop = { has_pop_culture = boer } }
 			any_owned_province = { 
 			OR = {
 				is_core = SAF
@@ -172,12 +173,26 @@ political_decisions = {
 		allow = {
 			war = no
 			money = 100000
-			any_owned_province = { has_pop_culture = boer }
+			prestige = 100
+			plurality = 50
+			phenomenalism = 1
+			upper_house_composition = population_equal_weight
+			public_meetings = yes_meeting
+			press_rights = free_press
+			NOT = {
+				citizens_rights = primary_culture_only
+				citizenship_policy = residency
+			}
+			OR = {
+				government = democracy
+				government = hms_government
+			}
 		}
-		
+
 		effect = {
 			set_country_flag = boer_accepted
 			treasury = -100000
+			prestige_factor = -0.1
 			add_accepted_culture = boer
 			any_pop = {
 				limit = { has_pop_culture = boer }
@@ -317,7 +332,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			prestige_factor = -0.2
+			prestige_factor = -0.1
 			add_accepted_culture = flemish
 		}
 		

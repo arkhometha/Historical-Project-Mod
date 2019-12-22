@@ -298,6 +298,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -479,6 +481,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -638,6 +642,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -774,6 +780,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -913,6 +921,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1059,6 +1069,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1203,6 +1215,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1342,6 +1356,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1481,6 +1497,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1621,6 +1639,8 @@ country_event = {
 		}
 		#Delete Block
 		clr_country_flag = government_busy_with_something
+		#Flag for pops
+		clr_country_flag = internment_camps_open
 		#Place
 		clr_country_flag = interning_on_colonies
 		clr_country_flag = interning_on_homeland
@@ -1924,11 +1944,34 @@ country_event = {
 	
 	option = {
 		name = "EVT6016812OPTA"
-		random_owned = { limit = { has_building = naval_base is_core = THIS } sub_unit = { type = ironclad value = current } }
+		random_owned = {
+			limit = {
+				has_building = naval_base
+				is_core = THIS
+			}
+			sub_unit = { type = ironclad value = current }
+		}
 		add_country_modifier = { name = warship_commissioned duration = 365 }
 		change_variable = { which = ironclad_commision value = 1 }
 		any_country = { limit = { exists = no has_country_flag = warship_commissioned } clr_country_flag = warship_commissioned }
 		clr_global_flag = warship_commission_being_fulfilled
+		random_owned = {
+			limit = {
+				owner = {
+					flintlock_rifles = 1
+					NOT = { post_nelsonian_thought = 1 }
+				}
+			}
+			owner = { activate_technology = flintlock_rifles }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					post_nelsonian_thought = 1
+				}
+			}
+			owner = { activate_technology = post_nelsonian_thought }
+		}
 	}
 }
 
@@ -4306,6 +4349,10 @@ country_event = {
 		political_reform = closed_borders
 		treasury = 1000
 		neutrality = yes
+		any_country = {
+			limit = { war_with = THIS }
+			end_war = THIS
+		}
 		random_owned = {
 			limit = { owner = { civilized = no } }
 			owner = {
@@ -4347,6 +4394,10 @@ country_event = {
 		treasury = 1000
 		neutrality = yes
 		any_country = {
+			limit = { war_with = THIS }
+			end_war = THIS
+		}
+		any_country = {
 			limit = {
 				exists = no
 				OR = {
@@ -4358,3 +4409,59 @@ country_event = {
 		}
 	}
 }
+
+#Vassal Transfer - Overlord Gets Informed
+country_event = {
+	id = 6016822
+	title = "EVTNAME6016822"
+	desc = "EVTDESC6016822"
+	picture = "danishgovernment"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT6016822OPTA"
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = FROM
+			}
+			country_event = 6016824
+		}
+		inherit = FROM
+	}
+}
+
+#Vassal Stolen CB - Guarantee there's vassal transfer without any funny behaviour.
+country_event = {
+	id = 6016824
+	title = "EVTNAME6016824"
+	desc = "EVTDESC6016824"
+	picture = "danishgovernment"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT6016824OPTA"
+		FROM = {
+			any_owned = {
+				limit = { is_core = THIS }
+				remove_core = THIS
+				add_province_modifier = { name = core_when_done duration = 30 }
+			}
+			any_pop = {
+				limit = {
+					is_primary_culture = no
+					NOT = {
+						is_accepted_culture = yes
+						is_primary_culture = THIS
+					}
+				}
+				militancy = 1
+				consciousness = 3
+			}
+			country_event = 6016824
+		}
+	}
+}
+

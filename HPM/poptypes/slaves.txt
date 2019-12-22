@@ -22,7 +22,7 @@ everyday_needs = {
 }
 
 luxury_needs = {
-	opium = 1
+	#opium = 1
 }
 
 ideologies = {

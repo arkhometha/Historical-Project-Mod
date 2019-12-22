@@ -4,6 +4,12 @@
 
 ####AI Personalities
 
+coward_ai = {
+	badboy = -0.01
+	cb_generation_speed_modifier = 0.25
+	icon = 3
+}
+
 benefactor_ai = {
 	cb_generation_speed_modifier = 0.1
 	icon = 3
@@ -16,6 +22,19 @@ malevolent_ai = {
 
 picking_personality = {
 	icon = 3
+}
+
+####
+
+######
+##Rebel Modifiers
+######
+partisan_occupation = {
+	icon = 17
+}
+
+core_when_done = {
+	icon = 17
 }
 
 ####
@@ -79,8 +98,8 @@ forceful_back_to_africa = {
 }
 
 ostflucht = {
-	farm_rgo_size = -0.3
-	mine_rgo_size = -0.6
+	farm_rgo_size = -0.5
+	mine_rgo_size = -0.8
 	immigrant_attract = -0.5
 	immigrant_push = 0.5
 	pop_consciousness_modifier = 0.1
@@ -187,7 +206,7 @@ non_interventionism_trade_policy = {
 french_liberal_school = {
 	max_tariff = -0.2
 	administrative_efficiency_modifier = 0.2
-	tax_efficiency = 0.1
+	tax_efficiency = 0.2
 	industry_tech_research_bonus = 0.05
 	commerce_tech_research_bonus = 0.05
 	culture_tech_research_bonus = 0.05
@@ -196,6 +215,7 @@ french_liberal_school = {
 }
 smithian_school = {
 	max_tariff = -0.1
+	tax_efficiency = 0.2
 	tariff_efficiency_modifier = 0.2
 	administrative_efficiency_modifier = 0.05
 	icon = 9
@@ -247,6 +267,10 @@ unrecognized_country = {
 
 monthly_payment_made = {
 	tax_efficiency = 0.1
+	icon = 9
+}
+
+debt_system_cooldown = {
 	icon = 9
 }
 
@@ -464,6 +488,7 @@ totalitarian_system = {
 	global_pop_consciousness_modifier = -0.05
 	global_pop_militancy_modifier = -0.05
 	research_points_modifier = -0.05
+	badboy = 0.01
 	icon = 7
 }
 
@@ -481,9 +506,10 @@ cult_of_personality = {
 }
 
 the_terror = {
+	badboy = 0.01
 	suppression_points_modifier = 2
 	issue_change_speed = -2
-	RGO_output = -0.1
+	rgo_output = -0.1
 	factory_output = -0.1
 	icon = 18
 }
@@ -504,7 +530,7 @@ sound_dues_toll = {
 }
 
 silver_mine = {
-	local_RGO_output = -0.2
+	local_RGO_output = -0.25
 	icon = 11
 }
 
@@ -993,6 +1019,10 @@ uncivilized_isolationism = {
 western_presence = {
 	pop_consciousness_modifier = 0.1
 	pop_militancy_modifier = 0.05
+	icon = 9
+}
+
+western_presence_research = {
 	research_points_modifier = 0.01
 	icon = 9
 }
@@ -1223,8 +1253,8 @@ sayings_of_the_dutch = {
 
 european_military_mission = {
 	research_points_modifier = 0.02
-	pop_militancy_modifier = 0.05
-	icon = 17
+	global_pop_militancy_modifier = 0.02 #0.05
+	icon = 15
 }
 
 extraterritoriality_granted = {
@@ -1245,7 +1275,7 @@ educational_reform = {
 }
 
 legation_quarter = {
-	pop_militancy_modifier = 0.03
+	global_pop_militancy_modifier = 0.01
 	research_points_modifier = 0.05
 	icon = 8
 }
@@ -1408,12 +1438,12 @@ silk_famine = {
 	icon = 14
 }
 
-blood_and_iron_mine = {
-	mine_rgo_eff = 0.5
-	mine_rgo_size = 0.25
-	pop_consciousness_modifier = 0.01
-	icon = 14
-}
+# blood_and_iron_mine = {
+	# mine_rgo_eff = 0.5
+	# mine_rgo_size = 0.25
+	# pop_consciousness_modifier = 0.01
+	# icon = 14
+# }
 
 ##### TEMPERANCE LEAGUE #####
 libertine_culture = {
@@ -1473,7 +1503,7 @@ discriminatory_school_system = {
 }
 
 flying_university = {
-	research_points_modifier = 0.02
+	#research_points_modifier = 0.02
 	pop_consciousness_modifier = 0.2
 	pop_militancy_modifier = 0.2
 	icon = 5
@@ -1605,14 +1635,20 @@ local_tractors = {
 }
 
 local_nitroglycerin_and_machine_tools = {
-	mine_RGO_eff = 0.6
+	mine_RGO_eff = 0.5
+	mine_RGO_size = 0.5
+	icon = 13
+}
+
+local_conveyors_and_excavators = {
+	mine_RGO_eff = 0.5
 	mine_RGO_size = 0.5
 	icon = 13
 }
 
 local_distribution_channels_und_electricity = {
-	farm_RGO_eff = 0.8 #0.5
-	mine_RGO_eff = 0.8 #0.5
+	farm_RGO_eff = 0.5 #0.5
+	mine_RGO_eff = 0.5 #0.5
 	local_factory_throughput = 0.1 #0.05
 	icon = 11
 }
@@ -2417,7 +2453,7 @@ louis_napoleon_iii = {
 neutrality_modifier = {
 	max_military_spending = -0.10
 	leadership_modifier = -0.7
-	diplomatic_points_modifier = -0.3
+	diplomatic_points_modifier = -0.6
 	core_pop_militancy_modifier = -0.01
 	prestige = -0.025
 	icon = 7

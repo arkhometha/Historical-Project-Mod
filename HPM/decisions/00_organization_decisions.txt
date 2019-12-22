@@ -1,5 +1,6 @@
 political_decisions = {
 	enable_options = {
+		picture = starting_options
 		alert = yes
 		potential = {
 			ai = no
@@ -8,6 +9,7 @@ political_decisions = {
 		}
 		
 		allow = {
+			NOT = { year = 1837 }
 		}
 		
 		effect = {
@@ -17,6 +19,7 @@ political_decisions = {
 	}
 	
 	disable_options = {
+		picture = starting_options
 		alert = no
 		potential = {
 			ai = no
@@ -39,6 +42,7 @@ political_decisions = {
 		potential = {
 			ai = no
 			NOT = { has_country_flag = government_decisions_on }
+			NOT = { has_global_flag = government_decisions_being_picked }
 			OR = {
 				#turn_off_vassal_payments
 				AND = {
@@ -211,6 +215,7 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = government_decisions_on
+			set_global_flag = government_decisions_being_picked
 		}
 	}
 
@@ -226,6 +231,7 @@ political_decisions = {
 		}
 		effect = {
 			clr_country_flag = government_decisions_on
+			clr_global_flag = government_decisions_being_picked
 		}
 	}
 	

@@ -110,7 +110,7 @@ political_decisions = {
 		}
 		allow = {
 			iron_railroad = 1
-			puddling = 1
+			hot_blast = 1
 		}
 		effect = {
 			619 = {
@@ -331,7 +331,30 @@ political_decisions = {
 				tag = AUS
 				tag = KUK
 			}
-			owns = 702
+			OR = {
+				AND = { #owns East Galicia only
+					owns = 702
+					NOT = { owns = 705 } #Galicia-Lodomeria
+					NOT = { owns = 2584 } #Lower Silesia
+					NOT = { owns = 638 } #Slovakia
+					NOT = { owns = 661 } #Western Transylvania
+				}
+				AND = { #owns Galicia-Lodomeria only
+					owns = 705
+					NOT = { owns = 702 } #East Galicia
+					NOT = { owns = 2584 } #Lower Silesia
+					NOT = { owns = 638 } #Slovakia
+					NOT = { owns = 661 } #Western Transylvania
+				}
+				AND = { #owns full Galicia but nothing close to it
+					owns = 702
+					owns = 705
+					NOT = { owns = 2584 } #Lower Silesia
+					NOT = { owns = 638 } #Slovakia
+					NOT = { owns = 661 } #Western Transylvania
+				}
+			}
+				
 			ai = yes
 			NOT = {
 				exists = GLM
@@ -340,12 +363,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			OR = {
-				NOT = { owns = 631 }
-				NOT = { owns = 2584 }
-			}
-			NOT = { owns = 637 }
-			NOT = { owns = 661 }
+			war = no
 		}
 		
 		effect = {

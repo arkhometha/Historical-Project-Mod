@@ -4295,3 +4295,262 @@ country_event = {
 		}
 	}
 }
+
+#Silver Fever
+country_event = {
+	id = 971712
+	title = "EVTNAME971712"
+	desc = "EVTDESC971712"
+	picture = "goldrush"
+
+	trigger = {
+		year = 1838
+		515 = {
+			owned_by = THIS
+			NOT = { trade_goods = precious_metal }
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { months = 24 }
+	
+	option = {
+		name = "EVT971712OPTA"
+		515 = {
+			trade_goods = precious_metal
+			add_province_modifier = { name = silver_mine duration = -1 }
+		}
+	}
+}
+
+#The End of the Silver Fever
+country_event = {
+	id = 971713
+	title = "EVTNAME971713"
+	desc = "EVTDESC971713"
+	picture = "goldrush"
+
+	trigger = {
+		year = 1898
+		515 = {
+			owned_by = THIS
+			trade_goods = precious_metal
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			factor = 0.9
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 5
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 6
+		}
+	}
+	
+	option = {
+		name = "EVT971713OPTA"
+		515 = {
+			trade_goods = fish
+			remove_province_modifier = silver_mine
+		}
+	}
+}
+
+#The Falangist Doctrine
+country_event = {
+	id = 971714
+	title = "EVTNAME971714"
+	desc = "EVTDESC971714"
+	picture = "carlistas_en_miranda"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT971714OPTA" #Gibraltar only
+		badboy = 3
+		517 = { add_core = THIS }
+		ai_chance = { factor = 60 }
+	}
+	
+	option = {
+		name = "EVT971714OPTB" #Gibraltar and France
+		badboy = 10
+		517 = { add_core = THIS }
+		460 = { add_core = THIS }
+		457 = { add_core = THIS } 
+		464 = { add_core = THIS }
+		
+		ai_chance = { factor = 30 }
+	}
+	
+	option = {
+		name = "EVT971714OPTC" #Gibraltar and Portugal
+		badboy = 25
+		517 = { add_core = THIS }
+
+		random_country = {
+			limit = {
+				tag = POR
+				exists = yes
+				vassal_of = THIS
+			}
+			annex_to = THIS
+		}
+		
+		random_country = {
+			limit = {
+				tag = POR
+				exists = yes
+				is_vassal = yes
+				NOT = { vassal_of = THIS }
+			}
+			overlord = {
+				release = POR
+				casus_belli = {
+					target = THIS
+					type = cut_down_to_size
+					months = 48
+				}
+				casus_belli = {
+					target = POR
+					type = make_puppet
+					months = 48
+				}
+			}
+			THIS = { diplomatic_influence = { who = POR value = -400 } }
+			set_country_flag = annex_to_master
+			leave_alliance = THIS
+			end_military_access = THIS
+			relation = { who = THIS value = -400 }
+			add_casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 48
+			}
+			THIS = {
+				war = {
+					target = POR
+					attacker_goal = { casus_belli = make_puppet }
+				}
+			}
+		}
+		
+		random_country = {
+			limit = {
+				tag = POR
+				exists = yes
+				is_vassal = no
+			}
+			THIS = { diplomatic_influence = { who = POR value = -400 } }
+			set_country_flag = annex_to_master
+			leave_alliance = THIS
+			end_military_access = THIS
+			relation = { who = THIS value = -400 }
+			add_casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 48
+			}
+			THIS = {
+				war = {
+					target = POR
+					attacker_goal = { casus_belli = make_puppet }
+				}
+			}
+		}
+		ai_chance = { factor = 7 }
+	}
+	
+	option = {
+		name = "EVT971714OPTD" #Everything and Portugal
+		badboy = 30
+		517 = { add_core = THIS }
+		460 = { add_core = THIS }
+		457 = { add_core = THIS } 
+		464 = { add_core = THIS }
+		
+		random_country = {
+			limit = {
+				tag = POR
+				exists = yes
+				vassal_of = THIS
+			}
+			annex_to = THIS
+		}
+		
+		random_country = {
+			limit = {
+				tag = POR
+				exists = yes
+				is_vassal = yes
+				NOT = { vassal_of = THIS }
+			}
+			overlord = {
+				release = POR
+				casus_belli = {
+					target = THIS
+					type = cut_down_to_size
+					months = 48
+				}
+				casus_belli = {
+					target = POR
+					type = make_puppet
+					months = 48
+				}
+			}
+			THIS = { diplomatic_influence = { who = POR value = -400 } }
+			set_country_flag = annex_to_master
+			leave_alliance = THIS
+			end_military_access = THIS
+			relation = { who = THIS value = -400 }
+			add_casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 48
+			}
+			THIS = {
+				war = {
+					target = POR
+					attacker_goal = { casus_belli = make_puppet }
+				}
+			}
+		}
+		
+		random_country = {
+			limit = {
+				tag = POR
+				exists = yes
+				is_vassal = no
+			}
+			THIS = { diplomatic_influence = { who = POR value = -400 } }
+			set_country_flag = annex_to_master
+			leave_alliance = THIS
+			end_military_access = THIS
+			relation = { who = THIS value = -400 }
+			add_casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 48
+			}
+			THIS = {
+				war = {
+					target = POR
+					attacker_goal = { casus_belli = make_puppet }
+				}
+			}
+		}
+		
+		ai_chance = { factor = 3 }
+	}
+}
+

@@ -220,7 +220,7 @@ political_decisions = {
 			owns = 13
 		}
 		effect = {
-			add_country_modifier = { name = monument_under_construction duration = 730 }
+			add_country_modifier = { name = monument_under_construction duration = 450 }
 			set_country_flag = build_the_cnr
 			treasury = -3000
 			any_owned = {
@@ -230,7 +230,6 @@ political_decisions = {
 				}
 				infrastructure = 1
 			}
-			13 = { change_province_name = "Vancouver" }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -265,7 +264,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			add_country_modifier = { name = monument_under_construction duration = 730 }
+			add_country_modifier = { name = monument_under_construction duration = 450 }
 			set_country_flag = build_the_cnr1
 			treasury = -2000
 			any_owned = {
@@ -277,26 +276,33 @@ political_decisions = {
 			}
 			any_owned = {
 				limit = {
-					province_id = 50
+					province_id = 42
 					can_build_in_province = { building = railroad limit_to_world_greatest_level = yes }
 				}
 				infrastructure = 1 owner = { treasury = -2000 }
 			}
 			any_owned = {
 				limit = {
-					province_id = 49
+					province_id = 41
 					can_build_in_province = { building = railroad limit_to_world_greatest_level = yes }
 				}
 				infrastructure = 1 owner = { treasury = -2000 }
 			}
 			any_owned = {
 				limit = {
-					province_id = 36
+					province_id = 30
 					can_build_in_province = { building = railroad limit_to_world_greatest_level = yes }
 				}
 				infrastructure = 1 owner = { treasury = -2000 }
 			}
-			36 = { add_province_modifier = { name = gateway_to_harbor duration = 365 } }
+			any_owned = {
+				limit = {
+					province_id = 13
+					can_build_in_province = { building = railroad limit_to_world_greatest_level = yes }
+				}
+				infrastructure = 1 owner = { treasury = -2000 }
+			}
+			42 = { add_province_modifier = { name = gateway_to_harbor duration = 365 } }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -327,19 +333,26 @@ political_decisions = {
 		}
 		
 		effect = {
-			add_country_modifier = { name = monument_under_construction duration = 730 }
+			add_country_modifier = { name = monument_under_construction duration = 450 }
 			set_country_flag = build_the_cnr2
 			treasury = -5000
 			any_owned = {
 				limit = {
-					province_id = 41
+					province_id = 50
 					can_build_in_province = { building = railroad limit_to_world_greatest_level = yes }
 				}
 				infrastructure = 1 owner = { treasury = -2000 }
 			}
 			any_owned = {
 				limit = {
-					province_id = 30
+					province_id = 49
+					can_build_in_province = { building = railroad limit_to_world_greatest_level = yes }
+				}
+				infrastructure = 1 owner = { treasury = -2000 }
+			}
+			any_owned = {
+				limit = {
+					province_id = 36
 					can_build_in_province = { building = railroad limit_to_world_greatest_level = yes }
 				}
 				infrastructure = 1 owner = { treasury = -2000 }
@@ -353,14 +366,14 @@ political_decisions = {
 			}
 			any_owned = {
 				limit = {
-					province_id = 29
+					province_id = 24
 					can_build_in_province = { building = railroad limit_to_world_greatest_level = yes }
 				}
 				infrastructure = 1 owner = { treasury = -2000 }
 			}
 			any_owned = {
 				limit = {
-					province_id = 26
+					province_id = 25
 					can_build_in_province = { building = railroad limit_to_world_greatest_level = yes }
 				}
 				infrastructure = 1 owner = { treasury = -2000 }
@@ -434,22 +447,16 @@ political_decisions = {
 				}
 				infrastructure = 1 owner = { treasury = -2000 }
 			}
-			any_owned = {
-				limit = {
-					province_id = 13
-					can_build_in_province = { building = railroad limit_to_world_greatest_level = yes }
-				}
-				infrastructure = 1 owner = { treasury = -2000 }
-			}
 			13 = { add_province_modifier = { name = gateway_to_harbor duration = 1825 } }
 			52 = { change_province_name = "Sudbury" }
 			49 = { change_province_name = "Kenora" }
 			2594 = { change_province_name = "Osnaburgh" }
 			6 = { change_province_name = "Whitehorse" }
+			13 = { change_province_name = "Vancouver" }
 		}
 		ai_will_do = { factor = 1 }
 	}
-	
+		
 	claim_the_north = {
 		picture = whistlestop_tour
 		potential = {

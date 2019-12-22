@@ -9,7 +9,7 @@ province_event = {
 		NOT = { has_province_modifier = local_tractors }
 		NOT = {
 			state_scope = { is_slave = yes }
-			state_scope = { unemployment_by_type = { value = 0.01 type = farmers } }
+			unemployment_by_type = { value = 0.03 type = farmers }
 		}
 		OR = {
 			terrain = plains
@@ -199,13 +199,15 @@ province_event = {
 						number_of_states = 10
 						literacy = 0.7
 					}
-					any_neighbor_province = { has_province_modifier = local_tractors }
+					any_neighbor_province = {
+						has_province_modifier = local_tractors
+						unemployment_by_type = { value = 0.03 type = farmers }
+					}
 					NOT = {
 						has_province_modifier = local_tractors
 						is_overseas = yes
 						is_colonial = yes
 						state_scope = {
-							unemployment_by_type = { value = 0.01 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
 						}
@@ -273,10 +275,12 @@ province_event = {
 				tag = THIS
 				number_of_states = 20
 				any_owned_province = {
-					NOT = { has_province_modifier = local_tractors }
+					NOT = {
+						has_province_modifier = local_tractors
+						unemployment_by_type = { value = 0.03 type = farmers }
+					}
 					NOT = {
 						state_scope = {
-							unemployment_by_type = { value = 0.02 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
 							any_owned_province = { NOT = { controlled_by = THIS } }
@@ -317,7 +321,6 @@ province_event = {
 						literacy = 0.7
 						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = farmers }
 							has_pop_type = serfs
 							is_slave = yes
 						}
@@ -326,6 +329,7 @@ province_event = {
 								is_overseas = yes
 								is_colonial = yes
 								has_province_modifier = local_tractors
+								unemployment_by_type = { value = 0.03 type = farmers }
 							}
 							OR = {
 								terrain = plains
@@ -391,13 +395,15 @@ province_event = {
 				tag = THIS
 				number_of_states = 30
 				any_owned_province = {
-					NOT = { has_province_modifier = local_tractors }
 					NOT = {
+						has_province_modifier = local_tractors
+						unemployment_by_type = { value = 0.03 type = farmers }
+					}
+					NOT = {
+						unemployment_by_type = { value = 0.03 type = farmers }
 						state_scope = {
-							unemployment_by_type = { value = 0.02 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
-							any_owned_province = { NOT = { controlled_by = THIS } }
 						}
 					}
 					state_scope = { literacy = 0.7 }
@@ -435,7 +441,6 @@ province_event = {
 						literacy = 0.7
 						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = farmers }
 							has_pop_type = serfs
 							is_slave = yes
 						}
@@ -444,6 +449,7 @@ province_event = {
 								is_overseas = yes
 								is_colonial = yes
 								has_province_modifier = local_tractors
+								unemployment_by_type = { value = 0.03 type = farmers }
 							}
 							OR = {
 								terrain = plains
@@ -509,13 +515,15 @@ province_event = {
 				tag = THIS
 				number_of_states = 40
 				any_owned_province = {
-					NOT = { has_province_modifier = local_tractors }
 					NOT = {
+						has_province_modifier = local_tractors
+						unemployment_by_type = { value = 0.03 type = farmers }
+					}
+					NOT = {
+						unemployment_by_type = { value = 0.03 type = farmers }
 						state_scope = {
-							unemployment_by_type = { value = 0.02 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
-							any_owned_province = { NOT = { controlled_by = THIS } }
 						}
 					}
 					state_scope = { literacy = 0.7 }
@@ -553,7 +561,6 @@ province_event = {
 						literacy = 0.7
 						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = farmers }
 							has_pop_type = serfs
 							is_slave = yes
 						}
@@ -562,6 +569,7 @@ province_event = {
 								is_overseas = yes
 								is_colonial = yes
 								has_province_modifier = local_tractors
+								unemployment_by_type = { value = 0.03 type = farmers }
 							}
 							OR = {
 								terrain = plains
@@ -624,7 +632,7 @@ province_event = {
 	}
 }
 
-# Machine Tools - Mechanized Mining and nitroglycerin
+# Machine Tools - Mechanized Mining and dynamite
 province_event = {
 	id = 29904
 	title = "EVTNAME29904"
@@ -634,12 +642,12 @@ province_event = {
 		NOT = { has_province_modifier = local_nitroglycerin_and_machine_tools }
 		owner = {
 			invention = machine_tools
-			invention = nitroglycerin
+			invention = dynamite
 		}
 		NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
 		NOT = {
 			state_scope = { is_slave = yes }
-			state_scope = { unemployment_by_type = { value = 0.01 type = labourers } }
+			unemployment_by_type = { value = 0.03 type = labourers }
 		}
 		OR = {
 			trade_goods = coal
@@ -800,8 +808,8 @@ province_event = {
 						has_province_modifier = local_nitroglycerin_and_machine_tools
 						is_overseas = yes
 						is_colonial = yes
+						unemployment_by_type = { value = 0.03 type = labourers }
 						state_scope = {
-							unemployment_by_type = { value = 0.01 type = labourers }
 							is_slave = yes
 							has_pop_type = serfs
 						}
@@ -836,11 +844,13 @@ province_event = {
 				tag = THIS
 				number_of_states = 10
 				any_owned_province = {
-					NOT = { has_province_modifier = local_nitroglycerin_and_machine_tools }
+					NOT = {
+						has_province_modifier = local_nitroglycerin_and_machine_tools
+						unemployment_by_type = { value = 0.03 type = labourers }
+					}
 					state_scope = {
 						literacy = 0.5
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = labourers }
 							has_pop_type = serfs
 							is_slave = yes
 						}
@@ -864,7 +874,6 @@ province_event = {
 						literacy = 0.5
 						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = labourers }
 							is_slave = yes
 							has_pop_type = serfs
 						}
@@ -873,6 +882,7 @@ province_event = {
 								has_province_modifier = local_nitroglycerin_and_machine_tools
 								is_overseas = yes
 								is_colonial = yes
+								unemployment_by_type = { value = 0.03 type = labourers }
 							}
 							OR = {
 								trade_goods = coal
@@ -906,12 +916,14 @@ province_event = {
 				tag = THIS
 				number_of_states = 20
 				any_owned_province = {
-					NOT = { has_province_modifier = local_nitroglycerin_and_machine_tools }
+					NOT = {
+						has_province_modifier = local_nitroglycerin_and_machine_tools
+						unemployment_by_type = { value = 0.03 type = labourers }
+					}
 					state_scope = {
 						literacy = 0.5
 						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = labourers }
 							has_pop_type = serfs
 							is_slave = yes
 						}
@@ -934,7 +946,6 @@ province_event = {
 						literacy = 0.5
 						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = labourers }
 							is_slave = yes
 							has_pop_type = serfs
 						}
@@ -943,6 +954,7 @@ province_event = {
 								has_province_modifier = local_nitroglycerin_and_machine_tools
 								is_overseas = yes
 								is_colonial = yes
+								unemployment_by_type = { value = 0.03 type = labourers }
 							}
 							OR = {
 								trade_goods = coal
@@ -977,12 +989,14 @@ province_event = {
 				tag = THIS
 				number_of_states = 30
 				any_owned_province = {
-					NOT = { has_province_modifier = local_nitroglycerin_and_machine_tools }
+					NOT = {
+						has_province_modifier = local_nitroglycerin_and_machine_tools
+						unemployment_by_type = { value = 0.03 type = labourers }
+					}
 					state_scope = {
 						literacy = 0.5
 						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = labourers }
 							has_pop_type = serfs
 							is_slave = yes
 						}
@@ -1005,12 +1019,12 @@ province_event = {
 						literacy = 0.5
 						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = labourers }
 							is_slave = yes
 							has_pop_type = serfs
 						}
 						any_owned_province = {
 							NOT = {
+								unemployment_by_type = { value = 0.03 type = labourers }
 								has_province_modifier = local_nitroglycerin_and_machine_tools
 								is_overseas = yes
 								is_colonial = yes
@@ -1048,12 +1062,14 @@ province_event = {
 				tag = THIS
 				number_of_states = 40
 				any_owned_province = {
-					NOT = { has_province_modifier = local_nitroglycerin_and_machine_tools }
+					NOT = {
+						has_province_modifier = local_nitroglycerin_and_machine_tools
+						unemployment_by_type = { value = 0.03 type = labourers }
+					}
 					state_scope = {
 						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
 						literacy = 0.5
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = labourers }
 							has_pop_type = serfs
 							is_slave = yes
 						}
@@ -1076,13 +1092,13 @@ province_event = {
 						literacy = 0.5
 						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = labourers }
 							is_slave = yes
 							has_pop_type = serfs
 						}
 						any_owned_province = {
 							NOT = {
 								has_province_modifier = local_nitroglycerin_and_machine_tools
+								unemployment_by_type = { value = 0.03 type = labourers }
 								is_overseas = yes
 								is_colonial = yes
 							}
@@ -1116,7 +1132,6 @@ province_event = {
 	}
 }
 
-
 # Distribution Channels
 province_event = {
 	id = 29903
@@ -1130,11 +1145,11 @@ province_event = {
 			invention = electrical_lighting
 		}
 		NOT = {
+			unemployment_by_type = { value = 0.03 type = labourers }
+			unemployment_by_type = { value = 0.03 type = farmers }
 			state_scope = {
 				is_slave = yes
 				any_owned_province = { NOT = { controlled_by = THIS } }
-				unemployment_by_type = { value = 0.01 type = labourers }
-				unemployment_by_type = { value = 0.01 type = farmers }
 			}
 		}
 	}
@@ -1284,9 +1299,9 @@ province_event = {
 						has_province_modifier = local_distribution_channels_und_electricity
 						is_overseas = yes
 						is_colonial = yes
+						unemployment_by_type = { value = 0.03 type = labourers }
+						unemployment_by_type = { value = 0.03 type = farmers }
 						state_scope = {
-							unemployment_by_type = { value = 0.01 type = labourers }
-							unemployment_by_type = { value = 0.01 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
 						}
@@ -1307,9 +1322,9 @@ province_event = {
 				any_owned_province = {
 					NOT = { has_province_modifier = local_distribution_channels_und_electricity }
 					NOT = {
+						unemployment_by_type = { value = 0.03 type = labourers }
+						unemployment_by_type = { value = 0.03 type = farmers }
 						state_scope = {
-							unemployment_by_type = { value = 0.02 type = labourers }
-							unemployment_by_type = { value = 0.02 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
 							any_owned_province = { NOT = { controlled_by = THIS } }
@@ -1323,12 +1338,12 @@ province_event = {
 				random_state = {
 					limit = {
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = labourers }
-							unemployment_by_type = { value = 0.02 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
 							any_owned_province = { NOT = { controlled_by = THIS } }
-								any_owned_province = {
+							any_owned_province = {
+								unemployment_by_type = { value = 0.03 type = labourers }
+								unemployment_by_type = { value = 0.03 type = farmers }
 								has_province_modifier = local_distribution_channels_und_electricity
 								is_overseas = yes
 								is_colonial = yes
@@ -1348,9 +1363,9 @@ province_event = {
 				any_owned_province = {
 					NOT = { has_province_modifier = local_distribution_channels_und_electricity }
 					NOT = {
+						unemployment_by_type = { value = 0.03 type = labourers }
+						unemployment_by_type = { value = 0.03 type = farmers }
 						state_scope = {
-							unemployment_by_type = { value = 0.02 type = labourers }
-							unemployment_by_type = { value = 0.02 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
 							any_owned_province = { NOT = { controlled_by = THIS } }
@@ -1364,12 +1379,12 @@ province_event = {
 				random_state = {
 					limit = {
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = labourers }
-							unemployment_by_type = { value = 0.02 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
 							any_owned_province = { NOT = { controlled_by = THIS } }
-								any_owned_province = {
+							any_owned_province = {
+								unemployment_by_type = { value = 0.03 type = labourers }
+								unemployment_by_type = { value = 0.03 type = farmers }
 								has_province_modifier = local_distribution_channels_und_electricity
 								is_overseas = yes
 								is_colonial = yes
@@ -1389,9 +1404,9 @@ province_event = {
 				any_owned_province = {
 					NOT = { has_province_modifier = local_distribution_channels_und_electricity }
 					NOT = {
+						unemployment_by_type = { value = 0.03 type = labourers }
+						unemployment_by_type = { value = 0.03 type = farmers }
 						state_scope = {
-							unemployment_by_type = { value = 0.02 type = labourers }
-							unemployment_by_type = { value = 0.02 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
 							any_owned_province = { NOT = { controlled_by = THIS } }
@@ -1405,12 +1420,12 @@ province_event = {
 				random_state = {
 					limit = {
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = labourers }
-							unemployment_by_type = { value = 0.02 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
 							any_owned_province = { NOT = { controlled_by = THIS } }
-								any_owned_province = {
+							any_owned_province = {
+								unemployment_by_type = { value = 0.03 type = labourers }
+								unemployment_by_type = { value = 0.03 type = farmers }
 								has_province_modifier = local_distribution_channels_und_electricity
 								is_overseas = yes
 								is_colonial = yes
@@ -1429,10 +1444,10 @@ province_event = {
 				number_of_states = 40
 				any_owned_province = {
 					NOT = { has_province_modifier = local_distribution_channels_und_electricity }
+					unemployment_by_type = { value = 0.03 type = labourers }
+					unemployment_by_type = { value = 0.03 type = farmers }
 					NOT = {
 						state_scope = {
-							unemployment_by_type = { value = 0.02 type = labourers }
-							unemployment_by_type = { value = 0.02 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
 							any_owned_province = { NOT = { controlled_by = THIS } }
@@ -1446,12 +1461,12 @@ province_event = {
 				random_state = {
 					limit = {
 						NOT = {
-							unemployment_by_type = { value = 0.02 type = labourers }
-							unemployment_by_type = { value = 0.02 type = farmers }
 							is_slave = yes
 							has_pop_type = serfs
 							any_owned_province = { NOT = { controlled_by = THIS } }
-								any_owned_province = {
+							any_owned_province = {
+								unemployment_by_type = { value = 0.03 type = labourers }
+								unemployment_by_type = { value = 0.03 type = farmers }
 								has_province_modifier = local_distribution_channels_und_electricity
 								is_overseas = yes
 								is_colonial = yes
@@ -1467,3 +1482,486 @@ province_event = {
 	}
 }
 
+# Machine Tools - Mechanized Mining and dynamite
+province_event = {
+	id = 29901
+	title = "EVTNAME29901"
+	desc = "EVTDESC29901"
+	
+	trigger = {
+		NOT = { has_province_modifier = local_conveyors_and_excavators }
+		owner = {
+			invention = electric_rolling_techniques
+			combustion_engine = 1
+		}
+		NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
+		NOT = {
+			unemployment_by_type = { value = 0.03 type = labourers }
+			state_scope = { is_slave = yes }
+		}
+		OR = {
+			trade_goods = coal
+			trade_goods = iron
+			trade_goods = precious_metal
+			trade_goods = sulphur
+		}
+	}
+		
+	mean_time_to_happen = {
+		months = 600
+		
+		modifier = {
+			factor = 0.75
+			any_neighbor_province = { has_province_modifier = local_conveyors_and_excavators }
+		}
+		
+		modifier = {
+			factor = 0.7
+			is_capital = yes
+		}
+		
+		modifier = {
+			factor = 0.75
+			any_pop = {
+				type = aristocrats #used to be farmers
+				cash_reserves = 200
+				location = { NOT = { is_overseas = yes } }
+			}
+		}
+		
+		modifier = {
+			factor = 0.9
+			literacy = 0.9
+		}
+		modifier = {
+			factor = 0.9
+			literacy = 0.8
+		}
+		modifier = {
+			factor = 0.9
+			literacy = 0.7
+		}
+		modifier = {
+			factor = 0.9
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { literacy = 0.5 }
+		}
+		modifier = {
+			factor = 3
+			NOT = { literacy = 0.25 }
+		}
+		modifier = {
+			factor = 0.95
+			owner = { NOT = { num_of_cities = 30 } }
+		}
+		modifier = {
+			factor = 0.95
+			owner = { NOT = { num_of_cities = 25 } }
+		}
+		
+		modifier = {
+			factor = 0.95
+			owner = { NOT = { num_of_cities = 20 } }
+		}
+		
+		modifier = {
+			factor = 0.95
+			owner = { NOT = { num_of_cities = 15 } }
+		}
+		
+		modifier = {
+			factor = 0.95
+			owner = { NOT = { num_of_cities = 10 } }
+		}
+		
+		modifier = {
+			factor = 0.95
+			owner = { NOT = { num_of_cities = 5 } }
+		}
+		
+		modifier = {
+			factor = 0.95
+			average_consciousness = 6
+		}
+		
+		modifier = {
+			factor = 0.95
+			average_consciousness = 7
+		}
+		
+		modifier = {
+			factor = 0.95
+			average_consciousness = 8
+		}
+		
+		modifier = {
+			factor = 1.1
+			average_militancy = 5
+		}
+		
+		modifier = {
+			factor = 1.2
+			average_militancy = 6
+		}
+		
+		modifier = {
+			factor = 1.3
+			average_militancy = 7
+		}
+		
+		modifier = {
+			factor = 2
+			state_scope = { has_pop_type = serfs }
+		}
+		
+		modifier = {
+			factor = 8
+			state_scope = { is_colonial = yes}
+		}
+		
+		modifier = {
+			factor = 4
+			is_overseas = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA29903"
+		state_scope = {
+			any_owned = {
+				limit = {
+					OR = {
+						trade_goods = coal
+						trade_goods = iron
+						trade_goods = precious_metal
+						trade_goods = sulphur
+					}
+				}
+				add_province_modifier = { name = local_conveyors_and_excavators duration = -1 }
+			}
+		}
+		
+		owner = {
+			random_owned = {
+				limit = {
+					owner = {
+						number_of_states = 10
+						literacy = 0.7
+					}
+					any_neighbor_province = { has_province_modifier = local_conveyors_and_excavators }
+					NOT = {
+						has_province_modifier = local_conveyors_and_excavators
+						is_overseas = yes
+						is_colonial = yes
+						unemployment_by_type = { value = 0.03 type = labourers }
+						state_scope = {
+							is_slave = yes
+							has_pop_type = serfs
+						}
+					}
+					OR = {
+						trade_goods = coal
+						trade_goods = iron
+						trade_goods = precious_metal
+						trade_goods = sulphur
+					}
+				}
+				state_scope = {
+					any_owned = {
+						limit = {
+							OR = {
+								trade_goods = coal
+								trade_goods = iron
+								trade_goods = precious_metal
+								trade_goods = sulphur
+							}
+						}
+						add_province_modifier = { name = local_conveyors_and_excavators duration = -1 }
+					}
+				}
+			}
+		}
+		
+		random_country = {
+			limit = {
+				tag = THIS
+				number_of_states = 10
+				any_owned_province = {
+					NOT = {
+						has_province_modifier = local_conveyors_and_excavators
+						unemployment_by_type = { value = 0.03 type = labourers }
+					}
+					state_scope = {
+						literacy = 0.5
+						NOT = {
+							has_pop_type = serfs
+							is_slave = yes
+						}
+					}
+					NOT = { is_overseas = yes }
+					NOT = { is_colonial = yes }
+					NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
+					OR = {
+						trade_goods = coal
+						trade_goods = iron
+						trade_goods = precious_metal
+						trade_goods = sulphur
+					}
+				}
+			}
+			random = {
+				chance = 50
+				random_state = {
+					limit = {
+						literacy = 0.5
+						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
+						NOT = {
+							is_slave = yes
+							has_pop_type = serfs
+						}
+						any_owned_province = {
+							NOT = {
+								unemployment_by_type = { value = 0.03 type = labourers }
+								has_province_modifier = local_conveyors_and_excavators
+								is_overseas = yes
+								is_colonial = yes
+							}
+							OR = {
+								trade_goods = coal
+								trade_goods = iron
+								trade_goods = precious_metal
+								trade_goods = sulphur
+							}
+						}
+					}
+					state_scope = {
+						any_owned = {
+							limit = { 
+								OR = {
+									trade_goods = coal
+									trade_goods = iron
+									trade_goods = precious_metal
+									trade_goods = sulphur
+								}
+							}
+						add_province_modifier = { name = local_conveyors_and_excavators duration = -1 }
+						}
+					}
+				}
+			}
+		}
+		
+		random_country = {
+			limit = {
+				tag = THIS
+				number_of_states = 20
+				any_owned_province = {
+					NOT = {
+						has_province_modifier = local_conveyors_and_excavators
+						unemployment_by_type = { value = 0.03 type = labourers }
+					}
+					state_scope = {
+						literacy = 0.5
+						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
+						NOT = {
+							has_pop_type = serfs
+							is_slave = yes
+						}
+					}
+					NOT = { is_overseas = yes }
+					NOT = { is_colonial = yes }
+					OR = {
+						trade_goods = coal
+						trade_goods = iron
+						trade_goods = precious_metal
+						trade_goods = sulphur
+					}
+				}
+			}
+			random = {
+				chance = 50
+				random_state = {
+					limit = {
+						literacy = 0.5
+						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
+						NOT = {
+							is_slave = yes
+							has_pop_type = serfs
+						}
+						any_owned_province = {
+							NOT = {
+								unemployment_by_type = { value = 0.03 type = labourers }
+								has_province_modifier = local_conveyors_and_excavators
+								is_overseas = yes
+								is_colonial = yes
+							}
+							OR = {
+								trade_goods = coal
+								trade_goods = iron
+								trade_goods = precious_metal
+								trade_goods = sulphur
+							}
+						}
+					}
+					state_scope = {
+						any_owned = {
+							limit = { 
+								NOT = { has_province_modifier = treaty_port }
+								OR = {
+									trade_goods = coal
+									trade_goods = iron
+									trade_goods = precious_metal
+									trade_goods = sulphur
+								}
+							}
+						add_province_modifier = { name = local_conveyors_and_excavators duration = -1 }
+						}
+					}
+				}
+			}
+		}
+		
+		random_country = {
+			limit = {
+				tag = THIS
+				number_of_states = 30
+				any_owned_province = {
+					NOT = {
+						has_province_modifier = local_conveyors_and_excavators
+						unemployment_by_type = { value = 0.03 type = labourers }
+					}
+					state_scope = {
+						literacy = 0.5
+						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
+						NOT = {
+							has_pop_type = serfs
+							is_slave = yes
+						}
+					}
+					NOT = { is_overseas = yes }
+					NOT = { is_colonial = yes }
+					OR = {
+						trade_goods = coal
+						trade_goods = iron
+						trade_goods = precious_metal
+						trade_goods = sulphur
+					}
+				}
+			}
+			random = {
+				chance = 50
+				random_state = {
+					limit = {
+						literacy = 0.5
+						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
+						NOT = {
+							is_slave = yes
+							has_pop_type = serfs
+						}
+						any_owned_province = {
+							NOT = {
+								unemployment_by_type = { value = 0.03 type = labourers }
+								has_province_modifier = local_conveyors_and_excavators
+								is_overseas = yes
+								is_colonial = yes
+							}
+							OR = {
+								trade_goods = coal
+								trade_goods = iron
+								trade_goods = precious_metal
+								trade_goods = sulphur
+							}
+						}
+					}
+					state_scope = {
+						any_owned = {
+							limit = { 
+								NOT = { has_province_modifier = treaty_port }
+								OR = {
+									trade_goods = coal
+									trade_goods = iron
+									trade_goods = precious_metal
+									trade_goods = sulphur
+								}
+							}
+						add_province_modifier = { name = local_conveyors_and_excavators duration = -1 }
+						}
+					}
+				}
+			}
+		}
+		
+		random_country = {
+			limit = {
+				tag = THIS
+				number_of_states = 40
+				any_owned_province = {
+					NOT = {
+						has_province_modifier = local_conveyors_and_excavators
+						unemployment_by_type = { value = 0.03 type = labourers }
+					}
+					state_scope = {
+						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
+						literacy = 0.5
+						NOT = {
+							has_pop_type = serfs
+							is_slave = yes
+						}
+					}
+					NOT = { is_overseas = yes }
+					NOT = { is_colonial = yes }
+					OR = {
+						trade_goods = coal
+						trade_goods = iron
+						trade_goods = precious_metal
+						trade_goods = sulphur
+					}
+				}
+			}
+			random = {
+				chance = 50
+				random_state = {
+					limit = {
+						literacy = 0.5
+						NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
+						NOT = {
+							is_slave = yes
+							has_pop_type = serfs
+						}
+						any_owned_province = {
+							NOT = {
+								unemployment_by_type = { value = 0.03 type = labourers }
+								has_province_modifier = local_conveyors_and_excavators
+								is_overseas = yes
+								is_colonial = yes
+							}
+							OR = {
+								trade_goods = coal
+								trade_goods = iron
+								trade_goods = precious_metal
+								trade_goods = sulphur
+							}
+						}
+					}
+					state_scope = {
+						any_owned = {
+							limit = { 
+								NOT = { has_province_modifier = treaty_port }
+								OR = {
+									trade_goods = coal
+									trade_goods = iron
+									trade_goods = precious_metal
+									trade_goods = sulphur
+								}
+							}
+						add_province_modifier = { name = local_conveyors_and_excavators duration = -1 }
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1223,6 +1223,12 @@
 		religion = catholic
 		size = 1100
 	}
+	
+	capitalists = {
+		culture = french
+		religion = catholic
+		size = 400
+	}
 
 	clergymen = {
 		culture = french
@@ -1233,7 +1239,13 @@
 	artisans = {
 		culture = french
 		religion = catholic
-		size = 5500
+		size = 5100
+	}
+	
+	craftsmen = {
+		culture = french
+		religion = catholic
+		size = 3000
 	}
 
 	soldiers = {
@@ -1245,7 +1257,7 @@
 	farmers = {
 		culture = french
 		religion = catholic
-		size = 101800
+		size = 98800
 	}
 }
 #Caen (1088000/272000 POPS)
@@ -3502,13 +3514,7 @@
 	artisans = {
 		culture = french
 		religion = catholic
-		size = 7000
-	}
-	
-	craftsmen = {
-		culture = french
-		religion = catholic
-		size = 3000
+		size = 10000
 	}
 
 	soldiers = {

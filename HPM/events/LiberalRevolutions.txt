@@ -25,6 +25,8 @@ country_event = {
 			tag = MOL
 			tag = WAL
 			tag = SER
+			primary_culture = north_italian
+			primary_culture = south_italian
 			literacy = 0.3
 		}
 		year = 1840
@@ -503,10 +505,6 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			NOT = { poor_strata_life_needs = 0.5 }
-		}
-		modifier = {
-			factor = 0.7
-			NOT = { unemployment_by_type = { type = farmers value = 0.5 } }
 		}
 		modifier = {
 			factor = 1.5

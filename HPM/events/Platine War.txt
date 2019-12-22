@@ -297,7 +297,7 @@ country_event = {
 			}
 		}
 		define_general = {
-			name = "Justo JosÃ© de Urquiza"
+			name = "Justo José de Urquiza"
 			background = school_of_the_bayonet
 			personality = implacable
 		}
@@ -328,7 +328,7 @@ country_event = {
 			clr_global_flag = entre_rios_rebellion
 		}
 		define_general = {
-			name = "Justo JosÃ© de Urquiza"
+			name = "Justo José de Urquiza"
 			background = school_of_the_bayonet
 			personality = implacable
 		}

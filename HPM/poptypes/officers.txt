@@ -71,7 +71,7 @@ luxury_needs = {
 	canned_food = 0.75
 	fruit = 1
 	wool = 3
-	opium = 1
+	#opium = 1
 	luxury_clothes = 1
 	luxury_furniture = 1
 	telephones = 1.25
@@ -115,7 +115,7 @@ country_migration_target = {
 		factor = 2.0
 		OR = {
 			is_primary_culture = THIS
-			is_accepted_culture = THIS
+			#is_accepted_culture = THIS
 		}
 	}
 	
@@ -180,17 +180,10 @@ country_migration_target = {
 	}
 }
 
-migration_target =
-{
+
+migration_target = {
 	factor = 0.01
 	
-	modifier = {
-		factor = 0.1
-		unemployment = 0.1
-		state_scope = {
-			has_factories = no
-			}
-	}
 	modifier = {
 		factor = 1.2
 		total_pops = 150000
@@ -206,7 +199,7 @@ migration_target =
 	modifier = {
 		factor = 1.2
 		total_pops = 750000
-	}	
+	}
 	
 	modifier = {
 		factor = 0
@@ -214,48 +207,23 @@ migration_target =
 		country = { border_policy = closed_borders }
 	}
 	
-	#modifier = {
-	#	factor = 0
-	#	NOT = { state_scope = {	work_available = { worker = craftsmen } } }
-	#	country = { economic_policy = planned_economy }
-	#	OR = { 
-	#		unemployment_by_type = { type = farmers value = 0.1  }
-	#		unemployment_by_type = { type = labourers value = 0.1  }
-	#	}
-	#}
 	modifier = {
 		factor = 1.2
 		has_pop_culture = THIS
 	}
-	#modifier = {
-	#	factor = 2
-	#	any_core = {
-	#		OR = {
-	#			is_primary_culture = THIS
-	#			is_accepted_culture = THIS
-	#		}
-	#	}
-	#	state_scope = {	work_available = { worker = craftsmen } }
-	#}
-	#modifier = {
-	#	factor = 1.2
-	#	has_pop_religion = THIS
-	#}
+	modifier = {
+		factor = 1.2
+		# Audax Validator "." Ignore_NEXT
+		has_pop_religion = THIS
+	}
 	modifier = {
 		factor = 1.5
 		any_core = { is_primary_culture = THIS }
 	}
 	modifier = {
-		factor = 0.75
-		OR = {
-			state_scope = { is_slave = yes }
-			is_overseas = yes
-		}
-	}
-	modifier = {
-		factor = 2
-		is_state_capital = yes
-	}		
+		factor = 0
+		NOT = { is_state_capital = yes }
+	}	
 	modifier = {
 		factor = 1.5
 		is_capital = yes
@@ -264,7 +232,7 @@ migration_target =
 		factor = 1.05
 		is_coastal = yes
 	}
-		
+	
 	modifier = {
 		factor = 0.8
 		terrain = steppe
@@ -324,7 +292,7 @@ migration_target =
 		factor = 0.05
 		terrain = desert
 	}
-
+	
 	modifier = {
 		factor = 0.01
 		terrain = desert
@@ -342,6 +310,29 @@ migration_target =
 	}
 	
 	modifier = {
+		factor = 1.05
+		NOT = { country = { any_owned_province = { is_colonial = yes } } }
+		country = { penal_system = colonial_transportation }
+		OR = {
+			trade_goods = coal
+			trade_goods = sulphur
+			trade_goods = iron
+			trade_goods = precious_metal
+			trade_goods = tobacco
+			trade_goods = coffee
+			trade_goods = tea
+		}
+		OR = {
+			terrain = desert
+			terrain = arctic
+			terrain = semidesert
+			terrain = boreal
+			terrain = small_island
+			terrain = montane_tundra
+			terrain = coral_island
+		}
+	}
+	modifier = {
 		factor = 2
 		life_rating = 40
 	}
@@ -352,6 +343,7 @@ migration_target =
 }
 
 promote_to = {
+
 soldiers = {
 
 		factor = 0.01
@@ -6107,7 +6099,7 @@ bankruptcy = {
 			NOT = { political_parties = secret_ballots }
 			NOT = { wage_reform = good_minimum_wage }
 			public_meetings = no_meeting
-			NOT = { country = { has_country_flag = modern_central_bank_system_invented } }
+			NOT = { country = { has_country_flag = central_bank_instituted } }
 			state_scope = { is_colonial = yes }
 			NOT = { is_ideology_enabled = socialist }
 			NOT = { literacy = 0.7 }
