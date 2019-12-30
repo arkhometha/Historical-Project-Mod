@@ -47,6 +47,7 @@ everyday_needs = {
 luxury_needs = {
 	#luxury_clothes = 0.5
 	#luxury_furniture = 0.5
+	opium = 20
 	steel = 0.5
 	cement = 0.5
 	lumber = 1
