@@ -135,10 +135,24 @@ country_event = {
 		badboy = 20
 		all_core = {
 			limit = {
-				NOT = { is_core = HUN }
+				OR = {
+					NOT = { is_core = HUN }
+					province_id = 624
+					province_id = 778
+				}
 			}
 			add_core = GER
 		}
+		any_owned = {
+			limit = {
+				is_core = HUN
+				OR = {
+					province_id = 624
+					province_id = 778
+				}
+			}
+			remove_core = HUN
+		}	
 		any_pop = {
 			limit = {
 				is_primary_culture = no
@@ -230,9 +244,23 @@ country_event = {
 		badboy = 10
 		all_core = {
 			limit = {
-				NOT = { is_core = HUN }
+				OR = {
+					NOT = { is_core = HUN }
+					province_id = 624
+					province_id = 778
+				}
 			}
 			add_core = GER
+		}
+		any_owned = {
+			limit = {
+				is_core = HUN
+				OR = {
+					province_id = 624
+					province_id = 778
+				}
+			}
+			remove_core = HUN
 		}
 		any_pop = {
 			limit = {
