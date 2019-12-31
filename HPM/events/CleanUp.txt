@@ -1957,20 +1957,9 @@ country_event = {
 		clr_global_flag = warship_commission_being_fulfilled
 		random_owned = {
 			limit = {
-				owner = {
-					flintlock_rifles = 1
-					NOT = { post_nelsonian_thought = 1 }
-				}
+				owner = { flintlock_rifles = 1 }
 			}
 			owner = { activate_technology = flintlock_rifles }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					post_nelsonian_thought = 1
-				}
-			}
-			owner = { activate_technology = post_nelsonian_thought }
 		}
 	}
 }
