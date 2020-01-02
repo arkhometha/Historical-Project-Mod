@@ -1,5 +1,7 @@
 owner = NET
 controller = NET
 add_core = NET
+add_core = BEL
 trade_goods = fish
 life_rating = 35
+1861.1.1 = { remove_core = BEL }

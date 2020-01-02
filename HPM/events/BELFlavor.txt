@@ -310,7 +310,7 @@ country_event = {
 		prestige = -20
 		relation = { who = ENG value = 50 }
 		relation = { who = NET value = 150 }
-		381 = { remove_core = BEL }
+		NET_379 = { remove_core = BEL }
 		397 = { remove_core = BEL }
 		random_owned = {
 			limit = { LUX = { exists = no } }
@@ -542,7 +542,11 @@ country_event = {
 			end_war = NET
 		}
 		relation = { who = NET value = 150 }
+		378 = { remove_core = BEL }
+		379 = { remove_core = BEL }
+		380 = { remove_core = BEL }
 		381 = { remove_core = NET }
+		397 = { remove_core = NET }
 		BEL_394 = { remove_core = NET }
 		BEL_387 = { remove_core = NET }
 		NET = {
@@ -595,7 +599,8 @@ country_event = {
 			end_war = NET
 		}
 		relation = { who = NET value = -100 }
-		381 = { remove_core = NET }
+		397 = { remove_core = NET }
+		NET_379 = { remove_core = NET }
 		BEL_394 = { remove_core = NET }
 		BEL_387 = { remove_core = NET }
 		NET = {
@@ -606,36 +611,36 @@ country_event = {
 				secede_province = BEL
 			}
 		}
-		NET = {
-			random_owned = {
-				limit = {
-					OR = {
-						is_overseas = yes
-						is_colonial = yes
-					}
-					NOT = { is_core = NET }
-					port = yes
-				}
-				state_scope = {
-					any_owned = { secede_province = BEL }
-				}
-			}
-		}
-		NET = {
-			random_owned = {
-				limit = {
-					OR = {
-						is_overseas = yes
-						is_colonial = yes
-					}
-					NOT = { is_core = NET }
-					port = yes
-				}
-				state_scope = {
-					any_owned = { secede_province = BEL }
-				}
-			}
-		}
+		#NET = {
+		#	random_owned = {
+		#		limit = {
+		#			OR = {
+		#				is_overseas = yes
+		#				is_colonial = yes
+		#			}
+		#			NOT = { is_core = NET }
+		#			port = yes
+		#		}
+		#		state_scope = {
+		#			any_owned = { secede_province = BEL }
+		#		}
+		#	}
+		#}
+		#NET = {
+		#	random_owned = {
+		#		limit = {
+		#			OR = {
+		#				is_overseas = yes
+		#				is_colonial = yes
+		#			}
+		#			NOT = { is_core = NET }
+		#			port = yes
+		#		}
+		#		state_scope = {
+		#			any_owned = { secede_province = BEL }
+		#		}
+		#	}
+		#}
 		relation = { who = ENG value = -50 }
 		relation = { who = FRA value = -50 }
 		add_country_modifier = {
