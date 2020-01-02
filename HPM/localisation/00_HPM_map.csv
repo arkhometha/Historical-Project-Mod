@@ -445,6 +445,10 @@ SCH_370;Schleswig;;;;;;;;;;;;x
 NET_379;Zeeland;;;;;;;;;;;;x
 PROV381;Limburg;;;;;;;;;;;;x
 BEL_387;Flanders;;;;;;;;;;;;x
+PROV387;Brussel;;;;;;;;;;;;x
+PROV388;Brugge;;;;;;;;;;;;x
+PROV389;Gent;;;;;;;;;;;;x
+PROV390;Antwerpen;;;;;;;;;;;;x
 BEL_394;Wallonia;;;;;;;;;;;;x
 HAN_528;Lower Elbe;;;;;;;;;;;;x
 HAN_534;Hanover;;;;;;;;;;;;x
