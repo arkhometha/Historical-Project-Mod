@@ -170,7 +170,15 @@ ALB_communist;Partia e Punës e Shqipërisë;;;;;;;;;;;;x
 ALB_fascist;Partia Fashiste e Shqipërisë;;;;;;;;;;;;x
 ALB_conservative;Lëvizja Legalitetit;;;;;;;;;;;;x
 AUS_communist;Kommunistische Partei Österreichs;;;;;;;;;;;;x
-BEL_communist;Parti Communiste de Belgique;;;;;;;;;;;;x
+BEL_liberal;Parti Liberale;;;;;;;;;;;;;x;;;;
+BEL_conservative;Parti Catholique;;;;;;;;;;;;;x;;;;
+BEL_reactionary;Parti Statiste;;;;;;;;;;;;;x;;;;
+BEL_anarcho_liberal;Parti Libertaire;;;;;;;;;;;;;x;;;;
+BEL_socialist;Parti Ouvrier Belge;;;;;;;;;;;;;x;;;;
+BEL_conservative_2;Christene Volkspartij;;;;;;;;;;;;;x;;;;
+BEL_conservative_3;Meetingpartij;;;;;;;;;;;;;x;;;;
+BEL_communist;Parti Communiste de Belgique;;;;;;;;;;;;;x;;;;
+BEL_fascist;Parti Rexiste;;;;;;;;;;;;;x;;;;
 BUL_socialist;BRSDP;;;;;;;;;;;;x
 BUL_liberal;Balgarski Zemedelski Naroden Sayuz;;;;;;;;;;;;x
 BUL_anarcho_liberal;Radoslavists;;;;;;;;;;;;x
@@ -1701,7 +1709,6 @@ NOR_fascist;Nationalists;;;;;;;;;;;;x
 NOR_fascist_2;Nasjonal Samling;;;;;;;;;;;;x
 CZH_fascist;Vlajka;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 SLV_fascist;Slovenská Ludová Strana;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-BEL_fascist;Parti Rexiste;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 NOV;Nova Scotia;Nouvelle-Écosse;Neuschottland;;;;;;;;;;;x
 NOV_ADJ;Nova Scotian;Nouvelle-Écossais;Neuschottisch;;;;;;;;;;;x
 NOV_liberal;Liberal Party;Parti libéral;Liberale Partei;;;;;;;;;;;x
