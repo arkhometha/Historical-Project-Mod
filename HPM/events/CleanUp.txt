@@ -4399,7 +4399,7 @@ country_event = {
 	}
 }
 
-#Vassal Transfer - Overlord Gets Informed
+#Vassal Transfer During Unification - Overlord Gets Informed
 country_event = {
 	id = 6016822
 	title = "EVTNAME6016822"
@@ -4421,7 +4421,7 @@ country_event = {
 	}
 }
 
-#Vassal Stolen CB - Guarantee there's vassal transfer without any funny behaviour.
+#Vassal Stolen CB - Guarantee there's vassal transfer without any funny behaviour - 1/2
 country_event = {
 	id = 6016824
 	title = "EVTNAME6016824"
@@ -4449,8 +4449,24 @@ country_event = {
 				militancy = 1
 				consciousness = 3
 			}
-			country_event = 6016824
+			country_event = 6016823
 		}
 	}
 }
+
+#Vassal Stolen CB - Guarantee there's vassal transfer without any funny behaviour - 1/2
+country_event = {
+	id = 6016823
+	title = "EVTNAME6016823"
+	desc = "EVTDESC6016823"
+	picture = "danishgovernment"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT6016823OPTA"
+		FROM = { create_vassal = THIS }
+	}
+}
+
 
