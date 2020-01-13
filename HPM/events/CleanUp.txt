@@ -4454,7 +4454,7 @@ country_event = {
 	}
 }
 
-#Vassal Stolen CB - Guarantee there's vassal transfer without any funny behaviour - 1/2
+#Vassal Stolen CB - Vassal gets transferred to the new overlord - 2/2
 country_event = {
 	id = 6016823
 	title = "EVTNAME6016823"
