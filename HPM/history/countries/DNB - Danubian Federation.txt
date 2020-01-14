@@ -1,6 +1,7 @@
 capital = 619
 primary_culture = south_german
 culture = hungarian
+culture = swiss
 culture = slovak
 culture = czech
 culture = romanian

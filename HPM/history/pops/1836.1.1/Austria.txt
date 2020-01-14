@@ -85,31 +85,31 @@
 #Bregenz (132000/33000 POPS)
 614 = {
 	aristocrats = {
-		culture = south_german
+		culture = swiss
 		religion = catholic
 		size = 400 
 	}
 
 	clergymen = {
-		culture = south_german
+		culture = swiss
 		religion = catholic
 		size = 300 
 	}
 
 	artisans = {
-		culture = south_german
+		culture = swiss
 		religion = catholic
 		size = 1500
 	}
 
 	soldiers = {
-		culture = south_german
+		culture = swiss
 		religion = catholic
 		size = 1100
 	}
 
 	farmers = {
-		culture = south_german
+		culture = swiss
 		religion = catholic
 		size = 24700
 	}

@@ -1286,3 +1286,29 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+
+	id = 60055560
+	title = "EVTNAME60055560"
+	desc = "EVTDESC60055560"
+
+	trigger = {
+		OR = {
+			tag = AUS
+			tag = KUK
+			tag = DNB
+		}
+		war_with = SWI
+		accepted_culture = swiss
+	}
+ 
+	mean_time_to_happen =  {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA60055560" 
+		remove_accepted_culture = swiss
+	}
+}
