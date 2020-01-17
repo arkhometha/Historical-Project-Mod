@@ -81,6 +81,7 @@ oriental_crisis
 unification_release_puppet_cb
 release_puppet
 release_puppet_AI
+steal_puppet
 great_game_cb
 make_puppet
 install_fascism_make_puppet
