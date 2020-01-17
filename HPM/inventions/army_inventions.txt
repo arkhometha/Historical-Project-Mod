@@ -667,6 +667,8 @@ flintlock_rifle_armament = {
 		}
 	}
 	effect = {
+		activate_unit = infantry
+		combat_width = -1
 		infantry = {
 			attack = 1
 			supply_consumption = 0.10

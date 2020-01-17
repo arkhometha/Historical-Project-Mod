@@ -81,6 +81,7 @@ oriental_crisis
 unification_release_puppet_cb
 release_puppet
 release_puppet_AI
+steal_puppet
 great_game_cb
 make_puppet
 install_fascism_make_puppet
@@ -587,7 +588,7 @@ restore_austrian_empire = {
 			THIS = { NOT = { has_country_flag = accepts_italy } }
 		}
 		NOT = { has_country_modifier = neutrality_modifier }
-		NOT = { in_sphere = THIS }
+		#NOT = { in_sphere = THIS }
 		OR = {
 			THIS = {
 				NOT = { has_country_modifier = neutrality_modifier }
@@ -704,7 +705,6 @@ colonial_reconquest_cb = {
 			}
 		}
 		NOT = { number_of_states = 3 }
-		part_of_sphere = no
 		is_vassal = no
 		OR = {
 			THIS = {
@@ -800,7 +800,7 @@ restore_america = {
 				is_core = FSA
 			}
 		}
-		NOT = { in_sphere = THIS }
+		#NOT = { in_sphere = THIS }
 		OR = {
 			war_with = THIS
 			THIS = { NOT = { has_country_modifier = punitive_effects } }
@@ -888,7 +888,7 @@ claim_holy_land = {
 				is_core = SYR
 			}
 		}
-		NOT = { in_sphere = THIS }
+		#NOT = { in_sphere = THIS }
 		OR = {
 			war_with = THIS
 			THIS = { NOT = { has_country_modifier = punitive_effects } }
@@ -983,13 +983,13 @@ unification_casus_belli = {
 			AND = {
 				war_with = THIS
 				is_culture_group = THIS
-				part_of_sphere = no
+				#part_of_sphere = no
 				THIS = { NOT = { tag = AUS } }
 				THIS = { NOT = { tag = KUK } }
 				THIS = { NOT = { tag = DNB } }
 				THIS = { NOT = { tag = UBD } }
 			}
-		}	
+		}
 		number_of_states = 2
 		any_state = {
 			any_owned_province = {
@@ -1118,7 +1118,7 @@ unification_annex_casus_belli = {
 			AND = {
 				war_with = THIS
 				is_culture_group = THIS
-				part_of_sphere = no
+				#part_of_sphere = no
 				THIS = { NOT = { tag = AUS } }
 				THIS = { NOT = { tag = KUK } }
 				THIS = { NOT = { tag = DNB } }
@@ -1260,7 +1260,10 @@ add_to_sphere = {
 		THIS = { is_greater_power = yes }
 		is_greater_power = no
 		is_vassal = no
-		part_of_sphere = no
+		OR = {
+			part_of_sphere = no
+			war_with = THIS
+		}
 		NOT = { has_country_modifier = neutrality_modifier }
 		OR = {
 			war_with = THIS
@@ -1550,7 +1553,10 @@ unification_add_to_sphere = {
 		NOT = { is_our_vassal = THIS }
 		is_greater_power = no
 		is_vassal = no
-		part_of_sphere = no
+		OR = {
+			part_of_sphere = no
+			war_with = THIS
+		}
 		culture_has_union_tag = yes
 		is_culture_group = THIS
 		cultural_union = { exists = no }
@@ -3267,7 +3273,6 @@ great_game_cb = {
 			has_global_flag = british_dismantled
 			is_our_vassal = THIS
 			truce_with = THIS
-			in_sphere = THIS
 		}
 		OR = {
 			neighbour = THIS
@@ -7935,7 +7940,7 @@ acquire_substate_region = {
 	
 	allowed_substate_regions = {
 		is_colonial = no
-		owner = { NOT = { in_sphere = THIS } }
+		#owner = { NOT = { in_sphere = THIS } }
 		any_owned_province = {
 			not = {	is_core = THIS }
 			is_colonial = no
@@ -8554,7 +8559,6 @@ colonial_conquest = {
 		}
 		number_of_states = 2
 		NOT = { has_country_modifier = neutrality_modifier }
-		NOT = { in_sphere = THIS }
 		is_vassal = no
 		civilized = no
 		exists = yes
@@ -9020,7 +9024,6 @@ colonial_conquest_full = {
 		NOT = { number_of_states = 2 }
 		NOT = { is_our_vassal = THIS }
 		NOT = { has_country_modifier = neutrality_modifier }
-		NOT = { in_sphere = THIS }
 		is_vassal = no
 		civilized = no
 		exists = yes
@@ -9423,7 +9426,6 @@ claim_colonial_region = {
 		is_vassal = no
 		capital_scope = { continent = africa }
 		ai = yes
-		NOT = { in_sphere = THIS }
 		neighbour = THIS
 		
 		OR = {
@@ -10097,7 +10099,6 @@ claim_colonial_region_full = {
 		is_vassal = no
 		capital_scope = { continent = africa }
 		ai = yes
-		NOT = { in_sphere = THIS }
 		neighbour = THIS
 		
 		OR = {
