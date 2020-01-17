@@ -19,8 +19,10 @@ country_event = {
 	
 	trigger = {
 		tag = FRA
+		is_vassal = no
 		war = no
 		year = 1866
+		is_our_vassal = KOR
 		KOR = {
 			exists = yes
 			civilized = no
@@ -266,9 +268,11 @@ country_event = {
 			AND = {
 				tag = JAP
 				NOT = { exists = TKG }
+				JAP = { is_vassal = no }
 			}
 			AND = {
 				tag = TKG
+				TKG = { is_vassal = no }
 				NOT = { exists = JAP }
 			}
 		}
@@ -707,11 +711,13 @@ country_event = {
 			JAP = {
 				exists = yes
 				civilized = yes
+				is_vassal = no
 				NOT = { exists = TKG }
 			}
 			TKG = {
 				exists = yes
 				civilized = yes
+				is_vassal = no
 				NOT = { exists = JAP }
 			}
 		}

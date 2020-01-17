@@ -1957,20 +1957,9 @@ country_event = {
 		clr_global_flag = warship_commission_being_fulfilled
 		random_owned = {
 			limit = {
-				owner = {
-					flintlock_rifles = 1
-					NOT = { post_nelsonian_thought = 1 }
-				}
+				owner = { flintlock_rifles = 1 }
 			}
 			owner = { activate_technology = flintlock_rifles }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					post_nelsonian_thought = 1
-				}
-			}
-			owner = { activate_technology = post_nelsonian_thought }
 		}
 	}
 }
@@ -4410,7 +4399,7 @@ country_event = {
 	}
 }
 
-#Vassal Transfer - Overlord Gets Informed
+#Vassal Transfer During Unification - Overlord Gets Informed
 country_event = {
 	id = 6016822
 	title = "EVTNAME6016822"
@@ -4432,7 +4421,7 @@ country_event = {
 	}
 }
 
-#Vassal Stolen CB - Guarantee there's vassal transfer without any funny behaviour.
+#Vassal Stolen CB - Guarantee there's vassal transfer without any funny behaviour - 1/2
 country_event = {
 	id = 6016824
 	title = "EVTNAME6016824"
@@ -4460,8 +4449,24 @@ country_event = {
 				militancy = 1
 				consciousness = 3
 			}
-			country_event = 6016824
+			country_event = 6016823
 		}
 	}
 }
+
+#Vassal Stolen CB - Vassal gets transferred to the new overlord - 2/2
+country_event = {
+	id = 6016823
+	title = "EVTNAME6016823"
+	desc = "EVTDESC6016823"
+	picture = "danishgovernment"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT6016823OPTA"
+		FROM = { create_vassal = THIS }
+	}
+}
+
 
