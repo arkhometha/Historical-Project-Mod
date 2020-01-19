@@ -1233,33 +1233,6 @@ industrial_luxury_furniture_production = {
 	}
 }
 
-industrial_luxury_clothes_production = {
-	limit = { late_classical_theory = 1 }
-	news = no
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			nationalvalue = nv_equality
-		}
-		modifier = {
-			factor = 1
-			ruling_party_ideology = liberal
-		}
-		modifier = {
-			factor = -10
-			NOT = {
-				mechanical_production = 1
-				piston_steam_engine = 1
-				invention = industrial_furniture_production
-			}
-		}
-	}
-	effect = {
-		activate_building = luxury_clothes_factory
-	}
-}
-
 industrial_sawmills = {
 	limit = { early_classical_theory_and_critique = 1 }
 	news = no

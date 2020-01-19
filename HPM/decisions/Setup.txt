@@ -307,6 +307,10 @@ political_decisions = {
 			745 = { change_province_name = "Livorno" }
 			749 = { change_province_name = "Roma" }
 			754 = { change_province_name = "Napoli" }
+			387 = { change_province_name = "Brussel" }
+			388 = { change_province_name = "Brugge" }
+			389 = { change_province_name = "Gent" }
+			390 = { change_province_name = "Antwerpen" }
 		}
 		
 		ai_will_do = { factor = 0 }

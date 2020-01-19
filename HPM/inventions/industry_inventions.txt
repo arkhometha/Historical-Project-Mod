@@ -185,6 +185,14 @@ jacquard_power_loom = {
 			factor = 2
 			invention = insurance_companies
 		}
+		modifier = {
+			factor = -10
+			NOT = {
+				mechanical_production = 1
+				piston_steam_engine = 1
+				invention = industrial_furniture_production
+			}
+		}
 	}
 	effect = {
 		rgo_goods_output = {
@@ -193,6 +201,7 @@ jacquard_power_loom = {
 		rgo_goods_output = {
 			silk = 0.2
 		}
+		activate_building = luxury_clothes_factory
 		#factory_goods_output = {
 		#	fabric = 0.05 
 		#}
