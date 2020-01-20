@@ -965,19 +965,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 50000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 50 } }
+			owner = { change_variable = { which = owed_cash_money value = 50 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 50000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 50 } }
+			owner = { set_variable = { which = owed_cash_money value = 50 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 50000 } }
@@ -1154,15 +1154,7 @@ country_event = {
 		treasury = 100000
 		random_country = {
 			limit = { tag = FROM }
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 100000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
-					} 
-				}
-				owner = { set_variable = { which = owed_cash_money value = 100 } }
-			}
+			
 			random_owned = {
 				limit = {
 					owner = {
@@ -1172,6 +1164,17 @@ country_event = {
 				}
 				owner = { change_variable = { which = owed_cash_money value = 100 } }
 			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { money = 100000 }
+						NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					} 
+				}
+				owner = { set_variable = { which = owed_cash_money value = 100 } }
+			}
+			
 			random_owned = {
 				limit = { owner = { money = 100000 } }
 				owner = { treasury = -100000 }
@@ -1225,15 +1228,7 @@ country_event = {
 				tag = FROM
 				has_country_flag = paying_for_senegal
 			}
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 200000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
-					} 
-				}
-				owner = { set_variable = { which = owed_cash_money value = 200 } }
-			}
+			
 			random_owned = {
 				limit = {
 					owner = {
@@ -1243,6 +1238,17 @@ country_event = {
 				}
 				owner = { change_variable = { which = owed_cash_money value = 200 } }
 			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { money = 200000 }
+						NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					} 
+				}
+				owner = { set_variable = { which = owed_cash_money value = 200 } }
+			}
+			
 			random_owned = {
 				limit = { owner = { money = 200000 } }
 				owner = { treasury = -200000 }
@@ -1413,15 +1419,7 @@ country_event = {
 				tag = FROM
 				has_country_flag = paying_for_senegal
 			}
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 200000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
-					} 
-				}
-				owner = { set_variable = { which = owed_cash_money value = 200 } }
-			}
+			
 			random_owned = {
 				limit = {
 					owner = {
@@ -1431,6 +1429,17 @@ country_event = {
 				}
 				owner = { change_variable = { which = owed_cash_money value = 200 } }
 			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { money = 200000 }
+						NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					} 
+				}
+				owner = { set_variable = { which = owed_cash_money value = 200 } }
+			}
+			
 			random_owned = {
 				limit = { owner = { money = 200000 } }
 				owner = { treasury = -200000 }

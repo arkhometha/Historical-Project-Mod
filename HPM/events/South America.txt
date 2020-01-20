@@ -906,19 +906,19 @@ country_event = {
 				limit = {
 					owner = {
 						NOT = { money = 60000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
+						check_variable = { which = owed_cash_money value = 9 }
 					} 
 				}
-				owner = { set_variable = { which = owed_cash_money value = 60 } }
+				owner = { change_variable = { which = owed_cash_money value = 60 } }
 			}
 			random_owned = {
 				limit = {
 					owner = {
 						NOT = { money = 60000 }
-						check_variable = { which = owed_cash_money value = 9 }
+						NOT = { check_variable = { which = owed_cash_money value = 1 } }
 					} 
 				}
-				owner = { change_variable = { which = owed_cash_money value = 60 } }
+				owner = { set_variable = { which = owed_cash_money value = 60 } }
 			}
 			random_owned = {
 				limit = { owner = { money = 60000 } }

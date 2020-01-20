@@ -322,19 +322,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 500000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 500 } }
+			owner = { change_variable = { which = owed_cash_money value = 500 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 500000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 500 } }
+			owner = { set_variable = { which = owed_cash_money value = 500 } }
 		}
 		
 		FRA = { treasury = 500000 }
@@ -482,6 +482,26 @@ country_event = {
 					has_recently_lost_war = yes
 					truce_with = FRA
 					has_country_flag = pay_1st_pastry_war
+					check_variable = { which = owed_cash_money value = 9 }
+				}
+			}
+			owner = {
+				MEX = {
+					clr_country_flag = pay_1st_pastry_war
+					change_variable = { which = owed_cash_money value = 80 }
+				}
+				FRA = { treasury = 80000 }
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					tag = MEX
+					has_recently_lost_war = yes
+					truce_with = FRA
+					has_country_flag = pay_1st_pastry_war
+					NOT = { check_variable = { which = owed_cash_money value = 9 } }
 				}
 			}
 			owner = {

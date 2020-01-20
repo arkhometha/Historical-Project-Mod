@@ -1,4 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA23200;We should outfit an expedition.§R(Pay or owe 30,000¤)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
+EVTOPTA23201;We should try again.§R(Pay or owe 50,000¤)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 EVTNAME98906;Founding of the $FROMCOUNTRY_ADJ$ Niger Company;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVTDESC98906;$FROMCOUNTRY_ADJ$ officials arrived in $CAPITAL$ today to announce the founding of a new merchant company that will operate in the Niger delta.  It looks like $FROMCOUNTRY$ has ambitions in southern Nigeria...;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVT98906OPTA;This cannot harm us, right?;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

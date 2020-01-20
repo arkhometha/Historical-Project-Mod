@@ -3394,6 +3394,7 @@ political_decisions = {
 				has_global_flag = cleaning_up_ghosts
 				has_global_flag = disabled_mobilization_fix
 			}
+			capital_scope = { province_control_days = 150 }
 			OR = {
 				any_owned_province = {
 					province_control_days = 120
@@ -3402,7 +3403,7 @@ political_decisions = {
 							is_mobilised = yes
 							total_amount_of_ships = 1
 						}
-						capital_scope = { NOT = { province_control_days = 95 } }
+						capital_scope = { NOT = { province_control_days = 120 } }
 						has_country_flag = existing_country
 						exists = no
 						is_greater_power = no
@@ -3417,7 +3418,7 @@ political_decisions = {
 								is_mobilised = yes
 								total_amount_of_ships = 1
 							}
-							capital_scope = { NOT = { province_control_days = 95 } }
+							capital_scope = { NOT = { province_control_days = 120 } }
 							has_country_flag = existing_country
 							exists = no
 							is_greater_power = no
