@@ -4391,7 +4391,7 @@ country_event = {
 				exists = no
 				is_greater_power = no
 				has_country_flag = existing_country
-				capital_scope = { NOT = { province_control_days = 95 } }
+				capital_scope = { NOT = { province_control_days = 120 } }
 				OR = {
 					is_mobilised = yes
 					total_amount_of_ships = 1
@@ -4484,15 +4484,8 @@ country_event = {
 	trigger = {
 		ai = yes
 		exists = yes
+		war = no
 		NOT = { has_country_modifier = law_changed_by_force }
-		OR = {
-			AND = {
-				war = no
-				vassal = no
-				civilized = yes
-			}
-			tag = SWI
-		}
 		OR = {
 			AND = {
 				NOT = { debt_law = serfdom }

@@ -1,4 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME98906;Founding of the $FROMCOUNTRY_ADJ$ Niger Company;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC98906;$FROMCOUNTRY_ADJ$ officials arrived in $CAPITAL$ today to announce the founding of a new merchant company that will operate in the Niger delta.  It looks like $FROMCOUNTRY$ has ambitions in southern Nigeria...;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVT98906OPTA;This cannot harm us, right?;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVTNAME6016825;Abolishing Serfdom;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVTDESC6016825;All preparations are ready for the country to abolish serfdom.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVTNAME6016824;The Vassalization of $FROMCOUNTRY$;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

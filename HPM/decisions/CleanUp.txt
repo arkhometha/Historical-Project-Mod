@@ -3396,7 +3396,7 @@ political_decisions = {
 			}
 			OR = {
 				any_owned_province = {
-					province_control_days = 95
+					province_control_days = 120
 					any_core = {
 						OR = {
 							is_mobilised = yes
@@ -3411,7 +3411,7 @@ political_decisions = {
 				any_neighbor_country = {
 					ai = no
 					any_owned_province = {
-						province_control_days = 95
+						province_control_days = 120
 						any_core = {
 							OR = {
 								is_mobilised = yes

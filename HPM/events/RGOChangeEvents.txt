@@ -1671,6 +1671,8 @@ province_event = {
 					province_id = 2484  #Gladstone
 					province_id = 1532  #Guihua - China
 					province_id = 1253  #Bardwan - India
+					province_id = 1573  #Fenzhou - China - 800k
+					province_id = 1575  #Pingyang - China - 800k
 				}
 			}
 			AND = {
