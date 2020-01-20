@@ -1,4 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTNAME6016825;Abolishing Serfdom;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC6016825;All preparations are ready for the country to abolish serfdom.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVTNAME6016824;The Vassalization of $FROMCOUNTRY$;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVTDESC6016824;As result of a recent war, $FROMCOUNTRY$ was transferred to us in vassalage. Officials in $CAPITAL$ are finishing the preparations to welcome the $FROMCOUNTRY_ADJ$ people in the $COUNTRY_ADJ$ empire.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVT6016824OPTA;We welcome the $FROMCOUNTRY_ADJ$.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

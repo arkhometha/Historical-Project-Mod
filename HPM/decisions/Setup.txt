@@ -2779,6 +2779,8 @@ political_decisions = {
 			NOT = { month = 10 }
 			NOT = {
 				has_country_modifier = picking_personality
+				has_country_flag = ghost_country
+				tag = TMT
 			}
 		}
 		

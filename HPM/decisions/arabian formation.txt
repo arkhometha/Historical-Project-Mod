@@ -804,42 +804,42 @@ political_decisions = {
 			set_global_flag = pearl_hunting_season_started
 			
 			random_country = {
-				limit = { owns = 1162 }
+				limit = { owns = 1162 NOT = { 1162 = { trade_goods = oil } } }
 				1162 = {
 					trade_goods = precious_goods
 					add_province_modifier = { name = pearl_season duration = 150 }
 				}
 			}
 			random_country = {
-				limit = { owns = 1165 }
+				limit = { owns = 1165 NOT = { 1165 = { trade_goods = oil } } }
 				1165 = {
 					trade_goods = precious_goods
 					add_province_modifier = { name = pearl_season duration = 150 }
 				}
 			}
 			random_country = {
-				limit = { owns = 1167 }
+				limit = { owns = 1167 NOT = { 1167 = { trade_goods = oil } } }
 				1167 = {
 					trade_goods = precious_goods
 					add_province_modifier = { name = pearl_season duration = 150 }
 				}
 			}
 			random_country = {
-				limit = { owns = 2664 }
+				limit = { owns = 2664 NOT = { 2664 = { trade_goods = oil } } }
 				2664 = {
 					trade_goods = precious_goods
 					add_province_modifier = { name = pearl_season duration = 150 }
 				}
 			}
 			random_country = {
-				limit = { owns = 1071 }
+				limit = { owns = 1071 NOT = { 1071 = { trade_goods = oil } } }
 				1071 = {
 					trade_goods = precious_goods
 					add_province_modifier = { name = pearl_season duration = 150 }
 				}
 			}
 			random_country = {
-				limit = { owns = 1168 }
+				limit = { owns = 1168 NOT = { 1168 = { trade_goods = oil } } }
 				1168 = {
 					trade_goods = precious_goods
 					add_province_modifier = { name = pearl_season duration = 150 }

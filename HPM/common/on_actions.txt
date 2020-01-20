@@ -41,6 +41,7 @@ on_quarterly_pulse = {
 	##
 	100 = 70005
 	100 = 70006
+	75 = 6016825
 }
 
 on_battle_won = {
