@@ -1608,7 +1608,7 @@ province_event = {
 	}
 }
 
-#Coal found
+#Coal Found / Discovered
 province_event = {
 	id = 199035
 	title = "EVTNAME199036"
@@ -1644,17 +1644,20 @@ province_event = {
 			AND = {
 				year = 1900
 				OR = {
-					province_id = 2334  #Punta Arenas
-					province_id = 2332  #Osorno
+					province_id = 2334 	 #Punta Arenas
+					province_id = 2332  	#Osorno
 					province_id = 1408	#Padang (Ombilin)
 					province_id = 1399	#Palembang (Bukit Asam)
 					province_id = 2481	#Swan Hill
 					province_id = 2472	#Eden
 					province_id = 2470	#Port Macquaire Australia
 					province_id = 2471	#Bathurst
-					province_id = 2473 #Wagga Wagga
-					province_id = 2483 #Brisbane
-					province_id = 280   #Newcastle on Tyne
+					province_id = 2473 	#Wagga Wagga
+					province_id = 2483 	#Brisbane
+					province_id = 280   	#Newcastle on Tyne
+					province_id = 1582   	#Longan - China
+					province_id = 2062   	#Shangzhou - China
+					#province_id = 1561   	#Yenan - China
 				}
 			}
 			AND = {
@@ -1819,12 +1822,12 @@ province_event = {
 		OR = {
 			AND = {
 				OR = {
-					province_id = 478 #Santander, Spain
-					province_id = 479 #Burgos, Spain
-					province_id = 492 #Bilbao, Spain
-					province_id = 299 #Plymouth, UK
-					province_id = 276 #Holyhead, UK
-					province_id = 304 #Isle of Man, UK
+					province_id = 478 		#Santander, Spain
+					province_id = 479 		#Burgos, Spain
+					province_id = 492 		#Bilbao, Spain
+					province_id = 299 		#Plymouth, UK
+					province_id = 276 		#Holyhead, UK
+					province_id = 304 		#Isle of Man, UK
 				}
 				year = 1865
 			}
@@ -1877,12 +1880,13 @@ province_event = {
 			province_id = 712  #Lodz, Poland, after 1850
 			province_id = 412  #Metz, after 1860
 			#province_id = 1613 #Chengde
-			province_id = 1620 #Chonchon
+			province_id = 1620 #Chonchon, China
 			province_id = 1708 #Constantine (Mokta el Hadid mine)
 			province_id = 1707 #Mascara (Remchi mine)
 			province_id = 1679 #Amami, Japan
 			province_id = 1671 #Akita, Japan
 			province_id = 1642 #Hakodate, Japan
+			province_id = 1507 #Zhenyuan, China
 		}
 		NOT = { trade_goods = iron }
 		NOT = { has_province_modifier = switched_production }
