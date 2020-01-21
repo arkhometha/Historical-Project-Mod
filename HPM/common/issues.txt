@@ -18,7 +18,6 @@ party_issues = {
 			factory_owner_cost = 0.3
 			factory_output = 0.1
 			import_cost = -0.1
-			unemployment_benefit = -0.25
 			
 			rules = {
 				build_factory = no
