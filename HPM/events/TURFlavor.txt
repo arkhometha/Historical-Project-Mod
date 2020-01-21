@@ -115,7 +115,7 @@ country_event = {
 
 country_event = {
 		
-	id = 31102 # Flight to Ankara
+	id = 31102 # Flight to Ankara - candidate for decision
 	
 	trigger = {
 		tag = TUR

@@ -402,6 +402,8 @@ political_decisions = {
 			
 			any_owned = {
 				limit = {
+					NOT = { is_core = ZAN }
+					continent = oceania
 					OR = {
 						is_core = OMA
 						is_core = ABU
@@ -414,10 +416,10 @@ political_decisions = {
 						is_core = BHR
 						is_core = QAT
 					}
-					NOT = { is_core = ZAN }
 				}
 				add_core = ARA
 			}
+			
 			any_country = {
 				limit = {
 					exists = yes
@@ -429,6 +431,7 @@ political_decisions = {
 				}
 				annex_to = THIS
 			}
+			
 			any_owned = {
 				remove_core = NEJ
 				remove_core = HDJ
@@ -442,6 +445,12 @@ political_decisions = {
 			any_country = {
 				limit = { in_sphere = THIS }
 				any_owned = { limit = { is_core = ARA } secede_province = THIS }
+			}
+			
+			any_owned = {
+				limit = { continent = africa }
+				remove_core =  ARA
+				remove_core = OMA
 			}
 			
 			release_vassal = ARA
