@@ -655,7 +655,24 @@ human_wave_vs_spearhead = {
 flintlock_rifle_armament = {
 	limit = { flintlock_rifles = 1 }
 	chance = {
-		base = 5
+		base = 100
+	}
+	effect = {
+		activate_unit = infantry
+		combat_width = -1
+	}
+}
+
+bayonet_charge = {
+	limit = {
+		flintlock_rifles = 1
+		OR = {
+			civilized = yes
+			year = 1840
+		}
+	}
+	chance = {
+		base = 4
 		modifier = {
 			factor = 2
 			invention = small_arms_production
@@ -663,7 +680,7 @@ flintlock_rifle_armament = {
 		modifier = {
 			factor = 2
 			war = yes
-			war_countries = { invention = flintlock_rifle_armament }
+			war_countries = { invention = bayonet_charge }
 		}
 	}
 	effect = {

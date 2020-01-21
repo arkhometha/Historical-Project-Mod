@@ -809,10 +809,8 @@ political_decisions = {
 				has_country_flag = lacking_writing_system
 				any_owned_province = { has_building = naval_base }
 			}
-			OR = {
-				flintlock_rifles = 1
-				post_nelsonian_thought = 1
-			}
+			flintlock_rifles = 1
+			total_num_of_ports = 1
 		}
 		
 		allow = {
@@ -846,20 +844,9 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = {
-					owner = {
-						flintlock_rifles = 1
-						NOT = { post_nelsonian_thought = 1 }
-					}
+					owner = { flintlock_rifles = 1 }
 				}
 				owner = { activate_technology = flintlock_rifles }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						post_nelsonian_thought = 1
-					}
-				}
-				owner = { activate_technology = post_nelsonian_thought }
 			}
 		}
 		

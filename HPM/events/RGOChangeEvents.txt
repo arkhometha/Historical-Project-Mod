@@ -1608,7 +1608,7 @@ province_event = {
 	}
 }
 
-#Coal found
+#Coal Found / Discovered
 province_event = {
 	id = 199035
 	title = "EVTNAME199036"
@@ -1644,17 +1644,20 @@ province_event = {
 			AND = {
 				year = 1900
 				OR = {
-					province_id = 2334  #Punta Arenas
-					province_id = 2332  #Osorno
+					province_id = 2334 	 #Punta Arenas
+					province_id = 2332  	#Osorno
 					province_id = 1408	#Padang (Ombilin)
 					province_id = 1399	#Palembang (Bukit Asam)
 					province_id = 2481	#Swan Hill
 					province_id = 2472	#Eden
 					province_id = 2470	#Port Macquaire Australia
 					province_id = 2471	#Bathurst
-					province_id = 2473 #Wagga Wagga
-					province_id = 2483 #Brisbane
-					province_id = 280   #Newcastle on Tyne
+					province_id = 2473 	#Wagga Wagga
+					province_id = 2483 	#Brisbane
+					province_id = 280   	#Newcastle on Tyne
+					province_id = 1582   	#Longan - China
+					province_id = 2062   	#Shangzhou - China
+					#province_id = 1561   	#Yenan - China
 				}
 			}
 			AND = {
@@ -1671,6 +1674,8 @@ province_event = {
 					province_id = 2484  #Gladstone
 					province_id = 1532  #Guihua - China
 					province_id = 1253  #Bardwan - India
+					province_id = 1573  #Fenzhou - China - 800k
+					province_id = 1575  #Pingyang - China - 800k
 				}
 			}
 			AND = {
@@ -1817,12 +1822,12 @@ province_event = {
 		OR = {
 			AND = {
 				OR = {
-					province_id = 478 #Santander, Spain
-					province_id = 479 #Burgos, Spain
-					province_id = 492 #Bilbao, Spain
-					province_id = 299 #Plymouth, UK
-					province_id = 276 #Holyhead, UK
-					province_id = 304 #Isle of Man, UK
+					province_id = 478 		#Santander, Spain
+					province_id = 479 		#Burgos, Spain
+					province_id = 492 		#Bilbao, Spain
+					province_id = 299 		#Plymouth, UK
+					province_id = 276 		#Holyhead, UK
+					province_id = 304 		#Isle of Man, UK
 				}
 				year = 1865
 			}
@@ -1875,12 +1880,13 @@ province_event = {
 			province_id = 712  #Lodz, Poland, after 1850
 			province_id = 412  #Metz, after 1860
 			#province_id = 1613 #Chengde
-			province_id = 1620 #Chonchon
+			province_id = 1620 #Chonchon, China
 			province_id = 1708 #Constantine (Mokta el Hadid mine)
 			province_id = 1707 #Mascara (Remchi mine)
 			province_id = 1679 #Amami, Japan
 			province_id = 1671 #Akita, Japan
 			province_id = 1642 #Hakodate, Japan
+			province_id = 1507 #Zhenyuan, China
 		}
 		NOT = { trade_goods = iron }
 		NOT = { has_province_modifier = switched_production }
@@ -2107,24 +2113,8 @@ country_event = {
 		1945 = { trade_goods = fruit } #Kano
 		
 		random_owned = {
-			limit = { owner = { ai = no } }
-			owner = { treasury = -200000 }
-		}
-		
-		random_owned = {
 			limit = {
 				owner = {
-					ai = yes
-					NOT = { money = 200000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 200 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					ai = yes
 					NOT = { money = 200000 }
 					check_variable = { which = owed_cash_money value = 9 }
 				} 
@@ -2132,7 +2122,16 @@ country_event = {
 			owner = { change_variable = { which = owed_cash_money value = 200 } }
 		}
 		random_owned = {
-			limit = { owner = { ai = yes money = 200000 } }
+			limit = {
+				owner = {
+					NOT = { money = 200000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				}
+			}
+			owner = { set_variable = { which = owed_cash_money value = 200 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 200000 } }
 			owner = { treasury = -200000 }
 		}
 		
@@ -2590,24 +2589,8 @@ country_event = {
 		1886 = { trade_goods = iron } #Bo
 		
 		random_owned = {
-			limit = { owner = { ai = no } }
-			owner = { treasury = -100000 }
-		}
-		
-		random_owned = {
 			limit = {
 				owner = {
-					ai = yes
-					NOT = { money = 100000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 100 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					ai = yes
 					NOT = { money = 100000 }
 					check_variable = { which = owed_cash_money value = 9 }
 				} 
@@ -2615,7 +2598,16 @@ country_event = {
 			owner = { change_variable = { which = owed_cash_money value = 100 } }
 		}
 		random_owned = {
-			limit = { owner = { ai = yes money = 100000 } }
+			limit = {
+				owner = {
+					NOT = { money = 100000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				}
+			}
+			owner = { set_variable = { which = owed_cash_money value = 100 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 100000 } }
 			owner = { treasury = -100000 }
 		}
 		
@@ -3438,24 +3430,8 @@ country_event = {
 		2012 = { trade_goods = cotton }
 		
 		random_owned = {
-			limit = { owner = { ai = no } }
-			owner = { treasury = -100000 }
-		}
-		
-		random_owned = {
 			limit = {
 				owner = {
-					ai = yes
-					NOT = { money = 100000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 100 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					ai = yes
 					NOT = { money = 100000 }
 					check_variable = { which = owed_cash_money value = 9 }
 				} 
@@ -3463,7 +3439,16 @@ country_event = {
 			owner = { change_variable = { which = owed_cash_money value = 100 } }
 		}
 		random_owned = {
-			limit = { owner = { ai = yes money = 100000 } }
+			limit = {
+				owner = {
+					NOT = { money = 100000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				}
+			}
+			owner = { set_variable = { which = owed_cash_money value = 100 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 100000 } }
 			owner = { treasury = -100000 }
 		}
 		
@@ -4683,26 +4668,10 @@ country_event = {
 		1840 = { trade_goods = cotton }
 		1831 = { trade_goods = cotton }
 		1828 = { trade_goods = cotton }
-		
-		random_owned = {
-			limit = { owner = { ai = no } }
-			owner = { treasury = -100000 }
-		}
-		
+	
 		random_owned = {
 			limit = {
 				owner = {
-					ai = yes
-					NOT = { money = 100000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 100 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					ai = yes
 					NOT = { money = 100000 }
 					check_variable = { which = owed_cash_money value = 9 }
 				} 
@@ -4710,7 +4679,16 @@ country_event = {
 			owner = { change_variable = { which = owed_cash_money value = 100 } }
 		}
 		random_owned = {
-			limit = { owner = { ai = yes money = 100000 } }
+			limit = {
+				owner = {
+					NOT = { money = 100000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				}
+			}
+			owner = { set_variable = { which = owed_cash_money value = 100 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 100000 } }
 			owner = { treasury = -100000 }
 		}
 		
@@ -4750,24 +4728,8 @@ country_event = {
 		1828 = { trade_goods = coffee }
 		
 		random_owned = {
-			limit = { owner = { ai = no } }
-			owner = { treasury = -100000 }
-		}
-		
-		random_owned = {
 			limit = {
 				owner = {
-					ai = yes
-					NOT = { money = 100000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 100 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					ai = yes
 					NOT = { money = 100000 }
 					check_variable = { which = owed_cash_money value = 9 }
 				} 
@@ -4775,7 +4737,16 @@ country_event = {
 			owner = { change_variable = { which = owed_cash_money value = 100 } }
 		}
 		random_owned = {
-			limit = { owner = { ai = yes money = 100000 } }
+			limit = {
+				owner = {
+					NOT = { money = 100000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				}
+			}
+			owner = { set_variable = { which = owed_cash_money value = 100 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 100000 } }
 			owner = { treasury = -100000 }
 		}
 		
@@ -4815,24 +4786,8 @@ country_event = {
 		1828 = { trade_goods = tobacco }
 		
 		random_owned = {
-			limit = { owner = { ai = no } }
-			owner = { treasury = -100000 }
-		}
-		
-		random_owned = {
 			limit = {
 				owner = {
-					ai = yes
-					NOT = { money = 100000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 100 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					ai = yes
 					NOT = { money = 100000 }
 					check_variable = { which = owed_cash_money value = 9 }
 				} 
@@ -4840,7 +4795,16 @@ country_event = {
 			owner = { change_variable = { which = owed_cash_money value = 100 } }
 		}
 		random_owned = {
-			limit = { owner = { ai = yes money = 100000 } }
+			limit = {
+				owner = {
+					NOT = { money = 100000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				}
+			}
+			owner = { set_variable = { which = owed_cash_money value = 100 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 100000 } }
 			owner = { treasury = -100000 }
 		}
 		
@@ -5251,24 +5215,8 @@ country_event = {
 		1425 = { trade_goods = timber }
 		
 		random_owned = {
-			limit = { owner = { ai = no } }
-			owner = { treasury = -200000 }
-		}
-		
-		random_owned = {
 			limit = {
 				owner = {
-					ai = yes
-					NOT = { money = 200000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				}
-			}
-			owner = { set_variable = { which = owed_cash_money value = 200 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					ai = yes
 					NOT = { money = 200000 }
 					check_variable = { which = owed_cash_money value = 9 }
 				} 
@@ -5276,7 +5224,16 @@ country_event = {
 			owner = { change_variable = { which = owed_cash_money value = 200 } }
 		}
 		random_owned = {
-			limit = { owner = { ai = yes money = 200000 } }
+			limit = {
+				owner = {
+					NOT = { money = 200000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				}
+			}
+			owner = { set_variable = { which = owed_cash_money value = 200 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 200000 } }
 			owner = { treasury = -200000 }
 		}
 		

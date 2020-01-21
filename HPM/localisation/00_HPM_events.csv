@@ -1,4 +1,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOPTA23200;We should outfit an expedition.§R(Pay or owe 30,000¤)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
+EVTOPTA23201;We should try again.§R(Pay or owe 50,000¤)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
+EVTNAME98906;Founding of the $FROMCOUNTRY_ADJ$ Niger Company;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC98906;$FROMCOUNTRY_ADJ$ officials arrived in $CAPITAL$ today to announce the founding of a new merchant company that will operate in the Niger delta.  It looks like $FROMCOUNTRY$ has ambitions in southern Nigeria...;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVT98906OPTA;This cannot harm us, right?;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTNAME6016825;Abolishing Serfdom;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC6016825;All preparations are ready for the country to abolish serfdom.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVTNAME6016824;The Vassalization of $FROMCOUNTRY$;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVTDESC6016824;As result of a recent war, $FROMCOUNTRY$ was transferred to us in vassalage. Officials in $CAPITAL$ are finishing the preparations to welcome the $FROMCOUNTRY_ADJ$ people in the $COUNTRY_ADJ$ empire.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVT6016824OPTA;We welcome the $FROMCOUNTRY_ADJ$.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1646,8 +1653,8 @@ EVTNAME443009;The Christian Question;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTDESC443009;Christians in our realm seem to be the source of our problems, and the data we got about the recent actions of our government against these groups is now ready. What groups were those?;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVT443009OPTA;The Catholics.;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVT443009OPTB;The Protestants.;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVT443009OPTC;The Orthodox.;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-EVT443009OPTD;The Coptics.;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVT443009OPTC;The Eastern Orthodox.;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVT443009OPTD;The Oriental Orthodox.;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTNAME443008;Christianity In Our Empire;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVTDESC443008;Now we are looking for data about specific regions in our empire. Where should we look for the data?;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 EVT443008OPTA;In the colonies.;;;;;;;;;;;;;;;;;;;;;;;;;;;x
@@ -2149,11 +2156,11 @@ EVTDESC36968;The Duke of Wellington, a Tory, is known to have said: "There never
 EVT36968OPTA;Drat.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 EVTNAME36970;The Suez Canal Company;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 EVTDESC36970;With the 'International Commission for the Piercing of the Isthmus of Suez' having completed and assessed the Suez region as being possible to have a canal built, all that remains is to put the plan in motion. The Suez Canal Company intends to do just that, but in order for it to start it needs to put together a significant amount of capital -- thus it has been offering shares to our government, hoping as well for the political clout to influence Egypt into allowing the venture to proceed.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
-EVT36970OPTA;Allow them to have as much money as they want. §R(Pay or owe 6 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
-EVT36970OPTB;Invest a little more than they asked for. §R(Pay or owe 5 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
-EVT36970OPTC;Give them as much as they asked for. §R(Pay or owe 4 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
-EVT36970OPTD;Invest a little less than they asked for. §R(Pay or owe 3 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
-EVT36970OPTE;Invest the minimum amount §R(Pay or owe 2 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+EVT36970OPTA;Allow them to have as much money as they want. §R(Pay or owe 3 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+EVT36970OPTB;Invest a little more than they asked for. §R(Pay or owe 2.5 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+EVT36970OPTC;Give them as much as they asked for. §R(Pay or owe 2 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+EVT36970OPTD;Invest a little less than they asked for. §R(Pay or owe 1.5 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+EVT36970OPTE;Invest the minimum amount §R(Pay or owe 1 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 EVTNAME36971;Suez Canal Finished;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 EVTDESC36971;On the year $YEAR$, the construction of the Suez Canal is finally finished. Numerous technical, political, and financial problems have been overcome and the final cost was more than double the original estimate. Many have died in accidents, but the canal is now finally ready for use. \n \n The opening will be performed by Khedive Ismail of Egypt and Sudan, and at Ismail's invitation our ship will be the first to cross the Canal. The opening ceremony will be held in a few days, as soon as the preparations are finished.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 EVT36971OPTA;Glory for $COUNTRY$!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
@@ -2172,19 +2179,19 @@ EVT36975OPTA;We must protect our investment.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 EVT36975OPTB;There is no need for us to act.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 EVTNAME36976;The Construction of the Kiel Canal;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 EVTDESC36976;We have gathered engineers and specialists from across our country and we are ready to begin the construction of the Kiel Canal. The costs have been estimated but the we can always give them more resources to try and accelerate the construction.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
-EVT369706PTA;Give them more than they estimated. §R(Pay or owe 3 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
-EVT369706PTB;Give them the amount estimated. §R(Pay or owe 2 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
-EVT369706PTC;Give them less than they estimated. §R(Pay or owe 1 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
+EVT369706PTA;Give them more than they estimated. §R(Pay or owe 1.5 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
+EVT369706PTB;Give them the amount estimated. §R(Pay or owe 1 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
+EVT369706PTC;Give them less than they estimated. §R(Pay or owe 500 thousand pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 EVTNAME36977;The Kiel Canal is Finished;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 EVTDESC36977;The canal took years and thousands of workers to be built but today on $YEAR$, the canal was officially opened by the $COUNTRY_ADJ$ ruler for transiting from Brunsbuttel to Holtenau. The next day, a ceremony was held in Holtenau where the $COUNTRY_ADJ$ ruler laid the final stone.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 EVT36977OPTA;The canal will greatly help $COUNTRY$.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 EVTNAME36978;Construction of the Panama Canal;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 EVTDESC36978;Today we will start building the Canal to connect the Atlantic and Pacific oceans. Our engineers are ready and a series of surveys of the area of the canal were done. The only thing left to do before we start the construction is define the budget of this colossal project. \n \n This promises to be one massive undertaking and when finished it will be, without a doubt, one of the biggest human achievements for decades to come.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
-EVT36978OPTA;Allow them to have as much money as they need. §R((Pay or owe 30 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
-EVT36978OPTB;Invest a little more than they asked for. §R(Pay or owe 25 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
-EVT36978OPTC;Give them as much as they asked for. §R(Pay or owe 20 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
-EVT36978OPTD;Invest a little less than they asked for. §RPay or owe 15 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
-EVT36978OPTE;Invest the minimum amount possible. §R(Pay or owe 10 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+EVT36978OPTA;Allow them to have as much money as they need. §R((Pay or owe 6 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,
+EVT36978OPTB;Invest a little more than they asked for. §R(Pay or owe 5 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+EVT36978OPTC;Give them as much as they asked for. §R(Pay or owe 4 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+EVT36978OPTD;Invest a little less than they asked for. §RPay or owe 3 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
+EVT36978OPTE;Invest the minimum amount possible. §R(Pay or owe 2 million pounds)§W;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 EVTNAME36979;The Construction of the Panama Canal is Finished;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 EVTDESC36979;The Canal cut through mountains and had to continually be widened, and the mountains slopes reduced, to minimize landslides into the canal. Steam shovels had been invented but were still not enough. Other mechanical and electrical equipment were limited in its capabilities and steel equipment rusted rapidly in the tropical climate. Several health risks posed a threat to workers in the mosquito-infested Panamanian jungle, principally malaria and yellow fever, and it claimed thousands of lives. Conditions were downplayed in $COUNTRY$ to avoid recruitment problems, but the high mortality made it difficult to maintain an experienced workforce. \n Finally, on $YEAR$ the Panama Canal was finished and it will be open to business.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,
 EVT36979OPTA;This will surely help our power projection.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,

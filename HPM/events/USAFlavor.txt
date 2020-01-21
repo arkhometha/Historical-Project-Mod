@@ -1619,19 +1619,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 100000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 100 } }
+			owner = { change_variable = { which = owed_cash_money value = 100 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 100000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 100 } }
+			owner = { set_variable = { which = owed_cash_money value = 100 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 100000 } }
@@ -1701,19 +1701,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 50000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 50 } }
+			owner = { change_variable = { which = owed_cash_money value = 50 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 50000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 50 } }
+			owner = { set_variable = { which = owed_cash_money value = 50 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 50000 } }
@@ -1766,15 +1766,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA16455" #Done
 		FROM = { treasury = 50000 any_pop = { militancy = 1 consciousness = 1 } }
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 50000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				} 
-			}
-			owner = { set_variable = { which = owed_cash_money value = 50 } }
-		}
+		
 		random_owned = {
 			limit = {
 				owner = {
@@ -1783,6 +1775,15 @@ country_event = {
 				} 
 			}
 			owner = { change_variable = { which = owed_cash_money value = 50 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { money = 50000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				} 
+			}
+			owner = { set_variable = { which = owed_cash_money value = 50 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 50000 } }
@@ -1881,15 +1882,7 @@ country_event = {
 	option = {
 		name = "EVTOPTC16456" #Pay reparations
 		badboy = -1
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 10000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				} 
-			}
-			owner = { set_variable = { which = owed_cash_money value = 10 } }
-		}
+		
 		random_owned = {
 			limit = {
 				owner = {
@@ -1898,6 +1891,15 @@ country_event = {
 				} 
 			}
 			owner = { change_variable = { which = owed_cash_money value = 10 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { money = 10000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				} 
+			}
+			owner = { set_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 10000 } }

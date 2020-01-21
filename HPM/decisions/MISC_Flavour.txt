@@ -224,6 +224,7 @@ political_decisions = {
 				is_greater_power = yes
 				is_secondary_power = yes
 			}
+			money = 15000
 			romanticism = 1
 		}
 		

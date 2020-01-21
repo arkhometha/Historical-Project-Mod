@@ -163,89 +163,14 @@ political_decisions = {
 		
 		ai_will_do = { factor = 1 }
 	}
-
-	abolishing_serfs = {
-		potential = {
-			ai = yes
-			exists = yes
-			has_global_flag = 1836_set_up
-			OR = {
-				AND = {
-					any_owned_province = { has_pop_type = serfs }
-					NOT = { debt_law = serfdom }
-				}
-				any_neighbor_country = {
-					ai = no
-					any_owned_province = { has_pop_type = serfs }
-					NOT = { debt_law = serfdom }
-				}
-				any_greater_power = {
-					ai = no
-					any_owned_province = { has_pop_type = serfs }
-					NOT = { debt_law = serfdom }
-				}
-			}
-		}
-		
-		allow = {
-			NOT = { has_country_modifier = law_changed_by_force }
-		}
-		
-		effect = {
-			add_country_modifier = { name = law_changed_by_force duration = 365 }
-			random_owned = {
-				limit = {
-					owner = {
-						any_owned_province = { has_pop_type = serfs }
-						NOT = { debt_law = serfdom }
-					}
-				}
-				owner = {
-					any_owned = {
-						limit = {
-							has_pop_type = serfs
-							has_pop_type = labourers
-						}
-						any_pop = { limit = { type = serfs } pop_type = labourers }
-					}
-					any_owned = {
-						limit = {
-							has_pop_type = serfs
-							has_pop_type = farmers
-						}
-						any_pop = { limit = { type = serfs } pop_type = farmers }
-					}
-				}
-			}
-			any_country = {
-				limit = {
-					any_owned_province = { has_pop_type = serfs }
-					NOT = { debt_law = serfdom }
-				}
-				any_owned = {
-					limit = {
-						has_pop_type = serfs
-						has_pop_type = labourers
-					}
-					any_pop = { limit = { type = serfs } pop_type = labourers }
-				}
-				any_owned = {
-					limit = {
-						has_pop_type = serfs
-						has_pop_type = farmers
-					}
-					any_pop = { limit = { type = serfs } pop_type = farmers }
-				}
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
 	
 	missing_government_flags = {
 		potential = {
 			ai = yes
 			exists = yes
 			year = 1837
+			NOT = { tag = TMT }
+			NOT = { has_country_flag = ghost_country }
 			OR = {
 				AND = { government = theocracy NOT = { has_country_flag = theocratic_government } }
 				AND = { government = proletarian_dictatorship NOT = { has_country_flag = communist_gov } }
@@ -256,7 +181,7 @@ political_decisions = {
 				AND = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
 				AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
 				AND = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
-				AND = { exists = yes NOT = { has_country_flag = existing_country } }
+				AND = { exists = yes NOT = { has_country_flag = existing_country has_country_flag = ghost_country } }
 				any_neighbor_country = {
 					ai = no
 					OR = {
@@ -269,7 +194,7 @@ political_decisions = {
 						AND = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
 						AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
 						AND = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
-						AND = { exists = yes NOT = { has_country_flag = existing_country } }
+						AND = { exists = yes NOT = { has_country_flag = existing_country has_country_flag = ghost_country } }
 					}
 				}
 				any_greater_power = {
@@ -284,7 +209,7 @@ political_decisions = {
 						AND = { government = presidential_dictatorship NOT = { has_country_flag = presidential_dictatorship_gov } }
 						AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
 						AND = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
-						AND = { exists = yes NOT = { has_country_flag = existing_country } }
+						AND = { exists = yes NOT = { has_country_flag = existing_country has_country_flag = ghost_country } }
 					}
 				}
 			}
@@ -314,7 +239,7 @@ political_decisions = {
 			random_owned = { limit = { owner = { government = bourgeois_dictatorship } } owner = { set_country_flag = anarcho_liberal_gov } }
 			random_owned = { limit = { owner = { exists = yes NOT = { has_country_flag = existing_country } } } owner = { set_country_flag = existing_country } }
 			any_neighbor_country = {
-				limit = { exists = yes NOT = { has_country_flag = existing_country } }
+				limit = { exists = yes NOT = { has_country_flag = existing_country has_country_flag = ghost_country } }
 				set_country_flag = existing_country
 			}
 			any_neighbor_country = {
@@ -1420,6 +1345,7 @@ political_decisions = {
 		}
 		
 		allow = {
+			war = no
 			OR = {
 				any_neighbor_country = {
 					ai = no
@@ -1515,6 +1441,7 @@ political_decisions = {
 		effect = {
 			any_country = {
 				limit = {
+					exists = yes
 					neighbour = THIS
 					ai = no
 					NOT = { has_country_flag = exempt_from_vassal_contribution }
@@ -1609,8 +1536,58 @@ political_decisions = {
 					owner = { add_country_modifier = { name = monthly_payment_made duration = 180 } } 
 				}
 			}
+			
 			any_country = {
 				limit = {
+					exists = yes
+					ai = no 
+					neighbour = THIS
+					money = 1000000
+					check_variable = { which = owed_cash_money value = 1000 }
+				}
+				treasury = -1000000
+				change_variable = { which = owed_cash_money value = -1000 }
+			}
+			
+			any_country = {
+				limit = {
+					exists = yes
+					ai = no 
+					neighbour = THIS
+					money = 500000
+					check_variable = { which = owed_cash_money value = 500 }
+				}
+				treasury = -500000
+				change_variable = { which = owed_cash_money value = -500 }
+			}
+			
+			any_country = {
+				limit = {
+					exists = yes
+					ai = no 
+					neighbour = THIS
+					money = 100000
+					check_variable = { which = owed_cash_money value = 100 }
+				}
+				treasury = -100000
+				change_variable = { which = owed_cash_money value = -100 }
+			}
+			
+			any_country = {
+				limit = {
+					exists = yes
+					ai = no 
+					neighbour = THIS
+					money = 50000
+					check_variable = { which = owed_cash_money value = 49 }
+				}
+				treasury = -50000
+				change_variable = { which = owed_cash_money value = -50 }
+			}
+			
+			any_country = {
+				limit = {
+					exists = yes
 					ai = no 
 					neighbour = THIS
 					money = 10000
@@ -1622,7 +1599,8 @@ political_decisions = {
 			
 			any_country = {
 				limit = {
-					ai = no 
+					exists = yes
+					ai = no
 					neighbour = THIS
 				}
 			
@@ -3416,25 +3394,34 @@ political_decisions = {
 				has_global_flag = cleaning_up_ghosts
 				has_global_flag = disabled_mobilization_fix
 			}
+			capital_scope = { province_control_days = 150 }
 			OR = {
 				any_owned_province = {
+					province_control_days = 120
 					any_core = {
 						OR = {
 							is_mobilised = yes
 							total_amount_of_ships = 1
 						}
+						capital_scope = { NOT = { province_control_days = 120 } }
+						has_country_flag = existing_country
 						exists = no
+						is_greater_power = no
 					}
 				}
 				any_neighbor_country = {
 					ai = no
 					any_owned_province = {
+						province_control_days = 120
 						any_core = {
 							OR = {
 								is_mobilised = yes
 								total_amount_of_ships = 1
 							}
+							capital_scope = { NOT = { province_control_days = 120 } }
+							has_country_flag = existing_country
 							exists = no
+							is_greater_power = no
 						}
 					}
 				}
@@ -3471,6 +3458,7 @@ political_decisions = {
 		
 		effect = {
 			clr_country_flag = ghost_country
+			clr_country_flag = existing_country
 			remove_country_modifier = neutrality_modifier
 			political_reform = open_borders
 			annex_to = TMT
@@ -3520,6 +3508,7 @@ political_decisions = {
 					ai = no
 				}
 				clr_country_flag = ghost_country
+				clr_country_flag = existing_country
 				remove_country_modifier = neutrality_modifier
 				political_reform = open_borders
 				annex_to = TMT
@@ -3546,6 +3535,9 @@ political_decisions = {
 		effect = {
 			remove_country_modifier = neutrality_modifier
 			political_reform = open_borders
+			clr_country_flag = existing_country
+			clr_global_flag = cleaning_up_ghosts
+			clr_country_flag = cleaning_up_ghosts_country
 			random_country = {
 				limit = {
 					owns = 2553
@@ -3580,22 +3572,22 @@ political_decisions = {
 		}
 	}
 	
-	ghost_country_ends = {
-		alert = no
-		potential = {
-			ai = yes
-			has_country_flag = cleaning_up_ghosts_country
-			NOT = { has_country_modifier = law_changed_by_force }
-		}
+	# ghost_country_ends = {
+		# alert = no
+		# potential = {
+			# ai = yes
+			# has_country_flag = cleaning_up_ghosts_country
+			# NOT = { has_country_modifier = law_changed_by_force }
+		# }
 	
-		allow = {
-		}
+		# allow = {
+		# }
 		
-		effect = {
-			clr_global_flag = cleaning_up_ghosts
-			clr_country_flag = cleaning_up_ghosts_country
-		}
-	}
+		# effect = {
+			# clr_global_flag = cleaning_up_ghosts
+			# clr_country_flag = cleaning_up_ghosts_country
+		# }
+	# }
 	
 	annex_to_master_cleanup = {
 		alert = no

@@ -1785,6 +1785,7 @@ political_decisions = {
 	picture = shinbutsu_bunri_decision
 		potential = {
 			is_vassal = no
+			NOT = { has_country_flag = ghost_country }
 			OR = {
 				tag = JAP
 				tag = TKG

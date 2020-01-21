@@ -1957,20 +1957,9 @@ country_event = {
 		clr_global_flag = warship_commission_being_fulfilled
 		random_owned = {
 			limit = {
-				owner = {
-					flintlock_rifles = 1
-					NOT = { post_nelsonian_thought = 1 }
-				}
+				owner = { flintlock_rifles = 1 }
 			}
 			owner = { activate_technology = flintlock_rifles }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					post_nelsonian_thought = 1
-				}
-			}
-			owner = { activate_technology = post_nelsonian_thought }
 		}
 	}
 }
@@ -4400,6 +4389,9 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = no
+				is_greater_power = no
+				has_country_flag = existing_country
+				capital_scope = { NOT = { province_control_days = 120 } }
 				OR = {
 					is_mobilised = yes
 					total_amount_of_ships = 1
@@ -4410,7 +4402,7 @@ country_event = {
 	}
 }
 
-#Vassal Transfer - Overlord Gets Informed
+#Vassal Transfer During Unification - Overlord Gets Informed
 country_event = {
 	id = 6016822
 	title = "EVTNAME6016822"
@@ -4432,7 +4424,22 @@ country_event = {
 	}
 }
 
-#Vassal Stolen CB - Guarantee there's vassal transfer without any funny behaviour.
+#Vassal Stolen CB - Vassal gets transferred to the new overlord - 2/2
+country_event = {
+	id = 6016823
+	title = "EVTNAME6016823"
+	desc = "EVTDESC6016823"
+	picture = "danishgovernment"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT6016823OPTA"
+		FROM = { create_vassal = THIS }
+	}
+}
+
+#Vassal Stolen CB - Guarantee there's vassal transfer without any funny behaviour - 1/2
 country_event = {
 	id = 6016824
 	title = "EVTNAME6016824"
@@ -4460,8 +4467,93 @@ country_event = {
 				militancy = 1
 				consciousness = 3
 			}
-			country_event = 6016824
+			country_event = 6016823
 		}
 	}
 }
 
+#Serf Cleanup
+country_event = {
+	id = 6016825
+	title = "EVTNAME6016825"
+	desc = "EVTDESC6016825"
+	picture = "danishgovernment"
+
+	is_triggered_only = yes
+	
+	trigger = {
+		ai = yes
+		exists = yes
+		war = no
+		NOT = { has_country_modifier = law_changed_by_force }
+		OR = {
+			AND = {
+				NOT = { debt_law = serfdom }
+				any_owned_province = { has_pop_type = serfs }
+			}
+			any_neighbor_country = {
+				ai = no
+				exists = yes
+				NOT = { debt_law = serfdom }
+				any_owned_province = { has_pop_type = serfs }
+			}
+			any_greater_power = {
+				ai = no
+				NOT = { debt_law = serfdom }
+				any_owned_province = { has_pop_type = serfs }
+			}
+		}
+	}
+	
+	allow_multiple_instances = no
+
+	option = {
+		name = "EVT6016823OPTA"
+		add_country_modifier = { name = law_changed_by_force duration = 365 }
+			random_owned = {
+				limit = {
+					owner = {
+						any_owned_province = { has_pop_type = serfs }
+						NOT = { debt_law = serfdom }
+					}
+				}
+				owner = {
+					any_owned = {
+						limit = {
+							has_pop_type = serfs
+							has_pop_type = labourers
+						}
+						any_pop = { limit = { type = serfs } pop_type = labourers }
+					}
+					any_owned = {
+						limit = {
+							has_pop_type = serfs
+							has_pop_type = farmers
+						}
+						any_pop = { limit = { type = serfs } pop_type = farmers }
+					}
+				}
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					any_owned_province = { has_pop_type = serfs }
+					NOT = { debt_law = serfdom }
+				}
+				any_owned = {
+					limit = {
+						has_pop_type = serfs
+						has_pop_type = labourers
+					}
+					any_pop = { limit = { type = serfs } pop_type = labourers }
+				}
+				any_owned = {
+					limit = {
+						has_pop_type = serfs
+						has_pop_type = farmers
+					}
+					any_pop = { limit = { type = serfs } pop_type = farmers }
+				}
+			}
+	}
+}

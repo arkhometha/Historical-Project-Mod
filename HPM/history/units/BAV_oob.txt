@@ -1,3 +1,13 @@
+BAD = {
+	value = 150
+	military_access = yes
+}
+WUR = {
+	value = 150
+	military_access = yes
+}
+
+
 leader = {
 	name = "Pappenheim"
 	date = 1815.1.1

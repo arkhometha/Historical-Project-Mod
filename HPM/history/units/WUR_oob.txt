@@ -1,3 +1,12 @@
+BAD = {
+	value = 150
+	military_access = yes
+}
+BAV = {
+	value = 150
+	military_access = yes
+}
+
 leader = {
 	name = "Fredrich Wilhelm"
 	date = 1819.1.1

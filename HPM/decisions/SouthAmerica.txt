@@ -328,15 +328,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 20000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				} 
-			}
-			owner = { set_variable = { which = owed_cash_money value = 20 } }
-		}
+		
 		random_owned = {
 			limit = {
 				owner = {
@@ -345,6 +337,15 @@ political_decisions = {
 				} 
 			}
 			owner = { change_variable = { which = owed_cash_money value = 20 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { money = 20000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				} 
+			}
+			owner = { set_variable = { which = owed_cash_money value = 20 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 20000 } }

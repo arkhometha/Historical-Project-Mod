@@ -25,7 +25,7 @@ political_decisions = {
 				is_greater_power = yes
 				AND = {
 					is_secondary_power = yes
-					money = 3000000
+					money = 1000000
 				}
 			}
 		}
@@ -71,7 +71,7 @@ political_decisions = {
 				is_greater_power = yes
 				AND = {
 					is_secondary_power = yes
-					money = 5000000
+					money = 2000000
 				}
 			}
 			OR = {
@@ -254,7 +254,7 @@ political_decisions = {
 				is_greater_power = yes
 				AND = {
 					is_secondary_power = yes
-					money = 20000000
+					money = 3000000
 				}
 			}
 		}
