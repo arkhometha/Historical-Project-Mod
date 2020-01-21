@@ -1921,6 +1921,19 @@ political_decisions = {
 			any_country = { limit = { exists = yes civilized = yes is_greater_power = no is_secondary_power = no number_of_states = 2 } treasury = 10000 }
 			any_country = { limit = { exists = yes civilized = yes is_greater_power = no is_secondary_power = no NOT = { number_of_states = 2 } } treasury = 5000 }
 			any_country = { limit = { exists = yes civilized = no NOT = { tag = QNG } } treasury = 2500 }
+			#########Literate countries were usually well developed#########
+			
+			any_country = {
+				limit = {
+					exists = yes
+					literacy = 0.75
+				}
+				treasury = 10000
+			}
+			
+			#########Literate countries were usually well developed#########
+			
+			
 			#########Countries that start at war will get a war-chest#########
 			
 			any_country = {

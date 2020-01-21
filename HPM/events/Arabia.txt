@@ -842,7 +842,10 @@ country_event = {
 				}
 				NOT = { tag = THIS }
 			}
-			all_core = { add_core = ARU }
+			all_core = {
+				limit = { NOT = { is_core = ZAN } }
+				add_core = ARU
+			}
 		}
 		any_country = {
 			limit = {

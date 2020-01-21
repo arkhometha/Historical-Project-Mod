@@ -59,7 +59,6 @@ political_decisions = {
 		
 		allow = {
 			NOT = { has_country_flag = population_exchange_with_turkey }
-			is_greater_power = yes
 			invention = national_fraternity
 			owns = 832
 			owns = 805
@@ -67,6 +66,34 @@ political_decisions = {
 			owns = 844
 			owns = 843
 			owns = 846
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			OR = {
+				is_greater_power = yes
+				AND = {
+					is_secondary_power = yes
+					great_wars_enabled = yes
+					has_country_flag = in_great_war
+					war_countries = {
+						tag = TUR
+						has_country_flag = in_great_war
+					}
+				}
+				AND = {
+					is_secondary_power = yes
+					NOT = { any_greater_power = { alliance_with = TUR } }
+					NOT = { RUS = { is_greater_power = yes } }
+					TUR = {
+						is_greater_power = no
+						NOT = {
+							capital = 860
+							part_of_sphere = yes
+						}
+					}
+				}
+			}
 		}
 		
 		effect = {

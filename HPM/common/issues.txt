@@ -672,7 +672,7 @@ social_reforms = {
 			}
 		}
 		trinket_wage = {
-			minimum_wage = 0.2
+			minimum_wage = 0.20
 			administrative_multiplier = 1
 			global_immigrant_attract = 0.01
 			allow = {
@@ -680,7 +680,7 @@ social_reforms = {
 			}
 		}
 		low_minimum_wage = {
-			minimum_wage = 0.4
+			minimum_wage = 0.40
 			administrative_multiplier = 2
 			global_immigrant_attract = 0.02
 			allow = {
@@ -688,7 +688,7 @@ social_reforms = {
 			}
 		}
 		acceptable_minimum_wage = {
-			minimum_wage = 0.6
+			minimum_wage = 0.60
 			administrative_multiplier = 3
 			global_immigrant_attract = 0.03
 			allow = {
@@ -696,7 +696,7 @@ social_reforms = {
 			}
 		}
 		good_minimum_wage = {
-			minimum_wage = 0.8
+			minimum_wage = 0.80
 			administrative_multiplier = 4
 			global_immigrant_attract = 0.04
 			allow = {
@@ -775,7 +775,7 @@ social_reforms = {
 			}
 		}
 		low_safety = {
-			pension_level = 0.2
+			pension_level = 0.20
 			factory_cost = 0.40
 			factory_maintenance = 0.15
 			rgo_output = -0.02
@@ -787,7 +787,7 @@ social_reforms = {
 			}
 		}
 		acceptable_safety = {
-			pension_level = 0.5
+			pension_level = 0.50
 			factory_cost = 0.60
 			factory_maintenance = 0.20
 			rgo_output = -0.03
@@ -799,7 +799,7 @@ social_reforms = {
 			}
 		}
 		good_safety = {
-			pension_level = 1
+			pension_level = 1.0
 			factory_cost = 0.80
 			factory_maintenance = 0.25
 			rgo_output = -0.04
@@ -820,14 +820,14 @@ social_reforms = {
 			}
 		}
 		trinket_subsidies = {
-			unemployment_benefit = 0.5
+			unemployment_benefit = 0.50
 			global_immigrant_attract = 0.01
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
 		low_subsidies = {
-			unemployment_benefit = 1
+			unemployment_benefit = 1.0
 			global_immigrant_attract = 0.02
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }
@@ -856,14 +856,14 @@ social_reforms = {
 			}
 		}
 		trinket_pensions = {
-			pension_level	= 0.5
+			pension_level	= 0.50
 			global_immigrant_attract = 0.01
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }
 			}
 		}
 		low_pensions = {
-			pension_level	= 1
+			pension_level	= 1.0
 			global_immigrant_attract = 0.02
 			allow = {
 				NOT = { has_country_flag = government_busy_with_something }
@@ -877,7 +877,7 @@ social_reforms = {
 			}
 		}
 		good_pensions = {
-			pension_level	= 2
+			pension_level	= 2.0
 			global_population_growth = 0.001
 			global_immigrant_attract = 0.04
 			allow = {
