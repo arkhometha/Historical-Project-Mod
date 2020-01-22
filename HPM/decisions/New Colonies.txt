@@ -1,4 +1,57 @@
 political_decisions = {
+
+
+	found_niger_company = {
+		picture = royal_niger_company
+		potential = {
+			NOT = { has_global_flag = niger_company_founded }
+			is_greater_power = yes
+			any_owned_province = {
+				OR = {
+					region = FRA_1923
+					region = FRA_1930
+					region = SOK_1934
+				}
+			}
+			any_neighbor_country = {
+				exists = yes
+				capital_scope = {
+					OR = {
+						region = FRA_1923
+						region = FRA_1930
+						region = SOK_1934
+					}
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+			nationalism_n_imperialism = 1
+			money = 100000
+			has_global_flag = berlin_conference
+		}
+		
+		effect = {
+			set_global_flag = niger_company_founded
+			prestige = 5
+			treasury = -100000
+			
+			any_country = {
+				limit = {
+					exists = yes
+					capital_scope = {
+						OR = {
+							region = FRA_1923
+							region = FRA_1930
+							region = SOK_1934
+						}
+					}
+				}
+				country_event = 98906
+			}
+		}
+	}
 	
 	conquest_of_the_saharan_desert = {
 		picture = form_the_ikhwan

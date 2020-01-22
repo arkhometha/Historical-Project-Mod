@@ -355,10 +355,10 @@ small_but_efficient = {
 	}
 	
 	icon = 9
-	tax_efficiency = 0.4
-	administrative_efficiency_modifier = 0.3
-	tariff_efficiency_modifier = 0.3
-	supply_consumption = -0.9
+	tax_efficiency = 0.5
+	administrative_efficiency_modifier = 0.4
+	tariff_efficiency_modifier = 0.4
+	supply_consumption = -0.95
 }
 
 sound_dues = {

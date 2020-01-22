@@ -914,6 +914,17 @@ conversion_chance =
 	}
 	
 	modifier = {
+		factor = -1
+		country = { has_country_flag = umar_pact }
+		NOT = {
+			has_pop_religion = animist
+			has_pop_religion = shiite
+			has_pop_religion = sunni
+			has_pop_religion = ibadi
+		}
+	}
+	
+	modifier = {
 		factor = -0.95
 		OR = {
 			has_pop_religion = jewish

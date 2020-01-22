@@ -82,20 +82,9 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = {
-					owner = {
-						flintlock_rifles = 1
-						NOT = { post_nelsonian_thought = 1 }
-					}
+					owner = { flintlock_rifles = 1 }
 				}
 				owner = { activate_technology = flintlock_rifles }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						post_nelsonian_thought = 1
-					}
-				}
-				owner = { activate_technology = post_nelsonian_thought }
 			}
 			set_country_flag = hms_sverige_built
 		}

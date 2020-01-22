@@ -2315,6 +2315,12 @@ treaties_of_velasco = {
 }
 
 ### Ottomanism
+jizya = {
+	tax_efficiency = 0.1
+	global_assimilation_rate = -0.25
+	icon = 18
+}
+
 religious_minority_oppression = {
 	icon = 18
 }
@@ -2322,8 +2328,8 @@ religious_minority_oppression = {
 ottoman_oppression = {
 	mobilisation_size = -0.02
 	land_organisation = -0.05
-	global_assimilation_rate = -0.2
-	tax_efficiency = 0.4
+	global_assimilation_rate = -0.25
+	tax_efficiency = 0.3
 	#non_accepted_pop_militancy_modifier = 0.05
 	#non_accepted_pop_consciousness_modifier = 0.1
 	icon = 5

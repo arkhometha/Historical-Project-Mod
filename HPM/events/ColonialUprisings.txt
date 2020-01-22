@@ -329,17 +329,6 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					ai = yes
-					NOT = { money = 50000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				} 
-			}
-			owner = { set_variable = { which = owed_cash_money value = 50 } }
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					ai = yes
 					NOT = { money = 50000 }
 					check_variable = { which = owed_cash_money value = 9 }
 				} 
@@ -347,10 +336,18 @@ country_event = {
 			owner = { change_variable = { which = owed_cash_money value = 50 } }
 		}
 		random_owned = {
-			limit = { owner = { money = 50000 ai = yes } }
+			limit = {
+				owner = {
+					NOT = { money = 50000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				} 
+			}
+			owner = { set_variable = { which = owed_cash_money value = 50 } }
+		}
+		random_owned = {
+			limit = { owner = { money = 50000 } }
 			owner = { treasury = -50000 }
 		}
-		random_owned = { limit = { owner = { ai = no } } owner = { add_tax_relative_income = -0.30 } }
 		add_country_modifier = { name = colonial_museum_of_natural_history duration = -1 }
 		ai_chance = {
 			factor = 80

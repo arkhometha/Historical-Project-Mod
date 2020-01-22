@@ -338,20 +338,20 @@ country_event = {
 				owner = {
 					NOT = { owns = 2029 }
 					NOT = { money = 100000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 100 } }
+			owner = { change_variable = { which = owed_cash_money value = 100 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { owns = 2029 }
 					NOT = { money = 100000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 100 } }
+			owner = { set_variable = { which = owed_cash_money value = 100 } }
 		}
 		random_owned = {
 			limit = {

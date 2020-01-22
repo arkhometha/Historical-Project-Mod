@@ -63,19 +63,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 50000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 50 } }
+			owner = { change_variable = { which = owed_cash_money value = 50 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 50000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 50 } }
+			owner = { set_variable = { which = owed_cash_money value = 50 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 50000 } }
@@ -227,19 +227,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 10 } }
+			owner = { change_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 10 } }
+			owner = { set_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 10000 } }
@@ -551,19 +551,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 10 } }
+			owner = { change_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 10 } }
+			owner = { set_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 10000 } }
@@ -872,19 +872,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 10 } }
+			owner = { change_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 10 } }
+			owner = { set_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 10000 } }
@@ -1196,19 +1196,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 10 } }
+			owner = { change_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 10 } }
+			owner = { set_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 10000 } }
@@ -1522,19 +1522,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 10 } }
+			owner = { change_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 10 } }
+			owner = { set_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 10000 } }
@@ -1845,19 +1845,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 10 } }
+			owner = { change_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 10 } }
+			owner = { set_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 10000 } }
@@ -2169,19 +2169,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 10 } }
+			owner = { change_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 10 } }
+			owner = { set_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 10000 } }
@@ -2493,19 +2493,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 10 } }
+			owner = { change_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 10 } }
+			owner = { set_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 10000 } }
@@ -2816,19 +2816,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 10 } }
+			owner = { change_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 10 } }
+			owner = { set_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 10000 } }
@@ -3139,19 +3139,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 10 } }
+			owner = { change_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 10000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 10 } }
+			owner = { set_variable = { which = owed_cash_money value = 10 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 10000 } }

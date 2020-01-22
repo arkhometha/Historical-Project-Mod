@@ -4389,6 +4389,9 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = no
+				is_greater_power = no
+				has_country_flag = existing_country
+				capital_scope = { NOT = { province_control_days = 120 } }
 				OR = {
 					is_mobilised = yes
 					total_amount_of_ships = 1
@@ -4418,6 +4421,21 @@ country_event = {
 			country_event = 6016824
 		}
 		inherit = FROM
+	}
+}
+
+#Vassal Stolen CB - Vassal gets transferred to the new overlord - 2/2
+country_event = {
+	id = 6016823
+	title = "EVTNAME6016823"
+	desc = "EVTDESC6016823"
+	picture = "danishgovernment"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT6016823OPTA"
+		FROM = { create_vassal = THIS }
 	}
 }
 
@@ -4454,19 +4472,88 @@ country_event = {
 	}
 }
 
-#Vassal Stolen CB - Vassal gets transferred to the new overlord - 2/2
+#Serf Cleanup
 country_event = {
-	id = 6016823
-	title = "EVTNAME6016823"
-	desc = "EVTDESC6016823"
+	id = 6016825
+	title = "EVTNAME6016825"
+	desc = "EVTDESC6016825"
 	picture = "danishgovernment"
 
 	is_triggered_only = yes
+	
+	trigger = {
+		ai = yes
+		exists = yes
+		war = no
+		NOT = { has_country_modifier = law_changed_by_force }
+		OR = {
+			AND = {
+				NOT = { debt_law = serfdom }
+				any_owned_province = { has_pop_type = serfs }
+			}
+			any_neighbor_country = {
+				ai = no
+				exists = yes
+				NOT = { debt_law = serfdom }
+				any_owned_province = { has_pop_type = serfs }
+			}
+			any_greater_power = {
+				ai = no
+				NOT = { debt_law = serfdom }
+				any_owned_province = { has_pop_type = serfs }
+			}
+		}
+	}
+	
+	allow_multiple_instances = no
 
 	option = {
 		name = "EVT6016823OPTA"
-		FROM = { create_vassal = THIS }
+		add_country_modifier = { name = law_changed_by_force duration = 365 }
+			random_owned = {
+				limit = {
+					owner = {
+						any_owned_province = { has_pop_type = serfs }
+						NOT = { debt_law = serfdom }
+					}
+				}
+				owner = {
+					any_owned = {
+						limit = {
+							has_pop_type = serfs
+							has_pop_type = labourers
+						}
+						any_pop = { limit = { type = serfs } pop_type = labourers }
+					}
+					any_owned = {
+						limit = {
+							has_pop_type = serfs
+							has_pop_type = farmers
+						}
+						any_pop = { limit = { type = serfs } pop_type = farmers }
+					}
+				}
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					any_owned_province = { has_pop_type = serfs }
+					NOT = { debt_law = serfdom }
+				}
+				any_owned = {
+					limit = {
+						has_pop_type = serfs
+						has_pop_type = labourers
+					}
+					any_pop = { limit = { type = serfs } pop_type = labourers }
+				}
+				any_owned = {
+					limit = {
+						has_pop_type = serfs
+						has_pop_type = farmers
+					}
+					any_pop = { limit = { type = serfs } pop_type = farmers }
+				}
+			}
 	}
 }
-
-

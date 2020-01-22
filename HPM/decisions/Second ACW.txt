@@ -11,7 +11,7 @@ political_decisions = {
 			is_vassal = no
 			NOT = { has_country_flag = asked_to_join_csa }
 			neighbour = CSA
-				
+			NOT = { has_country_flag = ghost_country }
 		}
 
 		allow = {
@@ -59,7 +59,7 @@ political_decisions = {
 			is_vassal = no
 			NOT = { has_country_flag = asked_to_join_fsa }
 			neighbour = FSA
-				
+			NOT = { has_country_flag = ghost_country }
 		}
 
 		allow = {
@@ -107,7 +107,7 @@ political_decisions = {
 			NOT = { has_country_flag = asked_to_join_california }
 			neighbour = CAL
 			exists = yes
-				
+			NOT = { has_country_flag = ghost_country }
 		}
 
 		allow = {
@@ -152,7 +152,7 @@ political_decisions = {
 			is_vassal = no
 			NOT = { has_country_flag = asked_to_join_new_america }
 			neighbour = UIL
-				
+			NOT = { has_country_flag = ghost_country }
 		}
 
 		allow = {
@@ -215,6 +215,7 @@ political_decisions = {
 				tag = UOR
 				tag = DAK
 			}
+			NOT = { has_country_flag = ghost_country }
 			NOT = { has_global_flag = disunited_states }
 			NOT = { has_country_flag = asked_to_rejoin_usa }
 			NOT = {
@@ -402,6 +403,7 @@ political_decisions = {
 				tag = UNM
 				tag = UNB
 			}
+			NOT = { has_country_flag = ghost_country }
 			NOT = { has_country_flag = flag_of_freedom }
 		}
 		
@@ -466,6 +468,7 @@ political_decisions = {
 	restore_the_union = {
 		picture = switch_to_liberty
 		potential = {
+			NOT = { has_country_flag = ghost_country }
 			is_culture_group = american_cultures
 			USA = { exists = no }
 		}
@@ -680,6 +683,7 @@ political_decisions = {
 				has_country_flag = recognized_puerto_rico
 				war_with = PRI
 				any_owned_province = { is_core = PRI }
+				PRI = { has_country_flag = ghost_country }
 			}
 		}
 		
@@ -724,6 +728,7 @@ political_decisions = {
 				has_country_flag = recognized_cuba
 				war_with = CUB
 				any_owned_province = { is_core = CUB }
+				CUB = { has_country_flag = ghost_country }
 			}
 		}
 		
@@ -767,6 +772,7 @@ political_decisions = {
 			NOT = {
 				war_policy = jingoism
 				has_country_flag = recognized_phillipines
+				PHL = { has_country_flag = ghost_country }
 				war_with = PHL
 				any_owned_province = { is_core = PHL }
 			}
@@ -812,6 +818,7 @@ political_decisions = {
 				tag = CSA
 				tag = USA
 				tag = FSA
+				CSA = { has_country_flag = ghost_country }
 			}
 		}
 		allow = { 
@@ -871,7 +878,9 @@ political_decisions = {
 			exists = CSA
 			tag = USA
 			has_global_flag = american_civil_war_has_happened
+			capital_scope = { is_core = CSA }
 			NOT = {
+				has_country_flag = ghost_country
 				has_global_flag = right_to_secede
 			}
 		}
@@ -924,6 +933,7 @@ political_decisions = {
 		potential = {
 			tag = CSA
 			has_global_flag = american_civil_war_has_happened
+			NOT = { has_country_flag = ghost_country }
 			NOT = { has_global_flag = declaration2 }
 		}
 		allow = {
@@ -969,6 +979,7 @@ political_decisions = {
 				tag = CSA
 				tag = USA
 				tag = FSA
+				FSA = { has_country_flag = ghost_country }
 			}
 		}
 		allow = { 
@@ -1029,6 +1040,7 @@ political_decisions = {
 			tag = USA
 			has_global_flag = alt_american_civil_war_has_happened
 			NOT = {
+				has_country_flag = ghost_country
 				has_global_flag = fsa_right_to_secede
 			}
 		}
@@ -1082,6 +1094,7 @@ political_decisions = {
 			tag = FSA
 			has_global_flag = alt_american_civil_war_has_happened
 			NOT = { has_global_flag = declaration3 }
+			NOT = { has_country_flag = ghost_country }
 		}
 		allow = {
 			war = no
