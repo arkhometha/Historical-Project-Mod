@@ -35,11 +35,26 @@ party = {
 party = {
 	name = "ENG_liberal_2"
 	start_date = 1859.1.1
-	end_date = 2000.1.1
+	end_date = 1900.1.1
 
 	ideology = liberal
 
 	social_policy = no_position_set
+	economic_policy = laissez_faire
+	trade_policy = free_trade
+	religious_policy = pluralism
+	citizenship_policy = limited_citizenship
+	war_policy = pro_military
+}
+
+party = {
+	name = "ENG_liberal_2"
+	start_date = 1900.1.1
+	end_date = 2000.1.1
+
+	ideology = liberal
+
+	social_policy = populist_welfare
 	economic_policy = interventionism
 	trade_policy = free_trade
 	religious_policy = pluralism
