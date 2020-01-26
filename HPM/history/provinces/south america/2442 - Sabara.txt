@@ -1,5 +1,5 @@
 owner = BRZ
 controller = BRZ
 add_core = BRZ
-trade_goods = coffee
+trade_goods = cotton
 life_rating = 31
