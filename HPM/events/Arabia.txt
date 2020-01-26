@@ -1106,3 +1106,45 @@ country_event = {
 	}
 }
 
+country_event = {
+	
+	id = 96125
+	title = "EVTNAME96125"
+	desc = "EVTDESC96125"
+
+	trigger = {
+		has_country_flag = umar_pact
+		NOT = { has_country_modifier = jizya }
+		any_owned_province = {
+			any_pop = {
+				OR = {
+					has_pop_religion = catholic
+					has_pop_religion = protestant
+					has_pop_religion = mormon
+					has_pop_religion = orthodox
+					has_pop_religion = coptic
+					has_pop_religion = druze
+					has_pop_religion = jewish
+					has_pop_religion = yazidi
+					has_pop_religion = mahayana
+					has_pop_religion = gelugpa
+					has_pop_religion = theravada
+					has_pop_religion = hindu
+					has_pop_religion = shinto
+					has_pop_religion = sikh
+					has_pop_religion = animist
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option {
+		name = "EVT96125OPTA"
+		add_country_modifier = { name = jizya duration = -1 }
+	}
+
+}
