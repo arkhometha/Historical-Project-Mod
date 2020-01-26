@@ -93,6 +93,10 @@ political_decisions = {
 						}
 					}
 				}
+				AND = {
+					is_secondary_power = yes
+					TUR = { in_sphere = RUS }
+				}
 			}
 		}
 		

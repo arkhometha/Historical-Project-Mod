@@ -66,7 +66,6 @@ political_decisions = {
 		
 		allow = {
 			plurality = 8
-			money = 250000
 			literacy = 0.3
 			NOT = { has_country_modifier = government_propaganda }
 			NOT = { has_country_modifier = war_propaganda }
@@ -74,11 +73,103 @@ political_decisions = {
 				vote_franschise = none_voting
 				war = yes
 			}
+			OR = {
+				AND = {
+					not = { total_pops = 1000000 }
+					money = 30000
+				}
+				AND = {
+					total_pops = 1000000
+					not = { total_pops = 2000000 }
+					money = 50000
+				}
+				AND = {
+					total_pops = 2000000
+					not = { total_pops = 3000000 }
+					money = 100000
+				}
+				AND = {
+					total_pops = 3000000
+					not = { total_pops = 4000000 }
+					money = 150000
+				}
+				AND = {
+					total_pops = 4000000
+					not = { total_pops = 5000000 }
+					money = 200000
+				}
+				AND = {
+					total_pops = 5000000
+					money = 250000
+				}
+				AND = {
+					total_pops = 10000000
+					money = 500000
+				}
+			}
 		}
 		
 		effect = {
 			plurality = -8
-			treasury = -250000
+			random_owned = {
+				limit = {
+					owner = {
+						not = { total_pops = 1000000 }
+					}
+				}
+				owner = { treasury = -30000 }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						total_pops = 1000000
+						not = { total_pops = 2000000 }
+					}
+				}
+				owner = { treasury = -50000 }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						total_pops = 2000000
+						not = { total_pops = 3000000 }
+					}
+				}
+				owner = { treasury = -100000 }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						total_pops = 3000000
+						not = { total_pops = 4000000 }
+					}
+				}
+				owner = { treasury = -150000 }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						total_pops = 4000000
+						not = { total_pops = 5000000 }
+					}
+				}
+				owner = { treasury = -200000 }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						total_pops = 5000000
+						NOT = { total_pops = 10000000 }
+					}
+				}
+				owner = { treasury = -250000 }
+			}
+			random_owned = {
+				limit = {
+					owner = { total_pops = 10000000 }
+				}
+				owner = { treasury = 500000 }
+			}
 			country_event = 11002
 			set_country_flag = propaganda_program
 		}

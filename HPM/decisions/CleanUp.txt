@@ -182,6 +182,12 @@ political_decisions = {
 				AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
 				AND = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
 				AND = { exists = yes NOT = { has_country_flag = existing_country has_country_flag = ghost_country } }
+				AND = {
+					ai = yes
+					has_country_flag = surrender_sudan_on_lose
+					part_of_sphere = no
+					war = no
+				}
 				any_neighbor_country = {
 					ai = no
 					OR = {
@@ -195,6 +201,11 @@ political_decisions = {
 						AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
 						AND = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
 						AND = { exists = yes NOT = { has_country_flag = existing_country has_country_flag = ghost_country } }
+						AND = {
+							has_country_flag = surrender_sudan_on_lose
+							part_of_sphere = no
+							war = no
+						}
 					}
 				}
 				any_greater_power = {
@@ -228,6 +239,26 @@ political_decisions = {
 			clr_country_flag = presidential_dictatorship_gov
 			clr_country_flag = fascist_gov
 			clr_country_flag = anarcho_liberal_gov
+			random_owned = {
+				limit = {
+					owner = {
+						ai = yes
+						has_country_flag = surrender_sudan_on_lose
+						part_of_sphere = no
+						war = no
+					}
+				}
+				owner = { clr_country_flag = surrender_sudan_on_lose }
+			}
+			any_neighbor_country = {
+				limit = {
+					ai = no
+					has_country_flag = surrender_sudan_on_lose
+					part_of_sphere = no
+					war = no
+				}
+				clr_country_flag = surrender_sudan_on_lose
+			}
 			random_owned = { limit = { owner = { government = theocracy } } owner = { set_country_flag = theocratic_government } }
 			random_owned = { limit = { owner = { government = proletarian_dictatorship } } owner = { set_country_flag = communist_gov } }
 			random_owned = { limit = { owner = { government = absolute_monarchy } } owner = { set_country_flag = absolute_monarchy_gov } }
@@ -594,65 +625,6 @@ political_decisions = {
 				}
 				any_pop = { limit = { type = slaves } literacy = -0.1 }
 			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	release_bukovina = {
-		potential = {
-			owns = 662
-			owns = 663
-			OR = {
-				tag = AUS
-				tag = KUK
-			}
-			NOT = { owns = 660 }	
-			NOT = { owns = 661 }
-			NOT = { owns = 953 }
-			NOT = { owns = 952 }
-			BKV = { exists = no }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			release = BKV
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	release_galicia_lodomeria = {
-		potential = {
-			OR = {
-				tag = AUS
-				tag = KUK
-			}
-			NOT = { exists = GLM }
-			any_owned_province = {
-				region = AUS_702
-				is_core = GLM
-			}
-			NOT = {
-				owns = 703
-				owns = 661
-				owns = 662
-				any_owned_province = {
-					OR = {
-						region = AUS_627
-						region = AUS_633
-					}
-				}
-			}
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			release = GLM
 		}
 		ai_will_do = { factor = 1 }
 	}

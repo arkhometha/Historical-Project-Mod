@@ -97,7 +97,7 @@ permanent_occupation_desc;Our long occupation of a country that has already been
 regency_government;Regency;;;;;;;;;;;;;;;;;;;;x,,,,,
 regency_government_desc;Sickness, foreign trips, premature death or abdication - a number of reasons can trigger a regency. The fact is that our country is currently in one, the regents aren't very good at their jobs and our country is on the edge of chaos.;;;;;;;;;;;;;;;;;;;;x,,,,,
 reactionary_demands;Reactionary Agenda;;;;;;;;;;;;;;;;;;;;x,,,,,
-reactionary_demands;Reactionaries forced their way to power are an implementing an anti-western agenda.;;;;;;;;;;;;;;;;;;;;x,,,,,
+reactionary_demands_desc;Reactionaries forced their way to power are an implementing an anti-western agenda.;;;;;;;;;;;;;;;;;;;;x,,,,,
 integrating_colony;Integrating Colony;;;;;;;;;;;;;;;;;;;;x,,,,,
 integrating_colony_desc;We are working towards full integration of a big colony in our empire. This will require all of our efforts that could be directed to colonization.;;;;;;;;;;;;;;;;;;;;x,,,,,
 non_interventionism_trade_policy;Economic Non-Interventionism;;;;;;;;;;;;;;;;;;;;x,,,,,

@@ -2809,13 +2809,43 @@ country_event = {
 	option = {
 		name = "EVT325460OPTA"
 		any_owned = { add_province_modifier = { name = nationalist_agitation duration = 1825 } }
-		any_pop = { limit = { OR = { has_pop_culture = finnish has_pop_culture = swedish } } militancy = 2 consciousness = 3 }
-		RUS = { inherit = FIN }
+		random_country = {
+			limit = {
+				tag = FROM
+				primary_culture = russian
+			}
+			FIN = {
+				any_pop = {
+					limit = {
+						OR = {
+							has_pop_culture = finnish
+							has_pop_culture = swedish
+						}
+					}
+					militancy = 2
+					consciousness = 3
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+				is_culture_group = scandinavian
+			}
+			FIN = {
+				any_pop = {
+					limit = { has_pop_culture = finnish }
+					militancy = 2
+					consciousness = 3
+				}
+			}
+		}
+		FROM = { inherit = THIS }
 		ai_chance = {
 			factor = 90
 			modifier = {
 				factor = 0.3
-				NOT = { in_sphere = RUS }
+				NOT = { in_sphere = FROM }
 				part_of_sphere = yes
 			}
 		}
@@ -2823,16 +2853,17 @@ country_event = {
 	
 	option = {
 		name = "EVT325460OPTB"
-		relation = { who = RUS value = -400 }
-		RUS = { diplomatic_influence = { who = FIN value = -400 } }
-		RUS = { end_military_access = FIN }
-		leave_alliance = RUS
-		end_military_access = RUS
-		release_vassal = FIN
+		relation = { who = FROM value = -400 }
+		FROM = {
+			diplomatic_influence = { who = FIN value = -400 }
+			end_military_access = FIN 
+			leave_alliance = FIN
+			release_vassal = FIN
+		}
 		add_country_modifier = { name = small_country_draft duration = 720 }
 		political_reform = mandatory_service
 		set_country_flag = annex_to_master
-		RUS = {
+		FROM = {
 			casus_belli = {
 				target = FIN
 				type = make_puppet
@@ -2850,7 +2881,7 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 1.7
-				NOT = { in_sphere = RUS }
+				NOT = { in_sphere = FROM }
 				part_of_sphere = yes
 			}
 		}
