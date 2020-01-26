@@ -652,6 +652,7 @@ political_decisions = {
 			set_country_flag = italian_balkans
 			AUS_734 = { add_core = ITA } #South Tirol
 			AUS_736 = { add_core = ITA } #Istria
+			AUS_733 = { add_core = ITA } #Friuli
 			781 = { add_core = ITA } #Zadar
 		}
 	}
@@ -677,7 +678,7 @@ political_decisions = {
 			set_country_flag = conquest_adriatic_happened
 			AUS_780 = { add_core = ITA }
 			2582 = { add_core = ITA }
-			774 = { add_core = ITA }
+			#774 = { add_core = ITA }
 		}
 		
 		ai_will_do = {

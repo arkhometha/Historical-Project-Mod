@@ -182,6 +182,12 @@ political_decisions = {
 				AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
 				AND = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
 				AND = { exists = yes NOT = { has_country_flag = existing_country has_country_flag = ghost_country } }
+				AND = {
+					ai = yes
+					has_country_flag = surrender_sudan_on_lose
+					part_of_sphere = no
+					war = no
+				}
 				any_neighbor_country = {
 					ai = no
 					OR = {
@@ -195,6 +201,11 @@ political_decisions = {
 						AND = { government = fascist_dictatorship NOT = { has_country_flag = fascist_gov } }
 						AND = { government = bourgeois_dictatorship NOT = { has_country_flag = anarcho_liberal_gov } }
 						AND = { exists = yes NOT = { has_country_flag = existing_country has_country_flag = ghost_country } }
+						AND = {
+							has_country_flag = surrender_sudan_on_lose
+							part_of_sphere = no
+							war = no
+						}
 					}
 				}
 				any_greater_power = {
@@ -228,6 +239,26 @@ political_decisions = {
 			clr_country_flag = presidential_dictatorship_gov
 			clr_country_flag = fascist_gov
 			clr_country_flag = anarcho_liberal_gov
+			random_owned = {
+				limit = {
+					owner = {
+						ai = yes
+						has_country_flag = surrender_sudan_on_lose
+						part_of_sphere = no
+						war = no
+					}
+				}
+				owner = { clr_country_flag = surrender_sudan_on_lose }
+			}
+			any_neighbor_country = {
+				limit = {
+					ai = no
+					has_country_flag = surrender_sudan_on_lose
+					part_of_sphere = no
+					war = no
+				}
+				clr_country_flag = surrender_sudan_on_lose
+			}
 			random_owned = { limit = { owner = { government = theocracy } } owner = { set_country_flag = theocratic_government } }
 			random_owned = { limit = { owner = { government = proletarian_dictatorship } } owner = { set_country_flag = communist_gov } }
 			random_owned = { limit = { owner = { government = absolute_monarchy } } owner = { set_country_flag = absolute_monarchy_gov } }

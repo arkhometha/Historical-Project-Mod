@@ -920,15 +920,16 @@ country_event = {
 		name = "EVT955178OPTA"
 		prestige = -5
 		FROM = { country_event = 955179 }
-		ai_chance = { factor = 0.95 }
+		ai_chance = { factor = 0.75 }
 	}
 	
 	option = {
 		name = "EVT955178OPTB"
 		prestige = 5
 		FROM = { country_event = 955180 }
+		set_country_flag = surrender_sudan_on_lose
 		ai_chance = {
-			factor = 0.05
+			factor = 0.25
 			modifier = {
 				factor = 0
 				is_vassal = yes
@@ -1013,7 +1014,6 @@ country_event = {
 		name = "EVT955180OPTA"
 		relation = { who = FROM value = -400 }
 		diplomatic_influence = { who = FROM value = -400 }
-		
 		SUD = {
 			civilized = no
 			government = theocracy
@@ -1044,14 +1044,13 @@ country_event = {
 		}
 		casus_belli = {
 			target = FROM
-			type = acquire_any_state
+			type = add_to_sphere
 			months = 30
 		}
 		war = {
 			target = FROM
 			attacker_goal = {
-				casus_belli = acquire_any_state
-				state_province_id = 1837
+				casus_belli = add_to_sphere
 			}
 		}
 	}
