@@ -584,70 +584,16 @@ political_decisions = {
 				has_country_flag = shiite_country
 				has_country_flag = ibadi_country
 			}
-			OR = {
-				1151 = {
-					owned_by = THIS
-					NOT = { has_province_modifier = holy_city }
-				}
-				AND = {
-					has_country_flag = umar_pact
-					NOT = { has_country_modifier = jizya }
-					any_owned_province = {
-						any_pop = {
-							OR = {
-								has_pop_religion = catholic
-								has_pop_religion = protestant
-								has_pop_religion = mormon
-								has_pop_religion = orthodox
-								has_pop_religion = coptic
-								has_pop_religion = druze
-								has_pop_religion = jewish
-								has_pop_religion = yazidi
-								has_pop_religion = mahayana
-								has_pop_religion = gelugpa
-								has_pop_religion = theravada
-								has_pop_religion = hindu
-								has_pop_religion = shinto
-								has_pop_religion = sikh
-								has_pop_religion = animist
-							}
-						}
-					}
-				}
+			1151 = {
+				owned_by = THIS
+				NOT = { has_province_modifier = holy_city }
 			}
 		}
 		
 		allow = {
-			OR = {
-				1151 = {
-					owned_by = THIS
-					NOT = { has_province_modifier = holy_city }
-				}
-				AND = {
-					has_country_flag = umar_pact
-					NOT = { has_country_modifier = jizya }
-					any_owned_province = {
-						any_pop = {
-							OR = {
-								has_pop_religion = catholic
-								has_pop_religion = protestant
-								has_pop_religion = mormon
-								has_pop_religion = orthodox
-								has_pop_religion = coptic
-								has_pop_religion = druze
-								has_pop_religion = jewish
-								has_pop_religion = yazidi
-								has_pop_religion = mahayana
-								has_pop_religion = gelugpa
-								has_pop_religion = theravada
-								has_pop_religion = hindu
-								has_pop_religion = shinto
-								has_pop_religion = sikh
-								has_pop_religion = animist
-							}
-						}
-					}
-				}
+			1151 = {
+				owned_by = THIS
+				NOT = { has_province_modifier = holy_city }
 			}
 		}
 		
@@ -658,36 +604,6 @@ political_decisions = {
 					NOT = { has_province_modifier = holy_city }
 				}
 				add_province_modifier = { name = holy_city duration = -1 }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { has_country_modifier = jizya }
-						has_country_flag = umar_pact
-						any_owned_province = {
-							any_pop = {
-								OR = {
-									has_pop_religion = catholic
-									has_pop_religion = protestant
-									has_pop_religion = mormon
-									has_pop_religion = orthodox
-									has_pop_religion = coptic
-									has_pop_religion = druze
-									has_pop_religion = jewish
-									has_pop_religion = yazidi
-									has_pop_religion = mahayana
-									has_pop_religion = gelugpa
-									has_pop_religion = theravada
-									has_pop_religion = hindu
-									has_pop_religion = shinto
-									has_pop_religion = sikh
-									has_pop_religion = animist
-								}
-							}
-						}
-					}
-				}
-				owner = { add_country_modifier = { name = jizya duration = -1 } }
 			}
 		}
 		ai_will_do = {
