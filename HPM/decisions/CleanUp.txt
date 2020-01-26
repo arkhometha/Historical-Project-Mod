@@ -597,65 +597,6 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
-	
-	release_bukovina = {
-		potential = {
-			owns = 662
-			owns = 663
-			OR = {
-				tag = AUS
-				tag = KUK
-			}
-			NOT = { owns = 660 }	
-			NOT = { owns = 661 }
-			NOT = { owns = 953 }
-			NOT = { owns = 952 }
-			BKV = { exists = no }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			release = BKV
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	release_galicia_lodomeria = {
-		potential = {
-			OR = {
-				tag = AUS
-				tag = KUK
-			}
-			NOT = { exists = GLM }
-			any_owned_province = {
-				region = AUS_702
-				is_core = GLM
-			}
-			NOT = {
-				owns = 703
-				owns = 661
-				owns = 662
-				any_owned_province = {
-					OR = {
-						region = AUS_627
-						region = AUS_633
-					}
-				}
-			}
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			release = GLM
-		}
-		ai_will_do = { factor = 1 }
-	}
 
 	clean_up_crisis_tension = {
 		potential = {

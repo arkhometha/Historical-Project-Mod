@@ -1605,12 +1605,13 @@ political_decisions = {
 	russification_of_finland = {
 		picture = suomineito
 		potential = {
-			tag = RUS
+			OR = {
+				tag = RUS
+				tag = SCA
+			}
 			is_our_vassal = FIN
 			revolution_n_counterrevolution = 1
 			NOT = { has_country_flag = finland_russification }
-			NOT = { government = democracy }
-			NOT = { has_country_flag = Conceded_Finland }
 			NOT = { has_country_flag = finland_is_recognized }
 		}
 		
@@ -1618,12 +1619,29 @@ political_decisions = {
 			war = no
 			mass_politics = 1
 			is_our_vassal = FIN
+			NOT = { government = democracy }
 		}
 		
 		effect = {
 			set_country_flag = finland_russification
-			badboy = 1
-			FIN = { all_core = { add_core = RUS } }
+			random_owned = {
+				limit = {
+					owner = { tag = RUS }
+				}
+				owner = {
+					badboy = 1
+					FIN = { all_core = { add_core = RUS } }
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { tag = SCA }
+				}
+				owner = {
+					badboy = 3
+					FIN = { all_core = { add_core = SCA } }
+				}
+			}
 			FIN = { country_event = 325460 }
 		}
 

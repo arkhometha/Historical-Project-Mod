@@ -346,6 +346,7 @@ country_event = {
 		clr_country_flag = interning_central_african
 		clr_country_flag = interning_east_african
 		clr_country_flag = interning_southern_african
+		clr_country_flag = interning_finnougric
 		clr_country_flag = animists_run
 		##
 	}
@@ -848,6 +849,7 @@ country_event = {
 		clr_country_flag = interning_central_african
 		clr_country_flag = interning_east_african
 		clr_country_flag = interning_southern_african
+		clr_country_flag = interning_finnougric
 		clr_country_flag = animists_run
 		##
 	}
@@ -1265,6 +1267,7 @@ country_event = {
 		clr_country_flag = interning_central_african
 		clr_country_flag = interning_east_african
 		clr_country_flag = interning_southern_african
+		clr_country_flag = interning_finnougric
 		clr_country_flag = animists_run
 		##
 	}
@@ -1693,6 +1696,7 @@ country_event = {
 		clr_country_flag = interning_central_african
 		clr_country_flag = interning_east_african
 		clr_country_flag = interning_southern_african
+		clr_country_flag = interning_finnougric
 		clr_country_flag = animists_run
 		##
 	}
@@ -2185,6 +2189,7 @@ country_event = {
 		clr_country_flag = interning_central_african
 		clr_country_flag = interning_east_african
 		clr_country_flag = interning_southern_african
+		clr_country_flag = interning_finnougric
 		clr_country_flag = animists_run
 		##
 	}
@@ -2793,6 +2798,7 @@ country_event = {
 		clr_country_flag = interning_central_african
 		clr_country_flag = interning_east_african
 		clr_country_flag = interning_southern_african
+		clr_country_flag = interning_finnougric
 		clr_country_flag = animists_run
 		##
 	}

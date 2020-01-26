@@ -1698,9 +1698,9 @@ pan_nationalist_rebels = {
 				culture = swedish
 				culture = danish
 				culture = norwegian
-				culture = finnish
-				culture = icelandic
-				culture = sami
+				#culture = finnish
+				#culture = icelandic
+				#culture = sami
 			}
 			NOT = {
 				country = { has_global_flag = scandinavian_call_to_union }

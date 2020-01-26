@@ -223,6 +223,12 @@ scandinavian = {
 		last_names = { Arnórsson Ásgeirsson Benediktsson Bjarnasen Björnsson Eggers Eldjárn Hafstein Hansen
 		Hermannsson Johánesson Jónsson Magnússon Stefánsson Steinthosson Thórdarson Thórhallson Thorláksson Thurs }
 	}
+	union = SCA
+}
+
+finnougric = {
+	leader = european
+	unit = SwedishGC
 	finnish = { 
 		color = { 220 220 220}
 		first_names = { Aatto Akseli Aleksanteri Anders Aukusti Edvard Eemil Erkki Erno Fabian
@@ -242,6 +248,11 @@ scandinavian = {
 		last_names = {
 			Hætta Somby Turi Magga Dunfjeld Kvitfjell Kappfjell
 		}
+	}
+	ugrian = {  
+		color = {60 160 160}
+		first_names = { Aleksandr Dmitri Ivan Jukka Santeri Vladimir }
+		last_names = { Kokko Likhachev Mamin Minin Sibiriak  Tikhanov Zubov }
 	}
 }
 
@@ -704,11 +715,6 @@ east_slavic = {
 							Paskevich Petliura Radchenko Shevchenko Skoropadskyi Stefaniv Tymoshenko Vitovsky }
 			radicalism = 10
         }
-	ugrian = {  
-		color = {60 160 160}
-		first_names = { Aleksandr Dmitri Ivan Jukka Santeri Vladimir }
-		last_names = { Kokko Likhachev Mamin Minin Sibiriak  Tikhanov Zubov }
-	}
 }
 
 baltic = {
