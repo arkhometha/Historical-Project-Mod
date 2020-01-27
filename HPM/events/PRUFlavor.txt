@@ -832,10 +832,7 @@ country_event = {
 		608 = { remove_core = GER }
 		608 = { remove_core = PRU }
 		608 = { remove_core = NEH }
-		NEH = {
-			neutrality = yes
-			annex_to = SWI
-		}
+		SWI = { inherit = NEH }
 		
 		relation = { who = SWI value = 75 }
 		diplomatic_influence = { who = SWI value = 50 }
