@@ -865,7 +865,6 @@ political_decisions = {
 			diplomatic_influence = { who = SGM value = -400 }
 			release = SGM
 			leave_alliance = SGM
-			SGM = { neutrality = yes }
 			594 = {
 				remove_core = SGM
 				add_core = THIS

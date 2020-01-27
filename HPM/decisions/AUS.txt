@@ -42,11 +42,16 @@ political_decisions = {
 				}
 				remove_core = KRA
 			}
-			AUS_771 = { remove_core = HUN }
+			#AUS_771 = { remove_core = HUN }
+			624 = { remove_core = HUN }
+			778 = { remove_core = HUN }
 			HUN = {
 				all_core = { add_core = KUK }
 			}
 			CRO = {
+				all_core = { add_core = KUK }
+			}
+			GLM = {
 				all_core = { add_core = KUK }
 			}
 			any_pop = {
@@ -77,10 +82,10 @@ political_decisions = {
 						tag = NGF
 						tag = PRU
 						tag = GER
-						}
+					}
 					exists = yes
 					is_greater_power = yes
-					}
+				}
 				relation = { who = THIS value = 50 }
 			}
 		}
@@ -162,7 +167,10 @@ political_decisions = {
 
 		effect = {
 			HUN = {
-				all_core = { remove_core = KUK }
+				all_core = {
+					limit = { NOT = { province_id = 624 } }
+					remove_core = KUK
+				}
 			}
 			POL = {
 				all_core = { remove_core = KUK }
@@ -171,6 +179,8 @@ political_decisions = {
 				remove_core = KUK
 				add_core = AUS
 			}
+			AUS_780 = { remove_core = AUS }
+			2582 = { remove_core = AUS }
 			any_pop = {
 				limit = { has_pop_culture = hungarian }
 				militancy = 4
