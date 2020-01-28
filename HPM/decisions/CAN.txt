@@ -457,44 +457,44 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 		
-	claim_the_north = {
-		picture = whistlestop_tour
-		potential = {
-			owns = 17
-			OR = {
-				tag = ENG
-				tag = CAN
-				primary_culture = anglo_canadian
-			}
-			6 = { empty = yes }
-			OR = {
-				2630 = { empty = no }
-				2599 = { empty = no }
-			}
-		}
-		
-		allow = {
-		}
-		
-		effect = {
-			6 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			random_owned = {
-				limit = {
-					province_id = 6
-					any_neighbor_province = { is_core = CAN }
-				}
-			add_core = CAN
-			}
-			random_owned = {
-				limit = {
-					province_id = 6
-					any_neighbor_province = { is_core = RPL }
-				}
-			add_core = RPL
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
+#	claim_the_north = {
+#		picture = whistlestop_tour
+#		potential = {
+#			owns = 17
+#			OR = {
+#				tag = ENG
+#				tag = CAN
+#				primary_culture = anglo_canadian
+#			}
+#			6 = { empty = yes }
+#			OR = {
+#				2630 = { empty = no }
+#				2599 = { empty = no }
+#			}
+#		}
+#		
+#		allow = {
+#		}
+#		
+#		effect = {
+#			6 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+#			random_owned = {
+#				limit = {
+#					province_id = 6
+#					any_neighbor_province = { is_core = CAN }
+#				}
+#			add_core = CAN
+#			}
+#			random_owned = {
+#				limit = {
+#					province_id = 6
+#					any_neighbor_province = { is_core = RPL }
+#				}
+#			add_core = RPL
+#			}
+#		}
+#		ai_will_do = { factor = 1 }
+#	}
 	
 	found_ottawa = {
 		picture = bytown_1853
@@ -582,14 +582,34 @@ political_decisions = {
 		
 		allow = {
 			war = no
-			invention = mission_to_civilize
+			OR = {
+				invention = mission_to_civilize
+				OR = {
+					2630 = { empty = no }
+					2599 = { empty = no }
+				}
+			}
 		}
 		
 		effect = {
-			6 = {
-				secede_province = THIS
-				add_core = RPL
-				change_province_name = "Fort Selkirk"
+			6 = { 
+				secede_province = THIS 
+				any_pop = { literacy = -0.99 } 
+				change_province_name = "Fort Selkirk" 
+			}
+			random_owned = {
+				limit = {
+					province_id = 6
+					any_neighbor_province = { is_core = CAN }
+				}
+			add_core = CAN
+			}
+			random_owned = {
+				limit = {
+					province_id = 6
+					any_neighbor_province = { is_core = RPL }
+				}
+			add_core = RPL
 			}
 		}
 		ai_will_do = { factor = 1 }
