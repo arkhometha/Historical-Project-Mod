@@ -1,8 +1,10 @@
 owner = ENT
-controller = ENT
+
+controller = ENT
 add_core = ENT
 add_core = ARC
-trade_goods = cattle
+
+trade_goods = cattle
 life_rating = 35
 1861.1.1 = { 
 	railroad = 1 
