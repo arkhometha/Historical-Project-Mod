@@ -548,10 +548,10 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	establish_writting_system = {
+	establish_writing_system = {
 		picture = become_hausaland
 		potential = {
-			has_country_flag = lacking_writing_system
+			has_country_modifier = lacks_writing_system
 		}
 		
 		allow = {
