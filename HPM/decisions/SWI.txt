@@ -412,12 +412,6 @@ political_decisions = {
 		effect = {
 			badboy = 5
 			614 = { add_core = SWI }
-			any_country = {
-				limit = {
-				owns = 614
-				}
-				remove_accepted_culture = swiss
-			}
 		}
 		ai_will_do = { factor = 1 }
 	}
