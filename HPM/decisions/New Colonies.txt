@@ -2813,6 +2813,11 @@ political_decisions = {
 			ENG_2024 = { add_core = KNY }
 			
 			any_owned = {
+				limit = { is_core = KNY }
+				remove_core = ZAN
+			}
+			
+			any_owned = {
 				limit = {
 					OR = {
 						region = ENG_2026
@@ -2844,7 +2849,6 @@ political_decisions = {
 				clr_country_flag = shinto_country
 				clr_country_flag = sikh_country
 				clr_country_flag = animist_country
-				all_core = { remove_core = ZAN }
 			}
 			
 			random_owned = { limit = { owner = { has_country_flag = catholic_country } } KNY = { religion = catholic set_country_flag = catholic_country } }
@@ -3017,6 +3021,14 @@ political_decisions = {
 			ENG_2039 = { add_core = TNZ }
 			
 			any_owned = {
+				limit = { 
+					is_core = TNZ
+					NOT = { province_id = 2048 }
+				}
+				remove_core = ZAN
+			}
+			
+			any_owned = {
 				limit = {
 					OR = {
 						region = ENG_2036
@@ -3051,7 +3063,6 @@ political_decisions = {
 				clr_country_flag = shinto_country
 				clr_country_flag = sikh_country
 				clr_country_flag = animist_country
-				all_core = { remove_core = ZAN }
 			}
 			
 			random_owned = { limit = { owner = { has_country_flag = catholic_country } } TNZ = { religion = catholic set_country_flag = catholic_country } }
