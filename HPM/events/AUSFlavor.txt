@@ -1292,23 +1292,29 @@ country_event = {
 	id = 60055560
 	title = "EVTNAME60055560"
 	desc = "EVTDESC60055560"
+	picture = "vorarlberg"
 
 	trigger = {
 		OR = {
-			tag = AUS
-			tag = KUK
-			tag = DNB
+			AND = {
+				primary_culture = south_german
+				owns = 614
+				614 = { pop_majority_culture = swiss }
+			}
+			AND = {
+				primary_culture = swiss
+				owns = 614
+				614 = { pop_majority_culture = south_german }
+			}
 		}
-		war_with = SWI
-		accepted_culture = swiss
 	}
- 
+
 	mean_time_to_happen =  {
-		days = 1
+		months = 24
 	}
 
 	option = {
 		name = "EVTOPTA60055560" 
-		remove_accepted_culture = swiss
+		random_owned = { limit = { province_id = 614 } assimilate = yes }
 	}
 }

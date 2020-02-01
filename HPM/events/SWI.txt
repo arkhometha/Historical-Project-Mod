@@ -70,11 +70,6 @@ country_event = {
 	
 	option = {
 		name = "EVTOPT31321A"
-		any_country = {
-			limit = {
-				owns = 614
-			}
-			remove_accepted_culture = swiss
 		}
 		614 = {
 			remove_core = AUS
@@ -82,8 +77,8 @@ country_event = {
 			remove_core = DNB
 			add_core = SWI
 			secede_province = THIS
-			any_pop = { limit = { has_pop_culture = swiss } consciousness = -1 }
-			any_pop = { limit = { has_pop_culture = swiss } militancy = -1 }
+			any_pop = { limit = { has_pop_culture = south_german } consciousness = -1 }
+			any_pop = { limit = { has_pop_culture = south_german } militancy = -1 }
 		}
 		any_pop = { limit = { has_pop_religion = protestant } consciousness = 3 }
 		any_pop = { limit = { has_pop_religion = catholic } consciousness = -2 }
@@ -99,8 +94,8 @@ country_event = {
 		name = "EVTOPT31321B"
 		prestige = -10
 		614 = { 
-			any_pop = { limit = { has_pop_culture = swiss } militancy = 1 }
-			any_pop = { limit = { has_pop_culture = swiss } consciousness = 5 }
+			any_pop = { limit = { has_pop_culture = south_german } militancy = 1 }
+			any_pop = { limit = { has_pop_culture = south_german } consciousness = 5 }
 		}
 		any_pop = { limit = { has_pop_religion = protestant } consciousness = -2 }
 		any_pop = { limit = { has_pop_religion = catholic } consciousness = 3 }

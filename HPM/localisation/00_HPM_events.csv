@@ -1187,9 +1187,9 @@ EVTNAME60055559;The $COUNTRY_ADJ$ - $FROMCOUNTRY_ADJ$ Border Treaty;;;;;;;;;;;;x
 EVTDESC60055559;Diplomats of $FROMCOUNTRY$ approached us with a friendship and border treaty to settle outstanding issues between the perceived territory of our two countries. The treaty would include population exchanges, border delimitation and a treaty of friendship. If we sign this deal it will also show the world our will to settle issues diplomatically and our government respect of the will of the people.;;;;;;;;;;;;;;;;;;;;;;;x
 EVT60055559OPTA;This sounds like a good idea.;;;;;;;;;;;;;;;;;;;;;;;x
 EVT60055559OPTB;No deal.;;;;;;;;;;;;x
-EVTNAME60055560;Swiss nationalism.;;;;;;;;;;;;x
-EVTDESC60055560;As a result of our jingoistic policy towards Switzerland our Swiss subjects are no longer an accepted culture in our country.;;;;;;;;;;;;x
-EVTOPTA60055560;Damn.;;;;;;;;;;;;x
+EVTNAME60055560;Vorarlberg assimilates!;;;;;;;;;;;;x
+EVTDESC60055560;The people of Vorarlberg have embraced our culture!;;;;;;;;;;;;x
+EVTOPTA60055560;Excellent.;;;;;;;;;;;;x
 EVTNAME16458;The $COUNTRY_ADJ$ - $FROMCOUNTRY_ADJ$ Treaty;;;;;;;;;;;;x
 EVTDESC16458;The $FROMCOUNTRY_ADJ$ government approached us with a friendship treaty and a lease proposal for the Guantanamo Bay. While they appear amicable, their lease proposal is obviously part of their doctrine of influence over the Americas and they will not back down from it, even if we refuse their friendship.;;;;;;;;;;;;x
 EVTOPTA16458;We accept the proposal.;;;;;;;;;;;;x
