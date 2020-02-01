@@ -42,11 +42,16 @@ political_decisions = {
 				}
 				remove_core = KRA
 			}
-			AUS_771 = { remove_core = HUN }
+			#AUS_771 = { remove_core = HUN }
+			624 = { remove_core = HUN }
+			778 = { remove_core = HUN }
 			HUN = {
 				all_core = { add_core = KUK }
 			}
 			CRO = {
+				all_core = { add_core = KUK }
+			}
+			GLM = {
 				all_core = { add_core = KUK }
 			}
 			any_pop = {
@@ -77,10 +82,10 @@ political_decisions = {
 						tag = NGF
 						tag = PRU
 						tag = GER
-						}
+					}
 					exists = yes
 					is_greater_power = yes
-					}
+				}
 				relation = { who = THIS value = 50 }
 			}
 		}
@@ -162,7 +167,10 @@ political_decisions = {
 
 		effect = {
 			HUN = {
-				all_core = { remove_core = KUK }
+				all_core = {
+					limit = { NOT = { province_id = 624 } }
+					remove_core = KUK
+				}
 			}
 			POL = {
 				all_core = { remove_core = KUK }
@@ -171,6 +179,8 @@ political_decisions = {
 				remove_core = KUK
 				add_core = AUS
 			}
+			AUS_780 = { remove_core = AUS }
+			2582 = { remove_core = AUS }
 			any_pop = {
 				limit = { has_pop_culture = hungarian }
 				militancy = 4
@@ -353,8 +363,24 @@ political_decisions = {
 					NOT = { owns = 638 } #Slovakia
 					NOT = { owns = 661 } #Western Transylvania
 				}
+				AND = {
+					any_owned_province = {
+						region = AUS_702
+						is_core = GLM
+					}
+					NOT = {
+						owns = 703
+						owns = 661
+						owns = 662
+						any_owned_province = {
+							OR = {
+								region = AUS_627
+								region = AUS_633
+							}
+						}
+					}
+				}
 			}
-				
 			ai = yes
 			NOT = {
 				exists = GLM
@@ -368,7 +394,7 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = released_galicia
-			prestige = 10
+			#prestige = 10
 			any_owned = {
 				limit = { is_core = GLM }
 				secede_province = GLM
@@ -382,6 +408,34 @@ political_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+	}
+	
+	release_bukovina = {
+		potential = {
+			owns = 662
+			owns = 663
+			OR = {
+				tag = AUS
+				tag = KUK
+			}
+			NOT = { owns = 660 }	
+			NOT = { owns = 661 }
+			NOT = { owns = 953 }
+			NOT = { owns = 952 }
+			BKV = { exists = no }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			release_vassal = BKV
+			create_alliance = BKV
+			diplomatic_influence = { who = BKV value = 200 }
+			relation = { who = BKV value = 200 }
+		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	release_silesia = {

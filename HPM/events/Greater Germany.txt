@@ -780,19 +780,25 @@ country_event = {
 		random_country = {
 			limit = {
 				OR = {
-				tag = KUK
-				tag = FROM
+					tag = KUK
+					tag = FROM
 				}
 			}
 			all_core = {
-				limit = { is_core = HUN }
+				limit = {
+					is_core = HUN
+					NOT = { province_id = 623 }
+				}
 				remove_core = KUK
 			}
 		}
 		FROM = {
 			all_core = {
 				limit = {
-					NOT = { is_core = HUN }
+					OR = {
+						NOT = { is_core = HUN }
+						region = AUS_623
+					}
 				}
 				add_core = GER
 			}
@@ -852,14 +858,10 @@ country_event = {
 	option = {
 		name = "EVT31516OPTB"
 		badboy = 20
-		FROM = {
-			all_core = {
-				limit = {
-					NOT = { is_core = HUN }
-				}
-				add_core = GER
-			}
-		}
+		AUS_612 = { add_core = GER remove_core = HUN }
+		AUS_734 = { add_core = GER remove_core = HUN }
+		AUS_613 = { add_core = GER remove_core = HUN }
+		AUS_619 = { add_core = GER remove_core = HUN }
 		any_country = {
 			limit = {
 				is_greater_power = yes
@@ -1021,18 +1023,10 @@ country_event = {
 		badboy = 20
 		diplomatic_influence = { who = FROM value = -400 }
 		relation = { who = FROM value = -400 }
-		FROM = {
-			all_core = {
-				limit = {
-					OR = {
-						culture = south_german
-						culture = north_german
-					}
-					NOT = { is_core = HUN }
-				}
-				add_core = GER
-			}
-		}
+		AUS_612 = { add_core = GER remove_core = HUN }
+		AUS_734 = { add_core = GER remove_core = HUN }
+		AUS_613 = { add_core = GER remove_core = HUN }
+		AUS_619 = { add_core = GER remove_core = HUN }
 		add_casus_belli = {
 			target = FROM
 			type = humiliate
@@ -1141,14 +1135,10 @@ country_event = {
 		name = "EVT31519OPTA"
 		prestige = 10
 		badboy = 20
-		FROM = {
-			all_core = {
-				limit = {
-					NOT = { is_core = HUN }
-				}
-				add_core = GER
-			}
-		}
+		AUS_612 = { add_core = GER remove_core = HUN }
+		AUS_734 = { add_core = GER remove_core = HUN }
+		AUS_613 = { add_core = GER remove_core = HUN }
+		AUS_619 = { add_core = GER remove_core = HUN }
 		FROM = { country_event = 31520 }
 		any_country = {
 			limit = {
@@ -1258,9 +1248,42 @@ country_event = {
 				all_core = { remove_core = KUK }
 			}
 		}
+		
+		any_country = {
+			limit = {
+				tag = HUN
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = no
+				is_cultural_union = no
+			}
+			country_event = 31517
+		}
+		any_country = {
+			limit = {
+				OR = {
+					tag = CRO
+					tag = SLO
+					tag = SLV
+					tag = BOH
+				}
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = no
+				is_cultural_union = no
+			}
+			country_event = 31517
+		}
 		any_country = {
 			limit = {
 				NOT = { is_culture_group = germanic }
+				NOT = { is_culture_group = italian }
 				NOT = { tag = HUN }
 				any_core = {
 					owned_by = THIS
@@ -1274,7 +1297,8 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				tag = HUN
+				is_culture_group = italian
+				NOT = { tag = HUN }
 				any_core = {
 					owned_by = THIS
 					NOT = { is_core = GER }
@@ -1359,6 +1383,69 @@ country_event = {
 			}
 			country_event = 31522
 		}
+		
+		
+		any_country = {
+			limit = {
+				tag = HUN
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = no
+				is_cultural_union = no
+			}
+			country_event = 31526
+		}
+		any_country = {
+			limit = {
+				OR = {
+					tag = CRO
+					tag = SLO
+					tag = SLV
+					tag = BOH
+				}
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = no
+				is_cultural_union = no
+			}
+			country_event = 31526
+		}
+		any_country = {
+			limit = {
+				NOT = { is_culture_group = germanic }
+				NOT = { is_culture_group = italian }
+				NOT = { tag = HUN }
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = no
+				is_cultural_union = no
+			}
+			country_event = 31526
+		}
+		any_country = {
+			limit = {
+				is_culture_group = italian
+				NOT = { tag = HUN }
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = no
+				is_cultural_union = no
+			}
+			country_event = 31526
+		}
+		
 		any_country = {
 			limit = {
 				any_core = { owned_by = THIS }

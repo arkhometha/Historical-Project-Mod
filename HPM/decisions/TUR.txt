@@ -27,6 +27,8 @@ political_decisions = {
 			set_country_flag = secularized_muslim_society
 			add_country_modifier = {  name = tanzimat_land_reform duration = 365 }
 			remove_country_modifier = ottoman_oppression
+			remove_country_modifier = jizya
+			clr_country_flag = umar_pact
 			political_reform = open_borders
 			random_owned = {
 				limit = { owner = { debt_law = serfdom } }

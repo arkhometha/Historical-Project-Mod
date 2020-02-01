@@ -185,6 +185,14 @@ jacquard_power_loom = {
 			factor = 2
 			invention = insurance_companies
 		}
+		modifier = {
+			factor = -10
+			NOT = {
+				mechanical_production = 1
+				piston_steam_engine = 1
+				invention = industrial_furniture_production
+			}
+		}
 	}
 	effect = {
 		rgo_goods_output = {
@@ -193,6 +201,7 @@ jacquard_power_loom = {
 		rgo_goods_output = {
 			silk = 0.2
 		}
+		activate_building = luxury_clothes_factory
 		#factory_goods_output = {
 		#	fabric = 0.05 
 		#}
@@ -924,7 +933,7 @@ advanced_ore_roasting_processes = {
 			factor = -10
 			any_owned_province = {
 				controlled_by = THIS
-				trade_goods = coal
+				trade_goods = iron
 				unemployment_by_type = { value = 0.05 type = labourers }
 				province_control_days = 1825
 			}
@@ -933,7 +942,7 @@ advanced_ore_roasting_processes = {
 			factor = -1
 			any_owned_province = {
 				controlled_by = THIS
-				trade_goods = coal
+				trade_goods = iron
 				unemployment_by_type = { value = 0.01 type = labourers }
 			}
 		}
@@ -941,7 +950,7 @@ advanced_ore_roasting_processes = {
 			factor = -1
 			any_owned_province = {
 				controlled_by = THIS
-				trade_goods = coal
+				trade_goods = iron
 				unemployment_by_type = { value = 0.03 type = labourers }
 			}
 		}
@@ -950,7 +959,7 @@ advanced_ore_roasting_processes = {
 			any_neighbor_country = {
 				is_greater_power = no
 				any_owned_province = {
-					trade_goods = coal
+					trade_goods = iron
 					unemployment_by_type = { value = 0.01 type = labourers }
 					province_control_days = 365
 				}
@@ -960,7 +969,7 @@ advanced_ore_roasting_processes = {
 			factor = -1
 			any_greater_power = {
 				any_owned_province = {
-					trade_goods = coal
+					trade_goods = iron
 					unemployment_by_type = { value = 0.01 type = labourers }
 					province_control_days = 365
 				}
@@ -989,7 +998,7 @@ advanced_ore_grinding_processes = {
 			factor = -10
 			any_owned_province = {
 				controlled_by = THIS
-				trade_goods = coal
+				trade_goods = iron
 				unemployment_by_type = { value = 0.05 type = labourers }
 				province_control_days = 1825
 			}
@@ -998,7 +1007,7 @@ advanced_ore_grinding_processes = {
 			factor = -1
 			any_owned_province = {
 				controlled_by = THIS
-				trade_goods = coal
+				trade_goods = iron
 				unemployment_by_type = { value = 0.01 type = labourers }
 			}
 		}
@@ -1006,7 +1015,7 @@ advanced_ore_grinding_processes = {
 			factor = -1
 			any_owned_province = {
 				controlled_by = THIS
-				trade_goods = coal
+				trade_goods = iron
 				unemployment_by_type = { value = 0.03 type = labourers }
 			}
 		}
@@ -1015,7 +1024,7 @@ advanced_ore_grinding_processes = {
 			any_neighbor_country = {
 				is_greater_power = no
 				any_owned_province = {
-					trade_goods = coal
+					trade_goods = iron
 					unemployment_by_type = { value = 0.01 type = labourers }
 					province_control_days = 365
 				}
@@ -1025,7 +1034,7 @@ advanced_ore_grinding_processes = {
 			factor = -1
 			any_greater_power = {
 				any_owned_province = {
-					trade_goods = coal
+					trade_goods = iron
 					unemployment_by_type = { value = 0.01 type = labourers }
 					province_control_days = 365
 				}
@@ -1054,7 +1063,7 @@ advanced_ore_smelting_processes = {
 			factor = -10
 			any_owned_province = {
 				controlled_by = THIS
-				trade_goods = coal
+				trade_goods = iron
 				unemployment_by_type = { value = 0.05 type = labourers }
 				province_control_days = 1825
 			}
@@ -1063,7 +1072,7 @@ advanced_ore_smelting_processes = {
 			factor = -1
 			any_owned_province = {
 				controlled_by = THIS
-				trade_goods = coal
+				trade_goods = iron
 				unemployment_by_type = { value = 0.01 type = labourers }
 			}
 		}
@@ -1071,7 +1080,7 @@ advanced_ore_smelting_processes = {
 			factor = -1
 			any_owned_province = {
 				controlled_by = THIS
-				trade_goods = coal
+				trade_goods = iron
 				unemployment_by_type = { value = 0.03 type = labourers }
 			}
 		}
@@ -1080,7 +1089,7 @@ advanced_ore_smelting_processes = {
 			any_neighbor_country = {
 				is_greater_power = no
 				any_owned_province = {
-					trade_goods = coal
+					trade_goods = iron
 					unemployment_by_type = { value = 0.01 type = labourers }
 					province_control_days = 365
 				}
@@ -1090,7 +1099,7 @@ advanced_ore_smelting_processes = {
 			factor = -1
 			any_greater_power = {
 				any_owned_province = {
-					trade_goods = coal
+					trade_goods = iron
 					unemployment_by_type = { value = 0.01 type = labourers }
 					province_control_days = 365
 				}
@@ -1122,7 +1131,7 @@ bessemer_steel = {
 	}
 	effect = {
 		factory_goods_throughput = {
-			steel = 0.1
+			steel = 0.3
 		}
 	}
 }

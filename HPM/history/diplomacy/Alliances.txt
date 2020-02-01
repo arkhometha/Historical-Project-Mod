@@ -1,3 +1,53 @@
+#South German Alliances
+alliance = {
+	first = BAV
+	second = BAD
+	start_date = 1836.1.1 #1386.9.5
+	end_date = 1936.1.1
+}
+
+alliance = {
+	first = BAV
+	second = WUR
+	start_date = 1836.1.1 #1386.9.5
+	end_date = 1936.1.1
+}
+
+alliance = {
+	first = BAD
+	second = WUR
+	start_date = 1836.1.1 #1386.9.5
+	end_date = 1936.1.1
+}
+
+alliance = {
+	first = AUS
+	second = SAX
+	start_date = 1836.1.1 #1386.9.5
+	end_date = 1936.1.1
+}
+
+alliance = {
+	first = AUS
+	second = BAD
+	start_date = 1836.1.1 #1386.9.5
+	end_date = 1936.1.1
+}
+
+alliance = {
+	first = AUS
+	second = BAV
+	start_date = 1836.1.1 #1386.9.5
+	end_date = 1936.1.1
+}
+
+alliance = {
+	first = AUS
+	second = WUR
+	start_date = 1836.1.1 #1386.9.5
+	end_date = 1936.1.1
+}
+
 #Anglo-Portuguese Alliance
 alliance = {
 	first = ENG
@@ -15,7 +65,7 @@ alliance = {
 }
 
 
-#Circassia and Caucasiam Imamate
+#Circassia and Caucasian Imamate
 alliance = {
 	first = SWI
 	second = NEH
@@ -23,7 +73,7 @@ alliance = {
 	end_date = 1857.1.1
 }
 
-#Circassia and Caucasiam Imamate
+#Circassia and Caucasian Imamate
 alliance = {
 		first = CIR 
 		second = DAG 
@@ -31,7 +81,7 @@ alliance = {
 		end_date = 1838.1.1
 }
 	
-#Morrocan-Algerian
+#Moroccan-Algerian
 alliance = {
 		first = MOR 
 		second = ALD 

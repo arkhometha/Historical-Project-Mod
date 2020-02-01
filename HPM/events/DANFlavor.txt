@@ -1079,16 +1079,7 @@ country_event = {
 	immediate = { set_country_flag = danish_india_deal }
 	
 	option = {
-		name = "EVTOPTA36224"
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { money = 20000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
-				} 
-			}
-			owner = { set_variable = { which = owed_cash_money value = 20 } }
-		}
+		name = "EVTOPTA36224" #Maybe increase later
 		random_owned = {
 			limit = {
 				owner = {
@@ -1097,6 +1088,15 @@ country_event = {
 				} 
 			}
 			owner = { change_variable = { which = owed_cash_money value = 20 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { money = 20000 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+				} 
+			}
+			owner = { set_variable = { which = owed_cash_money value = 20 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 20000 } }

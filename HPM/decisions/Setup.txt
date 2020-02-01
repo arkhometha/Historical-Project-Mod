@@ -307,6 +307,10 @@ political_decisions = {
 			745 = { change_province_name = "Livorno" }
 			749 = { change_province_name = "Roma" }
 			754 = { change_province_name = "Napoli" }
+			387 = { change_province_name = "Brussel" }
+			388 = { change_province_name = "Brugge" }
+			389 = { change_province_name = "Gent" }
+			390 = { change_province_name = "Antwerpen" }
 		}
 		
 		ai_will_do = { factor = 0 }
@@ -1917,6 +1921,19 @@ political_decisions = {
 			any_country = { limit = { exists = yes civilized = yes is_greater_power = no is_secondary_power = no number_of_states = 2 } treasury = 10000 }
 			any_country = { limit = { exists = yes civilized = yes is_greater_power = no is_secondary_power = no NOT = { number_of_states = 2 } } treasury = 5000 }
 			any_country = { limit = { exists = yes civilized = no NOT = { tag = QNG } } treasury = 2500 }
+			#########Literate countries were usually well developed#########
+			
+			any_country = {
+				limit = {
+					exists = yes
+					literacy = 0.75
+				}
+				treasury = 10000
+			}
+			
+			#########Literate countries were usually well developed#########
+			
+			
 			#########Countries that start at war will get a war-chest#########
 			
 			any_country = {
@@ -2580,6 +2597,50 @@ political_decisions = {
 			
 			any_country = {
 				limit = {
+					OR = {
+						has_country_flag = sunni_country
+						has_country_flag = shiite_country
+						has_country_flag = ibadi_country
+					}
+				}
+				set_country_flag = umar_pact
+			}
+		
+			any_country = {
+				limit = {
+					exists = yes
+					OR = {
+						has_country_flag = sunni_country
+						has_country_flag = shiite_country
+						has_country_flag = ibadi_country
+					}
+					any_owned_province = {
+						any_pop = {
+							OR = {
+								has_pop_religion = catholic
+								has_pop_religion = protestant
+								has_pop_religion = mormon
+								has_pop_religion = orthodox
+								has_pop_religion = coptic
+								has_pop_religion = druze
+								has_pop_religion = jewish
+								has_pop_religion = yazidi
+								has_pop_religion = mahayana
+								has_pop_religion = gelugpa
+								has_pop_religion = theravada
+								has_pop_religion = hindu
+								has_pop_religion = shinto
+								has_pop_religion = sikh
+								has_pop_religion = animist
+							}
+						}
+					}
+				}
+				add_country_modifier = { name = jizya duration = -1 }
+			}
+			
+			any_country = {
+				limit = {
 					exists = yes
 					civilized = no
 					foreign_weapons = yes_foreign_weapons
@@ -2731,6 +2792,8 @@ political_decisions = {
 			NOT = { month = 10 }
 			NOT = {
 				has_country_modifier = picking_personality
+				has_country_flag = ghost_country
+				tag = TMT
 			}
 		}
 		

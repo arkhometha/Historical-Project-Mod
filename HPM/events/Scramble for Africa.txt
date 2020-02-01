@@ -920,15 +920,16 @@ country_event = {
 		name = "EVT955178OPTA"
 		prestige = -5
 		FROM = { country_event = 955179 }
-		ai_chance = { factor = 0.95 }
+		ai_chance = { factor = 0.75 }
 	}
 	
 	option = {
 		name = "EVT955178OPTB"
 		prestige = 5
 		FROM = { country_event = 955180 }
+		set_country_flag = surrender_sudan_on_lose
 		ai_chance = {
-			factor = 0.05
+			factor = 0.25
 			modifier = {
 				factor = 0
 				is_vassal = yes
@@ -965,19 +966,19 @@ country_event = {
 			limit = {
 				owner = {
 					NOT = { money = 50000 }
-					NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					check_variable = { which = owed_cash_money value = 9 }
 				} 
 			}
-			owner = { set_variable = { which = owed_cash_money value = 50 } }
+			owner = { change_variable = { which = owed_cash_money value = 50 } }
 		}
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { money = 50000 }
-					check_variable = { which = owed_cash_money value = 9 }
+					NOT = { check_variable = { which = owed_cash_money value = 1 } }
 				} 
 			}
-			owner = { change_variable = { which = owed_cash_money value = 50 } }
+			owner = { set_variable = { which = owed_cash_money value = 50 } }
 		}
 		random_owned = {
 			limit = { owner = { money = 50000 } }
@@ -1013,7 +1014,6 @@ country_event = {
 		name = "EVT955180OPTA"
 		relation = { who = FROM value = -400 }
 		diplomatic_influence = { who = FROM value = -400 }
-		
 		SUD = {
 			civilized = no
 			government = theocracy
@@ -1044,14 +1044,13 @@ country_event = {
 		}
 		casus_belli = {
 			target = FROM
-			type = acquire_any_state
+			type = add_to_sphere
 			months = 30
 		}
 		war = {
 			target = FROM
 			attacker_goal = {
-				casus_belli = acquire_any_state
-				state_province_id = 1837
+				casus_belli = add_to_sphere
 			}
 		}
 	}
@@ -1154,15 +1153,7 @@ country_event = {
 		treasury = 100000
 		random_country = {
 			limit = { tag = FROM }
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 100000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
-					} 
-				}
-				owner = { set_variable = { which = owed_cash_money value = 100 } }
-			}
+			
 			random_owned = {
 				limit = {
 					owner = {
@@ -1172,6 +1163,17 @@ country_event = {
 				}
 				owner = { change_variable = { which = owed_cash_money value = 100 } }
 			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { money = 100000 }
+						NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					} 
+				}
+				owner = { set_variable = { which = owed_cash_money value = 100 } }
+			}
+			
 			random_owned = {
 				limit = { owner = { money = 100000 } }
 				owner = { treasury = -100000 }
@@ -1225,15 +1227,7 @@ country_event = {
 				tag = FROM
 				has_country_flag = paying_for_senegal
 			}
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 200000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
-					} 
-				}
-				owner = { set_variable = { which = owed_cash_money value = 200 } }
-			}
+			
 			random_owned = {
 				limit = {
 					owner = {
@@ -1243,6 +1237,17 @@ country_event = {
 				}
 				owner = { change_variable = { which = owed_cash_money value = 200 } }
 			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { money = 200000 }
+						NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					} 
+				}
+				owner = { set_variable = { which = owed_cash_money value = 200 } }
+			}
+			
 			random_owned = {
 				limit = { owner = { money = 200000 } }
 				owner = { treasury = -200000 }
@@ -1413,15 +1418,7 @@ country_event = {
 				tag = FROM
 				has_country_flag = paying_for_senegal
 			}
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 200000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
-					} 
-				}
-				owner = { set_variable = { which = owed_cash_money value = 200 } }
-			}
+			
 			random_owned = {
 				limit = {
 					owner = {
@@ -1431,6 +1428,17 @@ country_event = {
 				}
 				owner = { change_variable = { which = owed_cash_money value = 200 } }
 			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { money = 200000 }
+						NOT = { check_variable = { which = owed_cash_money value = 1 } }
+					} 
+				}
+				owner = { set_variable = { which = owed_cash_money value = 200 } }
+			}
+			
 			random_owned = {
 				limit = { owner = { money = 200000 } }
 				owner = { treasury = -200000 }

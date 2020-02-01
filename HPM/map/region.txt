@@ -684,11 +684,11 @@ ENG_1321 = { 1321 1322 1323 1324 1325 2128 } #Ceylon
 
 TIB_1591 = { 1587 1591 1592 1589 1588 1590 1593 } #Himalaya
 
-BUR_1330 = { 1330 1331 1332 1345 } #Pegu
+BUR_1330 = { 1330 1331 1332 1345 1336 1337} #Pegu
 
-BUR_1334 = { 1335 1336 1337 1333 1338 } #Former Shan States - Yadanabon - Mandalay
+BUR_1334 = { 1335 1333 1338 1340 } #Former Shan States - Yadanabon - Mandalay
 
-BUR_1339 = { 1334 1339 1341 1342 1340 } #Kachin
+BUR_1339 = { 1334 1339 1341 1342 } #Kachin
 
 #SIA_1355 = { } #Shan
 

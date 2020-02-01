@@ -2457,7 +2457,7 @@
 967 = {
 	farmers = {
 		culture = armenian
-		religion = orthodox
+		religion = coptic
 		size = 900
 	}
 	
