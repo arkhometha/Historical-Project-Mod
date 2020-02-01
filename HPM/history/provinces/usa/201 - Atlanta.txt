@@ -1,7 +1,10 @@
 owner = USA
-controller = USAadd_core = USA
+controller = USA
+add_core = USA
 trade_goods = cotton
-life_rating = 35party_loyalty = {
+life_rating = 35
+
+party_loyalty = {
 	ideology = conservative
 	loyalty_value = 12
 }
@@ -22,9 +25,18 @@ state_building = {
 	upgrade = yes
 }
 
-1861.1.1 = {	party_loyalty = {	ideology = conservative	loyalty_value = 12}
+1861.1.1 = {
+	party_loyalty = {
+	ideology = conservative
+	loyalty_value = 12
+}
 	controller = CSA
 	owner = CSA
-	add_core = CSA	state_building = {		level = 1		building = small_arms_factory		upgrade = yes	}
+	add_core = CSA
+	state_building = {
+		level = 1
+		building = small_arms_factory
+		upgrade = yes
+	}
 }
 1861.1.1 = { railroad = 1 }
