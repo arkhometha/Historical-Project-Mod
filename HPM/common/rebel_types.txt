@@ -28,7 +28,7 @@ reactionary_rebels = {
 		prussian_constitutionalism = absolute_monarchy
 		hms_government = absolute_monarchy
 		democracy = presidential_dictatorship
-		theocracy = absolute_monarchy
+		theocracy = theocracy
 	}
 	
 	
@@ -3904,7 +3904,7 @@ unciv_reactionary_rebels = {
 		prussian_constitutionalism = absolute_monarchy
 		hms_government = absolute_monarchy
 		democracy = absolute_monarchy
-		theocracy = absolute_monarchy
+		theocracy = theocracy
 	}
 	
 	defection = none					# Will defect to the "best" alternative.
