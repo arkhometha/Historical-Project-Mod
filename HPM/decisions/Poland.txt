@@ -429,7 +429,10 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = galicia_annex_krakow
-			all_core = { remove_core = THIS }
+			all_core = {
+				remove_core = THIS
+				add_core = GLM
+			}
 			random_country = {
 				limit = {
 					tag = GLM

@@ -133,26 +133,49 @@ country_event = {
 		set_country_flag = austrian_destiny
 		set_country_flag = austrian_greater_germany
 		badboy = 20
-		all_core = {
+		AUS_612 = { add_core = GER remove_core = HUN }
+		AUS_734 = { add_core = GER remove_core = HUN }
+		AUS_613 = { add_core = GER remove_core = HUN }
+		AUS_619 = { add_core = GER remove_core = HUN }
+		AUS_733 = { remove_core = AUS remove_core = KUK }
+		AUS_736 = { remove_core = AUS remove_core = KUK }
+		AUS_768 = { remove_core = AUS remove_core = KUK }
+		random_country = {
 			limit = {
-				OR = {
-					NOT = { is_core = HUN }
-					province_id = 624
-					province_id = 778
+				owns = 625
+				625 = {
+					OR = {
+						is_core = AUS
+						is_core = KUK
+					}
 				}
 			}
-			add_core = GER
+			AUS_625 = { add_core = GER } #Bohemia
 		}
-		any_owned = {
+		random_country = {
 			limit = {
-				is_core = HUN
-				OR = {
-					province_id = 624
-					province_id = 778
+				owns = 689
+				689 = {
+					OR = {
+						is_core = AUS
+						is_core = KUK
+					}
 				}
 			}
-			remove_core = HUN
-		}	
+			AUS_627 = { add_core = GER } #Lower Silesia
+		}
+		random_country = {
+			limit = {
+				owns = 629
+				629 = {
+					OR = {
+						is_core = AUS
+						is_core = KUK
+					}
+				}
+			}
+			AUS_626 = { add_core = GER } #Sudetes
+		}
 		any_pop = {
 			limit = {
 				is_primary_culture = no
@@ -162,7 +185,70 @@ country_event = {
 			consciousness = 5
 			militancy = 5
 		}
-		any_country = {
+		
+		any_country = { #Returns cores to existing countries
+			limit = {
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = yes
+			}
+			country_event = 31717
+		}
+		
+		any_country = { #Frees greater Hungary and vassalizes them
+			limit = {
+				tag = HUN
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = no
+				is_cultural_union = no
+			}
+			country_event = 31511
+		}
+		
+		any_country = { #Goes through each of the other major nations in Austria, free and vassalize them
+			limit = {
+				OR = {
+					tag = BOS
+					tag = CRO
+					tag = SLO
+					tag = SLV
+					tag = BOH
+				}
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = no
+				is_cultural_union = no
+			}
+			country_event = 31511
+		}
+		
+		any_country = { #Goes through each of the other non-italian nations in Austria, free and vassalize them
+			limit = {
+				NOT = { is_culture_group = germanic }
+				NOT = { is_culture_group = italian }
+				NOT = { tag = HUN }
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = no
+				is_cultural_union = no
+			}
+			country_event = 31511
+		}
+		
+		any_country = { #Legacy code. Goes through each of the other nations in Austria, free and vassalize them
 			limit = {
 				NOT = { is_culture_group = germanic }
 				NOT = { tag = HUN }
@@ -176,19 +262,7 @@ country_event = {
 			}
 			country_event = 31511
 		}
-		any_country = {
-			limit = {
-				tag = HUN
-				any_core = {
-					owned_by = THIS
-					NOT = { is_core = GER }
-					is_colonial = no
-				}
-				exists = no
-				is_cultural_union = no
-			}
-			country_event = 31511
-		}
+
 		any_country = {
 			limit = {
 				is_greater_power = yes
@@ -862,6 +936,45 @@ country_event = {
 		AUS_734 = { add_core = GER remove_core = HUN }
 		AUS_613 = { add_core = GER remove_core = HUN }
 		AUS_619 = { add_core = GER remove_core = HUN }
+		AUS_733 = { remove_core = AUS remove_core = KUK }
+		AUS_736 = { remove_core = AUS remove_core = KUK }
+		AUS_768 = { remove_core = AUS remove_core = KUK }
+		random_country = {
+			limit = {
+				owns = 625
+				625 = {
+					OR = {
+						is_core = AUS
+						is_core = KUK
+					}
+				}
+			}
+			AUS_625 = { add_core = GER } #Bohemia
+		}
+		random_country = {
+			limit = {
+				owns = 689
+				689 = {
+					OR = {
+						is_core = AUS
+						is_core = KUK
+					}
+				}
+			}
+			AUS_627 = { add_core = GER } #Lower Silesia
+		}
+		random_country = {
+			limit = {
+				owns = 629
+				629 = {
+					OR = {
+						is_core = AUS
+						is_core = KUK
+					}
+				}
+			}
+			AUS_626 = { add_core = GER } #Sudetes
+		}
 		any_country = {
 			limit = {
 				is_greater_power = yes
@@ -1027,6 +1140,45 @@ country_event = {
 		AUS_734 = { add_core = GER remove_core = HUN }
 		AUS_613 = { add_core = GER remove_core = HUN }
 		AUS_619 = { add_core = GER remove_core = HUN }
+		AUS_733 = { remove_core = AUS remove_core = KUK }
+		AUS_736 = { remove_core = AUS remove_core = KUK }
+		AUS_768 = { remove_core = AUS remove_core = KUK }
+		random_country = {
+			limit = {
+				owns = 625
+				625 = {
+					OR = {
+						is_core = AUS
+						is_core = KUK
+					}
+				}
+			}
+			AUS_625 = { add_core = GER } #Bohemia
+		}
+		random_country = {
+			limit = {
+				owns = 689
+				689 = {
+					OR = {
+						is_core = AUS
+						is_core = KUK
+					}
+				}
+			}
+			AUS_627 = { add_core = GER } #Lower Silesia
+		}
+		random_country = {
+			limit = {
+				owns = 629
+				629 = {
+					OR = {
+						is_core = AUS
+						is_core = KUK
+					}
+				}
+			}
+			AUS_626 = { add_core = GER } #Sudetes
+		}
 		add_casus_belli = {
 			target = FROM
 			type = humiliate
@@ -1139,6 +1291,45 @@ country_event = {
 		AUS_734 = { add_core = GER remove_core = HUN }
 		AUS_613 = { add_core = GER remove_core = HUN }
 		AUS_619 = { add_core = GER remove_core = HUN }
+		AUS_733 = { remove_core = AUS remove_core = KUK }
+		AUS_736 = { remove_core = AUS remove_core = KUK }
+		AUS_768 = { remove_core = AUS remove_core = KUK }
+		random_country = {
+			limit = {
+				owns = 625
+				625 = {
+					OR = {
+						is_core = AUS
+						is_core = KUK
+					}
+				}
+			}
+			AUS_625 = { add_core = GER } #Bohemia
+		}
+		random_country = {
+			limit = {
+				owns = 689
+				689 = {
+					OR = {
+						is_core = AUS
+						is_core = KUK
+					}
+				}
+			}
+			AUS_627 = { add_core = GER } #Lower Silesia
+		}
+		random_country = {
+			limit = {
+				owns = 629
+				629 = {
+					OR = {
+						is_core = AUS
+						is_core = KUK
+					}
+				}
+			}
+			AUS_626 = { add_core = GER } #Sudetes
+		}
 		FROM = { country_event = 31520 }
 		any_country = {
 			limit = {
@@ -1248,10 +1439,30 @@ country_event = {
 				all_core = { remove_core = KUK }
 			}
 		}
-		
 		any_country = {
 			limit = {
-				tag = HUN
+				tag = MON
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = yes
+			}
+			country_event = 31717
+		}
+		any_country = {
+			limit = {
+				OR = {
+					tag = CRO
+					tag = SLV
+					tag = BOH
+					tag = MON
+					tag = BAN
+					tag = GLM
+					tag = BKV
+					tag = BOS
+				}
 				any_core = {
 					owned_by = THIS
 					NOT = { is_core = GER }
@@ -1264,12 +1475,33 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				OR = {
-					tag = CRO
-					tag = SLO
-					tag = SLV
-					tag = BOH
+				tag = VEN
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
 				}
+				exists = no
+				is_cultural_union = no
+			}
+			country_event = 31517
+		}
+		any_country = {
+			limit = {
+				tag = SLO
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = no
+				is_cultural_union = no
+			}
+			country_event = 31517
+		}
+		any_country = {
+			limit = {
+				tag = HUN
 				any_core = {
 					owned_by = THIS
 					NOT = { is_core = GER }
@@ -1308,6 +1540,26 @@ country_event = {
 				is_cultural_union = no
 			}
 			country_event = 31517
+		}
+		any_country = {
+			limit = {
+				OR = {
+					primary_culture = north_italian
+					primary_culture = hungarian
+					primary_culture = polish
+					primary_culture = albanian
+					is_culture_group = south_slavic
+					is_culture_group = czecho_slovak_culture_group
+					tag = BAN
+				}
+				any_core = {
+					owned_by = THIS
+					NOT = { is_core = GER }
+					is_colonial = no
+				}
+				exists = yes
+			}
+			country_event = 31717
 		}
 		GER = { inherit = THIS }
 	}
@@ -1750,4 +2002,29 @@ country_event = {
 			factor = 5
 		}
 	}
+}
+
+#Germany returns cores to existing Austrian nations
+country_event = {
+	id = 31717
+	title = "EVTNAME31717"
+	desc = "EVTDESC331717"
+	picture = "threehurrahs"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT31717OPTA"
+		relation = { who = FROM value = 75 }
+		GER = {
+			any_owned = {
+				limit = {
+					NOT = { is_core = GER }
+					is_core = THIS
+				}
+				secede_province = THIS
+			}
+		}
+	}
+	
 }
