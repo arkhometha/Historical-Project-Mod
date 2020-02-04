@@ -2014,72 +2014,84 @@
 }
 #Saxony Region (1379000) 
 #under the rule of Saxony 1836  
-#Dresden (679000/169750 POPS)
+#Dresden (806380/201595 POPS)
 558 = {
 	aristocrats = {
 		culture = north_german
 		religion = protestant
-		size = 1600 
+		size = 1905 
 	}
 
 	bureaucrats = {
 		culture = north_german
 		religion = protestant
-		size = 700 
+		size = 825 
 	}
 
 	officers = {
 		culture = north_german
 		religion = protestant
-		size = 100
+		size = 135
 	}
 
 	capitalists = {
 		culture = north_german
 		religion = protestant
-		size = 100
+		size = 135
 	}
 
 	clergymen = {
 		culture = north_german
 		religion = protestant
-		size = 1625
+		size = 2055
 	}
 
 	clerks = {
 		culture = north_german
 		religion = protestant
-		size = 100
+		size = 135
 	}
 
 	craftsmen = {
 		culture = north_german
 		religion = protestant
-		size = 925
+		size = 1290
 	}
 
 	artisans = {
 		culture = north_german
 		religion = protestant
-		size = 10000
-	}
-
-	artisans = {
-		culture = north_german
-		religion = protestant
-		size = 250
+		size = 12925
 	}
 
 	soldiers = {
 		culture = north_german
 		religion = protestant
-		size = 1650 
+		size = 2090 
 	}
 
-	farmers = {
+	labourers = {
 		culture = north_german
 		religion = protestant
-		size = 147105 
+		size = 172630 
+	}
+	
+	aristocrats = {
+		culture = north_german
+		religion = catholic
+		size = 100 
+	}
+
+	officers = {
+		culture = north_german
+		religion = catholic
+		size = 100
+	}
+
+	capitalists = {
+		culture = north_german
+		religion = catholic
+		size = 100
 	}
 
 	clergymen = {
@@ -2097,7 +2109,7 @@
 	artisans = {
 		culture = north_german
 		religion = catholic
-		size = 925
+		size = 1000
 	}
 
 	soldiers = {
@@ -2106,22 +2118,16 @@
 		size = 100
 	}
 
-	farmers = {
+	labourers = {
 		culture = north_german
 		religion = catholic
-		size = 3900       
+		size = 5470       
 	}
 
 	clerks = {
 		culture = north_german
-		religion = protestant
+		religion = catholic
 		size = 100
-	}
-
-	craftsmen = {
-		culture = north_german
-		religion = protestant
-		size = 150
 	}
 
 	######Jews
@@ -2142,86 +2148,49 @@
 		religion = jewish
 		size = 100
 	}
-
-	soldiers = {
-		culture = ashkenazi
-		religion = jewish
-		size = 100
-	}
-
-	clergymen = {
-		culture = ashkenazi
-		religion = jewish
-		size = 100
-	}
-
-	artisans = {
-		culture = ashkenazi
-		religion = jewish
-		size = 200
-	}
-	
-	farmers = {
-		culture = ashkenazi
-		religion = jewish
-		size = 400
-	}
-	########
 }
-#Leipzig (420000/105000 POPS)
+#Leipzig (494440/123610 POPS)
 559 = {
 	aristocrats = {
 		culture = north_german
 		religion = protestant
-		size = 1100 
+		size = 1300 
 	}
 
 	clergymen = {
 		culture = north_german
 		religion = protestant
-		size = 1100 
+		size = 1315 
 	}
 
 	clerks = {
 		culture = north_german
 		religion = protestant
-		size = 100
+		size = 135
 	}
 
 	craftsmen = {
 		culture = north_german
 		religion = protestant
-		size = 875
+		size = 1405
 	}
 
 	artisans = {
 		culture = north_german
 		religion = protestant
-		size = 9050
+		size = 10580
 	}
 
 	soldiers = {
 		culture = north_german
 		religion = protestant
-		size = 1100 
+		size = 1315
 	}
 
-	farmers = {
+	labourers = {
 		culture = north_german
 		religion = protestant
-		size = 90800 
-	}
-
-	clerks = {
-		culture = north_german
-		religion = protestant
-		size = 100
-	}
-
-	craftsmen = {
-		culture = north_german
-		religion = protestant
-		size = 100
+		size = 107560 
 	}
 
 	######Jews
@@ -2236,50 +2205,62 @@
 		religion = jewish
 		size = 100
 	}
+	
+	clerks = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
+
+	craftsmen = {
+		culture = ashkenazi
+		religion = jewish
+		size = 100
+	}
 
 	artisans = {
 		culture = ashkenazi
 		religion = jewish
-		size = 300
+		size = 100
 	}
 	
-	farmers = {
+	labourers = {
 		culture = ashkenazi
 		religion = jewish
-		size = 500
+		size = 100
 	}
 	########
 }
-#Chemnitz (280000/70000 POPS)
+#Chemnitz (330080/82520 POPS)
 560 = {
 	aristocrats = {
 		culture = north_german
 		religion = protestant
-		size = 800 
+		size = 945 
 	}
 
 	clergymen = {
 		culture = north_german
 		religion = protestant
-		size = 625
+		size = 740
 	}
 
 	artisans = {
 		culture = north_german
 		religion = protestant
-		size = 5000
+		size = 5900
 	}
 
 	soldiers = {
 		culture = north_german
 		religion = protestant
-		size = 1000
+		size = 1180
 	}
 
-	farmers = {
+	labourers = {
 		culture = north_german
 		religion = protestant
-		size = 62575
+		size = 73755
 	}
 }
 #Thuringia Region (865000) 
