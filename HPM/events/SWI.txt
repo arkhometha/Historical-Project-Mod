@@ -1,0 +1,115 @@
+country_event = {
+
+	id = 31320
+	title = "EVTNAME31320" #Vorarlberg/GP decides
+	desc = "EVTDESC31320"
+	picture = "vorarlberg"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPT31320A"
+		random_country = {
+			limit = {
+				tag = SWI
+			}
+			set_country_flag = voralberg_annexation
+			country_event = {id = 31321 days = 1}
+		}
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				factor = 0.25
+				NOT = { alliance_with = SWI }
+				NOT = { is_sphere_leader_of = SWI }
+				OR = {
+					primary_culture = north_italian
+					primary_culture = south_italian
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPT31320B"
+		random_country = {
+			limit = {
+				tag = SWI
+			}
+			country_event = {id = 31321 days = 1}
+		}
+		ai_chance = { 
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					alliance_with = SWI
+					is_sphere_leader_of = SWI
+				}
+			}
+			modifier = {
+				factor = 4
+				NOT = { alliance_with = SWI }
+				NOT = { is_sphere_leader_of = SWI }
+				OR = {
+					primary_culture = north_italian
+					primary_culture = south_italian
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+
+	id = 31321
+	title = "EVTNAME31320" #Vorarlberg/Switzerland decides
+	desc = "EVTDESC31321"
+	picture = "vorarlberg"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPT31321A"
+		}
+		614 = {
+			remove_core = AUS
+			remove_core = KUK
+			remove_core = DNB
+			add_core = SWI
+			secede_province = THIS
+			any_pop = { limit = { has_pop_culture = south_german } consciousness = -1 }
+			any_pop = { limit = { has_pop_culture = south_german } militancy = -1 }
+		}
+		any_pop = { limit = { has_pop_religion = protestant } consciousness = 3 }
+		any_pop = { limit = { has_pop_religion = catholic } consciousness = -2 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.9
+				has_country_flag = voralberg_annexation
+			}
+		}
+	}
+	option = {
+		name = "EVTOPT31321B"
+		prestige = -10
+		614 = { 
+			any_pop = { limit = { has_pop_culture = south_german } militancy = 1 }
+			any_pop = { limit = { has_pop_culture = south_german } consciousness = 5 }
+		}
+		any_pop = { limit = { has_pop_religion = protestant } consciousness = -2 }
+		any_pop = { limit = { has_pop_religion = catholic } consciousness = 3 }
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 0.1
+				has_country_flag = voralberg_annexation
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_country_modifier = neutrality_modifier }
+			}
+		}
+	}
+	
+}

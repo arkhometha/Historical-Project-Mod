@@ -1286,3 +1286,35 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+
+	id = 60055560
+	title = "EVTNAME60055560"
+	desc = "EVTDESC60055560"
+	picture = "vorarlberg"
+
+	trigger = {
+		OR = {
+			AND = {
+				primary_culture = south_german
+				owns = 614
+				614 = { pop_majority_culture = swiss }
+			}
+			AND = {
+				primary_culture = swiss
+				owns = 614
+				614 = { pop_majority_culture = south_german }
+			}
+		}
+	}
+
+	mean_time_to_happen =  {
+		months = 24
+	}
+
+	option = {
+		name = "EVTOPTA60055560" 
+		random_owned = { limit = { province_id = 614 } assimilate = yes }
+	}
+}
