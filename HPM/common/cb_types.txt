@@ -37,6 +37,21 @@
 # TRIGGERED - Triggered from within the code or by event effects
 # --------------------------------------------------------------
 
+# A note on naval requirements for overseas targets: `num_of_ports` has a curious behaviour where
+# paths from the capital to coastal provinces are computed and the final result only accounts for
+# those that are reachable. (This may only apply for inland capitals.)
+#
+# In particular hostile sieges (including those from rebels) block those computed paths, but not
+# much else does. This bears repeating: a country may be fully occupied and/or covered in *roaming*
+# armies, and this won't affect what `num_of_ports` reports. However if a single rebel brigade
+# starts a 100-year siege on the capital in a country that is otherwise free of troubles, suddenly
+# the whole country counts as being landlocked. (This singular behaviour also includes the fact that
+# occupied ports seem to be accounted for, though paths to the owner's capital are never computed
+# for them.)
+#
+# To sidestep these quirks and spare players the frustration of spuriously invalidated CBs, a
+# different requirement is used instead: `any_owned_province = { port = yes }`.
+
 # Order that CBs are executed in a peace treaty
 peace_order = {
 treaty_port_casus_belli
@@ -399,7 +414,7 @@ acquire_core_state = {
 		OR = {
 			AND = {
 				THIS = { total_amount_of_ships = 5 }
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			neighbour = THIS
 			war_with = THIS
@@ -1755,7 +1770,7 @@ free_peoples = {
 		OR = {
 			AND = {
 				THIS = { total_amount_of_ships = 5 }
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			neighbour = THIS
 			war_with = THIS
@@ -3153,7 +3168,7 @@ cut_down_to_size = {
 		OR = {
 			AND = {
 				THIS = { total_amount_of_ships = 5 }
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			neighbour = THIS
 			war_with = THIS
@@ -3220,7 +3235,7 @@ cut_down_to_size = {
 				THIS = {
 					civilized = yes
 					NOT = { is_culture_group = east_asian }
-					num_of_ports = 1
+					any_owned_province = { port = yes }
 				}
 			}
 			owner = { add_country_modifier = { name = negotiating_unequal_treaty duration = 30 } }
@@ -3604,7 +3619,7 @@ place_in_the_sun = {
 		THIS = {
 			NOT = { has_country_modifier = neutrality_modifier }
 			OR = {
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 				any_owned_province = {
 					any_neighbor_province = {
 						NOT = { owned_by = THIS }
@@ -3688,7 +3703,7 @@ place_in_the_sun = {
 			AND = {
 				any_owned_province = { port = yes }
 				THIS = {
-					num_of_ports = 1
+					any_owned_province = { port = yes }
 					OR = {
 						is_greater_power = yes
 						is_secondary_power = yes
@@ -3706,7 +3721,7 @@ place_in_the_sun = {
 				}
 				THIS = {
 					ai = no
-					num_of_ports = 1
+					any_owned_province = { port = yes }
 				}
 			}			
 		}
@@ -3804,7 +3819,7 @@ acquire_state = {
 		OR = {
 			AND = {
 				THIS = { total_amount_of_ships = 5 } 
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			neighbour = THIS
 			war_with = THIS
@@ -3898,7 +3913,7 @@ acquire_state = {
 			AND = {
 				any_owned_province = { port = yes }
 				THIS = {
-					num_of_ports = 1
+					any_owned_province = { port = yes }
 					OR = {
 						is_greater_power = yes
 						is_secondary_power = yes
@@ -3916,7 +3931,7 @@ acquire_state = {
 				}
 				THIS = {
 					ai = no
-					num_of_ports = 1
+					any_owned_province = { port = yes }
 				}
 			}
 		}
@@ -4180,7 +4195,7 @@ sahel_jihad_cb = {
 		OR = {
 			AND = { 
 				THIS = { total_amount_of_ships = 5 } 
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			AND = { war_with = THIS ai = no }
 			neighbour = THIS
@@ -4281,7 +4296,7 @@ demand_concession_casus_belli = {
 		OR = {
 			AND = { 
 				THIS = { total_amount_of_ships = 5 } 
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			AND = { war_with = THIS ai = no }
 			neighbour = THIS
@@ -4485,7 +4500,7 @@ demand_concession_NI_casus_belli = {
 		OR = {
 			AND = { 
 				THIS = { total_amount_of_ships = 5 } 
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			neighbour = THIS
 			AND = { war_with = THIS ai = no }
@@ -4690,7 +4705,7 @@ demand_concession_BC_casus_belli = {
 		OR = {
 			AND = { 
 				THIS = { total_amount_of_ships = 5 } 
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			neighbour = THIS
 			AND = { war_with = THIS ai = no }
@@ -4931,7 +4946,7 @@ conquest = {
 		OR = {
 			AND = { 
 				THIS = { total_amount_of_ships = 5 } 
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			neighbour = THIS
 			AND = { war_with = THIS ai = no }
@@ -5154,7 +5169,7 @@ annex_africa = {
 		OR = {
 			AND = { 
 				THIS = { total_amount_of_ships = 5 } 
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			neighbour = THIS
 			war_with = THIS
@@ -6169,7 +6184,7 @@ annex_africa_full = {
 		OR = {
 			AND = { 
 				THIS = { total_amount_of_ships = 5 } 
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			neighbour = THIS
 			war_with = THIS
@@ -7333,7 +7348,7 @@ make_puppet = {
 		OR = {
 			AND = { 
 				THIS = { total_amount_of_ships = 5 }
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			neighbour = THIS
 			war_with = THIS
@@ -8214,7 +8229,7 @@ acquire_any_state = {
 				THIS = {
 					civilized = yes
 					NOT = { is_culture_group = east_asian }
-					num_of_ports = 1
+					any_owned_province = { port = yes }
 				}
 			}
 			owner = { country_event = 1316089 }
@@ -8407,7 +8422,7 @@ treaty_port_casus_belli = {
 				THIS = {
 					civilized = yes
 					NOT = { is_culture_group = east_asian }
-					num_of_ports = 1
+					any_owned_province = { port = yes }
 				}
 			}
 			owner = { add_country_modifier = { name = negotiating_unequal_treaty duration = 30 } }
@@ -8574,7 +8589,7 @@ colonial_conquest = {
 		OR = {
 			AND = { 
 				THIS = { total_amount_of_ships = 5 }
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			neighbour = THIS
 			war_with = THIS
@@ -9039,7 +9054,7 @@ colonial_conquest_full = {
 		OR = {
 			AND = { 
 				THIS = { total_amount_of_ships = 5 }
-				num_of_ports = 1
+				any_owned_province = { port = yes }
 			}
 			neighbour = THIS
 		}
@@ -10529,7 +10544,7 @@ steal_puppet = {
 			OR = {
 				AND = { 
 					THIS = { total_amount_of_ships = 5 }
-					num_of_ports = 1
+					any_owned_province = { port = yes }
 				}
 				neighbour = THIS
 				war_with = THIS
@@ -10564,7 +10579,7 @@ steal_puppet = {
 				OR = {
 					AND = { 
 						THIS = { total_amount_of_ships = 5 }
-						num_of_ports = 1
+						any_owned_province = { port = yes }
 					}
 					neighbour = THIS
 					any_neighbor_country = {
