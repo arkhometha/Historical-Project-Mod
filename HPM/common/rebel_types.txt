@@ -298,7 +298,7 @@ reactionary_rebels = {
 		political_reform = underground_parties
 		political_reform = mandatory_service
 		random_owned = { limit = { owner = { NOT = { trade_unions = no_trade_unions } } } owner = { political_reform = state_controlled } }
-		random_owned = { limit = { owner = { NOT = { citizens_rights = primary_culture_only } } } owner = { political_reform = culture_voting_only } }
+		random_owned = { limit = { owner = { NOT = { citizens_rights = primary_culture_only } } } owner = { social_reform = culture_voting_only } }
 		add_country_modifier = {
 			name = national_confusion
 			duration = 365
@@ -589,7 +589,7 @@ fascist_rebels = {
 		political_reform = underground_parties
 		political_reform = mandatory_service
 		random_owned = { limit = { owner = { NOT = { trade_unions = no_trade_unions } } } owner = { political_reform = state_controlled } }
-		random_owned = { limit = { owner = { NOT = { citizens_rights = primary_culture_only } } } owner = { political_reform = culture_voting_only } }
+		random_owned = { limit = { owner = { NOT = { citizens_rights = primary_culture_only } } } owner = { social_reform = culture_voting_only } }
 		add_country_modifier = {
 			name = national_confusion
 			duration = 365
@@ -860,7 +860,7 @@ communist_rebels = {
 		clr_country_flag = fascist_gov
 		clr_country_flag = anarcho_liberal_gov
 		ruling_party_ideology = communist
-		political_reform = all_voting_pops
+		social_reform = all_voting_pops
 		political_reform = none_voting
 		political_reform = party_appointed
 		political_reform = no_meeting
@@ -4746,8 +4746,8 @@ socialist_rebels = {
 		political_reform = all_trade_unions
 		political_reform = no_slavery
 		political_reform = proportional_representation
-		political_reform = all_voting_pops
 		political_reform = open_borders
+		social_reform = all_voting_pops
 		
 		random_owned = { limit = { owner = { NOT = { debt_law = bankruptcy } } } owner = { political_reform = debtors_prisons } }
 		
@@ -5275,9 +5275,9 @@ turkish_nationalist_rebels = {
 		political_reform = censored_press
 		political_reform = all_trade_unions
 		political_reform = harassment
-		political_reform = primary_culture_only
 		political_reform = mandatory_service
 		political_reform = open_borders
+		social_reform = primary_culture_only
 		add_country_modifier = {
 			name = national_confusion
 			duration = 365

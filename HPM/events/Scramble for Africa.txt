@@ -1025,7 +1025,7 @@ country_event = {
 			political_reform = state_press
 			political_reform = state_controlled
 			political_reform = underground_parties
-			political_reform = primary_culture_only
+			social_reform = primary_culture_only
 			political_reform = mandatory_service
 			
 			clr_country_flag = election_started
@@ -1369,7 +1369,7 @@ country_event = {
 			}
 			
 			owner = {
-				LIB = { political_reform = culture_voting_only }
+				LIB = { social_reform = culture_voting_only }
 				1889 = {
 					trade_goods = coffee
 					secede_province = THIS

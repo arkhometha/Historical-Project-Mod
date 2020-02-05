@@ -1083,7 +1083,7 @@ country_event = { #Hawaii turns democratic, loses people to disease, change prod
 		political_reform = population_equal_weight
 		political_reform = non_secret_ballots
 		political_reform = universal_weighted_voting
-		political_reform = all_voting_pops
+		social_reform = all_voting_pops
 		government = hms_government
 		
 		658 = { trade_goods = fruit }

@@ -72,7 +72,7 @@ country_event = {
 		political_reform = underground_parties
 		political_reform = no_slavery
 		political_reform = debtors_prisons
-		political_reform = culture_voting_only
+		social_reform = culture_voting_only
 		social_reform = good_minimum_wage
 		social_reform = eight_hours
 		social_reform = good_subsidies
@@ -174,7 +174,7 @@ country_event = {
 		political_reform = state_press
 		political_reform = state_controlled
 		political_reform = underground_parties
-		political_reform = culture_voting_only
+		social_reform = culture_voting_only
 		add_country_modifier = {
 			name = national_confusion
 			duration = 365
@@ -445,7 +445,7 @@ country_event = {
 		political_reform = state_press
 		political_reform = state_controlled
 		political_reform = underground_parties
-		political_reform = culture_voting_only
+		social_reform = culture_voting_only
 		#Genocide Cleanup
 		##Set Up Timer based on time the thing ran
 		random_owned = {

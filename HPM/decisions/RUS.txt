@@ -1490,7 +1490,7 @@ political_decisions = {
 			
 			random_owned = {
 				limit = { owner = { citizens_rights = primary_culture_only } }
-				owner = { political_reform = culture_voting_only }
+				owner = { social_reform = culture_voting_only }
 			}
 			random_owned = {
 				limit = { owner = { penal_system = capital_punishment } }

@@ -3853,7 +3853,7 @@ country_event = {
 			political_reform = no_trade_unions
 			political_reform = gerrymandering
 			political_reform = first_past_the_post
-			political_reform = culture_voting_only
+			social_reform = culture_voting_only
 			ruling_party_ideology = conservative
 			
 			clr_country_flag = election_started
@@ -3888,7 +3888,7 @@ country_event = {
 			political_reform = no_trade_unions
 			political_reform = gerrymandering
 			political_reform = first_past_the_post
-			political_reform = culture_voting_only
+			social_reform = culture_voting_only
 			ruling_party_ideology = conservative
 			
 			clr_country_flag = election_started
@@ -4006,7 +4006,7 @@ country_event = {
 			political_reform = no_trade_unions
 			political_reform = gerrymandering
 			political_reform = first_past_the_post
-			political_reform = culture_voting_only
+			social_reform = culture_voting_only
 			ruling_party_ideology = conservative
 			
 			clr_country_flag = election_started
@@ -4064,7 +4064,7 @@ country_event = {
 				political_reform = no_trade_unions
 				political_reform = gerrymandering
 				political_reform = first_past_the_post
-				political_reform = culture_voting_only
+				social_reform = culture_voting_only
 				ruling_party_ideology = conservative
 				
 				clr_country_flag = election_started
@@ -4105,7 +4105,7 @@ country_event = {
 			political_reform = no_trade_unions
 			political_reform = gerrymandering
 			political_reform = first_past_the_post
-			political_reform = culture_voting_only
+			social_reform = culture_voting_only
 			ruling_party_ideology = conservative
 			
 			clr_country_flag = election_started
@@ -4135,7 +4135,7 @@ country_event = {
 			political_reform = no_trade_unions
 			political_reform = gerrymandering
 			political_reform = first_past_the_post
-			political_reform = culture_voting_only
+			social_reform = culture_voting_only
 			ruling_party_ideology = conservative
 			
 			clr_country_flag = election_started
@@ -4165,7 +4165,7 @@ country_event = {
 			political_reform = no_trade_unions
 			political_reform = gerrymandering
 			political_reform = first_past_the_post
-			political_reform = culture_voting_only
+			social_reform = culture_voting_only
 			ruling_party_ideology = conservative
 			
 			clr_country_flag = election_started
@@ -4195,7 +4195,7 @@ country_event = {
 			political_reform = no_trade_unions
 			political_reform = gerrymandering
 			political_reform = first_past_the_post
-			political_reform = culture_voting_only
+			social_reform = culture_voting_only
 			ruling_party_ideology = conservative
 			
 			clr_country_flag = election_started
@@ -4225,7 +4225,7 @@ country_event = {
 			political_reform = no_trade_unions
 			political_reform = gerrymandering
 			political_reform = first_past_the_post
-			political_reform = culture_voting_only
+			social_reform = culture_voting_only
 			ruling_party_ideology = conservative
 			
 			clr_country_flag = election_started
@@ -4258,7 +4258,7 @@ country_event = {
 				political_reform = no_trade_unions
 				political_reform = gerrymandering
 				political_reform = first_past_the_post
-				political_reform = culture_voting_only
+				social_reform = culture_voting_only
 				ruling_party_ideology = conservative
 				
 				clr_country_flag = election_started
@@ -4292,7 +4292,7 @@ country_event = {
 				political_reform = no_trade_unions
 				political_reform = gerrymandering
 				political_reform = first_past_the_post
-				political_reform = culture_voting_only
+				social_reform = culture_voting_only
 				ruling_party_ideology = conservative
 				
 				clr_country_flag = election_started
@@ -4326,7 +4326,7 @@ country_event = {
 				political_reform = no_trade_unions
 				political_reform = gerrymandering
 				political_reform = first_past_the_post
-				political_reform = culture_voting_only
+				social_reform = culture_voting_only
 				ruling_party_ideology = conservative
 				
 				clr_country_flag = election_started
@@ -4375,7 +4375,7 @@ country_event = {
 				political_reform = no_trade_unions
 				political_reform = gerrymandering
 				political_reform = first_past_the_post
-				political_reform = culture_voting_only
+				social_reform = culture_voting_only
 				
 				clr_country_flag = election_started
 				clr_country_flag = conservative_party_in_power
@@ -4413,7 +4413,7 @@ country_event = {
 				political_reform = no_trade_unions
 				political_reform = gerrymandering
 				political_reform = first_past_the_post
-				political_reform = culture_voting_only
+				social_reform = culture_voting_only
 				ruling_party_ideology = conservative
 				
 				clr_country_flag = election_started
@@ -4450,7 +4450,7 @@ country_event = {
 				political_reform = no_trade_unions
 				political_reform = gerrymandering
 				political_reform = first_past_the_post
-				political_reform = culture_voting_only
+				social_reform = culture_voting_only
 				ruling_party_ideology = conservative
 				
 				clr_country_flag = election_started
@@ -4493,7 +4493,7 @@ country_event = {
 					political_reform = no_trade_unions
 					political_reform = gerrymandering
 					political_reform = first_past_the_post
-					political_reform = culture_voting_only
+					social_reform = culture_voting_only
 					ruling_party_ideology = conservative
 					
 					clr_country_flag = election_started
@@ -4521,7 +4521,7 @@ country_event = {
 					political_reform = no_trade_unions
 					political_reform = gerrymandering
 					political_reform = first_past_the_post
-					political_reform = culture_voting_only
+					social_reform = culture_voting_only
 					ruling_party_ideology = conservative
 					
 					clr_country_flag = election_started
@@ -10601,7 +10601,7 @@ country_event = {
 		political_reform = state_press
 		political_reform = state_controlled
 		political_reform = underground_parties
-		political_reform = primary_culture_only
+		social_reform = primary_culture_only
 		political_reform = mandatory_service
 		clr_country_flag = communist_gov
 		clr_country_flag = absolute_monarchy_gov

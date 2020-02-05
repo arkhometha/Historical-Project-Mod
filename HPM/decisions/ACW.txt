@@ -1395,7 +1395,7 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = fifteenth_amendment_enacted
-			political_reform = all_voting_pops
+			social_reform = all_voting_pops
 			any_pop = { limit = { is_primary_culture = no is_accepted_culture = no } militancy = -1 }
 		}
 		ai_will_do = { factor = 1 }
