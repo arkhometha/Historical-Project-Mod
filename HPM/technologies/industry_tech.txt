@@ -874,9 +874,9 @@ drilling_and_blasting = {
 		sulphur = 0.2
 	}
 	
-	rgo_size = { coal = 0.5 }
-	rgo_size = { iron = 0.5 }
-	rgo_size = { sulphur = 0.5 }
+	rgo_size = { coal = 0.75 }
+	rgo_size = { iron = 0.75 }
+	rgo_size = { sulphur = 0.75 }
 	
 	ai_chance = {
 		factor = 2
