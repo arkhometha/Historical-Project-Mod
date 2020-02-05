@@ -111,7 +111,7 @@
 	farmers = {
 		culture = croat
 		religion = catholic
-		size = 28050
+		size = 43050
 	}
 	
 	farmers = {
@@ -359,7 +359,7 @@
 	farmers = {
 		culture = croat
 		religion = catholic
-		size = 34400
+		size = 29400
 	}
 
 	clergymen = {
@@ -762,7 +762,7 @@
 	farmers = {
 		culture = croat
 		religion = catholic
-		size = 29775   
+		size = 19775   
 	}
 	
 	serfs = {

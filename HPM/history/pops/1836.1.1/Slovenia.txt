@@ -59,7 +59,7 @@
 	farmers = {
 		culture = slovene
 		religion = catholic
-		size = 35000
+		size = 45000
 	}
 	
 	serfs = {

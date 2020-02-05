@@ -810,7 +810,7 @@
 	farmers = {
 		culture = polish
 		religion = catholic
-		size = 48715 
+		size = 53715 
 	}
 	
 	serfs = {
@@ -2125,7 +2125,7 @@
 	farmers = {
 		culture = polish
 		religion = catholic
-		size = 50000
+		size = 45000
 	}
 	
 	serfs = {

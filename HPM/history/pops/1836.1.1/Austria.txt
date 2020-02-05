@@ -189,7 +189,7 @@
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 70675 
+		size = 60675 
 	}
 }
 #Judenburg (168000/42000 POPS)
@@ -227,7 +227,7 @@
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 35150
+		size = 45150
 	}
 }
 #Klagenfurt (188000/47000 POPS)
@@ -259,7 +259,7 @@
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 25675
+		size = 35675
 	}
 
 	clergymen = {
@@ -635,7 +635,7 @@
 	farmers = {
 		culture = south_german
 		religion = catholic
-		size = 115900
+		size = 105900
 	}
 }
 #Odenburg Region (196000) #see Hungary.txt for balance of region

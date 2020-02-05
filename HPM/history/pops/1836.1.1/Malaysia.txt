@@ -444,7 +444,7 @@
 	farmers = {
 		culture = malay
 		religion = sunni
-		size = 33825
+		size = 43825
 	}
 
 	clergymen = {

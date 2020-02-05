@@ -29,13 +29,13 @@
 	farmers = {
 		culture = romanian
 		religion = orthodox
-		size = 76900   
+		size = 71900   
 	}
 	
 	serfs = {
 		culture = romanian
 		religion = orthodox
-		size = 40000   
+		size = 23000   
 	}
 	
 	serfs = {
@@ -1609,7 +1609,7 @@
 	serfs = {
 		culture = romanian
 		religion = orthodox
-		size = 20000 
+		size = 10000 
 	}
 	
 	aristocrats = {
@@ -1897,7 +1897,7 @@
 	farmers = {
 		culture = romanian
 		religion = orthodox
-		size = 22250 
+		size = 52250 
 	}
 
 	clergymen = {
@@ -1921,7 +1921,7 @@
 	serfs = {
 		culture = ukrainian
 		religion = orthodox
-		size = 9025   
+		size = 6025   
 	}
 
 	aristocrats = {

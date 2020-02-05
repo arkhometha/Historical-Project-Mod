@@ -47,7 +47,7 @@
 	farmers = {
 		culture = thai
 		religion = theravada
-		size = 183025
+		size = 153025
 	}
 
 	slaves = {
@@ -183,7 +183,7 @@
 	farmers = {
 		culture = thai
 		religion = theravada
-		size = 37300
+		size = 47300
 	}
 
 	slaves = {
@@ -489,7 +489,7 @@
 	farmers = {
 		culture = thai
 		religion = theravada
-		size = 33150
+		size = 43150
 	}
 
 	aristocrats = {
@@ -551,7 +551,7 @@
 	farmers = {
 		culture = thai
 		religion = theravada
-		size = 28800
+		size = 42800
 	}
 
 	aristocrats = {

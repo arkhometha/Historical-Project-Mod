@@ -16,6 +16,8 @@ political_decisions = {
 			set_global_flag = looking_through_options
 			set_country_flag = country_looking_through_options
 		}
+		
+		ai_will_do = { factor = 0 }
 	}
 	
 	disable_options = {
@@ -34,6 +36,8 @@ political_decisions = {
 			clr_global_flag = looking_through_options
 			clr_country_flag = country_looking_through_options
 		}
+		
+		ai_will_do = { factor = 0 }
 	}
 
 	turn_on_government_decisions = {

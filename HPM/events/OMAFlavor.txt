@@ -112,7 +112,7 @@ country_event = {
 			}
 			militancy = -8
 		}
-		ZAN = { all_core = { remove_core = OMA } }
+		
 		OMA = { capital = 1166 }
 
 		random_owned = {
@@ -274,10 +274,8 @@ country_event = {
 			}
 			ZAN = { political_reform = no_slavery }
 		}
-		
-		release = ZAN
-		
-		relation = { who = ZAN value = 100 }
+				
+		ZAN = { all_core = { secede_province = ZAN remove_core = OMA } }		
 
 		random_country = {
 			limit = {
@@ -294,7 +292,7 @@ country_event = {
 		POR = {
 			relation = { who = ZAN value = 75 }
 		}
-		
+
 		ai_chance = { factor = 95 }
 	}
 	
@@ -881,3 +879,15 @@ province_event = {
 }
 
 
+country_event = {
+	id = 38507
+	title = "EVTNAME38506"
+	desc = "EVTDESC38506"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT38506OPTA"
+		release = OMA
+	}
+}

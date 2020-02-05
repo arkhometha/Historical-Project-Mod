@@ -7,6 +7,7 @@ country_event = {
 	trigger = {
 		country = {
 			NOT = { has_country_flag = ghost_country }
+			has_country_flag = existing_country
 			OR = {
 				slavery = yes_slavery
 				slavery = freedom_of_womb

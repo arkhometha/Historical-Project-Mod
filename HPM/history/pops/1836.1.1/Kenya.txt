@@ -719,7 +719,13 @@
 	farmers = {
 		culture = kikuyu
 		religion = animist
-		size = 23725
+		size = 20725
+	}
+	
+	slaves = {
+		culture = kikuyu
+		religion = animist
+		size = 3000
 	}
 
 }

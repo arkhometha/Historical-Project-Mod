@@ -41,7 +41,7 @@
 	farmers = {
 		culture = swahili
 		religion = sunni
-		size = 32825
+		size = 46825
 	}
 
 	slaves = {
@@ -177,7 +177,7 @@
 	farmers = {
 		culture = swahili
 		religion = sunni
-		size = 14750
+		size = 36750
 	}
 
 	aristocrats = {

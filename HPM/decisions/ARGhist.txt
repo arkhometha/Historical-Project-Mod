@@ -3,32 +3,34 @@ political_decisions = {
 	conquest_of_the_desert = {
 		picture = conquest_of_the_desert
 		potential = {
+			is_vassal = no
 			OR = {
 				tag = ARG
 				tag = ARC
 				tag = LPL
 				tag = CHL
 				AND = {
-					tag = SBA
-					is_vassal = no
-					is_greater_power = yes
+					rank = 16
+					year = 1875
+					revolution_n_counterrevolution = 1
 				}
-			}
-			
+			} 
 			OR = {
-				2391 = { empty = yes }
-				2392 = { empty = yes }
-				2394 = { empty = yes }
-				2353 = { empty = yes }
-				2393 = { empty = yes }
-				2395 = { empty = yes }
-				}
+				2391 = { empty = yes } #Neuquen
+				2392 = { empty = yes } #Viedma
+				2394 = { empty = yes } #Bariloche
+				2353 = { empty = yes } #Trenque Lauquen
+				2393 = { empty = yes } #Telen
+				2395 = { empty = yes } #Curaco
+			}
 			OR = {
 				owns = 2350 #azul
 				owns = 2381 #rio cuarto
+				owns = 2392 #Viedma
 			}
 			NOT = { has_country_flag = conquest_of_the_desert }
 		}
+		
 		allow = {
 			war = no
 			OR = {
@@ -37,14 +39,14 @@ political_decisions = {
 				year = 1863
 			}
 		}
+		
 		effect = {
 			set_country_flag = conquest_of_the_desert
 			prestige = 2
 			random_owned = {
 				limit = {
-					2390 = { empty = yes }
-					2389 = { empty = no }
-					2383 = { empty = no }
+					2390 = { empty = yes } #San Rafael
+					2389 = { empty = no } #Mendoza 
 				}
 				2390 = {
 					secede_province = THIS
@@ -56,9 +58,8 @@ political_decisions = {
 			
 			random_owned = {
 				limit = {
-					2384 = { empty = yes }
-					2381 = { empty = no }
-					2363 = { empty = no }
+					2384 = { empty = yes } #Mercedes
+					2383 = { empty = no } #San Luis
 				}
 				2384 = {
 					secede_province = THIS
@@ -70,9 +71,8 @@ political_decisions = {
 			
 			random_owned = {
 				limit = {
-					2382 = { empty = yes }
-					2381 = { empty = no }
-					2383 = { empty = no }
+					2382 = { empty = yes } #Laboulaye
+					2381 = { empty = no } #Rio Cuarto
 				}
 				2382 = { 
 					secede_province = THIS
@@ -84,75 +84,57 @@ political_decisions = {
 			
 			random_owned = {
 				limit = {
-					2353 = { empty = yes }
-					2354 = { empty = no }
-					2350 = { empty = no }
+					2353 = { empty = yes } #Trenque Lauquen
+					2354 = { empty = no } #Bahia Blanca
+					2350 = { empty = no } #Azul
 				}
 				2353 = { secede_province = THIS add_core = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
 			}
 			random_owned = {
 				limit = {
-					2393 = { empty = yes }
-					2353 = { empty = no }
-					2354 = { empty = no }
+					2393 = { empty = yes } #Telen
+					2353 = { empty = no } #Trenque Lauquen
+					2355 = { empty = no } #Carmen
 				}
 				2393 = { secede_province = THIS add_core = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
 			}
 			random_owned = {
 				limit = {
-					2395 = { empty = yes }
-					2393 = { empty = no }
+					2395 = { empty = yes } #Curaco
+					2393 = { empty = no } #Telen
 				}
 				2395 = { secede_province = THIS add_core = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
 			}
-			random_owned = {
-				limit = {
-					2394 = { empty = yes }
-					2392 = { empty = no }
-					2391 = { empty = no }
-				}
-				2394 = { secede_province = THIS add_core = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
-			}
-			random_owned = {
-				limit = {
-					2392 = { empty = yes }
-					2391 = { empty = no }
-				}
-				2392 = { secede_province = THIS add_core = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
-			}
-			random_owned = {
-				limit = {
-					2391 = { empty = yes }
-				}
-				2391 = { secede_province = THIS add_core = THIS any_pop = { limit = { is_primary_culture = no } literacy = -0.99 } }
-			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	conquest_of_the_chaco = {
 		picture = conquest_of_the_chaco
 		potential = {
+			is_vassal = no
 			OR = {
 				tag = ARG
 				tag = ARC
 				tag = LPL
 				tag = PRG
 				tag = CHL
+				AND = {
+					rank = 16
+					year = 1875
+					revolution_n_counterrevolution = 1
+				}
 			}
 			OR = {
 				2362 = { empty = yes }
 				2364 = { empty = yes }
 				2365 = { empty = yes }
 				2372 = { empty = yes }
+				2367 = { empty = yes }
+				2366 = { empty = yes }
 				2377 = { empty = yes }
 			}
-			OR = {
-				owns = 2356 #Corrientes
-				owns = 2361	#Sancti Spiritu
-			}
+			owns = 2356 	#Corrientes
 			NOT = { has_country_flag = conquest_of_the_chaco }
 		}
 		allow = {
@@ -168,9 +150,9 @@ political_decisions = {
 			prestige = 3
 			random_owned = {
 				limit = {
-					2362 = { empty = yes }
-					2361 = { empty = no }
-					2356 = { empty = no }
+					2362 = { empty = yes }	#Reconquista
+					2361 = { empty = no }	#Sancti Spiritu
+					2356 = { empty = no }	#Corrientes
 				}
 				2362 = { 
 					secede_province = THIS
@@ -181,9 +163,9 @@ political_decisions = {
 			}
 			random_owned = {
 				limit = {
-					2364 = { empty = yes }
-					2362 = { empty = no }
-					2356 = { empty = no }
+					2364 = { empty = yes }	#Resistencia
+					2362 = { empty = no }	#Reconquista
+					2356 = { empty = no }	#Corrientes
 				}
 				2364 = { 
 					secede_province = THIS
@@ -195,9 +177,9 @@ political_decisions = {
 				
 			random_owned = {
 				limit = {
-					2365 = { empty = yes }
-					2362 = { empty = no }
-					2364 = { empty = no }
+					2365 = { empty = yes }	#Villa Angela
+					2362 = { empty = no }	#Reconquista
+					2364 = { empty = no }	#Reistencia
 				}
 				2365 = { 
 					secede_province = THIS
@@ -209,9 +191,9 @@ political_decisions = {
 				
 			random_owned = {
 				limit = {
-					2377 = { empty = yes }
-					2362 = { empty = no }
-					2365 = { empty = no }
+					2377 = { empty = yes }	#Anatuya
+					2362 = { empty = no }	#Reconquista
+					2365 = { empty = no }	#Villa Angela
 				}
 				2377 = { 
 					secede_province = THIS
@@ -223,11 +205,39 @@ political_decisions = {
 				
 			random_owned = {
 				limit = {
-					2372 = { empty = yes }
-					2377 = { empty = no }
-					2365 = { empty = no }
+					2372 = { empty = yes }	#Rivadavia
+					2377 = { empty = no }	#Anatuya
+					2365 = { empty = no }	#Villa Angela
 				}
 				2372 = { 
+					secede_province = THIS
+					add_core = THIS
+					life_rating = 20
+					any_pop = { limit = { is_primary_culture = no } literacy = -0.99 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					2366 = { empty = yes }	#Formosa
+					2364 = { empty = no }	#Resistencia
+					2365 = { empty = no }	#Villa Angela
+				}
+				2366 = { 
+					secede_province = THIS
+					add_core = THIS
+					life_rating = 20
+					any_pop = { limit = { is_primary_culture = no } literacy = -0.99 }
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					2367 = { empty = yes }	#Xolotas
+					2372 = { empty = no }	#Rivadavia
+					2365 = { empty = no }	#Villa Angela
+				}
+				2367 = { 
 					secede_province = THIS
 					add_core = THIS
 					life_rating = 20
