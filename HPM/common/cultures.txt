@@ -2395,7 +2395,7 @@ central_african = {
 	}
 	
 	kingwana = {
-		color = {171 188 73}
+		color = { 179 123 83 }
 		first_names = { Bokobo Bomete Ilitosini Ndjandja }
 
 		last_names = { Taabwa Bwile Bembe Kabwari Buyu Bangubangu Zimba Kwami Tembo Nyanga Bhele Komo Nande }
