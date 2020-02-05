@@ -52,7 +52,6 @@ political_decisions = {
 	kanagawa_treaty = {
 		picture = unequal_treaty
 		potential = {
-			is_greater_power = yes
 			NOT = { 
 				has_country_flag = negotiate_unequal_treaty_TKG
 				is_culture_group = far_east_asian
@@ -66,17 +65,18 @@ political_decisions = {
 		}
 		
 		allow = {
+			is_greater_power = yes
 			war_with = TKG
 			TKG = {
 				OR = {
-					war_exhaustion = 50
+					war_exhaustion = 33
 					any_owned_province = { controlled_by = THIS }
 				}
 				OR = {
 					national_provinces_occupied = 0.10
-					blockade = 0.50
+					blockade = 0.33
 				}
-				war_exhaustion = 10
+				war_exhaustion = 5
 			}
 		}
 		
