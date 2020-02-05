@@ -1190,6 +1190,9 @@ EVTNAME60055559;The $COUNTRY_ADJ$ - $FROMCOUNTRY_ADJ$ Border Treaty;;;;;;;;;;;;x
 EVTDESC60055559;Diplomats of $FROMCOUNTRY$ approached us with a friendship and border treaty to settle outstanding issues between the perceived territory of our two countries. The treaty would include population exchanges, border delimitation and a treaty of friendship. If we sign this deal it will also show the world our will to settle issues diplomatically and our government respect of the will of the people.;;;;;;;;;;;;;;;;;;;;;;;x
 EVT60055559OPTA;This sounds like a good idea.;;;;;;;;;;;;;;;;;;;;;;;x
 EVT60055559OPTB;No deal.;;;;;;;;;;;;x
+EVTNAME60055560;Vorarlberg assimilates!;;;;;;;;;;;;x
+EVTDESC60055560;The people of Vorarlberg have embraced our culture!;;;;;;;;;;;;x
+EVTOPTA60055560;Excellent.;;;;;;;;;;;;x
 EVTNAME16458;The $COUNTRY_ADJ$ - $FROMCOUNTRY_ADJ$ Treaty;;;;;;;;;;;;x
 EVTDESC16458;The $FROMCOUNTRY_ADJ$ government approached us with a friendship treaty and a lease proposal for the Guantanamo Bay. While they appear amicable, their lease proposal is obviously part of their doctrine of influence over the Americas and they will not back down from it, even if we refuse their friendship.;;;;;;;;;;;;x
 EVTOPTA16458;We accept the proposal.;;;;;;;;;;;;x
@@ -5294,3 +5297,10 @@ EVTDESC6016819;Demobilizing Country.;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 EVT6016819OPTA;Everything will be alright.;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 EVTNAME6016820;Reabsorbing Demobilized Country;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 EVTDESC6016820;Country demobilized. Time to reabsorb. Everything is solved.;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+EVTNAME31320;Vorarlberg wishes to join the Confederation;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTDESC31320;Due to our victorious war a referendum was held recently by the people of Vorarlberg proposing to join the Swiss Confederation and the overwhelming majority voted in favour. The people of Vorarlberg are similar to the Swiss and have always considered themselves different from their east German masters. Nevertheless while Catholic German speaking Swiss are cheering and celebrating the results some Swiss particularly the non German speakers are concerned about the consequences of such an incorporation. If we want to further break up the empires of our enemies we could pressure the Swiss government into accepting Vorarlberg annexation.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTOPT31320A;Vorarlberg should join Switzerland;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTOPT31320B;Let them decide themselves.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTDESC31321;With the Great War finally over a referendum was held recently by the people of Vorarlberg proposing to join the Swiss Confederation and the overwhelming majority voted in favour. The people of Vorarlberg are similar to us and have always considered themselves different from their east German masters. While they wish to join our confederation some of our own people are concerned. Vorarlberg is a German speaking Catholic region and our non German speaking citizens fear that an incorporation of such a large area would cause problems while the Protestants aren't very enthusiastic. However a choice must be made. Should Vorarlberg join the Confederation?;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTOPT31321A;The people of Vorarlberg voted to join our Confederation and so they will.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVTOPT31321B;Perhaps it would be better to not let them join.;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
