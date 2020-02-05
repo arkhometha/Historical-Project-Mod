@@ -877,17 +877,3 @@ province_event = {
 		trade_goods = grain
 	}
 }
-
-
-country_event = {
-	id = 38507
-	title = "EVTNAME38506"
-	desc = "EVTDESC38506"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVT38506OPTA"
-		release = OMA
-	}
-}
