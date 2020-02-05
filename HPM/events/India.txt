@@ -720,9 +720,10 @@ country_event = {
 			war = no
 			OR = {
 				is_greater_power = yes
+				is_cultural_union = THIS
 				AND = {
-					is_cultural_union = THIS
-					is_vassal = no
+					tag = HND
+					THIS = { is_culture_group = indo_iranian }
 				}
 			}
 		}
@@ -739,6 +740,7 @@ country_event = {
 			tag = SAF
 			tag = HND
 			tag = AFG
+			tag = PAK
 		}
 	}
 	
