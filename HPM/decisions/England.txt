@@ -1,4 +1,5 @@
 political_decisions = {
+	#Become England
 	end_of_the_UK = {
 		potential = {
 			tag = ENG
@@ -28,6 +29,8 @@ political_decisions = {
 	
 		effect = {
 			set_global_flag = united_kingdom_no_more
+			remove_accepted_culture = australian
+			remove_accepted_culture = anglo_canadian
 			ENG_300 = { add_core = ENL }
 			ENG_277 = { add_core = ENL }
 			ENG_280 = { add_core = ENL }

@@ -1,4 +1,4 @@
-color = { 255  251  198 }
+color = { 209  230  243 }
 graphical_culture = IndianGC
 
 party = {

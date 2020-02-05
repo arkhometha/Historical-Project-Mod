@@ -293,6 +293,7 @@ country_event = {
 		AST = {
 			all_core = { remove_core = THIS remove_core = ENG }
 		}
+		remove_accepted_culture = australian
 		release_vassal = AST
 		AST = { prestige = -80 }
 		relation = {
@@ -355,6 +356,7 @@ country_event = {
 	option = {
 		name = "EVT44330OPTB"
 		set_country_flag = AST_independence_refused
+		remove_accepted_culture = australian
 		any_owned = {
 			limit = { is_core = AST }
 			any_pop = {
@@ -410,6 +412,7 @@ country_event = {
 		AST = {
 			all_core = { remove_core = THIS remove_core = ENG }
 		}
+		remove_accepted_culture = australian
 		release_vassal = AST
 		AST = { prestige = -80 }
 		relation = {

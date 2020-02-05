@@ -368,6 +368,7 @@ country_event = {
 				remove_core = ENG
 			}
 		}
+		remove_accepted_culture = anglo_canadian
 		release_vassal = CAN
 		CAN = {
 			prestige = -100
@@ -432,6 +433,7 @@ country_event = {
 	option = {
 		name = "EVT44315OPTB"
 		set_country_flag = CAN_independence_refused
+		remove_accepted_culture = anglo_canadian
 		any_owned = {
 			limit = { is_core = CAN }
 			add_province_modifier = {
@@ -496,6 +498,7 @@ country_event = {
 				remove_core = ENG
 			}
 		}
+		remove_accepted_culture = anglo_canadian
 		release_vassal = CAN
 		CAN = {
 			prestige = -100
