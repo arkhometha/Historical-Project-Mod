@@ -7899,6 +7899,7 @@ country_event = {
 		#if Vorarlberg owned, trigger the Vorarlberg event chain
 		random_country = {
 			limit = {
+				THIS = { NOT = { has_country_flag = vorarlberg_referendum } }
 				614 = { owned_by = THIS }
 				SWI = { exists = yes }
 				truce_with = THIS
@@ -7906,6 +7907,22 @@ country_event = {
 				has_recently_lost_war = no
 			}
 			country_event = 31320
+		}
+		
+		#if Vorarlberg owned by SWI, remove cores
+		random_country = {
+			limit = {
+				tag = SWI
+				614 = {
+					owned_by = SWI
+					pop_majority_culture = swiss
+				}
+			}
+			614 = {
+				remove_core = AUS
+				remove_core = KUK
+				remove_core = DNB
+			}
 		}
 		
 		#if Schleswig owned, re-add cores for Denmark

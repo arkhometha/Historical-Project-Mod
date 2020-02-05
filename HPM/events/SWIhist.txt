@@ -97,14 +97,13 @@ country_event = {
 	
 	option = {
 		name = "EVTOPT31320A"
+		FROM = { set_country_flag = vorarlberg_referendum }
 		random_country = {
-			limit = {
-				tag = SWI
-			}
+			limit = { tag = SWI }
 			set_country_flag = voralberg_annexation
-			country_event = {id = 31321 days = 1}
+			country_event = { id = 31321 days = 1 }
 		}
-		ai_chance = { 
+		ai_chance = {
 			factor = 80
 			modifier = {
 				factor = 0.25
@@ -119,11 +118,10 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPT31320B"
+		FROM = { set_country_flag = vorarlberg_referendum }
 		random_country = {
-			limit = {
-				tag = SWI
-			}
-			country_event = {id = 31321 days = 1}
+			limit = { tag = SWI }
+			country_event = { id = 31321 days = 1 }
 		}
 		ai_chance = { 
 			factor = 20
@@ -159,9 +157,6 @@ country_event = {
 	option = {
 		name = "EVTOPT31321A"
 		614 = {
-			remove_core = AUS
-			remove_core = KUK
-			remove_core = DNB
 			add_core = SWI
 			secede_province = THIS
 			any_pop = { limit = { has_pop_culture = south_german } consciousness = -1 }
@@ -172,8 +167,12 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 1.9
+				factor = 1.5
 				has_country_flag = voralberg_annexation
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { has_country_flag = voralberg_annexation }
 			}
 		}
 	}
@@ -188,10 +187,6 @@ country_event = {
 		any_pop = { limit = { has_pop_religion = catholic } consciousness = 3 }
 		ai_chance = { 
 			factor = 50
-			modifier = {
-				factor = 0.1
-				has_country_flag = voralberg_annexation
-			}
 			modifier = {
 				factor = 0
 				NOT = { has_country_modifier = neutrality_modifier }
