@@ -5,3 +5,5 @@ SquareShadedFlagFrame/
 *.7z
 *.zip
 HPM/events/Debug_events.txt
+*.py
+*.pyc
