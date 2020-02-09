@@ -88,7 +88,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_movement_strip_social"
 		texturefile = "gfx\\interface\\movement_strip_social.dds"
-		noOfFrames = 9
+		noOfFrames = 10
 	}
 	
 	spriteType = {
