@@ -37,13 +37,13 @@ set_country_flag = mahayana_country
 
 ruling_party = HUI_reactionary
 upper_house = {
-	fascist = 0
-	liberal = 10
-	conservative = 30
-	reactionary = 60
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 10
+    conservative = 30
+    reactionary = 60
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 

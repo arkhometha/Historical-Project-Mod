@@ -41,13 +41,13 @@ set_country_flag = animist_country
 
 ruling_party = ARO_conservative
 upper_house = {
-	fascist = 0
-	liberal = 16
-	conservative = 63
-	reactionary = 21
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 16
+    conservative = 63
+    reactionary = 21
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = lacking_writing_system
@@ -62,7 +62,7 @@ nonstate_consciousness = 0
 
 oob = "ARO_oob.txt"
 1861.1.1 = {
-	oob = "/1861/ARO_oob.txt"
+    oob = "/1861/ARO_oob.txt"
 }
 1861.1.1 = {
 

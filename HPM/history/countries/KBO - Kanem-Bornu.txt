@@ -39,13 +39,13 @@ border_policy = open_borders
 
 ruling_party = KBO_conservative
 upper_house = {
-	fascist = 0
-	liberal = 0
-	conservative = 80
-	reactionary = 20
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 0
+    conservative = 80
+    reactionary = 20
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = lacking_writing_system
@@ -61,7 +61,7 @@ nonstate_consciousness = 0
 
 oob = "KBO_oob.txt"
 1861.1.1 = {
-	oob = "/1861/KBO_oob.txt"
-	foreign_weapons = yes_foreign_weapons
-	flintlock_rifles = 1
+    oob = "/1861/KBO_oob.txt"
+    foreign_weapons = yes_foreign_weapons
+    flintlock_rifles = 1
 }

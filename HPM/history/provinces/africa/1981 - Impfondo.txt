@@ -6,7 +6,7 @@ trade_goods = iron
 life_rating = 31
 terrain = small_island
 1861.1.1 = {
-	controller = ITA
-	owner = ITA
-	remove_core = TUS
+    controller = ITA
+    owner = ITA
+    remove_core = TUS
 }

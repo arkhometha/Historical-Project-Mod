@@ -35,13 +35,13 @@ border_policy = open_borders
 
 ruling_party = TAJ_conservative
 upper_house = {
-	fascist = 0
-	liberal = 10
-	conservative = 68
-	reactionary = 22
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 10
+    conservative = 68
+    reactionary = 22
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = sunni_country

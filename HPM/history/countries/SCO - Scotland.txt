@@ -24,7 +24,7 @@ work_hours = no_work_hour_limit
 safety_regulations = trinket_safety
 health_care = trinket_health_care
 unemployment_subsidies = trinket_subsidies
-pensions = no_pensions 
+pensions = no_pensions
 school_reforms = low_schools
 
 #New Reforms
@@ -39,18 +39,18 @@ set_country_flag = protestant_country
 
 ruling_party = SCO_liberal
 upper_house = {
-	fascist = 0
-	liberal = 59
-	conservative = 29
-	reactionary = 12
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 59
+    conservative = 29
+    reactionary = 12
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 govt_flag = {
-	government = absolute_monarchy
-	flag = theocracy
+    government = absolute_monarchy
+    flag = theocracy
 }
 
 

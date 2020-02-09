@@ -43,13 +43,13 @@ set_country_flag = protestant_country
 ruling_party = LIB_conservative
 
 upper_house = {
-	fascist = 0
-	liberal = 22
-	conservative = 62
-	reactionary = 16
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 22
+    conservative = 62
+    reactionary = 16
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 schools = developing_tech_school
@@ -72,5 +72,5 @@ consciousness = 0
 nonstate_consciousness = 0
 
 1861.1.1 = {
-	oob = "/1861/LIB_oob.txt"
+    oob = "/1861/LIB_oob.txt"
 }

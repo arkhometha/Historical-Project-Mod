@@ -196,7 +196,7 @@ BEL_394 = { 394 392 393 395 398 } #Wallonia
 
 FRA_399 = { 403 402 2570 } #Picardie - used to be { 403 405 406 408 402 2570 }
 
-FRA_400 = { 408 405 406 407 432 } #Champagne 
+FRA_400 = { 408 405 406 407 432 } #Champagne
 
 FRA_404 = { 399 400 401 404 } #Nord-Pas-De-Calais/Artois
 
@@ -303,7 +303,7 @@ BAV_595 = { 595 596 597 598 } #Franconia
 BAV_599 = { 599 592 600 601 602 } #Upper Bavaria
 
 SWI_603 = { 603 606 611 2568 605 604 607 608 609 } #Switzerland
- 
+
 PRU_682 = { 682 683 684 685 } #Silesia
 
 PRU_690 = { 690 691 694 693 } #Westpreuﬂen
@@ -595,7 +595,7 @@ RUS_1070 = { 1077 1469 2691 2701 2674 } #Upper Yeniseysk - Krasnoyarsk
 
 RUS_1071 = { 2648 2696 2644 } #Yakutsk
 
-RUS_1072 = { 1081 2697 1080 } #Amur Region - Khingan 
+RUS_1072 = { 1081 2697 1080 } #Amur Region - Khingan
 
 RUS_1074 = { 1074 2633 2616 2663 } #Kamchatka
 

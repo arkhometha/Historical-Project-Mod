@@ -40,13 +40,13 @@ set_country_flag = animist_country
 
 ruling_party = SHK_reactionary
 upper_house = {
-	fascist = 0
-	liberal = 0
-	conservative = 70
-	reactionary = 30
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 0
+    conservative = 70
+    reactionary = 30
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = lacking_writing_system

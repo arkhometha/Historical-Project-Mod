@@ -4,7 +4,7 @@ add_core = FRA
 trade_goods = silk
 life_rating = 32
 naval_base = 2
-1861.1.1 = { 
-	railroad = 3
-	naval_base = 3
+1861.1.1 = {
+    railroad = 3
+    naval_base = 3
 }

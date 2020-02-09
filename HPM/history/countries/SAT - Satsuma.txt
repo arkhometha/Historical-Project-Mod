@@ -38,13 +38,13 @@ set_country_flag = mahayana_country
 
 ruling_party = NIP_conservative
 upper_house = {
-	fascist = 0
-	liberal = 17
-	conservative = 48
-	reactionary = 35
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 17
+    conservative = 48
+    reactionary = 35
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = tozama_daimyo
@@ -74,8 +74,8 @@ nonstate_consciousness = 0
 
 oob = "SAT_oob.txt"
 1861.1.1 = {
-	oob = "/1861/SAT_oob.txt"
-	set_country_flag = angered_by_bakufu
+    oob = "/1861/SAT_oob.txt"
+    set_country_flag = angered_by_bakufu
 }
 1861.1.1 = {
 

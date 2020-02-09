@@ -40,18 +40,16 @@ set_country_flag = protestant_country
 ruling_party = ENG_liberal
 last_election = 1835.2.6
 upper_house = {
-	fascist = 0
-	liberal = 12
-	conservative = 83
-	reactionary = 5
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 12
+    conservative = 83
+    reactionary = 5
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 govt_flag = {
-	government = absolute_monarchy
-	flag = theocracy
+    government = absolute_monarchy
+    flag = theocracy
 }
-
-

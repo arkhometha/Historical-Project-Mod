@@ -41,11 +41,11 @@ set_country_flag = new_world_nation
 
 ruling_party = PTG_conservative
 upper_house = {
-	fascist = 0
-	liberal = 29
-	conservative = 55
-	reactionary = 16
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 29
+    conservative = 55
+    reactionary = 16
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }

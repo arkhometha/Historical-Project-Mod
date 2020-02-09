@@ -1,13 +1,13 @@
 ZUL = {
-	value = 30
+    value = 30
 }
 
 MAT = {
-	value = 20
+    value = 20
 }
 
 SUA = {
-	value = 50
+    value = 50
 }
 
 leader = {
@@ -19,36 +19,36 @@ leader = {
 }
 
 army = {
-	name = "Army of the Gaza Empire"
-	location = 2050
-	regiment = {
-		name= "King's Guard"
-		type = irregular
-		home = 2050
-	}
+    name = "Army of the Gaza Empire"
+    location = 2050
+    regiment = {
+        name= "King's Guard"
+        type = irregular
+        home = 2050
+    }
 
-	regiment = {
-		name= "Gaza Warriors"
-		type = irregular
-		home = 2050
-	}
+    regiment = {
+        name= "Gaza Warriors"
+        type = irregular
+        home = 2050
+    }
 
-	regiment = {
-		name= "Nguni Warriors"
-		type = irregular
-		home = 2051
-	}
+    regiment = {
+        name= "Nguni Warriors"
+        type = irregular
+        home = 2051
+    }
 
-	regiment = {
-		name= "Maputo Warriors"
-		type = irregular
-		home = 2049
-	}
+    regiment = {
+        name= "Maputo Warriors"
+        type = irregular
+        home = 2049
+    }
 
-	regiment = {
-		name= "Massekisse Warriors"
-		type = irregular
-		home = 2052
-	}
+    regiment = {
+        name= "Massekisse Warriors"
+        type = irregular
+        home = 2052
+    }
 
 }

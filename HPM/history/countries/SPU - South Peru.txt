@@ -40,13 +40,13 @@ set_country_flag = catholic_country
 
 ruling_party = PEU_conservative
 upper_house = {
-	fascist = 0
-	liberal = 29
-	conservative = 57
-	reactionary = 14
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 29
+    conservative = 57
+    reactionary = 14
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = new_world_nation

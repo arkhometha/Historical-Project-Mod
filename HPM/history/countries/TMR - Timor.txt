@@ -38,13 +38,13 @@ set_country_flag = catholic_country
 
 ruling_party = JAV_conservative
 upper_house = {
-	fascist = 0
-	liberal = 15
-	conservative = 80
-	reactionary = 5
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 15
+    conservative = 80
+    reactionary = 5
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 # Inventions

@@ -1,1280 +1,1280 @@
 political_decisions = {
-	repeal_the_corn_laws = {
-		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
-			has_country_flag = great_irish_famine
-			NOT = {
-				has_country_flag = corn_laws_repealed_flag
-			}
-		}
-		allow = {
-			average_militancy = 2
-		}
+    repeal_the_corn_laws = {
+        potential = {
+            OR = {
+                tag = ENG
+                tag = ENL
+            }
+            has_country_flag = great_irish_famine
+            NOT = {
+                has_country_flag = corn_laws_repealed_flag
+            }
+        }
+        allow = {
+            average_militancy = 2
+        }
 
-		effect = {
-			add_country_modifier = {
-				name = corn_laws_repealed
-				duration = 3650
-			}
-			any_pop = {
-				militancy = -1
-				consciousness = 1
-			}
-			set_country_flag = corn_laws_repealed_flag
-		}
-	}
-	crown_empress_of_india = {
-		picture = crown_empress_of_india
-		news = yes
-		news_desc_long = "empress_of_india_NEWS_LONG"
-		news_desc_medium = "empress_of_india_NEWS_MEDIUM"
-		news_desc_short = "empress_of_india_NEWS_SHORT"
-		potential = {
-			tag = ENG
-			OR = {
-				government = hms_government
-				government = prussian_constitutionalism
-				government = absolute_monarchy
-			}
-			NOT = {
-				has_country_flag = empress_of_india
-			}
-		}
-		allow = {
-			nationalism_n_imperialism = 1
-			prestige = 40
-			owns = 1305
-			owns = 1311
-			owns = 1257
-			owns = 1291
-			owns = 1236
-			owns = 1297
-			owns = 1227
-		}
-		effect = {
-			prestige = 20
-			any_pop = {
-				militancy = -1
-			}
-			set_country_flag = empress_of_india
-		}
-	}
+        effect = {
+            add_country_modifier = {
+                name = corn_laws_repealed
+                duration = 3650
+            }
+            any_pop = {
+                militancy = -1
+                consciousness = 1
+            }
+            set_country_flag = corn_laws_repealed_flag
+        }
+    }
+    crown_empress_of_india = {
+        picture = crown_empress_of_india
+        news = yes
+        news_desc_long = "empress_of_india_NEWS_LONG"
+        news_desc_medium = "empress_of_india_NEWS_MEDIUM"
+        news_desc_short = "empress_of_india_NEWS_SHORT"
+        potential = {
+            tag = ENG
+            OR = {
+                government = hms_government
+                government = prussian_constitutionalism
+                government = absolute_monarchy
+            }
+            NOT = {
+                has_country_flag = empress_of_india
+            }
+        }
+        allow = {
+            nationalism_n_imperialism = 1
+            prestige = 40
+            owns = 1305
+            owns = 1311
+            owns = 1257
+            owns = 1291
+            owns = 1236
+            owns = 1297
+            owns = 1227
+        }
+        effect = {
+            prestige = 20
+            any_pop = {
+                militancy = -1
+            }
+            set_country_flag = empress_of_india
+        }
+    }
 
-	found_the_bbc = {
-		picture = found_the_bbc
-		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
-			year = 1900
-			NOT = {
-				has_country_flag = we_are_live_from_london
-			}
-		}
+    found_the_bbc = {
+        picture = found_the_bbc
+        potential = {
+            OR = {
+                tag = ENG
+                tag = ENL
+            }
+            year = 1900
+            NOT = {
+                has_country_flag = we_are_live_from_london
+            }
+        }
 
-		allow = {
-			invention = national_radio_networks
-		}
+        allow = {
+            invention = national_radio_networks
+        }
 
-		effect = {
-			any_country = {
-				relation = {
-					who = THIS
-					value = 5
-				}
-			}
-			any_pop = {
-				militancy = -0.5
-			}
-			prestige = 10
-			set_country_flag = we_are_live_from_london
-		}
-	}
-	the_scotland_yard = {
-		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
-			NOT = {
-				has_country_flag = elementary_my_dear_watson # I know, he never says it in the books, yadiyadi.
-			}
-		}
+        effect = {
+            any_country = {
+                relation = {
+                    who = THIS
+                    value = 5
+                }
+            }
+            any_pop = {
+                militancy = -0.5
+            }
+            prestige = 10
+            set_country_flag = we_are_live_from_london
+        }
+    }
+    the_scotland_yard = {
+        potential = {
+            OR = {
+                tag = ENG
+                tag = ENL
+            }
+            NOT = {
+                has_country_flag = elementary_my_dear_watson # I know, he never says it in the books, yadiyadi.
+            }
+        }
 
-		allow = {
-			realism = 1
-		}
+        allow = {
+            realism = 1
+        }
 
-		effect = {
-			add_country_modifier = {
-				name = the_yard
-				duration = -1
-			}
-			set_country_flag = elementary_my_dear_watson
-		}
-	}
-	
-	ionian_islands_question = {
-		picture = ionian_islands_question
-		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
-			year = 1860
-			ION = {
-				vassal_of = THIS
-				ai = yes
-			}
-			GRE = { exists = yes }
-		}
-		
-		allow = {
-			state_n_government = 1
-			war = no
-		}
-		
-		effect = {
-			random_country = {
-				limit = {
-					tag = GRE
-					exists = yes
-				}
-				relation = { who = THIS value = 100 }
-				inherit = ION
-				THIS = {
-					diplomatic_influence = { who = GRE value = 100 }
-					any_owned = {
-						limit = { is_core = ION }
-						secede_province = ION
-					}
-				}
-				ION = {
-					set_country_flag = normalized_cultures
-					remove_accepted_culture = british
-					remove_accepted_culture = north_italian
-					all_core = { remove_core = ION }
-				}
-			}
-			prestige = 10
-			badboy = -4
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					OR = {
-						AND = {
-							year = 1864
-							month = 4
-						}
-						year = 1865
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				truce_with = GRE
-			}
-		}
-	}
+        effect = {
+            add_country_modifier = {
+                name = the_yard
+                duration = -1
+            }
+            set_country_flag = elementary_my_dear_watson
+        }
+    }
 
-	create_rhodesia = {
-		picture = rhodesia_charter
-		alert = no
-		potential = {
-			any_owned_province = { is_core = RHO }
-			RHO = { exists = no }
-			NOT = { capital_scope = { continent = africa } }
-			NOT = { has_country_flag = post_colonial_country }
-			primary_culture = british
-			civilized = yes
-			revolution_n_counterrevolution = 1
-		}
-		
-		allow = {
-			war = no
-			SAF = { exists = yes }
-			RHO = {
-				all_core = {
-					OR = {
-						owned_by = THIS
-						owner = {
-							in_sphere = THIS
-							OR = { is_vassal = no vassal_of = THIS }
-						}
-					}
-				}
-			}
-		}
-		
-		effect = {
-			prestige = 3
-			RHO = { set_country_flag = post_colonial_country neutrality = yes }
-			release_vassal = RHO
-			create_alliance = RHO
-			diplomatic_influence = {
-				who = RHO
-				value = 400
-			}	
-		}
-		
-		ai_will_do = { factor = 0 }
-	}
-	
-	rhodesia_charter = {
-		potential = {
-			tag = ENG
-			owns = 2068
-			owns = 2069
-			owns = 2070
-			owns = 2071
-			owns = 2072
-			owns = 2073
-			owns = 2635
-			NOT = { has_country_flag = ian_would_be_proud }
-		}
-		
-		allow = { invention = mission_to_civilize }
-		
-		effect = {
-			prestige = 10
-			ENG_2068 = { add_core = RHO }
-			ENG_2071 = { add_core = RHO }
-			ENG_2014 = { add_core = RHO }
-			ENG_2016 = { add_core = RHO }
-			RHO = { all_core = { remove_core = MAT } }
-			country_event = { id = 199067 days = 2 }
-			country_event = { id = 199050 days = 2 }
-			set_country_flag = ian_would_be_proud
-		}
-	}
-	
-	treaty_of_heligoland = {
-		picture = the_heligoland_question
-		potential = {
-			tag = ENG
-			533 = { owned_by = ENG }
-			GER = {
-				any_owned_province = {
-					continent = africa
-					is_colonial = yes
-					OR = {
-						any_neighbor_province = { owned_by = THIS }
-						port = yes
-					}
-				}
-			}
-			NOT = { has_country_flag = treaty_of_heligoland }
-		}
+    ionian_islands_question = {
+        picture = ionian_islands_question
+        potential = {
+            OR = {
+                tag = ENG
+                tag = ENL
+            }
+            year = 1860
+            ION = {
+                vassal_of = THIS
+                ai = yes
+            }
+            GRE = { exists = yes }
+        }
 
-		allow = {
-			war = no
-			year = 1892
-			2013 = { empty = no }
-			2015 = { empty = no }
-			GER = {
-				exists = yes
-				war = no
-			}
-		}
+        allow = {
+            state_n_government = 1
+            war = no
+        }
 
-		effect = {
-			set_country_flag = treaty_of_heligoland
-			GER = { country_event = 33006 }
-		}
+        effect = {
+            random_country = {
+                limit = {
+                    tag = GRE
+                    exists = yes
+                }
+                relation = { who = THIS value = 100 }
+                inherit = ION
+                THIS = {
+                    diplomatic_influence = { who = GRE value = 100 }
+                    any_owned = {
+                        limit = { is_core = ION }
+                        secede_province = ION
+                    }
+                }
+                ION = {
+                    set_country_flag = normalized_cultures
+                    remove_accepted_culture = british
+                    remove_accepted_culture = north_italian
+                    all_core = { remove_core = ION }
+                }
+            }
+            prestige = 10
+            badboy = -4
+        }
 
-		ai_will_do = { factor = 1 }
-	}
-	
-	treaty_of_nanking = {
-	picture = treaty_of_nanking
-		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
-			exists = QNG
-			has_global_flag = kowloon_incident
-			NOT = { has_country_flag = treaty_of_nanking }
-		}
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                NOT = {
+                    OR = {
+                        AND = {
+                            year = 1864
+                            month = 4
+                        }
+                        year = 1865
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                truce_with = GRE
+            }
+        }
+    }
 
-		allow = {
-			is_greater_power = yes
-			OR = {
-				is_sphere_leader_of = QNG
-				owns = 1496
-			}
-		}
+    create_rhodesia = {
+        picture = rhodesia_charter
+        alert = no
+        potential = {
+            any_owned_province = { is_core = RHO }
+            RHO = { exists = no }
+            NOT = { capital_scope = { continent = africa } }
+            NOT = { has_country_flag = post_colonial_country }
+            primary_culture = british
+            civilized = yes
+            revolution_n_counterrevolution = 1
+        }
 
-		effect = {
-			set_country_flag = treaty_of_nanking
-			prestige_factor = 0.05
-			1496 = { remove_core = QNG }
-			random_country = {
-				limit = {
-					tag = QNG
-					owns = 1496
-				}
-				1496 = { secede_province = THIS }
-			}
-			1496 = {
-				add_province_modifier = {
-					name = colonial_recruitment
-					duration = 1095
-				}
-			}
-			QNG = {
-				add_country_modifier = { name = legation_quarter duration = -1 }
-			}
-			diplomatic_influence = {
-				who = QNG
-				value = 50
-			}
-		}
+        allow = {
+            war = no
+            SAF = { exists = yes }
+            RHO = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                            OR = { is_vassal = no vassal_of = THIS }
+                        }
+                    }
+                }
+            }
+        }
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 0.8
-			}
-		}
-	}
+        effect = {
+            prestige = 3
+            RHO = { set_country_flag = post_colonial_country neutrality = yes }
+            release_vassal = RHO
+            create_alliance = RHO
+            diplomatic_influence = {
+                who = RHO
+                value = 400
+            }
+        }
 
-	simla_convention = {
-		picture = treaty_signing
-		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
-			TIB = {
-				neighbour = THIS
-				is_vassal = no
-			}
-			NOT = {	has_country_flag = simla_convention }
-		}
+        ai_will_do = { factor = 0 }
+    }
 
-		allow = {
-			war = no
-			TIB = {
-				is_vassal = no
-				war = no
-			}
-		}
+    rhodesia_charter = {
+        potential = {
+            tag = ENG
+            owns = 2068
+            owns = 2069
+            owns = 2070
+            owns = 2071
+            owns = 2072
+            owns = 2073
+            owns = 2635
+            NOT = { has_country_flag = ian_would_be_proud }
+        }
 
-		effect = {
-			set_country_flag = simla_convention
-			TIB = { country_event = 131711 }
-		}
+        allow = { invention = mission_to_civilize }
 
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	aden_protectorate = {
-		picture = aden_protectorate
-		alert = no
-		potential = {
-			NOT = { is_culture_group = arab }
-			OR = {
-				any_owned_province = { is_core = LHJ }
-				any_owned_province = { is_core = FDL }
-				any_owned_province = { is_core = KTH }
-				any_owned_province = { is_core = MHR }
-				is_sphere_leader_of = LHJ
-				is_sphere_leader_of = FDL
-				is_sphere_leader_of = KTH
-				is_sphere_leader_of = MHR
-			}
-			NOT = { has_global_flag = created_aden_protectorate }
-		}
-		
-		allow = {
-			war = no
-			1412 = {
-				OR = {
-					owned_by = THIS
-					owner = { vassal_of = THIS }
-					owner = { in_sphere = THIS }
-				}
-			}
-			1173 = {
-				OR = {
-					owned_by = THIS
-					owner = { vassal_of = THIS }
-					owner = { in_sphere = THIS }
-				}
-			}
-			1175 = {
-				OR = {
-					owned_by = THIS
-					owner = { vassal_of = THIS }
-					owner = { in_sphere = THIS }
-				}
-			}
-			1176 = {
-				OR = {
-					owned_by = THIS
-					owner = { vassal_of = THIS }
-					owner = { in_sphere = THIS }
-				}
-			}
-			1177 = {
-				OR = {
-					owned_by = THIS
-					owner = { vassal_of = THIS }
-					owner = { in_sphere = THIS }
-				}
-			}
-			YEM = { exists = no }
-		}
-		
-		effect = {
-			set_global_flag = created_aden_protectorate
-			prestige = 10
-			any_country = {
-				limit = {
-					OR = {
-						in_sphere = THIS
-						vassal_of = THIS
-					}
-					exists = yes
-					OR = {
-						tag = KTH
-						tag = LHJ
-						tag = FDL
-						tag = MHR
-					}
-					ai = yes
-				}
-				annex_to = THIS
-			}
-			LHJ = { all_core = { add_core = YEM remove_core = LHJ } }
-			FDL = { all_core = { add_core = YEM remove_core = FDL } }
-			KTH = { all_core = { add_core = YEM remove_core = KTH } }
-			MHR = { all_core = { add_core = YEM remove_core = MHR } }
-			1412 = { remove_core = NYE }
-			random_owned = {
-				limit = { owner = { slavery = no_slavery } }
-				YEM = { political_reform = no_slavery }
-			}
-				
-			random_owned = {
-				limit = { owner = { ai = yes } }
-				owner = {
-					any_country = {
-						limit = {
-							tag = YEM
-							exists = no
-							THIS = { is_possible_vassal = YEM }
-						}
-						
-						THIS = {
-							badboy = -2
-							release_vassal = YEM
-							random_owned = {
-								limit = { owner = { is_greater_power = yes } }
-								owner = { diplomatic_influence = { who = YEM value = 400 } }
-							}
-							relation = { who = YEM value = 400 }
-						}
-						
-						capital = 1176
-						money = 10000
-						research_points = 6000
-						government = absolute_monarchy
-						1412 = { secede_province = THIS }
-						tech_school = developing_tech_school
-					}
-				}
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	gold_coast_treaty = {
-		picture = treaty_signing
-		potential = {
-			is_greater_power = yes
-			owns = 1908
-			nationalism_n_imperialism = 1
-			1909 = { NOT = { owned_by = THIS } }
-			NOT = { has_country_flag = gold_coast_treaty }
-		}
-		
-		allow = {
-			war = no
-			1909 = { owner = { war = no } }
-		}
-		
-		effect = {
-			set_country_flag = gold_coast_treaty
-			1909 = { owner = { country_event = 36960 } }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				1909 = { owner = { truce_with = THIS } }
-			}
-		}
-	}
-	
-	annex_fiji = {
-		picture = dreams_of_empire
-		potential = {
-			tag = ENG
-			is_greater_power = yes
-			state_n_government = 1
-			2454 = { empty = yes }
-			any_owned_province = { is_core = AST }
-			OR = {
-				government = hms_government
-				government = prussian_constitutionalism
-				government = absolute_monarchy
-			}
-		}
-		
-		allow = {
-			war = no
-			money = 10000
-			revolution_n_counterrevolution = 1
-		}
-		
-		effect = {
-			prestige = 3
-			treasury = -10000
-			2454 = {
-				secede_province = ENG
-				naval_base = 1
-			}
-		}
-	}
-	
-	invest_in_irish = {
-		picture = embrace_minority
-		potential = {
-			tag = ENG
-			NOT = {
-				exists = IRE
-				accepted_culture = irish
-				has_country_flag = invest_in_irish
-			}
-			OR = {
-				government = democracy
-				government = hms_government
-				government = proletarian_dictatorship
-			}
-			OR = {
-				has_country_flag = help_for_the_irish
-				has_country_flag = irish_republican_brotherhood
-			}
-			any_owned_province = { is_core = IRE }
-		}
-		
-		allow = {
-			prestige = 50
-			money = 100000
-			NOT = { citizenship_policy = residency }
-			social_science = 1
-		}
-		
-		effect = {
-			set_country_flag = invest_in_irish
-			random_owned = {
-				limit = { owner = { NOT = { has_country_flag = irish_republican_brotherhood } } }
-				owner = { add_accepted_culture = irish }
-			}
-			prestige = -50
-			treasury = -100000
-			any_owned = {
-				remove_province_modifier = irish_oppression
-			}
-			any_pop = {
-				limit = {
-					has_pop_culture = irish
-					has_pop_religion = catholic
-				}
-				militancy = -5
-			}
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					OR = {
-						government = democracy
-						citizenship_policy = full_citizenship
-						any_state = {
-							any_owned_province = { is_core = IRE }
-							average_militancy = 7
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	#irish_integration = {
-	#	picture = embrace_minority
-	#	potential = {
-	#		tag = ENG
-	#		accepted_culture = irish
-	#		any_owned_province = {
-	#			is_core = IRE
-	#			NOT = { has_province_modifier = irish_integration }
-	#		}
-	#	}
-	#	
-	#	allow = {
-	#		money = 50000
-	#		social_science = 1
-	#		psychoanalysis = 1
-	#	}
-	#	
-	#	effect = {
-	#		prestige = 20
-	#		treasury = -50000
-	#		any_owned = {
-	#			limit = { is_core = IRE }
-	#			add_province_modifier = {
-	#				name = irish_integration
-	#				duration = -1
-	#			}
-	#		}
-	#	}
-	#}
-	
-	the_great_game_makran = {
-		picture = gtfo
-		potential = {
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
-			is_greater_power = yes
-			tag = ENG
-			has_country_flag = empress_of_india
-			exists = MAK
-			MAK = {
-				civilized = no
-				vassal_of = ENG
-				ai = yes
-			}
-		}
-		
-		allow = {
-			MAK = { average_militancy = 3 }
-		}
-		
-		effect = {
-			MAK = { annex_to = THIS }
-		}
-	}
-	
-	the_great_game_panjab = {
-		picture = gtfo
-		potential = {
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
-			is_greater_power = yes
-			tag = ENG
-			has_country_flag = empress_of_india
-			exists = PNJ
-			PNJ = {
-				civilized = no
-				vassal_of = ENG
-				ai = yes
-			}
-		}
-		
-		allow = {
-			PNJ = { average_militancy = 4 }
-		}
-		
-		effect = {
-			PNJ = { annex_to = THIS }
-		}
-	}
-	
-	the_great_game_sindh = {
-		picture = gtfo
-		potential = {
-			OR = {
-				government = absolute_monarchy
-				government = prussian_constitutionalism
-				government = hms_government
-			}
-			is_greater_power = yes
-			tag = ENG
-			has_country_flag = empress_of_india
-			exists = SIN
-			SIN = {
-				civilized = no
-				vassal_of = ENG
-				ai = yes
-			}
-		}
-		
-		allow = {
-			SIN = { average_militancy = 3 }
-		}
-		
-		effect = {
-			SIN = { annex_to = THIS }
-		}
-	}
-	
-	
-	build_the_big_ben = {
-		picture = bigben
-		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
-			year = 1844
-			NOT = { has_country_flag = big_ben_construction }		
-			NOT = { year = 1860 }
-			300 = { NOT = { has_province_modifier = the_big_ben } }
-		}
-		
-		allow = {
-			war = no
-			election = no
-			stock_exchange = 1
-			OR = {
-				money = 30000
-				ai = yes
-			}
-		}
-		
-		effect = {
-			set_country_flag = big_ben_construction
-			country_event = 3697000
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
+        effect = {
+            prestige = 10
+            ENG_2068 = { add_core = RHO }
+            ENG_2071 = { add_core = RHO }
+            ENG_2014 = { add_core = RHO }
+            ENG_2016 = { add_core = RHO }
+            RHO = { all_core = { remove_core = MAT } }
+            country_event = { id = 199067 days = 2 }
+            country_event = { id = 199050 days = 2 }
+            set_country_flag = ian_would_be_proud
+        }
+    }
 
-	rhodesia_renaming_act = {
-		picture = rhodesia_renaming_act
-		potential = {
-			tag = RHO
-			owns = 2068
-			owns = 2070
-			owns = 2635
-			NOT = { has_country_flag = renaming_act }
-		}
-		
-		allow = {
-			owns = 2068
-			owns = 2070
-			owns = 2635
-		}
-		
-		effect = {
-			set_country_flag = renaming_act
-			2068 = { state_scope = { change_region_name = "Southern Rhodesia" } }
-		}
-	ai_will_do = { factor = 1 }
-	}
-	
-	durand_line = {
-		picture = mortimer_durand
-		potential = {
-			tag = ENG
-			is_greater_power = yes
-			neighbour = AFG
-			any_owned_province = { is_core = AFG }
-			AFG = { exists = yes }
-			NOT = { has_country_flag = durand_line }
-			NOT = { year = 1910 }
-		}
-		
-		allow = {
-			war = no
-			AFG = { war = no }
-			nationalism_n_imperialism = 1
-			NOT = { year = 1910 }
-			NOT = { relation = { who = AFG value = 100 } }
-		}
-		
-		effect = {
-			set_country_flag = durand_line
-			AFG = { country_event = 3697010 }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	unite_north_yemen_existing = {
-		picture = aden_protectorate
-		potential = {
-			OR = {
-				NOT = { 1178 = { is_core = YEM } }
-				NOT = { 1179 = { is_core = YEM } }
-				NOT = { 1180 = { is_core = YEM } }
-			}			
-			NOT = { tag = NYE }
-			NYE = { exists = yes }
-			OR = {
-				tag = YEM
-				YEM = {
-					exists = yes
-					OR = {
-						vassal_of = THIS
-						in_sphere = THIS
-						}
-					}
-				}
-			}
-		
-		allow = {
-			nationalism_n_imperialism = 1
-			war = no
-			NYE = {
-				war = no
-				OR = {
-					vassal_of = THIS
-					in_sphere = THIS
-				all_core = { 
-					OR = {
-						owned_by = THIS 
-						owner = { in_sphere = THIS }
-						owner = { vassal_of = THIS }
-						}
-					}
-				}
-			}
-			OR = {
-				tag = YEM
-				YEM = {
-					OR = {
-						vassal_of = THIS
-						in_sphere = THIS
-					}
-				}
-			}
-		}
-		
-		effect = {
-			prestige = 5
-			NYE = { all_core = { add_core = YEM } }
-			YEM = { inherit = NYE capital = 1178 }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	unite_yemeni_colonies = {
-		picture = aden_protectorate
-		potential = {
-			has_global_flag = created_aden_protectorate
-			OR = {
-				NOT = { 1178 = { is_core = YEM } }
-				NOT = { 1179 = { is_core = YEM } }
-				NOT = { 1180 = { is_core = YEM } }
-			}
-			OR = {
-				any_owned_province = { is_core = YEM }
-				any_owned_province = { is_core = NYE }
-				NYE = { in_sphere = THIS }
-				NYE = { vassal_of = THIS }
-			}
-		}
-		
-		allow = {
-			nationalism_n_imperialism = 1
-			war = no
-			NYE = {
-				war = no
-				all_core = { 
-					OR = {
-						owned_by = THIS 
-						owner = { in_sphere = THIS }
-						owner = { vassal_of = THIS }
-					}
-				}
-			}
-		}
-		
-		effect = {
-			prestige = 5
-			random_country = {	
-				limit = {
-					tag = NYE
-					exists = yes
-					NOT = { number_of_states = 2 }
-				}
-				annex_to = THIS
-			}
-			any_country = {	
-				limit = {
-					NOT = { tag = THIS }
-					any_owned_province = { is_core = NYE }
-					exists = yes
-				}
-				any_owned = { limit = { is_core = NYE } secede_province = THIS }
-			}
+    treaty_of_heligoland = {
+        picture = the_heligoland_question
+        potential = {
+            tag = ENG
+            533 = { owned_by = ENG }
+            GER = {
+                any_owned_province = {
+                    continent = africa
+                    is_colonial = yes
+                    OR = {
+                        any_neighbor_province = { owned_by = THIS }
+                        port = yes
+                    }
+                }
+            }
+            NOT = { has_country_flag = treaty_of_heligoland }
+        }
 
-			NYE = {
-				all_core = { add_core = YEM }
-				tech_school = developing_tech_school
-			}
-			YEM = {
-				tech_school = developing_tech_school
-			}
-			random_country = {
-				limit = {
-					tag = YEM
-					exists = yes
-					vassal_of = THIS
-				}
-				THIS = {
-					any_owned = {
-						limit = { is_core = YEM }
-						secede_province = YEM
-					}
-				}
-			}
-			random_country = {
-				limit = {
-					tag = YEM
-					exists = yes
-					owns = 1178
-				}
-				capital = 1178
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
+        allow = {
+            war = no
+            year = 1892
+            2013 = { empty = no }
+            2015 = { empty = no }
+            GER = {
+                exists = yes
+                war = no
+            }
+        }
 
-	anglo_persian_oil_company = { 
-		picture = map_arabia
-		
-		potential = { 
-			tag = ENG
-			year = 1900
-			NOT = {	has_country_flag = apoc	}
-			invention = cracking
-			invention = oil_pumping_machinery
-			PER = { exists = yes }
-		}
-		
-		allow = { 
-			money = 20000
-			PER = { in_sphere = THIS }
-		}
-		
-		effect = { 
-			set_country_flag = apoc
-			treasury = -20000
-			prestige = 5
-			research_points = 1000
-			PER = { country_event = 110011 }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	canadian_lands = {
-		picture = canadian_dominion
-		alert = no
-		potential = {
-			OR = {
-				tag = ENG
-				tag = ENL
-			}
-			CAN = { exists = yes vassal_of = THIS }
-			any_owned_province = {
-				continent = north_america
-				OR = {
-					#region = ENG_6
-					region = ENG_9
-					region = CAN_13
-					#region = CAN_18
-					region = ENG_22
-					region = ENG_30
-					region = ENG_36
-					region = CAN_46
-					region = CAN_50
-					region = CAN_58
-					region = CAN_60
-					region = ENG_68
-					is_core = COL
-				}
-			}
-			OR = {
-				year = 1900
-				has_country_flag = CAN_independence_refused
-			}
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			any_owned = {
-				limit = {
-					continent = north_america
-					OR = {
-						#region = ENG_6
-						region = ENG_9
-						region = CAN_13
-						#region = CAN_18
-						region = ENG_22
-						region = ENG_30
-						region = ENG_36
-						region = CAN_46
-						region = CAN_50
-						region = CAN_58
-						region = CAN_60
-						region = ENG_68
-						is_core = COL
-					}
-				}
-			remove_core = THIS
-			secede_province = CAN
-			add_core = CAN
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	tasmania_penal_colony = {
-		picture = drain_the_pinsk_marshes
-		
-		potential = {
-			owns = 2482
-			OR = {
-				2482 = { has_province_modifier = penal_colony }	
-				NOT = { has_global_flag = tasmania_renamed }
-			}
-		}
-		
-		allow = {
-			war = no
-			state_n_government = 1
-			OR = {
-				NOT = { penal_system = colonial_transportation }
-				year = 1853
-			}
-		}
-		
-		effect = {
-			set_global_flag = tasmania_renamed
-			2482 = {
-				change_province_name = "Tasmania"
-				remove_province_modifier = penal_colony
-				add_province_modifier = { name = population_resettlement duration = 60 }
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	cede_aden = {
-		picture = aden_protectorate
-		alert = no
-		
-		potential = {
-			has_global_flag = created_aden_protectorate
-			OR = {
-				owns = 1412
-				1412 = { owner = { OR = { vassal_of = THIS AND = { in_sphere = THIS is_vassal = no ai = yes } } } }
-			}
-			NOT = { tag = YEM }
-			NOT = { tag = NYE }
-			YEM = { exists = yes NOT = { owns = 1412 } }
-			OR = {
-				AND = { tag = LHJ ai = yes is_vassal = no }
-				great_wars_enabled = yes
-			}
-		}
-		
-		
-		allow = {
-			war = no
-			OR = {
-				owns = 1412
-				1412 = {
-					owner = {
-						OR = {
-							vassal_of = THIS
-							AND = { in_sphere = THIS is_vassal = no } 
-						} 
-					}
-				}
-			}
-			1412 = { any_neighbor_province = { owned_by = YEM } }
-			OR = {
-				YEM = { OR = { is_vassal = no vassal_of = THIS } }
-				ai = yes
-			}
-		}
-		
-		effect = {
-			badboy = -2
-			1412 = { remove_core = THIS }
-			
-			random_country = { limit = { owns = 1412 num_of_cities = 2 }
-				1412 = { secede_province = THIS }
-			}
-			
-			random_owned = { limit = { province_id = 1412 }
-				1412 = { secede_province = YEM add_core = YEM remove_core = THIS remove_core = LHJ }
-			}
-			
-			random_country = { limit = { owns = 1412 NOT = { num_of_cities = 2 } }
-				1412 = { add_core = YEM remove_core = THIS remove_core = LHJ }
-				annex_to = YEM
-			}
-			
-			random_owned = { limit = { owner = { is_greater_power = yes } } owner = { diplomatic_influence = { who = YEM value = 100 } } }
-			relation = { who = YEM value = 100 }
-			random_country = { limit = { tag = YEM NOT = { capital = 1178 } } capital = 1412 } 
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				1412 = { any_neighbor_province = { owned_by = THIS } }
-			}
-			
-			modifier = {
-				factor = 0
-				owns = 1412
-			}
-		}
-	}
-	
-	
-	christimas_and_cocos_adminstration = {
-		picture = dreams_of_empire
-		
-		potential = {
-			owns = 2244
-			OR = {
-				tag = AST
-				AND = {
-					owns = 2476
-					owns = 2468
-					owns = 2487
-					owns = 2493
-					owns = 2497
-					owns = 2505
-				}
-				AST = { vassal_of = THIS }
-			}
-			2244 = { NOT = { is_core = AST } }
-		}
-		
-		
-		allow = {
-			war = no
-			state_n_government = 1
-		}
-		
-		effect = {
-			2244 = { add_core = AST }
-			random_country = { limit = { tag = AST exists = yes } 2244 = { secede_province = AST } }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	
-	the_foster_act = {
-		picture = mortimer_durand
-		
-		potential = {
-			tag = ENG
-			NOT = { school_reforms = good_schools}
-			NOT = { has_country_flag = foster_act_enacted }
-			year = 1865
-		}
-		
-		
-		allow = {
-			war = no
-			biologism = 1
-		}
-		
-		effect = {
-			set_country_flag = foster_act_enacted
-			
-			random_owned = {
-				limit = { owner = { school_reforms = acceptable_schools } }
-				owner = { social_reform = good_schools }
-			}
-			
-			random_owned = {
-				limit = { owner = { school_reforms = low_schools } }
-				owner = { social_reform = acceptable_schools }
-			}
-			
-			random_owned = {
-				limit = { owner = { school_reforms = no_schools } }
-				owner = { social_reform = low_schools }
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	
-	londonderry_renaming_act = {
-		picture = londonderry_quay
-		
-		potential = {
-			OR = {
-				AND = {
-					primary_culture = irish
-					NOT = { has_global_flag = londonderry_renamed }
-				}
-				AND = {
-					primary_culture = british
-					has_global_flag = londonderry_renamed
-				}
-			}
-			owns = 255
-		}
-		
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			
-			random_owned = {
-				limit = { owner = { primary_culture = irish } }
-				owner = { set_global_flag = londonderry_renamed 255 = { change_province_name = "Derry" } }
-			}
-			
-			random_owned = {
-				limit = { owner = { primary_culture = british } }
-				owner = { clr_global_flag = londonderry_renamed 255 = { change_province_name = "Londonderry" } }
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
+        effect = {
+            set_country_flag = treaty_of_heligoland
+            GER = { country_event = 33006 }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    treaty_of_nanking = {
+    picture = treaty_of_nanking
+        potential = {
+            OR = {
+                tag = ENG
+                tag = ENL
+            }
+            exists = QNG
+            has_global_flag = kowloon_incident
+            NOT = { has_country_flag = treaty_of_nanking }
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                is_sphere_leader_of = QNG
+                owns = 1496
+            }
+        }
+
+        effect = {
+            set_country_flag = treaty_of_nanking
+            prestige_factor = 0.05
+            1496 = { remove_core = QNG }
+            random_country = {
+                limit = {
+                    tag = QNG
+                    owns = 1496
+                }
+                1496 = { secede_province = THIS }
+            }
+            1496 = {
+                add_province_modifier = {
+                    name = colonial_recruitment
+                    duration = 1095
+                }
+            }
+            QNG = {
+                add_country_modifier = { name = legation_quarter duration = -1 }
+            }
+            diplomatic_influence = {
+                who = QNG
+                value = 50
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                badboy = 0.8
+            }
+        }
+    }
+
+    simla_convention = {
+        picture = treaty_signing
+        potential = {
+            OR = {
+                tag = ENG
+                tag = ENL
+            }
+            TIB = {
+                neighbour = THIS
+                is_vassal = no
+            }
+            NOT = {    has_country_flag = simla_convention }
+        }
+
+        allow = {
+            war = no
+            TIB = {
+                is_vassal = no
+                war = no
+            }
+        }
+
+        effect = {
+            set_country_flag = simla_convention
+            TIB = { country_event = 131711 }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    aden_protectorate = {
+        picture = aden_protectorate
+        alert = no
+        potential = {
+            NOT = { is_culture_group = arab }
+            OR = {
+                any_owned_province = { is_core = LHJ }
+                any_owned_province = { is_core = FDL }
+                any_owned_province = { is_core = KTH }
+                any_owned_province = { is_core = MHR }
+                is_sphere_leader_of = LHJ
+                is_sphere_leader_of = FDL
+                is_sphere_leader_of = KTH
+                is_sphere_leader_of = MHR
+            }
+            NOT = { has_global_flag = created_aden_protectorate }
+        }
+
+        allow = {
+            war = no
+            1412 = {
+                OR = {
+                    owned_by = THIS
+                    owner = { vassal_of = THIS }
+                    owner = { in_sphere = THIS }
+                }
+            }
+            1173 = {
+                OR = {
+                    owned_by = THIS
+                    owner = { vassal_of = THIS }
+                    owner = { in_sphere = THIS }
+                }
+            }
+            1175 = {
+                OR = {
+                    owned_by = THIS
+                    owner = { vassal_of = THIS }
+                    owner = { in_sphere = THIS }
+                }
+            }
+            1176 = {
+                OR = {
+                    owned_by = THIS
+                    owner = { vassal_of = THIS }
+                    owner = { in_sphere = THIS }
+                }
+            }
+            1177 = {
+                OR = {
+                    owned_by = THIS
+                    owner = { vassal_of = THIS }
+                    owner = { in_sphere = THIS }
+                }
+            }
+            YEM = { exists = no }
+        }
+
+        effect = {
+            set_global_flag = created_aden_protectorate
+            prestige = 10
+            any_country = {
+                limit = {
+                    OR = {
+                        in_sphere = THIS
+                        vassal_of = THIS
+                    }
+                    exists = yes
+                    OR = {
+                        tag = KTH
+                        tag = LHJ
+                        tag = FDL
+                        tag = MHR
+                    }
+                    ai = yes
+                }
+                annex_to = THIS
+            }
+            LHJ = { all_core = { add_core = YEM remove_core = LHJ } }
+            FDL = { all_core = { add_core = YEM remove_core = FDL } }
+            KTH = { all_core = { add_core = YEM remove_core = KTH } }
+            MHR = { all_core = { add_core = YEM remove_core = MHR } }
+            1412 = { remove_core = NYE }
+            random_owned = {
+                limit = { owner = { slavery = no_slavery } }
+                YEM = { political_reform = no_slavery }
+            }
+
+            random_owned = {
+                limit = { owner = { ai = yes } }
+                owner = {
+                    any_country = {
+                        limit = {
+                            tag = YEM
+                            exists = no
+                            THIS = { is_possible_vassal = YEM }
+                        }
+
+                        THIS = {
+                            badboy = -2
+                            release_vassal = YEM
+                            random_owned = {
+                                limit = { owner = { is_greater_power = yes } }
+                                owner = { diplomatic_influence = { who = YEM value = 400 } }
+                            }
+                            relation = { who = YEM value = 400 }
+                        }
+
+                        capital = 1176
+                        money = 10000
+                        research_points = 6000
+                        government = absolute_monarchy
+                        1412 = { secede_province = THIS }
+                        tech_school = developing_tech_school
+                    }
+                }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    gold_coast_treaty = {
+        picture = treaty_signing
+        potential = {
+            is_greater_power = yes
+            owns = 1908
+            nationalism_n_imperialism = 1
+            1909 = { NOT = { owned_by = THIS } }
+            NOT = { has_country_flag = gold_coast_treaty }
+        }
+
+        allow = {
+            war = no
+            1909 = { owner = { war = no } }
+        }
+
+        effect = {
+            set_country_flag = gold_coast_treaty
+            1909 = { owner = { country_event = 36960 } }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                1909 = { owner = { truce_with = THIS } }
+            }
+        }
+    }
+
+    annex_fiji = {
+        picture = dreams_of_empire
+        potential = {
+            tag = ENG
+            is_greater_power = yes
+            state_n_government = 1
+            2454 = { empty = yes }
+            any_owned_province = { is_core = AST }
+            OR = {
+                government = hms_government
+                government = prussian_constitutionalism
+                government = absolute_monarchy
+            }
+        }
+
+        allow = {
+            war = no
+            money = 10000
+            revolution_n_counterrevolution = 1
+        }
+
+        effect = {
+            prestige = 3
+            treasury = -10000
+            2454 = {
+                secede_province = ENG
+                naval_base = 1
+            }
+        }
+    }
+
+    invest_in_irish = {
+        picture = embrace_minority
+        potential = {
+            tag = ENG
+            NOT = {
+                exists = IRE
+                accepted_culture = irish
+                has_country_flag = invest_in_irish
+            }
+            OR = {
+                government = democracy
+                government = hms_government
+                government = proletarian_dictatorship
+            }
+            OR = {
+                has_country_flag = help_for_the_irish
+                has_country_flag = irish_republican_brotherhood
+            }
+            any_owned_province = { is_core = IRE }
+        }
+
+        allow = {
+            prestige = 50
+            money = 100000
+            NOT = { citizenship_policy = residency }
+            social_science = 1
+        }
+
+        effect = {
+            set_country_flag = invest_in_irish
+            random_owned = {
+                limit = { owner = { NOT = { has_country_flag = irish_republican_brotherhood } } }
+                owner = { add_accepted_culture = irish }
+            }
+            prestige = -50
+            treasury = -100000
+            any_owned = {
+                remove_province_modifier = irish_oppression
+            }
+            any_pop = {
+                limit = {
+                    has_pop_culture = irish
+                    has_pop_religion = catholic
+                }
+                militancy = -5
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                NOT = {
+                    OR = {
+                        government = democracy
+                        citizenship_policy = full_citizenship
+                        any_state = {
+                            any_owned_province = { is_core = IRE }
+                            average_militancy = 7
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #irish_integration = {
+    #    picture = embrace_minority
+    #    potential = {
+    #        tag = ENG
+    #        accepted_culture = irish
+    #        any_owned_province = {
+    #            is_core = IRE
+    #            NOT = { has_province_modifier = irish_integration }
+    #        }
+    #    }
+    #
+    #    allow = {
+    #        money = 50000
+    #        social_science = 1
+    #        psychoanalysis = 1
+    #    }
+    #
+    #    effect = {
+    #        prestige = 20
+    #        treasury = -50000
+    #        any_owned = {
+    #            limit = { is_core = IRE }
+    #            add_province_modifier = {
+    #                name = irish_integration
+    #                duration = -1
+    #            }
+    #        }
+    #    }
+    #}
+
+    the_great_game_makran = {
+        picture = gtfo
+        potential = {
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+            }
+            is_greater_power = yes
+            tag = ENG
+            has_country_flag = empress_of_india
+            exists = MAK
+            MAK = {
+                civilized = no
+                vassal_of = ENG
+                ai = yes
+            }
+        }
+
+        allow = {
+            MAK = { average_militancy = 3 }
+        }
+
+        effect = {
+            MAK = { annex_to = THIS }
+        }
+    }
+
+    the_great_game_panjab = {
+        picture = gtfo
+        potential = {
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+            }
+            is_greater_power = yes
+            tag = ENG
+            has_country_flag = empress_of_india
+            exists = PNJ
+            PNJ = {
+                civilized = no
+                vassal_of = ENG
+                ai = yes
+            }
+        }
+
+        allow = {
+            PNJ = { average_militancy = 4 }
+        }
+
+        effect = {
+            PNJ = { annex_to = THIS }
+        }
+    }
+
+    the_great_game_sindh = {
+        picture = gtfo
+        potential = {
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+            }
+            is_greater_power = yes
+            tag = ENG
+            has_country_flag = empress_of_india
+            exists = SIN
+            SIN = {
+                civilized = no
+                vassal_of = ENG
+                ai = yes
+            }
+        }
+
+        allow = {
+            SIN = { average_militancy = 3 }
+        }
+
+        effect = {
+            SIN = { annex_to = THIS }
+        }
+    }
+
+
+    build_the_big_ben = {
+        picture = bigben
+        potential = {
+            OR = {
+                tag = ENG
+                tag = ENL
+            }
+            year = 1844
+            NOT = { has_country_flag = big_ben_construction }
+            NOT = { year = 1860 }
+            300 = { NOT = { has_province_modifier = the_big_ben } }
+        }
+
+        allow = {
+            war = no
+            election = no
+            stock_exchange = 1
+            OR = {
+                money = 30000
+                ai = yes
+            }
+        }
+
+        effect = {
+            set_country_flag = big_ben_construction
+            country_event = 3697000
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    rhodesia_renaming_act = {
+        picture = rhodesia_renaming_act
+        potential = {
+            tag = RHO
+            owns = 2068
+            owns = 2070
+            owns = 2635
+            NOT = { has_country_flag = renaming_act }
+        }
+
+        allow = {
+            owns = 2068
+            owns = 2070
+            owns = 2635
+        }
+
+        effect = {
+            set_country_flag = renaming_act
+            2068 = { state_scope = { change_region_name = "Southern Rhodesia" } }
+        }
+    ai_will_do = { factor = 1 }
+    }
+
+    durand_line = {
+        picture = mortimer_durand
+        potential = {
+            tag = ENG
+            is_greater_power = yes
+            neighbour = AFG
+            any_owned_province = { is_core = AFG }
+            AFG = { exists = yes }
+            NOT = { has_country_flag = durand_line }
+            NOT = { year = 1910 }
+        }
+
+        allow = {
+            war = no
+            AFG = { war = no }
+            nationalism_n_imperialism = 1
+            NOT = { year = 1910 }
+            NOT = { relation = { who = AFG value = 100 } }
+        }
+
+        effect = {
+            set_country_flag = durand_line
+            AFG = { country_event = 3697010 }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    unite_north_yemen_existing = {
+        picture = aden_protectorate
+        potential = {
+            OR = {
+                NOT = { 1178 = { is_core = YEM } }
+                NOT = { 1179 = { is_core = YEM } }
+                NOT = { 1180 = { is_core = YEM } }
+            }
+            NOT = { tag = NYE }
+            NYE = { exists = yes }
+            OR = {
+                tag = YEM
+                YEM = {
+                    exists = yes
+                    OR = {
+                        vassal_of = THIS
+                        in_sphere = THIS
+                        }
+                    }
+                }
+            }
+
+        allow = {
+            nationalism_n_imperialism = 1
+            war = no
+            NYE = {
+                war = no
+                OR = {
+                    vassal_of = THIS
+                    in_sphere = THIS
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = { in_sphere = THIS }
+                        owner = { vassal_of = THIS }
+                        }
+                    }
+                }
+            }
+            OR = {
+                tag = YEM
+                YEM = {
+                    OR = {
+                        vassal_of = THIS
+                        in_sphere = THIS
+                    }
+                }
+            }
+        }
+
+        effect = {
+            prestige = 5
+            NYE = { all_core = { add_core = YEM } }
+            YEM = { inherit = NYE capital = 1178 }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    unite_yemeni_colonies = {
+        picture = aden_protectorate
+        potential = {
+            has_global_flag = created_aden_protectorate
+            OR = {
+                NOT = { 1178 = { is_core = YEM } }
+                NOT = { 1179 = { is_core = YEM } }
+                NOT = { 1180 = { is_core = YEM } }
+            }
+            OR = {
+                any_owned_province = { is_core = YEM }
+                any_owned_province = { is_core = NYE }
+                NYE = { in_sphere = THIS }
+                NYE = { vassal_of = THIS }
+            }
+        }
+
+        allow = {
+            nationalism_n_imperialism = 1
+            war = no
+            NYE = {
+                war = no
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = { in_sphere = THIS }
+                        owner = { vassal_of = THIS }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            prestige = 5
+            random_country = {
+                limit = {
+                    tag = NYE
+                    exists = yes
+                    NOT = { number_of_states = 2 }
+                }
+                annex_to = THIS
+            }
+            any_country = {
+                limit = {
+                    NOT = { tag = THIS }
+                    any_owned_province = { is_core = NYE }
+                    exists = yes
+                }
+                any_owned = { limit = { is_core = NYE } secede_province = THIS }
+            }
+
+            NYE = {
+                all_core = { add_core = YEM }
+                tech_school = developing_tech_school
+            }
+            YEM = {
+                tech_school = developing_tech_school
+            }
+            random_country = {
+                limit = {
+                    tag = YEM
+                    exists = yes
+                    vassal_of = THIS
+                }
+                THIS = {
+                    any_owned = {
+                        limit = { is_core = YEM }
+                        secede_province = YEM
+                    }
+                }
+            }
+            random_country = {
+                limit = {
+                    tag = YEM
+                    exists = yes
+                    owns = 1178
+                }
+                capital = 1178
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    anglo_persian_oil_company = {
+        picture = map_arabia
+
+        potential = {
+            tag = ENG
+            year = 1900
+            NOT = {    has_country_flag = apoc    }
+            invention = cracking
+            invention = oil_pumping_machinery
+            PER = { exists = yes }
+        }
+
+        allow = {
+            money = 20000
+            PER = { in_sphere = THIS }
+        }
+
+        effect = {
+            set_country_flag = apoc
+            treasury = -20000
+            prestige = 5
+            research_points = 1000
+            PER = { country_event = 110011 }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    canadian_lands = {
+        picture = canadian_dominion
+        alert = no
+        potential = {
+            OR = {
+                tag = ENG
+                tag = ENL
+            }
+            CAN = { exists = yes vassal_of = THIS }
+            any_owned_province = {
+                continent = north_america
+                OR = {
+                    #region = ENG_6
+                    region = ENG_9
+                    region = CAN_13
+                    #region = CAN_18
+                    region = ENG_22
+                    region = ENG_30
+                    region = ENG_36
+                    region = CAN_46
+                    region = CAN_50
+                    region = CAN_58
+                    region = CAN_60
+                    region = ENG_68
+                    is_core = COL
+                }
+            }
+            OR = {
+                year = 1900
+                has_country_flag = CAN_independence_refused
+            }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            any_owned = {
+                limit = {
+                    continent = north_america
+                    OR = {
+                        #region = ENG_6
+                        region = ENG_9
+                        region = CAN_13
+                        #region = CAN_18
+                        region = ENG_22
+                        region = ENG_30
+                        region = ENG_36
+                        region = CAN_46
+                        region = CAN_50
+                        region = CAN_58
+                        region = CAN_60
+                        region = ENG_68
+                        is_core = COL
+                    }
+                }
+            remove_core = THIS
+            secede_province = CAN
+            add_core = CAN
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    tasmania_penal_colony = {
+        picture = drain_the_pinsk_marshes
+
+        potential = {
+            owns = 2482
+            OR = {
+                2482 = { has_province_modifier = penal_colony }
+                NOT = { has_global_flag = tasmania_renamed }
+            }
+        }
+
+        allow = {
+            war = no
+            state_n_government = 1
+            OR = {
+                NOT = { penal_system = colonial_transportation }
+                year = 1853
+            }
+        }
+
+        effect = {
+            set_global_flag = tasmania_renamed
+            2482 = {
+                change_province_name = "Tasmania"
+                remove_province_modifier = penal_colony
+                add_province_modifier = { name = population_resettlement duration = 60 }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    cede_aden = {
+        picture = aden_protectorate
+        alert = no
+
+        potential = {
+            has_global_flag = created_aden_protectorate
+            OR = {
+                owns = 1412
+                1412 = { owner = { OR = { vassal_of = THIS AND = { in_sphere = THIS is_vassal = no ai = yes } } } }
+            }
+            NOT = { tag = YEM }
+            NOT = { tag = NYE }
+            YEM = { exists = yes NOT = { owns = 1412 } }
+            OR = {
+                AND = { tag = LHJ ai = yes is_vassal = no }
+                great_wars_enabled = yes
+            }
+        }
+
+
+        allow = {
+            war = no
+            OR = {
+                owns = 1412
+                1412 = {
+                    owner = {
+                        OR = {
+                            vassal_of = THIS
+                            AND = { in_sphere = THIS is_vassal = no }
+                        }
+                    }
+                }
+            }
+            1412 = { any_neighbor_province = { owned_by = YEM } }
+            OR = {
+                YEM = { OR = { is_vassal = no vassal_of = THIS } }
+                ai = yes
+            }
+        }
+
+        effect = {
+            badboy = -2
+            1412 = { remove_core = THIS }
+
+            random_country = { limit = { owns = 1412 num_of_cities = 2 }
+                1412 = { secede_province = THIS }
+            }
+
+            random_owned = { limit = { province_id = 1412 }
+                1412 = { secede_province = YEM add_core = YEM remove_core = THIS remove_core = LHJ }
+            }
+
+            random_country = { limit = { owns = 1412 NOT = { num_of_cities = 2 } }
+                1412 = { add_core = YEM remove_core = THIS remove_core = LHJ }
+                annex_to = YEM
+            }
+
+            random_owned = { limit = { owner = { is_greater_power = yes } } owner = { diplomatic_influence = { who = YEM value = 100 } } }
+            relation = { who = YEM value = 100 }
+            random_country = { limit = { tag = YEM NOT = { capital = 1178 } } capital = 1412 }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                1412 = { any_neighbor_province = { owned_by = THIS } }
+            }
+
+            modifier = {
+                factor = 0
+                owns = 1412
+            }
+        }
+    }
+
+
+    christimas_and_cocos_adminstration = {
+        picture = dreams_of_empire
+
+        potential = {
+            owns = 2244
+            OR = {
+                tag = AST
+                AND = {
+                    owns = 2476
+                    owns = 2468
+                    owns = 2487
+                    owns = 2493
+                    owns = 2497
+                    owns = 2505
+                }
+                AST = { vassal_of = THIS }
+            }
+            2244 = { NOT = { is_core = AST } }
+        }
+
+
+        allow = {
+            war = no
+            state_n_government = 1
+        }
+
+        effect = {
+            2244 = { add_core = AST }
+            random_country = { limit = { tag = AST exists = yes } 2244 = { secede_province = AST } }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+
+    the_foster_act = {
+        picture = mortimer_durand
+
+        potential = {
+            tag = ENG
+            NOT = { school_reforms = good_schools}
+            NOT = { has_country_flag = foster_act_enacted }
+            year = 1865
+        }
+
+
+        allow = {
+            war = no
+            biologism = 1
+        }
+
+        effect = {
+            set_country_flag = foster_act_enacted
+
+            random_owned = {
+                limit = { owner = { school_reforms = acceptable_schools } }
+                owner = { social_reform = good_schools }
+            }
+
+            random_owned = {
+                limit = { owner = { school_reforms = low_schools } }
+                owner = { social_reform = acceptable_schools }
+            }
+
+            random_owned = {
+                limit = { owner = { school_reforms = no_schools } }
+                owner = { social_reform = low_schools }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+
+    londonderry_renaming_act = {
+        picture = londonderry_quay
+
+        potential = {
+            OR = {
+                AND = {
+                    primary_culture = irish
+                    NOT = { has_global_flag = londonderry_renamed }
+                }
+                AND = {
+                    primary_culture = british
+                    has_global_flag = londonderry_renamed
+                }
+            }
+            owns = 255
+        }
+
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+
+            random_owned = {
+                limit = { owner = { primary_culture = irish } }
+                owner = { set_global_flag = londonderry_renamed 255 = { change_province_name = "Derry" } }
+            }
+
+            random_owned = {
+                limit = { owner = { primary_culture = british } }
+                owner = { clr_global_flag = londonderry_renamed 255 = { change_province_name = "Londonderry" } }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
 }

@@ -8,18 +8,18 @@ life_rating = 40
 railroad = 1
 terrain = mining_district
 state_building = {
-	level = 1
-	building = explosives_factory
-	upgrade = yes
+    level = 1
+    building = explosives_factory
+    upgrade = yes
 }
 state_building = {
-	level = 1
-	building = fertilizer_factory
-	upgrade = yes
+    level = 1
+    building = fertilizer_factory
+    upgrade = yes
 }
 state_building = {
-	level = 1
-	building = canned_food_factory
-	upgrade = yes
+    level = 1
+    building = canned_food_factory
+    upgrade = yes
 }
 1861.1.1 = { railroad = 3 }

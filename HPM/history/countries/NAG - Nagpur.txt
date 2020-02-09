@@ -39,13 +39,13 @@ set_country_flag = hindu_country
 
 ruling_party = NAG_conservative
 upper_house = {
-	fascist = 0
-	liberal = 11
-	conservative = 73
-	reactionary = 16
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 11
+    conservative = 73
+    reactionary = 16
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 
@@ -67,17 +67,17 @@ nonstate_consciousness = 0
 
 oob = "NAG_oob.txt"
 1861.1.1 = {
-	literacy = 0.08
-	non_state_culture_literacy = 0.04
+    literacy = 0.08
+    non_state_culture_literacy = 0.04
 
-	foreign_training = yes_foreign_training
-	foreign_weapons = yes_foreign_weapons
+    foreign_training = yes_foreign_training
+    foreign_weapons = yes_foreign_weapons
 
-	# Technologies
-	military_staff_system = 1
-	flintlock_rifles = 1
+    # Technologies
+    military_staff_system = 1
+    flintlock_rifles = 1
 
-	# Inventions
+    # Inventions
 #bottling_process = yes
 
 }

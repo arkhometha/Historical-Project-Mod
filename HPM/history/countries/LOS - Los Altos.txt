@@ -41,13 +41,13 @@ set_country_flag = catholic_country
 ruling_party = LOS_liberal
 last_election = 1835.2.14
 upper_house = {
-	fascist = 0
-	liberal = 55
-	conservative = 26
-	reactionary = 19
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 55
+    conservative = 26
+    reactionary = 19
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = new_world_nation

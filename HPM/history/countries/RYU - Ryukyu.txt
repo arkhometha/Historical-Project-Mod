@@ -39,13 +39,13 @@ set_country_flag = mahayana_country
 
 ruling_party = RYU_reactionary
 upper_house = {
-	fascist = 0
-	liberal = 18
-	conservative = 21
-	reactionary = 61
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 18
+    conservative = 21
+    reactionary = 61
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 
@@ -67,7 +67,7 @@ modern_winemaking = yes
 
 oob = "RYU_oob.txt"
 1861.1.1 = {
-	oob = "/1861/RYU_oob.txt"
+    oob = "/1861/RYU_oob.txt"
 }
 1861.1.1 = {
 

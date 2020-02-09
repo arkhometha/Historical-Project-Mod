@@ -45,11 +45,11 @@ modern_winemaking = yes
 
 ruling_party = BIH_conservative
 upper_house = {
-	fascist = 0
-	liberal = 11
-	conservative = 73
-	reactionary = 16
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 11
+    conservative = 73
+    reactionary = 16
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }

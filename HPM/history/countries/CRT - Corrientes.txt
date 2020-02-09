@@ -43,13 +43,13 @@ oob = "CRT_oob.txt"
 
 ruling_party = ENT_conservative_2
 upper_house = {
-	fascist = 0
-	liberal = 31
-	conservative = 54
-	reactionary = 15
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0	
+    fascist = 0
+    liberal = 31
+    conservative = 54
+    reactionary = 15
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = new_world_nation
@@ -75,4 +75,3 @@ mechanical_production = 1
 #Starting Consciousness
 consciousness = 2
 nonstate_consciousness = 0
-

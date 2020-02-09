@@ -38,13 +38,13 @@ set_country_flag = animist_country
 
 ruling_party = AZA_conservative
 upper_house = {
-	fascist = 0
-	liberal = 15
-	conservative = 70
-	reactionary = 15
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 15
+    conservative = 70
+    reactionary = 15
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = lacking_writing_system

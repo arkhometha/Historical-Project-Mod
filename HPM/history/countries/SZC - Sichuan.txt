@@ -38,13 +38,13 @@ set_country_flag = mahayana_country
 
 ruling_party = SZC_conservative
 upper_house = {
-	fascist = 0
-	liberal = 10
-	conservative = 30
-	reactionary = 30
-	anarcho_liberal = 0
-	socialist = 10
-	communist = 20
+    fascist = 0
+    liberal = 10
+    conservative = 30
+    reactionary = 30
+    anarcho_liberal = 0
+    socialist = 10
+    communist = 20
 }
 
 

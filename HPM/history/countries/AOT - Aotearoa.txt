@@ -38,13 +38,13 @@ set_country_flag = animist_country
 
 ruling_party = AOT_conservative
 upper_house = {
-	fascist = 0
-	liberal = 17
-	conservative = 75
-	reactionary = 8
-	anarcho_liberal = 5
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 17
+    conservative = 75
+    reactionary = 8
+    anarcho_liberal = 5
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = lacking_writing_system

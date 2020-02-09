@@ -38,13 +38,13 @@ set_country_flag = hindu_country
 
 ruling_party = BAS_conservative
 upper_house = {
-	fascist = 0
-	liberal = 15
-	conservative = 75
-	reactionary = 10
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 15
+    conservative = 75
+    reactionary = 10
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 
@@ -66,15 +66,15 @@ nonstate_consciousness = 0
 
 oob = "BAS_oob.txt"
 1861.1.1 = {
-	oob = "/1861/BAS_oob.txt"
-	literacy = 0.10
-	non_state_culture_literacy = 0.05
+    oob = "/1861/BAS_oob.txt"
+    literacy = 0.10
+    non_state_culture_literacy = 0.05
 }
 1861.1.1 = {
 
-	foreign_training = yes_foreign_training
-	foreign_weapons = yes_foreign_weapons
-	foreign_officers = yes_foreign_officers
+    foreign_training = yes_foreign_training
+    foreign_weapons = yes_foreign_weapons
+    foreign_officers = yes_foreign_officers
 
 # Technologies
 military_staff_system = 1

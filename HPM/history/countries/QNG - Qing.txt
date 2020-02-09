@@ -39,13 +39,13 @@ set_country_flag = mahayana_country
 
 ruling_party = CHI_conservative
 upper_house = {
-	fascist = 0
-	liberal = 0
-	conservative = 75
-	reactionary = 25
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 0
+    conservative = 75
+    reactionary = 25
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 
@@ -70,12 +70,12 @@ nonstate_consciousness = 0
 
 oob = "CHI_oob.txt"
 1861.1.1 = {
-	oob = "/1861/CHI_oob.txt"
+    oob = "/1861/CHI_oob.txt"
 }
 1861.1.1 = {
 # Inventions
-	set_global_flag = taiping_has_happened
-	set_global_flag = hong
-	set_global_flag = yang
-	decision = clear_out_the_manchu_elite
+    set_global_flag = taiping_has_happened
+    set_global_flag = hong
+    set_global_flag = yang
+    decision = clear_out_the_manchu_elite
 }

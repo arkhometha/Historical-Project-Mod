@@ -38,13 +38,13 @@ set_country_flag = mahayana_country
 
 ruling_party = HNN_conservative
 upper_house = {
-	fascist = 0
-	liberal = 20
-	conservative = 50
-	reactionary = 10
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 20
+    fascist = 0
+    liberal = 20
+    conservative = 50
+    reactionary = 10
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 20
 }
 
 # Inventions

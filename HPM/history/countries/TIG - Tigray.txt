@@ -41,13 +41,13 @@ set_country_flag = coptic_country
 
 ruling_party = TIG_conservative
 upper_house = {
-	fascist = 0
-	liberal = 10
-	conservative = 72
-	reactionary = 18
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 10
+    conservative = 72
+    reactionary = 18
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 
@@ -65,4 +65,3 @@ consciousness = 0
 nonstate_consciousness = 0
 
 oob = "TIG_oob.txt"
-

@@ -38,12 +38,11 @@ set_country_flag = sunni_country
 
 ruling_party = BUG_conservative
 upper_house = {
-	fascist = 0
-	liberal = 16
-	conservative = 63
-	reactionary = 21
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 16
+    conservative = 63
+    reactionary = 21
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
-

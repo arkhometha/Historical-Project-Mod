@@ -25,7 +25,7 @@ work_hours = ten_hours
 safety_regulations = low_safety
 health_care = no_health_care
 unemployment_subsidies = trinket_subsidies
-pensions = trinket_pensions 
+pensions = trinket_pensions
 school_reforms = no_schools
 
 # New Reforms
@@ -40,15 +40,14 @@ set_country_flag = protestant_country
 
 ruling_party = SAF_conservative_2
 upper_house = {
-	fascist = 0
-	liberal = 14
-	conservative = 77
-	reactionary = 9
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 14
+    conservative = 77
+    reactionary = 9
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 schools = developing_tech_school
 set_country_flag = post_colonial_country
-

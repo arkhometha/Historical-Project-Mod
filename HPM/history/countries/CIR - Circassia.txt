@@ -59,11 +59,11 @@ ammunition_production = yes
 
 ruling_party = CIR_conservative
 upper_house = {
-	fascist = 0
-	liberal = 20
-	conservative = 70
-	reactionary = 10
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 20
+    conservative = 70
+    reactionary = 10
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
