@@ -2243,10 +2243,16 @@ political_decisions = {
                 civilized = yes
                 is_disarmed = no
                 OR = {
-                    capital_scope = { continent = europe }
-                    tech_school = naval_tech_school
-                    tech_school = japanese_tech_school
-                }
+					AND = {
+						capital_scope = { continent = europe }
+						NOT = {
+							tag = TUR
+							tag = RUS
+						}
+					}
+					tech_school = naval_tech_school
+					tech_school = japanese_tech_school
+				}
                 state_n_government = 1
                 OR = {
                     #Mozambique
