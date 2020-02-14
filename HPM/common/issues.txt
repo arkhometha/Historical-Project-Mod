@@ -1010,6 +1010,7 @@ social_reforms = {
     }
 
     citizens_rights = {
+		administrative = yes
         next_step_only = yes
         primary_culture_only = {
             rules = { primary_culture_voting = yes }

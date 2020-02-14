@@ -1473,7 +1473,7 @@ destitution_and_poverty = {
     farm_rgo_eff = -0.05
     mine_rgo_eff = -0.05
     pop_militancy_modifier = 0.02
-    icon = 19
+    icon = 20
 }
 
 liquor_prohibition = {
