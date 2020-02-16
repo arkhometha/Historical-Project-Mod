@@ -6,6 +6,6 @@ add_core = HND
 trade_goods = silk
 life_rating = 32
 1861.1.1 = {
-	owner = KAS
-	controller = KAS
+    owner = KAS
+    controller = KAS
 }

@@ -3,12 +3,11 @@ SUL = { value = 100 }
 BRU = { value = 100 }
 
 army = {
-	name = "Imperial Guard"
-	location = 1657
-	regiment = {
-		name= "1.Guard"
-		type = cavalry
-		home = 1657
-	}
+    name = "Imperial Guard"
+    location = 1657
+    regiment = {
+        name= "1.Guard"
+        type = cavalry
+        home = 1657
+    }
 }
-

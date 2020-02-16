@@ -1,70 +1,70 @@
 SPA = {
-	value = 75
+    value = 75
 }
 RGS = {
-	value = 150
+    value = 150
 }
 BRZ = {
-	value = -100
+    value = -100
 }
 ARC = {
-	value = 100
+    value = 100
 }
 SBA = {
-	value = 150
+    value = 150
 }
 ENT = {
-	value = 150
+    value = 150
 }
 
 PRG = {
-	value = 10
+    value = 10
 }
 
 leader = {
-	name = "Juan Lavalle"
-	type = land
-	date="1810.1.1"
-	personality = hellbent
-	background = nationalist
+    name = "Juan Lavalle"
+    type = land
+    date="1810.1.1"
+    personality = hellbent
+    background = nationalist
 }
 
 leader = {
-	name = "Pablo Zufriategui"
-	type = sea
-	date="1810.1.1"
-	personality = relentless
-	background = nationalist
+    name = "Pablo Zufriategui"
+    type = sea
+    date="1810.1.1"
+    personality = relentless
+    background = nationalist
 }
 
 army = {
-	name = "Ejército del Uruguay"
-	location = 2344
-	regiment = {
-		name= "1. División de Infantería"
-		type = infantry
-		home = 2345
-	}
+    name = "Ejército del Uruguay"
+    location = 2344
+    regiment = {
+        name= "1. División de Infantería"
+        type = infantry
+        home = 2345
+    }
 }
 
 navy = {
-	name = "Armada del Uruguay"
-	location = 2344
-	ship = {
-		name= "Sarandí"
-		type = frigate
-	}
-	ship = {
-		name= "General Rivera"
-		type = frigate
-	}
-	ship = {
-		name= "General Artigas"
-		type = frigate
-	}
-	ship = {
-		name= "Águila"
-		type = frigate
-	}
+    name = "Armada del Uruguay"
+    location = 2344
+    ship = {
+        name= "Sarandí"
+        type = frigate
+    }
+    ship = {
+        name= "General Rivera"
+        type = frigate
+    }
+    ship = {
+        name= "General Artigas"
+        type = frigate
+    }
+    ship = {
+        name= "Águila"
+        type = frigate
+    }
 
 }

@@ -2,75 +2,75 @@
 #Ruled by Britain 1836
 #Saint Helena (4000/1000 POPS)
 2129 = {
-	bureaucrats = {
-		culture = british
-		religion = protestant
-		size = 5
-	}
+    bureaucrats = {
+        culture = british
+        religion = protestant
+        size = 5
+    }
 
-	clergymen = {
-		culture = british
-		religion = protestant
-		size = 25
-	}
+    clergymen = {
+        culture = british
+        religion = protestant
+        size = 25
+    }
 
-	soldiers = {
-		culture = british
-		religion = protestant
-		size = 20
-	}
+    soldiers = {
+        culture = british
+        religion = protestant
+        size = 20
+    }
 
-	artisans = {
-		culture = british
-		religion = protestant
-		size = 50
-	}
+    artisans = {
+        culture = british
+        religion = protestant
+        size = 50
+    }
 
-	farmers = {
-		culture = british
-		religion = protestant
-		size = 245
-	}
-	
-	farmers = {
-		culture = nanfaren
-		religion = mahayana
-		size = 155
-	}
-	
-	farmers = {
-		culture = afro_caribeno
-		religion = protestant
-		size = 500
-	}
+    farmers = {
+        culture = british
+        religion = protestant
+        size = 245
+    }
+
+    farmers = {
+        culture = nanfaren
+        religion = mahayana
+        size = 155
+    }
+
+    farmers = {
+        culture = afro_caribeno
+        religion = protestant
+        size = 500
+    }
 }
 #Ascension (140/35 POPS)
 2130 = {
-	soldiers = {
-		culture = british
-		religion = protestant
-		size = 10
-	}
+    soldiers = {
+        culture = british
+        religion = protestant
+        size = 10
+    }
 
-	farmers = {
-		culture = british
-		religion = protestant
-		size = 60
-	}
+    farmers = {
+        culture = british
+        religion = protestant
+        size = 60
+    }
 }
 #Tristan da Cunha (100/25 POPS)
 2132 = {
 
-	soldiers = {
-		culture = british
-		religion = protestant
-		size = 10
-	}
-	
-	farmers = {
-		culture = british
-		religion = protestant
-		size = 60
-	}
+    soldiers = {
+        culture = british
+        religion = protestant
+        size = 10
+    }
+
+    farmers = {
+        culture = british
+        religion = protestant
+        size = 60
+    }
 
 }

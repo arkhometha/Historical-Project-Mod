@@ -1,35 +1,34 @@
 BAV = {
-	value = 150
-	military_access = yes
+    value = 150
+    military_access = yes
 }
 WUR = {
-	value = 150
-	military_access = yes
+    value = 150
+    military_access = yes
 }
 
 leader = {
-	name = "Leopold of Baden"
-	date = 1830.1.1
-	type = land
-	personality = mediocre
-	background = aristocrat
-	prestige = 0.3
+    name = "Leopold of Baden"
+    date = 1830.1.1
+    type = land
+    personality = mediocre
+    background = aristocrat
+    prestige = 0.3
 }
 
 army = {
-	name = "Badische Armee"
-	location = 586
-	
-	regiment = {
-		name = "1. Badische Infanterie-Brigade"
-		type = infantry
-		home = 586
-	}
-	
-	regiment = {
-		name = "2. Badische Infanterie-Brigade"
-		type = infantry
-		home = 587
-	}
-}
+    name = "Badische Armee"
+    location = 586
 
+    regiment = {
+        name = "1. Badische Infanterie-Brigade"
+        type = infantry
+        home = 586
+    }
+
+    regiment = {
+        name = "2. Badische Infanterie-Brigade"
+        type = infantry
+        home = 587
+    }
+}

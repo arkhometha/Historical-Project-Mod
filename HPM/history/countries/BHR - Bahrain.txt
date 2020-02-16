@@ -30,18 +30,19 @@ school_reforms = no_schools
 conscription = one_year_draft
 debt_law = peonage
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = culture_voting_only
+child_labor = child_labor_legal
+citizens_rights = culture_voting_only
 border_policy = open_borders
 
 ruling_party = BHR_conservative
 upper_house = {
-	fascist = 0
-	liberal = 10
-	conservative = 78
-	reactionary = 12
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 10
+    conservative = 78
+    reactionary = 12
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = sunni_country
@@ -64,5 +65,5 @@ nonstate_consciousness = 0
 
 oob = "BHR_oob.txt"
 1861.1.1 = {
-	oob = "/1861/BHR_oob.txt"
+    oob = "/1861/BHR_oob.txt"
 }

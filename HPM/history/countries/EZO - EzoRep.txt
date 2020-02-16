@@ -33,20 +33,21 @@ school_reforms = no_schools
 conscription = mandatory_service
 debt_law = peonage
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = primary_culture_only
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
 border_policy = open_borders
 
 set_country_flag = shinto_country
 
 ruling_party = EZO_reactionary
 upper_house = {
-	fascist = 0
-	liberal = 18
-	conservative = 21
-	reactionary = 61
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 18
+    conservative = 21
+    reactionary = 61
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 # Starting Consciousness
@@ -61,4 +62,3 @@ foreign_weapons = yes_foreign_weapons
 flintlock_rifles = 1
 
 }
-

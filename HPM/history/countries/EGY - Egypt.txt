@@ -38,13 +38,13 @@ border_policy = open_borders
 
 ruling_party = EGY_conservative
 upper_house = {
-	fascist = 0
-	liberal = 10
-	conservative = 72
-	reactionary = 18
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 10
+    conservative = 72
+    reactionary = 18
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 decision = EGY_1836_setup
@@ -75,10 +75,10 @@ nonstate_consciousness = 0
 
 oob = "EGY_oob.txt"
 1861.1.1 = {
-	oob = "/1861/EGY_oob.txt"
-	prestige = 5
-	literacy = 0.10
-	non_state_culture_literacy = 0.05
+    oob = "/1861/EGY_oob.txt"
+    prestige = 5
+    literacy = 0.10
+    non_state_culture_literacy = 0.05
 }
 1861.1.1 = {
 

@@ -1,481 +1,481 @@
 # The Swan King
 country_event = {
-	id = 110087
-	title = "EVTNAME110087"
-	desc = "EVTDESC110087"
-	picture = "BAV_swan_king"
+    id = 110087
+    title = "EVTNAME110087"
+    desc = "EVTDESC110087"
+    picture = "BAV_swan_king"
 
-	trigger = {
-		tag = BAV
-		OR = {
-			government = absolute_monarchy
-			government = prussian_constitutionalism
-			government = hms_government
-		}
-		year = 1864
-	}
-		
-	mean_time_to_happen = { months = 12 }
-	fire_only_once = yes
+    trigger = {
+        tag = BAV
+        OR = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+            government = hms_government
+        }
+        year = 1864
+    }
 
-	option = {
-		name = "EVT110087OPTA" #Long may he reign!
-		prestige = 5
-		any_pop = { scaled_militancy = { factor = -1 ideology = reactionary } }
-		any_pop = { scaled_militancy = { factor = -1 ideology = conservative } }
-		relation = { who = AUS value = 50 }
-		relation = { who = KUK value = 50 }
-		relation = { who = WUR value = 50 }
-		relation = { who = BAD value = 50 }
-		set_country_flag = swan_king
-	}
+    mean_time_to_happen = { months = 12 }
+    fire_only_once = yes
+
+    option = {
+        name = "EVT110087OPTA" #Long may he reign!
+        prestige = 5
+        any_pop = { scaled_militancy = { factor = -1 ideology = reactionary } }
+        any_pop = { scaled_militancy = { factor = -1 ideology = conservative } }
+        relation = { who = AUS value = 50 }
+        relation = { who = KUK value = 50 }
+        relation = { who = WUR value = 50 }
+        relation = { who = BAD value = 50 }
+        set_country_flag = swan_king
+    }
 }
 
 # The Südtirol Compromise
 country_event = {
-	id = 110089
-	title = "EVTNAME110089"
-	desc = "EVTDESC110089"
-	picture = "map_trentin"
+    id = 110089
+    title = "EVTNAME110089"
+    desc = "EVTDESC110089"
+    picture = "map_trentin"
 
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVT110089OPTA" #There will be no compromise
-		badboy = 1
-		FROM = { country_event = 110090 }
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 1.2
-				NOT = { relation = { who = FROM value = 50 } }
-			}
-			modifier = {
-				factor = 1.2
-				military_score = FROM
-			}
-			modifier = {
-				factor = 1.2
-				FROM = { NOT = { brigades_compare = 0.8 } }
-			}
-			modifier = {
-				factor = 1.3
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 1.2
-				war_policy = pro_military
-			}
-			modifier = {
-				factor = 1.2
-				FROM = { is_greater_power = no }
-			}
-			modifier = {
-				factor = 0.8
-				relation = { who = FROM value = 180 }
-			}
-			modifier = {
-				factor = 0.8
-				is_greater_power = no
-			}
-			modifier = {
-				factor = 0.8
-				has_recently_lost_war = yes
-			}
-			modifier = {
-				factor = 0.8
-				is_disarmed = yes
-			}
-			modifier = {
-				factor = 0.5
-				in_sphere = FROM
-			}
-			modifier = {
-				factor = 0.25
-				badboy = 0.9
-			}
-			modifier = {
-				factor = 0
-				vassal_of = FROM
-			}
-			modifier = {
-				factor = 0.5
-				has_country_modifier = benefactor_ai
-			}
-			modifier = {
-				factor = 1.5
-				has_country_modifier = malevolent_ai
-			}
-		}
-	}
-	
-	option = {
-		name = "EVT110089OPTB" #We should split it equally
-		FROM = { country_event = 110091 }
-	
-		ai_chance = { factor = 35 }
-	}
-	
-	option = {
-		name = "EVT110089OPTC" #Let's exchange populations
-		FROM = { country_event = 110092 }
-	
-		ai_chance = { factor = 15 }
-	}
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT110089OPTA" #There will be no compromise
+        badboy = 1
+        FROM = { country_event = 110090 }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 1.2
+                NOT = { relation = { who = FROM value = 50 } }
+            }
+            modifier = {
+                factor = 1.2
+                military_score = FROM
+            }
+            modifier = {
+                factor = 1.2
+                FROM = { NOT = { brigades_compare = 0.8 } }
+            }
+            modifier = {
+                factor = 1.3
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 1.2
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.2
+                FROM = { is_greater_power = no }
+            }
+            modifier = {
+                factor = 0.8
+                relation = { who = FROM value = 180 }
+            }
+            modifier = {
+                factor = 0.8
+                is_greater_power = no
+            }
+            modifier = {
+                factor = 0.8
+                has_recently_lost_war = yes
+            }
+            modifier = {
+                factor = 0.8
+                is_disarmed = yes
+            }
+            modifier = {
+                factor = 0.5
+                in_sphere = FROM
+            }
+            modifier = {
+                factor = 0.25
+                badboy = 0.9
+            }
+            modifier = {
+                factor = 0
+                vassal_of = FROM
+            }
+            modifier = {
+                factor = 0.5
+                has_country_modifier = benefactor_ai
+            }
+            modifier = {
+                factor = 1.5
+                has_country_modifier = malevolent_ai
+            }
+        }
+    }
+
+    option = {
+        name = "EVT110089OPTB" #We should split it equally
+        FROM = { country_event = 110091 }
+
+        ai_chance = { factor = 35 }
+    }
+
+    option = {
+        name = "EVT110089OPTC" #Let's exchange populations
+        FROM = { country_event = 110092 }
+
+        ai_chance = { factor = 15 }
+    }
 }
 
 # The South Tirol Compromise - FROMCOUTNRY Refuses
 country_event = {
-	id = 110090
-	title = "EVTNAME110090"
-	desc = "EVTDESC110090"
-	picture = "map_trentin"
+    id = 110090
+    title = "EVTNAME110090"
+    desc = "EVTDESC110090"
+    picture = "map_trentin"
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	option = {
-		name = "EVT110090OPTA" #How dare they!
-		relation = { who = FROM value = -50 }
-	}
+    option = {
+        name = "EVT110090OPTA" #How dare they!
+        relation = { who = FROM value = -50 }
+    }
 }
 
 # The South Tirol Compromise - splitting states
 country_event = {
-	id = 110091
-	title = "EVTNAME110091"
-	desc = "EVTDESC110091"
-	picture = "map_trentin"
+    id = 110091
+    title = "EVTNAME110091"
+    desc = "EVTDESC110091"
+    picture = "map_trentin"
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	option = {
-		name = "EVT110091OPTA" #We accept
-		random_owned = {
-			limit = {
-				province_id = 735
-				owner = { is_culture_group = italian }
-			}
-			secede_province = FROM
-			remove_core = THIS
-			remove_core = VEN
-		}
-		random_owned = {
-			limit = {
-				province_id = 734
-				owner = { is_culture_group = italian }
-			}
-			remove_core = GER
-			remove_core = AUS
-			remove_core = KUK
-			remove_core = VEN
-			change_province_name = "Trentino"
-		}
-		random_owned = {
-			limit = {
-				province_id = 734
-				owner = { is_culture_group = germanic }
-			}
-			secede_province = FROM
-			remove_core = THIS
-			remove_core = GER
-			remove_core = AUS
-			remove_core = KUK
-			change_province_name = "Trentino"
-		}
-		random_owned = {
-			limit = {
-				province_id = 735
-				owner = { is_culture_group = germanic }
-			}
-			remove_core = ITA
-			remove_core = VEN
-		}
-		relation = { who = FROM value = 100 }
-		ai_chance = {
-			factor = 30
-		}
-	}
-	
-	option = {
-		name = "EVT110091OPTB" #We refuse
-		badboy = 1
-		relation = { who = FROM value = -50 }
-		FROM = { country_event = 110090 }
-		ai_chance = {
-			factor = 70
-			modifier = {
-				factor = 1.2
-				NOT = { relation = { who = FROM value = 50 } }
-			}
-			modifier = {
-				factor = 1.2
-				military_score = FROM
-			}
-			modifier = {
-				factor = 1.2
-				FROM = { NOT = { brigades_compare = 0.8 } }
-			}
-			modifier = {
-				factor = 1.3
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 1.2
-				war_policy = pro_military
-			}
-			modifier = {
-				factor = 1.2
-				FROM = { is_greater_power = no }
-			}
-			modifier = {
-				factor = 0.8
-				relation = { who = FROM value = 180 }
-			}
-			modifier = {
-				factor = 0.8
-				is_greater_power = no
-			}
-			modifier = {
-				factor = 0.8
-				has_recently_lost_war = yes
-			}
-			modifier = {
-				factor = 0.8
-				is_disarmed = yes
-			}
-			modifier = {
-				factor = 0.5
-				in_sphere = FROM
-			}
-			modifier = {
-				factor = 0
-				vassal_of = FROM
-			}
-			modifier = {
-				factor = 0.25
-				has_country_modifier = benefactor_ai
-			}
-			modifier = {
-				factor = 1.5
-				has_country_modifier = malevolent_ai
-			}
-		}
-	}
+    option = {
+        name = "EVT110091OPTA" #We accept
+        random_owned = {
+            limit = {
+                province_id = 735
+                owner = { is_culture_group = italian }
+            }
+            secede_province = FROM
+            remove_core = THIS
+            remove_core = VEN
+        }
+        random_owned = {
+            limit = {
+                province_id = 734
+                owner = { is_culture_group = italian }
+            }
+            remove_core = GER
+            remove_core = AUS
+            remove_core = KUK
+            remove_core = VEN
+            change_province_name = "Trentino"
+        }
+        random_owned = {
+            limit = {
+                province_id = 734
+                owner = { is_culture_group = germanic }
+            }
+            secede_province = FROM
+            remove_core = THIS
+            remove_core = GER
+            remove_core = AUS
+            remove_core = KUK
+            change_province_name = "Trentino"
+        }
+        random_owned = {
+            limit = {
+                province_id = 735
+                owner = { is_culture_group = germanic }
+            }
+            remove_core = ITA
+            remove_core = VEN
+        }
+        relation = { who = FROM value = 100 }
+        ai_chance = {
+            factor = 30
+        }
+    }
+
+    option = {
+        name = "EVT110091OPTB" #We refuse
+        badboy = 1
+        relation = { who = FROM value = -50 }
+        FROM = { country_event = 110090 }
+        ai_chance = {
+            factor = 70
+            modifier = {
+                factor = 1.2
+                NOT = { relation = { who = FROM value = 50 } }
+            }
+            modifier = {
+                factor = 1.2
+                military_score = FROM
+            }
+            modifier = {
+                factor = 1.2
+                FROM = { NOT = { brigades_compare = 0.8 } }
+            }
+            modifier = {
+                factor = 1.3
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 1.2
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.2
+                FROM = { is_greater_power = no }
+            }
+            modifier = {
+                factor = 0.8
+                relation = { who = FROM value = 180 }
+            }
+            modifier = {
+                factor = 0.8
+                is_greater_power = no
+            }
+            modifier = {
+                factor = 0.8
+                has_recently_lost_war = yes
+            }
+            modifier = {
+                factor = 0.8
+                is_disarmed = yes
+            }
+            modifier = {
+                factor = 0.5
+                in_sphere = FROM
+            }
+            modifier = {
+                factor = 0
+                vassal_of = FROM
+            }
+            modifier = {
+                factor = 0.25
+                has_country_modifier = benefactor_ai
+            }
+            modifier = {
+                factor = 1.5
+                has_country_modifier = malevolent_ai
+            }
+        }
+    }
 }
 
 # The South Tirol Compromise - Population and province exchanges
 country_event = {
-	id = 110092
-	title = "EVTNAME110092"
-	desc = "EVTDESC110092"
-	picture = "map_trentin"
+    id = 110092
+    title = "EVTNAME110092"
+    desc = "EVTDESC110092"
+    picture = "map_trentin"
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	option = {
-		name = "EVT110091OPTA" #We accept
-		735 = {
-			any_pop = {
-				limit = { is_culture_group = italian }
-				move_pop = 734
-			}
-		}
-		734 = {
-			any_pop = {
-				limit = { is_culture_group = germanic }
-				move_pop = 735
-			}
-		}
-		random_owned = {
-			limit = {
-				province_id = 735
-				owner = { is_culture_group = italian }
-			}
-			secede_province = FROM
-			remove_core = THIS
-			remove_core = VEN
-		}
-		random_owned = {
-			limit = {
-				province_id = 734
-				owner = { is_culture_group = italian }
-			}
-			remove_core = GER
-			remove_core = AUS
-			remove_core = KUK
-			remove_core = VEN
-			change_province_name = "Trentino"
-		}
-		random_owned = {
-			limit = {
-				province_id = 734
-				owner = { is_culture_group = germanic }
-			}
-			secede_province = FROM
-			remove_core = THIS
-			remove_core = GER
-			remove_core = AUS
-			remove_core = KUK
-			change_province_name = "Trentino"
-		}
-		random_owned = {
-			limit = {
-				province_id = 735
-				owner = { is_culture_group = germanic }
-			}
-			remove_core = ITA
-			remove_core = VEN
-		}
-		relation = { who = FROM value = 100 }
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = "EVT110091OPTB" #We refuse
-		badboy = 1
-		relation = { who = FROM value = -50 }
-		FROM = { country_event = 110090 }
-		ai_chance = {
-			factor = 80
-			modifier = {
-				factor = 1.2
-				NOT = { relation = { who = FROM value = 50 } }
-			}
-			modifier = {
-				factor = 1.2
-				military_score = FROM
-			}
-			modifier = {
-				factor = 1.2
-				FROM = { NOT = { brigades_compare = 0.8 } }
-			}
-			modifier = {
-				factor = 1.3
-				war_policy = jingoism
-			}
-			modifier = {
-				factor = 1.2
-				war_policy = pro_military
-			}
-			modifier = {
-				factor = 1.2
-				FROM = { is_greater_power = no }
-			}
-			modifier = {
-				factor = 0.8
-				relation = { who = FROM value = 180 }
-			}
-			modifier = {
-				factor = 0.8
-				is_greater_power = no
-			}
-			modifier = {
-				factor = 0.8
-				has_recently_lost_war = yes
-			}
-			modifier = {
-				factor = 0.8
-				is_disarmed = yes
-			}
-			modifier = {
-				factor = 0.5
-				in_sphere = FROM
-			}
-			modifier = {
-				factor = 0
-				vassal_of = FROM
-			}
-			modifier = {
-				factor = 0.25
-				has_country_modifier = benefactor_ai
-			}
-			modifier = {
-				factor = 1.5
-				has_country_modifier = malevolent_ai
-			}
-		}
-	}
+    option = {
+        name = "EVT110091OPTA" #We accept
+        735 = {
+            any_pop = {
+                limit = { is_culture_group = italian }
+                move_pop = 734
+            }
+        }
+        734 = {
+            any_pop = {
+                limit = { is_culture_group = germanic }
+                move_pop = 735
+            }
+        }
+        random_owned = {
+            limit = {
+                province_id = 735
+                owner = { is_culture_group = italian }
+            }
+            secede_province = FROM
+            remove_core = THIS
+            remove_core = VEN
+        }
+        random_owned = {
+            limit = {
+                province_id = 734
+                owner = { is_culture_group = italian }
+            }
+            remove_core = GER
+            remove_core = AUS
+            remove_core = KUK
+            remove_core = VEN
+            change_province_name = "Trentino"
+        }
+        random_owned = {
+            limit = {
+                province_id = 734
+                owner = { is_culture_group = germanic }
+            }
+            secede_province = FROM
+            remove_core = THIS
+            remove_core = GER
+            remove_core = AUS
+            remove_core = KUK
+            change_province_name = "Trentino"
+        }
+        random_owned = {
+            limit = {
+                province_id = 735
+                owner = { is_culture_group = germanic }
+            }
+            remove_core = ITA
+            remove_core = VEN
+        }
+        relation = { who = FROM value = 100 }
+        ai_chance = {
+            factor = 20
+        }
+    }
+
+    option = {
+        name = "EVT110091OPTB" #We refuse
+        badboy = 1
+        relation = { who = FROM value = -50 }
+        FROM = { country_event = 110090 }
+        ai_chance = {
+            factor = 80
+            modifier = {
+                factor = 1.2
+                NOT = { relation = { who = FROM value = 50 } }
+            }
+            modifier = {
+                factor = 1.2
+                military_score = FROM
+            }
+            modifier = {
+                factor = 1.2
+                FROM = { NOT = { brigades_compare = 0.8 } }
+            }
+            modifier = {
+                factor = 1.3
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 1.2
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.2
+                FROM = { is_greater_power = no }
+            }
+            modifier = {
+                factor = 0.8
+                relation = { who = FROM value = 180 }
+            }
+            modifier = {
+                factor = 0.8
+                is_greater_power = no
+            }
+            modifier = {
+                factor = 0.8
+                has_recently_lost_war = yes
+            }
+            modifier = {
+                factor = 0.8
+                is_disarmed = yes
+            }
+            modifier = {
+                factor = 0.5
+                in_sphere = FROM
+            }
+            modifier = {
+                factor = 0
+                vassal_of = FROM
+            }
+            modifier = {
+                factor = 0.25
+                has_country_modifier = benefactor_ai
+            }
+            modifier = {
+                factor = 1.5
+                has_country_modifier = malevolent_ai
+            }
+        }
+    }
 }
 
 
 # Race Riots
 #province_event = {
-#	id = 110092
-#	title = "EVTNAME110092"
-#	desc = "EVTDESC110092"
-#	
-#	trigger = {
-#		owner = { 
-#			tag = USA 
-#			has_country_flag = has_used_radical_reconstruction
-#		}
-#		is_overseas = no
-#		has_national_minority = yes
-#		pop_militancy = 5 #Returns true if any pop in the province has a militancy value equal to x or higher.
-#		NOT = { has_province_modifier = racial_tensions }
-#	}
-#	
-#	allow_multiple_instances = yes
-#	
-#	mean_time_to_happen = {
-#		months = 100 #5 years
-#		modifier = {
-#			factor = 0.5
-#			is_accepted_culture = no
-#		}
-#		modifier = {
-#			factor = 0.75
-#			is_core = CSA
-#		}
-#		modifier = {
-#			factor = 0.5
-#			has_province_modifier = reconstruction
-#		}
-#		modifier = {
-#			factor = 0.20
-#			controlled_by_rebels = yes
-#		}
-#		modifier = {
-#			factor = 0.5
-#			unemployment = 0.50
-#		}
-#		modifier = {
-#			factor = 10
-#			NOT = { unemployment = 0.10 }
-#		}
-#		modifier = {
-#			factor = 2
-#			crime_fighting = 0.75
-#		}
-#		modifier = {
-#			factor = 2
-#			owner = { any_owned_province = { has_province_modifier = racial_tensions } }
-#		}
-#		modifier = {
-#			factor = 5
-#			literacy = 0.8
-#		}
-#	}
-#	
-#	option = {
-#		name = "EVTOPTA110092" #A sad state of affair.
-#		owner = { prestige = -1 }
-#		add_province_modifier = {
-#			name = racial_tensions
-#			duration = 1825 #5 years
-#		}
-#		any_pop = { 
-#			limit = { 
-#				OR = {
-#					culture = dixie
-#					culture = afro_american
-#					culture = cherokee
-#					culture = native_american_minor
-#				}
-#			}
-#			militancy = 3
-#		}
-#	}
+#    id = 110092
+#    title = "EVTNAME110092"
+#    desc = "EVTDESC110092"
+#
+#    trigger = {
+#        owner = {
+#            tag = USA
+#            has_country_flag = has_used_radical_reconstruction
+#        }
+#        is_overseas = no
+#        has_national_minority = yes
+#        pop_militancy = 5 #Returns true if any pop in the province has a militancy value equal to x or higher.
+#        NOT = { has_province_modifier = racial_tensions }
+#    }
+#
+#    allow_multiple_instances = yes
+#
+#    mean_time_to_happen = {
+#        months = 100 #5 years
+#        modifier = {
+#            factor = 0.5
+#            is_accepted_culture = no
+#        }
+#        modifier = {
+#            factor = 0.75
+#            is_core = CSA
+#        }
+#        modifier = {
+#            factor = 0.5
+#            has_province_modifier = reconstruction
+#        }
+#        modifier = {
+#            factor = 0.20
+#            controlled_by_rebels = yes
+#        }
+#        modifier = {
+#            factor = 0.5
+#            unemployment = 0.50
+#        }
+#        modifier = {
+#            factor = 10
+#            NOT = { unemployment = 0.10 }
+#        }
+#        modifier = {
+#            factor = 2
+#            crime_fighting = 0.75
+#        }
+#        modifier = {
+#            factor = 2
+#            owner = { any_owned_province = { has_province_modifier = racial_tensions } }
+#        }
+#        modifier = {
+#            factor = 5
+#            literacy = 0.8
+#        }
+#    }
+#
+#    option = {
+#        name = "EVTOPTA110092" #A sad state of affair.
+#        owner = { prestige = -1 }
+#        add_province_modifier = {
+#            name = racial_tensions
+#            duration = 1825 #5 years
+#        }
+#        any_pop = {
+#            limit = {
+#                OR = {
+#                    culture = dixie
+#                    culture = afro_american
+#                    culture = cherokee
+#                    culture = native_american_minor
+#                }
+#            }
+#            militancy = 3
+#        }
+#    }
 #}

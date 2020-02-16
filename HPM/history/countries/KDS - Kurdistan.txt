@@ -31,18 +31,19 @@ school_reforms = no_schools
 conscription = two_year_draft
 debt_law = serfdom
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = culture_voting_only
+child_labor = child_labor_legal
+citizens_rights = culture_voting_only
 border_policy = open_borders
 
 ruling_party = KDS_conservative
 upper_house = {
-	fascist = 0
-	liberal = 25
-	conservative = 65
-	reactionary = 10
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 25
+    conservative = 65
+    reactionary = 10
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = sunni_country
@@ -58,5 +59,3 @@ foreign_weapons = yes_foreign_weapons
 # Technologies
 flintlock_rifles = 1
 bronze_muzzle_loaded_artillery = 1
-
-

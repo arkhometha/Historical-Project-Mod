@@ -5,5 +5,5 @@ trade_goods = grain
 life_rating = 40
 naval_base = 1
 1861.1.1 = {
-	controller = FRA
+    controller = FRA
 }

@@ -31,18 +31,19 @@ school_reforms = no_schools
 conscription = no_draft
 debt_law = peonage
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = primary_culture_only
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
 border_policy = open_borders
 
 ruling_party = KTI_conservative
 upper_house = {
-	fascist = 0
-	liberal = 15
-	conservative = 80
-	reactionary = 5
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 15
+    conservative = 80
+    reactionary = 5
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = sunni_country
@@ -58,6 +59,6 @@ nonstate_consciousness = 0
 
 oob = "KTI_oob.txt"
 1861.1.1 = {
-	foreign_weapons = yes_foreign_weapons
-	flintlock_rifles = 1
+    foreign_weapons = yes_foreign_weapons
+    flintlock_rifles = 1
 }

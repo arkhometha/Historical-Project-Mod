@@ -30,18 +30,19 @@ school_reforms = no_schools
 conscription = no_draft
 debt_law = peonage
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = primary_culture_only
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
 border_policy = open_borders
 
 ruling_party = OMA_conservative
 upper_house = {
-	fascist = 0
-	liberal = 13
-	conservative = 58
-	reactionary = 29
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 13
+    conservative = 58
+    reactionary = 29
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = ibadi_country
@@ -65,7 +66,7 @@ nonstate_consciousness = 0
 
 oob = "OMA_oob.txt"
 1861.1.1 = {
-	oob = "/1861/OMA_oob.txt"
-	literacy = 0.13
-	non_state_culture_literacy = 0.06
+    oob = "/1861/OMA_oob.txt"
+    literacy = 0.13
+    non_state_culture_literacy = 0.06
 }
