@@ -6,6 +6,7 @@ country_event = {
     picture = "regency"
 
     trigger = {
+        civilized = yes
         OR = {
             government = absolute_monarchy
             government = prussian_constitutionalism
@@ -30,17 +31,14 @@ country_event = {
         }
         modifier = {
             factor = 0.75
-            civilized = yes
             capital_scope = { average_militancy = 9 }
         }
         modifier = {
             factor = 0.75
-            civilized = yes
             capital_scope = { average_militancy = 8 }
         }
         modifier = {
             factor = 0.9
-            civilized = yes
             capital_scope = { average_militancy = 7 }
         }
     }
