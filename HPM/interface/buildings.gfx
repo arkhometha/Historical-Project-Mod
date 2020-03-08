@@ -315,7 +315,7 @@ objectTypes = {
 	
 	EMFXActorType = {
 		name = "Nicaragua_Canal"
-		actorfile = "gfx\anims\Nicaragua_Canal.xac"
+		actorfile = "gfx\anims\Kiel_Canal.xac"
 		
 		idle   = "gfx\anims\static.xsm"
 		scale = 1.0
