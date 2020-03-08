@@ -228,6 +228,8 @@ political_decisions = {
         potential = {
             NOT = { has_global_flag = panama_under_construction }
             NOT = { is_canal_enabled = 3 }
+			NOT = { has_global_flag = nicaragua_under_construction }
+            NOT = { is_canal_enabled = 7 }
             OR = {
                 is_greater_power = yes
                 AND = {
@@ -334,6 +336,8 @@ political_decisions = {
         potential = {
             NOT = { has_global_flag = nicaragua_under_construction }
             NOT = { is_canal_enabled = 7 }
+			NOT = { has_global_flag = panama_under_construction }
+            NOT = { is_canal_enabled = 3 }
             OR = {
                 is_greater_power = yes
                 AND = {
