@@ -318,7 +318,7 @@ objectTypes = {
 		actorfile = "gfx\anims\Kiel_Canal.xac"
 		
 		idle   = "gfx\anims\static.xsm"
-		scale = 1.0
+		scale = 0.2
 			
 	}
 
