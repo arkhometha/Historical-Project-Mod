@@ -851,7 +851,7 @@ country_event = {
             state_scope = { change_region_name = "Transvaal" }
         }
         2106 = {
-            change_province_name = "Witwatersrand"
+            change_province_name = "Vogelstruisfontein"
             secede_province = THIS
             remove_core = BSH
             add_core = TRN

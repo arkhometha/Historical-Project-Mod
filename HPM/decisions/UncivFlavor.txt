@@ -681,7 +681,7 @@ political_decisions = {
             NOT = { has_country_modifier = missionary_activity }
             civilized = no
             OR = {
-                any_owned_province = { has_building = naval_base }
+                any_owned_province = { port = yes }
                 any_owned_province = { any_neighbor_province = { owner = { civilized = yes capital_scope = { continent = europe } } } }
             }
             NOT = { has_country_modifier = law_changed_by_force }

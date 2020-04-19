@@ -1,4 +1,14 @@
 Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;Portuguese;Russian;Finnish;
+organize_vrystaat_state_title;Organize the Vrystaat State;;;;;;;;;;;;;
+organize_vrystaat_state_desc;The land known to the Boer settlers as Vrystaat is not under proper $COUNTRY_ADJ$ adminstration. Organizing this territory will allow us to better control the economy and society there.;;;;;;;;;;;;;
+organize_natal_state_title;Organize the Natal State;;;;;;;;;;;;;
+organize_natal_state_desc;The land known to the settlers as Natal is not under proper $COUNTRY_ADJ$ adminstration. Organizing this territory will allow us to better control the economy and society there.;;;;;;;;;;;;;
+organize_transvaal_state_title;Organize the Transvaal State;;;;;;;;;;;;;
+organize_transvaal_state_desc;The land known to the Boer settlers as the Transvaal is not under proper $COUNTRY_ADJ$ adminstration. Organizing this territory will allow us to better control the economy and society there.;;;;;;;;;;;;;
+organize_northern_cape_state_title;Organize the Northern Cape State;;;;;;;;;;;;;
+organize_northern_cape_state_desc;The land known to the settlers as the Northern Cape is not under proper $COUNTRY_ADJ$ adminstration. Organizing this territory will allow us to better control the economy and society there.;;;;;;;;;;;;;
+organize_eastern_cape_state_title;Organize the Eastern Cape State;;;;;;;;;;;;;
+organize_eastern_cape_state_desc;The land known to the settlers as the Eastern Cape is not under proper $COUNTRY_ADJ$ adminstration. Organizing this territory will allow us to better control the economy and society there.;;;;;;;;;;;;;
 end_sikh_war_title;End the war with the Sikhs;;;;;;;;;;;;;
 end_sikh_war_desc;The British consider the Anglo-Sikh war their business and we shall not get involved with it.;;;;;;;;;;;;;
 found_niger_company_title;Found the $COUNTRY_ADJ$ Niger Company;;;;;;;;;;;;;
