@@ -442,7 +442,7 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    NOT = { money = 250000 }
+                    NOT = { treasury = 250000 }
                     check_variable = { which = owed_cash_money value = 9 }
                 }
             }
@@ -451,16 +451,13 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    NOT = { money = 250000 }
+                    NOT = { treasury = 250000 }
                     NOT = { check_variable = { which = owed_cash_money value = 1 } }
                 }
             }
             owner = { set_variable = { which = owed_cash_money value = 250 } }
         }
-        random_owned = {
-            limit = { owner = { money = 250000 } }
-            owner = { treasury = -250000 }
-        }
+
         any_owned = {
             limit = {
                 OR = {
