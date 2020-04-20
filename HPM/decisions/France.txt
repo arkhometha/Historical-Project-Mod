@@ -1013,6 +1013,9 @@ political_decisions = {
 
         effect = {
             CAN = {
+				set_country_flag = catholic_country
+				clr_country_flag = protestant_country
+				religion = catholic
                 remove_accepted_culture = french_canadian
                 primary_culture = french_canadian
                 add_accepted_culture = anglo_canadian
