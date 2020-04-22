@@ -783,42 +783,12 @@ navy = {
     name = "Imperial Black Sea Fleet"
     location = 967
     ship = {
-        name= "Nord Adler"
+        name= "Varshava"
         type = manowar
     }
 
     ship = {
-        name= "Prints Gustav"
-        type = manowar
-    }
-
-    ship = {
-        name= "Ne Tron Menya"
-        type = manowar
-    }
-
-    ship = {
-        name= "Svyastoslav"
-        type = manowar
-    }
-
-    ship = {
-        name= "Chrabryi"
-        type = manowar
-    }
-
-    ship = {
-        name= "Smelyi"
-        type = manowar
-    }
-
-    ship = {
-        name= "Tri Svyatitelei"
-        type = manowar
-    }
-
-    ship = {
-        name= "Yupiter"
+        name= "Imperatritsa Mariia"
         type = manowar
     }
 
@@ -828,44 +798,123 @@ navy = {
     }
 
     ship = {
-        name= "Mironosets"
+        name= "Anapa"
         type = manowar
     }
 
     ship = {
-        name= "Asia"
+        name= "Pamyat Evstafiya"
         type = manowar
     }
 
     ship = {
-        name= "Azov"
+        name= "Adrianopol"
         type = manowar
     }
 
     ship = {
-        name= "Rossiya"
+        name= "Imperatritsa Ekaterina"
         type = manowar
     }
 
     ship = {
-        name= "Saratov"
+        name= "Silistriya"
         type = manowar
     }
 
     ship = {
-        name= "Blagodat'"
+        name= "Pimen"
         type = manowar
     }
 
-
     ship = {
-        name= "1. Transportnaya Flotiliya"
-        type = clipper_transport
+        name= "Panteleimon"
+        type = manowar
     }
 
     ship = {
-        name= "2. Transportnaya Flotiliya"
-        type = clipper_transport
+        name= "Ioann Zlatoust"
+        type = manowar
+    }
+
+    ship = {
+        name= "Sviatoi Andrei"
+        type = manowar
+    }
+
+    ship = {
+        name= "Nord- Adler"
+        type = manowar
+    }
+	
+    ship = {
+        name= "Kniaginia Lovich"
+        type = frigate
+    }
+
+    ship = {
+        name= "Anna"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Venera"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Yumona"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Flora"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Pospeshnyi"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Shtandart"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Tenedos"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Erivan"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Arkhipelag"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Varna"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Enos"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Burgas"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Agatopol"
+        type = frigate
     }
 
 }
@@ -874,22 +923,17 @@ navy = {
     name = "Imperial Northern Fleet"
     location = 994
     ship = {
-        name= "Dvenadtsat' Apostolov"
+        name= "Imperator Aleksandr"
         type = manowar
     }
 
     ship = {
-        name= "Poltava"
+        name= "Imperator Pyotr I"
         type = manowar
     }
 
     ship = {
-        name= "Ratnyi"
-        type = manowar
-    }
-
-    ship = {
-        name= "Hiagudil"
+        name= "Sviatoi Georgyi Pobedonosets"
         type = manowar
     }
 
@@ -899,48 +943,218 @@ navy = {
     }
 
     ship = {
-        name= "Ezekiel"
+        name= "Imperatritsa Aleksandra"
         type = manowar
     }
 
     ship = {
-        name= "Tsar Konstantin"
+        name= "Emgeiten"
         type = manowar
     }
 
     ship = {
-        name= "Yaroslav"
+        name= "Poltava"
         type = manowar
     }
 
     ship = {
-        name= "Izyaslav"
+        name= "Ne Tron Menia"
         type = manowar
     }
 
     ship = {
-        name= "Dimitri Donskoi"
+        name= "Vladimir"
         type = manowar
     }
 
     ship = {
-        name= "Paraskevia"
+        name= "Lefort"
         type = manowar
     }
 
     ship = {
-        name= "Sv Ytoslav"
+        name= "Prokhor"
         type = manowar
     }
 
     ship = {
-        name= "3. Transportnaya Flotiliya"
-        type = clipper_transport
+        name= "Iezekil"
+        type = manowar
     }
 
     ship = {
-        name= "4. Transportnaya Flotiliya"
-        type = clipper_transport
+        name= "Velikii Kniaz Mikhail"
+        type = manowar
+    }
+
+    ship = {
+        name= "Katsbakh"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Kul’m"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Arsis"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Lesnoe"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Narva"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Brien"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Borodino"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Krasnoi"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Berezino"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Smolensk"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Pamiat Azova"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Oryol"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Ostrolenka"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Leiptsig"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Fershampenuaz"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Aleksandr Nevskii"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Konstantin"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Aleksandra"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Mariya"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Olga"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Elisaveta"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Ekaterina"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Prints Oranskiy"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Neva"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Bellona"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Pomona"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Tserera"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Kastor"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Amfitrida"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Prozerpina"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Diana"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Avrora"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Melpomena"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Pallada"
+        type = frigate
     }
 
 }
