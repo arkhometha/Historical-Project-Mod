@@ -157,8 +157,32 @@ navy = {
         name= "Manligheten"
         type = manowar
     }
-
-
+	
+	ship = {
+        name= "Dristigheten"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Försiktigheten"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Wasa"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Prins Oscar"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Gustav den Store"
+        type = manowar
+    }
+	
     ship = {
         name= "Camilla"
         type = frigate
@@ -178,20 +202,30 @@ navy = {
         name= "Galatea"
         type = frigate
     }
+	
+	ship = {
+        name= "Josefine"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Göteborg"
+        type = frigate
+    }
 
 
     ship = {
-        name= "1st Transport Flotilla"
+        name= "Gäddan"
         type = clipper_transport
     }
 
     ship = {
-        name= "2nd Transport Flotilla"
+        name= "Två Bröder"
         type = clipper_transport
     }
 
     ship = {
-        name= "3rd Transport Flotilla"
+        name= "Harmonien"
         type = clipper_transport
     }
 
