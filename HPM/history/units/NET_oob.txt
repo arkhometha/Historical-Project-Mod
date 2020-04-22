@@ -195,58 +195,68 @@ navy = {
     name = "Koninklijke Marine"
     location = 375 #Amsterdam
     ship = {
-        name= "Doggersbank"
+        name= "Zeeuw"
         type = manowar
     }
 
     ship = {
-        name= "Amsterdam"
+        name= "Neptunus"
         type = manowar
     }
 
     ship = {
-        name= "Maria Regensbergen"
+        name= "Koning der Nederlanden"
+        type = manowar
+    }
+
+    ship = {
+        name= "Waterloo"
+        type = manowar
+    }
+
+    ship = {
+        name= "Rhijn"
         type = frigate
     }
 
     ship = {
-        name= "Pallas"
+        name= "Amstel"
         type = frigate
     }
 
     ship = {
-        name= "Proserpine"
+        name= "Diana"
         type = frigate
     }
 
     ship = {
-        name= "Daphne"
+        name= "Schelde"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Rotterdam"
         type = frigate
     }
 
     ship = {
-        name= "Espion"
+        name= "Palembang"
         type = frigate
     }
 
     ship = {
-        name= "Zeepaard"
+        name= "Jason"
         type = frigate
     }
 
     ship = {
-        name= "Irene"
-        type = clipper_transport
+        name= "Ceres"
+        type = frigate
     }
-
-    ship = {
-        name= "Orpheus"
-        type = clipper_transport
-    }
-
-    ship = {
-        name= "1e Transport Eskader"
-        type = clipper_transport
+	
+	ship = {
+        name= "Zaan"
+        type = frigate
     }
 }
 
@@ -254,37 +264,52 @@ navy = {
     name = "Koninklijke NI Marine"
     location = 1413 #Batavia
     ship = {
-        name= "Admiraal de Ruyter"
+        name= "Kortenaer"
         type = manowar
     }
 
     ship = {
-        name= "Verwachting"
+        name= "Jupiter"
         type = manowar
     }
 
     ship = {
-        name= "Aurora"
+        name= "Sambre"
         type = frigate
     }
 
     ship = {
-        name= "Iris"
+        name= "Maas"
         type = frigate
     }
 
     ship = {
-        name= "Fenix"
+        name= "Rupel"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Eurydice"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Kenau Hasselaur"
         type = frigate
     }
 
     ship = {
-        name= "Eendracht"
+        name= "Merwede"
         type = clipper_transport
     }
 
     ship = {
-        name= "2e Transport Eskader"
+        name= "Prins Willem Frederik Hendrik"
+        type = clipper_transport
+    }
+	
+	ship = {
+        name= "Dordrecht"
         type = clipper_transport
     }
 }
@@ -294,23 +319,23 @@ navy = {
     location = 2234 #Curacao
 
     ship = {
-        name= "Admiraal Generaal"
+        name= "Zeeland"
         type = manowar
     }
 
     ship = {
-        name= "Diana"
+        name= "Bellona"
         type = frigate
     }
 
     ship = {
-        name= "Hoop"
+        name= "Algiers"
         type = frigate
     }
 
     ship = {
-        name= "3e Transport Eskader"
-        type = clipper_transport
+        name= "Maria Reijgersbergen"
+        type = frigate
     }
 
 }
