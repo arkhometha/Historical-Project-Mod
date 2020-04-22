@@ -90,7 +90,7 @@ navy = {
     }
 	
 	ship = {
-        name= "Phøenix"
+        name= "Phoenix"
         type = manowar
     }
 	
@@ -120,12 +120,12 @@ navy = {
     }
 	
 	ship = {
-        name= "Dronning Marie"
-        type = Fylla
+        name= "Fylla"
+        type = frigate
     }
 	
 	ship = {
-        name= "Dronning Marie"
-        type = Minerva
+        name= "Minerva"
+        type = frigate
     }
 }
