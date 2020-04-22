@@ -159,7 +159,7 @@ navy = {
     }
 
     ship = {
-        name= "Haute Combe"
+        name= "Des Geneys"
         type = frigate
     }
 
@@ -170,6 +170,26 @@ navy = {
 
     ship = {
         name= "Regina"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Euridice"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Commercio di Genova"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Maria Teresa"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Maria Cristina"
         type = frigate
     }
 
