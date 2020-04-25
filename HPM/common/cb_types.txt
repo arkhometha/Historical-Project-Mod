@@ -10582,6 +10582,7 @@ steal_puppet = {
                         any_owned_province = { port = yes }
                     }
                     neighbour = THIS
+                    war_with = THIS
                     any_neighbor_country = {
                         OR = {
                             vassal_of = THIS
