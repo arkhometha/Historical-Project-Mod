@@ -30,83 +30,83 @@ navy = {
     name = "Taba"
     location = 1751
     ship = {
-        name= "Toushka"
+        name= "Aboukir"
         type = manowar
     }
 
     ship = {
-        name= "Sharm El-Sheikh"
+        name= "Beylan"
         type = manowar
     }
 
     ship = {
-        name= "Damyat"
+        name= "Mansourah"
         type = manowar
     }
 
     ship = {
-        name= "Rasheed"
+        name= "Mahalet-el- Koubra"
         type = manowar
     }
 
     ship = {
-        name= "El Suez"
+        name= "Iskander"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Homs"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Masr"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Aké"
         type = manowar
     }
 
     ship = {
-        name= "El Aboukir"
+        name= "Menoufieh"
         type = frigate
     }
 
     ship = {
-        name= "Najim al Zafir"
+        name= "Mouftagehad"
         type = frigate
     }
 
     ship = {
-        name= "Cairo"
+        name= "Kafrecheick"
         type = frigate
     }
 
     ship = {
-        name= "Al Iskandariyah"
+        name= "Damietta"
         type = frigate
     }
 
     ship = {
-        name= "Aswan"
+        name= "Raschid"
         type = frigate
     }
 
     ship = {
-        name= "Port Said"
+        name= "Bahireh"
         type = frigate
     }
 
     ship = {
-        name= "Marsa Matruh"
+        name= "Sir-I Gihad"
         type = frigate
     }
 
     ship = {
-        name= "Bur Tawfiq"
-        type = frigate
-    }
-
-    ship = {
-        name= "Al Ghardaqah"
-        type = frigate
-    }
-
-    ship = {
-        name= "Bur Safajah"
-        type = frigate
-    }
-
-    ship = {
-        name= "1st transport flotilla"
-        type = clipper_transport
+        name= "Nile"
+        type = steam_transport
     }
 
 }
