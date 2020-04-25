@@ -187,11 +187,14 @@ party_issues = {
             max_social_spending = 0.01
         }
         no_position_set = {
+			max_social_spending = 1
         }
         populist_welfare = {
+			max_social_spending = 1
             min_social_spending = 0.15
         }
         welfare_state = {
+			max_social_spending = 1
             min_social_spending = 0.33
         }
     }
