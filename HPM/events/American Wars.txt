@@ -471,15 +471,15 @@ country_event = {
         OR = {
             election = yes
             NOT = { government = democracy }
+			year = 1848
         }
         COL = { exists = no }
-        any_owned_province = {
-            any_neighbor_province = {
-                OR = {
-                    region = USA_91
-                    region = USA_81
-                }
-            }
+        OR = {
+            owns = 86
+            owns = 81
+			owns = 91
+			owns = 113
+			owns = 80
         }
     }
 
@@ -487,7 +487,7 @@ country_event = {
         months = 12
         modifier = {
             factor = 0.25
-            year = 1850
+            year = 1848
         }
     }
 
