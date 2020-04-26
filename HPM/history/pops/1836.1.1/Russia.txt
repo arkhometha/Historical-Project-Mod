@@ -4297,6 +4297,12 @@
         religion = orthodox
         size = 41350
     }
+	
+	aristocrats = {
+        culture = north_german
+        religion = protestant
+		 size = 100
+     }
 
     clergymen = {
         culture = north_german
@@ -4400,6 +4406,30 @@
         culture = russian
         religion = orthodox
         size = 77725
+    }
+	
+    clergymen = {
+        culture = north_german
+        religion = protestant
+        size = 100
+    }
+
+    artisans = {
+        culture = north_german
+        religion = protestant
+        size = 100
+    }
+
+    soldiers = {
+        culture = north_german
+        religion = protestant
+        size = 100
+    }
+
+    farmers = {
+        culture = north_german
+        religion = protestant
+        size = 100
     }
 }
 #Tsaritsyn (1072000/268000 POPS)

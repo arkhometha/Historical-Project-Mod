@@ -1867,4 +1867,52 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
+	
+	abolish_volga_republic = {
+        picture = indoctrinal_education_communist
+        potential = {
+            tag = RUS
+			any_owned_province = { is_core = VRP }
+			nationalism_n_imperialism = 1
+        }
+
+        allow = {
+            war = no
+			owns = 1037
+			owns = 1038
+			OR = {
+				has_country_modifier = totalitarian_system
+				AND = {
+					vote_franschise = none_voting
+					ruling_party_ideology = reactionary
+					mass_politics = 1
+					war_countries = { is_culture_group = germanic }
+				}
+			}
+        }
+
+        effect = {
+            prestige = 5
+            any_pop = {
+				limit = { is_culture_group = germanic }
+				militancy = 5
+				consciousness = 8
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					is_culture_group = germanic
+				}
+				relation = { who = THIS value = -10 }
+			}
+			VRP = {
+				all_core = {
+					add_province_modifier = { name = cultural_resurgence duration = 365 }
+					remove_core = VRP
+				}
+			}
+        }
+
+        ai_will_do = { factor = 1 }
+    }
 }
