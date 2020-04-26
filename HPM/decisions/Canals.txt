@@ -328,7 +328,7 @@ political_decisions = {
     }
 	
 	build_nicaragua_canal = {
-        picture = build_panama_canal
+        picture = the_nicaragua_canal
         news = yes
         news_desc_long = "nicaragua_canal_NEWS_LONG"
         news_desc_medium = "nicaragua_canal_NEWS_MEDIUM"
@@ -350,8 +350,9 @@ political_decisions = {
         allow = {
             invention = machine_tools
             invention = prophylaxis_against_malaria
-            drilling_and_blasting = 1
-            iron_steamers = 1
+            invention = trinitrotoluene
+            steam_turbine_ships = 1
+			electrical_power_generation = 1
 
             2198 = {
                 OR = {
@@ -361,10 +362,13 @@ political_decisions = {
                 }
             }
             OR = {
-                is_greater_power = yes
+				AND = {
+					is_greater_power = yes
+					money = 3000000
+				}
                 AND = {
                     is_secondary_power = yes
-                    money = 3000000
+                    money = 6000000
                 }
             }
         }

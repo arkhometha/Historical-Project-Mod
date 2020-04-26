@@ -924,25 +924,22 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    NOT = { treasury = 6000000 }
+                    NOT = { treasury = 9000000 }
                     check_variable = { which = owed_cash_money value = 9 }
                 }
             }
-            owner = { change_variable = { which = owed_cash_money value = 6000 } }
+            owner = { change_variable = { which = owed_cash_money value = 9000 } }
         }
         random_owned = {
             limit = {
                 owner = {
-                    NOT = { treasury = 6000000 }
+                    NOT = { treasury = 9000000 }
                     NOT = { check_variable = { which = owed_cash_money value = 1 } }
                 }
             }
-            owner = { set_variable = { which = owed_cash_money value = 6000 } }
+            owner = { set_variable = { which = owed_cash_money value = 9000 } }
         }
-        # random_owned = {
-            # limit = { owner = { treasury = 6000000 } }
-            # owner = { treasury = -6000000 }
-        # }
+
         set_global_flag = nicaragua_canal_construction
         random_list = {
             35 = { 2198 = { add_province_modifier = { name = nicaragua_canal_construction duration = 2920 } } }
@@ -961,25 +958,22 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    NOT = { treasury = 5000000 }
+                    NOT = { treasury = 8000000 }
                     check_variable = { which = owed_cash_money value = 9 }
                 }
             }
-            owner = { change_variable = { which = owed_cash_money value = 5000 } }
+            owner = { change_variable = { which = owed_cash_money value = 8000 } }
         }
         random_owned = {
             limit = {
                 owner = {
-                    NOT = { treasury = 5000000 }
+                    NOT = { treasury = 8000000 }
                     NOT = { check_variable = { which = owed_cash_money value = 1 } }
                 }
             }
-            owner = { set_variable = { which = owed_cash_money value = 5000 } }
+            owner = { set_variable = { which = owed_cash_money value = 8000 } }
         }
-        # random_owned = {
-            # limit = { owner = { treasury = 5000000 } }
-            # owner = { treasury = -5000000 }
-        # }
+
         set_global_flag = nicaragua_canal_construction
         random_list = {
             30 = { 2198 = { add_province_modifier = { name = nicaragua_canal_construction duration = 2920 } } }
@@ -998,25 +992,22 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    NOT = { treasury = 4000000 }
+                    NOT = { treasury = 7000000 }
                     check_variable = { which = owed_cash_money value = 9 }
                 }
             }
-            owner = { change_variable = { which = owed_cash_money value = 4000 } }
+            owner = { change_variable = { which = owed_cash_money value = 7000 } }
         }
         random_owned = {
             limit = {
                 owner = {
-                    NOT = { treasury = 4000000 }
+                    NOT = { treasury = 7000000 }
                     NOT = { check_variable = { which = owed_cash_money value = 1 } }
                 }
             }
-            owner = { set_variable = { which = owed_cash_money value = 4000 } }
+            owner = { set_variable = { which = owed_cash_money value = 7000 } }
         }
-        # random_owned = {
-            # limit = { owner = { treasury = 4000000 } }
-            # owner = { treasury = -4000000 }
-        # }
+
         set_global_flag = nicaragua_canal_construction
         random_list = {
             40 = { 2198 = { add_province_modifier = { name = nicaragua_canal_construction duration = 2920 } } }
@@ -1035,25 +1026,22 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    NOT = { treasury = 3000000 }
+                    NOT = { treasury = 6000000 }
                     check_variable = { which = owed_cash_money value = 9 }
                 }
             }
-            owner = { change_variable = { which = owed_cash_money value = 3000 } }
+            owner = { change_variable = { which = owed_cash_money value = 6000 } }
         }
         random_owned = {
             limit = {
                 owner = {
-                    NOT = { treasury = 3000000 }
+                    NOT = { treasury = 6000000 }
                     NOT = { check_variable = { which = owed_cash_money value = 1 } }
                 }
             }
-            owner = { set_variable = { which = owed_cash_money value = 3000 } }
+            owner = { set_variable = { which = owed_cash_money value = 6000 } }
         }
-        # random_owned = {
-            # limit = { owner = { treasury = 3000000 } }
-            # owner = { treasury = -3000000 }
-        # }
+
         set_global_flag = nicaragua_canal_construction
         random_list = {
             30 = { 2198 = { add_province_modifier = { name = nicaragua_canal_construction duration = 3650 } } }
@@ -1072,7 +1060,7 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    NOT = { treasury = 2000000 }
+                    NOT = { treasury = 5000000 }
                     check_variable = { which = owed_cash_money value = 9 }
                 }
             }
@@ -1081,16 +1069,13 @@ country_event = {
         random_owned = {
             limit = {
                 owner = {
-                    NOT = { treasury = 2000000 }
+                    NOT = { treasury = 5000000 }
                     NOT = { check_variable = { which = owed_cash_money value = 1 } }
                 }
             }
-            owner = { set_variable = { which = owed_cash_money value = 2000 } }
+            owner = { set_variable = { which = owed_cash_money value = 5000 } }
         }
-        random_owned = {
-            limit = { owner = { treasury = 2000000 } }
-            owner = { treasury = -2000000 }
-        }
+
         set_global_flag = nicaragua_canal_construction
         random_list = {
             40 = { 2198 = { add_province_modifier = { name = nicaragua_canal_construction duration = 3650 } } }
@@ -1110,7 +1095,7 @@ country_event = {
     id = 40001
     title = "EVTNAME40001"
     desc = "EVTDESC40001"
-    picture = "panama_canal_finished"
+    picture = "nicaragua_canal_finished"
 
     fire_only_once = yes
 
@@ -1123,7 +1108,7 @@ country_event = {
         }
     }
 
-        mean_time_to_happen = { days = 5 }
+    mean_time_to_happen = { days = 5 }
 
     option = {
         name = "EVT40001OPTA"
