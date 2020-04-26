@@ -31,7 +31,6 @@ generate_article =
                 strings_eq = { 0 0 "build_kiel_canal" }
                 strings_eq = { 0 0 "build_suez_canal" }
                 strings_eq = { 0 0 "build_panama_canal" }
-                strings_eq = { 0 0 "build_nicaragua_canal" }
             }
         }
         picture = "news/canal.dds"
@@ -86,7 +85,6 @@ generate_article =
                 strings_eq = { 0 0 "build_kiel_canal" }
                 strings_eq = { 0 0 "build_suez_canal" }
                 strings_eq = { 0 0 "build_panama_canal" }
-                strings_eq = { 0 0 "build_nicaragua_canal" }
             }
         }
         picture = "news/canal.dds"
