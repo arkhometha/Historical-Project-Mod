@@ -128,7 +128,10 @@ political_decisions = {
         picture = form_USCA
         potential = {
             is_greater_power = yes
-            is_culture_group = latin_american_cultures
+            OR = {
+				capital_scope = { continent = north_america }
+				capital_scope = { continent = south_america }
+			}
             NOT = { has_country_flag = post_colonial_country }
             NOT = {
                 OR = {
