@@ -4033,6 +4033,19 @@ country_event = {
                 country_event = 96060
             }
         }
+		
+		#If Volga Republic does not exist, 25% chance to release it
+        any_country = {
+            limit = {
+                tag = VRP
+                exists = no
+                any_core = { owned_by = THIS }
+            }
+            random = {
+                chance = 25
+                country_event = 96060
+            }
+        }
 
         #give cores to neighboring, non-allied country
         any_country = {
@@ -4538,26 +4551,7 @@ country_event = {
             }
         }
 
-        #If Ural Republic does not exist, 25% to release it
-        random_owned = {
-            limit = {
-                province_id = 1058
-                THIS = {
-                    NOT = { owns = 1064 }
-                }
-            }
-            random = {
-                chance = 25
-                any_country = {
-                    limit = {
-                        tag = URA
-                        exists = no
-                        any_core = { owned_by = THIS }
-                    }
-                    country_event = 96060
-                }
-            }
-        }
+
         #################Colonial Dismantlement#################
         #Give up partial colonies to proper colonial masters
 

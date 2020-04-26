@@ -17,7 +17,7 @@ country_event = {
         average_militancy = 3
         OR = {
             has_country_modifier = regency_government
-            average_militancy = 8
+            average_militancy = 6
             NOT = {
                 government = absolute_monarchy
                 government = prussian_constitutionalism
@@ -30,7 +30,7 @@ country_event = {
             is_disarmed = yes
             communist = 20
             socialist = 40
-            average_militancy = 5
+            average_militancy = 7
         }
     }
 
@@ -101,7 +101,7 @@ country_event = {
         average_militancy = 3
         OR = {
             has_country_modifier = regency_government
-            average_militancy = 8
+            average_militancy = 6
             NOT = {
                 government = absolute_monarchy
                 government = prussian_constitutionalism
@@ -113,7 +113,7 @@ country_event = {
             national_provinces_occupied = 0.10
             is_disarmed = yes
             upper_house = { ideology = reactionary value = 0.3 }
-            average_militancy = 5
+            average_militancy = 7
         }
     }
 
@@ -203,7 +203,7 @@ country_event = {
         average_militancy = 3
         OR = {
             has_country_modifier = regency_government
-            average_militancy = 8
+            average_militancy = 6
             NOT = {
                 government = absolute_monarchy
                 government = prussian_constitutionalism
@@ -215,7 +215,7 @@ country_event = {
             national_provinces_occupied = .10
             is_disarmed = yes
             anarcho_liberal = 20
-            average_militancy = 5
+            average_militancy = 7
         }
     }
 
@@ -392,7 +392,7 @@ country_event = {
         average_militancy = 3
         OR = {
             has_country_modifier = regency_government
-            average_militancy = 8
+            average_militancy = 6
             NOT = {
                 government = absolute_monarchy
                 government = prussian_constitutionalism
@@ -404,7 +404,7 @@ country_event = {
             national_provinces_occupied = .10
             is_disarmed = yes
             fascist = 20
-            average_militancy = 5
+            average_militancy = 7
         }
     }
 
@@ -747,6 +747,36 @@ country_event = {
         clr_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
         government = absolute_monarchy
+		
+		add_country_modifier = { name = national_confusion duration = 365 }
+		
+		any_pop = {
+			scaled_militancy = {
+				factor = 8
+				ideology = liberal
+			}
+			
+			scaled_consciousness = {
+				factor = 9
+				ideology = liberal
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { is_ideology_enabled = socialist } }
+			owner = {
+				any_pop = {
+					scaled_militancy = {
+						factor = 8
+						ideology = socialist
+					}
+					scaled_consciousness = {
+						factor = 9
+						ideology = socialist
+					}
+				}
+			}
+		}
         #Genocide Cleanup
         ##Set Up Timer based on time the thing ran
         random_owned = {
@@ -1147,6 +1177,187 @@ country_event = {
     }
 }
 
+
+country_event = { #Constitutional Monarchy flips to Semi-Constitutional
+    id = 60071
+    title = "EVTNAME60071"
+    desc = "EVTDESC60071"
+    picture = "Monarchy"
+
+    trigger = {
+        government = hms_government
+        civilized = yes
+		OR = {
+			NOT = {
+				OR = {
+					political_parties = secret_ballots
+					political_parties = non_secret_ballots
+				}
+			}
+			NOT = {
+				OR = {
+					vote_franschise = universal_weighted_voting
+					vote_franschise = universal_voting
+				}
+			}
+		}
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "EVTOPTA60071"
+        clr_country_flag = communist_gov
+        clr_country_flag = absolute_monarchy_gov
+        set_country_flag = semi_constitutional_monarchy_gov
+        clr_country_flag = constitutional_monarchy_gov
+        clr_country_flag = democracy_gov
+        clr_country_flag = presidential_dictatorship_gov
+        clr_country_flag = fascist_gov
+        clr_country_flag = anarcho_liberal_gov
+        government = prussian_constitutionalism
+		
+		add_country_modifier = { name = national_confusion duration = 365 }
+		
+		any_pop = {
+			scaled_militancy = {
+				factor = 4
+				ideology = liberal
+			}
+			
+			scaled_consciousness = {
+				factor = 6
+				ideology = liberal
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { is_ideology_enabled = socialist } }
+			owner = {
+				any_pop = {
+					scaled_militancy = {
+						factor = 4
+						ideology = socialist
+					}
+					scaled_consciousness = {
+						factor = 6
+						ideology = socialist
+					}
+				}
+			}
+		}
+		
+        #Genocide Cleanup
+        ##Set Up Timer based on time the thing ran
+        random_owned = {
+            limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
+            owner = { add_country_modifier = { name = law_changed_by_force duration = 1460 } }
+        }
+        random_owned = {
+            limit = { owner = { check_variable = { which = evidence_count value = 2 } } }
+            owner = { add_country_modifier = { name = law_changed_by_force duration = 1825 } }
+        }
+        random_owned = {
+            limit = { owner = { check_variable = { which = evidence_count value = 4 } } }
+            owner = { add_country_modifier = { name = law_changed_by_force duration = 2190 } }
+        }
+        random_owned = {
+            limit = { owner = { check_variable = { which = evidence_count value = 6 } } }
+            owner = { add_country_modifier = { name = law_changed_by_force duration = 2555 } }
+        }
+        random_owned = {
+            limit = { owner = { check_variable = { which = evidence_count value = 8 } } }
+            owner = { add_country_modifier = { name = law_changed_by_force duration = 2920 } }
+        }
+        random_owned = {
+            limit = { owner = { check_variable = { which = evidence_count value = 10 } } }
+            owner = { add_country_modifier = { name = law_changed_by_force duration = 3285 } } #9 years
+        }
+        ##Clean Variables
+        set_variable = { which = evidence_count value = 0 }
+        set_variable = { which = slowdown_point value = 0 }
+        #Delete Modifiers
+        random_owned = {
+            limit = { owner = { has_country_modifier = interment_camps } }
+            owner = { remove_country_modifier = interment_camps }
+        }
+        #Delete Block
+        clr_country_flag = government_busy_with_something
+        #Flag for pops
+        clr_country_flag = internment_camps_open
+        #Place
+        clr_country_flag = interning_on_colonies
+        clr_country_flag = interning_on_homeland
+        clr_country_flag = interning_everywhere
+        #Who
+        clr_country_flag = interning_cultures
+        clr_country_flag = interning_religions
+        #Specific religions
+        clr_country_flag = interning_catholics
+        clr_country_flag = interning_protestants
+        clr_country_flag = interning_mormons
+        clr_country_flag = interning_orthodoxies
+        clr_country_flag = interning_coptics
+        clr_country_flag = interning_sunnis
+        clr_country_flag = interning_shiites
+        clr_country_flag = interning_ibadis
+        clr_country_flag = interning_druzi
+        clr_country_flag = interning_jewish
+        clr_country_flag = interning_yazidis
+        clr_country_flag = interning_mahayanas
+        clr_country_flag = interning_gelugpas
+        clr_country_flag = interning_theravadas
+        clr_country_flag = interning_hindus
+        clr_country_flag = interning_shintos
+        clr_country_flag = interning_sikhs
+        clr_country_flag = interning_animists
+        #Specific Cultures
+        clr_country_flag = interning_germanics
+        clr_country_flag = interning_jewish_cultures
+        clr_country_flag = interning_beneluxian
+        clr_country_flag = interning_pan_swiss
+        clr_country_flag = interning_scandinavian
+        clr_country_flag = interning_british
+        clr_country_flag = interning_italian
+        clr_country_flag = interning_iberian
+        clr_country_flag = interning_french
+        clr_country_flag = interning_south_slavic
+        clr_country_flag = interning_pan_albanian
+        clr_country_flag = interning_pan_romanian
+        clr_country_flag = interning_hungarian_culture_group
+        clr_country_flag = interning_polish_culture_group
+        clr_country_flag = interning_czecho_slovak_culture_group
+        clr_country_flag = interning_east_slavic
+        clr_country_flag = interning_baltic
+        clr_country_flag = interning_levantine
+        clr_country_flag = interning_turko_semitic
+        clr_country_flag = interning_caucasian
+        clr_country_flag = interning_arab
+        clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_central_asian
+        clr_country_flag = interning_south_asian
+        clr_country_flag = interning_indo_iranian
+        clr_country_flag = interning_southeast_asian
+        clr_country_flag = interning_east_asian
+        clr_country_flag = interning_far_east_asian
+        clr_country_flag = interning_oceanic
+        clr_country_flag = interning_native_american
+        clr_country_flag = interning_american_cultures
+        clr_country_flag = interning_neo_european_cultures
+        clr_country_flag = interning_latin_american_cultures
+        clr_country_flag = interning_african_diaspora_cultures
+        clr_country_flag = interning_west_african
+        clr_country_flag = interning_central_african
+        clr_country_flag = interning_east_african
+        clr_country_flag = interning_southern_african
+        clr_country_flag = interning_finnougric
+        clr_country_flag = animists_run
+        ##
+    }
+}
+
 country_event = {
     id = 60080
     title = "EVTNAME60080"
@@ -1177,6 +1388,37 @@ country_event = {
     option = {
         name = "EVT60080OPTA"
         government = presidential_dictatorship
+		
+		add_country_modifier = { name = national_confusion duration = 365 }
+		
+		any_pop = {
+			scaled_militancy = {
+				factor = 8
+				ideology = liberal
+			}
+			
+			scaled_consciousness = {
+				factor = 9
+				ideology = liberal
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { is_ideology_enabled = socialist } }
+			owner = {
+				any_pop = {
+					scaled_militancy = {
+						factor = 8
+						ideology = socialist
+					}
+					scaled_consciousness = {
+						factor = 9
+						ideology = socialist
+					}
+				}
+			}
+		}
+		
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -1319,6 +1561,36 @@ country_event = {
     option = {
         name = "EVT60090OPTA"
         government = bourgeois_dictatorship
+		
+		add_country_modifier = { name = national_confusion duration = 365 }
+		
+		any_pop = {
+			scaled_militancy = {
+				factor = 8
+				ideology = liberal
+			}
+			
+			scaled_consciousness = {
+				factor = 9
+				ideology = liberal
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { is_ideology_enabled = socialist } }
+			owner = {
+				any_pop = {
+					scaled_militancy = {
+						factor = 8
+						ideology = socialist
+					}
+					scaled_consciousness = {
+						factor = 9
+						ideology = socialist
+					}
+				}
+			}
+		}
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -1461,6 +1733,36 @@ country_event = {
     option = {
         name = "EVT60100OPTA"
         government = proletarian_dictatorship
+		
+		add_country_modifier = { name = national_confusion duration = 365 }
+		
+		any_pop = {
+			scaled_militancy = {
+				factor = 8
+				ideology = liberal
+			}
+			
+			scaled_consciousness = {
+				factor = 9
+				ideology = liberal
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { is_ideology_enabled = socialist } }
+			owner = {
+				any_pop = {
+					scaled_militancy = {
+						factor = 8
+						ideology = socialist
+					}
+					scaled_consciousness = {
+						factor = 9
+						ideology = socialist
+					}
+				}
+			}
+		}
         set_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -1604,6 +1906,36 @@ country_event = {
     option = {
         name = "EVT60110OPTA"
         government = fascist_dictatorship
+		
+		add_country_modifier = { name = national_confusion duration = 365 }
+		
+		any_pop = {
+			scaled_militancy = {
+				factor = 8
+				ideology = liberal
+			}
+			
+			scaled_consciousness = {
+				factor = 9
+				ideology = liberal
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { is_ideology_enabled = socialist } }
+			owner = {
+				any_pop = {
+					scaled_militancy = {
+						factor = 8
+						ideology = socialist
+					}
+					scaled_consciousness = {
+						factor = 9
+						ideology = socialist
+					}
+				}
+			}
+		}
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov

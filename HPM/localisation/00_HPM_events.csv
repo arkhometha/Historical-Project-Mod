@@ -1,4 +1,7 @@
 Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;Portuguese;Russian;Finnish;
+EVTNAME60071;Constitutional Setback;;;;;;;;;;;;;
+EVTDESC60071;Recent developments in $CAPITAL$ saw the $COUNTRY_ADJ$ monarch seize more power and greatly increase his clout in the inner workings of the $COUNTRY_ADJ$ government.;;;;;;;;;;;;;
+EVTOPTA60071;May the monarch's guiding hand bring us fortune.;;;;;;;;;;;;;
 EVTNAME31717;The Lands of the Austrian Empire;;;;;;;;;;;;;
 EVTDESC31717;With the formation of Greater Germany, the lands formerly belonging to the Austrian empire were given self rule. As part of that process, the newly formed German Empire is offering us lands that are claimed by the $COUNTRY_ADJ$ people, as a token of good will for us and for the balance of power in Europe.;;;;;;;;;;;;;
 EVT31717OPTA;Who are we to refuse?;;;;;;;;;;;;;
