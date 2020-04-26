@@ -446,7 +446,7 @@ acquire_core_state = {
                 THIS = { total_amount_of_ships = 5 }
                 any_owned_province = { port = yes }
             }
-            any_owned_province = { any_neighbor_province = { owned_by = THIS } }
+            any_neighbor_province = { owned_by = THIS }
         }
     }
 
@@ -625,7 +625,7 @@ restore_austrian_empire = {
                 is_core = SLV
                 is_core = BOH
                 is_core = HUN
-                region = AUS_702
+                is_core = GLM
                 region = AUS_771
                 region = AUS_780
                 region = AUS_777
@@ -921,7 +921,7 @@ claim_holy_land = {
         }
         OR = {
             THIS = { ai = no }
-            any_owned_province = { any_neighbor_province = { owned_by = THIS } }
+            any_neighbor_province = { owned_by = THIS }
             any_owned_province = { port = yes }
             AND = {
                 any_owned_province = { port = yes }
@@ -1035,7 +1035,7 @@ unification_casus_belli = {
                 THIS = { total_amount_of_ships = 5 }
                 any_owned_province = { port = yes }
             }
-            any_owned_province = { any_neighbor_province = { owned_by = THIS } }
+            any_neighbor_province = { owned_by = THIS }
         }
     }
 

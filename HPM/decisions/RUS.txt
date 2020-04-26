@@ -1877,16 +1877,23 @@ political_decisions = {
         }
 
         allow = {
-            war = no
 			owns = 1037
 			owns = 1038
 			OR = {
-				has_country_modifier = totalitarian_system
+				AND = {
+					has_country_modifier = totalitarian_system
+					war = no
+				}
 				AND = {
 					vote_franschise = none_voting
 					ruling_party_ideology = reactionary
 					mass_politics = 1
-					war_countries = { is_culture_group = germanic }
+					war_countries = {
+						OR = {
+							primary_culture = north_german
+							primary_culture = south_german
+						}
+					}
 				}
 			}
         }
