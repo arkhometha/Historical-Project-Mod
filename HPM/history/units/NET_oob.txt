@@ -1,4 +1,4 @@
-NET = {
+BEL = {
     truce_until = 1839.4.1
 }
 ENG = {
