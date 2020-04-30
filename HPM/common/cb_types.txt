@@ -448,7 +448,6 @@ acquire_core_state = {
                 any_owned_province = { port = yes }
             }
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			owner = { war_with = THIS }
         }
     }
 
@@ -924,7 +923,6 @@ claim_holy_land = {
         OR = {
             THIS = { ai = no }
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			owner = { war_with = THIS }
             AND = {
                 any_owned_province = { port = yes }
                 THIS = {
@@ -1038,7 +1036,6 @@ unification_casus_belli = {
                 any_owned_province = { port = yes }
             }
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			owner = { war_with = THIS }
         }
     }
 
@@ -3691,7 +3688,6 @@ place_in_the_sun = {
         OR = {
             #AI and Player can take a neighboring state
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			owner = { war_with = THIS }
             #Player can take a neighboring state neighboring a neighboring state
             AND = {
                 THIS = { ai = no }
@@ -3901,7 +3897,6 @@ acquire_state = {
         OR = {
             #AI and Player can take a neighboring state
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			owner = { war_with = THIS }
             #Player can take a neighboring state neighboring a neighboring state
             AND = {
                 THIS = { ai = no }
@@ -4237,7 +4232,6 @@ sahel_jihad_cb = {
         NOT = { any_owned_province = { is_core = THIS } }
         OR = {
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			owner = { war_with = THIS }
 			THIS = { ai = no }
         }
     }
@@ -4362,7 +4356,6 @@ demand_concession_casus_belli = {
         NOT = { any_owned_province = { is_capital = yes } }
         OR = {
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			owner = { war_with = THIS }
             THIS = { ai = no }
             AND = {
                 any_owned_province = { port = yes }
@@ -4565,7 +4558,6 @@ demand_concession_NI_casus_belli = {
         NOT = { any_owned_province = { is_capital = yes } }
         OR = {
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			owner = { war_with = THIS }
            THIS = { ai = no }
             AND = {
                 any_owned_province = { port = yes }
@@ -4762,7 +4754,6 @@ demand_concession_BC_casus_belli = {
         NOT = { any_owned_province = { is_capital = yes } }
         OR = {
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			owner = { war_with = THIS }
             THIS = { ai = no }
             AND = {
                 any_owned_province = { port = yes }
@@ -5663,7 +5654,6 @@ annex_africa = {
         OR = {
             THIS = { ai = no }
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			owner = { war_with = THIS }
             AND = {
                 any_owned_province = { port = yes }
                 THIS = { any_owned_province = { port = yes } }
@@ -7987,7 +7977,6 @@ acquire_substate_region = {
                 any_owned_province = { port = yes }
             }
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			owner = { war_with = THIS }
         }
     }
 
@@ -8112,7 +8101,6 @@ dismantle_forts = {
         OR = {
             THIS = { ai = no }
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			owner = { war_with = THIS }
             AND = {
                 any_owned_province = { port = yes }
                 THIS = { is_greater_power = yes }
@@ -9790,7 +9778,6 @@ claim_colonial_region = {
 
     allowed_states = {
         any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-		owner = { war_with = THIS }
         OR = {
             #Ghana
             AND = {
