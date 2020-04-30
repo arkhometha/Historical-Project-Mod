@@ -363,7 +363,7 @@ navy = {
     }
 
     ship = {
-        name= "Pennsylvania"
+        name= "Independence"
         type = manowar
     }
 
@@ -373,7 +373,7 @@ navy = {
     }
 
     ship = {
-        name= "Columbia"
+        name= "Fairfield"
         type = frigate
     }
 
@@ -418,11 +418,6 @@ navy = {
     name = "4th Squadron"
     location = 219
     ship = {
-        name= "Independance"
-        type = frigate
-    }
-
-    ship = {
         name= "Brandywine"
         type = frigate
     }
@@ -447,32 +442,7 @@ navy = {
 navy = {
     name = "1st Reserve Squadron"
     location = 247
-    ship = {
-        name= "Alabama"
-        type = manowar
-    }
-
-    ship = {
-        name= "Vermont"
-        type = manowar
-    }
-
-    ship = {
-        name= "Virginia"
-        type = manowar
-    }
-
-    ship = {
-        name= "1st Reserve Transport"
-        type = clipper_transport
-    }
-
-}
-
-navy = {
-    name = "2nd Reserve Squadron"
-    location = 214
-    ship = {
+	ship = {
         name= "Columbus"
         type = manowar
     }
@@ -483,16 +453,16 @@ navy = {
     }
 
     ship = {
-        name= "New York"
-        type = manowar
-    }
-
-    ship = {
         name= "North Carolina"
         type = manowar
     }
 
     ship = {
+        name= "1st Reserve Transport"
+        type = clipper_transport
+    }
+	
+	ship = {
         name= "2nd Reserve Transport"
         type = clipper_transport
     }
