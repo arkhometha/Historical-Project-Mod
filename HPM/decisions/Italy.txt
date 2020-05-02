@@ -1219,9 +1219,7 @@ political_decisions = {
             badboy = 10
             set_country_flag = reclaim_italian_lands
             SAR_466 = { add_core = ITA }
-            826    = { add_core = ITA }
-            852 = { add_core = ITA }
-            853 = { add_core = ITA }
+            826 = { add_core = ITA }
             854 = { add_core = ITA }
             473 = { add_core = ITA }
         }
