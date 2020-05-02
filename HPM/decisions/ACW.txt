@@ -1372,7 +1372,10 @@ political_decisions = {
             89 = { add_core = CSA }
             88 = { add_core = CSA }
             87 = { add_core = CSA }
-            any_neighbor_country = { limit = { any_owned_province = { is_core = THIS } } country_event = 441268 }
+            any_neighbor_country = {
+				limit = { any_owned_province = { is_core = THIS } }
+				country_event = 441268
+			}
         }
         ai_will_do = { factor = 1 }
     }

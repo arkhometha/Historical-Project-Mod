@@ -4158,7 +4158,9 @@ country_event = {
     is_triggered_only = yes
 
     trigger = {
-        #
+       exists = yes
+	   is_greater_power = yes
+	   NOT = { FROM = { is_greater_power = yes } }
     }
 
     option = {
@@ -4172,14 +4174,23 @@ country_event = {
                 months = 12
             }
         }
-        relation = { who = FROM value = -100 }
+        relation = { who = FROM value = -75 }
     }
 
     option = {
         name = "EVTOPTB90950"
         relation = { who = FROM value = 100 }
         add_country_modifier = { name = factories_nationalized duration = 365 }
-        rich_strata = { militancy = 3 consciousness = 6 }
+        rich_strata = {
+			scaled_militancy = {
+				issue = jingoism
+				factor = 3
+			}
+			scaled_consciousness = {
+				issue = jingoism
+				factor = 6
+			}
+		}
     }
 }
 

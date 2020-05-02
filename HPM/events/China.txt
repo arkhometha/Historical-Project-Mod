@@ -12,6 +12,7 @@ country_event = {
     is_triggered_only = yes
 
     trigger = {
+		exists = yes
         OR = {
             tag = CHI
             tag = TPG
@@ -226,6 +227,7 @@ country_event = {
     is_triggered_only = yes
 
     trigger = {
+		exists = yes
         NOT = { has_global_flag = the_dragon_wakes }
         OR = {
             tag = MCK

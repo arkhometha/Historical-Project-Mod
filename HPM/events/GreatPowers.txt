@@ -2042,7 +2042,7 @@ country_event = {
                 }
             }
         }
-                    random_owned = {
+            random_owned = {
                 limit = {
                     owner = { FROM = { slavery = no_slavery } }
                 }

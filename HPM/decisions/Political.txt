@@ -218,14 +218,18 @@ political_decisions = {
         picture = nationalize
 
         potential = {
+			exists = yes
+			civilized = yes
             can_nationalize = yes
-            civilized = yes
             NOT = { has_country_modifier = nationalization_in_progress }
         }
 
         allow = {
-            NOT = { part_of_sphere = yes }
-            NOT = { is_vassal = yes }
+			can_nationalize = yes
+            NOT = {
+				part_of_sphere = yes
+				is_vassal = yes
+			}
             OR = {
                 economic_policy = state_capitalism
                 economic_policy = planned_economy
@@ -233,31 +237,35 @@ political_decisions = {
             }
             OR = {
                 ai = no
-                is_greater_power = yes
-                military_score = 300
+                military_score = 400
+				 is_greater_power = yes
                 AND = {
-                    NOT = { has_recently_lost_war = yes }
-                    NOT = { is_disarmed = yes }
-                    NOT = { war_policy = pacifism }
-                    NOT = { num_of_revolts = 1 }
-                    NOT = { any_owned_province = { country_units_in_province = REB } }
-                    NOT = { average_militancy = 7 }
-                    total_amount_of_divisions = 10
-                    military_score = 50
+                    NOT = {
+						has_recently_lost_war = yes
+						is_disarmed = yes
+						war_policy = pacifism
+						num_of_revolts = 1
+						average_militancy = 7
+					}
+                    total_amount_of_divisions = 20
+                    military_score = 100
                     OR = {
                         ruling_party_ideology = communist
                         ruling_party_ideology = fascist
                         ruling_party_ideology = anarcho_liberal
                         AND = {
                             military_score = 200
-                            is_secondary_power = yes
+							is_secondary_power = yes
                             OR = {
                                 war_policy = jingoism
                                 war_policy = pro_military
                             }
                         }
                         AND = {
-                            any_greater_power = { alliance_with = THIS military_score = 50 }
+                            any_greater_power = {
+								alliance_with = THIS
+								military_score = 100
+							}
                             OR = {
                                 war_policy = jingoism
                                 war_policy = pro_military

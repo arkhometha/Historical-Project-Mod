@@ -208,6 +208,7 @@ country_event = {
     picture = "Bankruptcy"
 
     trigger = {
+		exists = yes
         NOT = { tag = FROM }
         NOT = { has_country_modifier = neutrality_modifier }
         NOT = { has_country_flag = bankruptcy_events_disabled }
@@ -299,7 +300,9 @@ country_event = {
     title = "EVTNAME70003"
     desc = "EVTDESC70003"
     picture = "Bankruptcy"
+	
     trigger = {
+		exists = yes
         NOT = { tag = FROM }
         NOT = { has_country_modifier = neutrality_modifier }
         NOT = { has_country_flag = bankruptcy_events_disabled }
@@ -395,7 +398,9 @@ country_event = {
     title = "EVTNAME70004"
     desc = "EVTDESC70004"
     picture = "stock_crash"
+	
     trigger = {
+		exists = yes
         NOT = { tag = FROM }
         NOT = { has_country_modifier = neutrality_modifier }
         NOT = { has_country_flag = bankruptcy_events_disabled }
