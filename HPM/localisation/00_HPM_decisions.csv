@@ -2011,3 +2011,7 @@ ghost_country_absorb_player_title;AI: Player Country Cleanup End;;;;;;;;;;;;;
 ghost_country_absorb_player_desc;AI: Player Country Cleanup End;;;;;;;;;;;;;
 claim_vorarlberg_title;Our claims on Vorarlberg;;;;;;;;;;;;;
 claim_vorarlberg_desc;The people of Vorarlberg are our brothers and for too long they have been under the foreign yoke. It is time for all the Swiss to live under the protection of mother Switzerland!;;;;;;;;;;;;;
+mark_down_landlocked_title;Occupation of Landlocked Territories;;;;;;;;;;;;;
+mark_down_landlocked_desc;A neighbouring country is occupying one of our landlocked provinces.;;;;;;;;;;;;;
+take_landlocked_provinces_title;Retaking Landlocked Territories;;;;;;;;;;;;;
+take_landlocked_provinces_desc;Neighbouring territories that rightfully belong to us but are under occupation by a foreign power are currently landlocked, defenseless against out de facto occupation..;;;;;;;;;;;;;

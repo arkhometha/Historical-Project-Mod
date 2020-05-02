@@ -4899,3 +4899,23 @@ country_event = {
             }
     }
 }
+
+country_event = {
+    id = 6016826
+    title = "EVTNAME6016826"
+    desc = "EVTDESC6016826"
+    picture = "danishgovernment"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT6016826OPTA"
+        any_owned = {
+			limit = {
+				is_core = FROM
+				has_province_modifier = landlocked_province
+			}
+			secede_province = FROM
+		}
+    }
+}

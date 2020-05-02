@@ -26,6 +26,10 @@ picking_personality = {
 
 ####
 
+landlocked_province = {
+	icon = 2	
+}
+
 ######
 ##Rebel Modifiers
 ######

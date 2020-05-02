@@ -1,4 +1,67 @@
 political_decisions = {
+
+	mark_down_landlocked = {
+        potential = {
+			exists = yes
+			ai = yes
+			any_owned_province = {
+				port = no
+				NOT = {
+					has_province_modifier = landlocked_province
+					is_core = THIS
+					any_neighbor_province = { owned_by = THIS }
+				}
+			}
+        }
+
+        allow = {
+			war = no
+        }
+
+        effect = {
+			any_owned = {
+				limit = {
+					port = no
+					NOT = {
+						is_core = THIS
+						any_neighbor_province = { owned_by = THIS }
+					}
+				}
+				add_province_modifier = { name = landlocked_province duration = 3650 }
+			}
+        }
+        ai_will_do = { factor = 1 }
+    }
+	
+	take_landlocked_provinces = {
+        potential = {
+			exists = yes
+			any_owned_province = {
+				any_neighbor_province = {
+					is_core = THIS
+					has_province_modifier = landlocked_province
+				}
+			}
+        }
+
+        allow = {
+			war = no
+        }
+
+        effect = {
+           any_neighbor_country  = {
+				limit = {
+					any_owned_province = {
+						is_core = THIS
+						has_province_modifier = landlocked_province
+					}
+				}
+				country_event = 6016826
+			}
+        }
+        ai_will_do = { factor = 1 }
+    }
+
     ottoman_oppression_mil_gain = {
         potential = {
             ai = yes

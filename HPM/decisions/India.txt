@@ -1083,7 +1083,6 @@ political_decisions = {
                 tag = MUG
                 tag = NEP
             }
-			has_global_flag = pakistan_born
             owns = 1251
             owns = 1261
             owns = 1305
@@ -1096,6 +1095,7 @@ political_decisions = {
         allow = {
             war = no
             mass_politics = 1
+			has_global_flag = pakistan_born
         }
 
         effect = {

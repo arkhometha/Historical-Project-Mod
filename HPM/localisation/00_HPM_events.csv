@@ -5313,3 +5313,6 @@ EVTOPT31320B;Let them decide themselves.;;;;;;;;;;;;;
 EVTDESC31321;With the Great War finally over a referendum was held recently by the people of Vorarlberg proposing to join the Swiss Confederation and the overwhelming majority voted in favour. The people of Vorarlberg are similar to us and have always considered themselves different from their east German masters. While they wish to join our confederation some of our own people are concerned. Vorarlberg is a German speaking Catholic region and our non German speaking citizens fear that an incorporation of such a large area would cause problems while the Protestants aren't very enthusiastic. However a choice must be made. Should Vorarlberg join the Confederation?;;;;;;;;;;;;;
 EVTOPT31321A;The people of Vorarlberg voted to join our Confederation and so they will.;;;;;;;;;;;;;
 EVTOPT31321B;Perhaps it would be better to not let them join.;;;;;;;;;;;;;
+EVTNAME6016826;The $COUNTRY_ADJ$ Exclaves;;;;;;;;;;;;;
+EVTDESC6016826;$FROMCOUNTRY$ moved in troops and took control of $COUNTRY_ADJ$ territory that were functioning as effective exclaves. Due to their situation, there's little we can do to retake them back without a full-blown war.;;;;;;;;;;;;;
+EVT6016826OPTA;A minor setback.;;;;;;;;;;;;;
