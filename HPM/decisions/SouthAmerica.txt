@@ -256,7 +256,7 @@ political_decisions = {
 	brazilian_coal = {
         picture = mining_union_upper_katanga
         potential = {
-			2643 = {
+			2463 = {
 				owned_by = THIS
 				NOT = { trade_goods = coal }
 			}
@@ -272,7 +272,7 @@ political_decisions = {
         effect = {
             set_country_flag = brazilian_coal
 			treasury = -20000
-            2643 = {
+            2463 = {
 				trade_goods = coal
 				add_province_modifier = { name = switched_production duration = 3650 }
 			}
