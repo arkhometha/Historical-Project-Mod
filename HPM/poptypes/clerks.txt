@@ -142,6 +142,7 @@ country_migration_target = {
             government = democracy
             government = presidential_dictatorship
             government = hms_government
+			government = prussian_constitutionalism
         }
     }
 
@@ -159,6 +160,7 @@ country_migration_target = {
             government = democracy
             government = presidential_dictatorship
             government = hms_government
+			government = prussian_constitutionalism
         }
     }
 }
