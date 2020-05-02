@@ -148,6 +148,7 @@ political_decisions = {
         }
 
         allow = {
+			revolution_n_counterrevolution = 1
             GUA = {
                 OR = {
                     in_sphere = THIS
@@ -221,7 +222,7 @@ political_decisions = {
             }
         }
 
-        ai_will_do = { factor = 1 }
+        ai_will_do = { factor = 0 }
     }
 
     belize_purchase = {
