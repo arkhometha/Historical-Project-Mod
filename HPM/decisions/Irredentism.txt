@@ -1168,5 +1168,28 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	
+	greater_korea = {
+        picture = annex_korea
+        potential = {
+            tag = KOR
+            NOT = { has_country_flag = greater_kora_claimed }
+        }
+
+        allow = {
+            war = no
+            is_greater_power = yes
+            invention = manifest_destiny
+            invention = nostalgic_romanticism
+            government = fascist_dictatorship
+        }
+
+        effect = {
+            set_country_flag = greater_kora_claimed
+            badboy = 7
+            CHI_1479 = { add_core = KOR } #Fengtian
+        }
+        ai_will_do = { factor = 1 }
+    }
 
 }

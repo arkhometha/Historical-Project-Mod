@@ -767,9 +767,9 @@ CHI_1470 = { 1470 1471 1473 1475 } #South Anhui
 
 CHI_1477 = { 1477 1474 1476 1472 1478 } #North Anhui
 
-CHI_1479 = { 1479 1480 1481 1554 1555 }  #Fengtian - South Manchuria
+CHI_1479 = { 1479 1481 1554 1555 }  #Fengtian - South Manchuria
 
-CHI_1552 = { 1552 1002 1553 1533 } #Heilongjiang - North Manchuria
+CHI_1552 = { 1552 1002 1553 1533 1480 } #Heilongjiang - North Manchuria
 
 CHI_1482 = { 1482 1483 1484 1486 1487 } #Fujian
 
