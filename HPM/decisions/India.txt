@@ -1083,6 +1083,7 @@ political_decisions = {
                 tag = MUG
                 tag = NEP
             }
+			has_global_flag = pakistan_born
             owns = 1251
             owns = 1261
             owns = 1305
@@ -1123,7 +1124,7 @@ political_decisions = {
             diplomatic_influence = { who = HND value = 400 }
         }
         ai_will_do = {
-            factor = 1
+            factor = 0
             modifier = {
                 factor = 0
                 NOT = {
