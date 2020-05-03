@@ -1097,6 +1097,81 @@ navy = {
         name= "HMS Talavera"
         type = manowar
     }
+	
+	 ship = {
+        name= "HMS San Josef"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Queen Charlotte"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Ocean"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Victory"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Windsor Castle"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Achille"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Agincourt"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Medway"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Minotaur"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Mulgrave"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Revenge"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Redoutable"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Sultan"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Warspite"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Tremendous"
+        type = manowar
+    }
 
     ship = {
         name= "HMS America"
@@ -1119,7 +1194,7 @@ navy = {
     }
 
     ship = {
-        name= "HMS Forth"
+        name= "HMS Aligator"
         type = frigate
     }
 
@@ -1134,7 +1209,7 @@ navy = {
     }
 
     ship = {
-        name= "HMS Seahorse"
+        name= "HMS Rainbow"
         type = frigate
     }
 
@@ -1149,7 +1224,7 @@ navy = {
     }
 
     ship = {
-        name= "HMS Vernon"
+        name= "HMS Crocodile"
         type = frigate
     }
 
@@ -1159,7 +1234,117 @@ navy = {
     }
 
     ship = {
-        name= "HMS Medea"
+        name= "HMS Talbot"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Penelope"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Hebe"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Mermaid"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Rhin"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Volage"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Greenwich"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Tyne"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Samarang"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Africaine"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Andromache"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Cerberus"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Salisbury"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Endymion"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Lavinia"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Mercury"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Undaunted"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Unite"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Termagant"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Rattlesnake"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Sapphire"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS North Star"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Tartar"
         type = frigate
     }
 
@@ -1219,6 +1404,61 @@ navy = {
         name= "HMS Waterloo"
         type = manowar
     }
+	
+	ship = {
+        name= "HMS Foudroyant"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Hogue"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Stirling Castle"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Canopus"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Bellona"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Pitt"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Blenheim"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Spartiate"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Implacable"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Kent"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Scarborough"
+        type = manowar
+    }
 
     ship = {
         name= "HMS Amazon"
@@ -1226,7 +1466,7 @@ navy = {
     }
 
     ship = {
-        name= "HMS Fisguard"
+        name= "HMS Diana"
         type = frigate
     }
 
@@ -1236,7 +1476,7 @@ navy = {
     }
 
     ship = {
-        name= "HMS Latona"
+        name= "HMS Conway"
         type = frigate
     }
 
@@ -1267,6 +1507,31 @@ navy = {
 
     ship = {
         name= "HMS Venus"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS President"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Veron"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Boadicea"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Fisgard"
+        type = frigate
+    }
+	
+	ship = {
+        name= "HMS Eurotas"
         type = frigate
     }
 
@@ -1316,14 +1581,24 @@ navy = {
         name= "HMS Pembroke"
         type = manowar
     }
+	
+	ship = {
+        name= "HMS Armada"
+        type = manowar
+    }
+	
+	ship = {
+        name= "HMS Donegal"
+        type = manowar
+    }
 
     ship = {
-        name= "HMS Alfred"
+        name= "HMS Alfred Catham"
         type = frigate
     }
 
     ship = {
-        name= "HMS Andromeda"
+        name= "HMS Belvidera"
         type = frigate
     }
 
@@ -1421,7 +1696,7 @@ navy = {
     }
 
     ship = {
-        name= "HMS Daedalus"
+        name= "HMS Crescent"
         type = frigate
     }
 
@@ -1483,7 +1758,7 @@ navy = {
     }
 
     ship = {
-        name= "HMS Thisbe"
+        name= "HMS Bacchante"
         type = frigate
     }
 
@@ -1556,100 +1831,110 @@ navy = {
     name = "1st Transport Squadron"
     location = 301 #Canterbury
     ship = {
-        name= "1st Transport Flotilla"
+        name= "HMS Hermes"
         type = steam_transport
     }
     ship = {
-        name= "2nd Transport Flotilla"
-        type = steam_transport
-    }
-
-    ship = {
-        name= "3rd Transport Flotilla"
+        name= "HMS Dee"
         type = steam_transport
     }
 
     ship = {
-        name= "4th Transport Flotilla"
+        name= "HMS Phoenix"
         type = steam_transport
     }
 
     ship = {
-        name= "5th Transport Flotilla"
+        name= "HMS Echo"
         type = steam_transport
     }
 
     ship = {
-        name= "6th Transport Flotilla"
+        name= "HMS Salamander"
         type = steam_transport
     }
 
     ship = {
-        name= "7th Transport Flotilla"
+        name= "HMS Medea"
         type = steam_transport
     }
 
     ship = {
-        name= "8th Transport Flotilla"
-        type = steam_transport
-    }
-    ship = {
-        name= "9th Transport Flotilla"
+        name= "HMS Confiance"
         type = steam_transport
     }
 
     ship = {
-        name= "10th Transport Flotilla"
+        name= "HMS Carron"
+        type = steam_transport
+    }
+    ship = {
+        name= "HMS Firebrand"
         type = steam_transport
     }
 
     ship = {
-        name= "11th Transport Flotilla"
+        name= "HMS Alban"
         type = steam_transport
     }
 
     ship = {
-        name= "12th Transport Flotilla"
+        name= "HMS Hugh Lindsay"
         type = steam_transport
     }
 
     ship = {
-        name= "13th Transport Flotilla"
+        name= "HMS Flamer"
         type = steam_transport
     }
 
     ship = {
-        name= "14th Transport Flotilla"
+        name= "HMS Tartarus"
         type = steam_transport
     }
 
     ship = {
-        name= "15th Transport Flotilla"
+        name= "HMS Pluto"
         type = steam_transport
     }
 
     ship = {
-        name= "HMS Bacchante"
+        name= "HMS Meteor"
+        type = steam_transport
+    }
+	
+	ship = {
+        name= "HMS African"
+        type = steam_transport
+    }
+	
+	ship = {
+        name= "HMS Blazer"
+        type = steam_transport
+    }
+
+    ship = {
+        name= "HMS Columbia"
         type = commerce_raider
     }
 
     ship = {
-        name= "HMS Belvidera"
+        name= "HMS Lightning"
         type = commerce_raider
     }
 
     ship = {
-        name= "HMS Briton"
+        name= "HMS Rhadamanthus"
         type = commerce_raider
     }
 
     ship = {
-        name= "HMS Crescent"
+        name= "HMS Firefly"
         type = commerce_raider
     }
 
     ship = {
-        name= "HMS Galatea"
+        name= "HMS Spitfire"
         type = commerce_raider
     }
 
@@ -1659,12 +1944,12 @@ navy = {
     }
 
     ship = {
-        name= "HMS Maidstone"
+        name= "HMS Galatea"
         type = frigate
     }
 
     ship = {
-        name= "HMS Menelaus"
+        name= "HMS Briton"
         type = frigate
     }
 
@@ -1706,5 +1991,15 @@ navy = {
     ship = {
         name= "HMS Owen Glendower"
         type = frigate
+    }
+	
+	ship = {
+        name= "HMS Jupiter"
+        type = clipper_transport
+    }
+	
+	ship = {
+        name= "HMS Romney"
+        type = clipper_transport
     }
 }
