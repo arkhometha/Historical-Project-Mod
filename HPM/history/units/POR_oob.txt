@@ -148,53 +148,33 @@ navy = {
     name = "Portuguese Royal Navy"
     location = 521
     ship = {
-        name= "Rainha de Portugal"
-        type = manowar
-    }
-
-    ship = {
         name= "Dom João VI"
         type = manowar
     }
 
     ship = {
-        name= "Nossa Senhora da Conceição"
+        name= "São Vicente"
         type = manowar
     }
-
-    ship = {
-        name= "São Sebastião"
-        type = manowar
+	
+	ship = {
+        name= "Duquesa de Braganza"
+        type = frigate
     }
-
-    ship = {
-        name= "Amazônia"
-        type = manowar
+	
+	ship = {
+        name= "Dom Pedro"
+        type = frigate
     }
-
-    ship = {
-        name= "Princesa Carlota"
-        type = manowar
+	
+	ship = {
+        name= "Rainha de Portugal"
+        type = frigate
     }
-
-    ship = {
-        name= "Teresa"
-        type = manowar
-    }
-
-    ship = {
-        name= "Príncipe do Brasil"
-        type = manowar
-    }
-
-    ship = {
-        name= "Algarves"
-        type = manowar
-    }
-
-    ship = {
-        name= "Maria II"
-        type = manowar
+	
+	ship = {
+        name= "Dona Maria II"
+        type = frigate
     }
 
     ship = {
