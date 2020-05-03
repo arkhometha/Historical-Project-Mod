@@ -497,17 +497,17 @@ navy = {
     }
 
     ship = {
-        name= "Superbe"
+        name= "Breslaw"
         type = manowar
     }
 
     ship = {
-        name= "Jean Bart"
+        name= "Océan"
         type = manowar
     }
 
     ship = {
-        name= "Dix-huit Fructidor"
+        name= "Scipion"
         type = manowar
     }
 
@@ -517,17 +517,17 @@ navy = {
     }
 
     ship = {
-        name= "Trocadero "
+        name= "Trocadéro"
         type = manowar
     }
 
     ship = {
-        name= "Zélandais"
+        name= "Duquesne"
         type = manowar
     }
 
     ship = {
-        name= "Superbe"
+        name= "Commerce"
         type = manowar
     }
 
@@ -542,12 +542,12 @@ navy = {
     }
 
     ship = {
-        name= "République Française"
+        name= "Majestueux"
         type = manowar
     }
 
     ship = {
-        name= "Conquérant"
+        name= "Alger"
         type = manowar
     }
 
@@ -557,7 +557,7 @@ navy = {
     }
 
     ship = {
-        name= "Algerisas"
+        name= "Algésiras"
         type = manowar
     }
 
@@ -567,7 +567,7 @@ navy = {
     }
 
     ship = {
-        name= "Duchesse de Berry"
+        name= "Minerve"
         type = frigate
     }
 
@@ -587,17 +587,17 @@ navy = {
     }
 
     ship = {
-        name= "Clorinde"
+        name= "Aurore"
         type = frigate
     }
 
     ship = {
-        name= "Maure"
+        name= "Cybèle"
         type = frigate
     }
 
     ship = {
-        name= "Vestale"
+        name= "Amphitrite"
         type = frigate
     }
 
@@ -607,7 +607,7 @@ navy = {
     }
 
     ship = {
-        name= "Marie Thérese"
+        name= "Calypso"
         type = frigate
     }
 
@@ -617,7 +617,7 @@ navy = {
     }
 
     ship = {
-        name= "Sirène"
+        name= "Syréne"
         type = frigate
     }
 
@@ -637,7 +637,57 @@ navy = {
     }
 
     ship = {
-        name= "Sultane"
+        name= "Sirene"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Bellone"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Prosperpine"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Victoire"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Ariane"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Alcmène"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Circé"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Aréthuse"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Galathée"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Cornaline"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Sapho"
         type = frigate
     }
 
@@ -677,7 +727,7 @@ navy = {
     }
 
     ship = {
-        name= "Centaure"
+        name= "Santi Pietri"
         type = manowar
     }
 
@@ -687,12 +737,7 @@ navy = {
     }
 
     ship = {
-        name= "Duc d’Angouleme"
-        type = manowar
-    }
-
-    ship = {
-        name= "Hercules"
+        name= "Iéna"
         type = manowar
     }
 
@@ -703,11 +748,6 @@ navy = {
 
     ship = {
         name= "Diadème"
-        type = manowar
-    }
-
-    ship = {
-        name= "Couronne"
         type = manowar
     }
 
@@ -732,7 +772,7 @@ navy = {
     }
 
     ship = {
-        name= "Belle Gabrielle"
+        name= "Indépendante"
         type = frigate
     }
 
@@ -742,7 +782,7 @@ navy = {
     }
 
     ship = {
-        name= "Caroline"
+        name= "Dryade"
         type = frigate
     }
 
@@ -767,7 +807,7 @@ navy = {
     }
 
     ship = {
-        name= "Jeanne d’Arc"
+        name= "Berceau"
         type = frigate
     }
 
@@ -777,22 +817,62 @@ navy = {
     }
 
     ship = {
-        name= "Erigone"
+        name= "Amélie"
         type = frigate
     }
 
     ship = {
-        name= "Nereide"
+        name= "Thisbé"
         type = frigate
     }
 
     ship = {
-        name= "Gloire"
+        name= "Flore"
         type = frigate
     }
 
     ship = {
-        name= "Reine Blanche"
+        name= "Boussole"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Armide"
+        type = frigate
+    }
+
+    ship = {
+        name= "Constance"
+        type = frigate
+    }
+
+    ship = {
+        name= "Guerriére"
+        type = frigate
+    }
+
+    ship = {
+        name= "Sabine"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Pallas"
+        type = frigate
+    }
+
+    ship = {
+        name= "Hermione"
+        type = frigate
+    }
+
+    ship = {
+        name= "Médée"
+        type = frigate
+    }
+
+    ship = {
+        name= "Héroïne"
         type = frigate
     }
 
