@@ -4,7 +4,7 @@ religion = shiite
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_order
-literacy = 0.1
+literacy = 0.02
 non_state_culture_literacy = 0.01
 
 ruling_party = AWA_conservative
@@ -50,4 +50,10 @@ child_labor = child_labor_legal
 citizens_rights = culture_voting_only
 border_policy = open_borders
 
+foreign_artillery = yes_foreign_artillery
+foreign_weapons = yes_foreign_weapons
+
 set_country_flag = shiite_country
+
+flintlock_rifles = 1
+bronze_muzzle_loaded_artillery = 1
