@@ -534,7 +534,7 @@ sound_dues_toll = {
 }
 
 silver_mine = {
-    local_RGO_output = -0.25
+    local_RGO_output = -0.5
     icon = 11
 }
 
@@ -1892,6 +1892,7 @@ dar_al_funun = {
 
 ### Uprisings ### PDM Modifier for refute manifest destiny
 fight_the_power = {
+	RGO_output = -0.2
     global_pop_militancy_modifier = 0.01
     global_pop_consciousness_modifier = 0.03
     land_organisation = -0.2

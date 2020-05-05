@@ -1798,6 +1798,18 @@ political_decisions = {
                         owns = 2323
                         2323 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
                     }
+					AND = {
+                        owns = 2156
+                        2156 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
+                    }
+					AND = {
+                        owns = 2154
+                        2154 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
+                    }
+					AND = {
+                        owns = 2179
+                        2179 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
+                    }
                 }
             }
         }
@@ -1818,6 +1830,9 @@ political_decisions = {
                             province_id = 312
                             province_id = 2322
                             province_id = 2323
+							province_id = 2156
+							province_id = 2154
+							province_id = 2179
                         }
                     }
                     add_province_modifier = { name = silver_mine duration = -1 }

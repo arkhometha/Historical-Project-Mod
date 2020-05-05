@@ -265,8 +265,11 @@ political_decisions = {
 
         allow = {
             war = no
-            invention = trinitrotoluene
 			money = 20000
+			OR = {
+                invention = trinitrotoluene
+			    electrical_power_generation = 1
+			}
         }
 
         effect = {
