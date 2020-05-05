@@ -418,6 +418,20 @@ colonialmigration_chance =
             not = { consciousness = 6 }
         }
     }
+	group = {
+        modifier = {
+            factor = 0.2
+            not = { literacy = 0.15 }
+        }
+        modifier = {
+            factor = 0.2
+            not = { literacy = 0.25 }
+        }
+        modifier = {
+            factor = 0.2
+            not = { literacy = 0.35 }
+        }
+    }
     modifier = {
         factor = -5
         OR = {
@@ -459,7 +473,7 @@ colonialmigration_chance =
 
     group = {
         modifier = {
-            factor = 0.3
+            factor = 0.2
             unemployment = 0.1
         }
 
@@ -470,19 +484,19 @@ colonialmigration_chance =
         }
 
         modifier = {
-            factor = 0.3
+            factor = 0.4
             location = { controlled_by = owner }
             unemployment = 0.3
         }
 
         modifier = {
-            factor = 0.4
+            factor = 0.5
             location = { controlled_by = owner }
             unemployment = 0.4
         }
 
         modifier = {
-            factor = 0.5
+            factor = 0.6
             location = { controlled_by = owner }
             unemployment = 0.5
         }

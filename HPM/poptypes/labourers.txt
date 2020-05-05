@@ -154,51 +154,167 @@ country_migration_target = {
 migration_target = {
     factor = 0.01
 
+	###Pops avoid provinces with high general unemployment###
     modifier = {
         factor = 0.1
         unemployment = 0.1
         state_scope = { has_factories = no }
     }
+	
+	modifier = {
+        factor = 0.05
+        unemployment = 0.4
+    }
+	
+	modifier = {
+        factor = 0.5
+        OR = {
+			unemployment_by_type = { type = farmers value =  0.05 }
+			unemployment_by_type = { type = labourers value =  0.05 }
+		}
+    }
+	
+	modifier = {
+        factor = 0.8
+		OR = {
+			unemployment_by_type = { type = farmers value = 0.02 }
+			unemployment_by_type = { type = labourers value =  0.05 }
+		}
+    }
+	
+	###Pops avoid colonial provinces that are *very* full###
+	modifier = {
+        factor = 0.8
+        total_pops = 500000
+		is_colonial = yes
+    }
+	
+	modifier = {
+        factor = 0.8
+        total_pops = 1000000
+		is_colonial = yes
+    }
+	
+	###Pops prefer colonial provinces that are empty###
+	modifier = {
+        factor = 1.2
+		is_colonial = yes
+		NOT = {
+			total_pops = 100000
+			unemployment_by_type = { type = farmers value = 0.05 }
+			unemployment_by_type = { type = labourers value = 0.05 }
+		}
+    }
+	
+	modifier = {
+        factor = 1.2
+		is_colonial = yes
+		NOT = {
+			total_pops = 40000
+			unemployment_by_type = { type = farmers value = 0.05 }
+			unemployment_by_type = { type = labourers value = 0.05 }
+		}
+    }
+	
+	###Pops prefer empty, new world colonial provinces###
+	modifier = {
+        factor = 1.6
+		is_colonial = yes
+		OR = {
+			continent = australia_new_zealand
+			continent = north_america
+			continent = south_america
+		}
+		NOT = {
+			total_pops = 50000
+			unemployment_by_type = { type = farmers value = 0.05 }
+			unemployment_by_type = { type = labourers value = 0.05 }
+		}
+    }
+	
+	modifier = {
+        factor = 1.2
+		is_colonial = yes
+		OR = {
+			continent = australia_new_zealand
+			continent = north_america
+			continent = south_america
+		}
+		total_pops = 50000
+		NOT = {
+			unemployment_by_type = { type = farmers value = 0.05 }
+			unemployment_by_type = { type = labourers value = 0.05 }
+		}
+    }
+	###End of colonial section###
+	
+	###Pop prefers empty non-colonial provinces with more people###
     modifier = {
         factor = 1.2
         total_pops = 150000
+		is_colonial = no
+		NOT = {
+			unemployment_by_type = { type = farmers value = 0.05 }
+			unemployment_by_type = { type = labourers value = 0.05 }
+		}
     }
+	
     modifier = {
         factor = 1.2
         total_pops = 250000
+		is_colonial = no
+		NOT = {
+			unemployment_by_type = { type = farmers value = 0.04 }
+			unemployment_by_type = { type = labourers value = 0.04 }
+		}
     }
     modifier = {
         factor = 1.2
         total_pops = 500000
+		is_colonial = no
+		NOT = {
+			unemployment_by_type = { type = farmers value = 0.03 }
+			unemployment_by_type = { type = labourers value = 0.03 }
+		}
     }
     modifier = {
         factor = 1.2
         total_pops = 750000
+		is_colonial = no
+		NOT = {
+			unemployment_by_type = { type = farmers value = 0.02 }
+			unemployment_by_type = { type = labourers value = 0.02 }
+		}
     }
 
     modifier = {
         factor = 0
-        is_overseas = yes
-        country = { border_policy = closed_borders }
-    }
-
-    modifier = {
-        factor = 0
-        NOT = { state_scope = {    work_available = { worker = craftsmen } } }
+        NOT = { state_scope = { work_available = { worker = craftsmen } } }
         can_build_factory = no
         OR = {
             unemployment_by_type = { type = farmers value = 0.03  }
             unemployment_by_type = { type = labourers value = 0.03  }
         }
     }
+	
+	###Start of random rules ###
+	###Pop will not move overseas when borders are closed###
+	modifier = {
+        factor = 0
+        is_overseas = yes
+        country = { border_policy = closed_borders }
+    }
+	###Pop prefers provinces where their culture is present###
     modifier = {
         factor = 1.2
         has_pop_culture = THIS
     }
+	###Pop prefers provinces with a cultural core###
     modifier = {
-           factor = 0.25
-           has_culture_core = no
+        factor = 0.25
+        has_culture_core = no
     }
+	###Pop will *greatly* prefers provinces and states with a majority of their culture if they have factories###
     modifier = {
         factor = 2
         OR = {
@@ -213,33 +329,40 @@ migration_target = {
             work_available = { worker = craftsmen }
         }
     }
+	###Pop prefers provinces where their religion is a majority?###
     modifier = {
         factor = 1.2
         # Audax Validator "." Ignore_NEXT
         has_pop_religion = THIS
     }
+	###Pop prefers provinces where their culture is the primary culture of a core###
     modifier = {
         factor = 1.5
         any_core = { is_primary_culture = THIS }
     }
-
+	###Pop avoid slave states###
     modifier = {
         factor = 0.75
         state_scope = { is_slave = yes }
     }
+	###Pop prefers state capitals###
     modifier = {
         factor = 2
         is_state_capital = yes
     }
+	###Pop prefers the national capital###
     modifier = {
         factor = 1.5
         is_capital = yes
     }
+	###Pop prefers provinces adjacent to water###
     modifier = {
         factor = 1.05
         is_coastal = yes
     }
-
+	###End of random rules###
+	
+	###Pops terrain preferences###
     modifier = {
         factor = 0.8
         terrain = steppe
@@ -256,13 +379,19 @@ migration_target = {
     }
 
     modifier = {
-        factor = 0.6
-        terrain = jungle
+        factor = 0.4
+		OR = {
+			terrain = jungle
+			terrain = new_world_jungle
+		}
     }
 
     modifier = {
         factor = 0.6
-        terrain = mountain
+		OR = {
+			terrain = mountain
+			terrain = new_world_mountain
+		}
     }
 
     modifier = {
@@ -271,23 +400,32 @@ migration_target = {
     }
 
     modifier = {
-        factor = 0.6
+        factor = 0.5
         terrain = marsh
     }
 
     modifier = {
         factor = 0.5
-        terrain = semidesert
+		OR = {
+			terrain = semidesert
+			terrain = new_world_semidesert
+		}
     }
 
     modifier = {
         factor = 0.5
-        terrain = boreal
+		OR = {
+			terrain = boreal
+			terrain = new_world_boreal
+		}
     }
 
     modifier = {
         factor = 0.1
-        terrain = small_island
+		OR = {
+			terrain = small_island
+			terrain = new_world_small_island
+		}
     }
 
     modifier = {
@@ -297,7 +435,10 @@ migration_target = {
 
     modifier = {
         factor = 0.05
-        terrain = desert
+		OR = {
+			terrain = desert
+			terrain = new_world_desert
+		}
     }
 
     modifier = {
@@ -308,18 +449,28 @@ migration_target = {
 
     modifier = {
         factor = 0.05
-        terrain = arctic
+		OR = {
+			terrain = arctic
+			terrain = new_world_arctic
+		}
     }
 
     modifier = {
         factor = 0.05
-        terrain = montane_tundra
+		OR = {
+			terrain = montane_tundra
+			terrain = new_world_montane_tundra
+		}
     }
-
+	###End of pops terrain preferences###
+	
+	###Pop in a country that has no colonies but has colonial transportation will instead move to inhospitable provinces###
     modifier = {
         factor = 1.05
-        NOT = { country = { any_owned_province = { is_colonial = yes } } }
-        country = { penal_system = colonial_transportation }
+        country = {
+			colonial_nation = no
+			penal_system = colonial_transportation 
+		}
         OR = {
             trade_goods = coal
             trade_goods = sulphur
@@ -339,6 +490,7 @@ migration_target = {
             terrain = coral_island
         }
     }
+	###Pop prefers high LR provinces###
     modifier = {
         factor = 2
         life_rating = 40

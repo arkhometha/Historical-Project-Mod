@@ -1,6 +1,7 @@
 Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;Portuguese;Russian;Finnish;
-AND_TRIGGER_STARTS;§RAll of the below§W;;;;;;;;;;;;;
-OR;§Ror§W;;;;;;;;;;;;;
+AND_TRIGGER_STARTS;§f All of the below§W;;;;;;;;;;;;;
+OR;§m or§W;;;;;;;;;;;;;
+OR_TRIGGER_STARTS;§V One of the following must be true§W;;;;;;;;;;;;;
 partisan_rebels;Partisans;;;;;;;;;;;;;
 partisan_rebels_title;Partisans;;;;;;;;;;;;;
 partisan_rebels_name;$COUNTRY_ADJ$ Partisans;;;;;;;;;;;;;
