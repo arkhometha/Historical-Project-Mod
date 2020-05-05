@@ -196,7 +196,9 @@ consumer_goods = {
         color = { 27 19 7 }
     }
     opium = {
-        cost = 3.2
+        cost = 3
+		tradeable = no
+        money = yes
         color = { 114 162 47 }
     }
     automobiles = {

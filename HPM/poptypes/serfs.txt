@@ -30,7 +30,7 @@ everyday_needs = {
     liquor = 2
     regular_clothes = 1.2
     furniture = 1.1
-    opium = 10
+    #opium = 10
     fertilizer = 0.5 #0
     explosives = 0.25
 }
@@ -48,7 +48,8 @@ luxury_needs = {
     automobiles = 0.5
     radio = 1.0
     fuel = 0.1
-    opium = 2
+	small_arms = 1
+    #opium = 2
 }
 
 
