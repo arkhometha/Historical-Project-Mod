@@ -11,18 +11,18 @@ travel_to_europe = {
 
         allow = {
             money = 30000
-                }
+        }
 
         effect = {
             treasury = -25000
             prestige = 2
-            years_of_research = 1
+            years_of_research = 0.5
             relation = {
                 who = ENG
                 value = 50
-                    }
+            }
             set_country_flag = travel_to_europe
-                }
+        }
 
         ai_will_do = { factor = 1 }
 
@@ -110,7 +110,7 @@ establish_the_dar_al_funun = {
             has_country_modifier = amir_kabir
         }
         effect = {
-            years_of_research = 0.5
+            years_of_research = 0.1
             any_pop = { consciousness = 1 }
             set_country_flag = dar_al_funun_built
             add_country_modifier = {
@@ -162,7 +162,6 @@ revoke_kurdish_autonomy = {
 
         effect = {
             set_country_flag = kurdish_states_integrated
-            prestige = 5
             any_country = {
                 limit = {
                     vassal_of = THIS
@@ -202,8 +201,8 @@ establish_the_majles = {
 
     effect = {
         set_country_flag = majles_established
-        prestige = 5
-        plurality = 10
+        prestige = 2
+        plurality = 5
         any_pop = { consciousness = 1 }
         clr_country_flag = per_backed_down
     }

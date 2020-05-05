@@ -450,7 +450,7 @@ province_event = {
                 year = 1880
                 OR = {
                     province_id = 1354
-                    province_id = 1364
+                    province_id = 1365
                     province_id = 1367
                     province_id = 1382
                     province_id = 1384
@@ -468,11 +468,11 @@ province_event = {
                     #province_id = 1850
                     province_id = 1890 #Gbarnga Liberia
                     #province_id = 1891 #Zwedru Liberia
-                    #province_id = 1923 #Lagos - Nigeria
+                    province_id = 1938 #Bussa - Nigeria
                     province_id = 1321
                     #province_id = 1398
                     #province_id = 1421
-                    province_id = 1985
+                    #province_id = 1985
                     #province_id = 1406
                     province_id = 1318
                     province_id = 2057
@@ -486,7 +486,7 @@ province_event = {
             AND = {
                 year = 1890
                 OR = {
-                    #province_id = 1926 #Ife - Nigeria
+                    province_id = 1927 #Ilorin
                     #province_id = 1929 #
                     #province_id = 1931 #Warri - Nigeria
                     #province_id = 1932 #Bonny - Nigeria
@@ -494,6 +494,12 @@ province_event = {
                     province_id = 1986
                     #province_id = 1988
                     #province_id = 1989
+					province_id = 1970
+					province_id = 1992
+					province_id = 1980
+					province_id = 1962
+					province_id = 1883
+					province_id = 1899
                     province_id = 1996
                     province_id = 2192
                     province_id = 2317
@@ -510,7 +516,10 @@ province_event = {
                 }
             }
         }
-        not = { trade_goods = rubber }
+        NOT = {
+			trade_goods = rubber
+			trade_goods = coal
+		}
 
         owner = {
             war = no

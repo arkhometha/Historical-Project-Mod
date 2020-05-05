@@ -125,11 +125,11 @@ country_event = {
         any_pop    = {
             consciousness = -0.50
             militancy = -0.50
-            }
+        }
         add_country_modifier = {
             name = "silver_age"
             duration = -1
-            }
+        }
         set_country_flag = silver_age
         }
 
@@ -240,7 +240,7 @@ country_event = {
             owner = { political_reform = closed_borders }
         }
         treasury = -50000
-        prestige_factor = -0.5
+        prestige_factor = -0.33
         any_country = {
             limit = { is_greater_power = yes }
             diplomatic_influence = { who = THIS value = -200 }
@@ -297,7 +297,7 @@ country_event = {
             owner = { political_reform = closed_borders }
         }
         treasury = -50000
-        prestige_factor = -0.5
+        prestige_factor = -0.33
         any_country = {
             limit = { is_greater_power = yes }
             diplomatic_influence = { who = THIS value = -200 }
@@ -383,7 +383,7 @@ country_event = {
             owner = { political_reform = closed_borders }
         }
         treasury = -50000
-        prestige_factor = -0.6
+        prestige_factor = -0.4
         any_country = {
             limit = { is_greater_power = yes }
             diplomatic_influence = { who = THIS value = -200 }
@@ -560,7 +560,7 @@ country_event = {
 
     option = {
         name = "EVT100019OPTA"
-        prestige_factor = -0.25
+        prestige_factor = -0.15
         1204 = { secede_province = FROM remove_core = THIS }
         random_owned = { limit = { province_id = 686 } secede_province = FROM remove_core = THIS }
         relation = { who = FROM value = 100 }
@@ -615,12 +615,11 @@ country_event = {
         owns = 1135
     }
 
-    mean_time_to_happen = { days = 365 }
+    mean_time_to_happen = { months = 12 }
     fire_only_once = yes
 
     option = {
         name = "EVT110043OPTA" #Tehran has served us well.
-        prestige = 5
         capital = 1121
         1121 = {
             any_pop = {
@@ -632,7 +631,6 @@ country_event = {
 
     option = {
         name = "EVT110043OPTB" #Qom, the religious capital of our faith.
-        prestige = 5
         capital = 1125
         1125 = {
             any_pop = {
@@ -644,7 +642,6 @@ country_event = {
 
     option = {
         name = "EVT110043OPTC" #Tabriz, its wealth will assure prosperity.
-        prestige = 5
         capital = 1108
         1108 = {
             any_pop = {
@@ -656,7 +653,6 @@ country_event = {
 
     option = {
         name = "EVT110043OPTD" #Isfahan, our population center.
-        prestige = 5
         capital = 1127
         1127 = {
             any_pop = {
@@ -668,7 +664,6 @@ country_event = {
 
     option = {
         name = "EVT110043OPTE" #Shiraz, the cultural heart of our nation.
-        prestige = 5
         capital = 1135
         1135 = {
             any_pop = {
@@ -701,7 +696,7 @@ country_event = {
     option = {
         name = "EVT110085OPTA" #The Shah demands his head.
         remove_country_modifier = amir_kabir
-        prestige = 5
+        prestige = 2
         PER = {
             relation = {
                 who = ENG
@@ -790,7 +785,7 @@ country_event = {
     option = {
         name = "EVT110086OPTA" #We mourn his loss.
         remove_country_modifier = amir_kabir
-        prestige = -5
+        prestige = -3
         any_pop = {
             scaled_militancy = {
                 ideology = liberal

@@ -442,7 +442,7 @@ acquire_core_state = {
         #NOT = { any_owned_province = { is_capital = yes } }
         OR = {
             THIS = { ai = no }
-			owner = { war_with = THIS }
+			any_owned_province = { owner = { war_with = THIS } }
             AND = {
                 THIS = { total_amount_of_ships = 5 }
                 any_owned_province = { port = yes }
@@ -2132,6 +2132,10 @@ liberate_country = {
     can_use = {
         OR = {
             NOT = { has_country_modifier = war_focus }
+			AND = {
+				THIS = { involved_in_crisis = yes }
+				FROM = { involved_in_crisis = yes }
+			}
             THIS = {
                 NOT = {
                     has_country_flag = exclusive_acquire_all_cores_CB
@@ -2148,6 +2152,7 @@ liberate_country = {
         number_of_states = 2
         OR = {
             war_with = THIS
+			THIS = { involved_in_crisis = yes }
             THIS = {
                 NOT = { has_country_modifier = neutrality_modifier }
                 military_score = 1
@@ -2219,6 +2224,10 @@ liberate_country = {
             }
         }
         OR = {
+			AND = {
+                THIS = { ai = yes }
+                war_countries = { any_owned_province = { is_core = FROM } }
+            }
             AND = {
                 THIS = { ai = no }
                 any_owned_province = { is_core = FROM }
@@ -4015,8 +4024,9 @@ acquire_state = {
     allowed_states_in_crisis = {
         NOT = { any_owned_province = { is_capital = yes } }
         any_owned_province = {
-            any_neighbor_province = {
-                owner = { tag = THIS }
+            OR = {
+                port = yes
+                any_neighbor_province = { owner = { tag = THIS } }
             }
         }
     }

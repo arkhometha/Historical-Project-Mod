@@ -323,7 +323,7 @@ earthquake_devastation = {
 
 #MM Modifiers
 amir_kabir = {
-    research_points_modifier = 0.2
+    research_points_modifier = 0.1
     global_pop_militancy_modifier = 0.01
     suppression_points_modifier = -0.5
     icon = 17
@@ -1879,7 +1879,7 @@ trade_unions_promised = {
 #}
 
 dar_al_funun = {
-    research_points_modifier = 0.2
+    research_points_modifier = 0.1
     icon = 5
 }
 

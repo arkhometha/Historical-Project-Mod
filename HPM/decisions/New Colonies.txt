@@ -6253,6 +6253,14 @@ political_decisions = {
                     remove_core = JAL
                 }
             }
+			
+			random_owned = {
+				limit = {
+					province_id = 1878
+					NOT = { life_rating = 30 }
+				}
+				life_rating = 20
+			}
 
             GBU = {
                 set_country_flag = post_colonial_country

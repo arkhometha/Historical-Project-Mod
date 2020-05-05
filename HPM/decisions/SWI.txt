@@ -8,7 +8,10 @@ political_decisions = {
             exists = yes
             NEH = {
                 exists = yes
-                vassal_of = SWI
+				OR = {
+					vassal_of = SWI
+					is_vassal = no
+				}
             }
             OR = {
                 has_country_flag = neuchatel_crisis_escalated

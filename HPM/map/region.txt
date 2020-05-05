@@ -239,13 +239,13 @@ FRA_467 = { 467 468 469 470 471 } #Provence
 
 SPA_474 = { 474 476 } #Galicia
 
-SPA_477 = { 477 479 480 481 482 483 475 478 } #León-Castilla
+SPA_477 = { 477 479 480 481 475 478 494} #León-Castilla
 
-SPA_484 = { 484 485 486 } #Extremadura
+SPA_484 = { 484 485 486 482 483 } #Extremadura
 
-SPA_487 = { 487 488 489 490 491 } #Castilla la Nueva
+SPA_487 = { 487 488 489 490 491 497 } #Castilla la Nueva
 
-SPA_492 = { 492 493 494 495 496 497 } #Vasconia-Aragón
+SPA_492 = { 492 493 495 496 } #Vasconia-Aragón
 
 SPA_498 = { 498 499 500 501 502 } #Catalonia
 
