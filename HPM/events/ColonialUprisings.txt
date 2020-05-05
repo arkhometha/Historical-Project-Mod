@@ -936,6 +936,7 @@ province_event = {
     trigger = {
         is_colonial = yes
         average_militancy = 4
+		NOT = { has_province_modifier = colonial_mismanagement }
     }
 
     mean_time_to_happen = {
@@ -949,46 +950,33 @@ province_event = {
             average_consciousness = 5
         }
         modifier = {
-            factor = 0.9
-            owner = { mass_politics = 1 }
-        }
-        modifier = {
             factor = 1.5
             NOT = { average_consciousness = 5 }
         }
-        modifier = {
-            factor = 1.1
-            owner = { num_of_cities = 10 }
-        }
-        modifier = {
-            factor = 1.1
-            owner = { num_of_cities = 15 }
-        }
-        modifier = {
-            factor = 1.1
-            owner = { num_of_cities = 20 }
-        }
-        modifier = {
-            factor = 1.1
-            owner = { num_of_cities = 25 }
-        }
-        modifier = {
-            factor = 1.1
-            owner = { num_of_cities = 30 }
-        }
-        modifier = {
-            factor = 1.1
-            owner = { num_of_cities = 35 }
-        }
-        modifier = {
-            factor = 1.1
-            owner = { num_of_cities = 40 }
-        }
+       modifier = {
+			factor = 0.9
+			NOT = {
+				administration_spending = 0.3
+			}
+		}
+		modifier = {
+			factor = 0.8
+			NOT = {
+				administration_spending = 0.2
+			}
+		}
+		modifier = {
+			factor = 1.5
+			administration_spending = 0.4
+		}
     }
 
     option = {
         name = "EVTOPTA14620"
         state_scope = {
+			any_owned = {
+				add_province_modifier = { name = colonial_mismanagement duration = 1095 }
+			}
             any_pop = {
                 limit = { militancy = 4 }
                 militancy = -1
@@ -996,19 +984,20 @@ province_event = {
             }
             any_pop = {
                 limit = {
+					militancy = 4
                     OR = {
                         type = bureaucrats
                         type = clergymen
                         type = officers
                     }
                 }
-                reduce_pop = 0.5
+                reduce_pop = 0.95
             }
             any_pop = {
                 limit = {
                     type = soldiers
                 }
-                reduce_pop = 0.95
+                reduce_pop = 0.98
             }
         }
     }
@@ -1016,25 +1005,29 @@ province_event = {
     option = {
         name = "EVTOPTB14620"
         state_scope = {
+			any_owned = {
+				add_province_modifier = { name = colonial_mismanagement duration = 1825 }
+			}
             any_pop = {
                 limit = { militancy = 4 }
                 militancy = -3
             }
             any_pop = {
                 limit = {
+					militancy = 4
                     OR = {
                         type = bureaucrats
                         type = clergymen
                         type = officers
                     }
                 }
-                reduce_pop = 0.25
+                reduce_pop = 0.9
             }
             any_pop = {
                 limit = {
                     type = soldiers
                 }
-                reduce_pop = 0.9
+                reduce_pop = 0.94
             }
         }
     }
