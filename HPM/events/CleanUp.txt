@@ -4926,8 +4926,6 @@ province_event = {
     title = "EVTNAME6016828"
     desc = "EVTDESC6016828"
 
-    is_triggered_only = yes
-
     trigger = {
         year = 1880
 		trade_goods = precious_metal
