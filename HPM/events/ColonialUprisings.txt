@@ -956,18 +956,18 @@ province_event = {
        modifier = {
 			factor = 0.9
 			NOT = {
-				administration_spending = 0.3
+				owner = { administration_spending = 0.3 }
 			}
 		}
 		modifier = {
 			factor = 0.8
 			NOT = {
-				administration_spending = 0.2
+				owner = { administration_spending = 0.2 }
 			}
 		}
 		modifier = {
 			factor = 1.5
-			administration_spending = 0.4
+			owner = { administration_spending = 0.4 }
 		}
     }
 
