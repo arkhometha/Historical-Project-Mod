@@ -1644,6 +1644,7 @@ province_event = {
             AND = {
                 year = 1900
                 OR = {
+					province_id = 491      #Ciudad Real  - Spain - https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20191101091046822-0455:S0020859019000567:S0020859019000567_fig1g.gif?pub-status=live
                     province_id = 2334      #Punta Arenas
                     province_id = 2332      #Osorno
                     province_id = 1408    #Padang (Ombilin)
@@ -6488,6 +6489,8 @@ province_event = {
                     province_id = 1541
                     province_id = 1507 #Zhenyuan - China
                     province_id = 1503 #Guilin
+					province_id = 1549 #Jiujiang
+					province_id = 1545 #Nanchang
                 }
             }
 

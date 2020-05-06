@@ -4919,3 +4919,34 @@ country_event = {
 		}
     }
 }
+
+#Exhausted mines
+province_event = {
+    id = 6016828
+    title = "EVTNAME6016828"
+    desc = "EVTDESC66016828"
+
+    is_triggered_only = yes
+
+    trigger = {
+        year = 1880
+		trade_goods = precious_metal
+		OR = {
+			province_id = 2179
+			province_id = 2156
+		}
+    }
+	
+	mean_time_to_happen = { months = 24 }
+
+    option = {
+        name = "EVT6016828OPTA"
+        remove_province_modifier = silver_mine
+		remove_province_modifier = local_nitroglycerin_and_machine_tools
+		remove_province_modifier = local_conveyors_and_excavators
+		random_list = {
+			33 = { trade_goods = coffee }
+			34 = { trade_goods = timber }
+		}
+    }
+}

@@ -583,7 +583,7 @@ political_reforms = {
         }
     }
 
-        debt_law = {
+    debt_law = {
         next_step_only = yes
         serfdom = {
             education_efficiency_modifier = -0.15
@@ -1110,7 +1110,7 @@ economic_reforms = {
         }
     }
     finance_reform = {
-        next_step_only = yes
+        #next_step_only = yes
         no_finance_reform = {
             max_loan_modifier = -1.0 # no loan 4 u
             core_pop_militancy_modifier = -0.005
@@ -1173,7 +1173,7 @@ economic_reforms = {
     }
 
     monetary_reform = {
-        next_step_only = yes
+        #next_step_only = yes
         no_monetary_reform = {
         }
         yes_monetary_reform = {
@@ -1762,7 +1762,7 @@ military_reforms = {
             civilization_progress_modifier = 0.1
 
             allow = {
-                any_owned_province = { has_building = naval_base }
+                any_owned_province = { port = yes }
                 OR = {
                     ai = no
                     AND = {

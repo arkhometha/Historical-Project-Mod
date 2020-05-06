@@ -1,7 +1,7 @@
 political_decisions = {
     accademia_della_crusca = {
         potential = {
-               tag = TUS
+            tag = TUS
             NOT = { has_country_flag = accademia_della_crusca }
         }
 
@@ -12,7 +12,7 @@ political_decisions = {
         }
 
         effect = {
-               treasury = -80000
+            treasury = -80000
             prestige = 15
             political_reform = free_press
             set_country_flag = accademia_della_crusca
@@ -399,7 +399,7 @@ political_decisions = {
             political_reform = censored_press
             political_reform = yes_meeting
             social_reform = incarceration
-            prestige = 5
+            prestige = 20
             set_country_flag = get_your_statuto_albertino_here
         }
 
@@ -534,7 +534,7 @@ political_decisions = {
         effect = {
             set_country_flag = law_of_guarantees
             capital = 749
-            prestige = 5
+            prestige = 10
             badboy = -2
             any_owned = {
                 limit = {
@@ -1095,6 +1095,7 @@ political_decisions = {
         }
 
         effect = {
+			prestige = 10
             add_accepted_culture = south_italian
             SRD = {
                 all_core = {
@@ -1251,7 +1252,7 @@ political_decisions = {
 
         effect = {
             treasury = -10000
-            prestige = 20
+            prestige = 40
             any_pop = { militancy = -1 }
             set_country_flag = vittoriano_built
             random_list = {
@@ -1429,6 +1430,7 @@ political_decisions = {
         }
 
         effect = {
+			prestige = 20
             set_country_flag = camillo_cavour_appointed
             add_country_modifier = { name = camillo_cavour duration = 3650 }
 

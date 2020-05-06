@@ -1,4 +1,7 @@
 Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;Portuguese;Russian;Finnish;
+EVTNAME6016828;Mines Close in $PROVINCENAME$;;;;;;;;;;;;;
+EVTDESC6016828;Several mines in $PROVINCENAME$ were closed in $YEAR$ due to a variety of factors: dropping local commodity prices, exhaustion of veils and poor quality of the remaining ones. The mines are not economical anymore, leading to the workfoce and local production shifting away from mineral activity.;;;;;;;;;;;;;
+EVT6016828OPTA;Life goes on.;;;;;;;;;;;;;
 EVTNAME60071;Constitutional Setback;;;;;;;;;;;;;
 EVTDESC60071;Recent developments in $CAPITAL$ saw the $COUNTRY_ADJ$ monarch seize more power and greatly increase his clout in the inner workings of the $COUNTRY_ADJ$ government.;;;;;;;;;;;;;
 EVTOPTA60071;May the monarch's guiding hand bring us fortune.;;;;;;;;;;;;;
@@ -1410,8 +1413,6 @@ EVTNAME3697011;The $YEAR$ Sikkim Incident;;;;;;;;;;;;;
 EVTDESC3697011; In $YEAR$, two $COUNTRY_ADJ$ physicians, one being in charge of relations between the $COUNTRY_ADJ$ and Sikkimese governments, ventured into the mountains of Sikkim unannounced and unauthorized. The doctors were detained by the Sikkimese government, and now high ranking officials are demanding that we outfit a punitive expedition to punish the Sikkimese government.;;;;;;;;;;;;;
 EVT3697011OPTA;Outfit a punitive expedition.;;;;;;;;;;;;;
 EVT3697011OPTB;Bide our time.;;;;;;;;;;;;;
-EVTNAME90958;The Gold Mines in $PROVINCENAME$;;;;;;;;;;;;;
-EVTDESC90958;We worked our gold mines in $PROVINCENAME$ to exhaustion and now the workers can't find any more veils. Slowly, the mines were abandoned and the workers settled as farmers. ;;;;;;;;;;;;;
 EVTOPTA90958;More food to the people.;;;;;;;;;;;;;
 EVTNAME971204;The Padri War;;;;;;;;;;;;;
 EVTDESC971204;The Padri War (also called the Minangkabau War) was fought from 1803 until $YEAR$ in West Sumatra, Indonesia between the so-called Padris, Muslim clerics from Sumatra who, inspired by Wahhabism and after returning from Hajj, wanted to impose sharia in Minangkabau country in West Sumatra, Indonesia, and the Minangkabau nobility and traditional chiefs. The latter asked for the help of the Dutch, who intervened from 1821 and helped the nobility defeat the Padri faction. The Masang Treaty is now being signed and with the victory, the Dutch government tightened their hold on West Sumatra.;;;;;;;;;;;;;

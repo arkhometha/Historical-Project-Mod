@@ -6821,7 +6821,10 @@ establish_protectorate_casus_belli = {
 
             AND = {
                 NOT = { total_pops = 2000000 }
-                THIS = { machine_guns = 1 }
+				OR = {
+					THIS = { machine_guns = 1 }
+					THIS = { total_pops = 3000000 }
+				}
                 OR = {
                     capital_scope = { is_overseas = no }
                     THIS = {
@@ -6836,10 +6839,13 @@ establish_protectorate_casus_belli = {
             }
             AND = {
                 NOT = { total_pops = 3000000 }
-                THIS = {
-                    bolt_action_rifles = 1
-                    army_risk_management = 1
-                }
+				OR = {
+					THIS = {
+						bolt_action_rifles = 1
+						army_risk_management = 1
+					}
+					THIS = { total_pops = 5000000 }
+				}
                 OR = {
                     capital_scope = { is_overseas = no }
                     THIS = {
@@ -6854,10 +6860,13 @@ establish_protectorate_casus_belli = {
             }
             AND = {
                 total_pops = 3000000
-                THIS = {
-                    modern_divisional_structure = 1
-                    army_nco_training = 1
-                }
+				OR = {
+					THIS = {
+						modern_divisional_structure = 1
+						army_nco_training = 1
+					}
+					THIS = { total_pops = 6000000 }
+				}
             }
         } ###End of Non-African Restrictions
 
@@ -6994,7 +7003,10 @@ establish_protectorate_NI_casus_belli = {
 
             AND = {
                 NOT = { total_pops = 2000000 }
-                THIS = { machine_guns = 1 }
+                OR = {
+					THIS = { machine_guns = 1 }
+					THIS = { total_pops = 3000000 }
+				}
                 OR = {
                     capital_scope = { is_overseas = no }
                     THIS = {
@@ -7009,10 +7021,13 @@ establish_protectorate_NI_casus_belli = {
             }
             AND = {
                 NOT = { total_pops = 3000000 }
-                THIS = {
-                    bolt_action_rifles = 1
-                    army_risk_management = 1
-                }
+               OR = {
+					THIS = {
+						bolt_action_rifles = 1
+						army_risk_management = 1
+					}
+					THIS = { total_pops = 5000000 }
+				}
                 OR = {
                     capital_scope = { is_overseas = no }
                     THIS = {
@@ -7027,10 +7042,13 @@ establish_protectorate_NI_casus_belli = {
             }
             AND = {
                 total_pops = 3000000
-                THIS = {
-                    modern_divisional_structure = 1
-                    army_nco_training = 1
-                }
+                OR = {
+					THIS = {
+						modern_divisional_structure = 1
+						army_nco_training = 1
+					}
+					THIS = { total_pops = 6000000 }
+				}
             }
         } ###End of Non-African Restrictions
     }
@@ -7168,7 +7186,10 @@ establish_protectorate_BC_casus_belli = {
 
             AND = {
                 NOT = { total_pops = 2000000 }
-                THIS = { machine_guns = 1 }
+                OR = {
+					THIS = { machine_guns = 1 }
+					THIS = { total_pops = 3000000 }
+				}
                 OR = {
                     capital_scope = { is_overseas = no }
                     THIS = {
@@ -7183,10 +7204,13 @@ establish_protectorate_BC_casus_belli = {
             }
             AND = {
                 NOT = { total_pops = 3000000 }
-                THIS = {
-                    bolt_action_rifles = 1
-                    army_risk_management = 1
-                }
+                OR = {
+					THIS = {
+						bolt_action_rifles = 1
+						army_risk_management = 1
+					}
+					THIS = { total_pops = 5000000 }
+				}
                 OR = {
                     capital_scope = { is_overseas = no }
                     THIS = {
@@ -7201,10 +7225,13 @@ establish_protectorate_BC_casus_belli = {
             }
             AND = {
                 total_pops = 3000000
-                THIS = {
-                    modern_divisional_structure = 1
-                    army_nco_training = 1
-                }
+                OR = {
+					THIS = {
+						modern_divisional_structure = 1
+						army_nco_training = 1
+					}
+					THIS = { total_pops = 6000000 }
+				}
             }
         } ###End of Non-African Restrictions
     }
