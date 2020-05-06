@@ -809,7 +809,7 @@ early_transplanters = {
         }
         modifier = {
             factor = 2
-            synthethic_polymers = 1
+            synthetic_polymers = 1
         }
     }
     effect = {
@@ -838,7 +838,7 @@ early_harvesters = {
         }
         modifier = {
             factor = 2
-            synthethic_polymers = 1
+            synthetic_polymers = 1
         }
     }
     effect = {
