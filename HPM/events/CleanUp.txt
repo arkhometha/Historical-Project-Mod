@@ -4924,7 +4924,7 @@ country_event = {
 province_event = {
     id = 6016828
     title = "EVTNAME6016828"
-    desc = "EVTDESC66016828"
+    desc = "EVTDESC6016828"
 
     is_triggered_only = yes
 
