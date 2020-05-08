@@ -62,15 +62,9 @@
 * General tweaks for the economy.
 * Add an event to flip the Mexican silver mines, as the dropping price of the metal made it not a significant part of the Mexican in the turn of the 20th century.
 
-* Changed how opium works
+***
 
--increase the ammount of accumulabe RP so Ai isnt stuck trying to pick university
-
-Install Communism/Fascism/Democracy CB rebelance
-
-
-
-
+## V0.4.6.3
 * Minor reshape in Burma. Minor flips to state borders to help the AI.
 * Fix for New Zealand not having a socialist party until late in the game.
 * Fixed to Welsh Liberal party early end date. From https://github.com/arkhometha/Historical-Project-Mod/pull/97 by @Libeccio-DD 
@@ -104,12 +98,11 @@ Install Communism/Fascism/Democracy CB rebelance
 * Fix for the social/political movements icons by @Libeccio-DD - https://github.com/arkhometha/Historical-Project-Mod/pull/121
 * Work on normalizing line endings by @moretrim https://github.com/arkhometha/Historical-Project-Mod/pull/99 - may need a review since the last round of script-made standardization to the files.
 * Made sure the event that informs the player they have the Imperialism CB fires correctly for the Ottomans/Russia.
+* cleaning up localization files by @thiagodesacosta https://github.com/arkhometha/Historical-Project-Mod/pull/103
 
+***
 
-and cleaning up localization files by @thiagodesacosta https://github.com/arkhometha/Historical-Project-Mod/pull/103
-
-
-0.4.6.2
+## 0.4.6.2
 * Separated Finnish and Sami from Scandinavian culture group and Ugric from the East Slavic and joined them in the Finno-Ugric culture group. Adapted the Russian decision to integrate Finland to include Scandinavia as one of the potential countries that can integrate Finland. Closes https://github.com/arkhometha/Historical-Project-Mod/issues/87
 * Small localization fixes.
 * Slight increased the effects of the Dissolving the upper house decisions.
@@ -129,19 +122,18 @@ and cleaning up localization files by @thiagodesacosta https://github.com/arkhom
 * Reworked the "Greater Germany" event chain so it adds cores (for Germany) to Austria proper only. This is done to fix weirdness in regards to core distribution, but at some point I'd like to rework the whole chain and Austria's starting cores to be more consistent.
 * Fixed country release distribution if Austria is absorbed, to ensure more majors are released instead of a bunch of minors. Also fixed the cores that A-H gets, the ones that Hungary loses and the ones Austria gains when it flips from A-H back to Austria so it's all consistent across the board. Previously Austria would gain cores when flipping from A-H.
 
+***
 
->> Canada suggestions here >>279093365
->>279093646 Arkansas and West Virginia should always be CSA cores to avoid weird claims like this
-
-0.4.6.1
+##0.4.6.1
 * Made the canal-costs more visible in the decisions descriptions, updated values.
 * When forming the Arab union, if Oman has cores in Zanzibar then the Zanzibari cores shouldn't be added as cores for the Arab union.
 * Added a few more conditions for Greece to use the Megali idea: If they are a SP and A) are in a great war against the Ottomans or B) the Ottomans are not a GP, not allied to a GP and not in a sphere, their capital is in Ankara (meaning they were kicked out of Europe except Thrace) and the Russians are not a GP either. These changes try to simulate the conditions where the project either historically happened or could plausibly happen - when Greece has so much influence it stops mattering or when Russia and the Ottomans are neutralized and the straits question becomes irrelevant.
 * Removed a test change that could cause negative social spending. Closes https://github.com/arkhometha/Historical-Project-Mod/issues/38
 * Small changes to the map in the coast of Ghana to help the AI.
 
+***
 
-0.4.6 RC
+## 0.4.6 RC
 * Fix for warship commission messing with naval base levels
 * Added a missing vassal transfer event for the new CB.
 * Fixed a few NNM Korean events that could still happen if one of the countries was a puppet.
@@ -167,8 +159,9 @@ and cleaning up localization files by @thiagodesacosta https://github.com/arkhom
 * Added the debt system to the Exploration events (North and South pole, Source of the Nile). Mainly to a void the AI bankrupting itself, which it still did. Increased monetary cost of events so taking it isn't always the no-brainer it was. Improved AI logic for picking up options so they put up more competition to the player in these events.
 * Made the southern-german minor states allied to each other and to Austria. Saxony is the exception, but they will start allied to Austria.
 
-0.4.6 Beta 1 and 2
+***
 
+## 0.4.6 Beta 1 and 2
 __Old patch
 * Fixed the "Become Japan" decision not existing for the Tokugawa because of a misplaced flag.
 * The Shogunate shouldn't be able to take the Ansei Purge decision after uniting Japan.
