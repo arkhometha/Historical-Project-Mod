@@ -1,5 +1,7 @@
 ### Changelog:
 
+# Latest - In-Development
+
 * Fixed Unciv decision to request missionaries not showing up without a naval base.
 * Made the renaming of South Africa states in decisions, so the states can be renamed even if the events do not fire.
 * Fixes for LUN/LUA core removals in Congo.
@@ -124,7 +126,7 @@
 
 ***
 
-##0.4.6.1
+## 0.4.6.1
 * Made the canal-costs more visible in the decisions descriptions, updated values.
 * When forming the Arab union, if Oman has cores in Zanzibar then the Zanzibari cores shouldn't be added as cores for the Arab union.
 * Added a few more conditions for Greece to use the Megali idea: If they are a SP and A) are in a great war against the Ottomans or B) the Ottomans are not a GP, not allied to a GP and not in a sphere, their capital is in Ankara (meaning they were kicked out of Europe except Thrace) and the Russians are not a GP either. These changes try to simulate the conditions where the project either historically happened or could plausibly happen - when Greece has so much influence it stops mattering or when Russia and the Ottomans are neutralized and the straits question becomes irrelevant.
