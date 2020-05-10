@@ -54,8 +54,8 @@ govt_flag = {
     flag = theocracy
 }
 
-
 foreign_weapons = yes_foreign_weapons
+admin_reform = yes_admin_reform
 flintlock_rifles = 1
 
 

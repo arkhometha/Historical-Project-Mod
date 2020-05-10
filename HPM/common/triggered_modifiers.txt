@@ -251,7 +251,6 @@ substate_nation = {
     trigger = {
         exists = yes
         is_substate = yes
-        civilized = yes
         ai = yes
     }
 
@@ -260,7 +259,6 @@ substate_nation = {
     min_tax = 0.25
     max_military_spending = -0.25
     min_tariff = 1.2
-    tax_efficiency = 0.3
 
     icon = 10
 }
@@ -283,18 +281,15 @@ substate_nation_player = {
 
 chinese_substate = {
     trigger = {
-        OR = {
-            substate_of = QNG
-            vassal_of = QNG
-        }
-        civilized = no
         exists = yes
-        QNG = {    government = absolute_monarchy }
-        is_culture_group = east_asian
+        is_substate = yes
+		civilized = no
+		is_culture_group = east_asian
     }
+
+    research_points_modifier = -0.91
+
     icon = 10
-    research_points_modifier = -0.2
-    global_pop_consciousness_modifier = 0.02
 }
 
 own_kiel_canal = {
@@ -368,7 +363,7 @@ small_but_efficient = {
     }
 
     icon = 9
-    tax_efficiency = 0.5
+    tax_efficiency = 0.1
     administrative_efficiency_modifier = 0.4
     tariff_efficiency_modifier = 0.4
     supply_consumption = -0.95
@@ -487,8 +482,8 @@ ryotwari = {
         is_vassal = yes
     }
 
-    tax_efficiency = 0.25
-    administrative_efficiency_modifier = 0.25
+    tax_efficiency = 0.2
+	tariff_efficiency_modifier = 0.1
     icon = 16
 }
 

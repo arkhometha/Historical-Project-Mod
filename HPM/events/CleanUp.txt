@@ -2085,6 +2085,10 @@ country_event = {
             NOT = { tag = BAN }
             sphere_owner = { neighbour = THIS }
         }
+		OR = {
+            NOT = { tag = UBD }
+            sphere_owner = { neighbour = THIS }
+        }
         OR = {
             NOT = { tag = NEN }
             has_country_flag = usstatehood_we_have_applied
@@ -2099,7 +2103,7 @@ country_event = {
             tag = FSA
             tag = UIL
             tag = UNB
-            tag = UBD
+			tag = VRP
             tag = INO
             tag = IRE
         }

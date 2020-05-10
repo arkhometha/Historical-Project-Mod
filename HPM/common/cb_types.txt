@@ -1011,6 +1011,12 @@ unification_casus_belli = {
                 any_core = {
                     this_culture_union = this_union
                     is_cultural_union = yes
+					NOT = {
+					    tag = SIE
+					    tag = BAN
+					    tag = UBD
+					    tag = VRP
+				   }
                 }
             }
             NOT = { any_owned_province = { is_capital = yes } }
@@ -1025,7 +1031,12 @@ unification_casus_belli = {
             any_core = {
                 this_culture_union = this_union
                 is_cultural_union = yes
-                NOT = { tag = SIE }
+                NOT = {
+					tag = SIE
+					tag = BAN
+					tag = UBD
+					tag = VRP
+				}
             }
         }
         NOT = { any_owned_province = { is_capital = yes } }
@@ -1145,6 +1156,12 @@ unification_annex_casus_belli = {
             any_core = {
                 this_culture_union = this_union
                 is_cultural_union = yes
+				NOT = {
+				    tag = SIE
+				    tag = BAN
+				    tag = UBD
+				    tag = VRP
+				}
             }
         }
         OR = {
@@ -1544,7 +1561,15 @@ unification_release_puppet_cb = {
     allowed_countries = {
         is_our_vassal = FROM
         FROM = { is_culture_group = THIS is_substate = no }
-        FROM = { NOT = { has_country_flag = unreleasable_country } }
+        FROM = {
+			NOT = {
+				is_substate = yes
+				has_country_flag = unreleasable_country
+				tag = SIE
+				tag = BAN
+				tag = VRP
+			}
+		}
     }
 
     po_release_puppet = yes
@@ -1597,7 +1622,13 @@ unification_add_to_sphere = {
         culture_has_union_tag = yes
         is_culture_group = THIS
         cultural_union = { exists = no }
-        NOT = { has_country_modifier = neutrality_modifier }
+        NOT = {
+			has_country_modifier = neutrality_modifier
+			tag = SIE
+			tag = BAN
+			tag = UBD
+			tag = VRP
+		}
         THIS = {
             ai = yes
             is_greater_power = yes
@@ -4436,6 +4467,7 @@ demand_concession_casus_belli = {
                     THIS = {
                         ai = yes
                         oil_driven_ships = 1
+						modern_naval_doctrine = 1
                     }
                 }
             }
@@ -4444,6 +4476,18 @@ demand_concession_casus_belli = {
                 THIS = {
                     modern_divisional_structure = 1
                     army_nco_training = 1
+                }
+				OR = {
+                    any_owned_province = { is_overseas = no }
+                    THIS = {
+                        ai = no
+                        naval_integration = 1
+                    }
+                    THIS = {
+                        ai = yes
+                        invention = modern_battleships
+						modern_naval_doctrine = 1
+                    }
                 }
             }
         } ###End of Non-African Restrictions
@@ -4638,6 +4682,7 @@ demand_concession_NI_casus_belli = {
                     THIS = {
                         ai = yes
                         oil_driven_ships = 1
+						modern_naval_doctrine = 1
                     }
                 }
             }
@@ -4646,6 +4691,18 @@ demand_concession_NI_casus_belli = {
                 THIS = {
                     modern_divisional_structure = 1
                     army_nco_training = 1
+                }
+				OR = {
+                    any_owned_province = { is_overseas = no }
+                    THIS = {
+                        ai = no
+                        naval_integration = 1
+                    }
+                    THIS = {
+                        ai = yes
+                        invention = modern_battleships
+						modern_naval_doctrine = 1
+                    }
                 }
             }
         } ###End of Non-African Restrictions
@@ -4834,6 +4891,7 @@ demand_concession_BC_casus_belli = {
                     THIS = {
                         ai = yes
                         oil_driven_ships = 1
+						modern_naval_doctrine = 1
                     }
                 }
             }
@@ -4842,6 +4900,18 @@ demand_concession_BC_casus_belli = {
                 THIS = {
                     modern_divisional_structure = 1
                     army_nco_training = 1
+                }
+				OR = {
+                    any_owned_province = { is_overseas = no }
+                    THIS = {
+                        ai = no
+                        naval_integration = 1
+                    }
+                    THIS = {
+                        ai = yes
+                        invention = modern_battleships
+						modern_naval_doctrine = 1
+                    }
                 }
             }
         } ###End of Non-African Restrictions

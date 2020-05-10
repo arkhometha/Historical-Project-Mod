@@ -987,7 +987,7 @@ social_reforms = {
             education_efficiency_modifier = -0.1
             factory_throughput = 0.1
             artisan_throughput = 0.1
-            RGO_throughput = 0.25
+            RGO_throughput = 0.2
             allow = {
                 NOT = { has_country_flag = government_busy_with_something }
             }
@@ -1061,6 +1061,17 @@ economic_reforms = {
 
             on_execute = {
                 effect = {
+					random_owned = {
+					owner = {
+						any_country = {
+							limit = {
+								exists = yes
+								vassal_of = THIS
+							}
+							economic_reform = yes_land_reform
+						}
+					}
+					}
                     any_pop = {
                         scaled_militancy = {
                             ideology = liberal

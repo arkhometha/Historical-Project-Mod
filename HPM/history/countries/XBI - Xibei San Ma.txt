@@ -50,6 +50,7 @@ govt_flag = {
 
 set_country_flag = sunni_country
 foreign_weapons = yes_foreign_weapons
+admin_reform = yes_admin_reform
 
 # Technologies
 flintlock_rifles = 1

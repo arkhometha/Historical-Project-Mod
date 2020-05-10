@@ -1,3 +1,10 @@
+
+* Change how opium works
+-Install Communism/Fascism/Democracy CB rebalance
+>> Canada suggestions here >>279093365
+>>279093646 Arkansas and West Virginia should always be CSA cores to avoid weird claims like this
+* Add initial decision to brazil explaining end of regency
+
 ### Changelog:
 
 # Latest - In-Development
@@ -63,6 +70,13 @@
 * Fixed a bug that potentially made unciv AI stuck trying to pick a reform.
 * General tweaks for the economy.
 * Add an event to flip the Mexican silver mines, as the dropping price of the metal made it not a significant part of the Mexican in the turn of the 20th century.
+* Made sure tags such as BAN, UBD and VRP do not normally join their union tags as they are not supposed to.
+* Added a decision to found the Panama canal company, to make it easier for AI countries to build the Canal.
+* The decision to annex Korea for Japan is now repeatable for the AI.
+* The Swiss banking decision now provides less tax efficiency to avoid the Swiss starving their own pops. To compensate that, the decision flips the three banking capitals - Geneva, Zurich and Lugano to Precious Goods. A few other provinces flip to Iron to compensate the loss of Zurich.
+* Few modifiers tweaks. 
+* Merged North and South Zhejiang in a single state.
+* Added a decision for democratic countries to, every 10 years, improve their relations with their neighbours (as long as there are no core problems) and other democratic countries. The decision will also reduce infamy. Part of the "government differentation" effort. Based on https://en.wikipedia.org/wiki/Democratic_peace_theory
 
 ***
 

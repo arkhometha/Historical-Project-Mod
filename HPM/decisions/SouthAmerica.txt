@@ -1,4 +1,5 @@
 political_decisions = {
+
     fatherland_volunteers = {
         potential = {
             tag = BRZ

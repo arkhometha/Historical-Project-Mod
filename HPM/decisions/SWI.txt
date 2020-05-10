@@ -324,6 +324,11 @@ political_decisions = {
         effect = {
             add_country_modifier = { name = land_of_opportunity duration = 730 }
             add_country_modifier = { name = swiss_banking duration = -1 }
+			2568 = { trade_goods = precious_goods }
+			607 = { trade_goods = precious_goods }
+			603 = { trade_goods = precious_goods }
+			604 = { trade_goods = iron }
+			606 = { trade_goods = iron }
         }
         ai_will_do = { factor = 1 }
     }

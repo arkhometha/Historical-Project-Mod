@@ -1655,4 +1655,633 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
+	
+	substate_adopt_tech = {
+        picture = form_china
+        potential = {
+			civilized = no
+           OR = {
+				tag = QNG
+				tag = CHI
+				tag = TPG
+			}
+			any_neighbor_country = { 
+				civilized = no
+				substate_of = THIS
+				OR = {
+					###Military Reforms
+					AND = {
+						overlord = { foreign_training = yes_foreign_training }
+						NOT = { foreign_training = yes_foreign_training }
+					}
+					AND = {
+						overlord = { foreign_weapons = yes_foreign_weapons }
+						NOT = { foreign_weapons = yes_foreign_weapons }
+					}
+					AND = {
+						overlord = { military_constructions = yes_military_constructions }
+						NOT = { military_constructions = yes_military_constructions }
+					}
+					AND = {
+						overlord = { foreign_officers = yes_foreign_officers }
+						NOT = { foreign_officers = yes_foreign_officers }
+					}
+					AND = {
+						overlord = { army_schools = yes_army_schools }
+						NOT = { army_schools = yes_army_schools }
+					}
+					AND = {
+						overlord = { foreign_naval_officers = yes_foreign_naval_officers }
+						NOT = { foreign_naval_officers = yes_foreign_naval_officers }
+					}
+					AND = {
+						overlord = { naval_schools = yes_naval_schools }
+						NOT = { naval_schools = yes_naval_schools }
+					}
+					AND = {
+						overlord = { foreign_navies = yes_foreign_navies }
+						NOT = { foreign_navies = yes_foreign_navies }
+					}
+					AND = {
+						overlord = { western_shipyards = yes_western_shipyards }
+						NOT = { western_shipyards = yes_western_shipyards }
+					}
+					AND = {
+						overlord = { foreign_artillery = yes_foreign_artillery }
+						NOT = { foreign_artillery = yes_foreign_artillery }
+					}
+					###Economical Reforms
+					AND = {
+						overlord = { industrial_construction = yes_industrial_construction }
+						NOT = { industrial_construction = yes_industrial_construction }
+					}
+					AND = {
+						overlord = { pre_indust = yes_pre_indust }
+						NOT = { pre_indust = yes_pre_indust }
+					}
+					AND = {
+						overlord = { firearms_production = yes_firearms_production }
+						NOT = { firearms_production = yes_firearms_production }
+					}
+					AND = {
+						overlord = { transport_improv = yes_transport_improv }
+						NOT = { transport_improv = yes_transport_improv }
+					}
+					AND = {
+						overlord = { research_reform = yes_research_reform }
+						NOT = { research_reform = yes_research_reform }
+					}
+					AND = {
+						overlord = { education_reform = yes_education_reform }
+						NOT = { education_reform = yes_education_reform }
+					}
+					AND = {
+						overlord = { monetary_reform = monetary_reform_two }
+						NOT = { monetary_reform = monetary_reform_two }
+					}
+					AND = {
+						overlord = { monetary_reform = yes_monetary_reform }
+						NOT = { monetary_reform = yes_monetary_reform }
+					}
+					AND = {
+						overlord = { finance_reform = finance_reform_two }
+						NOT = { finance_reform = finance_reform_two }
+					}
+					AND = {
+						overlord = { finance_reform = yes_finance_reform }
+						NOT = { finance_reform = yes_finance_reform }
+					}
+					AND = {
+						overlord = { admin_reform = yes_admin_reform }
+						NOT = { admin_reform = yes_admin_reform }
+					}
+					AND = {
+						overlord = { land_reform = yes_land_reform }
+						NOT = { land_reform = yes_land_reform }
+					}
+				}
+			}
+        }
+
+        allow = {
+			NOT = { civilization_progress = 0.75 }
+        }
+
+        effect = {
+			random_owned = {
+				limit = {
+					owner = {
+						land_reform = yes_land_reform
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { land_reform = yes_land_reform }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { land_reform = yes_land_reform }
+						}
+						economic_reform = yes_land_reform
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						admin_reform = yes_admin_reform
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { admin_reform = yes_admin_reform }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { admin_reform = yes_admin_reform }
+						}
+						economic_reform = yes_admin_reform
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						finance_reform = yes_finance_reform
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { finance_reform = yes_finance_reform }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { finance_reform = yes_finance_reform }
+						}
+						economic_reform = yes_finance_reform
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						finance_reform = finance_reform_two
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { finance_reform = finance_reform_two }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { finance_reform = finance_reform_two }
+						}
+						economic_reform = finance_reform_two
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						monetary_reform = yes_monetary_reform
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { monetary_reform = yes_monetary_reform }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { monetary_reform = yes_monetary_reform }
+						}
+						economic_reform = yes_monetary_reform
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						monetary_reform = monetary_reform_two
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { monetary_reform = monetary_reform_two }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { monetary_reform = monetary_reform_two }
+						}
+						economic_reform = monetary_reform_two
+						activate_technology = no_standard
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						education_reform = yes_education_reform
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { education_reform = yes_education_reform }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { education_reform = yes_education_reform }
+						}
+						economic_reform = yes_education_reform
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						research_reform = yes_research_reform
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { research_reform = yes_research_reform }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { research_reform = yes_research_reform }
+						}
+						economic_reform = yes_research_reform
+						activate_technology = late_enlightenment_philosophy
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						transport_improv = yes_transport_improv
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { transport_improv = yes_transport_improv }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { transport_improv = yes_transport_improv }
+						}
+						economic_reform = yes_transport_improv
+						set_country_flag = activate_experimental_railroad
+						activate_technology = experimental_railroad
+
+						build_railway_in_capital = {
+							in_whole_capital_state = yes # no = just in main capital province.
+							limit_to_world_greatest_level = yes
+						}
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						firearms_production = yes_firearms_production
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { firearms_production = yes_firearms_production }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { firearms_production = yes_firearms_production }
+						}
+						economic_reform = yes_firearms_production
+						activate_technology = guild_based_production
+						build_factory_in_capital_state = small_arms_factory
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						pre_indust = yes_pre_indust
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { pre_indust = yes_pre_indust }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { pre_indust = yes_pre_indust }
+						}
+						economic_reform = yes_pre_indust
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						industrial_construction = yes_industrial_construction
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { industrial_construction = yes_industrial_construction }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { industrial_construction = yes_industrial_construction }
+						}
+						economic_reform = yes_industrial_construction
+						activate_technology = piston_steam_engine
+						build_factory_in_capital_state = fabric_factory
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						foreign_artillery = yes_foreign_artillery
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { foreign_artillery = yes_foreign_artillery }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { foreign_artillery = yes_foreign_artillery }
+						}
+						military_reform = yes_foreign_artillery
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						western_shipyards = yes_western_shipyards
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { western_shipyards = yes_western_shipyards }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { western_shipyards = yes_western_shipyards }
+						}
+						military_reform = yes_western_shipyards
+						activate_technology = post_nelsonian_thought
+						set_country_flag = using_foreign_shipyards
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						foreign_navies = yes_foreign_navies
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { foreign_navies = yes_foreign_navies }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { foreign_navies = yes_foreign_navies }
+						}
+						military_reform = yes_foreign_navies
+						activate_technology = clipper_design
+						activate_technology = steamers
+						set_country_flag = using_foreign_ships
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						naval_schools = yes_naval_schools
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { naval_schools = yes_naval_schools }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { naval_schools = yes_naval_schools }
+						}
+						military_reform = yes_naval_schools
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						foreign_naval_officers = yes_foreign_naval_officers
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { foreign_naval_officers = yes_foreign_naval_officers }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { foreign_naval_officers = yes_foreign_naval_officers }
+						}
+						military_reform = yes_foreign_naval_officers
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						army_schools = yes_army_schools
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { army_schools = yes_army_schools }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { army_schools = yes_army_schools }
+						}
+						military_reform = yes_army_schools
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						foreign_officers = yes_foreign_officers
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { foreign_officers = yes_foreign_officers }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { foreign_officers = yes_foreign_officers }
+						}
+						military_reform = yes_foreign_officers
+						activate_technology = military_staff_system
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						military_constructions = yes_military_constructions
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { military_constructions = yes_military_constructions }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { military_constructions = yes_military_constructions }
+						}
+						military_reform = yes_military_constructions
+						activate_technology = post_napoleonic_thought
+						build_fort_in_capital = {
+							in_whole_capital_state = no # no = just in main capital province.
+							limit_to_world_greatest_level = yes
+						}
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						foreign_weapons = yes_foreign_weapons
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { foreign_weapons = yes_foreign_weapons }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { foreign_weapons = yes_foreign_weapons }
+						}
+						military_reform = yes_foreign_weapons
+						activate_technology = flintlock_rifles
+						set_country_flag = using_foreign_weapons
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						foreign_training = yes_foreign_training
+						any_neighbor_country = { 
+							civilized = no
+							substate_of = THIS
+							NOT = { foreign_training = yes_foreign_training }
+						}
+					}
+				}
+				owner = {
+					any_country = {
+						limit = {
+							substate_of = THIS
+							NOT = { foreign_training = yes_foreign_training }
+						}
+						military_reform = yes_foreign_training
+						activate_technology = bronze_muzzle_loaded_artillery
+						set_country_flag = using_foreign_artillery
+					}
+				}
+			}
+			
+        }
+
+        ai_will_do = { factor = 1 }
+	}
 }

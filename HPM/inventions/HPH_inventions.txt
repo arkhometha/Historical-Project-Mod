@@ -715,7 +715,7 @@ shrinkage_stoping = {
         }
     }
     effect = {
-        rgo_goods_output = { coal = 0.6 }
+        rgo_goods_output = { coal = 0.8 }
     }
 }
 
@@ -794,7 +794,7 @@ hydraulic_excavator = {
     }
     effect = {
         rgo_goods_output = { iron = 0.6 }
-        rgo_goods_output = { coal = 0.6 }
+        rgo_goods_output = { coal = 0.8 }
     }
 }
 

@@ -281,4 +281,85 @@ political_decisions = {
             }
         }
     }
+	
+	democratic_peace = {
+		picture = democratic_peace
+        potential = {
+			exists = yes
+			OR = {
+				vote_franschise = universal_weighted_voting
+				vote_franschise = universal_voting
+				AND = {
+					government = democracy
+					vote_franschise = wealth_voting
+				}
+			}
+			OR = {
+				political_parties = non_secret_ballots
+				political_parties = secret_ballots
+				AND = {
+					government = democracy
+					political_parties = gerrymandering
+				}
+			}
+        }
+		
+        allow = {
+			state_n_government = 1
+			public_meetings = yes_meeting
+			any_neighbor_country = {
+				NOT = {
+					any_core = { owned_by = THIS }
+					any_owned_province = { is_core = THIS }
+				}
+				OR = {
+					government = hms_government
+					government = democracy
+				}
+			}
+			NOT = {
+				war = yes
+				upper_house_composition = party_appointed
+				badboy = 0.5
+				has_country_modifier = democratic_peace_summit
+			}
+        }
+		
+        effect = {
+			add_country_modifier = { name = democratic_peace_summit duration = 3650 }
+            any_neighbor_country = {
+				limit = {
+					exists = yes
+					NOT = {
+						any_core = { owned_by = THIS }
+						any_owned_province = { is_core = THIS }
+					}
+					OR = {
+						government = hms_government
+						government = democracy
+					}
+				}
+		       relation = { who = THIS value = 50 }
+			}
+			any_country = {
+				limit = {
+					exists = yes
+					NOT = {
+						any_core = { owned_by = THIS }
+						any_owned_province = { is_core = THIS }
+					}
+					OR = {
+						government = hms_government
+						government = democracy
+					}
+				}
+		       relation = { who = THIS value = 25 }
+			}
+        }
+		
+		ai_will_do = {
+            factor = 1
+        }
+    }
+	
 }

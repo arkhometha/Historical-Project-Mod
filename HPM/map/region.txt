@@ -769,7 +769,7 @@ CHI_1477 = { 1477 1474 1476 1472 1478 } #North Anhui
 
 CHI_1479 = { 1479 1481 1554 1555 }  #Fengtian - South Manchuria
 
-CHI_1552 = { 1552 1002 1553 1533 1480 } #Heilongjiang - North Manchuria
+CHI_1552 = { 1552 1002 1553 1533 } #Heilongjiang - North Manchuria
 
 CHI_1482 = { 1482 1483 1484 1486 1487 } #Fujian
 
@@ -779,9 +779,9 @@ CHI_1490 = { 1490 1489 1491 1492 } #Gansu
 
 CHI_1493 = { 1493 1496 1498 1494 1497 1500 } #East Canton
 
-CHI_1499 = { 1495 1501 2632 } #West Canton
+CHI_1499 = { 1495 1501 2632 1499 } #West Canton
 
-CHI_1504 = { 1502 1503 1504 1499 } #Guangxi
+CHI_1504 = { 1502 1503 1504 } #Guangxi
 
 CHI_1505 = { 1505 1506 1507 } #Guizhou
 
@@ -827,13 +827,13 @@ CHI_1600 = { 1600 1595 1596 1599 } #Urumqui
 
 CHI_1601 = { 1601 1602 1603 } #Yunnan
 
-CHI_1604 = { 1604 1605 1606 1608 1609 } #North Zhejiang
+CHI_1604 = { 1604 1605 1606 1608 1609 1610 1607 1611 } #North Zhejiang
 
-CHI_1610 = { 1610 1607 1611 } #South Zhejiang
+#CHI_1610 = { 1610 1607 1611 } #South Zhejiang
 
 CHI_1612 = { 1612 1614 1615 1618 } #Baoding
 
-CHI_1616 = { 1616 1613 1617 } #Peking
+CHI_1616 = { 1616 1613 1617 1480 } #Peking
 
 
 ### Japan & Korea

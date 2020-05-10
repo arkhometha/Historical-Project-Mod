@@ -494,7 +494,7 @@ country_event = {
         CHL_2332 = { add_core = CHL }
         relation = {
             who = FROM
-            value = 200
+            value = 400
         }
         any_owned = {
             limit = {
@@ -530,24 +530,14 @@ country_event = {
             }
         }
         ai_chance = {
-            factor = 90
+            factor = 95
             modifier = {
-                factor = 0.8
+                factor = 0.9
                 war_policy = jingoism
             }
             modifier = {
-                factor = 0.8
-                NOT = { relation = { who = FROM value = 0 } }
-            }
-            modifier = {
-                factor = 0.8
-                FROM = {
-                    any_owned_province = { is_core = CHL }
-                }
-            }
-            modifier = {
-                factor = 0.8
-                any_owned_province = { is_core = FROM }
+                factor = 0.9
+                NOT = { relation = { who = FROM value = -50 } }
             }
         }
     }
@@ -583,7 +573,7 @@ country_event = {
             value = -50
         }
         ai_chance = {
-            factor = 10
+            factor = 5
         }
     }
 }

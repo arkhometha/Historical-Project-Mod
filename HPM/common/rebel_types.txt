@@ -1653,6 +1653,26 @@ pan_nationalist_rebels = {
             factor = 0
             country = { tag = DNB }
         }
+		modifier = {
+            factor = 0
+            country = { tag = UBD }
+			NOT = { cultural_union = {  neighbour = THIS } }
+        }
+		modifier = {
+            factor = 0
+            country = { tag = BAN }
+			NOT = { cultural_union = {  neighbour = THIS } }
+        }
+		modifier = {
+            factor = 0
+            country = { tag = VRP }
+			NOT = { cultural_union = {  neighbour = THIS } }
+        }
+		modifier = {
+            factor = 0
+            country = { tag = SIE }
+			NOT = { cultural_union = {  neighbour = THIS } }
+        }
         modifier = {
             factor = 0
             country = { tag = CSA }

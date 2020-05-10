@@ -865,7 +865,7 @@ drilling_and_blasting = {
     cost = 14400
 
     rgo_goods_output = {
-        iron = 0.5
+        iron = 0.4
     }
     rgo_goods_output = {
         coal = 0.5
@@ -972,7 +972,7 @@ advanced_metallurgy = {
         iron = 0.4
     }
     rgo_goods_output = {
-        coal = 0.4
+        coal = 0.5
     }
     rgo_goods_output = {
         sulphur = 0.2
@@ -1072,7 +1072,7 @@ electric_furnace = {
         iron = 0.4
     }
     rgo_goods_output = {
-        coal = 0.4
+        coal = 0.5
     }
 
     ai_chance = {

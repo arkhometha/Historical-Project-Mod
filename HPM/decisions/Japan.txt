@@ -644,10 +644,15 @@ political_decisions = {
                 tag = JAP
                 tag = TKG
             }
-            has_country_modifier = fukoku_kyohei
-            is_greater_power = yes
-            NOT = { has_country_flag = annexed_korea }
             exists = KOR
+			OR = {
+				has_country_modifier = fukoku_kyohei
+				any_owned_province = { is_core = KOR }
+			}
+			OR = {
+			    NOT = { has_country_flag = annexed_korea }
+				ai = yes
+			}
         }
 
         allow = {
@@ -680,19 +685,11 @@ political_decisions = {
                 limit = {
                     tag = KOR
                     ai = yes
-                    civilized = no
-                }
-                annex_to = THIS
-            }
-
-            random_country = {
-                limit = {
-                    tag = KOR
-                    ai = yes
                     civilized = yes
                 }
                 civilized = no
                 annex_to = THIS
+				civilized = yes
             }
 
             random_country = {

@@ -721,7 +721,6 @@ country_event = {
 
     trigger = {
         war = no
-        NOT = { tag = UBD }
         has_country_flag = crown_from_the_gutter
         is_culture_group = germanic
         is_greater_power = yes
@@ -742,6 +741,8 @@ country_event = {
             }
         }
         NOT = { exists = GER }
+		is_substate = no
+		is_vassal = no
     }
 
     mean_time_to_happen = {
@@ -843,6 +844,7 @@ country_event = {
                 NOT = { tag = PRU }
                 NOT = { tag = UBD }
                 NOT = { tag = BAN }
+				NOT = { tag = VRP }
                 NOT = { has_country_flag = post_colonial_country }
                 OR = {
                     all_core = { owned_by = THIS }
@@ -894,6 +896,8 @@ country_event = {
                     tag = AUS
                     tag = DNB
                     tag = UBD
+					tag = VRP
+					tag = BAN
                 }
                 NOT = { has_country_flag = post_colonial_country }
             }
@@ -965,9 +969,12 @@ country_event = {
         primary_culture = north_german
         war = no
         is_vassal = no
+		is_substate = no
         NOT = {
             exists = GER
             exists = NGF
+			tag = UBD
+			tag = VRP
             has_country_flag = refused_NGF_idea
         }
         OR = {
@@ -1082,6 +1089,7 @@ country_event = {
                 NOT = { tag = THIS }
                 NOT = { tag = UBD }
                 NOT = { tag = BAN }
+				NOT = { tag = VRP }
             }
             country_event = 11106
         }

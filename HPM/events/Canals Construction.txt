@@ -889,7 +889,7 @@ country_event = {
     }
 }
 
-#The Suez Canal Company
+#The Suez/Panama Canal Company
 country_event = {
     id = 36981
     title = "EVTNAME36981"
@@ -900,8 +900,21 @@ country_event = {
 
     option = {
         name = "EVT36981OPTA"
-        treasury = 100000
-        relation = { who = FROM value = 100 }
+		random_owned = {
+			limit = {
+			    province_id = 1723
+			    owner = { has_global_flag = panama_canal_company_founded }
+			}
+	        treasury = 1000000
+		}
+		random_owned = {
+			limit = {
+			    province_id = 1755
+			    owner = { has_global_flag = suez_canal_company_founded }
+			}
+	        treasury = 100000
+		}
+        relation = { who = FROM value = 200 }
         FROM = { diplomatic_influence = { who = THIS value = 400 } }
         any_country = {
             limit = { NOT = { tag = FROM } is_greater_power = yes }
