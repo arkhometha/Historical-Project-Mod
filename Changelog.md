@@ -1,9 +1,10 @@
 
 * Change how opium works
+
 -Install Communism/Fascism/Democracy CB rebalance
 >> Canada suggestions here >>279093365
 >>279093646 Arkansas and West Virginia should always be CSA cores to avoid weird claims like this
-* Add initial decision to brazil explaining end of regency
+* Add initial event to brazil explaining end of regency
 
 ### Changelog:
 
@@ -77,6 +78,7 @@
 * Few modifiers tweaks. 
 * Merged North and South Zhejiang in a single state.
 * Added a decision for democratic countries to, every 10 years, improve their relations with their neighbours (as long as there are no core problems) and other democratic countries. The decision will also reduce infamy. Part of the "government differentation" effort. Based on https://en.wikipedia.org/wiki/Democratic_peace_theory
+* Changed how substates pick unciv reforms for Qing. Now they do not gain RP to pick reforms, everytime Qing picks a new reform the country can take a decision to give the same reform to their substates.
 
 ***
 
