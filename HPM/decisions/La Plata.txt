@@ -41,11 +41,13 @@ political_decisions = {
     picture = our_brothers_the_gauchos
         potential = {
             OR = {
-                tag = ARG
+				AND = {
+					tag = ARG
+					has_country_flag = banda_oriental_is_ours
+				}
                 tag = LPL
             }
             NOT = { has_country_flag = rio_grande_del_sur_is_ours }
-            has_country_flag = banda_oriental_is_ours
         }
 
         allow = {
