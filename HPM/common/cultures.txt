@@ -293,6 +293,13 @@ british = {
 
         last_names = { Smith Brown Wilson Robertson Thomson Campbell Stewart Anderson Scott Murray MacDonald Reid Taylor Clark Ross Young Mitchell Watson Paterson Morrison Sanders    }
     }
+	welsh = {
+		color = { 0 100 40 }
+		radicalism = 5
+		primary = WHA
+		first_names  = { Arthur Arwel Blegywryd Bryn Cecil Cynan Dafydd Dylan Derec Emlyn Emrys Emyr Gareth Gethin Gruffydd Gwaiddan Gwilym Gwydion Huw Hywel Iwan Ieuan Iori Lloyd Lynn Llywelyn Madoc Meredith Morys Owain Rhodri Rhydderch Rhys Sion Sonnagh Steffan Teulyddog Trefor Tristan Tudur Wynne }
+		last_names = { Baughan Beddow Cadwallader Cardiff Cecil Conway Dewey Evan Faughn Floyd Gittings Glasscock Gower Griffynn Gwynn Havard Hywel Keelan Llewellyn Merrick Morgan Owen Powys Prowell Rees Scurlock Tew Wathen Wynn Yale }
+	}
 
 }
 
