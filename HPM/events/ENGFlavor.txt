@@ -3368,7 +3368,7 @@ country_event  = {
 	id = 315006
 	title = "EVTNAME315006"
 	desc = "EVTDESC315006"
-	#picture = ""
+	picture = "cardiff"
 	
 	trigger = {
 		tag = WHA
