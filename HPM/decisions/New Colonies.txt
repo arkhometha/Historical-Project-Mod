@@ -1,6 +1,5 @@
 political_decisions = {
 
-
     found_niger_company = {
         picture = royal_niger_company
         potential = {
@@ -7087,4 +7086,70 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+	
+	annex_mayotte = {
+        picture = royal_niger_company
+        potential = {
+            OR = {
+				owns = 2125
+				owns = 2126
+				owns = 2115
+			}
+			OR = {
+				is_greater_power = yes
+				AND = {
+					owns = 2115
+					rank = 16
+				}
+			}
+			2124 = { empty = yes }
+        }
+
+        allow = {
+            war = no
+			is_disarmed = no
+			state_n_government = 1
+			money = 10000
+        }
+
+        effect = {
+            prestige = 3
+            treasury = -10000
+			2124 = {
+				secede_province = THIS
+				life_rating = 20
+				change_province_name = "Mayotte"
+			}
+        }
+    }
+	
+	protectorate_over_comoros = {
+        picture = royal_niger_company
+        potential = {
+            owns = 2124
+			2123 = { empty = yes }
+        }
+
+        allow = {
+            war = no
+			is_disarmed = no
+			nationalism_n_imperialism = 1
+			has_global_flag = berlin_conference
+			money = 10000
+        }
+
+        effect = {
+            prestige = 3
+            treasury = -10000
+			2123 = {
+				secede_province = THIS
+				life_rating = 20
+				change_province_name = "Comoros"
+				trade_goods = coffee
+			}
+			2124 = { trade_goods = coffee }
+        }
+    }
+
+	
 }

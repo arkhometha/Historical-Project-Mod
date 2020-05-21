@@ -2063,7 +2063,7 @@ political_decisions = {
             135 = { change_province_name = "Lubbock" }
             92 = { change_province_name = "Coeur D'Alene" }
             93 = { change_province_name = "Pocatello" }
-            111 = { change_province_name = "Rock Springs" }
+            111 = { change_province_name = "Jackson Hole" }
             130 = { change_province_name = "Tahlequah" }
             114 = { change_province_name = "Missoula" }
             115 = { change_province_name = "Great Falls" }

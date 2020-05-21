@@ -514,18 +514,67 @@ army = {
         type = infantry
         home = 293
     }
+	
+	regiment = {
+        name= "3.1st Division"
+        type = infantry
+        home = 277
+    }
+	
+	regiment = {
+        name= "4.1st Division"
+        type = infantry
+        home = 285
+    }
+	
+	regiment = {
+        name= "5.1st Division"
+        type = infantry
+        home = 303
+    }
 
     regiment = {
-        name= "3.1st Division"
+        name= "5.1st Division"
         type = artillery
         home = 295
+    }
+	
+	regiment = {
+        name= "6.1st Division"
+        type = artillery
+        home = 290
+    }
+	
+	regiment = {
+        name= "7.1st Division"
+        type = artillery
+        home = 301
+    }
+	
+	regiment = {
+        name= "8.1st Division"
+        type = artillery
+        home = 284
     }
 
 }
 
 army = {
-    name = "2nd Division"
+    name = "2nd Corps"
     location = 288
+	
+	regiment = {
+        name= "1.2nd Cavalry Division"
+        type = hussar
+        home = 298
+    }
+	
+	regiment = {
+        name= "2.2nd Cavalry Division"
+        type = hussar
+        home = 302
+    }
+	
     regiment = {
         name= "1.2nd Division"
         type = infantry
@@ -543,13 +592,8 @@ army = {
         type = infantry
         home = 256
     }
-
-}
-
-army = {
-    name = "3rd Division"
-    location = 273
-    regiment = {
+	
+	 regiment = {
         name= "1.3rd Division"
         type = infantry
         home = 273
@@ -566,51 +610,72 @@ army = {
         type = infantry
         home = 270
     }
-
-}
-
-army = {
-    name = "4th Division"
-    location = 263
-    regiment = {
-        name= "1.4th Division"
-        type = infantry
-        home = 263
-    }
-
-    regiment = {
-        name= "2.4th Division"
-        type = infantry
-        home = 255
-    }
-
-    regiment = {
-        name= "3.4th Division"
-        type = infantry
-        home = 281
-    }
-
-}
-
-army = {
-    name = "5th Division"
-    location = 269
-    regiment = {
+	
+	regiment = {
         name= "1.5th Division"
-        type = infantry
+        type = artillery
         home = 269
     }
 
     regiment = {
         name= "2.5th Division"
-        type = infantry
+        type = artillery
         home = 271
     }
 
     regiment = {
         name= "3.5th Division"
-        type = infantry
+        type = artillery
         home = 267
+    }
+	
+	regiment = {
+        name= "4.5th Division"
+        type = artillery
+        home = 286
+    }
+
+}
+
+
+army = {
+    name = "Irish Garrison"
+    location = 263
+	
+	regiment = {
+        name= "Irish Cavalry Division"
+        type = hussar
+        home = 264
+    }
+	
+    regiment = {
+        name= "1.4th Division"
+        type = infantry
+        home = 255
+    }
+	
+	regiment = {
+        name= "2.4th Division"
+        type = infantry
+        home = 263
+    }
+	
+	regiment = {
+        name= "3.4th Division"
+        type = infantry
+        home = 281
+    }
+	
+	regiment = {
+        name= "4.4th Division"
+        type = artillery
+        home = 259
+    }
+	
+	regiment = {
+        name= "5.4th Division"
+        type = artillery
+        home = 262
     }
 
 }
@@ -769,6 +834,12 @@ army = {
         type = infantry
         home = 2087
     }
+	
+	 regiment = {
+        name= "3rd Infantry Division"
+        type = infantry
+        home = 2087
+    }
 
 }
 
@@ -851,12 +922,28 @@ army = {
         type = infantry
         home = 1317
     }
+	
+	regiment = {
+        name= "Bombay Artillery Division"
+        type = artillery
+        home = 1305
+    }
 
 }
 
 army = {
     name = "The Calcutta Army"
     location = 1256
+	regiment = {
+        name= "1st Calcutta Hussar Division"
+        type = hussar
+        home = 1255
+    }
+	regiment = {
+        name= "1st Calcutta Cavalry Division"
+        type = cavalry
+        home = 1257
+    }
     regiment = {
         name= "1.10th Division"
         type = infantry
@@ -910,12 +997,142 @@ army = {
         type = infantry
         home = 1243
     }
+	
+	 regiment = {
+        name= "4.4th Indian Division"
+        type = infantry
+        home = 1241
+    }
+	
+	regiment = {
+        name= "1st Calcutta Artillery Division"
+        type = artillery
+        home = 1252
+    }
+	
+	regiment = {
+        name= "2nd Calcutta Artillery Division"
+        type = artillery
+        home = 1251
+    }
+
+}
+
+army = {
+    name = "The Madras Army"
+    location = 1304
+    regiment = {
+        name= "1.Madras Division"
+        type = infantry
+        home = 1304
+    }
+
+    regiment = {
+        name= "2.Madras Division"
+        type = infantry
+        home = 1304
+    }
+
+    regiment = {
+        name= "3.Madras Division"
+        type = infantry
+        home = 1304
+    }
+
+    regiment = {
+        name= "4. Madras Division"
+        type = infantry
+        home = 1304
+    }
+	
+	regiment = {
+        name= "5. Madras Division"
+        type = infantry
+        home = 1307
+    }
+	
+	regiment = {
+        name= "6. Madras Division"
+        type = infantry
+        home = 1309
+    }
+	
+	regiment = {
+        name= "7. Madras Division"
+        type = infantry
+        home = 1311
+    }
+	
+	regiment = {
+        name= "8. Madras Division"
+        type = infantry
+        home = 1256
+    }
+	
+	regiment = {
+        name= "1. Madras Artillery Division"
+        type = artillery
+        home = 1306
+    }
+	
+	regiment = {
+        name= "2. Madras Artillery Division"
+        type = artillery
+        home = 1310
+    }
+
+}
+
+army = {
+    name = "The Panjabi Army"
+    location = 1237
+    regiment = {
+        name= "1.Panjabi Division"
+        type = infantry
+        home = 1237
+    }
+
+    regiment = {
+        name= "2.Panjabi Division"
+        type = infantry
+        home = 1243
+    }
+
+    regiment = {
+        name= "3.Panjabi Division"
+        type = infantry
+        home = 1245
+    }
+
+    regiment = {
+        name= "4. Panjabi Division"
+        type = infantry
+        home = 1246
+    }
+	
+	regiment = {
+        name= "5. Panjabi Division"
+        type = infantry
+        home = 1247
+    }
+	
+	regiment = {
+        name= "1. Panjabi Artillery Division"
+        type = artillery
+        home = 1249
+    }
+	
+	regiment = {
+        name= "2. Panjabi Artillery Division"
+        type = artillery
+        home = 1250
+    }
 
 }
 
 army = {
     name = "The Delhi Army"
-    location = 1239
+    location = 1261
     regiment = {
         name= "1.2nd Cavalry Division"
         type = cuirassier
@@ -969,11 +1186,8 @@ army = {
         type = infantry
         home = 258
     }
-}
-army = {
-    name = "5th Indian Division"
-    location = 1239
-    regiment = {
+	
+	regiment = {
         name= "1.5th Indian Division"
         type = infantry
         home = 1239
@@ -990,8 +1204,20 @@ army = {
         type = infantry
         home = 1251
     }
-
+	
+	regiment = {
+        name= "1st Delhi Artillery Division"
+        type = artillery
+        home = 1240
+    }
+	
+	regiment = {
+        name= "2nd Delhi Artillery Division"
+        type = artillery
+        home = 1235
+    }
 }
+
 
 #Channel Fleet
 navy = {
