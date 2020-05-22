@@ -587,7 +587,7 @@ political_decisions = {
     }
 
     buying_djibuti = {
-        picture = bahrain_trade
+        picture = obock
         potential = {
             1875 = { empty = yes }
             civilized = yes
