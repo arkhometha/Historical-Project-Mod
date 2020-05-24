@@ -172,6 +172,7 @@ political_decisions = {
         allow = {
             war = no
             NOT = { has_country_modifier = national_confusion }
+            NOT = { num_of_revolts = 1 }
         }
 
         effect = {
