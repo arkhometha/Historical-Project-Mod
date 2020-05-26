@@ -45,36 +45,44 @@ political_decisions = {
         ai_will_do = { factor = 0 }
     }
 
-    # All five national values are designed to be picked at random by eligible AI countries. Normally this would be
-    # achieved through e.g. a `random_list` command. Unfortunately this can be tricky to get right when done from a
-    # decision as all countries activating the same decision on the same day can get identical results.
+    # All five national values are designed to be picked at random by eligible AI countries.
+    # Normally this would be achieved through e.g. a `random_list` command. Unfortunately this can
+    # be tricky to get right when done from a decision as all countries activating the same decision
+    # on the same day can get identical results.
     #
-    # Instead we rely on the `ai_will_do` factor which, for a decision, is the chance (should all requirements be met)
-    # that the AI activates it on any given day. However because the engine processes available decisions top to bottom
-    # (order being the same as in the decision file) the actual factors have to be computed carefully.
+    # Instead we rely on the `ai_will_do` factor which, for a decision, is the chance (should all
+    # requirements be met) that the AI activates it on any given day. However because the engine
+    # processes available decisions top to bottom (order being the same as in the decision file) the
+    # actual factors have to be computed carefully.
     #
-    # For instance if the first processed decision has weight A, the practical factor B' of the second decision
-    # should be the original weight B but rescaled over the smaller probability space in the outcome that the preceding
-    # decision was not activated, which has complement probablity (1 - A):
+    # For instance if the first processed decision has weight A, the practical factor B' of the
+    # second decision should be the original weight B but rescaled over the smaller probability
+    # space in the outcome that the preceding decision was not activated, which has complement
+    # probablity (1 - A):
     #
     #     B' = B / (1 - A)
     #
-    # This generalises to multiple successive decisions. Notably it leads to a last practical factor of 1, such that
-    # whenever it is the day for an AI country to pick a new national value they are guaranteed to choose (as long as no
-    # other higher priority decision is available to be taken).
+    # This generalises to multiple successive decisions. Notably it leads to a last practical factor
+    # of 1, such that whenever it is the day for an AI country to pick a new national value they are
+    # guaranteed to choose (as long as no other higher priority decision is available to be taken).
     #
-    # The following table summarises the desired random weights & probabilities, as well as some of the computation
-    # details leading to the final practical factor:
+    # The following table summarises the desired random weights & probabilities, as well as some of
+    # the computation details leading to the final practical factor:
     #
-    # National value | Weight | Probability | Cumulative Rescale Divisor (CRD) | Practical Factor (Probability over CRD)
-    # ---------------+--------+-------------+----------------------------------+----------------------------------------
-    # Order          |      1 |         20% |                                1 |                                  0.200
-    # Productivity   |      1 |         20% |                              0.8 |                                  0.250
-    # Autocracy      |      1 |         20% |                              0.6 |                                  0.333
-    # Liberty        |      1 |         20% |                              0.4 |                                  0.500
-    # Equality       |      1 |         20% |                              0.2 |                                  1.000
+    # National value | Weight | Probability | CRD | Factor
+    # ---------------+--------+-------------+-----+-------
+    # Order          |      1 |         20% |   1 | 0.200
+    # Productivity   |      1 |         20% | 0.8 | 0.250
+    # Autocracy      |      1 |         20% | 0.6 | 0.333
+    # Liberty        |      1 |         20% | 0.4 | 0.500
+    # Equality       |      1 |         20% | 0.2 | 1.000
     #
-    # (Note that in testing the engine did not seem to handle decimals well beyond the thousandth place.)
+    # where:
+    # - CRD is Cumulative Rescale Divisor
+    # - Factor is the practical in-game `ai_will_do` factor, equal to probability over CRD
+    #
+    # (Note that in testing the engine did not seem to handle decimals well beyond the thousandth
+    # place.)
 
     switch_to_order = {
         picture = switch_to_order
@@ -172,6 +180,7 @@ political_decisions = {
         allow = {
             war = no
             NOT = { has_country_modifier = national_confusion }
+            NOT = { num_of_revolts = 1 }
         }
 
         effect = {
