@@ -172,23 +172,16 @@ political_decisions = {
 
         ai_will_do = {
             factor = 1
-            modifier = {
-                factor = 0
-                government = fascist_dictatorship
-                GRE = {
-                    NOT = { government = fascist_dictatorship }
-                }
-            }
-            modifier = {
-                factor = 0
-                NOT = { government = fascist_dictatorship }
-                GRE = { government = fascist_dictatorship }
-            }
-            modifier = {
-                factor = 0
-                NOT = { government = proletarian_dictatorship }
-                GRE = { government = proletarian_dictatorship }
-            }
+			modifier = {
+				factor = 0
+				government = fascist_dictatorship
+				GRE = { NOT = { government = fascist_dictatorship } }
+			}
+			modifier = {
+				factor = 0
+				government = proletarian_dictatorship
+				GRE = { NOT = { government = proletarian_dictatorship } }
+			}
             modifier = {
                 factor = 0
                 OR = {
@@ -202,22 +195,18 @@ political_decisions = {
                     }
                 }
             }
-            modifier = {
+			modifier = {
                 factor = 0
-                GRE = {
-                    OR = {
-                        government = democracy
-                        government = hms_government
-                    }
-                }
-                NOT = {
-                    government = democracy
-                    government = hms_government
-                }
+				government = prussian_constitutionalism
+				GRE = { 
+					NOT = { government = absolute_monarchy }
+					NOT = { government = prussian_constitutionalism }
+					NOT = { government = hms_government } 
+				}
             }
             modifier = {
                 factor = 0
-                OR = {
+				OR = {
                     government = presidential_dictatorship
                     government = bourgeois_dictatorship
                     government = absolute_monarchy
