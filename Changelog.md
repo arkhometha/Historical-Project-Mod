@@ -90,7 +90,7 @@
 * Election cycles should now last 4 years instead of 4 and a half. By @bradfordp10 - https://github.com/arkhometha/Historical-Project-Mod/pull/172
 * The "Native Status" decisions should now take into account accepted cultures. By @MatheusArtur - https://github.com/arkhometha/Historical-Project-Mod/pull/167
 * Small fixes for AI logic in the "Unite with Greece" decision by @Libeccio-DD - https://github.com/arkhometha/Historical-Project-Mod/pull/175
-* Increase the Tariffs and Tax range for L-F and Free Trade, changed the minimums of State Capitalisn and Planned Economy.
+* Increase the Tariffs and Tax range for L-F and Free Trade, changed the minimums of State Capitalism and Planned Economy.
 * Travelling through Europe for Persia should now give a relationship boost with European countries.
 * Newly formed colonial governments (organizing colonies) in Africa will now lose militancy over time for 10 years, to compensate for the hardcoded "nationalism" militancy that shouldn't be applied to these uncivs.
 * The League of Three Emperors can now be taken when Germany owns cores of Austria/Russia, however if they accept the league Germany will give the cores back.
