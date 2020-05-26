@@ -7367,8 +7367,8 @@ political_decisions = {
 				2025 = { secede_province = THIS any_pop = { literacy = -0.05 } }
 				2031 = { secede_province = THIS any_pop = { literacy = -0.05 } }
             }
-			ai_will_do = { factor = 1 }
 		}
+		ai_will_do = { factor = 1 }
 	}
   
 	annex_mayotte = {
