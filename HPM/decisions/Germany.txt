@@ -468,7 +468,7 @@ political_decisions = {
             }
             AUS = {
                 exists = yes
-                NOT = { any_core = { owned_by = GER } }
+                #NOT = { any_core = { owned_by = GER } }
                 OR = {
                     government = absolute_monarchy
                     government = prussian_constitutionalism
@@ -477,7 +477,7 @@ political_decisions = {
             }
             RUS = {
                 exists = yes
-                NOT = { any_core = { owned_by = GER } }
+                #NOT = { any_core = { owned_by = GER } }
                 OR = {
                     government = absolute_monarchy
                     government = prussian_constitutionalism

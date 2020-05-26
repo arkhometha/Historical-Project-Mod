@@ -66,7 +66,7 @@ party_issues = {
         }
         state_capitalism = {
             import_cost = 0.25
-            min_tax = 0.25
+            min_tax = 0.2
             factory_owner_cost = 0.6
 
             rules = {
@@ -89,7 +89,7 @@ party_issues = {
         }
         planned_economy = {
             import_cost = 0.5
-            min_tax = 0.5
+            min_tax = 0.4
             factory_throughput = 0.05
             factory_owner_cost = -1    #negative costs, can't build.
 
