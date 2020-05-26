@@ -2017,6 +2017,8 @@ ghost_country_absorb_player_title;AI: Player Country Cleanup End;;;;;;;;;;;;;
 ghost_country_absorb_player_desc;AI: Player Country Cleanup End;;;;;;;;;;;;;
 claim_vorarlberg_title;Our claims on Vorarlberg;;;;;;;;;;;;;
 claim_vorarlberg_desc;The people of Vorarlberg are our brothers and for too long they have been under the foreign yoke. It is time for all the Swiss to live under the protection of mother Switzerland!;;;;;;;;;;;;;
+zabzibar_colonasation_title;Establish control in the interior of east Africa;;;;;;;;;;;;;
+zabzibar_colonasation_desc;Arab slave and ivory traders have been establishing trade posts and settlements in the area between Lake Tanganyika and the Swahili coast for decades. These territories are nominally subject to the sultan of $COUNTRY$ but our authority doesn't extend more than a few miles into the interior. Senior figures in $CAPITAL$ have come up with plans to establish several military bases in these areas, thus establish our control.;;;;;;;;;;;;;
 mark_down_landlocked_title;Occupation of Landlocked Territories;;;;;;;;;;;;;
 mark_down_landlocked_desc;A neighbouring country is occupying one of our landlocked provinces.;;;;;;;;;;;;;
 take_landlocked_provinces_title;Retaking Landlocked Territories;;;;;;;;;;;;;
