@@ -94,7 +94,7 @@
 * Travelling through Europe for Persia should now give a relationship boost with European countries.
 * Newly formed colonial governments (organizing colonies) in Africa will now lose militancy over time for 10 years, to compensate for the hardcoded "nationalism" militancy that shouldn't be applied to these uncivs.
 * The League of Three Emperors can now be taken when Germany owns cores of Austria/Russia, however if they accept the league Germany will give the cores back.
-* Fixed a instance of the Ghost units cleanup system clashing with the "Unite Wallachia & Moldavia" decision. Closes https://github.com/arkhometha/Historical-Project-Mod/issues/180
+* Fixed an instance of the Ghost units cleanup system clashing with the "Unite Wallachia & Moldavia" decision. Closes https://github.com/arkhometha/Historical-Project-Mod/issues/180
 * Added African Diaspora cultures to the segregation/integration system that Natives have.
 
 ***
