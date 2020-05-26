@@ -1,6 +1,6 @@
 add_core = CMS
 trade_goods = grain
-life_rating = 30
+life_rating = 15
 terrain = small_island
 1861.1.1 = {
     owner = FRA

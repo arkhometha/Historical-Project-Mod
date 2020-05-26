@@ -1,4 +1,6 @@
 Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;Portuguese;Russian;Finnish;
+protectorate_over_comoros_title;Establish a Protectorate over Comoros;;;;;;;;;;;;;
+protectorate_over_comoros_desc;The remaining independent islands of the archipelago of Comoros are ruled by sultans and pretenders. There's much strife and during this chaos, and due to heavy $COUNTRY_ADJ$ influence in the archipelago, a few of these sultans approached our government. The reality of the Great Powers in Africa is quickly changing and soon there will be no place left without their influence. Feeling the pressurre of the fast approaching new paradigm of European colonialism, they petitioned the $COUNTRY_ADJ$ government to be treated as a protectorate of our country.;;;;;;;;;;;;;
 democratic_peace_title;Democratic Summit;;;;;;;;;;;;;
 democratic_peace_desc;Diplomats and other senior $COUNTRY_ADJ$ government figures in $CAPITAL$ are suggesting we organize a summit with other democratic leaders to discuss the current issues of our time. Maintaining good relations with other democratic countries is of vital importance if we aim to bring the democratic values to all the countries in the world. As Thomas Paine wrote: "The Republics of Europe are all (and we may say always) in peace.";;;;;;;;;;;;;
 substate_adopt_tech_title;Decree to Chinese Governors;;;;;;;;;;;;;
@@ -1100,7 +1102,7 @@ the_great_game_panjab_desc;We must press our domination of Central Asia. This me
 the_great_game_sindh_title;The Great Game Comes to Sindh;;;;;;;;;;;;;
 the_great_game_sindh_desc;We must press our domination of Central Asia. This means that the Sindh must be subjugated as a British colony, or we risk losing it to Russian aggression in the region.;;;;;;;;;;;;;
 annex_mayotte_title;Annex Mayotte;;;;;;;;;;;;;
-annex_mayotte_desc;The ruler of the small island of Maore, which French traders have dubbed 'Mayotte', is a primitive sultan who only broke away from Malagasy rule in recent years. He has petitioned the French government for status as a protectorate, clearly preferring civilized rule to those of his neighbours.;;;;;;;;;;;;;
+annex_mayotte_desc;The ruler of the small island of Maore, which French traders have dubbed 'Mayotte', is a primitive sultan who only broke away from Malagasy rule in recent years. He has petitioned the $COUNTRY_ADJ$ government for status as a protectorate, clearly preferring civilized rule to those of his neighbours.;;;;;;;;;;;;;
 annex_fiji_title;Annex Fiji;;;;;;;;;;;;;
 annex_fiji_desc;With Australian settlers having purchased land on the island of Fiji, they have slowly become insinuated within the court of King Cakobau. So it is that recently, when the king's lavish overspending saddled his kingdom with considerable debt, the settlers offered to negotiate terms by which the British government would pay off the debt and annex the island as a new colony.;;;;;;;;;;;;;
 invest_in_irish_title;Invest in the Irish;;;;;;;;;;;;;

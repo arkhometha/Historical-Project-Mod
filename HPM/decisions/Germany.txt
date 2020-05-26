@@ -825,7 +825,7 @@ political_decisions = {
     }
 
     annex_sigmaringen = {
-        picture = declare_republic_of_neuchatel
+        picture = sigmaringen
         potential = {
             has_country_flag = prussian_germany
             OR = {

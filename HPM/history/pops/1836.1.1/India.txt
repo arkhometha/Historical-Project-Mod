@@ -1744,13 +1744,13 @@
     soldiers = {
         culture = avadhi
         religion = hindu
-        size = 1750
+        size = 750
     }
 
     farmers = {
         culture = avadhi
         religion = hindu
-        size = 67250
+        size = 68250
     }
 
     aristocrats = {
@@ -1774,13 +1774,13 @@
     soldiers = {
         culture = nepali
         religion = hindu
-        size = 1100
+        size = 500
     }
 
     farmers = {
         culture = nepali
         religion = hindu
-        size = 10000
+        size = 10600
     }
 
     farmers = {
@@ -2014,13 +2014,13 @@
     soldiers = {
         culture = avadhi
         religion = sunni
-        size = 1500
+        size = 500
     }
 
     farmers = {
         culture = avadhi
         religion = sunni
-        size = 118375
+        size = 119375
     }
 
     farmers = {
@@ -2743,13 +2743,13 @@
     soldiers = {
         culture = bihari
         religion = sunni
-        size = 1100
+        size = 500
     }
 
     farmers = {
         culture = bihari
         religion = sunni
-        size = 73500
+        size = 74100
     }
 }
 #Bhagalpur (1900000/475000 POPS)
@@ -2867,22 +2867,10 @@
         size = 10000
     }
 
-    soldiers = {
-        culture = bengali
-        religion = hindu
-        size = 3000
-    }
-
-    soldiers = {
-        culture = bengali
-        religion = hindu
-        size = 3000
-    }
-
     farmers = {
         culture = bengali
         religion = hindu
-        size = 936500
+        size = 942500
     }
 
     aristocrats = {
@@ -2918,13 +2906,13 @@
     soldiers = {
         culture = bengali
         religion = sunni
-        size = 1100
+        size = 3100
     }
 
     farmers = {
         culture = bengali
         religion = sunni
-        size = 63250
+        size = 61250
     }
 
     aristocrats = {
@@ -2980,37 +2968,13 @@
     farmers = {
         culture = nepali
         religion = hindu
-        size = 10000
+        size = 22000
     }
 
     artisans = {
         culture = nepali
         religion = hindu
         size = 2500
-    }
-
-    soldiers = {
-        culture = nepali
-        religion = hindu
-        size = 3000
-    }
-
-    soldiers = {
-        culture = nepali
-        religion = hindu
-        size = 3000
-    }
-
-    soldiers = {
-        culture = nepali
-        religion = hindu
-        size = 3000
-    }
-
-    soldiers = {
-        culture = nepali
-        religion = hindu
-        size = 3000
     }
 
     farmers = {
@@ -3040,13 +3004,13 @@
     soldiers = {
         culture = bengali
         religion = sunni
-        size = 2000
+        size = 3000
     }
 
     farmers = {
         culture = bengali
         religion = sunni
-        size = 182500
+        size = 181500
     }
 }
 #Bardwan (4456000/1114000 POPS)
@@ -3084,25 +3048,13 @@
     soldiers = {
         culture = bengali
         religion = hindu
-        size = 3000
-    }
-
-    soldiers = {
-        culture = bengali
-        religion = hindu
-        size = 3000
-    }
-
-    soldiers = {
-        culture = bengali
-        religion = hindu
-        size = 1000
+        size = 500
     }
 
     farmers = {
         culture = bengali
         religion = hindu
-        size = 939875
+        size = 946875
     }
 
     clergymen = {
@@ -3206,19 +3158,13 @@
     soldiers = {
         culture = bengali
         religion = hindu
-        size = 3000
-    }
-
-    soldiers = {
-        culture = bengali
-        religion = hindu
-        size = 1000
+        size = 500
     }
 
     farmers = {
         culture = bengali
         religion = hindu
-        size = 533000
+        size = 536500
     }
 }
 #Rajshahi (2332000/583000 POPS)
@@ -3292,13 +3238,13 @@
     soldiers = {
         culture = bengali
         religion = hindu
-        size = 2000
+        size = 500
     }
 
     farmers = {
         culture = bengali
         religion = hindu
-        size = 181500
+        size = 183000
     }
 }
 #Jessore (2372000/593000 POPS)
@@ -3372,13 +3318,13 @@
     soldiers = {
         culture = bengali
         religion = hindu
-        size = 2250
+        size = 250
     }
 
     farmers = {
         culture = bengali
         religion = hindu
-        size = 201500
+        size = 203500
     }
 }
 #Chittagong (5884000/1471000 POPS)
@@ -3458,19 +3404,13 @@
     soldiers = {
         culture = bengali
         religion = hindu
-        size = 3000
-    }
-
-    soldiers = {
-        culture = bengali
-        religion = hindu
-        size = 1000
+        size = 500
     }
 
     farmers = {
         culture = bengali
         religion = hindu
-        size = 545000
+        size = 548500
     }
 
     aristocrats = {
@@ -3549,13 +3489,13 @@
     soldiers = {
         culture = assamese
         religion = hindu
-        size = 1500
+        size = 500
     }
 
     farmers = {
         culture = assamese
         religion = hindu
-        size = 135500
+        size = 136500
     }
 
     bureaucrats = {
@@ -3635,13 +3575,13 @@
     soldiers = {
         culture = manipuri
         religion = hindu
-        size = 1100
+        size = 500
     }
 
     farmers = {
         culture = manipuri
         religion = hindu
-        size = 88250
+        size = 88850
     }
 
     clergymen = {
@@ -3721,31 +3661,43 @@
     soldiers = {
         culture = assamese
         religion = hindu
-        size = 1100
+        size = 500
     }
 
     farmers = {
         culture = assamese
         religion = hindu
-        size = 79750
+        size = 80350
+    }
+
+	aristocrats = {
+        culture = asian_minor
+        religion = animist
+        size = 100
     }
 
     clergymen = {
         culture = asian_minor
         religion = animist
-        size = 75
+        size = 100
+    }
+	
+	artisans = {
+        culture = asian_minor
+        religion = animist
+        size = 100
     }
 
     soldiers = {
         culture = asian_minor
         religion = animist
-        size = 1100
+        size = 500
     }
 
     farmers = {
         culture = asian_minor
         religion = animist
-        size = 9425
+        size = 9750
     }
 }
 #Agartala (608000/152000 POPS)
@@ -3771,13 +3723,13 @@
     soldiers = {
         culture = asian_minor
         religion = animist
-        size = 1100
+        size = 500
     }
 
     farmers = {
         culture = asian_minor
         religion = animist
-        size = 89125
+        size = 89725
     }
 
     clergymen = {
@@ -3842,13 +3794,13 @@
     soldiers = {
         culture = oriya
         religion = hindu
-        size = 2250
+        size = 250
     }
 
     farmers = {
         culture = oriya
         religion = hindu
-        size = 215500
+        size = 217500
     }
 
     farmers = {
@@ -5009,19 +4961,13 @@
     soldiers = {
         culture = marathi
         religion = hindu
-        size = 3000
-    }
-
-    soldiers = {
-        culture = marathi
-        religion = hindu
-        size = 1500
+        size = 500
     }
 
     farmers = {
         culture = marathi
         religion = hindu
-        size = 648650
+        size = 652650
     }
 
     clergymen = {
@@ -5083,13 +5029,13 @@
     soldiers = {
         culture = marathi
         religion = hindu
-        size = 1500
+        size = 500
     }
 
     farmers = {
         culture = marathi
         religion = hindu
-        size = 125000
+        size = 126000
     }
 
     clergymen = {
@@ -6372,6 +6318,7 @@
         size = 10
     }
 }
+
 #Surat (1072000/268000 POPS)
 1296 = {
     aristocrats = {
@@ -6401,13 +6348,13 @@
     soldiers = {
         culture = gujarati
         religion = hindu
-        size = 2500
+        size = 500
     }
 
     farmers = {
         culture = gujarati
         religion = hindu
-        size = 212000
+        size = 214000
     }
 
     aristocrats = {
@@ -6932,13 +6879,13 @@
     soldiers = {
         culture = sindi
         religion = sunni
-        size = 1500
+        size = 500
     }
 
     farmers = {
         culture = sindi
         religion = sunni
-        size = 97250
+        size = 98250
     }
 
     clergymen = {
@@ -6986,7 +6933,13 @@
     soldiers = {
         culture = british
         religion = protestant
-        size = 3000
+        size = 200
+    }
+	
+	 farmers = {
+        culture = british
+        religion = protestant
+        size = 1000
     }
 }
 #Nasik (796000/199000 POPS)
@@ -7012,25 +6965,25 @@
     soldiers = {
         culture = marathi
         religion = hindu
-        size = 2000
+        size = 500
     }
 
     farmers = {
         culture = marathi
         religion = hindu
-        size = 181750
+        size = 182750
     }
 
     aristocrats = {
         culture = sindi
         religion = sunni
-        size = 50
+        size = 100
     }
 
     clergymen = {
         culture = sindi
         religion = sunni
-        size = 75
+        size = 100
     }
 
     artisans = {
@@ -7284,13 +7237,13 @@
     soldiers = {
         culture = kannada
         religion = hindu
-        size = 2750
+        size = 750
     }
 
     farmers = {
         culture = kannada
         religion = hindu
-        size = 249250
+        size = 251250
     }
 
     clergymen = {
@@ -7677,13 +7630,13 @@
     soldiers = {
         culture = telegu
         religion = hindu
-        size = 3000
+        size = 500
     }
 
     farmers = {
         culture = telegu
         religion = hindu
-        size = 265875
+        size = 268375
     }
 
     aristocrats = {

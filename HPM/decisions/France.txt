@@ -359,61 +359,6 @@ political_decisions = {
         }
     }
 
-    annex_mayotte = {
-        picture = dreams_of_empire
-        potential = {
-            tag = FRA
-            is_greater_power = yes
-            2124 = { empty = yes }
-        }
-
-        allow = {
-            war = no
-            medicine = 1
-        }
-
-        effect = {
-            prestige = 3
-            2124 = {
-                secede_province = FRA
-                change_province_name = "Mayotte"
-            }
-        }
-    }
-
-    plantations_in_comoros = {
-        picture = dreams_of_empire
-        potential = {
-            NOT = {
-                2124 = { empty = yes }
-                2123 = { empty = yes }
-            }
-            OR = {
-                owns = 2124
-                owns = 2123
-            }
-            civilized = yes
-            NOT = { has_global_flag = colonial_comoros }
-        }
-
-        allow = {
-            compound_steam_engines = 1
-        }
-
-        effect = {
-            set_global_flag = colonial_comoros
-            prestige = 2
-            2124 = {
-                trade_goods = coffee
-                life_rating = 5
-            }
-            2123 = {
-                trade_goods = coffee
-                life_rating = 5
-            }
-        }
-    }
-
     cotton_in_algiers = {
         picture = dreams_of_empire
         potential = {

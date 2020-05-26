@@ -1,6 +1,5 @@
 political_decisions = {
 
-
     found_niger_company = {
         picture = royal_niger_company
         potential = {
@@ -7088,33 +7087,32 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 	
-	zabzibar_colonasation = {
+
+	zanzibar_colonization = {
         picture = zanzibar_oman
         potential = {
-			OR = {
-				tag = OMA
-				tag = ZAN
-			}
-            OR = {
-                AND = {
-					owns = 2036
-					2045 = { empty = yes }
-					2043 = { empty = yes }
-				}
-				AND = {
-					owns = 2038
-					2041 = { empty = yes }
-				}
-				AND = {
-					owns = 2029
-					2032 = { empty = yes }
-					2026 = { empty = yes }
-                }
-            }
+        OR = {
+          tag = OMA
+          tag = ZAN
         }
-
-        allow = {
-            war = no
+        OR = {
+          AND = {
+					  owns = 2036
+					  2045 = { empty = yes }
+					  2043 = { empty = yes }
+				  }
+          AND = {
+            owns = 2038
+            2041 = { empty = yes }
+          }
+          AND = {
+            owns = 2029
+            2032 = { empty = yes }
+            2026 = { empty = yes }
+           }
+        }
+     allow = {
+      war = no
 			civilized = yes
 			OR = {
 				has_global_flag = berlin_conference
@@ -7160,4 +7158,32 @@ political_decisions = {
         ai_will_do = { factor = 1 }
 		}
 	}
+  
+	protectorate_over_comoros = {
+        picture = royal_niger_company
+        potential = {
+            owns = 2124
+			2123 = { empty = yes }
+        }
+
+        allow = {
+            war = no
+			is_disarmed = no
+			nationalism_n_imperialism = 1
+			has_global_flag = berlin_conference
+			money = 10000
+        }
+
+        effect = {
+            prestige = 3
+            treasury = -10000
+			2123 = {
+				secede_province = THIS
+				life_rating = 20
+				change_province_name = "Comoros"
+				trade_goods = coffee
+			}
+			2124 = { trade_goods = coffee }
+    }
+    }
 }

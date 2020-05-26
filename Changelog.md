@@ -5,6 +5,7 @@
 >> Canada suggestions here >>279093365
 >>279093646 Arkansas and West Virginia should always be CSA cores to avoid weird claims like this
 * Add initial event to brazil explaining end of regency
+* Raigarh should be its own country
 
 ### Changelog:
 
@@ -77,8 +78,11 @@
 * The Swiss banking decision now provides less tax efficiency to avoid the Swiss starving their own pops. To compensate that, the decision flips the three banking capitals - Geneva, Zurich and Lugano to Precious Goods. A few other provinces flip to Iron to compensate the loss of Zurich.
 * Few modifiers tweaks. 
 * Merged North and South Zhejiang in a single state.
-* Added a decision for democratic countries to, every 10 years, improve their relations with their neighbours (as long as there are no core problems) and other democratic countries. The decision will also reduce infamy. Part of the "government differentation" effort. Based on https://en.wikipedia.org/wiki/Democratic_peace_theory
-* Changed how substates pick unciv reforms for Qing. Now they do not gain RP to pick reforms, everytime Qing picks a new reform the country can take a decision to give the same reform to their substates.
+* Added a decision for democratic countries to, every 10 years, improve their relations with their neighbours (as long as there are no core problems) and other democratic countries. The decision will also reduce infamy. Part of the "government differentiation" effort. Based on https://en.wikipedia.org/wiki/Democratic_peace_theory
+* Changed how substates pick unciv reforms for Qing. Now they do not gain RP to pick reforms, every time Qing picks a new reform the country can take a decision to give the same reform to their substates.
+* Province 111 will be renamed to "Jackson Hole" instead of Rock Springs to avoid duplicate names. Closes https://github.com/arkhometha/Historical-Project-Mod/issues/174
+* Changed the colonization of Comoros and Mayote to be a bit closer to how it historically happened. Opened up the French decision to annex Mayote to any GP owning Reunion, Mauritius or Madagascar (SP for madagascar).
+* Fix for the British India OOB and soldier pops in India. This should avoid the UK starting the game by building a massive army and going into debt for it, from their spare manpower in India and Ireland.
 
 ***
 
