@@ -7091,28 +7091,30 @@ political_decisions = {
 	zanzibar_colonization = {
         picture = zanzibar_oman
         potential = {
-        OR = {
-          tag = OMA
-          tag = ZAN
-        }
-        OR = {
-          AND = {
-					  owns = 2036
-					  2045 = { empty = yes }
-					  2043 = { empty = yes }
+			OR = {
+			  tag = OMA
+			  tag = ZAN
+			}
+			OR = {
+				  AND = {
+					owns = 2036
+					2045 = { empty = yes }
+					2043 = { empty = yes }
 				  }
-          AND = {
-            owns = 2038
-            2041 = { empty = yes }
-          }
-          AND = {
-            owns = 2029
-            2032 = { empty = yes }
-            2026 = { empty = yes }
-           }
-        }
-     allow = {
-      war = no
+				  AND = {
+					owns = 2038
+					2041 = { empty = yes }
+				  }
+				  AND = {
+					owns = 2029
+					2032 = { empty = yes }
+					2026 = { empty = yes }
+				 }
+			}
+		}
+		
+		allow = {
+			war = no
 			civilized = yes
 			OR = {
 				has_global_flag = berlin_conference
@@ -7155,10 +7157,46 @@ political_decisions = {
 				2025 = { secede_province = THIS any_pop = { literacy = -0.05 } }
 				2031 = { secede_province = THIS any_pop = { literacy = -0.05 } }
             }
-        ai_will_do = { factor = 1 }
+			ai_will_do = { factor = 1 }
 		}
 	}
   
+	annex_mayotte = {
+        picture = royal_niger_company
+        potential = {
+            OR = {
+				owns = 2125
+				owns = 2126
+				owns = 2115
+			}
+			OR = {
+				is_greater_power = yes
+				AND = {
+					owns = 2115
+					rank = 16
+				}
+			}
+			2124 = { empty = yes }
+        }
+
+        allow = {
+            war = no
+			is_disarmed = no
+			state_n_government = 1
+			money = 10000
+        }
+
+        effect = {
+            prestige = 3
+            treasury = -10000
+			2124 = {
+				secede_province = THIS
+				life_rating = 20
+				change_province_name = "Mayotte"
+			}
+        }
+    }
+	
 	protectorate_over_comoros = {
         picture = royal_niger_company
         potential = {
@@ -7184,6 +7222,6 @@ political_decisions = {
 				trade_goods = coffee
 			}
 			2124 = { trade_goods = coffee }
-    }
+        }
     }
 }
