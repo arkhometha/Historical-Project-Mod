@@ -83,6 +83,13 @@
 * Province 111 will be renamed to "Jackson Hole" instead of Rock Springs to avoid duplicate names. Closes https://github.com/arkhometha/Historical-Project-Mod/issues/174
 * Changed the colonization of Comoros and Mayote to be a bit closer to how it historically happened. Opened up the French decision to annex Mayote to any GP owning Reunion, Mauritius or Madagascar (SP for madagascar).
 * Fix for the British India OOB and soldier pops in India. This should avoid the UK starting the game by building a massive army and going into debt for it, from their spare manpower in India and Ireland.
+* Normalised NV requirements by @moretrim - https://github.com/arkhometha/Historical-Project-Mod/pull/179/
+* Fix for bug in Dar Es Salaam decision and new decision images by @Libeccio-DD - https://github.com/arkhometha/Historical-Project-Mod/pull/178
+* Added a decision for Oman/Zanzibar to colonize east africa if they are a SP by @Libeccio-DD - https://github.com/arkhometha/Historical-Project-Mod/pull/177
+* Welsh culture can appear if Wales is independent, similar to Scottish. By @Libeccio-DD - https://github.com/arkhometha/Historical-Project-Mod/pull/176
+* Election cycles should now last 4 years instead of 4 and a half. By @bradfordp10 - https://github.com/arkhometha/Historical-Project-Mod/pull/172
+* The "Native Status" decisions should now take into account accepted cultures. By @MatheusArtur - https://github.com/arkhometha/Historical-Project-Mod/pull/167
+* Small fixes for AI logic in the "Unite with Greece" decision by @Libeccio-DD - https://github.com/arkhometha/Historical-Project-Mod/pull/175
 
 ***
 
