@@ -90,6 +90,8 @@
 * Election cycles should now last 4 years instead of 4 and a half. By @bradfordp10 - https://github.com/arkhometha/Historical-Project-Mod/pull/172
 * The "Native Status" decisions should now take into account accepted cultures. By @MatheusArtur - https://github.com/arkhometha/Historical-Project-Mod/pull/167
 * Small fixes for AI logic in the "Unite with Greece" decision by @Libeccio-DD - https://github.com/arkhometha/Historical-Project-Mod/pull/175
+* Increase the Tariffs and Tax range for L-F and Free Trade.
+* Travelling through Europe for Persia should now give a relationship boost with European countries.
 
 ***
 

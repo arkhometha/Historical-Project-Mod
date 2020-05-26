@@ -1108,6 +1108,13 @@ colonial_museum_of_natural_history = {
     icon = 3
 }
 
+new_colonial_government = {
+    pop_militancy_modifier = -0.2
+	farm_rgo_eff = -0.1
+    mine_rgo_eff = -0.1
+    icon = 2
+}
+
 colonial_mismanagement = {
     pop_militancy_modifier = -0.02
     farm_rgo_eff = -0.5

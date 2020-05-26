@@ -425,6 +425,7 @@ political_decisions = {
                 remove_core = CLA
                 remove_core = WRI
                 remove_core = KBO
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
             }
 
             SOK_1934 = { add_core = ARO }
@@ -719,6 +720,11 @@ political_decisions = {
                 limit = { province_id = 1916 }
                 add_core = TOG
             }
+			
+			any_owned = {
+				limit = { is_core = TOG }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             random_owned = { limit = { owner = { has_country_flag = catholic_country } } TOG = { religion = catholic set_country_flag = catholic_country } }
             random_owned = {
@@ -876,6 +882,10 @@ political_decisions = {
                 remove_core = ASH
                 remove_core = MOS
             }
+			any_owned = {
+				limit = { is_core = IVC }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
             IVC = {
                 primary_culture = THIS
                 add_accepted_culture = dyula
@@ -1042,6 +1052,10 @@ political_decisions = {
             1886 = { life_rating = 20 }
             country_event = 199041
             set_country_flag = sierra_leone_master
+			any_owned = {
+				limit = { is_core = SLE }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
             SLE = {
                 primary_culture = THIS
                 add_accepted_culture = western_nigritic
@@ -1204,6 +1218,10 @@ political_decisions = {
                 remove_core = JAL
                 remove_core = GBU
             }
+			any_owned = {
+				limit = { is_core = GNE }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
             GNE = {
                 primary_culture = THIS
                 add_accepted_culture = mande
@@ -1391,6 +1409,10 @@ political_decisions = {
                 remove_core = SEG
                 remove_core = TOU
             }
+			any_owned = {
+				limit = { is_core = SNG }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
             SNG = {
                 primary_culture = THIS
                 add_accepted_culture = wolof
@@ -1503,6 +1525,12 @@ political_decisions = {
                 remove_core = DAM
                 remove_core = KBO
             }
+			
+			any_owned = {
+				limit = { is_core = NIG }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             NIG = {
                 primary_culture = THIS
                 add_accepted_culture = hausa
@@ -1620,6 +1648,12 @@ political_decisions = {
                 }
                 life_rating = 25
             }
+			
+			any_owned = {
+				limit = { is_core = CHD }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             CHD = {
                 primary_culture = THIS
                 add_accepted_culture = sara
@@ -1805,6 +1839,11 @@ political_decisions = {
                 add_core = CMR
                 life_rating = 25
             }
+			
+			any_owned = {
+				limit = { is_core = CMR }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             CMR = {
                 primary_culture = THIS
@@ -2008,6 +2047,11 @@ political_decisions = {
                     literacy = -0.99
                 }
             }
+			
+			any_owned = {
+				limit = { is_core = GAB }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             GAB = {
                 primary_culture = THIS
@@ -2181,6 +2225,12 @@ political_decisions = {
             any_owned = { limit = { is_core = CGO NOT = {life_rating = 12 } } life_rating = 25 }
 
             any_owned = { limit = { is_core = CGO } remove_core = LOA }
+			
+			any_owned = {
+				limit = { is_core = CGO }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             CGO = {
                 primary_culture = THIS
                 add_accepted_culture = bakongo
@@ -2400,6 +2450,12 @@ political_decisions = {
                 }
                 life_rating = 25
             }
+			
+			any_owned = {
+				limit = { is_core = CNG }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             CNG = {
                 primary_culture = THIS
                 add_accepted_culture = bakongo
@@ -2619,6 +2675,12 @@ political_decisions = {
                 }
                 life_rating = 25
             }
+			
+			any_owned = {
+				limit = { is_core = ZAM }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             ZAM = {
                 primary_culture = THIS
                 add_accepted_culture = lunda
@@ -2826,6 +2888,12 @@ political_decisions = {
                 }
                 life_rating = 25
             }
+			
+			any_owned = {
+				limit = { is_core = KNY }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             KNY = {
                 primary_culture = THIS
                 add_accepted_culture = kikuyu
@@ -3040,6 +3108,12 @@ political_decisions = {
             }
             2043 = { change_province_name = "Tabora" }
             2045 = { change_province_name = "Dodoma" }
+			
+			any_owned = {
+				limit = { is_core = TNZ }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             TNZ = {
                 primary_culture = THIS
                 add_accepted_culture = swahili
@@ -3256,6 +3330,11 @@ political_decisions = {
                 remove_core = DND
                 remove_core = BKF
             }
+			
+			any_owned = {
+				limit = { is_core = MLI }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             MLI = {
                 primary_culture = THIS
@@ -3441,6 +3520,12 @@ political_decisions = {
                 remove_core = TRI
                 remove_core = CYR
             }
+			
+			any_owned = {
+				limit = { is_core = LBY }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             LBY = { tech_school = developing_tech_school }
         }
     }
@@ -3479,6 +3564,12 @@ political_decisions = {
                 remove_core = TRI
                 remove_core = CYR
             }
+			
+			any_owned = {
+				limit = { is_core = LBY }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             LBY = { tech_school = developing_tech_school }
         }
     }
@@ -3525,6 +3616,12 @@ political_decisions = {
                 }
                 life_rating = 25
             }
+			
+			any_owned = {
+				limit = { is_core = CAR }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             CAR = {
                 primary_culture = THIS
                 add_accepted_culture = ubangian
@@ -3704,6 +3801,12 @@ political_decisions = {
                 remove_core = KZB
                 life_rating = 25
             }
+			
+			any_owned = {
+				limit = { is_core = MLW }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             MLW = {
                 primary_culture = THIS
                 add_accepted_culture = chewa
@@ -3869,6 +3972,11 @@ political_decisions = {
                 remove_core = SEG
                 remove_core = TOU
             }
+			
+			any_owned = {
+				limit = { is_core = GMB }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             GMB = {
                 primary_culture = THIS
@@ -4067,6 +4175,11 @@ political_decisions = {
                 limit = { is_core = ANG }
                 remove_core = KON
             }
+			
+			any_owned = {
+				limit = { is_core = ANG }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             random_owned = { limit = { owner = { has_country_flag = catholic_country } } ANG = { religion = catholic set_country_flag = catholic_country } }
             random_owned = {
@@ -4262,6 +4375,11 @@ political_decisions = {
                     remove_core = SHO
                 }
             }
+			
+			any_owned = {
+				limit = { is_core = MOZ }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             random_owned = { limit = { owner = { has_country_flag = catholic_country } } MOZ = { religion = catholic set_country_flag = catholic_country } }
             random_owned = {
@@ -4458,6 +4576,10 @@ political_decisions = {
             set_global_flag = algeria_organized
             prestige = 3
             1701 = { trade_goods = fruit }
+			any_owned = {
+				limit = { is_core = ALD }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
             ALD = {
                 tech_school = developing_tech_school
                 set_country_flag = post_colonial_country
@@ -4505,6 +4627,12 @@ political_decisions = {
                 }
                 life_rating = 25
             }
+			
+			any_owned = {
+				limit = { is_core = BUG }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             BUG = {
                 set_country_flag = post_colonial_country
                 primary_culture = THIS
@@ -4662,6 +4790,11 @@ political_decisions = {
             prestige = 5
             set_country_flag = botswana_master
             country_event = 199059
+			
+			any_owned = {
+				limit = { is_core = TSW }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             TSW = {
                 set_country_flag = post_colonial_country
@@ -4824,6 +4957,10 @@ political_decisions = {
         effect = {
             set_global_flag = zanzibar_organized
             prestige = 3
+			any_owned = {
+				limit = { is_core = ZAN }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
             ZAN = {
                 set_country_flag = post_colonial_country
                 government = democracy
@@ -4970,6 +5107,11 @@ political_decisions = {
                     remove_core = ASH
                 }
             }
+			
+			any_owned = {
+				limit = { is_core = GHN }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             GHN = {
                 set_country_flag = post_colonial_country
@@ -5142,6 +5284,11 @@ political_decisions = {
 
             1905 = { change_province_name = "Bobo-Dioulasso" }
 
+			any_owned = {
+				limit = { is_core = BKF }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+
             BKF = {
                 set_country_flag = post_colonial_country
                 government = democracy
@@ -5310,6 +5457,12 @@ political_decisions = {
                     change_region_name = "Mauritania"
                 }
             }
+			
+			any_owned = {
+				limit = { is_core = TRZ }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             TRZ = {
                 set_country_flag = post_colonial_country
                 government = democracy
@@ -5380,6 +5533,11 @@ political_decisions = {
                 clr_country_flag = sikh_country
                 clr_country_flag = animist_country
             }
+			
+			any_owned = {
+				limit = { is_core = DAH }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             random_owned = { limit = { owner = { has_country_flag = catholic_country } } DAH = { religion = catholic set_country_flag = catholic_country } }
             random_owned = {
@@ -5559,6 +5717,11 @@ political_decisions = {
                 remove_core = BRU
                 remove_core = PPG
             }
+			
+			any_owned = {
+				limit = { is_core = INO }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             INO = {
                 set_country_flag = post_colonial_country
@@ -5675,6 +5838,12 @@ political_decisions = {
             1867 = { add_core = SOM }
             2031 = { add_core = SOM }
             2032 = { add_core = SOM }
+			
+			any_owned = {
+				limit = { is_core = SOM }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             SOM = {
                 set_country_flag = post_colonial_country
                 tech_school = developing_tech_school
@@ -5717,6 +5886,12 @@ political_decisions = {
                 }
                 add_core = TMR
             }
+			
+			any_owned = {
+				limit = { is_core = TMR }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
             TMR = {
                 tech_school = developing_tech_school
                 nationalvalue = nv_autocracy
@@ -5895,7 +6070,13 @@ political_decisions = {
             2082 = { change_province_name = "Gobabis" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } }
             2079 = { change_province_name = "Swakopmund" any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } }
             2078 = { change_province_name = "Windhoek" life_rating = 25 any_pop = { limit = { has_pop_religion = animist } literacy = -0.99 } }
-            NMB = {
+            
+			any_owned = {
+				limit = { is_core = NMB }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
+			
+			NMB = {
                 set_country_flag = post_colonial_country
                 primary_culture = THIS
                 add_accepted_culture = khoisan
@@ -6058,6 +6239,10 @@ political_decisions = {
             set_global_flag = lebanon_organized
             set_country_flag = lebanon_organizer
             LBN = { tech_school = developing_tech_school }
+			any_owned = {
+				limit = { is_core = LBN }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
             random_owned = {
                 limit = {
                     owner = {
@@ -6287,6 +6472,11 @@ political_decisions = {
                 clr_country_flag = sikh_country
                 clr_country_flag = animist_country
             }
+			
+			any_owned = {
+				limit = { is_core = GBU }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             random_owned = { limit = { owner = { has_country_flag = catholic_country } } GBU = { religion = catholic set_country_flag = catholic_country } }
             random_owned = {
@@ -6451,6 +6641,11 @@ political_decisions = {
                 clr_country_flag = sikh_country
                 clr_country_flag = animist_country
             }
+			
+			any_owned = {
+				limit = { is_core = MAD }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             random_owned = { limit = { owner = { has_country_flag = catholic_country } } MAD = { religion = catholic set_country_flag = catholic_country } }
             random_owned = {
@@ -6609,6 +6804,11 @@ political_decisions = {
                 clr_country_flag = sikh_country
                 clr_country_flag = animist_country
             }
+			
+			any_owned = {
+				limit = { is_core = ZBW }
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             random_owned = { limit = { owner = { has_country_flag = catholic_country } } ZBW = { religion = catholic set_country_flag = catholic_country } }
             random_owned = {
@@ -6817,6 +7017,16 @@ political_decisions = {
                 clr_country_flag = sikh_country
                 clr_country_flag = animist_country
             }
+			
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = RWA
+						is_core = BRD
+					}
+				}
+				add_province_modifier = { name = new_colonial_government duration = 3650 }
+			}
 
             random_owned = { limit = { province_id = 2035 owner = { has_country_flag = catholic_country } } BRD = { religion = catholic set_country_flag = catholic_country } }
             random_owned = {
