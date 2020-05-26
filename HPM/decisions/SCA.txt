@@ -116,7 +116,7 @@ political_decisions = {
     }
 
     move_capital_to_gothenburg = {
-        picture = declare_republic_of_neuchatel
+        picture = move_capital_to_gothenburg
         alert = no
         potential = {
             tag = SCA

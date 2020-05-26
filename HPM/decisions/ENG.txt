@@ -967,7 +967,7 @@ political_decisions = {
     }
 
     anglo_persian_oil_company = {
-        picture = map_arabia
+        picture = anglo_persian_oil_company
 
         potential = {
             tag = ENG
