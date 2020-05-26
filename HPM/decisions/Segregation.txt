@@ -88,7 +88,10 @@ political_decisions = {
                 all_core = {
                     owned_by = THIS
                     is_colonial = no
-                    any_pop = { is_accepted_culture = yes }
+                    OR = {
+						any_pop = { is_accepted_culture = yes }
+						any_pop = { is_primary_culture = yes }
+					}
                 }
                 nationalvalue = nv_equality
             }
@@ -271,7 +274,10 @@ political_decisions = {
             all_core = {
                 owned_by = THIS
                 is_colonial = no
-                any_pop = { is_accepted_culture = yes }
+                OR = {
+					any_pop = { is_accepted_culture = yes }
+					any_pop = { is_primary_culture = yes }
+				}
             }
             OR = {
                 upper_house = { ideology = reactionary value = 0.4 }
@@ -392,7 +398,10 @@ political_decisions = {
             all_core = {
                 owned_by = THIS
                 is_colonial = no
-                any_pop = { is_accepted_culture = yes }
+				OR = {
+					any_pop = { is_accepted_culture = yes }
+					any_pop = { is_primary_culture = yes }
+				}
             }
             OR = {
                 upper_house = { ideology = reactionary value = 0.51 }
