@@ -320,7 +320,8 @@ political_decisions = {
 			NOT = {
 				war = yes
 				upper_house_composition = party_appointed
-				badboy = 0.5
+				press_rights = state_press
+				badboy = 0.75
 				has_country_modifier = democratic_peace_summit
 			}
         }
