@@ -3363,6 +3363,32 @@ country_event = {
     }
 }
 
+country_event  = {
+
+	id = 315006
+	title = "EVTNAME315006"
+	desc = "EVTDESC315006"
+	picture = "cardiff"
+	
+	trigger = {
+		tag = WHA
+		NOT = { any_pop = { has_culture = welsh } }
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { primary_culture = welsh }
+	
+	mean_time_to_happen = { months = 2 }
+	
+	option = {
+		name = "EVTOPTA315006"
+		random_owned = { limit = { is_capital = yes } assimilate = yes }
+		any_pop = { limit = { NOT = { is_primary_culture = yes } } militancy = 3 consciousness = 4 }
+		any_owned = { limit = { is_core = THIS } add_province_modifier = { name = cultural_resurgence duration = 3650 } }
+	}
+}
+
 #David Livingstone is Found
 country_event = {
 
