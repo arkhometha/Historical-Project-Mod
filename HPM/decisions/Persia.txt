@@ -1,13 +1,13 @@
 political_decisions = {
 
-#Trip to Europe
-travel_to_europe = {
+	#Trip to Europe
+	travel_to_europe = {
         picture = dreams_of_empire
 
         potential = {
-                tag = PER
-                NOT = {    has_country_flag = travel_to_europe }
-                }
+            tag = PER
+            NOT = {    has_country_flag = travel_to_europe }
+        }
 
         allow = {
             money = 30000
@@ -16,11 +16,12 @@ travel_to_europe = {
         effect = {
             treasury = -25000
             prestige = 2
-            years_of_research = 0.5
-            relation = {
-                who = ENG
-                value = 50
-            }
+            years_of_research = 0.25
+            relation = { who = ENG value = 50 }
+			any_country = {
+				limit = { capital_scope = { continent = europe } }
+				relation = { who = PER value = 100 }
+			}
             set_country_flag = travel_to_europe
         }
 
@@ -28,8 +29,8 @@ travel_to_europe = {
 
     }
 
-#Persian Cinema
-persian_cinema = {
+	#Persian Cinema
+	persian_cinema = {
     picture = fatherland_altar
 
     potential = {
@@ -37,7 +38,7 @@ persian_cinema = {
         NOT = { has_country_flag = persian_cinema }
         NOT = { has_country_modifier = silver_age }
         year = 1880
-        }
+    }
 
     allow = {
         OR = {
@@ -59,8 +60,8 @@ persian_cinema = {
     ai_will_do = { factor = 1 }
     }
 
-#Greater Iran
-greater_iran = {
+	#Greater Iran
+	greater_iran = {
     picture = greater_iran
 
     potential = {
@@ -97,8 +98,8 @@ greater_iran = {
     }
 
 
-# Establish the Dar ul-Funun
-establish_the_dar_al_funun = {
+	# Establish the Dar ul-Funun
+	establish_the_dar_al_funun = {
         picture = suezcanalcompany
         potential = {
             tag = PER
@@ -145,7 +146,7 @@ establish_the_dar_al_funun = {
         }
     }
 
-revoke_kurdish_autonomy = {
+	revoke_kurdish_autonomy = {
         picture = map_kurdistan
         potential = {
             tag = PER
@@ -182,8 +183,8 @@ revoke_kurdish_autonomy = {
         ai_will_do = { factor = 1 }
     }
 
-#Establish the Majles
-establish_the_majles = {
+	#Establish the Majles
+	establish_the_majles = {
     picture = caucasus_viceroyalty
     potential = {
         tag = PER
@@ -209,8 +210,8 @@ establish_the_majles = {
     ai_will_do = { factor = 1 }
 }
 
-# End the bazaari strike.
-end_bazaari_strike = {
+	# End the bazaari strike.
+	end_bazaari_strike = {
     picture = PER_bazaari_strike
     potential = {
         has_country_modifier = bazaari_strike
@@ -245,8 +246,8 @@ end_bazaari_strike = {
     ai_will_do = { factor = 1 }
 }
 
-# Appoint Amir Kabir Mirza Taghi Khan
-appoint_amir_kabir = {
+	# Appoint Amir Kabir Mirza Taghi Khan
+	appoint_amir_kabir = {
     picture = amir_kabir
     potential = {
         tag = PER
@@ -282,8 +283,8 @@ appoint_amir_kabir = {
 }
 
 
-#Bring Tea to Iran
-bring_tea_to_iran = {
+	#Bring Tea to Iran
+	bring_tea_to_iran = {
         picture = prince_mirza
         potential = {
             tag = PER
