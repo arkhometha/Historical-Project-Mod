@@ -3,11 +3,23 @@ political_decisions = {
         picture = create_romania
         potential = {
             OR = {
-                tag = WAL
-                tag = MOL
+				AND = {
+					tag = WAL
+					neighbour = MOL
+				}
+				AND = {
+					tag = MOL
+					neighbour = WAL
+				}
             }
-            exists = WAL
-            exists = MOL
+			WAL = {
+				exists = yes
+				NOT = { has_country_flag = ghost_country }
+			}
+			MOL = {
+				exists = yes
+				NOT = { has_country_flag = ghost_country }
+			}
             NOT = { exists = ROM }
         }
 
@@ -19,17 +31,18 @@ political_decisions = {
                     TUR = { is_greater_power = no }
                     WAL = {
                         NOT = {
+							is_mobilised = yes
                             neighbour = TUR
                             any_neighbor_country = { vassal_of = TUR }
                         }
                     }
                     MOL = {
                         NOT = {
+							is_mobilised = yes
                             neighbour = TUR
                             any_neighbor_country = { vassal_of = TUR }
                         }
                     }
-                    MOL = { NOT = { neighbour = TUR } }
                 }
             }
             WAL = {

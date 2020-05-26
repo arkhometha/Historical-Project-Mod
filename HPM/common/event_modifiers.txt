@@ -308,6 +308,11 @@ native_assimilation_act_policy = {
     icon = 18
 }
 
+african_assimilation_act_policy = {
+    badboy = 0.04
+    icon = 18
+}
+
 native_removal_act_policy = {
     badboy = 0.02
     icon = 18
