@@ -3068,13 +3068,10 @@ political_decisions = {
             machine_guns = 1
             market_regulations = 1
             OR = {
-                ENG_2036 = { owned_by = THIS }
-                ENG_2044 = { owned_by = THIS }
-            }
-            OR = {
-                ENG_2036 = { owned_by = THIS }
-                ENG_2039 = { owned_by = THIS }
-            }
+				owns = 2045
+				ENG_2044 = { owned_by = THIS }
+				ENG_2039 = { owned_by = THIS }
+			}
         }
 
         effect = {

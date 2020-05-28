@@ -927,6 +927,7 @@ political_decisions = {
                         province_id = 1303
                         province_id = 1312
                         province_id = 1320
+						province_id = 2591
                         is_core = KAL
                         is_core = MAK
                         is_core = AFG
