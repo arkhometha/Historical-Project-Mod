@@ -220,7 +220,10 @@ political_decisions = {
                         primary_culture = tajik
                         primary_culture = kazak
                     }
-                    in_sphere = THIS
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
                     NOT = { tag = THIS }
                 }
                 annex_to = THIS
