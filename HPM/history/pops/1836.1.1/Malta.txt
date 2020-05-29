@@ -5,55 +5,61 @@
     bureaucrats = {
         culture = british
         religion = protestant
-        size = 50
+        size = 80
     }
 
     soldiers = {
         culture = british
         religion = protestant
-        size = 500
+        size = 700
     }
 
     artisans = {
         culture = british
         religion = protestant
-        size = 150
+        size = 352
     }
 
     aristocrats = {
         culture = maltese
         religion = catholic
-        size = 200
+        size = 220
     }
 
-    bureaucrats = {
-        culture = maltese
-        religion = catholic
-        size = 10
-    }
+    #bureaucrats = {
+    #    culture = maltese
+    #    religion = catholic
+    #    size = 10
+    #}
 
     clergymen = {
         culture = maltese
         religion = catholic
-        size = 275
+        size = 300
     }
 
     artisans = {
         culture = maltese
         religion = catholic
-        size = 5500
+        size = 6150
     }
 
     soldiers = {
         culture = maltese
         religion = catholic
-        size = 340
+        size = 405
     }
 
     farmers = {
         culture = maltese
         religion = catholic
-        size = 20475
+        size = 21800
+    }
+	
+	farmers = {
+        culture = south_italian
+        religion = catholic
+        size = 780
     }
 
 }
