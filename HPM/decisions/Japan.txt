@@ -645,14 +645,14 @@ political_decisions = {
                 tag = TKG
             }
             exists = KOR
-			OR = {
-				has_country_modifier = fukoku_kyohei
-				any_owned_province = { is_core = KOR }
-			}
-			OR = {
-			    NOT = { has_country_flag = annexed_korea }
-				ai = yes
-			}
+            OR = {
+                has_country_modifier = fukoku_kyohei
+                any_owned_province = { is_core = KOR }
+            }
+            OR = {
+                NOT = { has_country_flag = annexed_korea }
+                ai = yes
+            }
         }
 
         allow = {
@@ -689,23 +689,22 @@ political_decisions = {
                 }
                 civilized = no
                 annex_to = THIS
-				civilized = yes
+                civilized = yes
             }
 
-            random_country = {
+            random_owned = {
                 limit = {
-                    tag = KOR
-                    ai = no
+                    KOR = { ai = no }
                 }
-                casus_belli = {
-                    target = THIS
-                    type = become_independent
-                    months = 12
-                }
-                war = {
-                    target = KOR
-                    attacker_goal = { casus_belli = conquest_any }
-                    defender_goal = { casus_belli = become_independent }
+
+                owner = {
+                    release_vassal = KOR
+                    leave_alliance = KOR
+                    war = {
+                        target = KOR
+                        attacker_goal = { casus_belli = conquest_any }
+                        defender_goal = { casus_belli = become_independent }
+                    }
                 }
             }
         }
