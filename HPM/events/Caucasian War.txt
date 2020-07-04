@@ -115,7 +115,7 @@ country_event = {
         owns = 1051
         owns = 1049
         owns = 1056
-        1056 = { NOT = { has_country_modifier = highlander_raids } }
+        1056 = { NOT = { has_province_modifier = highlander_raids } }
         has_global_flag = 2nd_caucasian_war
         NOT = { government = democracy }
     }
@@ -211,7 +211,7 @@ country_event = {
         owns = 1051
         owns = 1049
         owns = 1056
-        1056 = { NOT = { has_country_modifier = highlander_raids } }
+        1056 = { NOT = { has_province_modifier = highlander_raids } }
         year = 1846
         NOT = { has_country_flag = shamil_captured }
         NOT = { has_country_flag = shamil_killed }
