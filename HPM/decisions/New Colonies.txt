@@ -5452,17 +5452,18 @@ political_decisions = {
             prestige = 3
             FRA_1775 = { add_core = TRZ }
             1782 = { trade_goods = iron }
-            1782 = {
+            random_owned = {
+                limit = { province_id = 1782 }
                 state_scope = {
                     change_region_name = "Mauritania"
                 }
             }
-			
-			any_owned = {
-				limit = { is_core = TRZ }
-				add_province_modifier = { name = new_colonial_government duration = 3650 }
-			}
-			
+
+            any_owned = {
+                limit = { is_core = TRZ }
+                add_province_modifier = { name = new_colonial_government duration = 3650 }
+            }
+
             TRZ = {
                 set_country_flag = post_colonial_country
                 government = democracy
