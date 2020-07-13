@@ -1,4 +1,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+PROV3009;Coast of California;;;;;;;;;;;;;x
+PROV3008;Santa Catalina Islands;;;;;;;;;;;;;x
+PROV2111;eThekwini;;;;;;;;;;;;;x
+PROV2114;Lobamba;;;;;;;;;;;;;x
 PROV2477;Warrnambool;;;;;;;;;;;;;x
 PROV1795;Bambuhu;;;;;;;;;;;;;x
 PROV1905;Sia;;;;;;;;;;;;;x
@@ -55,6 +59,7 @@ new_world_plains;Grassland;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 new_world_small_island;Island;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 arid_climate;Arid Climate;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 CANAL_6;English Channel;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
+CANAL_7;Nicaragua Canal;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;
 GRE_837;Central Greece;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 PROV2669;Sondrio;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 PROV8;Belluno;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
@@ -566,7 +571,7 @@ CHI_1579;East Sichuan;;;;;;;;;;;;x
 CHI_1594;Kashgar;;;;;;;;;;;;x
 CHI_1600;Urumqui;;;;;;;;;;;;x
 CHI_1601;Yunnan;;;;;;;;;;;;x
-CHI_1604;North Zhejiang;;;;;;;;;;;;x
+CHI_1604;Zhejiang;;;;;;;;;;;;x
 CHI_1610;South Zhejiang;;;;;;;;;;;;x
 PROV1612;Baoding;;;;;;;;;;;;x
 CHI_1612;Hebei;;;;;;;;;;;;x
@@ -795,7 +800,6 @@ CHI_1579;East Sichuan;;;;;;;;;;;;x
 CHI_1594;Kashgar;;;;;;;;;;;;x
 CHI_1600;Urumqui;;;;;;;;;;;;x
 CHI_1601;Yunnan;;;;;;;;;;;;x
-CHI_1604;North Zhejiang;;;;;;;;;;;;x
 CHI_1610;South Zhejiang;;;;;;;;;;;;x
 PROV1612;Baoding;;;;;;;;;;;;x
 CHI_1612;Baoding;;;;;;;;;;;;x

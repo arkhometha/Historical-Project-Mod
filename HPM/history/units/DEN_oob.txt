@@ -1,76 +1,131 @@
 ENG = {
-	value = 0
+    value = 0
 }
 
 PRU = {
-	value = 49
+    value = 49
 }
 
 leader = {
-	name = "Rye"
-	date = 1836.1.1
-	type = land
-	personality = daring
-	background = adventurer
+    name = "Rye"
+    date = 1836.1.1
+    type = land
+    personality = daring
+    background = adventurer
 }
 
 army = {
-	name = "Danske Haeren"
-	location = 372
-	regiment = {
-		name= "1.1. Infanteridivision"
-		type = infantry
-		home = 372
-	}
+    name = "Danske Haeren"
+    location = 372
+    regiment = {
+        name= "1.1. Infanteridivision"
+        type = infantry
+        home = 372
+    }
 
-	regiment = {
-		name= "2.1. Infanteridivision"
-		type = infantry
-		home = 372
-	}
+    regiment = {
+        name= "2.1. Infanteridivision"
+        type = infantry
+        home = 372
+    }
 
-	regiment = {
-		name= "3.1. Infanteridivision"
-		type = infantry
-		home = 367
-	}
-	
-	regiment = {
-		name= "1.2. Infanteridivision"
-		type = infantry
-		home = 366
-	}
+    regiment = {
+        name= "3.1. Infanteridivision"
+        type = infantry
+        home = 367
+    }
 
-	regiment = {
-		name= "1.1. Artilleridivision"
-		type = artillery
-		home = 368
-	}
+    regiment = {
+        name= "1.2. Infanteridivision"
+        type = infantry
+        home = 366
+    }
 
-	regiment = {
-		name= "1.2. Artilleridivision"
-		type = artillery
-		home = 2557
-	}
+    regiment = {
+        name= "1.1. Artilleridivision"
+        type = artillery
+        home = 368
+    }
 
-	regiment = {
-		name= "1.1. Kavalleridivision"
-		type = dragoon
-		home = 373
-	}
+    regiment = {
+        name= "1.2. Artilleridivision"
+        type = artillery
+        home = 2557
+    }
+
+    regiment = {
+        name= "1.1. Kavalleridivision"
+        type = dragoon
+        home = 373
+    }
 
 }
 
 navy = {
-	name = "Royal Navy"
-	location = 372
-	ship = {
-		name= "Danmark"
-		type = manowar
-	}
+    name = "Royal Navy"
+    location = 372
+    ship = {
+        name= "Dronning Marie"
+        type = manowar
+    }
 
+    ship = {
+        name= "Valdemar"
+        type = manowar
+    }
+	
 	ship = {
-		name= "Dronning Marie"
-		type = manowar
-	}
+        name= "Frederik den Sjette"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Skjold"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Danmark"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Phoenix"
+        type = manowar
+    }
+	
+	ship = {
+        name= "Freja"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Rota"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Havfruen"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Bellona"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Nymphen"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Fylla"
+        type = frigate
+    }
+	
+	ship = {
+        name= "Minerva"
+        type = frigate
+    }
 }

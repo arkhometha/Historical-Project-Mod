@@ -30,20 +30,21 @@ school_reforms = no_schools
 conscription = no_draft
 debt_law = peonage
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = primary_culture_only
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
 border_policy = open_borders
 
 set_country_flag = animist_country
 
 ruling_party = MAD_conservative
 upper_house = {
-	fascist = 0
-	liberal = 12
-	conservative = 79
-	reactionary = 9
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 12
+    conservative = 79
+    reactionary = 9
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 
@@ -60,13 +61,13 @@ modern_winemaking = yes
 
 oob = "MAD_oob.txt"
 1861.1.1 = {
-	oob = "/1861/MAD_oob.txt"
-	literacy = 0.05
-	non_state_culture_literacy = 0.02
+    oob = "/1861/MAD_oob.txt"
+    literacy = 0.05
+    non_state_culture_literacy = 0.02
 
-	#Military Reforms
-	foreign_weapons = yes_foreign_weapons
-	
-	#Technologies
-	flintlock_rifles = 1
+    #Military Reforms
+    foreign_weapons = yes_foreign_weapons
+
+    #Technologies
+    flintlock_rifles = 1
 }

@@ -1,10 +1,5 @@
 spriteTypes = {	
 
-	
-	spriteType = {
-		name = "GFX_politics_decision_bg"
-		texturefile = "gfx\\interface\\politics_decision_bg.dds"
-	}
 	spriteType = {
 		name = "GFX_sort_radical"
 		texturefile = "gfx\\interface\\sort_radical.dds"
@@ -58,8 +53,8 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\politics_release_bg.dds"
 	}
 	spriteType = {
-		name = "GFX_politics_decision_bg2"
-		texturefile = "gfx\\interface\\politics_decision_bg2.dds"
+		name = "GFX_politics_decision_bg"
+		texturefile = "gfx\\interface\\politics_decision_bg.dds"
 	}
 	spriteType = {
 		name = "GFX_politics_decision_entry"
@@ -93,7 +88,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_movement_strip_social"
 		texturefile = "gfx\\interface\\movement_strip_social.dds"
-		noOfFrames = 9
+		noOfFrames = 10
 	}
 	
 	spriteType = {
@@ -146,12 +141,6 @@ spriteTypes = {
 		name = "GFX_politics_conscription"
 		texturefile = "gfx\\interface\\politics_conscription.dds"
 	}
-	
-	spriteType = {
-		name = "GFX_politics_bureaucracy"
-		texturefile = "gfx\\interface\\politics_bureaucracy.dds"
-		}
-
 	
 	spriteType = {
 		name = "GFX_politics_borders"

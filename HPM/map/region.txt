@@ -129,7 +129,7 @@ ENG_263 = { 263 264 265 } #Leinster
 
 ENG_266 = { 266 267 268 1724 } #Highlands
 
-ENG_271 = { 271 269 270 272 } #Lowlands
+ENG_271 = { 269 271 270 272 } #Lowlands
 
 ENG_273 = { 273 274 275 276 } #Wales
 
@@ -196,7 +196,7 @@ BEL_394 = { 394 392 393 395 398 } #Wallonia
 
 FRA_399 = { 403 402 2570 } #Picardie - used to be { 403 405 406 408 402 2570 }
 
-FRA_400 = { 408 405 406 407 432 } #Champagne 
+FRA_400 = { 408 405 406 407 432 } #Champagne
 
 FRA_404 = { 399 400 401 404 } #Nord-Pas-De-Calais/Artois
 
@@ -239,13 +239,13 @@ FRA_467 = { 467 468 469 470 471 } #Provence
 
 SPA_474 = { 474 476 } #Galicia
 
-SPA_477 = { 477 479 480 481 482 483 475 478 } #León-Castilla
+SPA_477 = { 477 479 480 481 475 478 494} #León-Castilla
 
-SPA_484 = { 484 485 486 } #Extremadura
+SPA_484 = { 484 485 486 482 483 } #Extremadura
 
-SPA_487 = { 487 488 489 490 491 } #Castilla la Nueva
+SPA_487 = { 487 488 489 490 491 497 } #Castilla la Nueva
 
-SPA_492 = { 492 493 494 495 496 497 } #Vasconia-Aragón
+SPA_492 = { 492 493 495 496 } #Vasconia-Aragón
 
 SPA_498 = { 498 499 500 501 502 } #Catalonia
 
@@ -282,7 +282,7 @@ PRU_553 = { 553 555 556 557 } #Magdeburg
 
 PRU_554 = { 554 561 562 563 } #Thuringia
 
-SAX_558 = { 559 558 560 687 } #Saxony
+SAX_558 = { 558 559 560 687 } #Saxony
 
 HES_2560 = { 564 565 566 567 568 2560 } #Hessen
 
@@ -303,7 +303,7 @@ BAV_595 = { 595 596 597 598 } #Franconia
 BAV_599 = { 599 592 600 601 602 } #Upper Bavaria
 
 SWI_603 = { 603 606 611 2568 605 604 607 608 609 } #Switzerland
- 
+
 PRU_682 = { 682 683 684 685 } #Silesia
 
 PRU_690 = { 690 691 694 693 } #Westpreußen
@@ -595,7 +595,7 @@ RUS_1070 = { 1077 1469 2691 2701 2674 } #Upper Yeniseysk - Krasnoyarsk
 
 RUS_1071 = { 2648 2696 2644 } #Yakutsk
 
-RUS_1072 = { 1081 2697 1080 } #Amur Region - Khingan 
+RUS_1072 = { 1081 2697 1080 } #Amur Region - Khingan
 
 RUS_1074 = { 1074 2633 2616 2663 } #Kamchatka
 
@@ -684,11 +684,11 @@ ENG_1321 = { 1321 1322 1323 1324 1325 2128 } #Ceylon
 
 TIB_1591 = { 1587 1591 1592 1589 1588 1590 1593 } #Himalaya
 
-BUR_1330 = { 1330 1331 1332 1345 } #Pegu
+BUR_1330 = { 1330 1331 1332 1345 1336 1337} #Pegu
 
-BUR_1334 = { 1335 1336 1337 1333 1338 } #Former Shan States - Yadanabon - Mandalay
+BUR_1334 = { 1335 1333 1338 1340 } #Former Shan States - Yadanabon - Mandalay
 
-BUR_1339 = { 1334 1339 1341 1342 1340 } #Kachin
+BUR_1339 = { 1334 1339 1341 1342 } #Kachin
 
 #SIA_1355 = { } #Shan
 
@@ -767,7 +767,7 @@ CHI_1470 = { 1470 1471 1473 1475 } #South Anhui
 
 CHI_1477 = { 1477 1474 1476 1472 1478 } #North Anhui
 
-CHI_1479 = { 1479 1480 1481 1554 1555 }  #Fengtian - South Manchuria
+CHI_1479 = { 1479 1481 1554 1555 }  #Fengtian - South Manchuria
 
 CHI_1552 = { 1552 1002 1553 1533 } #Heilongjiang - North Manchuria
 
@@ -779,9 +779,9 @@ CHI_1490 = { 1490 1489 1491 1492 } #Gansu
 
 CHI_1493 = { 1493 1496 1498 1494 1497 1500 } #East Canton
 
-CHI_1499 = { 1495 1501 2632 } #West Canton
+CHI_1499 = { 1495 1501 2632 1499 } #West Canton
 
-CHI_1504 = { 1502 1503 1504 1499 } #Guangxi
+CHI_1504 = { 1502 1503 1504 } #Guangxi
 
 CHI_1505 = { 1505 1506 1507 } #Guizhou
 
@@ -827,13 +827,13 @@ CHI_1600 = { 1600 1595 1596 1599 } #Urumqui
 
 CHI_1601 = { 1601 1602 1603 } #Yunnan
 
-CHI_1604 = { 1604 1605 1606 1608 1609 } #North Zhejiang
+CHI_1604 = { 1604 1605 1606 1608 1609 1610 1607 1611 } #North Zhejiang
 
-CHI_1610 = { 1610 1607 1611 } #South Zhejiang
+#CHI_1610 = { 1610 1607 1611 } #South Zhejiang
 
 CHI_1612 = { 1612 1614 1615 1618 } #Baoding
 
-CHI_1616 = { 1616 1613 1617 } #Peking
+CHI_1616 = { 1616 1613 1617 1480 } #Peking
 
 
 ### Japan & Korea
@@ -1181,7 +1181,7 @@ PEU_2300 = { 2295 2300 2293 2296 2298 } #Lima
 
 PEU_2303 = { 2303 2304 2578 } #Arequipa
 
-BOL_2305 = { 2313 2314 2312 } #Atacama
+BOL_2305 = { 2313 2314 2312 2315 } #Atacama
 
 BOL_2309 = { 2305 2307 2308 2309 } #Antofagasta
 
@@ -1241,7 +1241,7 @@ ARG_2363 = { 2362 2363 2361 } #Santa Fe
 
 ARG_2360 = { 2360 2359 2357 2358 2554 2356 } #Entre Rios
 
-ARG_2368 = { 2368 2372 2371 2369 2370 2315 1714 } #Jujuy
+ARG_2368 = { 2368 2372 2371 2369 2370 1714 } #Jujuy
 
 ARG_2374 = { 2374 2375 2385 2386 2387 2388 } #Catamarca
 

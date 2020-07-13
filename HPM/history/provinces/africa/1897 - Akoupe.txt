@@ -1,5 +1,2 @@
-owner = KNG
-controller = KNG
-add_core = KNG
-trade_goods = fish
-life_rating = 35
+trade_goods = tropical_wood
+life_rating = 10

@@ -30,7 +30,8 @@ school_reforms = no_schools
 conscription = no_draft
 debt_law = serfdom
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = primary_culture_only
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
 border_policy = open_borders
 
 set_country_flag = protestant_country
@@ -38,13 +39,13 @@ set_country_flag = protestant_country
 ruling_party = FSM_conservative
 last_election = 1834.1.1
 upper_house = {
-	fascist = 0
-	liberal = 35
-	conservative = 60
-	reactionary = 5
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 35
+    conservative = 60
+    reactionary = 5
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 # Inventions

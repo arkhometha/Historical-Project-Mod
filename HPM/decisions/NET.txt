@@ -1,341 +1,341 @@
 political_decisions = {
-	mediate_belgian_independence = {
-		picture = sign_treaty_of_london
-		potential = {
-			tag = ENG
-			is_greater_power = yes
-			BEL = { exists = yes }
-			NET = {
-				exists = yes
-				NOT = { any_owned_province = { is_core = BEL } }
-				NOT = { has_country_flag = signed_treaty_of_london }
-			}
-			NOT = { has_country_flag = mediated_belgian_independence }
-		}
-		
-		allow = {
-			NET = {
-				war = no
-				is_greater_power = no
-			}
-			BEL = {
-				war = no
-			}
-			OR = { 
-				relation = {
-					who = NET
-					value = 100
-				}
-				diplomatic_influence = {
-					who = NET
-					value = 60
-				}
-			}
-		}
-		
-		effect = {
-			set_country_flag = mediated_belgian_independence
-			prestige = 10
-			NET = { country_event = 36709 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = { year = 1839 }
-			}
-		}
-	}
-	
-	end_the_javanese_sultanates = {
-		picture = map_java
-		potential = {
-			tag = NET
-			JAV = { 
-				vassal_of = THIS 
-				exists = yes
-				civilized = no
-				}
-			NOT = { has_country_flag = javanese_integrated }
-		}
-		
-		allow = {
-			war = no
-			nationalism_n_imperialism = 1
-		}
-		
-		effect = {
-			set_country_flag = javanese_integrated
-			JAV = { tech_school = developing_tech_school country_event = 952500 }
-			badboy = 1
-		}
-		
-		ai_will_do = { 
-			factor = 1 
-			modifier = { factor = 0 badboy = 0.95 }
-		}
-	}
-	
-	the_short_declaration = {
-		picture = moluccan_map
-		potential = {
-			tag = NET
-			OR = {
-				MAL = { vassal_of = THIS exists = yes civilized = no }
-				SAK = { vassal_of = THIS exists = yes civilized = no }
-			}
-			NOT = { has_country_flag = tidore_integrated }
-		}
-		
-		allow = {
-			war = no
-			nationalism_n_imperialism = 1
-			OR = {
-				MAL = { vassal_of = THIS exists = yes civilized = no }
-				SAK = { vassal_of = THIS exists = yes civilized = no }
-			}
-		}
-		
-		effect = {
-			set_country_flag = tidore_integrated
-			badboy = 2
-			random_country = {
-				limit = { exists = yes tag = MAL vassal_of = THIS civilized = no }
-				any_pop = { consciousness = 3 militancy = 1 }
-				tech_school = developing_tech_school
-				annex_to = THIS
-			}
-			random_country = {
-				limit = { exists = yes tag = SAK vassal_of = THIS civilized = no }
-				any_pop = { consciousness = 3 militancy = 1 }
-				tech_school = developing_tech_school
-				annex_to = THIS
-			}
-			random_owned = {
-				limit = { owner = { owns = 1453 } }
-				owner = { 1454 = { secede_province = THIS life_rating = 21 } 1560 = { secede_province = THIS life_rating = 21 } } 
-			}
-		}
-		
-		ai_will_do = { 
-			factor = 1 
-			modifier = { factor = 0 badboy = 0.9 }
-		}
-	}
-	
-	the_aceh_question = {
-		picture = the_aceh
-		potential = {
-			tag = NET
-			colonial_nation = yes
-			is_canal_enabled = 2
-			ATJ = {
-				exists = yes
-				part_of_sphere = yes
-				civilized = no
-				NOT = { in_sphere = NET }
-			}
-			NOT = { has_global_flag = gold_coast_treaty }
-			NOT = { has_country_flag = made_aceh_proposal }
-			ATJ = { neighbour = NET }
-		}
-		
-		allow = {
-			war = no
-			nationalism_n_imperialism = 1
-		}
-		
-		effect = {
-			set_country_flag = made_aceh_proposal
-			ATJ = { sphere_owner = { country_event = 952503 } }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	embrace_the_boer = {
-		picture = embrace_the_boer
-		potential = {
-			tag = NET
-			NOT = { has_country_flag = boer_accepted }
-			any_owned_province = { any_pop = { has_pop_culture = boer } }
-			any_owned_province = { 
-			OR = {
-				is_core = SAF
-				is_core = NAL
-				is_core = TRN
-				is_core = ORA
-				}
-			}
-		}
-		
-		allow = {
-			war = no
-			money = 100000
-			prestige = 100
-			plurality = 50
-			phenomenalism = 1
-			upper_house_composition = population_equal_weight
-			public_meetings = yes_meeting
-			press_rights = free_press
-			NOT = {
-				citizens_rights = primary_culture_only
-				citizenship_policy = residency
-			}
-			OR = {
-				government = democracy
-				government = hms_government
-			}
-		}
+    mediate_belgian_independence = {
+        picture = sign_treaty_of_london
+        potential = {
+            tag = ENG
+            is_greater_power = yes
+            BEL = { exists = yes }
+            NET = {
+                exists = yes
+                NOT = { any_owned_province = { is_core = BEL } }
+                NOT = { has_country_flag = signed_treaty_of_london }
+            }
+            NOT = { has_country_flag = mediated_belgian_independence }
+        }
 
-		effect = {
-			set_country_flag = boer_accepted
-			treasury = -100000
-			prestige_factor = -0.1
-			add_accepted_culture = boer
-			any_pop = {
-				limit = { has_pop_culture = boer }
-				militancy = -7
-				consciousness = -4
-				money = 10
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	dutch_wallonia = {
-		picture = become_wallonia
-		potential = {
-			owns = 392
-			owns = 393
-			owns = 394
-			owns = 395
-			owns = 398
-			OR = {
-				AND = {
-					NOT = { has_global_flag = dutch_wallonia_renamed }
-					tag = NET
-				}
-				AND = {
-					has_global_flag = dutch_wallonia_renamed
-					NOT = { tag = NET }
-				}
-			}
-		}
-		
-		allow = {
-			war = no
-			nationalism_n_imperialism = 1
-		}
-		
-		effect = {
-			prestige = 5
-			random_owned = {
-				limit = { owner = { tag = NET } }
-				owner = {
-					set_global_flag = dutch_wallonia_renamed
-					395 = { change_province_name = "Luik" }
-					392 = { change_province_name = "Namen" }
-					398 = { change_province_name = "Aarlen" }
-					393 = { change_province_name = "Doornik" }
-					394 = { change_province_name = "Bergen" }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { NOT = { tag = NET } } }
-				owner = {
-					clr_global_flag = dutch_wallonia_renamed
-					395 = { change_province_name = "Liège" }
-					392 = { change_province_name = "Namur" }
-					398 = { change_province_name = "Arlon" }
-					393 = { change_province_name = "Tournai" }
-					394 = { change_province_name = "Charleroi" }
-				}
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	first_annexiation_limburg = {
-		picture = neuschwanstein
-		potential = {
-			tag = NET
-			LBG = { exists = yes }
-			OR = {
-				is_our_vassal = LBG
-				LBG = { is_vassal = no }
-			}
-			OR = {
-				exists = NGF
-				exists = GER
-			}
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			random_country = {
-				limit = {
-					exists = yes
-					tag = LBG
-				}
-				all_core = { remove_core = LBG }
-				381 = { change_province_name = "Maastricht" }
-				annex_to = THIS
-			}
-			random_country = {
-				limit = {
-					neighbour = THIS
-					is_greater_power = yes
-					OR = {
-						tag = NGF
-						tag = GER
-					}
-				}
-				country_event = 952514
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	accept_the_flemish = {
-		picture = become_belgium
-		potential = {
-			tag = NET
-			NOT = { accepted_culture = flemish }
-			any_owned_province = { any_pop = { has_pop_culture = flemish } }
-		}
-		
-		allow = {
-			phenomenalism = 1
-			prestige = 100
-			has_country_modifier = freedom_of_religion
-			upper_house_composition = population_equal_weight
-			public_meetings = yes_meeting
-			press_rights = free_press
-			plurality = 50
-			NOT = {
-				citizens_rights = primary_culture_only
-				citizenship_policy = residency
-			}
-			OR = {
-				government = democracy
-				government = hms_government
-			}
-		}
-		
-		effect = {
-			prestige_factor = -0.1
-			add_accepted_culture = flemish
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
+        allow = {
+            NET = {
+                war = no
+                is_greater_power = no
+            }
+            BEL = {
+                war = no
+            }
+            OR = {
+                relation = {
+                    who = NET
+                    value = 100
+                }
+                diplomatic_influence = {
+                    who = NET
+                    value = 60
+                }
+            }
+        }
+
+        effect = {
+            set_country_flag = mediated_belgian_independence
+            prestige = 10
+            NET = { country_event = 36709 }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                NOT = { year = 1839 }
+            }
+        }
+    }
+
+    end_the_javanese_sultanates = {
+        picture = map_java
+        potential = {
+            tag = NET
+            JAV = {
+                vassal_of = THIS
+                exists = yes
+                civilized = no
+                }
+            NOT = { has_country_flag = javanese_integrated }
+        }
+
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+        }
+
+        effect = {
+            set_country_flag = javanese_integrated
+            JAV = { tech_school = developing_tech_school country_event = 952500 }
+            badboy = 1
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = { factor = 0 badboy = 0.95 }
+        }
+    }
+
+    the_short_declaration = {
+        picture = moluccan_map
+        potential = {
+            tag = NET
+            OR = {
+                MAL = { vassal_of = THIS exists = yes civilized = no }
+                SAK = { vassal_of = THIS exists = yes civilized = no }
+            }
+            NOT = { has_country_flag = tidore_integrated }
+        }
+
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+            OR = {
+                MAL = { vassal_of = THIS exists = yes civilized = no }
+                SAK = { vassal_of = THIS exists = yes civilized = no }
+            }
+        }
+
+        effect = {
+            set_country_flag = tidore_integrated
+            badboy = 2
+            random_country = {
+                limit = { exists = yes tag = MAL vassal_of = THIS civilized = no }
+                any_pop = { consciousness = 3 militancy = 1 }
+                tech_school = developing_tech_school
+                annex_to = THIS
+            }
+            random_country = {
+                limit = { exists = yes tag = SAK vassal_of = THIS civilized = no }
+                any_pop = { consciousness = 3 militancy = 1 }
+                tech_school = developing_tech_school
+                annex_to = THIS
+            }
+            random_owned = {
+                limit = { owner = { owns = 1453 } }
+                owner = { 1454 = { secede_province = THIS life_rating = 21 } 1560 = { secede_province = THIS life_rating = 21 } }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = { factor = 0 badboy = 0.9 }
+        }
+    }
+
+    the_aceh_question = {
+        picture = the_aceh
+        potential = {
+            tag = NET
+            colonial_nation = yes
+            is_canal_enabled = 2
+            ATJ = {
+                exists = yes
+                part_of_sphere = yes
+                civilized = no
+                NOT = { in_sphere = NET }
+            }
+            NOT = { has_global_flag = gold_coast_treaty }
+            NOT = { has_country_flag = made_aceh_proposal }
+            ATJ = { neighbour = NET }
+        }
+
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+        }
+
+        effect = {
+            set_country_flag = made_aceh_proposal
+            ATJ = { sphere_owner = { country_event = 952503 } }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    embrace_the_boer = {
+        picture = embrace_the_boer
+        potential = {
+            tag = NET
+            NOT = { has_country_flag = boer_accepted }
+            any_owned_province = { any_pop = { has_pop_culture = boer } }
+            any_owned_province = {
+            OR = {
+                is_core = SAF
+                is_core = NAL
+                is_core = TRN
+                is_core = ORA
+                }
+            }
+        }
+
+        allow = {
+            war = no
+            money = 100000
+            prestige = 100
+            plurality = 50
+            phenomenalism = 1
+            upper_house_composition = population_equal_weight
+            public_meetings = yes_meeting
+            press_rights = free_press
+            NOT = {
+                citizens_rights = primary_culture_only
+                citizenship_policy = residency
+            }
+            OR = {
+                government = democracy
+                government = hms_government
+            }
+        }
+
+        effect = {
+            set_country_flag = boer_accepted
+            treasury = -100000
+            prestige_factor = -0.1
+            add_accepted_culture = boer
+            any_pop = {
+                limit = { has_pop_culture = boer }
+                militancy = -7
+                consciousness = -4
+                money = 10
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    dutch_wallonia = {
+        picture = become_wallonia
+        potential = {
+            owns = 392
+            owns = 393
+            owns = 394
+            owns = 395
+            owns = 398
+            OR = {
+                AND = {
+                    NOT = { has_global_flag = dutch_wallonia_renamed }
+                    tag = NET
+                }
+                AND = {
+                    has_global_flag = dutch_wallonia_renamed
+                    NOT = { tag = NET }
+                }
+            }
+        }
+
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+        }
+
+        effect = {
+            prestige = 5
+            random_owned = {
+                limit = { owner = { tag = NET } }
+                owner = {
+                    set_global_flag = dutch_wallonia_renamed
+                    395 = { change_province_name = "Luik" }
+                    392 = { change_province_name = "Namen" }
+                    398 = { change_province_name = "Aarlen" }
+                    393 = { change_province_name = "Doornik" }
+                    394 = { change_province_name = "Bergen" }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { NOT = { tag = NET } } }
+                owner = {
+                    clr_global_flag = dutch_wallonia_renamed
+                    395 = { change_province_name = "Liège" }
+                    392 = { change_province_name = "Namur" }
+                    398 = { change_province_name = "Arlon" }
+                    393 = { change_province_name = "Tournai" }
+                    394 = { change_province_name = "Charleroi" }
+                }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    first_annexiation_limburg = {
+        picture = neuschwanstein
+        potential = {
+            tag = NET
+            LBG = { exists = yes }
+            OR = {
+                is_our_vassal = LBG
+                LBG = { is_vassal = no }
+            }
+            OR = {
+                exists = NGF
+                exists = GER
+            }
+        }
+
+        allow = {
+            war = no
+        }
+
+        effect = {
+            random_country = {
+                limit = {
+                    exists = yes
+                    tag = LBG
+                }
+                all_core = { remove_core = LBG }
+                381 = { change_province_name = "Maastricht" }
+                annex_to = THIS
+            }
+            random_country = {
+                limit = {
+                    neighbour = THIS
+                    is_greater_power = yes
+                    OR = {
+                        tag = NGF
+                        tag = GER
+                    }
+                }
+                country_event = 952514
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    accept_the_flemish = {
+        picture = become_belgium
+        potential = {
+            tag = NET
+            NOT = { accepted_culture = flemish }
+            any_owned_province = { any_pop = { has_pop_culture = flemish } }
+        }
+
+        allow = {
+            phenomenalism = 1
+            prestige = 100
+            has_country_modifier = freedom_of_religion
+            upper_house_composition = population_equal_weight
+            public_meetings = yes_meeting
+            press_rights = free_press
+            plurality = 50
+            NOT = {
+                citizens_rights = primary_culture_only
+                citizenship_policy = residency
+            }
+            OR = {
+                government = democracy
+                government = hms_government
+            }
+        }
+
+        effect = {
+            prestige_factor = -0.1
+            add_accepted_culture = flemish
+        }
+
+        ai_will_do = { factor = 1 }
+    }
 }

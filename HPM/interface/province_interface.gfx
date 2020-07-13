@@ -224,8 +224,9 @@ spriteTypes = {
 		colortwo = { 1.0 0.0 0.0 }
 		textureFile1 = "gfx\\interface\\liferating_progress1.tga"
 		textureFile2 = "gfx\\interface\\liferating_progress2.tga"
-		size = { x = 52 y = 8 }
+		size = { x = 104 y = 8 }
 		effectFile = "gfx\\FX\\progress.fx"
+		allwaystransparent = yes
 	}
 	
 	PieChartType = {

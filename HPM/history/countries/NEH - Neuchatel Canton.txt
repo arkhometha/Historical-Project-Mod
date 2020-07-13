@@ -1,7 +1,7 @@
 capital = 608
 primary_culture = swiss
 religion = protestant
-government = hms_government
+government = prussian_constitutionalism
 plurality = 25.0
 nationalvalue = nv_order
 literacy = 0.8
@@ -24,14 +24,15 @@ work_hours = no_work_hour_limit
 safety_regulations = no_safety
 health_care = no_health_care
 unemployment_subsidies = no_subsidies
-pensions = no_pensions 
+pensions = no_pensions
 school_reforms = no_schools
 
 # New Reforms
 conscription = mandatory_service
 debt_law = debtors_prisons
 penal_system = incarceration
-child_labor = child_labor_legalcitizens_rights = primary_culture_only
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
 border_policy = open_borders
 
 set_country_flag = protestant_country
@@ -39,13 +40,13 @@ set_country_flag = protestant_country
 ruling_party = SWI_conservative
 #last_election = 1835.1.1
 upper_house = {
-	fascist = 0
-	liberal = 25
-	conservative = 65
-	reactionary = 10
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 25
+    conservative = 65
+    reactionary = 10
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 #Technologies
@@ -79,4 +80,3 @@ basic_chemistry = 1
 # Starting Consciousness
 consciousness = 3
 nonstate_consciousness = 1
-

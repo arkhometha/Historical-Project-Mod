@@ -1,0 +1,3 @@
+sprite = Nicaragua_Canal
+x = -13
+y = -11

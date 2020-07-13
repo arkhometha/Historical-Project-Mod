@@ -43,7 +43,7 @@ From;To;Type;Through;Data;Comment
 324;348;sea;2706;0;Aland Strait #Uppsala to Aland #these were in V1
 334;372;sea;2711;0;Öresund
 335;374;sea;2710;0;Bornholmsfärjan
-348;345;sea;2706;0;Aland Strait #Aland to Turku 
+348;345;sea;2706;0;Aland Strait #Aland to Turku
 353;349;sea;2709;0;Öselsund
 353;358;sea;2709;0;Strait of Riga
 372;373;sea;2711;0;Fyn-Sjaelland
@@ -227,3 +227,4 @@ From;To;Type;Through;Data;Comment
 2773;2774;canal;860;4;Bosphorus Strait
 2772;2773;canal;859;5;Dardanelles Strait
 #2724;2723;canal;301;6;English Channel
+2968;3002;canal;2198;7;Nicaragua Canal

@@ -30,7 +30,8 @@ school_reforms = no_schools
 conscription = two_year_draft
 debt_law = peonage
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = primary_culture_only
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
 border_policy = open_borders
 
 set_country_flag = catholic_country
@@ -38,13 +39,13 @@ set_country_flag = catholic_country
 ruling_party = CHP_liberal
 last_election = 1835.2.14
 upper_house = {
-	fascist = 0
-	liberal = 55
-	conservative = 26
-	reactionary = 19
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 55
+    conservative = 26
+    reactionary = 19
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = new_world_nation

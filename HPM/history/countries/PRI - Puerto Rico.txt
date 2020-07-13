@@ -31,7 +31,8 @@ school_reforms = no_schools
 conscription = no_draft
 debt_law = peonage
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = culture_voting_only
+child_labor = child_labor_legal
+citizens_rights = culture_voting_only
 border_policy = open_borders
 
 set_country_flag = catholic_country
@@ -40,11 +41,11 @@ set_country_flag = new_world_nation
 
 ruling_party = PRI_liberal
 upper_house = {
-	fascist = 1
-	liberal = 49
-	conservative = 39
-	reactionary = 12
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 1
+    liberal = 49
+    conservative = 39
+    reactionary = 12
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }

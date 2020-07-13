@@ -31,18 +31,19 @@ school_reforms = no_schools
 conscription = no_draft
 debt_law = peonage
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = primary_culture_only
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
 border_policy = open_borders
 
 ruling_party = MAJ_conservative
 upper_house = {
-	fascist = 0
-	liberal = 16
-	conservative = 63
-	reactionary = 21
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 16
+    conservative = 63
+    reactionary = 21
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 set_country_flag = sunni_country
@@ -54,4 +55,3 @@ set_country_flag = sunni_country
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0
-

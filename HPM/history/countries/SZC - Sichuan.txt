@@ -30,20 +30,21 @@ school_reforms = no_schools
 conscription = no_draft
 debt_law = peonage
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = primary_culture_only
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
 border_policy = closed_borders
 
 set_country_flag = mahayana_country
 
 ruling_party = SZC_conservative
 upper_house = {
-	fascist = 0
-	liberal = 10
-	conservative = 30
-	reactionary = 30
-	anarcho_liberal = 0
-	socialist = 10
-	communist = 20
+    fascist = 0
+    liberal = 10
+    conservative = 30
+    reactionary = 30
+    anarcho_liberal = 0
+    socialist = 10
+    communist = 20
 }
 
 

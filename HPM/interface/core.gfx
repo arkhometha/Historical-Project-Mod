@@ -24,13 +24,6 @@ spriteTypes = {
 		noOfFrames = 1
 		norefcount = yes
 	}
-
-	spriteType = {
-		name = "GFX_icon_religion_small"
-		texturefile = "gfx\\interface\\icon_religion_small.dds"
-		noOfFrames = 18
-		loadType = "INGAME"
-	}
 	
 	spriteType = {
 		name = "GFX_bg_mainshadow"
@@ -634,6 +627,18 @@ bitmapfonts = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}
 	}
 	############################
@@ -651,6 +656,18 @@ bitmapfonts = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}
 	}
 
@@ -746,6 +763,18 @@ bitmapfonts = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}
 	}
 	
@@ -785,6 +814,18 @@ bitmapfonts = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}
 	}
 	
@@ -997,6 +1038,18 @@ bitmapfonts = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}
 	}
 	
@@ -1019,6 +1072,18 @@ bitmapfonts = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}		
 	}
 	
@@ -1034,6 +1099,18 @@ bitmapfonts = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}		
 	}
 	
@@ -1063,6 +1140,18 @@ bitmapfont = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}
 	}
 	
@@ -1085,6 +1174,18 @@ bitmapfont = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}
 	}
 	bitmapfont = {
@@ -1116,6 +1217,18 @@ bitmapfont = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}
 	}
 bitmapfont = {
@@ -1137,6 +1250,18 @@ bitmapfont = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}
 	}
 	bitmapfont = {
@@ -1164,6 +1289,18 @@ bitmapfont = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}
 	}
 bitmapfont = {
@@ -1185,6 +1322,18 @@ bitmapfont = {
 			b = { 0 0 0 }
 			g = { 176 176 176 }
 			Y = { 255 189 0 }
+			F = { 219 138 59 }		#Fire Bush (Yellow)
+			y = { 199 191 125 }		#Yuma (Yellow)
+			S = { 133 255 81 }		#Screamin' Green
+			h = { 56 105 48 }		#Green House
+			d = { 0 148 255 }		#Dodger Blue
+			m = { 97 209 250 }		#Maya Blue
+			f = { 66 94 194 }		#Free Speech Blue
+			p = { 161 31 153 }		#Dark Purple
+			v = { 243 81 255 }		#Heliotrope	(Violet)
+			V = { 216 30 5 }		#Venetian Red
+			u = { 125 41 31 }		#Burnt Umber (Brown)
+			s = { 148 130 110 }		#Squirrel (Brown)
 		}
 	}
 bitmapfont = {

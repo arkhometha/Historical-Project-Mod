@@ -1,1242 +1,1192 @@
 political_decisions = {
-	liberty_enlightening_the_world = {
-		potential = {
-			NOT = {
-				has_global_flag = statue_of_liberty_has_been_built
-			}
-			tag = FRA
-			exists = FRA
-			exists = USA
-			USA = {
-				government = democracy
-				owns = 232
-			}
-			FRA = {
-				OR = {
-					government = hms_government
-					government = democracy
-				}
-			}	
-			year = 1850
-		}
-	
-		allow = {
-			invention = martin_steel
-			USA = { slavery = no_slavery }
-		}
-	
-		effect = {
-			set_global_flag = statue_of_liberty_has_been_built
-			any_pop = {
-				militancy = -0.5
-			}
-			relation = {
-				who = USA
-				value = 50
-			}
-			USA = {
-				country_event = { id=19300 days=0 }
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = { relation = { who = USA value = -50 } }
-			}
-		}
-	}
-	support_french_foreign_legion = {
-		potential = {
-			tag = FRA
-			owns = 1700
-			NOT = {
-				has_country_flag = french_foreign_legion_supported
-			}
-		}
-		allow = {
-			army_professionalism = 1
-		}
-		effect = {
-			add_country_modifier = {
-				name = the_french_foreign_legion
-				duration = -1
-			}
-			set_country_flag = french_foreign_legion_supported
-		}
-	}
-	
-	french_military_mission_to_japan = {
-		potential = {
-			tag = FRA
-			OR = {
-				AND = {
-					exists = JAP
-					JAP = { civilized = no }
-				}
-				AND = {
-					exists = TKG
-					TKG = { civilized = no }
-				}
-			}
-			NOT = {
-				has_country_flag = military_mission_in_japan
-			}
-		}
-		
-		allow = {
-			nationalism_n_imperialism = 1
-			NOT = { war_with = JAP }
-			NOT = { truce_with = JAP }
-			NOT = { war_with = TKG }
-			NOT = { truce_with = TKG }
-		}
-		
-		effect = {
-			prestige = 20
-			random_country = {
-				limit = {
-					OR = {
-						tag = JAP
-						tag = TKG
-					}
-					exists = yes
-				}
-				relation = { who = FRA value = 50 }
-				years_of_research = 0.2
-			}
-			set_country_flag = military_mission_in_japan
-		}
-	}
-	
-	palais_garnier = {
-		potential = {
-			NOT = {
-				has_country_flag = palais_garnier_built
-			}
-			tag = FRA
-			owns = 425
-		}
-		
-		allow = {
-			expressionism = 1
-		}
-		
-		effect = {
-			prestige = 10
-			set_country_flag = palais_garnier_built
-		}
-	}
-	
-	the_lambert_charter = {
-		potential = {
-			NOT = {
-				has_country_flag = lambert_has_been_chartered
-			}
-			tag = FRA
-			exists = MAD
-		}
-		
-		allow = {
-			is_greater_power = yes
-			nationalism_n_imperialism = 1
-			MAD = {
-				civilized = no
-				OR = {
-					in_sphere = FRA
-					part_of_sphere = no
-				}
-			}
-		}
-		
-		effect = {
-			random_country = {
-				limit = {
-					NOT = { tag = THIS }
-					is_sphere_leader_of = MAD
-				}
-				diplomatic_influence = { who = MAD value = -150 }
-			}
-			diplomatic_influence = {
-				who = MAD
-				value = 150
-			}
-			set_country_flag = lambert_has_been_chartered
-		}
-	}
-	
-	end_the_merina_monarchy = {
-		picture = end_the_merina_monarchy
-		potential = {
-			has_global_flag = berlin_conference
-			is_greater_power = yes
-			nationalism_n_imperialism = 1
-			capital_scope = { continent = europe }
-			NOT = {
-				has_global_flag = merina_monarchy_is_over
-				has_global_flag = madagascar_organized
-			}
-			any_owned_province = { has_building = naval_base }
-			MAD = {
-				exists = yes
-				civilized = no
-			}
-		}
-		
-		allow = {
-			MAD = {
-				in_sphere = THIS
-				war = no
-			}
-			any_owned_province = { continent = africa }
-			has_global_flag = berlin_conference
-			invention = mission_to_civilize
-			war = no
-		}
-		
-		effect = {
-			set_global_flag = merina_monarchy_is_over
-			MAD = { country_event = 95505 }
-		}
-	}
-	
-	brazzas_expedition = {
-		picture = brazzas_expedition
-		potential = {
-			tag = FRA
-			invention = mission_to_civilize
-			is_greater_power = yes
-			LOA = {
-				ai = yes
-				owns = 1977
-				part_of_sphere = no
-			}
-			NOT = { has_country_flag = brazzas_expedition }
-		}
-		
-		allow = {
-			invention = colonial_negotiations
-			nationalism_n_imperialism = 1
-		}
-		
-		effect = {
-			set_country_flag = brazzas_expedition
-			prestige = 5
-			diplomatic_influence = { who = LOA value = 200 }
-			relation = { who = LOA value = 200 }
-		}
-	}
-	
-	the_rhine_crisis = {
-		potential = {
-			tag = FRA
-			exists = PRU
-			PRU = {
-				owns = 572
-				owns = 575
-			}
-			NOT = {
-				has_country_flag = crisis_on_the_rhine
-			}
-		}
-		
-		allow = {
-			state_n_government = 1
-		}
-		
-		effect = {
-			badboy = 5
-			any_country = {
-				limit = {
-					OR = {
-						primary_culture = north_german
-						primary_culture = south_german
-					}
-				}
-				relation = {
-					who = THIS
-					value = -100
-				}
-			}
-			casus_belli = {
-				target = PRU
-				type = acquire_state
-				months = 12
-			}
-			casus_belli = {
-				target = PRU
-				type = free_peoples
-				months = 12
-			}
-			prestige = 10
-			set_country_flag = crisis_on_the_rhine
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 0.5
-			}
-		}
-	}
-	
-	build_the_eiffel_tower = {
-		picture = build_the_eiffel_tower
-		potential = {
-			tag = FRA
-			NOT = {
-				has_country_flag = the_eiffel_tower_was_built
-			}
-			
-			has_country_flag = world_fair_planner
-		}
-		
-		allow = {
-			war = no
-			invention = bessemer_steel
-			OR = {
-				money = 30000
-				ai = yes
-			}
-		}
-		
-		effect = {
-			country_event = 37236
-			set_country_flag = the_eiffel_tower_was_built
-		}
-	}
-	
-	haussmanns_renovations = {
-		picture = haussmanns_renovations
-		potential = {
-			tag = FRA
-			owns = 425
-			NOT = { has_country_flag = extreme_home_makeover }
-			OR = {
-				realism = 1
-				early_railroad = 1
-			}
-		}
-		
-		allow = {
-			impressionism = 1
-			iron_railroad = 1
-			business_banks = 1
-			OR = {
-				money = 50000
-				ai = yes
-			}
-		}
-		
-		effect = {
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 50000 }
-						NOT = { check_variable = { which = owed_cash_money value = 1 } }
-					} 
-				}
-				owner = { set_variable = { which = owed_cash_money value = 50 } }
-			}
-			random_owned = {
-				limit = {
-					owner = {
-						NOT = { money = 50000 }
-						check_variable = { which = owed_cash_money value = 9 }
-					} 
-				}
-				owner = { change_variable = { which = owed_cash_money value = 50 } }
-			}
-			random_owned = {
-				limit = { owner = { money = 50000 } }
-				owner = { treasury = -50000 }
-			}
-			
-			425 = { life_rating = 5 add_province_modifier = { name = haussmanns_renovations duration = -1 } }
-			prestige = 10
-			set_country_flag = extreme_home_makeover
-		}
-	}
-	
-	annex_mayotte = {
-		picture = dreams_of_empire
-		potential = {
-			tag = FRA
-			is_greater_power = yes
-			2124 = { empty = yes }
-		}
-		
-		allow = {
-			war = no
-			medicine = 1
-		}
-		
-		effect = {
-			prestige = 3
-			2124 = {
-				secede_province = FRA
-				change_province_name = "Mayotte"
-			}
-		}
-	}
-	
-	plantations_in_comoros = {
-		picture = dreams_of_empire
-		potential = {
-			NOT = { 
-				2124 = { empty = yes }
-				2123 = { empty = yes }
-			}
-			OR = {
-				owns = 2124
-				owns = 2123
-			}
-			civilized = yes
-			NOT = { has_global_flag = colonial_comoros }
-		}
-		
-		allow = {
-			compound_steam_engines = 1
-		}
-		
-		effect = {
-			set_global_flag = colonial_comoros
-			prestige = 2
-			2124 = {
-				trade_goods = coffee
-				life_rating = 5
-			}
-			2123 = {
-				trade_goods = coffee
-				life_rating = 5
-			}
-		}
-	}
-	
-	cotton_in_algiers = {
-		picture = dreams_of_empire
-		potential = {
-			owns = 1704
-			owns = 1706
-			owns = 1700
-			civilized = yes
-			NOT = { has_global_flag = lets_grow_cotton_in_algiers }
-		}
-		
-		allow = {
-			compound_steam_engines = 1
-			business_regulations = 1
-		}
-		
-		effect = {
-			set_global_flag = lets_grow_cotton_in_algiers
-			prestige = 2
-			1706 = {
-				trade_goods = cotton
-			}
-			1704 = {
-				trade_goods = cotton
-			}
-			1703 = {
-				trade_goods = cotton
-			}
-		}
-	}
-	
-	claim_savoy = {
-		picture = form_italy
-		potential = {
-			tag = FRA
-			is_greater_power = yes
-			NOT = {
-				465 = { is_core = FRA }
-				has_global_flag = plombieres_refused
-				has_country_flag = claimed_savoy
-			}
-		}
-		
-		allow = {
-			nationalism_n_imperialism = 1
-			OR = {
-				war_policy = jingoism
-				war_policy = pro_military
-			}
-			ITA = {
-				exists = yes
-				NOT = { in_sphere = FRA }
-			}
-			NOT = {
-				is_disarmed = yes
-				has_country_modifier = punitive_effects
-				has_country_modifier = no_more_war
-			}
-		}
-		
-		effect = {
-			set_country_flag = claimed_savoy
-			badboy = 3
-			465 = { add_core = FRA }
-			466 = { add_core = FRA }
-			472 = { add_core = FRA }
-			random_country = {
-				limit = { owns = 465 }
-				country_event = 37244
-			}
-		}
-	}
-	
-	annex_new_caledonia = {
-		picture = dreams_of_empire
-		potential = {
-			tag = FRA
-			is_greater_power = yes
-			state_n_government = 1
-			1097 = { empty = yes }
-			OR = {
-				government = hms_government
-				government = prussian_constitutionalism
-				government = absolute_monarchy
-			}
-		}
-		
-		allow = {
-			war = no
-			nationalism_n_imperialism = 1
-		}
-		
-		effect = {
-			prestige = 3
-			1097 = { secede_province = FRA }
-			add_country_modifier = { name = penal_colonies duration = -1 }
-		}
-	}
-	
-	french_language_schooling = {
-		picture = embrace_minority
-		potential = {
-			tag = FRA
-			any_owned_province = { is_core = BRT }
-			BRT = { exists = no }
-			NOT = { has_country_flag = enacted_french_schooling	 }
-		}
-		
-		allow = {
-			war = no
-			NOT = { school_reforms = no_schools }
-			invention = biased_multiculturalism
-			invention = social_darwinism
-		}
-		
-		effect = {
-			set_country_flag = enacted_french_schooling
-			remove_accepted_culture = picard
-			remove_accepted_culture = occitan
-			remove_accepted_culture = breton
-			remove_accepted_culture = french_canadian
-			any_owned = {
-				limit = {
-					OR = {
-						is_core = BRT
-						is_core = OCC
-						culture = picard
-					}
-				}
-				add_province_modifier = {
-					name = french_cultural_unity
-					duration = -1
-				}
-			}
-			random_owned = {
-				limit = {
-					BRT = { exists = no }
-				}
-				BRT = { all_core = { remove_core = BRT } }
-			}
-			random_owned = {
-				limit = {
-					OCC = { exists = no }
-				}
-				OCC = { all_core = { remove_core = OCC } }
-			}
-		}
-	}
-	
-	st_barths_question = {
-		picture = map_caribbean
-		potential = {
-			tag = FRA
-			NOT = { owns = 3246 }
-			NOT = { has_country_flag = st_barths_referendum }
-			OR = {
-				owns = 45
-				owns = 2230
-				owns = 2228
-			}
-		}
-		
-		allow = {
-			war = no
-			nationalism_n_imperialism = 1
-			has_global_flag = berlin_conference
-			3246 = {
-				owner = {
-					NOT = {
-						truce_with = THIS 
-						relation = { who = THIS value = 0 }
-					}
-				}
-			}
-		}
-		
-		effect = {
-			set_country_flag = st_barths_referendum
-			3246 = { owner = { country_event = 36623 } }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	senegal_gambia_border_treaty = {
-		picture = map_senegal
-		potential = {
-			NOT = { has_country_flag = senegal_gambia_exchange }
-			civilized = yes
-			OR = {
-				has_global_flag = berlin_conference
-				revolution_n_counterrevolution = 1
-			}
-			OR = {
-				#Portugal owns Bissau and Ziguinchor but another country owns Gabu and Velingara
-				AND = {
-					any_neighbor_country = {  #Portugal
-						civilized = yes
-						war = no
-						owns = 1877 #Bissau
-						owns = 1792 #Ziguinchor
-					}
-					owns = 1793 #Velingara - Senegal
-					owns = 1878 #Gabu - Guinea Bissau
-				}
-				#Portugal owns Bissau, Ziguinchor and Gabu and a country that owns Velingara wants to buy Ziguinchor
-				AND = {
-					any_neighbor_country = { #Portugal
-						civilized = yes
-						war = no
-						owns = 1792 #Ziguinchor
-						owns = 1877 #Bissau
-						owns = 1878 #Gabu - Guinea Bissau
-					}
-					owns = 1793 #Velingara - Senegal
-				}
-				#Portugal owns Bissau and Ziguinchor but different countries own Velingara and Gabu. Portugal buys Gabu.
-				AND = {
-					owns = 1877 #Bissau
-					owns = 1792 #Ziguinchor
-					any_neighbor_country = {
-						war = no
-						civilized = yes
-						NOT = { owns = 1793 } #Velingara - Senegal
-						owns = 1878 #Gabu
-					}
-					1793 = { owner = { civilized = yes } }
-				}
-			}
-		}
-		
-		allow = {
-			war = no
-			nationalism_n_imperialism = 1
-		}
-		
-		effect = {
-			set_country_flag = senegal_gambia_exchange
-			#Portugal owns Bissau and Ziguinchor but another country owns Gabu and Velingara
-			random_country = {
-				limit = {
-					civilized = yes
-					owns = 1877 #Bissau
-					owns = 1792 #Ziguinchor
-					THIS = {
-						owns = 1878 #Gabu - Guinea Bissau
-						owns = 1793 #Velingara - Senegal
-					}
-				}
-				country_event = 955181
-			}
-			#Portugal owns Bissau, Ziguinchor and Gabu and a country that owns Velingara wants to buy Ziguinchor
-			random_country = {
-				limit = {
-					civilized = yes
-					owns = 1792 #Ziguinchor
-					owns = 1877 #Bissau
-					owns = 1878 #Gabu - Guinea Bissau
-				}
-				country_event = 955202
-				THIS = { set_country_flag = paying_for_senegal }
-			}
-			#Portugal owns Bissau and Ziguinchor but different countries own Velingara and Gabu. Portugal buys Gabu
-			random_country = {
-				limit = {
-					civilized = yes
-					NOT = { owns = 1793 } #Velingara - Senegal
-					owns = 1878 #Gabu
-					1793 = { owner = { civilized = yes } }
-					THIS = {
-						owns = 1877 #Bissau
-						owns = 1792 #Ziguinchor
-					}
-				}
-				country_event = 955204
-				THIS = { set_country_flag = paying_for_senegal }
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	conquer_conakry = {
-		picture = map_guinea
-		potential = {
-			tag = FRA
-			has_country_flag = faidherbe_ambitions
-			capital_scope = { continent = europe }
-			is_greater_power = yes
-			NOT = { owns = 1879 }
-			1879 = {
-				NOT = { is_core = GNE }
-				owner = {
-					ai = yes
-					civilized = no
-				}
-			}
-		}
-		
-		allow = {
-			war = no
-			is_disarmed = no
-			nationalism_n_imperialism = 1
-			NOT = { war_policy = pacifism }
-			OR = {
-				1885 = { empty = no }
-				owns = 1880
-			}
-			1879 = {
-				owner = {
-					OR = {
-						is_vassal = no
-						vassal_of = THIS
-					}
-					OR = {
-						part_of_sphere = no
-						in_sphere = THIS
-					}
-				}
-			}
-		}
-		
-		effect = {
-			badboy = 2
-			1879 = { owner = { relation =  { who = THIS value = -400 } any_neighbor_country = { relation =  { who = THIS value = -400 } } } }
-			1879 = {
-				change_province_name = "Conakry"
-				secede_province = THIS
-			}
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				badboy = 0.8
-			}
-		}
-	}
-	
-	the_1854_plan = {
-		picture = faidherbe
-		potential = {
-			tag = FRA
-			owns = 1784
-			year = 1845
-			NOT = { has_country_flag = faidherbe_ambitions }
-			2573 = {
-				owner = {
-					civilized = no
-					ai = yes
-					part_of_sphere = no
-				} 
-			}
-			
-		}
-		
-		allow = {
-			war = no
-			is_disarmed = no
-			nationalism_n_imperialism = 1
-			NOT = { war_policy = pacifism }
-		}
-		
-		effect = {
-			set_country_flag = faidherbe_ambitions
-			badboy = 1
-			2573 = { secede_province = THIS }
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
-	ivory_coast_conquest = {
-		picture = dreams_of_empire
-		potential = {
-			owns = 1894
-			OR = {
-				is_greater_power = yes
-				is_secondary_power = yes
-			}
-			1892 = { empty = yes }
-			1893 = { empty = yes }
-			1896 = { empty = yes }
-			has_global_flag = berlin_conference
-		}
-		
-		allow = {
-			war = no
-			machine_guns = 1
-			nationalism_n_imperialism = 1
-		}
-		
-		effect = {
-			1892 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
-			1893 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
-			1896 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
-			1895 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
-			1900 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
-			random_country = {
-				limit = {
-					tag = KNG
-					is_vassal = no
-					part_of_sphere = no
-					civilized = no
-					ai = yes
-					exists = yes
-				}
-				relation = {who = THIS value = -400 }
-			}
-			random_country = {
-				limit = {
-					tag = KNG
-					civilized = no
-					ai = yes
-					exists = yes
-				}
-				any_owned = { limit = { region = FRA_1893 } secede_province = THIS }
-			}
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	tunisian_colony = {
-		picture = dreams_of_empire
-		potential = {
-			TUN = { exists = yes civilized = no ai = yes } 
-			is_greater_power = yes
-			is_sphere_leader_of = TUN
-			NOT = { is_our_vassal = TUN }
-		}
-		
-		allow = {
-			war = no
-			nationalism_n_imperialism = 1
-			year = 1870
-			TUN = { NOT = { money = 3000 } }
-		}
-		
-		effect = {
-			badboy = 2
-			diplomatic_influence = { who = TUN value = -400 }
-			relation = { who = TUN value = -400 }
-			leave_alliance = TUN
-			end_military_access = TUN
-			TUN = {
-				set_country_flag = post_colonial_country
-				end_military_access = THIS
-				tech_school = developing_tech_school
-			}
-			any_country = { 
-				limit = { is_our_vassal = TUN }
-				release_vassal = TUN
-				casus_belli = { target = THIS type = free_peoples months = 40 }
-				casus_belli = { target = TUN type = make_puppet months = 40 }
-			}
-			war = { target = TUN attacker_goal = { casus_belli = conquest_any } defender_goal = { casus_belli = status_quo } }
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = { factor = 0 badboy = 0.92 }
-		}
-	}
-	
-	take_the_channel_islands = {
-		picture = channel_islands
-		potential = {
-			OR = {
-				419 = { owner = { war_with = THIS } }
-				419 = { owner = { truce_with = THIS } }
-			}
-			NOT = { owns = 419 }
-			tag = FRA
-		}
-		
-		allow = {
-			war = no
-			is_vassal = no
-			is_greater_power = yes 
-			NOT = { is_disarmed = yes }
-			NOT = { has_recently_lost_war = yes }
-			NOT = { is_mobilised = yes }
-			owns = 418
-			war_policy = jingoism
-			419 = { owner = { is_disarmed = yes truce_with = THIS has_recently_lost_war = yes war = no NOT = { military_score = THIS } } }
-		}
-		
-		effect = {
-			badboy = 3
-			419 = { secede_province = THIS }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = { factor = 0 badboy = 0.8 }
-		}
-	}
-	
-	#The Devil's Island
-	devil_island = {
-		picture = FRA_devils_island
-		potential = {
-			tag = FRA
-			GUY = { exists = no }
-			owns = 2241 #Cayenne
-			year = 1852
-			penal_system = colonial_transportation
-			NOT = { has_country_flag = devil_island }
-			NOT = { has_country_modifier = penal_colonies }
-		}
-		allow = {
-			money = 5000
-		}
-			
-		effect = {
-			set_country_flag = devil_island
-			treasury = -5000
-			prestige = 5
-			2241 = { life_rating = 1 }
-			add_country_modifier = { name = penal_colonies duration = -1 }
-		}
-	}
-	
-	#Rename Bourboun/Reunion Island
-	rename_bourbon_island = {
-		picture = FRA_devils_island
-		potential = {
-			tag = FRA
-			owns = 2126
-			OR = {
-				AND = {
-					government = democracy
-					NOT = { has_country_flag = reunion_island }
-				}
-				AND = {
-					OR = {
-						government = absolute_monarchy
-						government = prussian_constitutionalism
-						government = hms_government
-					}
-					has_country_flag = 2nd_empire
-					NOT = { has_country_flag = bonaparte_island }
-				}
-			}
-		}
-		allow = {
-			war = no
-			state_n_government = 1
-		}
-			
-		effect = {
-			clr_country_flag = reunion_island
-			clr_country_flag = bonaparte_island
-			prestige = 2
-			random_owned = {
-				limit = {
-					province_id = 2126
-					owner = { government = democracy }
-				}
-				change_province_name = "Reunion"
-				owner = { set_country_flag = reunion_island }
-			}
-			random_owned = {
-				limit = {
-					province_id = 2126
-					owner = {
-						OR = {
-							government = absolute_monarchy
-							government = prussian_constitutionalism
-							government = hms_government
-						}
-						has_country_flag = 2nd_empire
-					}
-				}
-				change_province_name = "Bonaparte"
-				owner = { set_country_flag = bonaparte_island }
-			}
-		}
-	}
-	
-	#Flip Canada
-	turn_canada_french = {
-		picture = canadian_dominion
-		potential = {
-			tag = FRA
-			CAN = {
-				NOT = { primary_culture = french_canadian }
-				OR = {
-					all_core = { owned_by = THIS }
-					vassal_of = THIS
-				}
-			}	
-		}
-		allow = {
-			war = no
-			state_n_government = 1
-		}
-			
-		effect = {
-			CAN = {
-				remove_accepted_culture = french_canadian
-				primary_culture = french_canadian
-				add_accepted_culture = anglo_canadian
-			}
-			random_owned = {
-				limit = { owner = { slavery = no_slavery } }
-				owner = {
-					CAN = { political_reform = no_slavery }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { public_meetings = no_meeting } }
-				owner = {
-					CAN = { political_reform = no_meeting }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { public_meetings = yes_meeting } }
-				owner = {
-					CAN = { political_reform = yes_meeting }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { debt_law = peonage } }
-				owner = {
-					CAN = { political_reform = peonage }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { OR = { debt_law = debtors_prisons debt_law = bankruptcy } } }
-				owner = {
-					CAN = { political_reform = debtors_prisons }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { press_rights = state_press } }
-				owner = {
-					CAN = { political_reform = state_press }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { press_rights = censored_press } }
-				owner = {
-					CAN = { political_reform = censored_press }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { press_rights = free_press } }
-				owner = {
-					CAN = { political_reform = free_press }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { voting_system = first_past_the_post } }
-				owner = {
-					CAN = { political_reform = first_past_the_post }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { voting_system = jefferson_method } }
-				owner = {
-					CAN = { political_reform = jefferson_method }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { voting_system = proportional_representation } }
-				owner = {
-					CAN = { political_reform = proportional_representation }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { vote_franschise = none_voting } }
-				owner = {
-					CAN = { political_reform = none_voting }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { vote_franschise = landed_voting } }
-				owner = {
-					CAN = { political_reform = landed_voting }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { vote_franschise = wealth_weighted_voting } }
-				owner = {
-					CAN = { political_reform = wealth_weighted_voting }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { vote_franschise = wealth_voting } }
-				owner = {
-					CAN = { political_reform = wealth_voting }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { vote_franschise = universal_weighted_voting } }
-				owner = {
-					CAN = { political_reform = universal_weighted_voting }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { vote_franschise = universal_voting } }
-				owner = {
-					CAN = { political_reform = universal_voting }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { political_parties = underground_parties } }
-				owner = {
-					CAN = { political_reform = underground_parties }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { political_parties = harassment } }
-				owner = {
-					CAN = { political_reform = harassment }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { political_parties = gerrymandering } }
-				owner = {
-					CAN = { political_reform = gerrymandering }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { political_parties = non_secret_ballots } }
-				owner = {
-					CAN = { political_reform = non_secret_ballots }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { political_parties = secret_ballots } }
-				owner = {
-					CAN = { political_reform = secret_ballots }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { upper_house_composition = party_appointed } }
-				owner = {
-					CAN = { political_reform = party_appointed }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { upper_house_composition = appointed } }
-				owner = {
-					CAN = { political_reform = appointed }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { upper_house_composition = state_equal_weight } }
-				owner = {
-					CAN = { political_reform = state_equal_weight }
-				}
-			}
-			
-			random_owned = {
-				limit = { owner = { upper_house_composition = population_equal_weight } }
-				owner = {
-					CAN = { political_reform = population_equal_weight }
-				}
-			}
-			
-			random_owned = {
-				limit = {
-					owner = {
-						OR = {
-							government = prussian_constitutionalism
-							government = hms_government
-							government = democracy
-						}
-					}
-				}
-				CAN = { government = democracy }
-			}
-			
-			random_owned = {
-				limit = {
-					owner = {
-						OR = {
-							government = absolute_monarchy
-							government = presidential_dictatorship
-						}
-					}
-				}
-				CAN = { government = presidential_dictatorship }
-			}
-			
-			random_owned = {
-				limit = { owner = { government = proletarian_dictatorship } }
-				CAN = { government = proletarian_dictatorship }
-			}
-			
-			random_owned = {
-				limit = { owner = { government = bourgeois_dictatorship } }
-				CAN = { government = bourgeois_dictatorship }
-			}
-			
-			random_owned = {
-				limit = { owner = { government = fascist_dictatorship } }
-				CAN = { government = fascist_dictatorship }
-			}
-		}
-	}
+    liberty_enlightening_the_world = {
+        potential = {
+            NOT = {
+                has_global_flag = statue_of_liberty_has_been_built
+            }
+            tag = FRA
+            exists = FRA
+            exists = USA
+            USA = {
+                government = democracy
+                owns = 232
+            }
+            FRA = {
+                OR = {
+                    government = hms_government
+                    government = democracy
+                }
+            }
+            year = 1850
+        }
+
+        allow = {
+            invention = martin_steel
+            USA = { slavery = no_slavery }
+        }
+
+        effect = {
+            set_global_flag = statue_of_liberty_has_been_built
+            any_pop = {
+                militancy = -0.5
+            }
+            relation = {
+                who = USA
+                value = 50
+            }
+            USA = {
+                country_event = { id=19300 days=0 }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                NOT = { relation = { who = USA value = -50 } }
+            }
+        }
+    }
+    support_french_foreign_legion = {
+        potential = {
+            tag = FRA
+            owns = 1700
+            NOT = {
+                has_country_flag = french_foreign_legion_supported
+            }
+        }
+        allow = {
+            army_professionalism = 1
+        }
+        effect = {
+            add_country_modifier = {
+                name = the_french_foreign_legion
+                duration = -1
+            }
+            set_country_flag = french_foreign_legion_supported
+        }
+    }
+
+    french_military_mission_to_japan = {
+        potential = {
+            tag = FRA
+            OR = {
+                AND = {
+                    exists = JAP
+                    JAP = { civilized = no }
+                }
+                AND = {
+                    exists = TKG
+                    TKG = { civilized = no }
+                }
+            }
+            NOT = {
+                has_country_flag = military_mission_in_japan
+            }
+        }
+
+        allow = {
+            nationalism_n_imperialism = 1
+            NOT = { war_with = JAP }
+            NOT = { truce_with = JAP }
+            NOT = { war_with = TKG }
+            NOT = { truce_with = TKG }
+        }
+
+        effect = {
+            prestige = 20
+            random_country = {
+                limit = {
+                    OR = {
+                        tag = JAP
+                        tag = TKG
+                    }
+                    exists = yes
+                }
+                relation = { who = FRA value = 50 }
+                years_of_research = 0.2
+            }
+            set_country_flag = military_mission_in_japan
+        }
+    }
+
+    palais_garnier = {
+        potential = {
+            NOT = {
+                has_country_flag = palais_garnier_built
+            }
+            tag = FRA
+            owns = 425
+        }
+
+        allow = {
+            expressionism = 1
+        }
+
+        effect = {
+            prestige = 10
+            set_country_flag = palais_garnier_built
+        }
+    }
+
+    the_lambert_charter = {
+        potential = {
+            NOT = {
+                has_country_flag = lambert_has_been_chartered
+            }
+            tag = FRA
+            exists = MAD
+        }
+
+        allow = {
+            is_greater_power = yes
+            nationalism_n_imperialism = 1
+            MAD = {
+                civilized = no
+                OR = {
+                    in_sphere = FRA
+                    part_of_sphere = no
+                }
+            }
+        }
+
+        effect = {
+            random_country = {
+                limit = {
+                    NOT = { tag = THIS }
+                    is_sphere_leader_of = MAD
+                }
+                diplomatic_influence = { who = MAD value = -150 }
+            }
+            diplomatic_influence = {
+                who = MAD
+                value = 150
+            }
+            set_country_flag = lambert_has_been_chartered
+        }
+    }
+
+    end_the_merina_monarchy = {
+        picture = end_the_merina_monarchy
+        potential = {
+            has_global_flag = berlin_conference
+            is_greater_power = yes
+            nationalism_n_imperialism = 1
+            capital_scope = { continent = europe }
+            NOT = {
+                has_global_flag = merina_monarchy_is_over
+                has_global_flag = madagascar_organized
+            }
+            any_owned_province = { has_building = naval_base }
+            MAD = {
+                exists = yes
+                civilized = no
+            }
+        }
+
+        allow = {
+            MAD = {
+                in_sphere = THIS
+                war = no
+            }
+            any_owned_province = { continent = africa }
+            has_global_flag = berlin_conference
+            invention = mission_to_civilize
+            war = no
+        }
+
+        effect = {
+            set_global_flag = merina_monarchy_is_over
+            MAD = { country_event = 95505 }
+        }
+    }
+
+    brazzas_expedition = {
+        picture = brazzas_expedition
+        potential = {
+            tag = FRA
+            invention = mission_to_civilize
+            is_greater_power = yes
+            LOA = {
+                ai = yes
+                owns = 1977
+                part_of_sphere = no
+            }
+            NOT = { has_country_flag = brazzas_expedition }
+        }
+
+        allow = {
+            invention = colonial_negotiations
+            nationalism_n_imperialism = 1
+        }
+
+        effect = {
+            set_country_flag = brazzas_expedition
+            prestige = 5
+            diplomatic_influence = { who = LOA value = 200 }
+            relation = { who = LOA value = 200 }
+        }
+    }
+
+    the_rhine_crisis = {
+        potential = {
+            tag = FRA
+            exists = PRU
+            PRU = {
+                owns = 572
+                owns = 575
+            }
+            NOT = {
+                has_country_flag = crisis_on_the_rhine
+            }
+        }
+
+        allow = {
+            state_n_government = 1
+        }
+
+        effect = {
+            badboy = 5
+            any_country = {
+                limit = {
+                    OR = {
+                        primary_culture = north_german
+                        primary_culture = south_german
+                    }
+                }
+                relation = {
+                    who = THIS
+                    value = -100
+                }
+            }
+            casus_belli = {
+                target = PRU
+                type = acquire_state
+                months = 12
+            }
+            casus_belli = {
+                target = PRU
+                type = free_peoples
+                months = 12
+            }
+            prestige = 10
+            set_country_flag = crisis_on_the_rhine
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                badboy = 0.5
+            }
+        }
+    }
+
+    build_the_eiffel_tower = {
+        picture = build_the_eiffel_tower
+        potential = {
+            tag = FRA
+            NOT = {
+                has_country_flag = the_eiffel_tower_was_built
+            }
+
+            has_country_flag = world_fair_planner
+        }
+
+        allow = {
+            war = no
+            invention = bessemer_steel
+            OR = {
+                money = 30000
+                ai = yes
+            }
+        }
+
+        effect = {
+            country_event = 37236
+            set_country_flag = the_eiffel_tower_was_built
+        }
+    }
+
+    haussmanns_renovations = {
+        picture = haussmanns_renovations
+        potential = {
+            tag = FRA
+            owns = 425
+            NOT = { has_country_flag = extreme_home_makeover }
+            OR = {
+                realism = 1
+                early_railroad = 1
+            }
+        }
+
+        allow = {
+            impressionism = 1
+            iron_railroad = 1
+            business_banks = 1
+            OR = {
+                money = 50000
+                ai = yes
+            }
+        }
+
+        effect = {
+
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { money = 50000 }
+                        check_variable = { which = owed_cash_money value = 9 }
+                    }
+                }
+                owner = { change_variable = { which = owed_cash_money value = 50 } }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { money = 50000 }
+                        NOT = { check_variable = { which = owed_cash_money value = 1 } }
+                    }
+                }
+                owner = { set_variable = { which = owed_cash_money value = 50 } }
+            }
+            random_owned = {
+                limit = { owner = { money = 50000 } }
+                owner = { treasury = -50000 }
+            }
+
+            425 = { life_rating = 5 add_province_modifier = { name = haussmanns_renovations duration = -1 } }
+            prestige = 10
+            set_country_flag = extreme_home_makeover
+        }
+    }
+
+    cotton_in_algiers = {
+        picture = dreams_of_empire
+        potential = {
+            owns = 1704
+            owns = 1706
+            owns = 1700
+            civilized = yes
+            NOT = { has_global_flag = lets_grow_cotton_in_algiers }
+        }
+
+        allow = {
+            compound_steam_engines = 1
+            business_regulations = 1
+        }
+
+        effect = {
+            set_global_flag = lets_grow_cotton_in_algiers
+            prestige = 2
+            1706 = {
+                trade_goods = cotton
+            }
+            1704 = {
+                trade_goods = cotton
+            }
+            1703 = {
+                trade_goods = cotton
+            }
+        }
+    }
+
+    claim_savoy = {
+        picture = form_italy
+        potential = {
+            tag = FRA
+            is_greater_power = yes
+            NOT = {
+                465 = { is_core = FRA }
+                has_global_flag = plombieres_refused
+                has_country_flag = claimed_savoy
+            }
+        }
+
+        allow = {
+            nationalism_n_imperialism = 1
+            OR = {
+                war_policy = jingoism
+                war_policy = pro_military
+            }
+            ITA = {
+                exists = yes
+                NOT = { in_sphere = FRA }
+            }
+            NOT = {
+                is_disarmed = yes
+                has_country_modifier = punitive_effects
+                has_country_modifier = no_more_war
+            }
+        }
+
+        effect = {
+            set_country_flag = claimed_savoy
+            badboy = 3
+            465 = { add_core = FRA }
+            466 = { add_core = FRA }
+            472 = { add_core = FRA }
+            random_country = {
+                limit = { owns = 465 }
+                country_event = 37244
+            }
+        }
+    }
+
+    annex_new_caledonia = {
+        picture = dreams_of_empire
+        potential = {
+            tag = FRA
+            is_greater_power = yes
+            state_n_government = 1
+            1097 = { empty = yes }
+            OR = {
+                government = hms_government
+                government = prussian_constitutionalism
+                government = absolute_monarchy
+            }
+        }
+
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+        }
+
+        effect = {
+            prestige = 3
+            1097 = { secede_province = FRA }
+            add_country_modifier = { name = penal_colonies duration = -1 }
+        }
+    }
+
+    french_language_schooling = {
+        picture = embrace_minority
+        potential = {
+            tag = FRA
+            any_owned_province = { is_core = BRT }
+            BRT = { exists = no }
+            NOT = { has_country_flag = enacted_french_schooling     }
+        }
+
+        allow = {
+            war = no
+            NOT = { school_reforms = no_schools }
+            invention = biased_multiculturalism
+            invention = social_darwinism
+        }
+
+        effect = {
+            set_country_flag = enacted_french_schooling
+            remove_accepted_culture = picard
+            remove_accepted_culture = occitan
+            remove_accepted_culture = breton
+            remove_accepted_culture = french_canadian
+            any_owned = {
+                limit = {
+                    OR = {
+                        is_core = BRT
+                        is_core = OCC
+                        culture = picard
+                    }
+                }
+                add_province_modifier = {
+                    name = french_cultural_unity
+                    duration = -1
+                }
+            }
+            random_owned = {
+                limit = {
+                    BRT = { exists = no }
+                }
+                BRT = { all_core = { remove_core = BRT } }
+            }
+            random_owned = {
+                limit = {
+                    OCC = { exists = no }
+                }
+                OCC = { all_core = { remove_core = OCC } }
+            }
+        }
+    }
+
+    st_barths_question = {
+        picture = map_caribbean
+        potential = {
+            tag = FRA
+            NOT = { owns = 3246 }
+            NOT = { has_country_flag = st_barths_referendum }
+            OR = {
+                owns = 45
+                owns = 2230
+                owns = 2228
+            }
+        }
+
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+            has_global_flag = berlin_conference
+            3246 = {
+                owner = {
+                    NOT = {
+                        truce_with = THIS
+                        relation = { who = THIS value = 0 }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            set_country_flag = st_barths_referendum
+            3246 = { owner = { country_event = 36623 } }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    senegal_gambia_border_treaty = {
+        picture = map_senegal
+        potential = {
+            NOT = { has_country_flag = senegal_gambia_exchange }
+            civilized = yes
+            OR = {
+                has_global_flag = berlin_conference
+                revolution_n_counterrevolution = 1
+            }
+            OR = {
+                #Portugal owns Bissau and Ziguinchor but another country owns Gabu and Velingara
+                AND = {
+                    any_neighbor_country = {  #Portugal
+                        civilized = yes
+                        war = no
+                        owns = 1877 #Bissau
+                        owns = 1792 #Ziguinchor
+                    }
+                    owns = 1793 #Velingara - Senegal
+                    owns = 1878 #Gabu - Guinea Bissau
+                }
+                #Portugal owns Bissau, Ziguinchor and Gabu and a country that owns Velingara wants to buy Ziguinchor
+                AND = {
+                    any_neighbor_country = { #Portugal
+                        civilized = yes
+                        war = no
+                        owns = 1792 #Ziguinchor
+                        owns = 1877 #Bissau
+                        owns = 1878 #Gabu - Guinea Bissau
+                    }
+                    owns = 1793 #Velingara - Senegal
+                }
+                #Portugal owns Bissau and Ziguinchor but different countries own Velingara and Gabu. Portugal buys Gabu.
+                AND = {
+                    owns = 1877 #Bissau
+                    owns = 1792 #Ziguinchor
+                    any_neighbor_country = {
+                        war = no
+                        civilized = yes
+                        NOT = { owns = 1793 } #Velingara - Senegal
+                        owns = 1878 #Gabu
+                    }
+                    1793 = { owner = { civilized = yes } }
+                }
+            }
+        }
+
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+        }
+
+        effect = {
+            set_country_flag = senegal_gambia_exchange
+            #Portugal owns Bissau and Ziguinchor but another country owns Gabu and Velingara
+            random_country = {
+                limit = {
+                    civilized = yes
+                    owns = 1877 #Bissau
+                    owns = 1792 #Ziguinchor
+                    THIS = {
+                        owns = 1878 #Gabu - Guinea Bissau
+                        owns = 1793 #Velingara - Senegal
+                    }
+                }
+                country_event = 955181
+            }
+            #Portugal owns Bissau, Ziguinchor and Gabu and a country that owns Velingara wants to buy Ziguinchor
+            random_country = {
+                limit = {
+                    civilized = yes
+                    owns = 1792 #Ziguinchor
+                    owns = 1877 #Bissau
+                    owns = 1878 #Gabu - Guinea Bissau
+                }
+                country_event = 955202
+                THIS = { set_country_flag = paying_for_senegal }
+            }
+            #Portugal owns Bissau and Ziguinchor but different countries own Velingara and Gabu. Portugal buys Gabu
+            random_country = {
+                limit = {
+                    civilized = yes
+                    NOT = { owns = 1793 } #Velingara - Senegal
+                    owns = 1878 #Gabu
+                    1793 = { owner = { civilized = yes } }
+                    THIS = {
+                        owns = 1877 #Bissau
+                        owns = 1792 #Ziguinchor
+                    }
+                }
+                country_event = 955204
+                THIS = { set_country_flag = paying_for_senegal }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    conquer_conakry = {
+        picture = map_guinea
+        potential = {
+            tag = FRA
+            has_country_flag = faidherbe_ambitions
+            capital_scope = { continent = europe }
+            is_greater_power = yes
+            NOT = { owns = 1879 }
+            1879 = {
+                NOT = { is_core = GNE }
+                owner = {
+                    ai = yes
+                    civilized = no
+                }
+            }
+        }
+
+        allow = {
+            war = no
+            is_disarmed = no
+            nationalism_n_imperialism = 1
+            NOT = { war_policy = pacifism }
+            OR = {
+                1885 = { empty = no }
+                owns = 1880
+            }
+            1879 = {
+                owner = {
+                    OR = {
+                        is_vassal = no
+                        vassal_of = THIS
+                    }
+                    OR = {
+                        part_of_sphere = no
+                        in_sphere = THIS
+                    }
+                }
+            }
+        }
+
+        effect = {
+            badboy = 2
+            1879 = { owner = { relation =  { who = THIS value = -400 } any_neighbor_country = { relation =  { who = THIS value = -400 } } } }
+            1879 = {
+                change_province_name = "Conakry"
+                secede_province = THIS
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                badboy = 0.8
+            }
+        }
+    }
+
+    the_1854_plan = {
+        picture = faidherbe
+        potential = {
+            tag = FRA
+            owns = 1784
+            year = 1845
+            NOT = { has_country_flag = faidherbe_ambitions }
+            2573 = {
+                owner = {
+                    civilized = no
+                    ai = yes
+                    part_of_sphere = no
+                }
+            }
+
+        }
+
+        allow = {
+            war = no
+            is_disarmed = no
+            nationalism_n_imperialism = 1
+            NOT = { war_policy = pacifism }
+        }
+
+        effect = {
+            set_country_flag = faidherbe_ambitions
+            badboy = 1
+            2573 = { secede_province = THIS }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    ivory_coast_conquest = {
+        picture = dreams_of_empire
+        potential = {
+            owns = 1894
+            OR = {
+                is_greater_power = yes
+                is_secondary_power = yes
+            }
+            1892 = { empty = yes }
+            1893 = { empty = yes }
+            1896 = { empty = yes }
+            has_global_flag = berlin_conference
+        }
+
+        allow = {
+            war = no
+            machine_guns = 1
+            nationalism_n_imperialism = 1
+        }
+
+        effect = {
+            1892 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
+            1893 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
+            1896 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
+            1897 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
+            1895 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
+            1900 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 }
+            random_country = {
+                limit = {
+                    tag = KNG
+                    is_vassal = no
+                    part_of_sphere = no
+                    civilized = no
+                    ai = yes
+                    exists = yes
+                }
+                relation = {who = THIS value = -400 }
+            }
+            random_country = {
+                limit = {
+                    tag = KNG
+                    civilized = no
+                    ai = yes
+                    exists = yes
+                }
+                any_owned = { limit = { region = FRA_1893 } secede_province = THIS }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    tunisian_colony = {
+        picture = dreams_of_empire
+        potential = {
+            TUN = { exists = yes civilized = no ai = yes }
+            is_greater_power = yes
+            is_sphere_leader_of = TUN
+            NOT = { is_our_vassal = TUN }
+        }
+
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+            year = 1870
+            TUN = { NOT = { money = 3000 } }
+        }
+
+        effect = {
+            badboy = 2
+            diplomatic_influence = { who = TUN value = -400 }
+            relation = { who = TUN value = -400 }
+            leave_alliance = TUN
+            end_military_access = TUN
+            TUN = {
+                set_country_flag = post_colonial_country
+                end_military_access = THIS
+                tech_school = developing_tech_school
+            }
+            any_country = {
+                limit = { is_our_vassal = TUN }
+                release_vassal = TUN
+                casus_belli = { target = THIS type = free_peoples months = 40 }
+                casus_belli = { target = TUN type = make_puppet months = 40 }
+            }
+            war = { target = TUN attacker_goal = { casus_belli = conquest_any } defender_goal = { casus_belli = status_quo } }
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = { factor = 0 badboy = 0.92 }
+        }
+    }
+
+    take_the_channel_islands = {
+        picture = channel_islands
+        potential = {
+            OR = {
+                419 = { owner = { war_with = THIS } }
+                419 = { owner = { truce_with = THIS } }
+            }
+            NOT = { owns = 419 }
+            tag = FRA
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+            is_greater_power = yes
+            NOT = { is_disarmed = yes }
+            NOT = { has_recently_lost_war = yes }
+            NOT = { is_mobilised = yes }
+            owns = 418
+            war_policy = jingoism
+            419 = { owner = { is_disarmed = yes truce_with = THIS has_recently_lost_war = yes war = no NOT = { military_score = THIS } } }
+        }
+
+        effect = {
+            badboy = 3
+            419 = { secede_province = THIS }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = { factor = 0 badboy = 0.8 }
+        }
+    }
+
+    #The Devil's Island
+    devil_island = {
+        picture = FRA_devils_island
+        potential = {
+            tag = FRA
+            GUY = { exists = no }
+            owns = 2241 #Cayenne
+            year = 1852
+            penal_system = colonial_transportation
+            NOT = { has_country_flag = devil_island }
+            NOT = { has_country_modifier = penal_colonies }
+        }
+        allow = {
+            money = 5000
+        }
+
+        effect = {
+            set_country_flag = devil_island
+            treasury = -5000
+            prestige = 5
+            2241 = { life_rating = 1 }
+            add_country_modifier = { name = penal_colonies duration = -1 }
+        }
+    }
+
+    #Rename Bourboun/Reunion Island
+    rename_bourbon_island = {
+        picture = FRA_devils_island
+        potential = {
+            tag = FRA
+            owns = 2126
+            OR = {
+                AND = {
+                    government = democracy
+                    NOT = { has_country_flag = reunion_island }
+                }
+                AND = {
+                    OR = {
+                        government = absolute_monarchy
+                        government = prussian_constitutionalism
+                        government = hms_government
+                    }
+                    has_country_flag = 2nd_empire
+                    NOT = { has_country_flag = bonaparte_island }
+                }
+            }
+        }
+        allow = {
+            war = no
+            state_n_government = 1
+        }
+
+        effect = {
+            clr_country_flag = reunion_island
+            clr_country_flag = bonaparte_island
+            prestige = 2
+            random_owned = {
+                limit = {
+                    province_id = 2126
+                    owner = { government = democracy }
+                }
+                change_province_name = "Reunion"
+                owner = { set_country_flag = reunion_island }
+            }
+            random_owned = {
+                limit = {
+                    province_id = 2126
+                    owner = {
+                        OR = {
+                            government = absolute_monarchy
+                            government = prussian_constitutionalism
+                            government = hms_government
+                        }
+                        has_country_flag = 2nd_empire
+                    }
+                }
+                change_province_name = "Bonaparte"
+                owner = { set_country_flag = bonaparte_island }
+            }
+        }
+    }
+
+    #Flip Canada
+    turn_canada_french = {
+        picture = canadian_dominion
+        potential = {
+            tag = FRA
+            CAN = {
+                NOT = { primary_culture = french_canadian }
+                OR = {
+                    all_core = { owned_by = THIS }
+                    vassal_of = THIS
+                }
+            }
+        }
+        allow = {
+            war = no
+            state_n_government = 1
+        }
+
+        effect = {
+            CAN = {
+				set_country_flag = catholic_country
+				clr_country_flag = protestant_country
+				religion = catholic
+                remove_accepted_culture = french_canadian
+                primary_culture = french_canadian
+                add_accepted_culture = anglo_canadian
+            }
+            random_owned = {
+                limit = { owner = { slavery = no_slavery } }
+                owner = {
+                    CAN = { political_reform = no_slavery }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { public_meetings = no_meeting } }
+                owner = {
+                    CAN = { political_reform = no_meeting }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { public_meetings = yes_meeting } }
+                owner = {
+                    CAN = { political_reform = yes_meeting }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { debt_law = peonage } }
+                owner = {
+                    CAN = { political_reform = peonage }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { OR = { debt_law = debtors_prisons debt_law = bankruptcy } } }
+                owner = {
+                    CAN = { political_reform = debtors_prisons }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { press_rights = state_press } }
+                owner = {
+                    CAN = { political_reform = state_press }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { press_rights = censored_press } }
+                owner = {
+                    CAN = { political_reform = censored_press }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { press_rights = free_press } }
+                owner = {
+                    CAN = { political_reform = free_press }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { voting_system = first_past_the_post } }
+                owner = {
+                    CAN = { political_reform = first_past_the_post }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { voting_system = jefferson_method } }
+                owner = {
+                    CAN = { political_reform = jefferson_method }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { voting_system = proportional_representation } }
+                owner = {
+                    CAN = { political_reform = proportional_representation }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { vote_franschise = none_voting } }
+                owner = {
+                    CAN = { political_reform = none_voting }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { vote_franschise = landed_voting } }
+                owner = {
+                    CAN = { political_reform = landed_voting }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { vote_franschise = wealth_weighted_voting } }
+                owner = {
+                    CAN = { political_reform = wealth_weighted_voting }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { vote_franschise = wealth_voting } }
+                owner = {
+                    CAN = { political_reform = wealth_voting }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { vote_franschise = universal_weighted_voting } }
+                owner = {
+                    CAN = { political_reform = universal_weighted_voting }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { vote_franschise = universal_voting } }
+                owner = {
+                    CAN = { political_reform = universal_voting }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { political_parties = underground_parties } }
+                owner = {
+                    CAN = { political_reform = underground_parties }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { political_parties = harassment } }
+                owner = {
+                    CAN = { political_reform = harassment }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { political_parties = gerrymandering } }
+                owner = {
+                    CAN = { political_reform = gerrymandering }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { political_parties = non_secret_ballots } }
+                owner = {
+                    CAN = { political_reform = non_secret_ballots }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { political_parties = secret_ballots } }
+                owner = {
+                    CAN = { political_reform = secret_ballots }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { upper_house_composition = party_appointed } }
+                owner = {
+                    CAN = { political_reform = party_appointed }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { upper_house_composition = appointed } }
+                owner = {
+                    CAN = { political_reform = appointed }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { upper_house_composition = state_equal_weight } }
+                owner = {
+                    CAN = { political_reform = state_equal_weight }
+                }
+            }
+
+            random_owned = {
+                limit = { owner = { upper_house_composition = population_equal_weight } }
+                owner = {
+                    CAN = { political_reform = population_equal_weight }
+                }
+            }
+
+            random_owned = {
+                limit = {
+                    owner = {
+                        OR = {
+                            government = prussian_constitutionalism
+                            government = hms_government
+                            government = democracy
+                        }
+                    }
+                }
+                CAN = { government = democracy }
+            }
+
+            random_owned = {
+                limit = {
+                    owner = {
+                        OR = {
+                            government = absolute_monarchy
+                            government = presidential_dictatorship
+                        }
+                    }
+                }
+                CAN = { government = presidential_dictatorship }
+            }
+
+            random_owned = {
+                limit = { owner = { government = proletarian_dictatorship } }
+                CAN = { government = proletarian_dictatorship }
+            }
+
+            random_owned = {
+                limit = { owner = { government = bourgeois_dictatorship } }
+                CAN = { government = bourgeois_dictatorship }
+            }
+
+            random_owned = {
+                limit = { owner = { government = fascist_dictatorship } }
+                CAN = { government = fascist_dictatorship }
+            }
+        }
+    }
 
 }

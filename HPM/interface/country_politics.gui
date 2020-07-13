@@ -410,7 +410,7 @@ guiTypes = {
 			
 			iconType = {
 				name ="bg"
-				spriteType = "GFX_politics_decision_bg2"
+				spriteType = "GFX_politics_decision_bg"
 				position = { x= 2 y = 34 }
 				Orientation = "UPPER_LEFT"
 			}

@@ -31,18 +31,19 @@ school_reforms = no_schools
 conscription = no_draft
 debt_law = serfdom
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = primary_culture_only
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
 border_policy = open_borders
 
 ruling_party = ASH2_conservative
 upper_house = {
-	fascist = 0
-	liberal = 0
-	conservative = 60
-	reactionary = 40
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 0
+    conservative = 60
+    reactionary = 40
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
 
 #foreign_weapons = yes_foreign_weapons
@@ -58,7 +59,7 @@ nonstate_consciousness = 0
 
 oob = "ASH_oob.txt"
 1861.1.1 = {
-	oob = "/1861/ASH_oob.txt"
+    oob = "/1861/ASH_oob.txt"
 }
 1861.1.1 = {
 

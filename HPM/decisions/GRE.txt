@@ -1,282 +1,302 @@
 political_decisions = {
 
-	make_crete_a_state = {
-		picture = hellenic_parliament
-		potential = {
-			owns = 847
-			owns = 848
-			capital_scope = { continent = europe }
-			847 = { is_colonial = yes }
-			civilized = yes
-		}
-	
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			release = CRE
-			inherit = CRE
-		}
-		ai_will_do = { factor = 1 }
-	}
+    make_crete_a_state = {
+        picture = hellenic_parliament
+        potential = {
+            owns = 847
+            owns = 848
+            capital_scope = { continent = europe }
+            847 = { is_colonial = yes }
+            civilized = yes
+        }
 
-	hellenic_parliament = {
-		picture = hellenic_parliament
-		potential = {
-			tag = GRE
-			government = absolute_monarchy
-			NOT = { has_country_flag = voule_ton_ellinon }
-		}
-	
-		allow = {
-			plurality = 40
-			OR = {
-				prestige = 40
-				state_n_government = 1
-			}
-		}
-		
-		effect = {
-			set_country_flag = voule_ton_ellinon
-			political_reform = wealth_weighted_voting
-			prestige = 5
-			random_owned = {
-				limit = { owner = { political_parties = underground_parties } }
-				owner = { political_reform = harassment }
-			}
-			government = prussian_constitutionalism
-			any_pop = { militancy = -2 }
-		}
-	}
-	
-	megali_idea = {
-		potential = {
-			tag = GRE
-			NOT = { has_country_flag = greece_has_got_a_brand_new_bag }
-			NOT = { has_country_flag = population_exchange_with_turkey }
-		}
-		
-		allow = {
-			NOT = { has_country_flag = population_exchange_with_turkey }
-			is_greater_power = yes
-			invention = national_fraternity
-			owns = 832
-			owns = 805
-			owns = 823
-			owns = 844
-			owns = 843
-			owns = 846
-		}
-		
-		effect = {
-			prestige = 10
-			country_event = 5000001
-			set_country_flag = greece_has_got_a_brand_new_bag
-		}
-	}
-	
-	unite_with_greece = {
-	picture = unite_with_greece
-		potential = {
-			primary_culture = greek
-			NOT = { tag = GRE }
-			exists = GRE
-			NOT = { has_country_flag = unite_with_greece }
-		}
+        allow = {
+            war = no
+        }
 
-		allow = {
-			war = no
-			is_vassal = no
-			OR = {
-				part_of_sphere = no
-				sphere_owner = { is_sphere_leader_of = GRE }
-			}
-			GRE = {
-				war = no
-				is_vassal = no
-			}
-		}
+        effect = {
+            release = CRE
+            inherit = CRE
+        }
+        ai_will_do = { factor = 1 }
+    }
 
-		effect = {
-			set_country_flag = unite_with_greece
-			random_country = {
-				limit = {
-					tag = GRE
-					ai = yes
-					THIS = { ai = yes }
-				}
-				THIS = {
-					remove_accepted_culture = north_italian
-					remove_accepted_culture = british
-				}
-				inherit = THIS
-			}
-			random_country = {
-				limit = {
-					tag = GRE
-					ai = yes
-					THIS = { ai = no }
-				}
-				any_owned = { secede_province = THIS }
-				THIS = {
-					remove_accepted_culture = turkish
-					remove_accepted_culture = north_italian
-					remove_accepted_culture = british
-					random_owned = {
-						limit = { province_id = 834 }
-						owner = { capital = 834 }
-					}
-					change_tag = GRE
-				}	
-			}
-			random_country = {
-				limit = {
-					tag = GRE
-					ai = no
-				}
-				country_event = 60130
-			}
-		}
+    hellenic_parliament = {
+        picture = hellenic_parliament
+        potential = {
+            tag = GRE
+            government = absolute_monarchy
+            NOT = { has_country_flag = voule_ton_ellinon }
+        }
 
-		ai_will_do = {
-			factor = 1
+        allow = {
+            plurality = 40
+            OR = {
+                prestige = 40
+                state_n_government = 1
+            }
+        }
+
+        effect = {
+            set_country_flag = voule_ton_ellinon
+            political_reform = wealth_weighted_voting
+            prestige = 5
+            random_owned = {
+                limit = { owner = { political_parties = underground_parties } }
+                owner = { political_reform = harassment }
+            }
+            government = prussian_constitutionalism
+            any_pop = { militancy = -2 }
+        }
+    }
+
+    megali_idea = {
+        potential = {
+            tag = GRE
+            NOT = { has_country_flag = greece_has_got_a_brand_new_bag }
+            NOT = { has_country_flag = population_exchange_with_turkey }
+        }
+
+        allow = {
+            NOT = { has_country_flag = population_exchange_with_turkey }
+            invention = national_fraternity
+            owns = 832
+            owns = 805
+            owns = 823
+            owns = 844
+            owns = 843
+            owns = 846
+            OR = {
+                war_policy = jingoism
+                war_policy = pro_military
+            }
+            OR = {
+                is_greater_power = yes
+                AND = {
+                    is_secondary_power = yes
+                    great_wars_enabled = yes
+                    has_country_flag = in_great_war
+                    war_countries = {
+                        tag = TUR
+                        has_country_flag = in_great_war
+                    }
+                }
+                AND = {
+                    is_secondary_power = yes
+                    NOT = { any_greater_power = { alliance_with = TUR } }
+                    NOT = { RUS = { is_greater_power = yes } }
+                    TUR = {
+                        is_greater_power = no
+                        NOT = {
+                            capital = 860
+                            part_of_sphere = yes
+                        }
+                    }
+                }
+                AND = {
+                    is_secondary_power = yes
+                    TUR = { in_sphere = RUS }
+                }
+            }
+        }
+
+        effect = {
+            prestige = 10
+            country_event = 5000001
+            set_country_flag = greece_has_got_a_brand_new_bag
+        }
+    }
+
+    unite_with_greece = {
+    picture = unite_with_greece
+        potential = {
+            primary_culture = greek
+            NOT = { tag = GRE }
+            exists = GRE
+            NOT = { has_country_flag = unite_with_greece }
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+            OR = {
+                part_of_sphere = no
+                sphere_owner = { is_sphere_leader_of = GRE }
+            }
+            GRE = {
+                war = no
+                is_vassal = no
+            }
+        }
+
+        effect = {
+            set_country_flag = unite_with_greece
+            random_country = {
+                limit = {
+                    tag = GRE
+                    ai = yes
+                    THIS = { ai = yes }
+                }
+                THIS = {
+                    remove_accepted_culture = north_italian
+                    remove_accepted_culture = british
+                }
+                inherit = THIS
+            }
+            random_country = {
+                limit = {
+                    tag = GRE
+                    ai = yes
+                    THIS = { ai = no }
+                }
+                any_owned = { secede_province = THIS }
+                THIS = {
+                    remove_accepted_culture = turkish
+                    remove_accepted_culture = north_italian
+                    remove_accepted_culture = british
+                    random_owned = {
+                        limit = { province_id = 834 }
+                        owner = { capital = 834 }
+                    }
+                    change_tag = GRE
+                }
+            }
+            random_country = {
+                limit = {
+                    tag = GRE
+                    ai = no
+                }
+                country_event = 60130
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
 			modifier = {
 				factor = 0
 				government = fascist_dictatorship
-				GRE = {
-					NOT = { government = fascist_dictatorship }
+				GRE = { NOT = { government = fascist_dictatorship } }
+			}
+			modifier = {
+				factor = 0
+				government = proletarian_dictatorship
+				GRE = { NOT = { government = proletarian_dictatorship } }
+			}
+            modifier = {
+                factor = 0
+                OR = {
+                    government = democracy
+                    government = hms_government
+                }
+                GRE = {
+                    NOT = {
+                        government = democracy
+                        government = hms_government
+                    }
+                }
+            }
+			modifier = {
+                factor = 0
+				government = prussian_constitutionalism
+				GRE = { 
+					NOT = { government = absolute_monarchy }
+					NOT = { government = prussian_constitutionalism }
+					NOT = { government = hms_government } 
 				}
-			}
-			modifier = {
-				factor = 0
-				NOT = { government = fascist_dictatorship }
-				GRE = { government = fascist_dictatorship }
-			}
-			modifier = {
-				factor = 0
-				NOT = { government = proletarian_dictatorship }
-				GRE = { government = proletarian_dictatorship }
-			}
-			modifier = {
-				factor = 0
+            }
+            modifier = {
+                factor = 0
 				OR = {
-					government = democracy
-					government = hms_government
-				}
-				GRE = {
-					NOT = {
-						government = democracy
-						government = hms_government
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				GRE = {
-					OR = {
-						government = democracy
-						government = hms_government
-					}
-				}
-				NOT = {
-					government = democracy
-					government = hms_government
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					government = presidential_dictatorship
-					government = bourgeois_dictatorship
-					government = absolute_monarchy
-				}
-			}
-		}
-	}
+                    government = presidential_dictatorship
+                    government = bourgeois_dictatorship
+                    government = absolute_monarchy
+                }
+            }
+        }
+    }
 
-	ionian_lose_accepted_cultures = {
-		potential = {
-			ai = yes
-			is_cultural_union = no
-			OR = {
-				ION = {
-					NOT = { has_country_flag = normalized_cultures }
-					OR = {
-						accepted_culture = british
-						accepted_culture = north_italian
-					}
-					OR = {
-						any_owned_province = { NOT = { is_core = ION } }
-						exists = no
-					}
-				}
-				GRE = {
-					NOT = { has_country_flag = normalized_cultures }
-					OR = {
-						accepted_culture = british
-						accepted_culture = north_italian
-					}
-				}
-				HAW = {
-					NOT = { has_country_flag = normalized_cultures }
-					accepted_culture = yankee
-					OR = {
-						any_owned_province = { NOT = { is_core = HAW } }
-						NOT = { pop_majority_culture = polynesian }
-						exists = no
-					}
-				}
-			}
-		}
-		
-		allow = {
-		}
-		
-		effect = {
-			any_country = {
-				limit = {
-					tag = ION
-					OR = {
-						accepted_culture = british
-						accepted_culture = north_italian
-					}
-					OR = {
-						any_owned_province = { NOT = { is_core = ION } }
-						exists = no
-					}
-				}
-				set_country_flag = normalized_cultures
-				remove_accepted_culture = british
-				remove_accepted_culture = north_italian
-			}
-			
-			any_country = {
-				limit = {
-					tag = GRE
-					OR = {
-						accepted_culture = british
-						accepted_culture = north_italian
-					}
-				}
-				set_country_flag = normalized_cultures
-				remove_accepted_culture = british
-				remove_accepted_culture = north_italian
-			}
-			
-			any_country = {
-				limit = {
-					tag = HAW
-					accepted_culture = yankee
-					OR = {
-						any_owned_province = { NOT = { is_core = HAW } }
-						NOT = { pop_majority_culture = polynesian }
-						exists = no
-					}
-				}
-				set_country_flag = normalized_cultures
-				remove_accepted_culture = yankee
-			}
-		}
-	}
+    ionian_lose_accepted_cultures = {
+        potential = {
+            ai = yes
+            is_cultural_union = no
+            OR = {
+                ION = {
+                    NOT = { has_country_flag = normalized_cultures }
+                    OR = {
+                        accepted_culture = british
+                        accepted_culture = north_italian
+                    }
+                    OR = {
+                        any_owned_province = { NOT = { is_core = ION } }
+                        exists = no
+                    }
+                }
+                GRE = {
+                    NOT = { has_country_flag = normalized_cultures }
+                    OR = {
+                        accepted_culture = british
+                        accepted_culture = north_italian
+                    }
+                }
+                HAW = {
+                    NOT = { has_country_flag = normalized_cultures }
+                    accepted_culture = yankee
+                    OR = {
+                        any_owned_province = { NOT = { is_core = HAW } }
+                        NOT = { pop_majority_culture = polynesian }
+                        exists = no
+                    }
+                }
+            }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            any_country = {
+                limit = {
+                    tag = ION
+                    OR = {
+                        accepted_culture = british
+                        accepted_culture = north_italian
+                    }
+                    OR = {
+                        any_owned_province = { NOT = { is_core = ION } }
+                        exists = no
+                    }
+                }
+                set_country_flag = normalized_cultures
+                remove_accepted_culture = british
+                remove_accepted_culture = north_italian
+            }
+
+            any_country = {
+                limit = {
+                    tag = GRE
+                    OR = {
+                        accepted_culture = british
+                        accepted_culture = north_italian
+                    }
+                }
+                set_country_flag = normalized_cultures
+                remove_accepted_culture = british
+                remove_accepted_culture = north_italian
+            }
+
+            any_country = {
+                limit = {
+                    tag = HAW
+                    accepted_culture = yankee
+                    OR = {
+                        any_owned_province = { NOT = { is_core = HAW } }
+                        NOT = { pop_majority_culture = polynesian }
+                        exists = no
+                    }
+                }
+                set_country_flag = normalized_cultures
+                remove_accepted_culture = yankee
+            }
+        }
+    }
 }

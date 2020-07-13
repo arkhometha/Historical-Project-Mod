@@ -37,7 +37,8 @@ school_reforms = no_schools
 conscription = one_year_draft
 debt_law = serfdom
 penal_system = capital_punishment
-child_labor = child_labor_legalcitizens_rights = primary_culture_only
+child_labor = child_labor_legal
+citizens_rights = primary_culture_only
 border_policy = open_borders
 
 set_country_flag = catholic_country
@@ -46,11 +47,11 @@ set_country_flag = post_colonial_country
 
 ruling_party = MOZ_communist
 upper_house = {
-	fascist = 0
-	liberal = 18
-	conservative = 69
-	reactionary = 13
-	anarcho_liberal = 0
-	socialist = 0
-	communist = 0
+    fascist = 0
+    liberal = 18
+    conservative = 69
+    reactionary = 13
+    anarcho_liberal = 0
+    socialist = 0
+    communist = 0
 }
