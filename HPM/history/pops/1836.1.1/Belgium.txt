@@ -423,42 +423,217 @@
         size = 76443
     }
 }
-#Bruges (456000/114000 POPS)
+#Bruges (618,363 / 154,591 POPS)
 388 = {
+    ###### British Protestant
+    aristocrats = {
+        culture = british
+        religion = protestant
+        size = 9
+    }
+
+    clergymen = {
+        culture = british
+        religion = protestant
+        size = 13
+    }
+
+    artisans = {
+        culture = british
+        religion = protestant
+        size = 54
+    }
+
+    clerks = {
+        culture = british
+        religion = protestant
+        size = 11
+    }
+
+    soldiers = {
+        culture = british
+        religion = protestant
+        size = 19
+    }
+
+    craftsmen = {
+        culture = british
+        religion = protestant
+        size = 30
+    }
+
+    labourers = {
+        culture = british
+        religion = protestant
+        size = 151
+    }
+
+    ###### Dutch Catholic
+    aristocrats = {
+        culture = dutch
+        religion = catholic
+        size = 9
+
+    clergymen = {
+        culture = dutch
+        religion = catholic
+        size = 13
+    }
+
+    artisans = {
+        culture = dutch
+        religion = catholic
+        size = 55
+    }
+
+    clerks = {
+        culture = dutch
+        religion = catholic
+        size = 11
+    }
+
+    soldiers = {
+        culture = dutch
+        religion = catholic
+        size = 19
+    }
+
+    craftsmen = {
+        culture = dutch
+        religion = catholic
+        size = 31
+    }
+
+    labourers = {
+        culture = dutch
+        religion = catholic
+        size = 154
+    }
+
+    ###### Picard Catholic
+    aristocrats = {
+        culture = picard
+        religion = catholic
+        size = 28
+
+    clergymen = {
+        culture = picard
+        religion = catholic
+        size = 28
+    }
+
+    artisans = {
+        culture = picard
+        religion = catholic
+        size = 289
+    }
+
+    clerks = {
+        culture = picard
+        religion = catholic
+        size = 15
+    }
+
+    soldiers = {
+        culture = picard
+        religion = catholic
+        size = 67
+    }
+
+    craftsmen = {
+        culture = picard
+        religion = catholic
+        size = 140
+    }
+
+    labourers = {
+        culture = picard
+        religion = catholic
+        size = 1256
+    }
+
+    ###### Wallonian Catholic
+    aristocrats = {
+        culture = wallonian
+        religion = catholic
+        size = 88
+
+    clergymen = {
+        culture = wallonian
+        religion = catholic
+        size = 74
+    }
+
+    artisans = {
+        culture = wallonian
+        religion = catholic
+        size = 995
+    }
+
+    clerks = {
+        culture = wallonian
+        religion = catholic
+        size = 27
+    }
+
+    soldiers = {
+        culture = wallonian
+        religion = catholic
+        size = 213
+    }
+
+    craftsmen = {
+        culture = wallonian
+        religion = catholic
+        size = 469
+    }
+
+    labourers = {
+        culture = wallonian
+        religion = catholic
+        size = 4577
+    }
+
+    ###### Flemish Catholic
     aristocrats = {
         culture = flemish
         religion = catholic
-        size = 1150
-    }
+        size = 1851
 
     clergymen = {
         culture = flemish
         religion = catholic
-        size = 625
+        size = 1411
     }
 
     artisans = {
         culture = flemish
         religion = catholic
-        size = 10000
+        size = 22232
     }
 
-    artisans = {
+    clerks = {
         culture = flemish
         religion = catholic
-        size = 1100
+        size = 346
     }
 
     soldiers = {
         culture = flemish
         religion = catholic
-        size = 1700
+        size = 4541
     }
 
-    farmers = {
+    craftsmen = {
         culture = flemish
         religion = catholic
-        size = 100525
+        size = 10340
+    }
+
+    labourers = {
+        culture = flemish
+        religion = catholic
+        size = 105026
     }
 }
 #Ghent (704000/176000 POPS)
