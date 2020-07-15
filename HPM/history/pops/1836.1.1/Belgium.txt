@@ -1356,103 +1356,133 @@
         size = 32500
     }
 }
-#Wallonia Region (1432000)
-#Namur (388000/97000 POPS)
+#Wallonia Region (1,451,520 / 362,880 POPS)
+#Namur (232,327 / 58,082 POPS)
 392 = {
+    ###### French Catholic
+    aristocrats = {
+        culture = french
+        religion = catholic
+        size = 18
+
+    clergymen = {
+        culture = french
+        religion = catholic
+        size = 18
+    }
+
+    artisans = {
+        culture = french
+        religion = catholic
+        size = 62
+    }
+
+    clerks = {
+        culture = french
+        religion = catholic
+        size = 14
+    }
+
+    soldiers = {
+        culture = french
+        religion = catholic
+        size = 28
+    }
+
+    craftsmen = {
+        culture = french
+        religion = catholic
+        size = 43
+    }
+
+    labourers = {
+        culture = french
+        religion = catholic
+        size = 405
+    }
+
+    ###### Flemish Catholic
+    aristocrats = {
+        culture = flemish
+        religion = catholic
+        size = 12
+
+    clergymen = {
+        culture = flemish
+        religion = catholic
+        size = 14
+    }
+
+    artisans = {
+        culture = flemish
+        religion = catholic
+        size = 39
+    }
+
+    clerks = {
+        culture = flemish
+        religion = catholic
+        size = 12
+    }
+
+    soldiers = {
+        culture = flemish
+        religion = catholic
+        size = 20
+    }
+
+    craftsmen = {
+        culture = flemish
+        religion = catholic
+        size = 28
+    }
+
+    labourers = {
+        culture = flemish
+        religion = catholic
+        size = 202
+    }
+
+    ###### Wallonian Catholic
     aristocrats = {
         culture = wallonian
         religion = catholic
-        size = 850
-    }
-
-    officers = {
-        culture = wallonian
-        religion = catholic
-        size = 350
-    }
-
-    bureaucrats = {
-        culture = wallonian
-        religion = catholic
-        size = 500
-    }
+        size = 1210
 
     clergymen = {
         culture = wallonian
         religion = catholic
-        size = 550
+        size = 717
     }
 
-    capitalists = {
+    artisans = {
         culture = wallonian
         religion = catholic
-        size = 150
+        size = 5005
     }
 
     clerks = {
         culture = wallonian
         religion = catholic
-        size = 2000
+        size = 408
+    }
+
+    soldiers = {
+        culture = wallonian
+        religion = catholic
+        size = 1768
     }
 
     craftsmen = {
         culture = wallonian
         religion = catholic
-        size = 14000
-    }
-
-    artisans = {
-        culture = wallonian
-        religion = catholic
-        size = 1300
-    }
-
-    soldiers = {
-        culture = wallonian
-        religion = catholic
-        size = 4000
+        size = 3163
     }
 
     labourers = {
         culture = wallonian
         religion = catholic
-        size = 41200
-    }
-
-    clergymen = {
-        culture = flemish
-        religion = catholic
-        size = 150
-    }
-
-    artisans = {
-        culture = flemish
-        religion = catholic
-        size = 3000
-    }
-
-    soldiers = {
-        culture = flemish
-        religion = catholic
-        size = 125
-    }
-
-    labourers = {
-        culture = flemish
-        religion = catholic
-        size = 7825
-    }
-
-    clergymen = {
-        culture = dutch
-        religion = protestant
-        size = 75
-    }
-
-    farmers = {
-        culture = dutch
-        religion = protestant
-        size = 15925
+        size = 44897
     }
 }
 #Tournai (292000/73000 POPS)
