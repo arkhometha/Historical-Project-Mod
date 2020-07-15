@@ -1485,85 +1485,132 @@
         size = 44897
     }
 }
-#Tournai (292000/73000 POPS)
+#Tournai (308,553 / 77,138 POPS)
 393 = {
+    ###### Picard Catholic
+    aristocrats = {
+        culture = picard
+        religion = catholic
+        size = 19
+
+    clergymen = {
+        culture = picard
+        religion = catholic
+        size = 16
+    }
+
+    artisans = {
+        culture = picard
+        religion = catholic
+        size = 123
+    }
+
+    clerks = {
+        culture = picard
+        religion = catholic
+        size = 10
+    }
+
+    soldiers = {
+        culture = picard
+        religion = catholic
+        size = 47
+    }
+
+    craftsmen = {
+        culture = picard
+        religion = catholic
+        size = 149
+    }
+
+    labourers = {
+        culture = picard
+        religion = catholic
+        size = 948
+    }
+
+    ###### Flemish Catholic
+    aristocrats = {
+        culture = flemish
+        religion = catholic
+        size = 30
+
     clergymen = {
         culture = flemish
         religion = catholic
-        size = 100
+        size = 25
     }
 
     artisans = {
         culture = flemish
         religion = catholic
-        size = 1100
+        size = 206
+    }
+
+    clerks = {
+        culture = flemish
+        religion = catholic
+        size = 14
     }
 
     soldiers = {
         culture = flemish
         religion = catholic
-        size = 100
+        size = 76
     }
 
-    farmers = {
+    craftsmen = {
         culture = flemish
         religion = catholic
-        size = 8800
+        size = 251
     }
 
+    labourers = {
+        culture = flemish
+        religion = catholic
+        size = 1636
+    }
+
+    ###### Wallonian Catholic
     aristocrats = {
         culture = wallonian
         religion = catholic
-        size = 700
-    }
+        size = 903
 
     clergymen = {
         culture = wallonian
         religion = catholic
-        size = 300
+        size = 638
+    }
+
+    artisans = {
+        culture = wallonian
+        religion = catholic
+        size = 6626
     }
 
     clerks = {
         culture = wallonian
         religion = catholic
-        size = 100
-    }
-
-
-    artisans = {
-        culture = wallonian
-        religion = catholic
-        size = 2200
+        size = 296
     }
 
     soldiers = {
         culture = wallonian
         religion = catholic
-        size = 1100
+        size = 2330
     }
 
-    farmers = {
+    craftsmen = {
         culture = wallonian
         religion = catholic
-        size = 56075
+        size = 8095
     }
 
-    clergymen = {
+    labourers = {
         culture = wallonian
         religion = catholic
-        size = 125
-    }
-
-    artisans = {
-        culture = picard
-        religion = catholic
-        size = 500
-    }
-
-    farmers = {
-        culture = picard
-        religion = catholic
-        size = 12000
+        size = 54702
     }
 }
 #Charleroi (396000/99000 POPS)
