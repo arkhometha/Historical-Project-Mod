@@ -1228,38 +1228,133 @@
         size = 65904
     }
 }
-#Hasselt (272000/68000 POPS)
+#Hasselt (169,625 / 42,406 POPS)
 391 = {
+    ###### Dutch Catholic
+    aristocrats = {
+        culture = dutch
+        religion = catholic
+        size = 8
+
+    clergymen = {
+        culture = dutch
+        religion = catholic
+        size = 14
+    }
+
+    artisans = {
+        culture = dutch
+        religion = catholic
+        size = 43
+    }
+
+    clerks = {
+        culture = dutch
+        religion = catholic
+        size = 10
+    }
+
+    soldiers = {
+        culture = dutch
+        religion = catholic
+        size = 15
+    }
+
+    craftsmen = {
+        culture = dutch
+        religion = catholic
+        size = 22
+    }
+
+    labourers = {
+        culture = dutch
+        religion = catholic
+        size = 193
+    }
+
+    ###### Wallonian Catholic
+    aristocrats = {
+        culture = wallonian
+        religion = catholic
+        size = 26
+
+    clergymen = {
+        culture = wallonian
+        religion = catholic
+        size = 41
+    }
+
+    artisans = {
+        culture = wallonian
+        religion = catholic
+        size = 244
+    }
+
+    clerks = {
+        culture = wallonian
+        religion = catholic
+        size = 12
+    }
+
+    soldiers = {
+        culture = wallonian
+        religion = catholic
+        size = 45
+    }
+
+    craftsmen = {
+        culture = wallonian
+        religion = catholic
+        size = 93
+    }
+
+    labourers = {
+        culture = wallonian
+        religion = catholic
+        size = 1671
+    }
+
+    ###### Flemish Catholic
     aristocrats = {
         culture = flemish
         religion = catholic
-        size = 650
-    }
+        size = 374
 
     clergymen = {
         culture = flemish
         religion = catholic
-        size = 475
+        size = 563
     }
 
     artisans = {
         culture = flemish
         religion = catholic
-        size = 3700
+        size = 4361
+    }
+
+    clerks = {
+        culture = flemish
+        religion = catholic
+        size = 10
     }
 
     soldiers = {
         culture = flemish
         religion = catholic
-        size = 1100
+        size = 634
     }
 
-    farmers = {
+    craftsmen = {
         culture = flemish
         religion = catholic
-        size = 62175
+        size = 1527
     }
 
+    labourers = {
+        culture = flemish
+        religion = catholic
+        size = 32500
+    }
 }
 #Wallonia Region (1432000)
 #Namur (388000/97000 POPS)
