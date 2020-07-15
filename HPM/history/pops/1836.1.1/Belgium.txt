@@ -636,66 +636,258 @@
         size = 105026
     }
 }
-#Ghent (704000/176000 POPS)
+#Ghent (757,809 / 189,452 POPS)
 389 = {
+    ###### Dutch Protestant
+    aristocrats = {
+        culture = dutch
+        religion = protestant
+        size = 7
+
+    clergymen = {
+        culture = dutch
+        religion = protestant
+        size = 11
+    }
+
+    artisans = {
+        culture = dutch
+        religion = protestant
+        size = 23
+    }
+
+    clerks = {
+        culture = dutch
+        religion = protestant
+        size = 10
+    }
+
+    soldiers = {
+        culture = dutch
+        religion = protestant
+        size = 14
+    }
+
+    craftsmen = {
+        culture = dutch
+        religion = protestant
+        size = 21
+    }
+
+    labourers = {
+        culture = dutch
+        religion = protestant
+        size = 62
+    }
+
+    ###### Dutch Catholic
+    aristocrats = {
+        culture = dutch
+        religion = catholic
+        size = 14
+
+    clergymen = {
+        culture = dutch
+        religion = catholic
+        size = 16
+    }
+
+    artisans = {
+        culture = dutch
+        religion = catholic
+        size = 73
+    }
+
+    clerks = {
+        culture = dutch
+        religion = catholic
+        size = 11
+    }
+
+    soldiers = {
+        culture = dutch
+        religion = catholic
+        size = 29
+    }
+
+    craftsmen = {
+        culture = dutch
+        religion = catholic
+        size = 62
+    }
+
+    labourers = {
+        culture = dutch
+        religion = catholic
+        size = 523
+    }
+
+    ###### Picard Catholic
+    aristocrats = {
+        culture = picard
+        religion = catholic
+        size = 10
+
+    clergymen = {
+        culture = picard
+        religion = catholic
+        size = 13
+    }
+
+    artisans = {
+        culture = picard
+        religion = catholic
+        size = 48
+    }
+
+    clerks = {
+        culture = picard
+        religion = catholic
+        size = 10
+    }
+
+    soldiers = {
+        culture = picard
+        religion = catholic
+        size = 22
+    }
+
+    craftsmen = {
+        culture = picard
+        religion = catholic
+        size = 41
+    }
+
+    labourers = {
+        culture = picard
+        religion = catholic
+        size = 290
+    }
+
+    ###### North_German Catholic
+    aristocrats = {
+        culture = north_german
+        religion = catholic
+        size = 6
+
+    clergymen = {
+        culture = north_german
+        religion = catholic
+        size = 11
+    }
+
+    artisans = {
+        culture = north_german
+        religion = catholic
+        size = 21
+    }
+
+    clerks = {
+        culture = north_german
+        religion = catholic
+        size = 10
+    }
+
+    soldiers = {
+        culture = north_german
+        religion = catholic
+        size = 13
+    }
+
+    craftsmen = {
+        culture = north_german
+        religion = catholic
+        size = 19
+    }
+
+    labourers = {
+        culture = north_german
+        religion = catholic
+        size = 41
+    }
+
+    ###### Wallonian Catholic
+    aristocrats = {
+        culture = wallonian
+        religion = catholic
+        size = 38
+
+    clergymen = {
+        culture = wallonian
+        religion = catholic
+        size = 31
+    }
+
+    artisans = {
+        culture = wallonian
+        religion = catholic
+        size = 247
+    }
+
+    clerks = {
+        culture = wallonian
+        religion = catholic
+        size = 12
+    }
+
+    soldiers = {
+        culture = wallonian
+        religion = catholic
+        size = 83
+    }
+
+    craftsmen = {
+        culture = wallonian
+        religion = catholic
+        size = 205
+    }
+
+    labourers = {
+        culture = wallonian
+        religion = catholic
+        size = 2110
+    }
+
+    ###### Flemish Catholic
     aristocrats = {
         culture = flemish
         religion = catholic
-        size = 1750
-    }
+        size = 2202
 
     clergymen = {
         culture = flemish
         religion = catholic
-        size = 1250
+        size = 1349
     }
 
     artisans = {
         culture = flemish
         religion = catholic
-        size = 10000
+        size = 16079
     }
 
-    artisans = {
+    clerks = {
         culture = flemish
         religion = catholic
-        size = 6000
+        size = 96
     }
 
     soldiers = {
         culture = flemish
         religion = catholic
-        size = 2250
+        size = 4893
     }
 
-    farmers = {
+    craftsmen = {
         culture = flemish
         religion = catholic
-        size = 149750
+        size = 13215
     }
 
-    clergymen = {
-        culture = wallonian
+    labourers = {
+        culture = flemish
         religion = catholic
-        size = 100
-    }
-
-    artisans = {
-        culture = wallonian
-        religion = catholic
-        size = 1900
-    }
-
-    soldiers = {
-        culture = wallonian
-        religion = catholic
-        size = 100
-    }
-
-    farmers = {
-        culture = wallonian
-        religion = catholic
-        size = 3000
+        size = 147461
     }
 }
 #Antwerp (354000/88500 POPS)
