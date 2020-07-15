@@ -2127,67 +2127,173 @@
     }
 
 }
-#Luxembourg Region (172000)
-#Arlon (172000/43000 POPS)
+#Arlon (166,399 / 41,600 POPS)
 398 = {
+    ###### French Catholic
+    aristocrats = {
+        culture = french
+        religion = catholic
+        size = 10
+
+    clergymen = {
+        culture = french
+        religion = catholic
+        size = 20
+    }
+
+    artisans = {
+        culture = french
+        religion = catholic
+        size = 83
+    }
+
+    clerks = {
+        culture = french
+        religion = catholic
+        size = 12
+    }
+
+    soldiers = {
+        culture = french
+        religion = catholic
+        size = 18
+    }
+
+    craftsmen = {
+        culture = french
+        religion = catholic
+        size = 25
+    }
+
+    labourers = {
+        culture = french
+        religion = catholic
+        size = 412
+    }
+
+    ###### North_German Catholic
+    aristocrats = {
+        culture = north_german
+        religion = catholic
+        size = 61
+
+    clergymen = {
+        culture = north_german
+        religion = catholic
+        size = 120
+    }
+
+    artisans = {
+        culture = north_german
+        religion = catholic
+        size = 816
+    }
+
+    clerks = {
+        culture = north_german
+        religion = catholic
+        size = 31
+    }
+
+    soldiers = {
+        culture = north_german
+        religion = catholic
+        size = 103
+    }
+
+    craftsmen = {
+        culture = north_german
+        religion = catholic
+        size = 175
+    }
+
+    labourers = {
+        culture = north_german
+        religion = catholic
+        size = 5138
+    }
+
+    ###### Flemish Catholic
+    aristocrats = {
+        culture = flemish
+        religion = catholic
+        size = 6
+
+    clergymen = {
+        culture = flemish
+        religion = catholic
+        size = 13
+    }
+
+    artisans = {
+        culture = flemish
+        religion = catholic
+        size = 29
+    }
+
+    clerks = {
+        culture = flemish
+        religion = catholic
+        size = 11
+    }
+
+    soldiers = {
+        culture = flemish
+        religion = catholic
+        size = 12
+    }
+
+    craftsmen = {
+        culture = flemish
+        religion = catholic
+        size = 14
+    }
+
+    labourers = {
+        culture = flemish
+        religion = catholic
+        size = 68
+    }
+
+    ###### Wallonian Catholic
     aristocrats = {
         culture = wallonian
         religion = catholic
-        size = 450
-    }
+        size = 285
 
     clergymen = {
         culture = wallonian
         religion = catholic
-        size = 225
+        size = 558
     }
 
     artisans = {
         culture = wallonian
         religion = catholic
-        size = 1350
+        size = 4274
+    }
+
+    clerks = {
+        culture = wallonian
+        religion = catholic
+        size = 83
     }
 
     soldiers = {
         culture = wallonian
         religion = catholic
-        size = 1100
+        size = 466
     }
 
     craftsmen = {
         culture = wallonian
         religion = catholic
-        size = 6000
+        size = 850
     }
 
-    farmers = {
+    labourers = {
         culture = wallonian
         religion = catholic
-        size = 20425
+        size = 27906
     }
-
-    artisans = {
-        culture = french
-        religion = catholic
-        size = 250
-    }
-
-    farmers = {
-        culture = french
-        religion = catholic
-        size = 4200
-    }
-
-    artisans = {
-        culture = north_german
-        religion = protestant
-        size = 600
-    }
-
-    farmers = {
-        culture = north_german
-        religion = protestant
-        size = 8500
-    }
-
 }
