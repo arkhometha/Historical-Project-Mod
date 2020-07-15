@@ -473,6 +473,7 @@
         culture = dutch
         religion = catholic
         size = 9
+    }
 
     clergymen = {
         culture = dutch
@@ -515,6 +516,7 @@
         culture = picard
         religion = catholic
         size = 28
+    }
 
     clergymen = {
         culture = picard
@@ -557,6 +559,7 @@
         culture = wallonian
         religion = catholic
         size = 88
+    }
 
     clergymen = {
         culture = wallonian
@@ -599,6 +602,7 @@
         culture = flemish
         religion = catholic
         size = 1851
+    }
 
     clergymen = {
         culture = flemish
@@ -643,6 +647,7 @@
         culture = dutch
         religion = protestant
         size = 7
+    }
 
     clergymen = {
         culture = dutch
@@ -685,6 +690,7 @@
         culture = dutch
         religion = catholic
         size = 14
+    }
 
     clergymen = {
         culture = dutch
@@ -727,6 +733,7 @@
         culture = picard
         religion = catholic
         size = 10
+    }
 
     clergymen = {
         culture = picard
@@ -769,6 +776,7 @@
         culture = north_german
         religion = catholic
         size = 6
+    }
 
     clergymen = {
         culture = north_german
@@ -811,6 +819,7 @@
         culture = wallonian
         religion = catholic
         size = 38
+    }
 
     clergymen = {
         culture = wallonian
@@ -853,6 +862,7 @@
         culture = flemish
         religion = catholic
         size = 2202
+    }
 
     clergymen = {
         culture = flemish
@@ -897,6 +907,7 @@
         culture = ashkenazi
         religion = jewish
         size = 13
+    }
 
     clergymen = {
         culture = ashkenazi
@@ -939,6 +950,7 @@
         culture = british
         religion = protestant
         size = 10
+    }
 
     clergymen = {
         culture = british
@@ -981,6 +993,7 @@
         culture = dutch
         religion = protestant
         size = 16
+    }
 
     clergymen = {
         culture = dutch
@@ -1023,6 +1036,7 @@
         culture = dutch
         religion = catholic
         size = 72
+    }
 
     clergymen = {
         culture = dutch
@@ -1065,6 +1079,7 @@
         culture = french
         religion = catholic
         size = 16
+    }
 
     clergymen = {
         culture = french
@@ -1107,6 +1122,7 @@
         culture = north_german
         religion = catholic
         size = 22
+    }
 
     clergymen = {
         culture = north_german
@@ -1149,6 +1165,7 @@
         culture = wallonian
         religion = catholic
         size = 48
+    }
 
     clergymen = {
         culture = wallonian
@@ -1191,6 +1208,7 @@
         culture = flemish
         religion = catholic
         size = 2915
+    }
 
     clergymen = {
         culture = flemish
@@ -1235,6 +1253,7 @@
         culture = dutch
         religion = catholic
         size = 8
+    }
 
     clergymen = {
         culture = dutch
@@ -1277,6 +1296,7 @@
         culture = wallonian
         religion = catholic
         size = 26
+    }
 
     clergymen = {
         culture = wallonian
@@ -1319,6 +1339,7 @@
         culture = flemish
         religion = catholic
         size = 374
+    }
 
     clergymen = {
         culture = flemish
@@ -1364,6 +1385,7 @@
         culture = french
         religion = catholic
         size = 18
+    }
 
     clergymen = {
         culture = french
@@ -1406,6 +1428,7 @@
         culture = flemish
         religion = catholic
         size = 12
+    }
 
     clergymen = {
         culture = flemish
@@ -1448,6 +1471,7 @@
         culture = wallonian
         religion = catholic
         size = 1210
+    }
 
     clergymen = {
         culture = wallonian
@@ -1492,6 +1516,7 @@
         culture = picard
         religion = catholic
         size = 19
+    }
 
     clergymen = {
         culture = picard
@@ -1534,6 +1559,7 @@
         culture = flemish
         religion = catholic
         size = 30
+    }
 
     clergymen = {
         culture = flemish
@@ -1576,6 +1602,7 @@
         culture = wallonian
         religion = catholic
         size = 903
+    }
 
     clergymen = {
         culture = wallonian
@@ -1620,6 +1647,7 @@
         culture = picard
         religion = catholic
         size = 20
+    }
 
     clergymen = {
         culture = picard
@@ -1662,6 +1690,7 @@
         culture = flemish
         religion = catholic
         size = 33
+    }
 
     clergymen = {
         culture = flemish
@@ -1704,6 +1733,7 @@
         culture = wallonian
         religion = catholic
         size = 999
+    }
 
     clergymen = {
         culture = wallonian
@@ -1797,6 +1827,7 @@
         culture = dutch
         religion = protestant
         size = 8
+    }
 
     clergymen = {
         culture = dutch
@@ -1839,6 +1870,7 @@
         culture = dutch
         religion = catholic
         size = 10
+    }
 
     clergymen = {
         culture = dutch
@@ -1881,6 +1913,7 @@
         culture = french
         religion = catholic
         size = 11
+    }
 
     clergymen = {
         culture = french
@@ -1923,6 +1956,7 @@
         culture = north_german
         religion = catholic
         size = 22
+    }
 
     clergymen = {
         culture = north_german
@@ -2134,6 +2168,7 @@
         culture = french
         religion = catholic
         size = 10
+    }
 
     clergymen = {
         culture = french
@@ -2176,6 +2211,7 @@
         culture = north_german
         religion = catholic
         size = 61
+    }
 
     clergymen = {
         culture = north_german
@@ -2218,6 +2254,7 @@
         culture = flemish
         religion = catholic
         size = 6
+    }
 
     clergymen = {
         culture = flemish
@@ -2260,6 +2297,7 @@
         culture = wallonian
         religion = catholic
         size = 285
+    }
 
     clergymen = {
         culture = wallonian
