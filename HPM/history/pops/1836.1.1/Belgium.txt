@@ -1,180 +1,426 @@
-#Flanders Region (2558000)
-#Brussels (772000/193000 POPS)
+#Flanders Region (2,529,374 / 632,343 POPS)
+#Brussels (608,284 / 152,071 POPS)
 387 = {
-    ######Jews
+    ###### Ashkenazi Jewish
     aristocrats = {
         culture = ashkenazi
         religion = jewish
-        size = 100
+        size = 11
     }
 
-    capitalists = {
+    bureaucrats = {
         culture = ashkenazi
         religion = jewish
-        size = 100
-    }
-
-    officers = {
-        culture = ashkenazi
-        religion = jewish
-        size = 100
-    }
-
-    soldiers = {
-        culture = ashkenazi
-        religion = jewish
-        size = 100
+        size = 20
     }
 
     clergymen = {
         culture = ashkenazi
         religion = jewish
-        size = 100
-    }
-
-    clerks = {
-        culture = ashkenazi
-        religion = jewish
-        size = 300
-    }
-
-    craftsmen = {
-        culture = ashkenazi
-        religion = jewish
-        size = 600
+        size = 13
     }
 
     artisans = {
         culture = ashkenazi
         religion = jewish
-        size = 500
+        size = 28
     }
 
-    farmers = {
+    clerks = {
         culture = ashkenazi
         religion = jewish
-        size = 1025
+        size = 12
     }
-    ########
 
+    soldiers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 20
+    }
+
+    craftsmen = {
+        culture = ashkenazi
+        religion = jewish
+        size = 24
+    }
+
+    labourers = {
+        culture = ashkenazi
+        religion = jewish
+        size = 125
+    }
+
+    ###### British Protestant
+    aristocrats = {
+        culture = british
+        religion = protestant
+        size = 14
+    }
+
+    capitalists = {
+        culture = british
+        religion = protestant
+        size = 5
+    }
+
+    bureaucrats = {
+        culture = british
+        religion = protestant
+        size = 25
+    }
+
+    clergymen = {
+        culture = british
+        religion = protestant
+        size = 14
+    }
+
+    artisans = {
+        culture = british
+        religion = protestant
+        size = 38
+    }
+
+    clerks = {
+        culture = british
+        religion = protestant
+        size = 13
+    }
+
+    soldiers = {
+        culture = british
+        religion = protestant
+        size = 25
+    }
+
+    craftsmen = {
+        culture = british
+        religion = protestant
+        size = 31
+    }
+
+    labourers = {
+        culture = british
+        religion = protestant
+        size = 219
+    }
+
+    ###### Dutch Protestant
+    aristocrats = {
+        culture = dutch
+        religion = protestant
+        size = 12
+    }
+
+    bureaucrats = {
+        culture = dutch
+        religion = protestant
+        size = 21
+    }
+
+    clergymen = {
+        culture = dutch
+        religion = protestant
+        size = 13
+    }
+
+    artisans = {
+        culture = dutch
+        religion = protestant
+        size = 32
+    }
+
+    clerks = {
+        culture = dutch
+        religion = protestant
+        size = 13
+    }
+
+    soldiers = {
+        culture = dutch
+        religion = protestant
+        size = 22
+    }
+
+    craftsmen = {
+        culture = dutch
+        religion = protestant
+        size = 26
+    }
+
+    labourers = {
+        culture = dutch
+        religion = protestant
+        size = 160
+    }
+
+    ###### Dutch Catholic
+    aristocrats = {
+        culture = dutch
+        religion = catholic
+        size = 17
+    }
+
+    bureaucrats = {
+        culture = dutch
+        religion = catholic
+        size = 29
+    }
+
+    clergymen = {
+        culture = dutch
+        religion = catholic
+        size = 16
+    }
+
+    artisans = {
+        culture = dutch
+        religion = catholic
+        size = 47
+    }
+
+    clerks = {
+        culture = dutch
+        religion = catholic
+        size = 15
+    }
+
+    soldiers = {
+        culture = dutch
+        religion = catholic
+        size = 30
+    }
+
+    craftsmen = {
+        culture = dutch
+        religion = catholic
+        size = 38
+    }
+
+    labourers = {
+        culture = dutch
+        religion = catholic
+        size = 322
+    }
+
+    ###### French Catholic
+    aristocrats = {
+        culture = french
+        religion = catholic
+        size = 36
+    }
+
+    bureaucrats = {
+        culture = french
+        religion = catholic
+        size = 61
+    }
+
+    clergymen = {
+        culture = french
+        religion = catholic
+        size = 25
+    }
+
+    artisans = {
+        culture = french
+        religion = catholic
+        size = 108
+    }
+
+    clerks = {
+        culture = french
+        religion = catholic
+        size = 22
+    }
+
+    soldiers = {
+        culture = french
+        religion = catholic
+        size = 62
+    }
+
+    craftsmen = {
+        culture = french
+        religion = catholic
+        size = 82
+    }
+
+    labourers = {
+        culture = french
+        religion = catholic
+        size = 949
+    }
+
+    ###### North_German Catholic
+    aristocrats = {
+        culture = north_german
+        religion = catholic
+        size = 15
+    }
+
+    bureaucrats = {
+        culture = north_german
+        religion = catholic
+        size = 26
+    }
+
+    clergymen = {
+        culture = north_german
+        religion = catholic
+        size = 15
+    }
+
+    artisans = {
+        culture = north_german
+        religion = catholic
+        size = 41
+    }
+
+    clerks = {
+        culture = north_german
+        religion = catholic
+        size = 14
+    }
+
+    soldiers = {
+        culture = north_german
+        religion = catholic
+        size = 27
+    }
+
+    craftsmen = {
+        culture = north_german
+        religion = catholic
+        size = 33
+    }
+
+    labourers = {
+        culture = north_german
+        religion = catholic
+        size = 254
+    }
+
+    ###### Wallonian Catholic
+    aristocrats = {
+        culture = wallonian
+        religion = catholic
+        size = 1081
+    }
+
+    capitalists = {
+        culture = wallonian
+        religion = catholic
+        size = 53
+    }
+
+    officers = {
+        culture = wallonian
+        religion = catholic
+        size = 196
+    }
+
+    bureaucrats = {
+        culture = wallonian
+        religion = catholic
+        size = 1759
+    }
+
+    clergymen = {
+        culture = wallonian
+        religion = catholic
+        size = 516
+    }
+
+    artisans = {
+        culture = wallonian
+        religion = catholic
+        size = 3392
+    }
+
+    clerks = {
+        culture = wallonian
+        religion = catholic
+        size = 403
+    }
+
+    soldiers = {
+        culture = wallonian
+        religion = catholic
+        size = 1814
+    }
+
+    craftsmen = {
+        culture = wallonian
+        religion = catholic
+        size = 2507
+    }
+
+    labourers = {
+        culture = wallonian
+        religion = catholic
+        size = 35327
+    }
+
+    ###### Flemish Catholic
     aristocrats = {
         culture = flemish
         religion = catholic
-        size = 1500
+        size = 2338
+    }
+
+    capitalists = {
+        culture = flemish
+        religion = catholic
+        size = 114
     }
 
     officers = {
         culture = flemish
         religion = catholic
-        size = 200
+        size = 424
     }
 
     bureaucrats = {
         culture = flemish
         religion = catholic
-        size = 400
+        size = 3807
     }
 
     clergymen = {
         culture = flemish
         religion = catholic
-        size = 625
-    }
-
-    capitalists = {
-        culture = flemish
-        religion = catholic
-        size = 100
-    }
-
-    clerks = {
-        culture = flemish
-        religion = catholic
-        size = 2150
-    }
-
-    craftsmen = {
-        culture = flemish
-        religion = catholic
-        size = 5000
+        size = 1116
     }
 
     artisans = {
         culture = flemish
         religion = catholic
-        size = 10000
-    }
-
-    soldiers = {
-        culture = flemish
-        religion = catholic
-        size = 3000
-    }
-
-    labourers = {
-        culture = flemish
-        religion = catholic
-        size = 50725
-    }
-
-    aristocrats = {
-        culture = wallonian
-        religion = catholic
-        size = 300
-    }
-
-    officers = {
-        culture = wallonian
-        religion = catholic
-        size = 450
-    }
-
-    bureaucrats = {
-        culture = wallonian
-        religion = catholic
-        size = 800
-    }
-
-    clergymen = {
-        culture = wallonian
-        religion = catholic
-        size = 250
-    }
-
-    capitalists = {
-        culture = wallonian
-        religion = catholic
-        size = 150
+        size = 7339
     }
 
     clerks = {
-        culture = wallonian
+        culture = flemish
         religion = catholic
-        size = 300
-    }
-
-    craftsmen = {
-        culture = wallonian
-        religion = catholic
-        size = 10000
-    }
-
-    artisans = {
-        culture = wallonian
-        religion = catholic
-        size = 7300
+        size = 872
     }
 
     soldiers = {
-        culture = wallonian
+        culture = flemish
         religion = catholic
-        size = 1100
+        size = 3925
+    }
+
+    craftsmen = {
+        culture = flemish
+        religion = catholic
+        size = 5425
     }
 
     labourers = {
-        culture = wallonian
+        culture = flemish
         religion = catholic
-        size = 5650
+        size = 76443
     }
 }
 #Bruges (456000/114000 POPS)
