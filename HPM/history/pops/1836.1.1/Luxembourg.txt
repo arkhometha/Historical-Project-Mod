@@ -1,127 +1,103 @@
-#Luxembourg (172000)
-#In personal union with Netherlands in 1836
-#Luxembourg (172000/43000 POPS)
+#Luxembourg (163,342)
+#Luxembourg (163,342 / 40,836 POPS)
 397 = {
+    ###### German
     aristocrats = {
         culture = north_german
         religion = catholic
-        size = 175
+        size = 105
     }
 
     bureaucrats = {
         culture = north_german
         religion = catholic
-        size = 25
+        size = 71
     }
 
     officers = {
         culture = north_german
         religion = catholic
-        size = 50
+        size = 14
     }
 
     clergymen = {
         culture = north_german
         religion = catholic
-        size = 150
+        size = 169
     }
 
     artisans = {
         culture = north_german
         religion = catholic
-        size = 750
+        size = 760
     }
 
     soldiers = {
         culture = north_german
         religion = catholic
-        size = 2000
+        size = 1343
     }
 
     farmers = {
         culture = north_german
         religion = catholic
-        size = 13580
+        size = 25767
     }
 
-    farmers = {
+    artisans = {
         culture = north_german
         religion = protestant
-        size = 1320
+        size = 102
     }
 
+    ###### French
     aristocrats = {
         culture = french
         religion = catholic
-        size = 250
+        size = 315
     }
 
     officers = {
         culture = french
         religion = catholic
-        size = 50
+        size = 43
     }
 
     bureaucrats = {
         culture = french
         religion = catholic
-        size = 50
+        size = 212
     }
 
     clergymen = {
         culture = french
         religion = catholic
-        size = 275
+        size = 509
     }
 
     artisans = {
         culture = french
         religion = catholic
-        size = 1750
+        size = 2281
     }
 
     soldiers = {
         culture = french
         religion = catholic
-        size = 250
+        size = 448
     }
 
     farmers = {
         culture = french
         religion = catholic
-        size = 23375
+        size = 8589
     }
 
-    ######Jews
-    aristocrats = {
-        culture = ashkenazi
-        religion = jewish
-        size = 100
-    }
-
-    soldiers = {
-        culture = ashkenazi
-        religion = jewish
-        size = 100
-    }
-
-    clergymen = {
-        culture = ashkenazi
-        religion = jewish
-        size = 100
-    }
-
+    ###### Jews
     artisans = {
         culture = ashkenazi
         religion = jewish
-        size = 100
+        size = 108
     }
-
-    farmers = {
-        culture = ashkenazi
-        religion = jewish
-        size = 100
-    }
-    ########
 
 }
