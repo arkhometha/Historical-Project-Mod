@@ -189,7 +189,7 @@ NET_385 = { 385 383 384 386 } #Friesland
 
 BEL_387 = { 387 388 389 390 391 } #Flanders
 
-BEL_394 = { 394 392 393 395 398 } #Wallonia
+BEL_394 = { 395 392 393 394 398 } #Wallonia
 
 
 ### France
