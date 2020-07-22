@@ -661,41 +661,41 @@
     }
 }
 ### Rheinland Region
-#Spa - Eupen-Malmedy (144000/36000 POPS)
+#Eupen-Malmedy ( 48,078 / 12,020 POPS) <-- repurposed Spa province
 396 = {
     aristocrats = {
         culture = north_german
         religion = catholic
-        size = 50
+        size = 47
     }
     clergymen = {
         culture = north_german
         religion = catholic
-        size = 200
+        size = 189
     }
     artisans = {
         culture = north_german
         religion = catholic
-        size = 450
+        size = 568
     }
+    farmers = {
+        culture = north_german
+        religion = catholic
+        size = 8860
+    }
+    artisans = {
+        culture = wallonian
+        religion = catholic
+        size = 139
+    }	
     soldiers = {
         culture = north_german
         religion = catholic
-        size = 1200
-    }
-    farmers = {
-        culture = north_german
-        religion = catholic
-        size = 8375
-    }
-    artisans = {
-        culture = wallonian
-        religion = catholic
-        size = 300
-    }
+        size = 145
+    }	
     farmers = {
         culture = wallonian
         religion = catholic
-        size = 2175
+        size = 2072
     }
 }
