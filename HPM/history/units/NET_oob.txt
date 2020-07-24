@@ -74,7 +74,7 @@ army = {
     regiment = {
         name= "1e Infanterie Brigade"
         type = infantry
-        home = 375
+        home = 1418 # was 375
         }
 }
 
@@ -84,7 +84,7 @@ army = {
     regiment = {
         name= "1e Infanterie Brigade"
         type = infantry
-        home = 375
+        home = 1420 # was 375
         }
     }
 
@@ -94,7 +94,7 @@ army = {
     regiment = {
         name= "1e Infanterie Brigade"
         type = infantry
-        home = 375
+        home = 1399 # was 375
         }
     }
 
@@ -110,7 +110,7 @@ army = {
     regiment = {
         name= "2e Cavalerie Brigade"
         type = cuirassier
-        home = 383
+        home = 376
     }
 
     regiment = {
@@ -122,7 +122,7 @@ army = {
     regiment = {
         name = "2e Artillerie Brigade"
         type = artillery
-        home = 386
+        home = 375
     }
 
     regiment = {
@@ -164,13 +164,13 @@ army = {
     regiment = {
         name = "6e Infanterie Brigade"
         type = infantry
-        home = 383
+        home = 376
     }
 
     regiment = {
         name = "7e Infanterie Brigade"
         type = infantry
-        home = 384
+        home = 382
     }
 
 }
