@@ -2,7 +2,7 @@ color = { 255 53 94 }
 graphical_culture = EuropeanGC
 
 party = {
-    name = "POL_conservative"
+    name = "GLM_conservative"
     start_date = 1800.1.1
     end_date = 2000.1.1
 
@@ -17,7 +17,7 @@ party = {
 }
 
 party = {
-    name = "POL_liberal"
+    name = "GLM_liberal"
     start_date = 1820.1.1
     end_date = 1936.1.1
 
@@ -32,7 +32,7 @@ party = {
 }
 
 party = {
-    name = "POL_reactionary"
+    name = "GLM_reactionary"
     start_date = 1820.1.1
     end_date = 2000.1.1
 
@@ -47,7 +47,7 @@ party = {
 }
 
 party = {
-    name = "POL_anarcho_liberal"
+    name = "GLM_anarcho_liberal"
     start_date = 1830.1.1
     end_date = 2000.1.1
 
@@ -62,7 +62,7 @@ party = {
 }
 
 party = {
-    name = "POL_socialist"
+    name = "GLM_socialist"
     start_date = 1848.1.1
     end_date = 2000.1.1
 
@@ -77,7 +77,7 @@ party = {
 }
 
 party = {
-    name = "POL_communist"
+    name = "GLM_communist"
     start_date = 1848.1.1
     end_date = 2000.1.1
 
@@ -92,7 +92,7 @@ party = {
 }
 
 party = {
-    name = "POL_fascist"
+    name = "GLM_fascist"
     start_date = 1900.1.1
     end_date = 2000.1.1
 

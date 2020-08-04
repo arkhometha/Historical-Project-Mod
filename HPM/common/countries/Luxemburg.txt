@@ -11,7 +11,7 @@ party = {
     social_policy = no_position_set
     economic_policy = interventionism
     trade_policy = free_trade
-    religious_policy = pro_atheism
+    religious_policy = secularized
     citizenship_policy = limited_citizenship
     war_policy = anti_military
 }
