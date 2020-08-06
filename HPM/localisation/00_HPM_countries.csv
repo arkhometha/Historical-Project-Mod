@@ -179,7 +179,7 @@ TUN_prussian_constitutionalism;Tunis;;;;;;;;;;;;;
 ALB_communist;Partia e Punës e Shqipërisë;;;;;;;;;;;;;
 ALB_fascist;Partia Fashiste e Shqipërisë;;;;;;;;;;;;;
 ALB_conservative;Lëvizja Legalitetit;;;;;;;;;;;;;
-AUS_socialist_3;Sozialdemokratische Arbeiterpartei Österreichs;;;;;;;;;;;;;x;;;;
+AUS_socialist_3;Sozialdemokratische Arbeiterpartei;;;;;;;;;;;;;x;;;;
 AUS_communist;Kommunistische Partei Österreichs;;;;;;;;;;;;;
 BEL_liberal;Parti libéral;;;;;;;;;;;;;
 BEL_conservative;Parti catholique;;;;;;;;;;;;;
@@ -826,7 +826,7 @@ BAN_reactionary;The Royalist Faction;Faction nationaliste;Die nationalistische F
 BAN_anarcho_liberal;The Libertains;Faction radicale;Die radikale Fraktion;;;;;;;;;;;
 BAN_socialist;Banat Sozialdemokratische Partei;;;;;;;;;;;;;
 BAN_communist;Communist Party;Faction communiste;Die kommunistische Fraktion;;;;;;;;;;;
-BAN_fascist;Nationalsozialistische Partei der rumänischen Deutschen;;;;;;;;;;;;;
+BAN_fascist;Deutsche Volkspartei;;;;;;;;;;;;;
 BKV_conservative;Partidul Democrat al Unirei;;;;;;;;;;;;;x;;;;
 BKV_liberal;Partidul Taranesc Democrat;;;;;;;;;;;;;x;;;;
 BKV_reactionary;Partidul Nationalist;;;;;;;;;;;;;x;;;;
@@ -1759,7 +1759,7 @@ CZH_fascist;Národní obec fašistická;;;;;;;;;;;;;
 CZH_socialist;Ceskoslovenská sociálne demokratická strana;;;;;;;;;;;;;x
 CZH_socialist_2;Ceská strana národne sociální;;;;;;;;;;;;;x;;;;
 CZH_conservative;Ceskoslovenská strana lidová;;;;;;;;;;;;;x
-CZH_conservative_2;Republikánská strana zemedelského a malorolnického lidu;;;;;;;;;;;;;x;;;;
+CZH_conservative_2;RSZML;;;;;;;;;;;;;x;;;;
 CZH_liberal;Ceskoslovenská národní demokracie;;;;;;;;;;;;;x
 CZH_communist;Komunistická strana Ceskoslovenska;;;;;;;;;;;;;x
 CZH_reactionary;CsND;;;;;;;;;;;;;x
@@ -1786,7 +1786,7 @@ GLM_anarcho_liberal;Partia Radykalna;;;;;;;;;;;;;x;;;;
 GLM_socialist;Polska Partia Socjaldemokratyczna;;;;;;;;;;;;;x;;;;
 GLM_communist;Komunistyczna Partia Zachodniej Galicji;;;;;;;;;;;;;x;;;;
 GLM_fascist;Partia Faszystowska;Faction fasciste;Die faschistische Fraktion;;La Facción Fascista;;;;;;;;;x;;;;
-RUT_conservative;Ukrayin'ske Natsional'no-Demokratichne Obyednannia;;;;;;;;;;;;;x;;;;
+RUT_conservative;UNDO;;;;;;;;;;;;;x;;;;
 RUT_liberal;Molodi Ruski Partiyi;;;;;;;;;;;;;x;;;;
 RUT_reactionary;Katolyts'kyy Rus'kyy Narodnyy Soyuz;;;;;;;;;;;;;x;;;;
 RUT_anarcho_liberal;Radykal'na Partiya;;;;;;;;;;;;;x;;;;
@@ -1812,7 +1812,7 @@ TRE_conservative;Partito Popolare;;;;;;;;;;;;;x;;;;
 TRE_socialist;Partito Socialdemocratico;;;;;;;;;;;;;x;;;;
 TRE_reactionary;Partito Clericale;;;;;;;;;;;;;x;;;;
 DAN_communist;Danmarks Kommunistiske Parti;;;;;;;;;;;;;x;;;;
-DAN_fascist;Danmarks Nationalsocialistiske Arbejderparti;;;;;;;;;;;;;x;;;;
+DAN_fascist;DNSAP;;;;;;;;;;;;;x;;;;
 CRE_conservative;Karavanades;;;;;;;;;;;;;x;;;;
 CRE_liberal;Xypolitoi;;;;;;;;;;;;;x;;;;
 ARM_liberal_2;Hai Zhoghovrdakan Kusaktsutiun;;;;;;;;;;;;;x;;;;
