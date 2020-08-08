@@ -854,25 +854,25 @@
 
     clergymen = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 100
     }
 
     artisans = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 200
     }
 
     soldiers = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 100
     }
 
     serfs = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 4450
     }
 }
@@ -952,25 +952,25 @@
 
     clergymen = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 100
     }
 
     artisans = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 200
     }
 
     soldiers = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 100
     }
 
     serfs = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 4000
     }
 }

@@ -28,25 +28,25 @@
 
     clergymen = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 200
     }
 
     artisans = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 1100
     }
 
     soldiers = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 200
     }
 
     serfs = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 7600
     }
 
@@ -300,25 +300,25 @@
 950 = {
     clergymen = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 850
     }
 
     artisans = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 4600
     }
 
     soldiers = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 900
     }
 
     serfs = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 85650
     }
 
@@ -478,25 +478,25 @@
 702 = {
     clergymen = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 750
     }
 
     artisans = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 4200
     }
 
     soldiers = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 1000
     }
 
     farmers = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 77050
     }
 
@@ -606,25 +606,25 @@
 951 = {
     clergymen = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 475
     }
 
     artisans = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 2550
     }
 
     soldiers = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 500
     }
 
     farmers = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 47475
     }
 
@@ -710,31 +710,31 @@
 952 = {
     clergymen = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 1950
     }
 
     artisans = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 9900
     }
 
     soldiers = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 1950
     }
 
     farmers = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 156200
     }
 
     serfs = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 80000
     }
 
@@ -826,25 +826,25 @@
 953 = {
     clergymen = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 500
     }
 
     artisans = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 2650
     }
 
     soldiers = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 525
     }
 
     farmers = {
         culture = ukrainian
-        religion = orthodox
+        religion = catholic
         size = 48325
     }
 

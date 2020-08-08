@@ -1,6 +1,6 @@
 capital = 702
 primary_culture = ukrainian
-religion = orthodox
+religion = catholic
 government = absolute_monarchy
 plurality = 0.02
 nationalvalue = nv_autocracy
@@ -35,7 +35,7 @@ child_labor = child_labor_legal
 citizens_rights = primary_culture_only
 border_policy = open_borders
 
-set_country_flag = orthodox_country
+set_country_flag = catholic_country
 
 ruling_party = RUT_conservative
 upper_house = {
