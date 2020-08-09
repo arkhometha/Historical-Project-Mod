@@ -138,7 +138,7 @@ party = {
 
 unit_names = {
     dreadnought = {
-        Congrès "Quatre Journées" "Louise-Marie" "Duc de Brabant" "Marie-Charlotte" "Marie-Henriette" "Stéphanie-Clotilde" "Clémentine-Albertine" "Élisabeth-Gabrielle" "Marie-José" "Charlotte-Augusta" "Sofie-Antoinette" "Caroline-Ernestine" "Anne-Sophia" "Antoinette-Amalie" "Sophie-Théodora" "Ferdinande-Henriette"
+        "Fin de la guerre" Congrès "Quatre Journées" "Louise-Marie" "Duc de Brabant" "Marie-Charlotte" "Marie-Henriette" "Stéphanie-Clotilde" "Clémentine-Albertine" "Élisabeth-Gabrielle" "Marie-José" "Charlotte-Augusta" "Sofie-Antoinette" "Caroline-Ernestine" "Anne-Sophia" "Antoinette-Amalie" "Sophie-Théodora" "Ferdinande-Henriette"
     }
     ironclad = {
         "Hendrik de Krijgshaftige" "Hendrik de Edelmoedige" "Hendrik de Zachtmoedige" "Jan de Overwinnaar" "Jan de Vreedzame" "Jan de Triomfator" "Jean d’Avesnes" "Jean de Hainaut" "Guillaume le Bon" "Guillaume le Hardi" "Érard de La Marck" "Corneille de Berghes" "Georges d’Autriche" "Robert de Berghes" "Gérard de Groesbeek" "Ernest de Bavière" "Ferdinand de Bavière" "Maximilien-Henri de Bavière" "Jean-Louis d’Elderen" "Joseph-Clément de Bavière" "Georges-Louis de Berghes" "Jean-Théodore de Bavière" "Charles-Nicolas d’Oultremont" "François-Charles de Velbrück" "César-Constantin-François de Hoensbroeck" "François-Antoine de Méan de Beaurieux" "Boudewijn met de IJzeren Arm" "Boudewijn de Kale" "Arnulf de Grote" "Boudewijn de Jonge" "Arnulf de Jonge" "Boudewijn met de Baard" "Boudewijn de Grote" "Boudewijn van Hasnon" "Arnulf de Ongelukkige" "Robrecht de Fries" "Robrecht van Jeruzalem" "Boudewijn Hapkin" "Gui de Dampierre" "Lion des Flandres" "Godfried van Bouillon"
