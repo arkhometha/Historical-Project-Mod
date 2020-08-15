@@ -147,13 +147,13 @@ unit_names = {
         "Jan Breydel" "Pieter De Coninck" "Jacob van Artevelde" Ambiorix Louise-Marie "Duc de Brabant" "Comte de Flandre" "Prince-évêque de Liège" "Comte de Hainaut" "Comte de Namur"
     }
     cruiser = {
-	    "Léopold I" Westdiep Wandelaar Westhinder Wielingen "Jan Breydel" "Pieter De Coninck" "Jacob van Artevelde" Ambiorix "Congo" "Kasai" "Ubangi" "Tshuapa" "Lomami" "Luyua" "Sankuru" Belgica Brabantia Flandriae Henogovia Limburgia Luxemburgum Namurcum "Duc de Brabant" "Comte de Flandre" "Prince-évêque de Liège" "Comte de Hainaut" "Comte de Namur" "Léopold II"
+	    "Léopold I" Westdiep Wandelaar Westhinder Wielingen "Jan Breydel" "Pieter De Coninck" "Jacob van Artevelde" Ambiorix "Congo" "Kasai" "Ubangi" "Tshuapa" "Lomami" "Luyua" "Sankuru" "Duc de Brabant" "Comte de Flandre" "Prince-évêque de Liège" "Comte de Hainaut" "Comte de Namur" "Léopold II"
     }
     frigate = {
 	    Louise-Marie "Duc de Brabant" "Comte de Flandre" "Prince-évêque de Liège" "Comte de Hainaut" "Comte de Namur" "Jan Breydel" "Pieter De Coninck" "Jacob van Artevelde" Ambiorix
     }
     monitor = {
-        Argus Minerva Hirondelle "Meuse" "Ourthe" "Sambre" "Lesse" "Semois" "Schelde" "Dender" "Leie" "Rupel" "Yser" "Ieperlee" "Zenne" "Amblève" "Dijle" "Demer" "Nete" "Hene" "Vesdre" "Mehaigne" "Gueule" "Geer" "Sennette" "Lomme" "Bocq" "Herk" "Wiltz" "Warche" "Mandel" "Hogneau" "Salm" "Hermeton" "Ton" "Aisne" "Hoëgne" "Lienne" "Hoyoux" "Durme" "Laan" "Houille" "Berwinne" "Hain" "Helle" "Orneau" "Trouille" "Vire" "Molignée" "Viroin" "Gileppe" "Congo" "Kasai" "Ubangi" "Tshuapa" "Lomami" "Luyua" "Sankuru" Belgica Brabantia Flandriae Henogovia Limburgia Luxemburgum Namurcum
+        Argus Minerva Hirondelle "Meuse" "Ourthe" "Sambre" "Lesse" "Semois" "Schelde" "Dender" "Leie" "Rupel" "Yser" "Ieperlee" "Zenne" "Amblève" "Dijle" "Demer" "Nete" "Hene" "Vesdre" "Mehaigne" "Gueule" "Geer" "Sennette" "Lomme" "Bocq" "Herk" "Wiltz" "Warche" "Mandel" "Hogneau" "Salm" "Hermeton" "Ton" "Aisne" "Hoëgne" "Lienne" "Hoyoux" "Durme" "Laan" "Houille" "Berwinne" "Hain" "Helle" "Orneau" "Trouille" "Vire" "Molignée" "Viroin" "Gileppe" "Congo" "Kasai" "Ubangi" "Tshuapa" "Lomami" "Luyua" "Sankuru"
     }
     clipper_transport = {
 	    Congrès "Quatre Journées" Charles Emmanuel Mathilde Macassar Éclair Robuste Caroline Clothilde Agate "Aigue-marine" Améthyste Ambre Anatase Aventurine Copal Corail Cornaline Épidote Héliodore Jade Jaspe "Lapis-lazuli" "Œil-de-tigre" Onyx Opale Mellite Nacre Périclase Péridot Quartz Serpentine Tourmaline Turquoise Zircon
