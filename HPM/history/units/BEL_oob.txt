@@ -116,7 +116,7 @@ navy = {
     }
 
     ship = {
-        name= "Les Quatre Journées"
+        name= "Quatre Journées"
         type = clipper_transport
     }
 
