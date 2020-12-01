@@ -972,7 +972,7 @@ country_event = {
             secede_province = THIS
             change_province_name = "Manjacaze"
         }
-        2051 = { state_scope = { change_region_name = "Lourenço Marques" } }
+        2050 = { state_scope = { change_region_name = "Lourenço Marques" } }
     }
 }
 
