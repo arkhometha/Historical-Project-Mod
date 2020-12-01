@@ -7073,7 +7073,8 @@ political_decisions = {
         }
 
         effect = {
-            release_vassal = TSW
+            release = TSW
+            create_vassal = TSW
             relation = { who = TSW value = 400 }
             diplomatic_influence = { who = TSW value = 400 }
         }
