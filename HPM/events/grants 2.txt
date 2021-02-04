@@ -51,62 +51,6 @@ country_event = {
 	}	
 }
 
-country_event = {
-	is_triggered_only = yes
-	id = 100003
-	title = "Choose Aid for $FROMCOUNTRY$"
-	desc = "How much money would you like to give $FROMCOUNTRY$ (thousands)?"
-	allow_multiple_instances = yes	
-	option = {
-	name = "0 pounds"
-	}
-	option = {
-	name = "1000 pounds"
-	ai_chance = {factor = 100}
-	treasury = -1000
-	FROM = {treasury = 1000}
-	}
-	option = {
-	name = "2000 pounds"
-	treasury = -2000
-	FROM = {treasury = 2000}
-	}
-	option = {
-	name = "3000 pounds"
-	treasury = -3000
-	FROM = {treasury = 3000}
-	}  
-	option = {
-	name = "4000 pounds"
-	treasury = -4000
-	FROM = {treasury = 4000}
-	}  
-	option = {
-	name = "5000 pounds"
-	treasury = -5000
-	FROM = {treasury = 5000}
-	}  
-	option = {
-	name = "6000 pounds"
-	treasury = -6000
-	FROM = {treasury = 6000}
-	}  
-	option = {
-	name = "7000 pounds"
-	treasury = -7000
-	FROM = {treasury = 7000}
-	}  
-	option = {
-	name = "8000 pounds"
-	treasury = -8000
-	FROM = {treasury = 8000}
-	}  
-	option = {
-	name = "9000 pounds"
-	treasury = -9000
-	FROM = {treasury = 9000}
-	}  
-}
 
 country_event = {
 	id = 100005
