@@ -4019,7 +4019,7 @@ country_event = {
         clr_country_flag = communist_party_in_power
         clr_country_flag = fascist_party_in_power
         clr_country_flag = anarcho_liberal_party_in_power
-        add_country_modifier = { name = constitutional_crisis duration = 365 }
+       #add_country_modifier = { name = constitutional_crisis duration = 365 }
         #Primary Culture Only Angry
         random_owned = {
             limit = {
@@ -4029,17 +4029,17 @@ country_event = {
                 }
             }
             owner = {
-                prestige = -4
-                plurality = -4
+                prestige = 0
+                plurality = 0
                 any_pop = {
                     limit = { is_primary_culture = yes }
-                    militancy = 2
-                    consciousness = 3
+                    militancy = 0
+                    consciousness = 1
                 }
                 any_pop = {
                     limit = { NOT = { is_primary_culture = yes } }
-                    militancy = 1
-                    consciousness = 4
+                    militancy = 0
+                    consciousness = 1
                 }
             }
         }
@@ -4051,17 +4051,17 @@ country_event = {
                 }
             }
             owner = {
-                prestige = -8
-                plurality = -8
+                prestige = 0
+                plurality = 0
                 any_pop = {
                     limit = { is_primary_culture = yes }
-                    militancy = 3
-                    consciousness = 4
+                    militancy = 0
+                    consciousness = 1
                 }
                 any_pop = {
                     limit = { NOT = { is_primary_culture = yes } }
-                    militancy = 2
-                    consciousness = 8
+                    militancy = 0
+                    consciousness = 2
                 }
             }
         }
@@ -4074,8 +4074,8 @@ country_event = {
                 }
             }
             owner = {
-                prestige = -4
-                plurality = -4
+                prestige = 0
+                plurality = 0
                 any_pop = {
                     limit = {
                         OR = {
@@ -4083,8 +4083,8 @@ country_event = {
                             is_accepted_culture = yes
                         }
                     }
-                    militancy = 2
-                    consciousness = 3
+                    militancy = 0
+                    consciousness = 1
                 }
                 any_pop = {
                     limit = {
@@ -4093,8 +4093,8 @@ country_event = {
                             is_accepted_culture = yes
                         }
                     }
-                    militancy = 1
-                    consciousness = 4
+                    militancy = 0
+                    consciousness = 1
                 }
             }
         }
@@ -4106,8 +4106,8 @@ country_event = {
                 }
             }
             owner = {
-                prestige = -8
-                plurality = -8
+                prestige = 0
+                plurality = 0
                 any_pop = {
                     limit = {
                         OR = {
@@ -4115,8 +4115,8 @@ country_event = {
                             is_accepted_culture = yes
                         }
                     }
-                    militancy = 3
-                    consciousness = 4
+                    militancy = 0
+                    consciousness = 1
                 }
                 any_pop = {
                     limit = {
@@ -4125,8 +4125,8 @@ country_event = {
                             is_accepted_culture = yes
                         }
                     }
-                    militancy = 2
-                    consciousness = 8
+                    militancy = 0
+                    consciousness = 2
                 }
             }
         }
@@ -4141,11 +4141,11 @@ country_event = {
                 }
             }
             owner = {
-                prestige = -4
-                plurality = -4
+                prestige = 0
+                plurality = 0
                 any_pop = {
-                    militancy = 2
-                    consciousness = 3
+                    militancy = 0
+                    consciousness = 1
                 }
             }
         }
@@ -4157,11 +4157,11 @@ country_event = {
                 }
             }
             owner = {
-                prestige = -8
-                plurality = -8
+                prestige = 0
+                plurality = 0
                 any_pop = {
-                    militancy = 3
-                    consciousness = 4
+                    militancy = 0
+                    consciousness = 1
                 }
             }
         }
@@ -4170,154 +4170,49 @@ country_event = {
             limit = { owner = { ruling_party_ideology = conservative } }
             owner = {
                 set_country_flag = conservative_party_in_power
-                any_pop = {
-                    limit = {
-                        OR = {
-                            is_primary_culture = yes
-                            is_accepted_culture = yes
-                        }
-                    }
-                    scaled_militancy = {
-                        ideology = conservative
-                        factor = -4
-                    }
-                    scaled_consciousness = {
-                        ideology = conservative
-                        factor = -5
-                    }
-                }
+                
             }
         }
         random_owned = {
             limit = { owner = { ruling_party_ideology = liberal } }
             owner = {
                 set_country_flag = liberal_party_in_power
-                any_pop = {
-                    limit = {
-                        OR = {
-                            is_primary_culture = yes
-                            is_accepted_culture = yes
-                        }
-                    }
-                    scaled_militancy = {
-                        ideology = liberal
-                        factor = -4
-                    }
-                    scaled_consciousness = {
-                        ideology = liberal
-                        factor = -5
-                    }
-                }
+                
             }
         }
         random_owned = {
             limit = { owner = { ruling_party_ideology = reactionary } }
             owner = {
                 set_country_flag = reactionary_party_in_power
-                any_pop = {
-                    limit = {
-                        OR = {
-                            is_primary_culture = yes
-                            is_accepted_culture = yes
-                        }
-                    }
-                    scaled_militancy = {
-                        ideology = reactionary
-                        factor = -4
-                    }
-                    scaled_consciousness = {
-                        ideology = reactionary
-                        factor = -5
-                    }
-                }
+                
             }
         }
         random_owned = {
             limit = { owner = { ruling_party_ideology = socialist } }
             owner = {
                 set_country_flag = socialist_party_in_power
-                any_pop = {
-                    limit = {
-                        OR = {
-                            is_primary_culture = yes
-                            is_accepted_culture = yes
-                        }
-                    }
-                    scaled_militancy = {
-                        ideology = socialist
-                        factor = -4
-                    }
-                    scaled_consciousness = {
-                        ideology = socialist
-                        factor = -5
-                    }
-                }
+                
             }
         }
         random_owned = {
             limit = { owner = { ruling_party_ideology = communist } }
             owner = {
                 set_country_flag = communist_party_in_power
-                any_pop = {
-                    limit = {
-                        OR = {
-                            is_primary_culture = yes
-                            is_accepted_culture = yes
-                        }
-                    }
-                    scaled_militancy = {
-                        ideology = communist
-                        factor = -4
-                    }
-                    scaled_consciousness = {
-                        ideology = communist
-                        factor = -5
-                    }
-                }
+                
             }
         }
         random_owned = {
             limit = { owner = { ruling_party_ideology = fascist } }
             owner = {
                 set_country_flag = fascist_party_in_power
-                any_pop = {
-                    limit = {
-                        OR = {
-                            is_primary_culture = yes
-                            is_accepted_culture = yes
-                        }
-                    }
-                    scaled_militancy = {
-                        ideology = fascist
-                        factor = -4
-                    }
-                    scaled_consciousness = {
-                        ideology = fascist
-                        factor = -5
-                    }
-                }
+                
             }
         }
         random_owned = {
             limit = { owner = { ruling_party_ideology = anarcho_liberal } }
             owner = {
                 set_country_flag = anarcho_liberal_party_in_power
-                any_pop = {
-                    limit = {
-                        OR = {
-                            is_primary_culture = yes
-                            is_accepted_culture = yes
-                        }
-                    }
-                    scaled_militancy = {
-                        ideology = anarcho_liberal
-                        factor = -4
-                    }
-                    scaled_consciousness = {
-                        ideology = anarcho_liberal
-                        factor = -5
-                    }
-                }
+                
             }
         }
     }
