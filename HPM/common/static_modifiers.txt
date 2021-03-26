@@ -30,9 +30,6 @@ hard_player = {
 very_hard_player = {
 }
 
-
-
-
 very_easy_ai = {
     land_organisation = -0.25
     naval_organisation = -0.25
@@ -45,7 +42,10 @@ easy_ai = {
 hard_ai = {
     badboy = -0.02
     research_points_modifier = 0.5
+    land_organisation = 0.25
+    naval_organisation = 0.25
     leadership_modifier = 0.5
+    unit_start_experience = 5
     global_pop_militancy_modifier = -0.02
     war_exhaustion = -0.25
 }
