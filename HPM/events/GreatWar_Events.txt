@@ -11664,7 +11664,7 @@ country_event = {
             any_owned = {
                 limit = { is_core = CNG }
                 remove_core = CGO
-                remove_core = LUA
+                remove_core = LUN
                 remove_core = LOA
                 remove_core = AZA
                 remove_core = KZB
@@ -11682,7 +11682,7 @@ country_event = {
             any_owned = {
                 limit = { is_core = ZAM }
                 remove_core = KZB
-                remove_core = LUA
+                remove_core = LUN
                 secede_province = THIS
             }
         }
