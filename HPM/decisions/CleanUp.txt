@@ -2980,7 +2980,7 @@ political_decisions = {
                             AND = {
                                 is_core = CNG
                                 OR = {
-                                    is_core = LUA
+                                    is_core = LUN
                                     is_core = LOA
                                     is_core = AZA
                                     is_core = KZB
@@ -3224,14 +3224,14 @@ political_decisions = {
                     limit = {
                         is_core = CNG
                         OR = {
-                            is_core = LUA
+                            is_core = LUN
                             is_core = LOA
                             is_core = AZA
                             is_core = KZB
                             is_core = KON
                         }
                     }
-                    remove_core = LUA
+                    remove_core = LUN
                     remove_core = LOA
                     remove_core = AZA
                     remove_core = KZB
