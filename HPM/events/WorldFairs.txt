@@ -28,8 +28,7 @@ country_event = {
         modifier = {
             factor = 0.01
             tag = FRA
-            invention = bessemer_steel
-            NOT = { has_country_flag = the_eiffel_tower_was_built }
+            has_country_modifer = eiffel_tower_construction
         }
 
         modifier = {
