@@ -287,8 +287,6 @@ political_decisions = {
             NOT = {
                 has_country_flag = the_eiffel_tower_was_built
             }
-
-            has_country_flag = world_fair_planner
         }
 
         allow = {
