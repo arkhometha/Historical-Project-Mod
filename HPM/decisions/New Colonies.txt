@@ -6941,12 +6941,9 @@ political_decisions = {
             }
             civilized = yes
             NOT = {
-                OR = {
-                    exists = BRD
-                    exists = RWA
-                }
+                exists = BRD
+                exists = RWA
                 has_global_flag = rwanda_burundi_organized
-                has_country_flag = rwanda_burundi_master
                 capital_scope = { continent = africa }
             }
             OR = {
