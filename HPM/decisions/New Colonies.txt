@@ -5800,10 +5800,12 @@ political_decisions = {
                 ai = yes
             }
             civilized = yes
-            NOT = { exists = SOM }
+            NOT = {
+                exists = SOM
+                has_global_flag = somalia_united
+                capital_scope = { continent = africa }
+            }
             nationalism_n_imperialism = 1
-            NOT = { capital_scope = { continent = africa } }
-            NOT = { has_global_flag = somalia_united }
             owns = 1868
         }
 
