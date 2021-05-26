@@ -834,6 +834,18 @@ political_decisions = {
                     }
                     any_owned_province = { is_core = SUD }
                 }
+                AND = {
+                    has_global_flag = sudan_organized
+                    owns = 1827
+                    SUD = {
+                        exists = no
+                        NOT = { is_culture_group = THIS }
+                    }
+                    NOT = {
+                        has_country_flag = sudan_master
+                        capital_scope = { continent = africa }
+                    }
+                }
                 #Ghana
                 AND = {
                     NOT = {
@@ -921,6 +933,14 @@ political_decisions = {
                     }
                     nationalism_n_imperialism = 1
                     owns = 1413
+                }
+                AND = {
+                    has_global_flag = indonesia_organized
+                    owns = 1413
+                    NOT = {
+                        has_country_flag = indonesia_master
+                        exists = INO
+                    }
                 }
                 #Somalia
                 AND = {
