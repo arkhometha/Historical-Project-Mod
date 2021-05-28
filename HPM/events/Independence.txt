@@ -2391,6 +2391,7 @@ country_event = {
             exists = IRQ
             has_country_flag = no_iraq_independence
             primary_culture = mashriqi
+            tag = ARU
         }
         is_possible_vassal = IRQ
         revolution_n_counterrevolution = 1
