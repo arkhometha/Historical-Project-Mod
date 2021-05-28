@@ -5,11 +5,14 @@ political_decisions = {
         alert = no
         potential = {
 			ai = no
-            is_substate = no
             NOT = { has_country_flag = native_integration_status_on }
-            NOT = { has_country_flag = native_protection_act_enacted }
-            NOT = { has_country_flag = native_assimilation_enacted }
-            NOT = { has_country_modifier = native_removal_act_policy }
+            is_substate = no
+            NOT = {
+                has_country_flag = native_protection_act_enacted
+                has_country_flag = native_assimilation_enacted
+                has_country_modifier = native_removal_act_policy
+            }
+
             OR = {
                 capital_scope = { continent = north_america }
                 capital_scope = { continent = south_america }
@@ -73,10 +76,12 @@ political_decisions = {
         alert = no
         potential = {
 			ai = no
-            is_substate = no
             NOT = { has_country_flag = african_diaspora_integration_status_on }
-            NOT = { has_country_flag = african_protection_policy }
-            NOT = { has_country_flag = african_integration_policy }
+            is_substate = no
+            NOT = {
+                has_country_flag = african_protection_policy
+                has_country_flag = african_integration_policy
+            }
 
             OR = {
                 capital_scope = { continent = north_america }
@@ -138,16 +143,42 @@ political_decisions = {
     native_protection_act = {
         picture = native_protection_act
         potential = {
-			OR = {
-				ai = yes
-				AND = {
-					has_country_flag = native_integration_status_on
-					NOT = {
-						has_country_flag = native_protection_act_enacted
-						has_country_flag = native_removal_act_enacted
-					}
-				}
-			}
+            OR = {
+                ai = yes
+                has_country_flag = native_integration_status_on
+            }
+            is_substate = no
+            NOT = {
+                has_country_flag = native_protection_act_enacted
+                has_country_flag = native_assimilation_enacted
+                has_country_modifier = native_removal_act_policy
+            }
+
+            OR = {
+                capital_scope = { continent = north_america }
+                capital_scope = { continent = south_america }
+                capital_scope = { continent = australia_new_zealand }
+            }
+            OR = {
+                is_culture_group = latin_american_cultures
+                is_culture_group = american_cultures
+                primary_culture = australian
+                primary_culture = anglo_canadian
+                primary_culture = french_canadian
+                primary_culture = alaskan
+            }
+            any_owned_province = {
+                is_core = THIS
+                is_colonial = no
+                OR = {
+                    continent = north_america
+                    continent = south_america
+                    continent = australia_new_zealand
+                }
+                any_pop = {
+                    OR = { is_culture_group = oceanic is_culture_group = native_american }
+                }
+            }
         }
 
         allow = {
@@ -328,15 +359,41 @@ political_decisions = {
         picture = native_assimilation_act
         potential = {
             OR = {
-				ai = yes
-				AND = {
-					has_country_flag = native_integration_status_on
-					NOT = {
-						has_country_flag = native_assimilation_enacted
-						has_country_flag = native_removal_act_enacted
-					}
-				}
-			}
+                ai = yes
+                has_country_flag = native_integration_status_on
+            }
+            is_substate = no
+            NOT = {
+                has_country_flag = native_protection_act_enacted
+                has_country_flag = native_assimilation_enacted
+                has_country_modifier = native_removal_act_policy
+            }
+
+            OR = {
+                capital_scope = { continent = north_america }
+                capital_scope = { continent = south_america }
+                capital_scope = { continent = australia_new_zealand }
+            }
+            OR = {
+                is_culture_group = latin_american_cultures
+                is_culture_group = american_cultures
+                primary_culture = australian
+                primary_culture = anglo_canadian
+                primary_culture = french_canadian
+                primary_culture = alaskan
+            }
+            any_owned_province = {
+                is_core = THIS
+                is_colonial = no
+                OR = {
+                    continent = north_america
+                    continent = south_america
+                    continent = australia_new_zealand
+                }
+                any_pop = {
+                    OR = { is_culture_group = oceanic is_culture_group = native_american }
+                }
+            }
         }
 
         allow = {
@@ -451,12 +508,41 @@ political_decisions = {
         picture = native_removal_act
         potential = {
             OR = {
-				ai = yes
-				AND = {
-					has_country_flag = native_integration_status_on
-					NOT = { has_country_flag = native_protection_act_enacted }
-				}
-			}
+                ai = yes
+                has_country_flag = native_integration_status_on
+            }
+            is_substate = no
+            NOT = {
+                has_country_flag = native_protection_act_enacted
+                has_country_flag = native_assimilation_enacted
+                has_country_modifier = native_removal_act_policy
+            }
+
+            OR = {
+                capital_scope = { continent = north_america }
+                capital_scope = { continent = south_america }
+                capital_scope = { continent = australia_new_zealand }
+            }
+            OR = {
+                is_culture_group = latin_american_cultures
+                is_culture_group = american_cultures
+                primary_culture = australian
+                primary_culture = anglo_canadian
+                primary_culture = french_canadian
+                primary_culture = alaskan
+            }
+            any_owned_province = {
+                is_core = THIS
+                is_colonial = no
+                OR = {
+                    continent = north_america
+                    continent = south_america
+                    continent = australia_new_zealand
+                }
+                any_pop = {
+                    OR = { is_culture_group = oceanic is_culture_group = native_american }
+                }
+            }
         }
 
         allow = {
@@ -585,13 +671,41 @@ political_decisions = {
 	african_protection_act = {
         picture = african_protection_act
         potential = {
-			OR = {
-				ai = yes
-				AND = {
-					has_country_flag = african_diaspora_integration_status_on
-					NOT = { has_country_flag = african_diaspora_protection_act_enacted }
-				}
-			}
+            OR = {
+                ai = yes
+                has_country_flag = african_diaspora_integration_status_on
+            }
+            is_substate = no
+            NOT = {
+                has_country_flag = african_protection_policy
+                has_country_flag = african_integration_policy
+            }
+
+            OR = {
+                capital_scope = { continent = north_america }
+                capital_scope = { continent = south_america }
+                capital_scope = { continent = australia_new_zealand }
+            }
+            OR = {
+                is_culture_group = latin_american_cultures
+                is_culture_group = american_cultures
+                primary_culture = australian
+                primary_culture = anglo_canadian
+                primary_culture = french_canadian
+                primary_culture = alaskan
+            }
+            any_owned_province = {
+                is_core = THIS
+                is_colonial = no
+                OR = {
+                    continent = north_america
+                    continent = south_america
+                    continent = australia_new_zealand
+                }
+                any_pop = {
+                    is_culture_group = african_diaspora_cultures
+                }
+            }
         }
 
         allow = {
@@ -699,12 +813,40 @@ political_decisions = {
         picture = african_assimilation_act
         potential = {
             OR = {
-				ai = yes
-				AND = {
-					has_country_flag = african_diaspora_integration_status_on
-					NOT = { has_country_flag = african_integration_policy }
-				}
-			}
+                ai = yes
+                has_country_flag = african_diaspora_integration_status_on
+            }
+            is_substate = no
+            NOT = {
+                has_country_flag = african_protection_policy
+                has_country_flag = african_integration_policy
+            }
+
+            OR = {
+                capital_scope = { continent = north_america }
+                capital_scope = { continent = south_america }
+                capital_scope = { continent = australia_new_zealand }
+            }
+            OR = {
+                is_culture_group = latin_american_cultures
+                is_culture_group = american_cultures
+                primary_culture = australian
+                primary_culture = anglo_canadian
+                primary_culture = french_canadian
+                primary_culture = alaskan
+            }
+            any_owned_province = {
+                is_core = THIS
+                is_colonial = no
+                OR = {
+                    continent = north_america
+                    continent = south_america
+                    continent = australia_new_zealand
+                }
+                any_pop = {
+                    is_culture_group = african_diaspora_cultures
+                }
+            }
         }
 
         allow = {
@@ -798,7 +940,7 @@ political_decisions = {
             treasury = -100000
             badboy = 2
             set_country_flag = african_integration_policy
-            clr_country_flag = native_integration_status_on
+            clr_country_flag = african_diaspora_integration_status_on
             add_country_modifier = { name = african_assimilation_act_policy duration = 7300 }
             any_pop = {
                 limit = {
