@@ -865,7 +865,7 @@ social_reforms = {
             }
         }
         trinket_health_care = {
-            global_population_growth = 0.001
+            global_population_growth = 0.0005
             administrative_multiplier = 1
             global_immigrant_attract = 0.01
             allow = {
@@ -874,7 +874,7 @@ social_reforms = {
             }
         }
         low_health_care = {
-            global_population_growth = 0.002
+            global_population_growth = 0.001
             administrative_multiplier = 2
             global_immigrant_attract = 0.02
             allow = {
@@ -883,7 +883,7 @@ social_reforms = {
             }
         }
         acceptable_health_care = {
-            global_population_growth = 0.003
+            global_population_growth = 0.0015
             administrative_multiplier = 3
             global_immigrant_attract = 0.03
             allow = {
@@ -892,7 +892,7 @@ social_reforms = {
             }
         }
         good_health_care = {
-            global_population_growth = 0.004
+            global_population_growth = 0.002
             administrative_multiplier = 4
             global_immigrant_attract = 0.04
             allow = {
